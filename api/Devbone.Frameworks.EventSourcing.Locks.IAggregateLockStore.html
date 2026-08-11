@@ -121,7 +121,7 @@ This is the <b>PostgreSQL persistence-side store</b>: untyped string identifiers
 attempt per call. It is the lower of the platform's two lock abstractions.
 </p>
 <p>
-Do not confuse it with <code>Devbone.Frameworks.Ddd.Repositories.ILockRepository</code>, the application-facing
+Do not confuse it with <code>Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort</code>, the application-facing
 DDD port that is strongly typed over aggregate identity and owns the bounded retry policy. An adapter
 implements that port <em>over</em> this store; application and domain code uses the port, not this type.
 </p>

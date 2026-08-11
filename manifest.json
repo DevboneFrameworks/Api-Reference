@@ -1454,6 +1454,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.yml\" sourcestartlinenumber=\"1\">Coordinates exclusive aggregate ownership and returns a disposable lease to the successful caller.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.yml",
       "output": {
         ".html": {
@@ -1493,20 +1507,6 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.yml\" sourcestartlinenumber=\"1\">Defines the write-side persistence boundary for aggregate-scoped monotonic sequences requested by emitted events.\nImplementations must allocate values atomically so concurrent commits cannot receive the same value.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.Ddd.Repositories.ILockRepository.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.Ddd.Repositories.ILockRepository.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.Ddd.Repositories.ILockRepository",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Repositories.ILockRepository.yml\" sourcestartlinenumber=\"1\">Coordinates exclusive aggregate ownership and returns a disposable lease to the successful caller.</p>\n"
     },
     {
       "type": "ManagedReference",

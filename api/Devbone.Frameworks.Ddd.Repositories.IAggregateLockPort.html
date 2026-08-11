@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface ILockRepository | Devbone Event-Driven Platform </title>
+      <title>Interface IAggregateLockPort | Devbone Event-Driven Platform </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface ILockRepository | Devbone Event-Driven Platform ">
+      <meta name="title" content="Interface IAggregateLockPort | Devbone Event-Driven Platform ">
       
       <meta name="description" content="Coordinates exclusive aggregate ownership and returns a disposable lease to the successful caller.">
       <link rel="icon" href="../favicon.ico">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Devbone.Frameworks.Ddd.Repositories.ILockRepository">
+        <article data-uid="Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort">
 
 
 
-  <h1 id="Devbone_Frameworks_Ddd_Repositories_ILockRepository" data-uid="Devbone.Frameworks.Ddd.Repositories.ILockRepository" class="text-break">
-Interface ILockRepository  
+  <h1 id="Devbone_Frameworks_Ddd_Repositories_IAggregateLockPort" data-uid="Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort" class="text-break">
+Interface IAggregateLockPort  
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Interface ILockRepository
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ILockRepository</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IAggregateLockPort</code></pre>
   </div>
 
 
@@ -115,7 +115,7 @@ Interface ILockRepository
 
 
 
-  <h2 id="Devbone_Frameworks_Ddd_Repositories_ILockRepository_remarks">Remarks</h2>
+  <h2 id="Devbone_Frameworks_Ddd_Repositories_IAggregateLockPort_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>
 This is the <b>application-facing DDD port</b>. It is strongly typed over the aggregate identity, applies a
 bounded retry policy, and is what <code>CommandExecutor</code> depends on. An application implements or registers
@@ -124,7 +124,8 @@ it; it does not talk to a database itself.
 <p>
 Do not confuse it with <code>Devbone.Frameworks.EventSourcing.Locks.IAggregateLockStore</code>, which is the
 PostgreSQL advisory-lock store on the persistence side: untyped, no retry policy, and one layer below this
-port. An adapter implements this interface <em>over</em> that store.
+port. An adapter implements this interface <em>over</em> that store. The <code>Port</code> suffix names that
+layer difference, which the former name <code>ILockRepository</code> left to the documentation.
 </p>
 </div>
 
@@ -133,9 +134,9 @@ port. An adapter implements this interface <em>over</em> that store.
 </h2>
 
 
-  <a id="Devbone_Frameworks_Ddd_Repositories_ILockRepository_TryLock_" data-uid="Devbone.Frameworks.Ddd.Repositories.ILockRepository.TryLock*"></a>
+  <a id="Devbone_Frameworks_Ddd_Repositories_IAggregateLockPort_TryLock_" data-uid="Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.TryLock*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Repositories_ILockRepository_TryLock__1_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Core_IRequestId___0_Devbone_Frameworks_Ddd_Repositories_AggregateLockOptions_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Repositories.ILockRepository.TryLock``1(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IRequestId,``0,Devbone.Frameworks.Ddd.Repositories.AggregateLockOptions,System.Threading.CancellationToken)">
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_IAggregateLockPort_TryLock__1_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Core_IRequestId___0_Devbone_Frameworks_Ddd_Repositories_AggregateLockOptions_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.TryLock``1(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IRequestId,``0,Devbone.Frameworks.Ddd.Repositories.AggregateLockOptions,System.Threading.CancellationToken)">
   TryLock&lt;TIdentity&gt;(IAggregateName, IRequestId, TIdentity, AggregateLockOptions?, CancellationToken)
   
   </h3>

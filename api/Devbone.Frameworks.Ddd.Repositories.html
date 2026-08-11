@@ -119,6 +119,11 @@ Interfaces
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.html">IAggregateLockPort</a></dt>
+      <dd><p>Coordinates exclusive aggregate ownership and returns a disposable lease to the successful caller.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.html">IEventStreamReader</a></dt>
       <dd><p>Defines the read-side persistence boundary used to retrieve complete aggregate event streams for deterministic rehydration.
 Implementations must preserve aggregate stream isolation and return events in ascending aggregate-version order.</p>
@@ -133,11 +138,6 @@ Implementations must preserve aggregate stream isolation and return events in as
       <dt><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.html">IIncrementValueRepository</a></dt>
       <dd><p>Defines the write-side persistence boundary for aggregate-scoped monotonic sequences requested by emitted events.
 Implementations must allocate values atomically so concurrent commits cannot receive the same value.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.ILockRepository.html">ILockRepository</a></dt>
-      <dd><p>Coordinates exclusive aggregate ownership and returns a disposable lease to the successful caller.</p>
 </dd>
     </dl>
     <dl class="jumplist">

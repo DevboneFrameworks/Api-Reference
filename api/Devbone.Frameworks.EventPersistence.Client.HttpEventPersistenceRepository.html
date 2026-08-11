@@ -102,7 +102,7 @@ Class HttpEventPersistenceRepository
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class HttpEventPersistenceRepository : IAggregateSnapshotEventStreamReader, IEventStreamReader, IAggregateSnapshotCommitWriter, IAggregateStateCommitWriter, IEventStreamWriter, IUniqueValueRepository, IIncrementValueRepository, ILockRepository</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class HttpEventPersistenceRepository : IAggregateSnapshotEventStreamReader, IEventStreamReader, IAggregateSnapshotCommitWriter, IAggregateStateCommitWriter, IEventStreamWriter, IUniqueValueRepository, IIncrementValueRepository, IAggregateLockPort</code></pre>
   </div>
 
 
@@ -126,7 +126,7 @@ Class HttpEventPersistenceRepository
       <div><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamWriter.html">IEventStreamWriter</a></div>
       <div><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository.html">IUniqueValueRepository</a></div>
       <div><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.html">IIncrementValueRepository</a></div>
-      <div><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.ILockRepository.html">ILockRepository</a></div>
+      <div><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.html">IAggregateLockPort</a></div>
     </dd>
   </dl>
 

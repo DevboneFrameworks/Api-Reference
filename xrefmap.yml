@@ -2901,15 +2901,15 @@ references:
   fullName.vb: Devbone.Frameworks.Ddd.Commands.CommandExecutor(Of TAggregate, TIdentity)
   nameWithType: CommandExecutor<TAggregate, TIdentity>
   nameWithType.vb: CommandExecutor(Of TAggregate, TIdentity)
-- uid: Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.#ctor(System.Int32,Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Repositories.IEventStreamReader,Devbone.Frameworks.Ddd.Repositories.ILockRepository,Microsoft.Extensions.Logging.ILogger,Devbone.Frameworks.Ddd.Commands.IAggregateCommandHandlerFactory)
-  name: CommandExecutor(int, IAggregateName, IEventStreamReader, ILockRepository, ILogger, IAggregateCommandHandlerFactory?)
-  href: api/Devbone.Frameworks.Ddd.Commands.CommandExecutor-2.html#Devbone_Frameworks_Ddd_Commands_CommandExecutor_2__ctor_System_Int32_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_Devbone_Frameworks_Ddd_Repositories_ILockRepository_Microsoft_Extensions_Logging_ILogger_Devbone_Frameworks_Ddd_Commands_IAggregateCommandHandlerFactory_
-  commentId: M:Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.#ctor(System.Int32,Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Repositories.IEventStreamReader,Devbone.Frameworks.Ddd.Repositories.ILockRepository,Microsoft.Extensions.Logging.ILogger,Devbone.Frameworks.Ddd.Commands.IAggregateCommandHandlerFactory)
-  name.vb: New(Integer, IAggregateName, IEventStreamReader, ILockRepository, ILogger, IAggregateCommandHandlerFactory)
-  fullName: Devbone.Frameworks.Ddd.Commands.CommandExecutor<TAggregate, TIdentity>.CommandExecutor(int, Devbone.Frameworks.Ddd.Aggregates.IAggregateName, Devbone.Frameworks.Ddd.Repositories.IEventStreamReader, Devbone.Frameworks.Ddd.Repositories.ILockRepository, Microsoft.Extensions.Logging.ILogger, Devbone.Frameworks.Ddd.Commands.IAggregateCommandHandlerFactory?)
-  fullName.vb: Devbone.Frameworks.Ddd.Commands.CommandExecutor(Of TAggregate, TIdentity).New(Integer, Devbone.Frameworks.Ddd.Aggregates.IAggregateName, Devbone.Frameworks.Ddd.Repositories.IEventStreamReader, Devbone.Frameworks.Ddd.Repositories.ILockRepository, Microsoft.Extensions.Logging.ILogger, Devbone.Frameworks.Ddd.Commands.IAggregateCommandHandlerFactory)
-  nameWithType: CommandExecutor<TAggregate, TIdentity>.CommandExecutor(int, IAggregateName, IEventStreamReader, ILockRepository, ILogger, IAggregateCommandHandlerFactory?)
-  nameWithType.vb: CommandExecutor(Of TAggregate, TIdentity).New(Integer, IAggregateName, IEventStreamReader, ILockRepository, ILogger, IAggregateCommandHandlerFactory)
+- uid: Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.#ctor(System.Int32,Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Repositories.IEventStreamReader,Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort,Microsoft.Extensions.Logging.ILogger,Devbone.Frameworks.Ddd.Commands.IAggregateCommandHandlerFactory)
+  name: CommandExecutor(int, IAggregateName, IEventStreamReader, IAggregateLockPort, ILogger, IAggregateCommandHandlerFactory?)
+  href: api/Devbone.Frameworks.Ddd.Commands.CommandExecutor-2.html#Devbone_Frameworks_Ddd_Commands_CommandExecutor_2__ctor_System_Int32_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_Devbone_Frameworks_Ddd_Repositories_IAggregateLockPort_Microsoft_Extensions_Logging_ILogger_Devbone_Frameworks_Ddd_Commands_IAggregateCommandHandlerFactory_
+  commentId: M:Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.#ctor(System.Int32,Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Repositories.IEventStreamReader,Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort,Microsoft.Extensions.Logging.ILogger,Devbone.Frameworks.Ddd.Commands.IAggregateCommandHandlerFactory)
+  name.vb: New(Integer, IAggregateName, IEventStreamReader, IAggregateLockPort, ILogger, IAggregateCommandHandlerFactory)
+  fullName: Devbone.Frameworks.Ddd.Commands.CommandExecutor<TAggregate, TIdentity>.CommandExecutor(int, Devbone.Frameworks.Ddd.Aggregates.IAggregateName, Devbone.Frameworks.Ddd.Repositories.IEventStreamReader, Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort, Microsoft.Extensions.Logging.ILogger, Devbone.Frameworks.Ddd.Commands.IAggregateCommandHandlerFactory?)
+  fullName.vb: Devbone.Frameworks.Ddd.Commands.CommandExecutor(Of TAggregate, TIdentity).New(Integer, Devbone.Frameworks.Ddd.Aggregates.IAggregateName, Devbone.Frameworks.Ddd.Repositories.IEventStreamReader, Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort, Microsoft.Extensions.Logging.ILogger, Devbone.Frameworks.Ddd.Commands.IAggregateCommandHandlerFactory)
+  nameWithType: CommandExecutor<TAggregate, TIdentity>.CommandExecutor(int, IAggregateName, IEventStreamReader, IAggregateLockPort, ILogger, IAggregateCommandHandlerFactory?)
+  nameWithType.vb: CommandExecutor(Of TAggregate, TIdentity).New(Integer, IAggregateName, IEventStreamReader, IAggregateLockPort, ILogger, IAggregateCommandHandlerFactory)
 - uid: Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.#ctor*
   name: CommandExecutor
   href: api/Devbone.Frameworks.Ddd.Commands.CommandExecutor-2.html#Devbone_Frameworks_Ddd_Commands_CommandExecutor_2__ctor_
@@ -3036,14 +3036,14 @@ references:
   fullName.vb: Devbone.Frameworks.Ddd.Commands.CommandExecutor(Of TAggregate, TIdentity)._eventStreamReader
   nameWithType: CommandExecutor<TAggregate, TIdentity>._eventStreamReader
   nameWithType.vb: CommandExecutor(Of TAggregate, TIdentity)._eventStreamReader
-- uid: Devbone.Frameworks.Ddd.Commands.CommandExecutor`2._lockRepo
-  name: _lockRepo
-  href: api/Devbone.Frameworks.Ddd.Commands.CommandExecutor-2.html#Devbone_Frameworks_Ddd_Commands_CommandExecutor_2__lockRepo
-  commentId: F:Devbone.Frameworks.Ddd.Commands.CommandExecutor`2._lockRepo
-  fullName: Devbone.Frameworks.Ddd.Commands.CommandExecutor<TAggregate, TIdentity>._lockRepo
-  fullName.vb: Devbone.Frameworks.Ddd.Commands.CommandExecutor(Of TAggregate, TIdentity)._lockRepo
-  nameWithType: CommandExecutor<TAggregate, TIdentity>._lockRepo
-  nameWithType.vb: CommandExecutor(Of TAggregate, TIdentity)._lockRepo
+- uid: Devbone.Frameworks.Ddd.Commands.CommandExecutor`2._lockPort
+  name: _lockPort
+  href: api/Devbone.Frameworks.Ddd.Commands.CommandExecutor-2.html#Devbone_Frameworks_Ddd_Commands_CommandExecutor_2__lockPort
+  commentId: F:Devbone.Frameworks.Ddd.Commands.CommandExecutor`2._lockPort
+  fullName: Devbone.Frameworks.Ddd.Commands.CommandExecutor<TAggregate, TIdentity>._lockPort
+  fullName.vb: Devbone.Frameworks.Ddd.Commands.CommandExecutor(Of TAggregate, TIdentity)._lockPort
+  nameWithType: CommandExecutor<TAggregate, TIdentity>._lockPort
+  nameWithType.vb: CommandExecutor(Of TAggregate, TIdentity)._lockPort
 - uid: Devbone.Frameworks.Ddd.Commands.Command`1
   name: Command<TIdentity>
   href: api/Devbone.Frameworks.Ddd.Commands.Command-1.html
@@ -5681,6 +5681,27 @@ references:
   commentId: Overload:Devbone.Frameworks.Ddd.Repositories.IAggregateLock.RequestId
   fullName: Devbone.Frameworks.Ddd.Repositories.IAggregateLock.RequestId
   nameWithType: IAggregateLock.RequestId
+- uid: Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort
+  name: IAggregateLockPort
+  href: api/Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.html
+  commentId: T:Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort
+  fullName: Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort
+  nameWithType: IAggregateLockPort
+- uid: Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.TryLock*
+  name: TryLock
+  href: api/Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.html#Devbone_Frameworks_Ddd_Repositories_IAggregateLockPort_TryLock_
+  commentId: Overload:Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.TryLock
+  fullName: Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.TryLock
+  nameWithType: IAggregateLockPort.TryLock
+- uid: Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.TryLock``1(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IRequestId,``0,Devbone.Frameworks.Ddd.Repositories.AggregateLockOptions,System.Threading.CancellationToken)
+  name: TryLock<TIdentity>(IAggregateName, IRequestId, TIdentity, AggregateLockOptions?, CancellationToken)
+  href: api/Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.html#Devbone_Frameworks_Ddd_Repositories_IAggregateLockPort_TryLock__1_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Core_IRequestId___0_Devbone_Frameworks_Ddd_Repositories_AggregateLockOptions_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.TryLock``1(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IRequestId,``0,Devbone.Frameworks.Ddd.Repositories.AggregateLockOptions,System.Threading.CancellationToken)
+  name.vb: TryLock(Of TIdentity)(IAggregateName, IRequestId, TIdentity, AggregateLockOptions, CancellationToken)
+  fullName: Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.TryLock<TIdentity>(Devbone.Frameworks.Ddd.Aggregates.IAggregateName, Devbone.Frameworks.Ddd.Core.IRequestId, TIdentity, Devbone.Frameworks.Ddd.Repositories.AggregateLockOptions?, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.TryLock(Of TIdentity)(Devbone.Frameworks.Ddd.Aggregates.IAggregateName, Devbone.Frameworks.Ddd.Core.IRequestId, TIdentity, Devbone.Frameworks.Ddd.Repositories.AggregateLockOptions, System.Threading.CancellationToken)
+  nameWithType: IAggregateLockPort.TryLock<TIdentity>(IAggregateName, IRequestId, TIdentity, AggregateLockOptions?, CancellationToken)
+  nameWithType.vb: IAggregateLockPort.TryLock(Of TIdentity)(IAggregateName, IRequestId, TIdentity, AggregateLockOptions, CancellationToken)
 - uid: Devbone.Frameworks.Ddd.Repositories.IEventStreamReader
   name: IEventStreamReader
   href: api/Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.html
@@ -5774,27 +5795,6 @@ references:
   commentId: Overload:Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.GetNextIncrements
   fullName: Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.GetNextIncrements
   nameWithType: IIncrementValueRepository.GetNextIncrements
-- uid: Devbone.Frameworks.Ddd.Repositories.ILockRepository
-  name: ILockRepository
-  href: api/Devbone.Frameworks.Ddd.Repositories.ILockRepository.html
-  commentId: T:Devbone.Frameworks.Ddd.Repositories.ILockRepository
-  fullName: Devbone.Frameworks.Ddd.Repositories.ILockRepository
-  nameWithType: ILockRepository
-- uid: Devbone.Frameworks.Ddd.Repositories.ILockRepository.TryLock*
-  name: TryLock
-  href: api/Devbone.Frameworks.Ddd.Repositories.ILockRepository.html#Devbone_Frameworks_Ddd_Repositories_ILockRepository_TryLock_
-  commentId: Overload:Devbone.Frameworks.Ddd.Repositories.ILockRepository.TryLock
-  fullName: Devbone.Frameworks.Ddd.Repositories.ILockRepository.TryLock
-  nameWithType: ILockRepository.TryLock
-- uid: Devbone.Frameworks.Ddd.Repositories.ILockRepository.TryLock``1(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IRequestId,``0,Devbone.Frameworks.Ddd.Repositories.AggregateLockOptions,System.Threading.CancellationToken)
-  name: TryLock<TIdentity>(IAggregateName, IRequestId, TIdentity, AggregateLockOptions?, CancellationToken)
-  href: api/Devbone.Frameworks.Ddd.Repositories.ILockRepository.html#Devbone_Frameworks_Ddd_Repositories_ILockRepository_TryLock__1_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Core_IRequestId___0_Devbone_Frameworks_Ddd_Repositories_AggregateLockOptions_System_Threading_CancellationToken_
-  commentId: M:Devbone.Frameworks.Ddd.Repositories.ILockRepository.TryLock``1(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IRequestId,``0,Devbone.Frameworks.Ddd.Repositories.AggregateLockOptions,System.Threading.CancellationToken)
-  name.vb: TryLock(Of TIdentity)(IAggregateName, IRequestId, TIdentity, AggregateLockOptions, CancellationToken)
-  fullName: Devbone.Frameworks.Ddd.Repositories.ILockRepository.TryLock<TIdentity>(Devbone.Frameworks.Ddd.Aggregates.IAggregateName, Devbone.Frameworks.Ddd.Core.IRequestId, TIdentity, Devbone.Frameworks.Ddd.Repositories.AggregateLockOptions?, System.Threading.CancellationToken)
-  fullName.vb: Devbone.Frameworks.Ddd.Repositories.ILockRepository.TryLock(Of TIdentity)(Devbone.Frameworks.Ddd.Aggregates.IAggregateName, Devbone.Frameworks.Ddd.Core.IRequestId, TIdentity, Devbone.Frameworks.Ddd.Repositories.AggregateLockOptions, System.Threading.CancellationToken)
-  nameWithType: ILockRepository.TryLock<TIdentity>(IAggregateName, IRequestId, TIdentity, AggregateLockOptions?, CancellationToken)
-  nameWithType.vb: ILockRepository.TryLock(Of TIdentity)(IAggregateName, IRequestId, TIdentity, AggregateLockOptions, CancellationToken)
 - uid: Devbone.Frameworks.Ddd.Repositories.IStoredEvent
   name: IStoredEvent
   href: api/Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html

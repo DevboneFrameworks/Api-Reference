@@ -172,8 +172,8 @@ and performs the aggregate's explicit commit only after successful handling.</p>
 
   <a id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2__ctor_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2__ctor_System_Int32_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_Devbone_Frameworks_Ddd_Repositories_ILockRepository_Microsoft_Extensions_Logging_ILogger_Devbone_Frameworks_Ddd_Commands_IAggregateCommandHandlerFactory_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.#ctor(System.Int32,Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Repositories.IEventStreamReader,Devbone.Frameworks.Ddd.Repositories.ILockRepository,Microsoft.Extensions.Logging.ILogger,Devbone.Frameworks.Ddd.Commands.IAggregateCommandHandlerFactory)">
-  CommandExecutor(int, IAggregateName, IEventStreamReader, ILockRepository, ILogger, IAggregateCommandHandlerFactory?)
+  <h3 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2__ctor_System_Int32_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_Devbone_Frameworks_Ddd_Repositories_IAggregateLockPort_Microsoft_Extensions_Logging_ILogger_Devbone_Frameworks_Ddd_Commands_IAggregateCommandHandlerFactory_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.#ctor(System.Int32,Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Repositories.IEventStreamReader,Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort,Microsoft.Extensions.Logging.ILogger,Devbone.Frameworks.Ddd.Commands.IAggregateCommandHandlerFactory)">
+  CommandExecutor(int, IAggregateName, IEventStreamReader, IAggregateLockPort, ILogger, IAggregateCommandHandlerFactory?)
   
   </h3>
 
@@ -182,7 +182,7 @@ and performs the aggregate's explicit commit only after successful handling.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected CommandExecutor(int version, IAggregateName name, IEventStreamReader eventStreamReader, ILockRepository lockRepository, ILogger logger, IAggregateCommandHandlerFactory? commandHandlerFactory = null)</code></pre>
+    <pre><code class="lang-csharp hljs">protected CommandExecutor(int version, IAggregateName name, IEventStreamReader eventStreamReader, IAggregateLockPort lockPort, ILogger logger, IAggregateCommandHandlerFactory? commandHandlerFactory = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -196,8 +196,8 @@ and performs the aggregate's explicit commit only after successful handling.</p>
     <dt><code>eventStreamReader</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.html">IEventStreamReader</a></dt>
     <dd><p>Reader used to rehydrate target aggregates.</p>
 </dd>
-    <dt><code>lockRepository</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.ILockRepository.html">ILockRepository</a></dt>
-    <dd><p>Repository used to serialize modifications of one aggregate stream.</p>
+    <dt><code>lockPort</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.html">IAggregateLockPort</a></dt>
+    <dd><p>Port used to serialize modifications of one aggregate stream.</p>
 </dd>
     <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
     <dd><p>Logger supplied by the application host, optionally backed by Serilog or another provider.</p>
@@ -218,7 +218,7 @@ and performs the aggregate's explicit commit only after successful handling.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown when a repository, <code class="paramref">name</code>, or <code class="paramref">logger</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown when a port, <code class="paramref">name</code>, or <code class="paramref">logger</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
 </dd>
   </dl>
 
@@ -291,17 +291,17 @@ and performs the aggregate's explicit commit only after successful handling.</p>
 
 
 
-  <h3 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2__lockRepo" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2._lockRepo">
-  _lockRepo
+  <h3 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2__lockPort" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2._lockPort">
+  _lockPort
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Lock repository used for aggregate-level concurrency control.</p>
+  <div class="markdown level1 summary"><p>Lock port used for aggregate-level concurrency control.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly ILockRepository _lockRepo</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly IAggregateLockPort _lockPort</code></pre>
   </div>
 
 
@@ -309,7 +309,7 @@ and performs the aggregate's explicit commit only after successful handling.</p>
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.ILockRepository.html">ILockRepository</a></dt>
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.html">IAggregateLockPort</a></dt>
     <dd></dd>
   </dl>
 
