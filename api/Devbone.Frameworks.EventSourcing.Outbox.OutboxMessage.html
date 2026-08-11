@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class OutboxMessage | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class OutboxMessage | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Represents an immutable, route-stable event envelope to persist with an event-store commit.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage">
+
+
+
+  <h1 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage" class="text-break">
+Class OutboxMessage  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.html">EventSourcing</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.html">Outbox</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventSourcing.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents an immutable, route-stable event envelope to persist with an event-store commit.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class OutboxMessage</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">OutboxMessage</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage__ctor_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage__ctor" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.#ctor">
+  OutboxMessage()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OutboxMessage()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_AggregateCommitEventCount_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.AggregateCommitEventCount*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_AggregateCommitEventCount" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.AggregateCommitEventCount">
+  AggregateCommitEventCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the total number of events in the atomic aggregate commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AggregateCommitEventCount { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_AggregateConcurrencyToken_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.AggregateConcurrencyToken*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_AggregateConcurrencyToken" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.AggregateConcurrencyToken">
+  AggregateConcurrencyToken
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the opaque token representing the aggregate state after this commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string AggregateConcurrencyToken { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_AggregateId_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.AggregateId*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_AggregateId" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.AggregateId">
+  AggregateId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the aggregate identifier used for ordering.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string AggregateId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_AggregateLifecycle_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.AggregateLifecycle*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_AggregateLifecycle" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.AggregateLifecycle">
+  AggregateLifecycle
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes whether this event establishes, changes, or deletes its aggregate stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AggregateLifecycle AggregateLifecycle { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.AggregateLifecycle.html">AggregateLifecycle</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_AggregateName_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.AggregateName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_AggregateName" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.AggregateName">
+  AggregateName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the stable aggregate contract name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string AggregateName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_AggregateRevision_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.AggregateRevision*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_AggregateRevision" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.AggregateRevision">
+  AggregateRevision
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the client-visible revision shared by all events in this atomic aggregate commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long AggregateRevision { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_AggregateRouteId_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.AggregateRouteId*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_AggregateRouteId" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.AggregateRouteId">
+  AggregateRouteId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the persisted logical aggregate route identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string AggregateRouteId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_AggregateRouteVersion_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.AggregateRouteVersion*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_AggregateRouteVersion" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.AggregateRouteVersion">
+  AggregateRouteVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the persisted aggregate route version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AggregateRouteVersion { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_ContentType_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.ContentType*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_ContentType" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.ContentType">
+  ContentType
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the envelope content type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ContentType { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_CreatedAtUtc_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.CreatedAtUtc*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_CreatedAtUtc" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.CreatedAtUtc">
+  CreatedAtUtc
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the UTC creation timestamp.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset CreatedAtUtc { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_Envelope_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.Envelope*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_Envelope" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.Envelope">
+  Envelope
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the exact canonical envelope bytes to publish.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] Envelope { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_EventBusId_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.EventBusId*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_EventBusId" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.EventBusId">
+  EventBusId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the logical event-bus target identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string EventBusId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_EventId_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.EventId*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_EventId" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.EventId">
+  EventId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the stable event and outbox identifier used for idempotency.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string EventId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_EventOrder_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.EventOrder*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_EventOrder" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.EventOrder">
+  EventOrder
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the event order inside one aggregate version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int EventOrder { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_EventSequence_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.EventSequence*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_EventSequence" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.EventSequence">
+  EventSequence
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the aggregate version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long EventSequence { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_PreviousAggregateConcurrencyToken_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.PreviousAggregateConcurrencyToken*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_PreviousAggregateConcurrencyToken" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.PreviousAggregateConcurrencyToken">
+  PreviousAggregateConcurrencyToken
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the token of the aggregate state that preceded this commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? PreviousAggregateConcurrencyToken { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_Stream_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.Stream*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_Stream" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.Stream">
+  Stream
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the target topic or routing key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string Stream { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_TenantId_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.TenantId*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_TenantId" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.TenantId">
+  TenantId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or initializes the optional tenant context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? TenantId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_Validate_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.Validate*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage_Validate" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.Validate">
+  Validate()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates the message before it is persisted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Validate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when required routing or envelope data is missing.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

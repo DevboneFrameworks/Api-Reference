@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class EventStoreSettings | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class EventStoreSettings | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Defines event store specific database table settings.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings">
+
+
+
+  <h1 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings" class="text-break">
+Class EventStoreSettings  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.html">EventSourcing</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.html">Repositories</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Settings.html">Settings</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventSourcing.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Defines event store specific database table settings.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class EventStoreSettings : DatabaseSettings</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Settings.DatabaseSettings.html">DatabaseSettings</a></div>
+      <div><span class="xref">EventStoreSettings</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Settings.DatabaseSettings.html#Devbone_Frameworks_EventSourcing_Repositories_Settings_DatabaseSettings_DatabaseName">DatabaseSettings.DatabaseName</a>
+    </div>
+    <div>
+      <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Settings.DatabaseSettings.html#Devbone_Frameworks_EventSourcing_Repositories_Settings_DatabaseSettings_Host">DatabaseSettings.Host</a>
+    </div>
+    <div>
+      <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Settings.DatabaseSettings.html#Devbone_Frameworks_EventSourcing_Repositories_Settings_DatabaseSettings_Port">DatabaseSettings.Port</a>
+    </div>
+    <div>
+      <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Settings.DatabaseSettings.html#Devbone_Frameworks_EventSourcing_Repositories_Settings_DatabaseSettings_User">DatabaseSettings.User</a>
+    </div>
+    <div>
+      <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Settings.DatabaseSettings.html#Devbone_Frameworks_EventSourcing_Repositories_Settings_DatabaseSettings_Password">DatabaseSettings.Password</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings__ctor_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings__ctor" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.#ctor">
+  EventStoreSettings()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventStoreSettings()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_DEFAULT_AGGREGATE_HEAD_TABLE_NAME" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.DEFAULT_AGGREGATE_HEAD_TABLE_NAME">
+  DEFAULT_AGGREGATE_HEAD_TABLE_NAME
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default aggregate stream-head table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_AGGREGATE_HEAD_TABLE_NAME = &quot;aggregate_heads&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_DEFAULT_AGGREGATE_SNAPSHOT_TABLE_NAME" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.DEFAULT_AGGREGATE_SNAPSHOT_TABLE_NAME">
+  DEFAULT_AGGREGATE_SNAPSHOT_TABLE_NAME
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default aggregate snapshot table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_AGGREGATE_SNAPSHOT_TABLE_NAME = &quot;aggregate_snapshots&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_DEFAULT_EVENT_PRIVACY_DEFINITION_TABLE_NAME" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.DEFAULT_EVENT_PRIVACY_DEFINITION_TABLE_NAME">
+  DEFAULT_EVENT_PRIVACY_DEFINITION_TABLE_NAME
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default event privacy definition table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_EVENT_PRIVACY_DEFINITION_TABLE_NAME = &quot;event_privacy_definitions&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_DEFAULT_EVENT_PRIVACY_FIELD_TABLE_NAME" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.DEFAULT_EVENT_PRIVACY_FIELD_TABLE_NAME">
+  DEFAULT_EVENT_PRIVACY_FIELD_TABLE_NAME
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default event privacy field table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_EVENT_PRIVACY_FIELD_TABLE_NAME = &quot;event_privacy_fields&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_DEFAULT_EVENT_PRIVACY_SUBJECT_TABLE_NAME" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.DEFAULT_EVENT_PRIVACY_SUBJECT_TABLE_NAME">
+  DEFAULT_EVENT_PRIVACY_SUBJECT_TABLE_NAME
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default event privacy subject-index table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_EVENT_PRIVACY_SUBJECT_TABLE_NAME = &quot;event_privacy_subjects&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_DEFAULT_OUTBOX_NOTIFICATION_CHANNEL" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.DEFAULT_OUTBOX_NOTIFICATION_CHANNEL">
+  DEFAULT_OUTBOX_NOTIFICATION_CHANNEL
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default PostgreSQL outbox notification channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_OUTBOX_NOTIFICATION_CHANNEL = &quot;devbone_outbox&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_DEFAULT_OUTBOX_TABLE_NAME" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.DEFAULT_OUTBOX_TABLE_NAME">
+  DEFAULT_OUTBOX_TABLE_NAME
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default transactional outbox table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_OUTBOX_TABLE_NAME = &quot;event_outbox&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_DEFAULT_RESEND_REQUEST_TABLE_NAME" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.DEFAULT_RESEND_REQUEST_TABLE_NAME">
+  DEFAULT_RESEND_REQUEST_TABLE_NAME
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default operator resend-request table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_RESEND_REQUEST_TABLE_NAME = &quot;event_resend_requests&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_AggregateCommitTableName_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.AggregateCommitTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_AggregateCommitTableName" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.AggregateCommitTableName">
+  AggregateCommitTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the aggregate commits table name used for optimistic concurrency.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string AggregateCommitTableName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_AggregateHeadTableName_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.AggregateHeadTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_AggregateHeadTableName" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.AggregateHeadTableName">
+  AggregateHeadTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the table that stores the current version and concurrency token of every aggregate stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AggregateHeadTableName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_AggregateSnapshotTableName_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.AggregateSnapshotTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_AggregateSnapshotTableName" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.AggregateSnapshotTableName">
+  AggregateSnapshotTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the table containing the newest snapshot of each aggregate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AggregateSnapshotTableName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_EventPrivacyDefinitionTableName_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.EventPrivacyDefinitionTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_EventPrivacyDefinitionTableName" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.EventPrivacyDefinitionTableName">
+  EventPrivacyDefinitionTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the event privacy definition table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string EventPrivacyDefinitionTableName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_EventPrivacyFieldTableName_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.EventPrivacyFieldTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_EventPrivacyFieldTableName" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.EventPrivacyFieldTableName">
+  EventPrivacyFieldTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the event privacy field table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string EventPrivacyFieldTableName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_EventPrivacySubjectTableName_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.EventPrivacySubjectTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_EventPrivacySubjectTableName" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.EventPrivacySubjectTableName">
+  EventPrivacySubjectTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the event privacy subject-index table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string EventPrivacySubjectTableName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_EventTableName_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.EventTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_EventTableName" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.EventTableName">
+  EventTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the events table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string EventTableName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_IncrementGlobalAggrTableName_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.IncrementGlobalAggrTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_IncrementGlobalAggrTableName" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.IncrementGlobalAggrTableName">
+  IncrementGlobalAggrTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the global increments table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string IncrementGlobalAggrTableName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_OutboxNotificationChannel_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.OutboxNotificationChannel*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_OutboxNotificationChannel" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.OutboxNotificationChannel">
+  OutboxNotificationChannel
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the PostgreSQL channel used only to wake outbox dispatchers after commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string OutboxNotificationChannel { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_OutboxTableName_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.OutboxTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_OutboxTableName" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.OutboxTableName">
+  OutboxTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the transactional outbox table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string OutboxTableName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_PrivacyDefinitions_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.PrivacyDefinitions*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_PrivacyDefinitions" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.PrivacyDefinitions">
+  PrivacyDefinitions
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets immutable privacy definitions keyed by aggregate name, event name, and event version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;EventPrivacyDefinition&gt; PrivacyDefinitions { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyDefinition.html">EventPrivacyDefinition</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_PrivacyMode_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.PrivacyMode*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_PrivacyMode" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.PrivacyMode">
+  PrivacyMode
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether event privacy metadata is disabled, optional, or required.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventPrivacyMode PrivacyMode { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyMode.html">EventPrivacyMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_RequireOutboxForEventWrites_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.RequireOutboxForEventWrites*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_RequireOutboxForEventWrites" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.RequireOutboxForEventWrites">
+  RequireOutboxForEventWrites
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether event writes without a matching transactional outbox batch are rejected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RequireOutboxForEventWrites { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_RequireRegisteredPrivacyDefinitions_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.RequireRegisteredPrivacyDefinitions*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_RequireRegisteredPrivacyDefinitions" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.RequireRegisteredPrivacyDefinitions">
+  RequireRegisteredPrivacyDefinitions
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether supplied privacy metadata must match a registered event definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RequireRegisteredPrivacyDefinitions { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_ResendRequestTableName_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.ResendRequestTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_ResendRequestTableName" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.ResendRequestTableName">
+  ResendRequestTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the table holding operator-requested outbox replays.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ResendRequestTableName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_SnapshotOptions_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.SnapshotOptions*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_SnapshotOptions" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.SnapshotOptions">
+  SnapshotOptions
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets aggregate snapshot behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventStoreSnapshotOptions SnapshotOptions { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.EventStoreSnapshotOptions.html">EventStoreSnapshotOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_UniqueTableName_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.UniqueTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_UniqueTableName" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.UniqueTableName">
+  UniqueTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the unique values table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string UniqueTableName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

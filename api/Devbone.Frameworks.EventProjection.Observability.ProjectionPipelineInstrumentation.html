@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ProjectionPipelineInstrumentation | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ProjectionPipelineInstrumentation | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Owns low-cardinality OpenTelemetry activity and metric instruments for the projection pipeline.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation">
+
+
+
+  <h1 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation" class="text-break">
+Class ProjectionPipelineInstrumentation  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.html">EventProjection</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Observability.html">Observability</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Owns low-cardinality OpenTelemetry activity and metric instruments for the projection pipeline.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ProjectionPipelineInstrumentation</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ProjectionPipelineInstrumentation</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_ACTIVITY_SOURCE_NAME" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.ACTIVITY_SOURCE_NAME">
+  ACTIVITY_SOURCE_NAME
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>OpenTelemetry activity-source name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ACTIVITY_SOURCE_NAME = &quot;Devbone.Frameworks.EventProjection&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_ActivitySource" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.ActivitySource">
+  ActivitySource
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shared activity source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly ActivitySource ActivitySource</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activitysource">ActivitySource</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_DeadLetteredMessages" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.DeadLetteredMessages">
+  DeadLetteredMessages
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Counts invalid events routed to a dead-letter topic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Counter&lt;long&gt; DeadLetteredMessages</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1">Counter</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_DependentRefreshes" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.DependentRefreshes">
+  DependentRefreshes
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Counts dependency-driven projection refresh publications.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Counter&lt;long&gt; DependentRefreshes</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1">Counter</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_DerivedProjectionsApplied" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.DerivedProjectionsApplied">
+  DerivedProjectionsApplied
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Counts merged-state notifications applied by application projection handlers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Counter&lt;long&gt; DerivedProjectionsApplied</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1">Counter</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_DuplicateEventConflicts" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.DuplicateEventConflicts">
+  DuplicateEventConflicts
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Counts detected <code>EventId</code> reuse conflicts (same identifier, different metadata or payload).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Counter&lt;long&gt; DuplicateEventConflicts</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1">Counter</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_METER_NAME" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.METER_NAME">
+  METER_NAME
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>OpenTelemetry meter name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string METER_NAME = &quot;Devbone.Frameworks.EventProjection&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_MergedNotifications" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.MergedNotifications">
+  MergedNotifications
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Counts merged-state notifications published to the derived layer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Counter&lt;long&gt; MergedNotifications</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1">Counter</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_Meter" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.Meter">
+  Meter
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shared meter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Meter Meter</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.meter">Meter</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_MissingReferences" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.MissingReferences">
+  MissingReferences
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Counts unresolved aggregate references.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Counter&lt;long&gt; MissingReferences</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1">Counter</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_OldestUnappliedRawEventAge" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.OldestUnappliedRawEventAge">
+  OldestUnappliedRawEventAge
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports how long the oldest stored-but-unapplied event has been waiting, per aggregate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly ObservableGauge&lt;double&gt; OldestUnappliedRawEventAge</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.observablegauge-1">ObservableGauge</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_OldestUnappliedRawEventAge_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is what separates a replay in progress from a stream that has been stuck since Tuesday. Zero when
+nothing is waiting.</p>
+</div>
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_RawEventsApplied" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.RawEventsApplied">
+  RawEventsApplied
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Counts successfully applied raw events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Counter&lt;long&gt; RawEventsApplied</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1">Counter</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_UnappliedRawEvents" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.UnappliedRawEvents">
+  UnappliedRawEvents
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports how many stored events wait for a missing predecessor, per aggregate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly ObservableGauge&lt;long&gt; UnappliedRawEvents</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.observablegauge-1">ObservableGauge</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_UnappliedRawEvents_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+A gauge rather than a counter, because a stall is a state and not an event: a counter can say that
+something once went missing, never that an aggregate is still stuck. The absence of
+<code>raw.events.applied</code> increments cannot carry that either — it is indistinguishable from an idle
+aggregate.
+</p>
+<p>
+A replay legitimately produces unapplied documents while it runs, so alert on this staying non-zero
+rather than on it being non-zero. <a class="xref" href="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.html#Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_OldestUnappliedRawEventAge">OldestUnappliedRawEventAge</a> is the better signal for
+exactly that reason.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_ReportStall_" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.ReportStall*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_ReportStall_System_String_System_Int64_System_TimeSpan_" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.ReportStall(System.String,System.Int64,System.TimeSpan)">
+  ReportStall(string, long, TimeSpan)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Records the latest stall sample for one aggregate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ReportStall(string aggregateName, long unappliedEventCount, TimeSpan oldestAge)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Aggregate name. The only dimension — aggregate identifiers are unbounded and must not become one.</p>
+</dd>
+    <dt><code>unappliedEventCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Stored events waiting for a predecessor.</p>
+</dd>
+    <dt><code>oldestAge</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>Age of the oldest waiting event, or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan.zero">Zero</a> when none wait.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when <code class="paramref">aggregateName</code> is empty.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

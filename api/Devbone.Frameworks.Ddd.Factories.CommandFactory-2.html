@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CommandFactory&lt;TIdentity, TEntity&gt; | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CommandFactory&lt;TIdentity, TEntity&gt; | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Separates application-input parsing from aggregate execution by creating typed commands and collecting validation errors. It may validate that a referenced aggregate stream exists, but it does not dispatch commands or mutate aggregates.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2">
+
+
+
+  <h1 id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2" class="text-break">
+Class CommandFactory&lt;TIdentity, TEntity&gt;  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.Ddd.html">Ddd</a>.<a class="xref" href="Devbone.Frameworks.Ddd.Factories.html">Factories</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.Ddd.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Separates application-input parsing from aggregate execution by creating typed commands and collecting validation errors.
+It may validate that a referenced aggregate stream exists, but it does not dispatch commands or mutate aggregates.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class CommandFactory&lt;TIdentity, TEntity&gt; where TIdentity : AggregateIdentity&lt;TIdentity&gt;, IIdentity where TEntity : Entity&lt;TIdentity&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TIdentity</code></dt>
+    <dd><p>Aggregate identity type.</p>
+</dd>
+    <dt><code>TEntity</code></dt>
+    <dd><p>Aggregate entity state type.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CommandFactory&lt;TIdentity, TEntity&gt;</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2__ctor_" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2__ctor_Microsoft_Extensions_Logging_ILogger_" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2.#ctor(Microsoft.Extensions.Logging.ILogger)">
+  CommandFactory(ILogger)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures command creation and aggregate-reference validation with application-provided structured logging.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected CommandFactory(ILogger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>Logger supplied by the application host, optionally backed by Serilog or another provider.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when <code class="paramref">logger</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2_CreateCommand_" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2.CreateCommand*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2_CreateCommand__1_System_Func___0__" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2.CreateCommand``1(System.Func{``0})">
+  CreateCommand&lt;TCommand&gt;(Func&lt;TCommand&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Safely creates a typed command and wraps exceptions into a failed result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ICommandCreationResult&lt;TCommand, TIdentity&gt; CreateCommand&lt;TCommand&gt;(Func&lt;TCommand&gt; buildCommand) where TCommand : Command&lt;TIdentity&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buildCommand</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;TCommand&gt;</dt>
+    <dd><p>Factory callback creating the command instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.ICommandCreationResult-2.html">ICommandCreationResult</a>&lt;TCommand, TIdentity&gt;</dt>
+    <dd><p>Successful result with command, or failed result with parser/validation message.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCommand</code></dt>
+    <dd><p>Command type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2_ValidateId_" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2.ValidateId*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2_ValidateId__2_Devbone_Frameworks_Ddd_Results_IResult___0_Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2.ValidateId``2(Devbone.Frameworks.Ddd.Results.IResult,``0,Devbone.Frameworks.Ddd.Repositories.IEventStreamReader)">
+  ValidateId&lt;TCheckAggregate, TCheckIdentity&gt;(IResult, TCheckAggregate, IEventStreamReader)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates that an aggregate id points to an existing, non-deleted aggregate instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IResult ValidateId&lt;TCheckAggregate, TCheckIdentity&gt;(IResult result, TCheckAggregate notLoadedAggregate, IEventStreamReader eventStreamReader) where TCheckAggregate : IAggregateRoot&lt;TCheckIdentity&gt; where TCheckIdentity : IAggregateIdentity</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>result</code> <a class="xref" href="Devbone.Frameworks.Ddd.Results.IResult.html">IResult</a></dt>
+    <dd><p>Result object to append structured validation errors to.</p>
+</dd>
+    <dt><code>notLoadedAggregate</code> <span class="xref">TCheckAggregate</span></dt>
+    <dd><p>Not-yet-loaded aggregate shell containing the id.</p>
+</dd>
+    <dt><code>eventStreamReader</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.html">IEventStreamReader</a></dt>
+    <dd><p>Repository used to load aggregate events.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IResult.html">IResult</a></dt>
+    <dd><p>The same <code class="paramref">result</code> instance for fluent validation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCheckAggregate</code></dt>
+    <dd><p>Aggregate type to validate.</p>
+</dd>
+    <dt><code>TCheckIdentity</code></dt>
+    <dd><p>Aggregate identity type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2_ValidateId_" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2.ValidateId*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2_ValidateId__2_Devbone_Frameworks_Ddd_Results_IResult___0_System_Func_Devbone_Frameworks_Ddd_Repositories_IEventStreamReader__" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2.ValidateId``2(Devbone.Frameworks.Ddd.Results.IResult,``0,System.Func{Devbone.Frameworks.Ddd.Repositories.IEventStreamReader})">
+  ValidateId&lt;TCheckAggregate, TCheckIdentity&gt;(IResult, TCheckAggregate, Func&lt;IEventStreamReader&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates that an aggregate id points to an existing, non-deleted aggregate instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IResult ValidateId&lt;TCheckAggregate, TCheckIdentity&gt;(IResult result, TCheckAggregate notLoadedAggregate, Func&lt;IEventStreamReader&gt; getEventStreamReader) where TCheckAggregate : IAggregateRoot&lt;TCheckIdentity&gt; where TCheckIdentity : IAggregateIdentity</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>result</code> <a class="xref" href="Devbone.Frameworks.Ddd.Results.IResult.html">IResult</a></dt>
+    <dd><p>Result object to append validation messages to.</p>
+</dd>
+    <dt><code>notLoadedAggregate</code> <span class="xref">TCheckAggregate</span></dt>
+    <dd><p>Not-yet-loaded aggregate shell containing the id.</p>
+</dd>
+    <dt><code>getEventStreamReader</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.html">IEventStreamReader</a>&gt;</dt>
+    <dd><p>Repository factory callback.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IResult.html">IResult</a></dt>
+    <dd><p>The same <code class="paramref">result</code> instance for fluent validation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCheckAggregate</code></dt>
+    <dd><p>Aggregate type to validate.</p>
+</dd>
+    <dt><code>TCheckIdentity</code></dt>
+    <dd><p>Aggregate identity type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullreferenceexception">NullReferenceException</a></dt>
+    <dd><p>Thrown when a required argument or the repository returned by <code class="paramref">getEventStreamReader</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ProjectionDeadLetterMessage | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ProjectionDeadLetterMessage | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Carries a rejected message and a bounded technical reason to an aggregate-specific dead-letter destination.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage">
+
+
+
+  <h1 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage" class="text-break">
+Class ProjectionDeadLetterMessage  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.html">EventProjection</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.html">Contracts</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Carries a rejected message and a bounded technical reason to an aggregate-specific dead-letter destination.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record ProjectionDeadLetterMessage : IEquatable&lt;ProjectionDeadLetterMessage&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ProjectionDeadLetterMessage</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.html">ProjectionDeadLetterMessage</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage__ctor_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage__ctor" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.#ctor">
+  ProjectionDeadLetterMessage()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectionDeadLetterMessage()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_MessageKey_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.MessageKey*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_MessageKey" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.MessageKey">
+  MessageKey
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the source message key when available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? MessageKey { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_OriginalMessage_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.OriginalMessage*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_OriginalMessage" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.OriginalMessage">
+  OriginalMessage
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the original message when it is valid UTF-8.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? OriginalMessage { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_OriginalMessageBase64_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.OriginalMessageBase64*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_OriginalMessageBase64" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.OriginalMessageBase64">
+  OriginalMessageBase64
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the original bytes as Base64 when they are not valid UTF-8.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? OriginalMessageBase64 { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_OriginalMessageLength_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.OriginalMessageLength*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_OriginalMessageLength" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.OriginalMessageLength">
+  OriginalMessageLength
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the original message length in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int OriginalMessageLength { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_OriginalMessageSha256_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.OriginalMessageSha256*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_OriginalMessageSha256" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.OriginalMessageSha256">
+  OriginalMessageSha256
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the SHA-256 hash of the original message bytes as uppercase hexadecimal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string OriginalMessageSha256 { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_Reason_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.Reason*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_Reason" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.Reason">
+  Reason
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a bounded technical failure reason.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string Reason { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_RejectedAtUtc_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.RejectedAtUtc*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_RejectedAtUtc" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.RejectedAtUtc">
+  RejectedAtUtc
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets when the message was rejected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset RejectedAtUtc { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_SourceAddress_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.SourceAddress*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_SourceAddress" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.SourceAddress">
+  SourceAddress
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the logical source topic or routing key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string SourceAddress { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_SourceOffset_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.SourceOffset*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_SourceOffset" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.SourceOffset">
+  SourceOffset
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the source offset when the transport exposes durable offsets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? SourceOffset { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_SourcePartition_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.SourcePartition*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_SourcePartition" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.SourcePartition">
+  SourcePartition
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the source partition when the transport exposes partitions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? SourcePartition { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_SourceTransport_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.SourceTransport*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_SourceTransport" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.SourceTransport">
+  SourceTransport
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the source transport name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string SourceTransport { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_WasRedelivered_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.WasRedelivered*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_WasRedelivered" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.WasRedelivered">
+  WasRedelivered
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the broker identified the original delivery as a redelivery.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool WasRedelivered { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_Equals_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.Equals*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_Equals_Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.Equals(Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage)">
+  Equals(ProjectionDeadLetterMessage?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(ProjectionDeadLetterMessage? other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.html">ProjectionDeadLetterMessage</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_Equals_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.Equals*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_Equals_System_Object_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.Equals(System.Object)">
+  Equals(object?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_GetHashCode_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.GetHashCode*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_GetHashCode" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_ToString_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.ToString*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_ToString" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_op_Equality_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.op_Equality*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_op_Equality_Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.op_Equality(Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage,Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage)">
+  operator ==(ProjectionDeadLetterMessage?, ProjectionDeadLetterMessage?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(ProjectionDeadLetterMessage? left, ProjectionDeadLetterMessage? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.html">ProjectionDeadLetterMessage</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.html">ProjectionDeadLetterMessage</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_op_Inequality_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.op_Inequality*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_op_Inequality_Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.op_Inequality(Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage,Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage)">
+  operator !=(ProjectionDeadLetterMessage?, ProjectionDeadLetterMessage?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(ProjectionDeadLetterMessage? left, ProjectionDeadLetterMessage? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.html">ProjectionDeadLetterMessage</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.html">ProjectionDeadLetterMessage</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

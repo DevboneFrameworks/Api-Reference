@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IAsyncEventStore | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IAsyncEventStore | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Defines the asynchronous public API contract for core event persistence and retrieval.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore">
+
+
+
+  <h1 id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore" class="text-break">
+Interface IAsyncEventStore  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.html">EventSourcing</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.html">Repositories</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventSourcing.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Defines the asynchronous public API contract for core event persistence and retrieval.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IAsyncEventStore</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_GetAggregateIdsAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetAggregateIdsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_GetAggregateIdsAsync_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetAggregateIdsAsync(System.String,System.Threading.CancellationToken)">
+  GetAggregateIdsAsync(string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all aggregate identifiers for one aggregate contract.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;string&gt;&gt; GetAggregateIdsAsync(string aggregateName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The aggregate contract name.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd><p>The distinct aggregate identifiers.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_GetCurrentIncrementsAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetCurrentIncrementsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_GetCurrentIncrementsAsync_Devbone_Frameworks_EventSourcing_Increments_IIncrementGlobal_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetCurrentIncrementsAsync(Devbone.Frameworks.EventSourcing.Increments.IIncrementGlobal,System.Threading.CancellationToken)">
+  GetCurrentIncrementsAsync(IIncrementGlobal, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current value for one increment key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;long&gt; GetCurrentIncrementsAsync(IIncrementGlobal incrementGlobal, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>incrementGlobal</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Increments.IIncrementGlobal.html">IIncrementGlobal</a></dt>
+    <dd><p>The increment key.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd><p>The current value, or zero when the key does not exist.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_GetNextIncrementsAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetNextIncrementsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_GetNextIncrementsAsync_Devbone_Frameworks_EventSourcing_Increments_IIncrementGlobal___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetNextIncrementsAsync(Devbone.Frameworks.EventSourcing.Increments.IIncrementGlobal[],System.Threading.CancellationToken)">
+  GetNextIncrementsAsync(IIncrementGlobal[], CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allocates the next values for the supplied increment keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IIncrementGlobalValue[]&gt; GetNextIncrementsAsync(IIncrementGlobal[] incrementGlobals, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>incrementGlobals</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Increments.IIncrementGlobal.html">IIncrementGlobal</a>[]</dt>
+    <dd><p>The increment keys to allocate.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Increments.IIncrementGlobalValue.html">IIncrementGlobalValue</a>[]&gt;</dt>
+    <dd><p>One allocated value per supplied increment key.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_GetUniqueValueAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetUniqueValueAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_GetUniqueValueAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetUniqueValueAsync(System.String,System.String,System.Threading.CancellationToken)">
+  GetUniqueValueAsync(string, string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets one unique value by aggregate identifier and key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;UniqueValueHash?&gt; GetUniqueValueAsync(string aggregateId, string key, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The aggregate identifier.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The unique-value key.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHash.html">UniqueValueHash</a>&gt;</dt>
+    <dd><p>The stored unique value, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when none exists.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_LoadAggregateAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.LoadAggregateAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_LoadAggregateAsync_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.LoadAggregateAsync(System.String,System.Threading.CancellationToken)">
+  LoadAggregateAsync(string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads all events for one aggregate identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IDatabaseEvent&gt;&gt; LoadAggregateAsync(string aggregateId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The aggregate identifier.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>&gt;&gt;</dt>
+    <dd><p>The aggregate events ordered by event sequence and event order.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_LoadAggregatesAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.LoadAggregatesAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_LoadAggregatesAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.LoadAggregatesAsync(System.String,System.String,System.Threading.CancellationToken)">
+  LoadAggregatesAsync(string, string?, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads events for one aggregate contract and optional event contract.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IDatabaseEvent&gt;&gt; LoadAggregatesAsync(string aggregateName, string? eventName = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The aggregate contract name.</p>
+</dd>
+    <dt><code>eventName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The optional event contract name.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>&gt;&gt;</dt>
+    <dd><p>The matching events grouped by aggregate identifier and, within each aggregate, in stream order.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_LoadAggregatesAsync_System_String_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Reads the complete result into memory with no paging, cursor, or resume point, so it suits
+diagnostics and bounded rebuilds rather than a production catch-up subscription. A resumable ordered
+read across the whole store is tracked separately and needs a global position column the schema does
+not yet have.</p>
+</div>
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_RemoveUniquesAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.RemoveUniquesAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_RemoveUniquesAsync_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.RemoveUniquesAsync(System.String,System.Threading.CancellationToken)">
+  RemoveUniquesAsync(string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes all unique values for one aggregate identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task RemoveUniquesAsync(string aggregateId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The aggregate identifier.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that completes when the unique values have been removed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_StoreEventsAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.StoreEventsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_StoreEventsAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)">
+  StoreEventsAsync(IDatabaseEvent[], IUniqueValue[], CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores one event batch and optional unique values as one atomic commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task StoreEventsAsync(IDatabaseEvent[] events, IUniqueValue[] uniqueValues, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>[]</dt>
+    <dd><p>The events to store.</p>
+</dd>
+    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.html">IUniqueValue</a>[]</dt>
+    <dd><p>Optional unique values to upsert in the same transaction.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that completes when the commit has been persisted.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_StoreEventsAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.StoreEventsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_StoreEventsAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],System.Threading.CancellationToken)">
+  StoreEventsAsync(IDatabaseEvent[], CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores one event batch as one atomic commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task StoreEventsAsync(IDatabaseEvent[] events, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>[]</dt>
+    <dd><p>The events to store.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that completes when the commit has been persisted.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

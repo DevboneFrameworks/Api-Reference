@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class InMemoryEventRepository | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class InMemoryEventRepository | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Provides an atomic, thread-safe in-memory implementation of all persistence ports for contract and aggregate tests.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository">
+
+
+
+  <h1 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository" class="text-break">
+Class InMemoryEventRepository  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.Ddd.html">Ddd</a>.<a class="xref" href="Devbone.Frameworks.Ddd.Testing.html">Testing</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.Ddd.Testing.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides an atomic, thread-safe in-memory implementation of all persistence ports for contract and aggregate tests.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class InMemoryEventRepository : IAggregateSnapshotEventStreamReader, IEventStreamReader, IAggregateSnapshotCommitWriter, IEventStreamWriter, IUniqueValueRepository, IIncrementValueRepository</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">InMemoryEventRepository</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotEventStreamReader.html">IAggregateSnapshotEventStreamReader</a></div>
+      <div><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.html">IEventStreamReader</a></div>
+      <div><a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotCommitWriter.html">IAggregateSnapshotCommitWriter</a></div>
+      <div><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamWriter.html">IEventStreamWriter</a></div>
+      <div><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository.html">IUniqueValueRepository</a></div>
+      <div><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.html">IIncrementValueRepository</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository__ctor_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository__ctor" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.#ctor">
+  InMemoryEventRepository()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InMemoryEventRepository()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_SnapshotIntervalEvents_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.SnapshotIntervalEvents*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_SnapshotIntervalEvents" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.SnapshotIntervalEvents">
+  SnapshotIntervalEvents
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the snapshot interval used by tests, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to disable snapshots.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? SnapshotIntervalEvents { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_AddEvents_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.AddEvents*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_AddEvents_Devbone_Frameworks_Ddd_Repositories_IStoredEvent_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.AddEvents(Devbone.Frameworks.Ddd.Repositories.IStoredEvent)">
+  AddEvents(IStoredEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Persists one event row.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEventStoredResult AddEvents(IStoredEvent @event)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>event</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a></dt>
+    <dd><p>Stored event row.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
+    <dd><p>A successful result after persistence, or a failed result for conflicts and persistence errors.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_AddEvents_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.AddEvents*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_AddEvents_Devbone_Frameworks_Ddd_Repositories_IStoredEvent_System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty__" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.AddEvents(Devbone.Frameworks.Ddd.Repositories.IStoredEvent,System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty})">
+  AddEvents(IStoredEvent, IReadOnlySet&lt;UniqueProperty&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Persists one event row together with unique value constraints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEventStoredResult AddEvents(IStoredEvent @event, IReadOnlySet&lt;UniqueProperty&gt; uniqueValues)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>event</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a></dt>
+    <dd><p>Stored event row.</p>
+</dd>
+    <dt><code>uniqueValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/UniqueValues/UniqueProperty.cs">UniqueProperty</a>&gt;</dt>
+    <dd><p>Unique value constraints derived from the event.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
+    <dd><p>A successful atomic write result, or a failed result without partial event or unique-index changes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_AddEvents_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.AddEvents*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_AddEvents_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.AddEvents(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[])">
+  AddEvents(IStoredEvent[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Persists multiple event rows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEventStoredResult AddEvents(IStoredEvent[] events)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>events</code> <a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/Repositories/IStoredEvent.cs">IStoredEvent</a>[]</dt>
+    <dd><p>Stored event rows.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
+    <dd><p>A successful result after the complete atomic batch, or a failed result without partial writes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_AddEvents_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.AddEvents*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_AddEvents_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty__" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.AddEvents(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[],System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty})">
+  AddEvents(IStoredEvent[], IReadOnlySet&lt;UniqueProperty&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Persists event rows together with unique value constraints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEventStoredResult AddEvents(IStoredEvent[] events, IReadOnlySet&lt;UniqueProperty&gt; uniqueValues)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>events</code> <a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/Repositories/IStoredEvent.cs">IStoredEvent</a>[]</dt>
+    <dd><p>Stored event rows.</p>
+</dd>
+    <dt><code>uniqueValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/UniqueValues/UniqueProperty.cs">UniqueProperty</a>&gt;</dt>
+    <dd><p>Unique value constraints derived from events.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
+    <dd><p>A successful atomic write result, or a failed result without partial event or unique-index changes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_AddEvents_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.AddEvents*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_AddEvents_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty__Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshot_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.AddEvents(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[],System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty},Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshot)">
+  AddEvents(IStoredEvent[], IReadOnlySet&lt;UniqueProperty&gt;, AggregateSnapshot)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Persists all event rows, unique values, and the supplied snapshot atomically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEventStoredResult AddEvents(IStoredEvent[] events, IReadOnlySet&lt;UniqueProperty&gt; uniqueValues, AggregateSnapshot snapshot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>events</code> <a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/Repositories/IStoredEvent.cs">IStoredEvent</a>[]</dt>
+    <dd></dd>
+    <dt><code>uniqueValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/UniqueValues/UniqueProperty.cs">UniqueProperty</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_GetAggregateIds_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.GetAggregateIds*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_GetAggregateIds_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.GetAggregateIds(Devbone.Frameworks.Ddd.Aggregates.IAggregateName)">
+  GetAggregateIds(IAggregateName)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all aggregate ids known for the specified aggregate name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; GetAggregateIds(IAggregateName aggregateName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateName.html">IAggregateName</a></dt>
+    <dd><p>Aggregate name.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Known aggregate id values.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_GetCurrentIncrements_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.GetCurrentIncrements*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_GetCurrentIncrements_Devbone_Frameworks_Ddd_IncrementValues_IIncrementGlobalProperty_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.GetCurrentIncrements(Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty)">
+  GetCurrentIncrements(IIncrementGlobalProperty)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current increment for one key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long GetCurrentIncrements(IIncrementGlobalProperty incrementGlobal)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>incrementGlobal</code> <a class="xref" href="Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty.html">IIncrementGlobalProperty</a></dt>
+    <dd><p>Increment key.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Current increment value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_GetNextIncrements_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.GetNextIncrements*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_GetNextIncrements_System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_IncrementValues_IIncrementGlobalProperty__" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.GetNextIncrements(System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty})">
+  GetNextIncrements(IReadOnlySet&lt;IIncrementGlobalProperty&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reserves and returns next increment values for each requested key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IIncrementGlobalResult[] GetNextIncrements(IReadOnlySet&lt;IIncrementGlobalProperty&gt; incrementGlobals)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>incrementGlobals</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/IncrementValues/IIncrementGlobalProperty.cs">IIncrementGlobalProperty</a>&gt;</dt>
+    <dd><p>Increment keys.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/Results/IIncrementGlobalResult.cs">IIncrementGlobalResult</a>[]</dt>
+    <dd><p>Distinct next values allocated atomically for the requested keys.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_GetSnapshot_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.GetSnapshot*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_GetSnapshot_Devbone_Frameworks_Ddd_Core_IIdentity_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.GetSnapshot(Devbone.Frameworks.Ddd.Core.IIdentity)">
+  GetSnapshot(IIdentity)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the persisted snapshot for an aggregate, when present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AggregateSnapshot? GetSnapshot(IIdentity aggregateId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IIdentity.html">IIdentity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_HasProcessedRequest_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.HasProcessedRequest*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_HasProcessedRequest_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Core_IIdentity_Devbone_Frameworks_Ddd_Core_IRequestId_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.HasProcessedRequest(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IIdentity,Devbone.Frameworks.Ddd.Core.IRequestId)">
+  HasProcessedRequest(IAggregateName, IIdentity, IRequestId)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether one request was already committed for the aggregate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasProcessedRequest(IAggregateName aggregateName, IIdentity aggregateId, IRequestId requestId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateName.html">IAggregateName</a></dt>
+    <dd></dd>
+    <dt><code>aggregateId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IIdentity.html">IIdentity</a></dt>
+    <dd></dd>
+    <dt><code>requestId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IRequestId.html">IRequestId</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_LoadAggregate_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.LoadAggregate*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_LoadAggregate_Devbone_Frameworks_Ddd_Core_IIdentity_System_Boolean_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.LoadAggregate(Devbone.Frameworks.Ddd.Core.IIdentity,System.Boolean)">
+  LoadAggregate(IIdentity, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads all stored events for an aggregate instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;IStoredEvent&gt; LoadAggregate(IIdentity aggregateId, bool skipPublishCheck = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IIdentity.html">IIdentity</a></dt>
+    <dd><p>Aggregate identity.</p>
+</dd>
+    <dt><code>skipPublishCheck</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Indicates whether unpublished-state checks are skipped.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/Repositories/IStoredEvent.cs">IStoredEvent</a>&gt;</dt>
+    <dd><p>Stored event sequence ordered by aggregate version.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_LoadForRehydration_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.LoadForRehydration*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_LoadForRehydration_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Core_IIdentity_System_Boolean_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.LoadForRehydration(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IIdentity,System.Boolean)">
+  LoadForRehydration(IAggregateName, IIdentity, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads an optional snapshot and every event after it for one aggregate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AggregateRehydration LoadForRehydration(IAggregateName aggregateName, IIdentity aggregateId, bool skipPublishCheck = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateName.html">IAggregateName</a></dt>
+    <dd></dd>
+    <dt><code>aggregateId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IIdentity.html">IIdentity</a></dt>
+    <dd></dd>
+    <dt><code>skipPublishCheck</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.AggregateRehydration.html">AggregateRehydration</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_RemoveUniques_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.RemoveUniques*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_RemoveUniques_Devbone_Frameworks_Ddd_Core_IIdentity_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.RemoveUniques(Devbone.Frameworks.Ddd.Core.IIdentity)">
+  RemoveUniques(IIdentity)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes tracked unique values for an aggregate instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEventStoredResult RemoveUniques(IIdentity aggregateId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IIdentity.html">IIdentity</a></dt>
+    <dd><p>Aggregate identity.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
+    <dd><p>Write result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_ShouldCreateSnapshot_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.ShouldCreateSnapshot*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_ShouldCreateSnapshot_System_String_System_String_System_Int64_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.ShouldCreateSnapshot(System.String,System.String,System.Int64)">
+  ShouldCreateSnapshot(string, string, long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether aggregate state at the supplied stream position should be snapshotted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShouldCreateSnapshot(string aggregateName, string aggregateId, long aggregateVersion)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>aggregateVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

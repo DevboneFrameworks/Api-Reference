@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Devbone.Frameworks.Ddd.Aggregates | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Devbone.Frameworks.Ddd.Aggregates | Devbone Event-Driven Platform ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.Ddd.Aggregates">
+
+  <h1 id="Devbone_Frameworks_Ddd_Aggregates" data-uid="Devbone.Frameworks.Ddd.Aggregates" class="text-break">Namespace Devbone.Frameworks.Ddd.Aggregates</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.AggregateEventContainer.html">AggregateEventContainer</a></dt>
+      <dd><p>Couples an uncommitted event payload with its persistence and correlation metadata.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.AggregateEventMetadata.html">AggregateEventMetadata</a></dt>
+      <dd><p>Holds the immutable stream position, contract, correlation, and publication metadata that turns a domain event
+payload into one complete event-store row without polluting the domain event itself with persistence concerns.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.AggregateEvent-3.html">AggregateEvent&lt;TAggregateEvent, TAggregate, TIdentity&gt;</a></dt>
+      <dd><p>Supplies the common event envelope for event-sourced aggregates: aggregate identity, independent payload-schema version,
+stable event contract, JSON serialization, and extraction of uniqueness and increment metadata.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.AggregateFault.html">AggregateFault</a></dt>
+      <dd><p>Preserves the first unexpected lifecycle failure that invalidated one in-memory aggregate instance.
+It is diagnostic metadata only: callers must discard the faulted instance and rebuild a fresh aggregate from its event stream.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.AggregateIdentityExtensions.html">AggregateIdentityExtensions</a></dt>
+      <dd><p>Provides event-stream-backed existence validation for aggregate identities.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.AggregateIdentity-1.html">AggregateIdentity&lt;T&gt;</a></dt>
+      <dd><p>Specializes the prefixed GUID identity contract for values that address one aggregate's isolated event stream.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.AggregateName.html">AggregateName</a></dt>
+      <dd><p>Protects the stable aggregate-stream contract name from accidental null, empty, or whitespace values.
+The name is used by storage, locking, and event metadata and should survive CLR type renames.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.AggregateNameAttribute.html">AggregateNameAttribute</a></dt>
+      <dd><p>Overrides the CLR type name with a stable aggregate contract name.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.AggregateOperationGuard.html">AggregateOperationGuard</a></dt>
+      <dd><p>Provides the common runtime guard used by aggregate base methods and generated command dispatchers to reject
+domain operations against an instance whose state can no longer be trusted.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot-3.html">AggregateRoot&lt;TAggregate, TEntity, TIdentity&gt;</a></dt>
+      <dd><p>Provides the aggregate-owned command validation and execution portion of the aggregate lifecycle.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateEvent.html">IAggregateEvent</a></dt>
+      <dd><p>Defines a versioned domain event that can be persisted as one event-store row.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateEventContainer.html">IAggregateEventContainer</a></dt>
+      <dd><p>Couples one uncommitted aggregate event with the metadata required to persist and publish it.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateEventMetadata.html">IAggregateEventMetadata</a></dt>
+      <dd><p>Defines persistence, stream-order, schema, and request metadata for one aggregate event.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateEvent-2.html">IAggregateEvent&lt;TAggregate, TIdentity&gt;</a></dt>
+      <dd><p>Defines an aggregate event bound to one aggregate and strongly typed identity.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateIdentity.html">IAggregateIdentity</a></dt>
+      <dd><p>Marks an identity as suitable for addressing an aggregate event stream.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateName.html">IAggregateName</a></dt>
+      <dd><p>Defines a stable aggregate contract name used by persistence and locking ports.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateRoot.html">IAggregateRoot</a></dt>
+      <dd><p>Defines lifecycle, rehydration, and explicit commit behavior for an event-sourced aggregate root.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateRoot-1.html">IAggregateRoot&lt;TIdentity&gt;</a></dt>
+      <dd><p>Defines an event-sourced aggregate root with a strongly typed identity.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateSnapshotRoot.html">IAggregateSnapshotRoot</a></dt>
+      <dd><p>Restores an aggregate transparently from an optional snapshot and following events.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.AggregateFaultOrigin.html">AggregateFaultOrigin</a></dt>
+      <dd><p>Identifies the lifecycle operation that made an aggregate instance unsafe for further domain use.
+The origin distinguishes deterministic replay failures from live command or event-tracking failures in diagnostics.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

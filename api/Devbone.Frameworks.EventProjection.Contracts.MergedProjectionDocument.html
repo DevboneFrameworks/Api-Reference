@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MergedProjectionDocument | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MergedProjectionDocument | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Represents the stored merged projection of one aggregate.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument">
+
+
+
+  <h1 id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument" class="text-break">
+Class MergedProjectionDocument  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.html">EventProjection</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.html">Contracts</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents the stored merged projection of one aggregate.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record MergedProjectionDocument : IEquatable&lt;MergedProjectionDocument&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">MergedProjectionDocument</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.html">MergedProjectionDocument</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument__ctor_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument__ctor_Devbone_Frameworks_EventBus_Contracts_Messaging_EventMetadata_System_Text_Json_Nodes_JsonObject_System_Int64_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.#ctor(Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata,System.Text.Json.Nodes.JsonObject,System.Int64)">
+  MergedProjectionDocument(EventMetadata, JsonObject, long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the stored merged projection of one aggregate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MergedProjectionDocument(EventMetadata Metadata, JsonObject Value, long EventSequence)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Metadata</code> <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata.html">EventMetadata</a></dt>
+    <dd><p>Metadata of the last event applied to the projection.</p>
+</dd>
+    <dt><code>Value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd><p>Reference-enriched aggregate value.</p>
+</dd>
+    <dt><code>EventSequence</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Event sequence the stored document reflects.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_EventSequence_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.EventSequence*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_EventSequence" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.EventSequence">
+  EventSequence
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event sequence the stored document reflects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long EventSequence { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_Metadata_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.Metadata*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_Metadata" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.Metadata">
+  Metadata
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Metadata of the last event applied to the projection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventMetadata Metadata { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata.html">EventMetadata</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_Value_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.Value*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_Value" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.Value">
+  Value
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reference-enriched aggregate value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JsonObject Value { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_Deconstruct_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.Deconstruct*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_Deconstruct_Devbone_Frameworks_EventBus_Contracts_Messaging_EventMetadata__System_Text_Json_Nodes_JsonObject__System_Int64__" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.Deconstruct(Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata@,System.Text.Json.Nodes.JsonObject@,System.Int64@)">
+  Deconstruct(out EventMetadata, out JsonObject, out long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deconstruct(out EventMetadata Metadata, out JsonObject Value, out long EventSequence)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Metadata</code> <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata.html">EventMetadata</a></dt>
+    <dd></dd>
+    <dt><code>Value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
+    <dd></dd>
+    <dt><code>EventSequence</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_Equals_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.Equals*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_Equals_Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.Equals(Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument)">
+  Equals(MergedProjectionDocument?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(MergedProjectionDocument? other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.html">MergedProjectionDocument</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_Equals_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.Equals*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_Equals_System_Object_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.Equals(System.Object)">
+  Equals(object?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_GetHashCode_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.GetHashCode*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_GetHashCode" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_ToString_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.ToString*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_ToString" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_op_Equality_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.op_Equality*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_op_Equality_Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.op_Equality(Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument,Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument)">
+  operator ==(MergedProjectionDocument?, MergedProjectionDocument?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(MergedProjectionDocument? left, MergedProjectionDocument? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.html">MergedProjectionDocument</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.html">MergedProjectionDocument</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_op_Inequality_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.op_Inequality*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_op_Inequality_Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.op_Inequality(Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument,Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument)">
+  operator !=(MergedProjectionDocument?, MergedProjectionDocument?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(MergedProjectionDocument? left, MergedProjectionDocument? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.html">MergedProjectionDocument</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.html">MergedProjectionDocument</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

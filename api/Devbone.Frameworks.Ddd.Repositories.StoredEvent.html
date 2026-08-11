@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class StoredEvent | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class StoredEvent | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Implements the durable event-store record that preserves one domain event payload together with its aggregate stream position, stable contract, schema version, request correlation, and external-publication status.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent">
+
+
+
+  <h1 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent" class="text-break">
+Class StoredEvent  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.Ddd.html">Ddd</a>.<a class="xref" href="Devbone.Frameworks.Ddd.Repositories.html">Repositories</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.Ddd.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Implements the durable event-store record that preserves one domain event payload together with its aggregate
+stream position, stable contract, schema version, request correlation, and external-publication status.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class StoredEvent : IStoredEvent</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">StoredEvent</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent__ctor_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent__ctor" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.#ctor">
+  StoredEvent()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StoredEvent()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateCommitEventCount_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateCommitEventCount*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateCommitEventCount" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateCommitEventCount">
+  AggregateCommitEventCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the total number of events in the atomic aggregate commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AggregateCommitEventCount { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateConcurrencyToken_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateConcurrencyToken*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateConcurrencyToken" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateConcurrencyToken">
+  AggregateConcurrencyToken
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the opaque token representing the aggregate state after the complete atomic commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AggregateConcurrencyToken { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateId_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateId*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateId" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateId">
+  AggregateId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the owning aggregate identity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AggregateId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateLifecycle_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateLifecycle*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateLifecycle" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateLifecycle">
+  AggregateLifecycle
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether this event establishes, changes, or deletes its aggregate stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AggregateLifecycle AggregateLifecycle { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Events.AggregateLifecycle.html">AggregateLifecycle</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateName_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateName*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateName" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateName">
+  AggregateName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the historical shortened aggregate contract name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AggregateName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateRevision_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateRevision*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateRevision" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateRevision">
+  AggregateRevision
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the client-visible revision assigned once to every event in one atomic aggregate commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long AggregateRevision { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateRouteId_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateRouteId*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateRouteId" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateRouteId">
+  AggregateRouteId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the stable logical infrastructure route assigned before persistence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? AggregateRouteId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateRouteVersion_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateRouteVersion*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateRouteVersion" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateRouteVersion">
+  AggregateRouteVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the persisted route version used to resolve immutable publication destinations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? AggregateRouteVersion { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateVersion_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateVersion*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_AggregateVersion" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.AggregateVersion">
+  AggregateVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the one-based position in the aggregate stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long AggregateVersion { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_CreationDate_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.CreationDate*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_CreationDate" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.CreationDate">
+  CreationDate
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the UTC event creation timestamp.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime CreationDate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_EventId_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.EventId*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_EventId" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.EventId">
+  EventId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the globally unique event identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string EventId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_EventName_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.EventName*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_EventName" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.EventName">
+  EventName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the stable event contract key, historically stored in the <code>EventName</code> column.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string EventName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_EventOrder_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.EventOrder*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_EventOrder" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.EventOrder">
+  EventOrder
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the zero-based position of this event inside its atomic aggregate commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int EventOrder { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_EventSequence_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.EventSequence*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_EventSequence" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.EventSequence">
+  EventSequence
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the one-based technical position of this event in the aggregate stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long EventSequence { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_EventVersion_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.EventVersion*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_EventVersion" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.EventVersion">
+  EventVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the payload schema version independently of <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html#Devbone_Frameworks_Ddd_Repositories_IStoredEvent_AggregateVersion">AggregateVersion</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int EventVersion { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_PreviousAggregateConcurrencyToken_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.PreviousAggregateConcurrencyToken*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_PreviousAggregateConcurrencyToken" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.PreviousAggregateConcurrencyToken">
+  PreviousAggregateConcurrencyToken
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the token of the aggregate state that preceded the atomic commit.
+A <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> value identifies the first commit of a stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? PreviousAggregateConcurrencyToken { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_Privacy_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.Privacy*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_Privacy" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.Privacy">
+  Privacy
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the optional application-supplied privacy descriptor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventPrivacyDescriptor? Privacy { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Privacy.EventPrivacyDescriptor.html">EventPrivacyDescriptor</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_Published_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.Published*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_Published" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.Published">
+  Published
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether the event row has been published to the external event bus.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Published { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_RequestId_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.RequestId*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_RequestId" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.RequestId">
+  RequestId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the request identifier used for tracing and idempotency.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string RequestId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_TenantId_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.TenantId*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_TenantId" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.TenantId">
+  TenantId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the optional tenant context that travels with the event independently of routing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? TenantId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_Value_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.Value*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_Value" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.Value">
+  Value
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the serialized event payload.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

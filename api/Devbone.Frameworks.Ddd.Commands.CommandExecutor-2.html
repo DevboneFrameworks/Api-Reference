@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CommandExecutor&lt;TAggregate, TIdentity&gt; | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CommandExecutor&lt;TAggregate, TIdentity&gt; | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Orchestrates one command batch against one aggregate stream without becoming an internal message bus. It acquires the aggregate lock, rehydrates state, enforces request-id idempotency, invokes generated handlers, and performs the aggregate&#39;s explicit commit only after successful handling.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2">
+
+
+
+  <h1 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2" class="text-break">
+Class CommandExecutor&lt;TAggregate, TIdentity&gt;  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.Ddd.html">Ddd</a>.<a class="xref" href="Devbone.Frameworks.Ddd.Commands.html">Commands</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.Ddd.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Orchestrates one command batch against one aggregate stream without becoming an internal message bus.
+It acquires the aggregate lock, rehydrates state, enforces request-id idempotency, invokes generated handlers,
+and performs the aggregate's explicit commit only after successful handling.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class CommandExecutor&lt;TAggregate, TIdentity&gt; : IVersionedType where TAggregate : IAggregateRoot&lt;TIdentity&gt;, IAggregateCommandPipeline&lt;TAggregate, TIdentity&gt; where TIdentity : IAggregateIdentity</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TAggregate</code></dt>
+    <dd><p>Aggregate type.</p>
+</dd>
+    <dt><code>TIdentity</code></dt>
+    <dd><p>Aggregate id type.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CommandExecutor&lt;TAggregate, TIdentity&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Devbone.Frameworks.Ddd.Core.IVersionedType.html">IVersionedType</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2__ctor_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2__ctor_System_Int32_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_Devbone_Frameworks_Ddd_Repositories_ILockRepository_Microsoft_Extensions_Logging_ILogger_Devbone_Frameworks_Ddd_Commands_IAggregateCommandHandlerFactory_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.#ctor(System.Int32,Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Repositories.IEventStreamReader,Devbone.Frameworks.Ddd.Repositories.ILockRepository,Microsoft.Extensions.Logging.ILogger,Devbone.Frameworks.Ddd.Commands.IAggregateCommandHandlerFactory)">
+  CommandExecutor(int, IAggregateName, IEventStreamReader, ILockRepository, ILogger, IAggregateCommandHandlerFactory?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures the command execution pipeline with application-provided structured logging.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected CommandExecutor(int version, IAggregateName name, IEventStreamReader eventStreamReader, ILockRepository lockRepository, ILogger logger, IAggregateCommandHandlerFactory? commandHandlerFactory = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>version</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Executor version exposed through <a class="xref" href="Devbone.Frameworks.Ddd.Commands.CommandExecutor-2.html#Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_Version">Version</a>.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateName.html">IAggregateName</a></dt>
+    <dd><p>Stable aggregate contract name used by persistence and locking.</p>
+</dd>
+    <dt><code>eventStreamReader</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.html">IEventStreamReader</a></dt>
+    <dd><p>Reader used to rehydrate target aggregates.</p>
+</dd>
+    <dt><code>lockRepository</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.ILockRepository.html">ILockRepository</a></dt>
+    <dd><p>Repository used to serialize modifications of one aggregate stream.</p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>Logger supplied by the application host, optionally backed by Serilog or another provider.</p>
+</dd>
+    <dt><code>commandHandlerFactory</code> <a class="xref" href="Devbone.Frameworks.Ddd.Commands.IAggregateCommandHandlerFactory.html">IAggregateCommandHandlerFactory</a></dt>
+    <dd><p>Factory used to resolve one handler instance per command.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when a repository, <code class="paramref">name</code>, or <code class="paramref">logger</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2__aggregateName" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2._aggregateName">
+  _aggregateName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolved aggregate name for diagnostics and persistence coordination.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IAggregateName _aggregateName</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateName.html">IAggregateName</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2__eventStreamReader" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2._eventStreamReader">
+  _eventStreamReader
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event stream reader used to load aggregate events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IEventStreamReader _eventStreamReader</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.html">IEventStreamReader</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2__lockRepo" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2._lockRepo">
+  _lockRepo
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lock repository used for aggregate-level concurrency control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ILockRepository _lockRepo</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.ILockRepository.html">ILockRepository</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_Version_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.Version*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_Version" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.Version">
+  Version
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Version value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Version { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_ExecuteLocked_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.ExecuteLocked*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_ExecuteLocked_Devbone_Frameworks_Ddd_Core_IRequestId__1_System_Func_Devbone_Frameworks_Ddd_Results_IAggregateModificationResult__" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.ExecuteLocked(Devbone.Frameworks.Ddd.Core.IRequestId,`1,System.Func{Devbone.Frameworks.Ddd.Results.IAggregateModificationResult})">
+  ExecuteLocked(IRequestId, TIdentity, Func&lt;IAggregateModificationResult&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes the given callback under an aggregate lock.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task&lt;IAggregateModificationResult&gt; ExecuteLocked(IRequestId requestId, TIdentity aggregateId, Func&lt;IAggregateModificationResult&gt; executor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>requestId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IRequestId.html">IRequestId</a></dt>
+    <dd><p>Request identity recorded as the lock owner.</p>
+</dd>
+    <dt><code>aggregateId</code> <span class="xref">TIdentity</span></dt>
+    <dd><p>Identity of the aggregate stream to lock.</p>
+</dd>
+    <dt><code>executor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IAggregateModificationResult.html">IAggregateModificationResult</a>&gt;</dt>
+    <dd><p>Synchronous operation invoked only after lock acquisition.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IAggregateModificationResult.html">IAggregateModificationResult</a>&gt;</dt>
+    <dd><p>The callback result, or a failed result when lock acquisition is rejected.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when an argument is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_ExecuteLockedAsync_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.ExecuteLockedAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_ExecuteLockedAsync_Devbone_Frameworks_Ddd_Core_IRequestId__1_System_Func_System_Threading_Tasks_Task_Devbone_Frameworks_Ddd_Results_IAggregateModificationResult___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.ExecuteLockedAsync(Devbone.Frameworks.Ddd.Core.IRequestId,`1,System.Func{System.Threading.Tasks.Task{Devbone.Frameworks.Ddd.Results.IAggregateModificationResult}},System.Threading.CancellationToken)">
+  ExecuteLockedAsync(IRequestId, TIdentity, Func&lt;Task&lt;IAggregateModificationResult&gt;&gt;, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes the given async callback under an aggregate lock.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task&lt;IAggregateModificationResult&gt; ExecuteLockedAsync(IRequestId requestId, TIdentity aggregateId, Func&lt;Task&lt;IAggregateModificationResult&gt;&gt; executor, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>requestId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IRequestId.html">IRequestId</a></dt>
+    <dd><p>Request identity recorded as the lock owner.</p>
+</dd>
+    <dt><code>aggregateId</code> <span class="xref">TIdentity</span></dt>
+    <dd><p>Identity of the aggregate stream to lock.</p>
+</dd>
+    <dt><code>executor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IAggregateModificationResult.html">IAggregateModificationResult</a>&gt;&gt;</dt>
+    <dd><p>Asynchronous operation invoked only after lock acquisition.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token used to cancel lock acquisition and command handling.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IAggregateModificationResult.html">IAggregateModificationResult</a>&gt;</dt>
+    <dd><p>A task containing the callback result, or a failed result when lock acquisition is rejected.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when an argument is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_Handle_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.Handle*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_Handle_System_Collections_Generic_IEnumerable_Devbone_Frameworks_Ddd_Commands_Command__1___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.Handle(System.Collections.Generic.IEnumerable{Devbone.Frameworks.Ddd.Commands.Command{`1}},System.Threading.CancellationToken)">
+  Handle(IEnumerable&lt;Command&lt;TIdentity&gt;&gt;, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles an incoming command batch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;IResult&gt; Handle(IEnumerable&lt;Command&lt;TIdentity&gt;&gt; commands, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>commands</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Commands.Command-1.html">Command</a>&lt;TIdentity&gt;&gt;</dt>
+    <dd><p>Commands targeting one aggregate and sharing one request identity.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token used to cancel validation and execution.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IResult.html">IResult</a>&gt;</dt>
+    <dd><p>A task containing the combined validation, handling, and commit result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_HandleLockedAsync_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.HandleLockedAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_HandleLockedAsync_System_Collections_Generic_IEnumerable_Devbone_Frameworks_Ddd_Commands_Command__1___System_Func__1__0__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.HandleLockedAsync(System.Collections.Generic.IEnumerable{Devbone.Frameworks.Ddd.Commands.Command{`1}},System.Func{`1,`0},System.Threading.CancellationToken)">
+  HandleLockedAsync(IEnumerable&lt;Command&lt;TIdentity&gt;&gt;, Func&lt;TIdentity, TAggregate&gt;, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles commands with lock, aggregate loading and commit orchestration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task&lt;IResult&gt; HandleLockedAsync(IEnumerable&lt;Command&lt;TIdentity&gt;&gt; commands, Func&lt;TIdentity, TAggregate&gt; buildAggregate, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>commands</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Commands.Command-1.html">Command</a>&lt;TIdentity&gt;&gt;</dt>
+    <dd><p>Commands targeting one aggregate and sharing one request identity.</p>
+</dd>
+    <dt><code>buildAggregate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TIdentity, TAggregate&gt;</dt>
+    <dd><p>Factory that creates a fresh aggregate shell for the target identity.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Token used to cancel validation, locking, or command execution.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IResult.html">IResult</a>&gt;</dt>
+    <dd><p>A task containing validation, handling, idempotency, and commit outcomes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when the command batch, a command, or <code class="paramref">buildAggregate</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when the command batch is empty or contains inconsistent identities.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when the persisted event stream is inconsistent.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_VerifyCommands_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.VerifyCommands*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_VerifyCommands_System_Collections_Generic_IEnumerable_Devbone_Frameworks_Ddd_Commands_Command__1___System_Boolean_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.VerifyCommands(System.Collections.Generic.IEnumerable{Devbone.Frameworks.Ddd.Commands.Command{`1}},System.Boolean)">
+  VerifyCommands(IEnumerable&lt;Command&lt;TIdentity&gt;&gt;, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verifies that all commands target the same aggregate and request id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool VerifyCommands(IEnumerable&lt;Command&lt;TIdentity&gt;&gt; commands, bool throwException = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>commands</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Commands.Command-1.html">Command</a>&lt;TIdentity&gt;&gt;</dt>
+    <dd><p>Commands to validate as one atomic request batch.</p>
+</dd>
+    <dt><code>throwException</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether invalid input raises an exception instead of returning <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the batch is non-empty and every command has the same aggregate and request identities.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when the batch or one of its commands is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> and <code class="paramref">throwException</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when the batch is empty or identities differ and <code class="paramref">throwException</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

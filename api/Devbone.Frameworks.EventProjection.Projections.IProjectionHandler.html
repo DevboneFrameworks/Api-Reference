@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IProjectionHandler | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IProjectionHandler | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Builds one application-owned query model on top of the framework-standard raw and merged layers.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventProjection.Projections.IProjectionHandler">
+
+
+
+  <h1 id="Devbone_Frameworks_EventProjection_Projections_IProjectionHandler" data-uid="Devbone.Frameworks.EventProjection.Projections.IProjectionHandler" class="text-break">
+Interface IProjectionHandler  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.html">EventProjection</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Projections.html">Projections</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Builds one application-owned query model on top of the framework-standard raw and merged layers.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IProjectionHandler</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="Devbone_Frameworks_EventProjection_Projections_IProjectionHandler_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+The raw and merged layers are configuration-only and identical for every application. A derived handler is
+where code belongs: traversals, aggregations, denormalizations and anything a configured reference join
+cannot express.
+</p>
+<p>
+Handlers run in their own consumer stage, so a failing handler dead-letters its own message and never
+blocks the merged layer. A handler that throws is retried by the transport; a handler that keeps throwing
+ends in the aggregate's dead-letter destination.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Projections_IProjectionHandler_CanHandle_" data-uid="Devbone.Frameworks.EventProjection.Projections.IProjectionHandler.CanHandle*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_IProjectionHandler_CanHandle_System_String_" data-uid="Devbone.Frameworks.EventProjection.Projections.IProjectionHandler.CanHandle(System.String)">
+  CanHandle(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether this handler reacts to updates of one aggregate type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanHandle(string aggregateName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Exact aggregate contract name.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the handler wants updates of that aggregate.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Projections_IProjectionHandler_HandleAsync_" data-uid="Devbone.Frameworks.EventProjection.Projections.IProjectionHandler.HandleAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_IProjectionHandler_HandleAsync_Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Projections.IProjectionHandler.HandleAsync(Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext,System.Threading.CancellationToken)">
+  HandleAsync(MergedProjectionContext, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies one merged-projection update to the application's query model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task HandleAsync(MergedProjectionContext context, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html">MergedProjectionContext</a></dt>
+    <dd><p>The announced update and the merged document it refers to.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task completing after the query model has been updated durably.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Projections_IProjectionHandler_HandleAsync_Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Must be idempotent: the same update can be delivered more than once, and the merged document may
+already reflect events after the announced sequence.</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

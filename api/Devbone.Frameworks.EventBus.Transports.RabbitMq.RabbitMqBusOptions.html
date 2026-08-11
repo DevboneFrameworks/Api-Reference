@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RabbitMqBusOptions | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RabbitMqBusOptions | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Configures the RabbitMQ adapter.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions">
+
+
+
+  <h1 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions" class="text-break">
+Class RabbitMqBusOptions  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventBus.html">EventBus</a>.<a class="xref" href="Devbone.Frameworks.EventBus.Transports.html">Transports</a>.<a class="xref" href="Devbone.Frameworks.EventBus.Transports.RabbitMq.html">RabbitMq</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventBus.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Configures the RabbitMQ adapter.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class RabbitMqBusOptions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">RabbitMqBusOptions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions__ctor_" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions__ctor" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.#ctor">
+  RabbitMqBusOptions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RabbitMqBusOptions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_BroadcastInstanceId_" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.BroadcastInstanceId*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_BroadcastInstanceId" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.BroadcastInstanceId">
+  BroadcastInstanceId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the app instance id for broadcast-per-instance queue names.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? BroadcastInstanceId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_Durable_" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.Durable*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_Durable" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.Durable">
+  Durable
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether declared entities are durable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Durable { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_ExchangeName_" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.ExchangeName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_ExchangeName" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.ExchangeName">
+  ExchangeName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the exchange name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ExchangeName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_HostName_" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.HostName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_HostName" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.HostName">
+  HostName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the RabbitMQ host name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string HostName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_InitialConnectionRetryCount_" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.InitialConnectionRetryCount*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_InitialConnectionRetryCount" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.InitialConnectionRetryCount">
+  InitialConnectionRetryCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the number of connection retries after the first attempt.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int InitialConnectionRetryCount { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_InitialConnectionRetryDelayMs_" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.InitialConnectionRetryDelayMs*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_InitialConnectionRetryDelayMs" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.InitialConnectionRetryDelayMs">
+  InitialConnectionRetryDelayMs
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the base delay in milliseconds between connection retries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int InitialConnectionRetryDelayMs { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_MessageSizeLimits_" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.MessageSizeLimits*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_MessageSizeLimits" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.MessageSizeLimits">
+  MessageSizeLimits
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets canonical envelope, header, and complete transport-message limits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventMessageSizeLimits MessageSizeLimits { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMessageSizeLimits.html">EventMessageSizeLimits</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_Password_" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.Password*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_Password" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.Password">
+  Password
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the RabbitMQ password.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Password { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_PersistentMessages_" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.PersistentMessages*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_PersistentMessages" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.PersistentMessages">
+  PersistentMessages
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether published messages are marked as persistent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PersistentMessages { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_Port_" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.Port*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_Port" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.Port">
+  Port
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the RabbitMQ port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Port { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_PrefetchCount_" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.PrefetchCount*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_PrefetchCount" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.PrefetchCount">
+  PrefetchCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the prefetch count for consumers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort PrefetchCount { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_PublisherConfirmTimeout_" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.PublisherConfirmTimeout*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_PublisherConfirmTimeout" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.PublisherConfirmTimeout">
+  PublisherConfirmTimeout
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the maximum time to wait for a RabbitMQ publisher confirm.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan PublisherConfirmTimeout { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_UserName_" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.UserName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_UserName" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.UserName">
+  UserName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the RabbitMQ user name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string UserName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_VirtualHost_" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.VirtualHost*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_VirtualHost" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.VirtualHost">
+  VirtualHost
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the RabbitMQ virtual host.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string VirtualHost { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_Validate_" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.Validate*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Transports_RabbitMq_RabbitMqBusOptions_Validate" data-uid="Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.Validate">
+  Validate()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates the options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Validate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

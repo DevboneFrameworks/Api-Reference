@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IEventStoreDiagnosticsReader | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IEventStoreDiagnosticsReader | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Provides read-only, application-agnostic diagnostic queries over an event-store database.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader">
+
+
+
+  <h1 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader" class="text-break">
+Interface IEventStoreDiagnosticsReader  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.html">EventSourcing</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.html">TimeMachine</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.html">Data</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventSourcing.TimeMachine.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides read-only, application-agnostic diagnostic queries over an event-store database.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IEventStoreDiagnosticsReader</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetAggregatesAsync_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetAggregatesAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetAggregatesAsync_Devbone_Frameworks_EventSourcing_TimeMachine_Data_AggregateFilter_System_String_System_Int32_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetAggregatesAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter,System.String,System.Int32,System.Threading.CancellationToken)">
+  GetAggregatesAsync(AggregateFilter, string?, int, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads a page of aggregate stream summaries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;PageResult&lt;AggregateSummary&gt;&gt; GetAggregatesAsync(AggregateFilter filter, string? cursor, int pageSize, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filter</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter.html">AggregateFilter</a></dt>
+    <dd></dd>
+    <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateSummary.html">AggregateSummary</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetEventsAsync_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetEventsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetEventsAsync_System_String_System_String_System_String_System_Int32_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetEventsAsync(System.String,System.String,System.String,System.Int32,System.Threading.CancellationToken)">
+  GetEventsAsync(string, string, string?, int, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads a page from one ordered aggregate event stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;PageResult&lt;StoredEventDetails&gt;&gt; GetEventsAsync(string aggregateName, string aggregateId, string? cursor, int pageSize, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.StoredEventDetails.html">StoredEventDetails</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetIncrementsAsync_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetIncrementsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetIncrementsAsync_System_String_System_String_System_String_System_Int32_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetIncrementsAsync(System.String,System.String,System.String,System.Int32,System.Threading.CancellationToken)">
+  GetIncrementsAsync(string?, string?, string?, int, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads a page of current global increment values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;PageResult&lt;IncrementDetails&gt;&gt; GetIncrementsAsync(string? aggregateName, string? key, string? cursor, int pageSize, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IncrementDetails.html">IncrementDetails</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetOutboxAsync_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetOutboxAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetOutboxAsync_Devbone_Frameworks_EventSourcing_TimeMachine_Data_OutboxFilter_System_String_System_Int32_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetOutboxAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.OutboxFilter,System.String,System.Int32,System.Threading.CancellationToken)">
+  GetOutboxAsync(OutboxFilter, string?, int, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads a page of transactional outbox diagnostics.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;PageResult&lt;OutboxDetails&gt;&gt; GetOutboxAsync(OutboxFilter filter, string? cursor, int pageSize, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filter</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.OutboxFilter.html">OutboxFilter</a></dt>
+    <dd></dd>
+    <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.OutboxDetails.html">OutboxDetails</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetPrivacyDefinitionsAsync_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetPrivacyDefinitionsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetPrivacyDefinitionsAsync_System_String_System_String_System_String_System_Int32_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetPrivacyDefinitionsAsync(System.String,System.String,System.String,System.Int32,System.Threading.CancellationToken)">
+  GetPrivacyDefinitionsAsync(string?, string?, string?, int, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads a page of event privacy definitions and their fields.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;PageResult&lt;PrivacyDefinitionDetails&gt;&gt; GetPrivacyDefinitionsAsync(string? aggregateName, string? eventName, string? cursor, int pageSize, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>eventName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.html">PrivacyDefinitionDetails</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetPrivacySubjectsAsync_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetPrivacySubjectsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetPrivacySubjectsAsync_System_String_System_String_System_String_System_String_System_Int32_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetPrivacySubjectsAsync(System.String,System.String,System.String,System.String,System.Int32,System.Threading.CancellationToken)">
+  GetPrivacySubjectsAsync(string?, string?, string?, string?, int, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads a page of pseudonymized privacy subject index entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;PageResult&lt;PrivacySubjectDetails&gt;&gt; GetPrivacySubjectsAsync(string? tenantId, string? subjectType, string? subjectKey, string? cursor, int pageSize, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tenantId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>subjectType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>subjectKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacySubjectDetails.html">PrivacySubjectDetails</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetSnapshotAsync_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetSnapshotAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetSnapshotAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetSnapshotAsync(System.String,System.String,System.Threading.CancellationToken)">
+  GetSnapshotAsync(string, string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads the currently persisted snapshot for one aggregate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;SnapshotDetails?&gt; GetSnapshotAsync(string aggregateName, string aggregateId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.SnapshotDetails.html">SnapshotDetails</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetSnapshotsAsync_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetSnapshotsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetSnapshotsAsync_Devbone_Frameworks_EventSourcing_TimeMachine_Data_AggregateFilter_System_String_System_Int32_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetSnapshotsAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter,System.String,System.Int32,System.Threading.CancellationToken)">
+  GetSnapshotsAsync(AggregateFilter, string?, int, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads a page of current aggregate snapshots.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;PageResult&lt;SnapshotDetails&gt;&gt; GetSnapshotsAsync(AggregateFilter filter, string? cursor, int pageSize, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filter</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter.html">AggregateFilter</a></dt>
+    <dd></dd>
+    <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.SnapshotDetails.html">SnapshotDetails</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetSuggestionsAsync_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetSuggestionsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetSuggestionsAsync_Devbone_Frameworks_EventSourcing_TimeMachine_Data_DiagnosticSuggestionKind_System_String_System_Int32_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetSuggestionsAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.DiagnosticSuggestionKind,System.String,System.Int32,System.Threading.CancellationToken)">
+  GetSuggestionsAsync(DiagnosticSuggestionKind, string?, int, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads at most twenty distinct values for one filter auto-suggestion list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyList&lt;string&gt;&gt; GetSuggestionsAsync(DiagnosticSuggestionKind kind, string? search, int limit = 20, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kind</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.DiagnosticSuggestionKind.html">DiagnosticSuggestionKind</a></dt>
+    <dd></dd>
+    <dt><code>search</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetUniqueValuesAsync_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetUniqueValuesAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetUniqueValuesAsync_Devbone_Frameworks_EventSourcing_TimeMachine_Data_AggregateFilter_System_String_System_String_System_Int32_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetUniqueValuesAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter,System.String,System.String,System.Int32,System.Threading.CancellationToken)">
+  GetUniqueValuesAsync(AggregateFilter, string?, string?, int, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads a page of current unique-value hashes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;PageResult&lt;UniqueValueDetails&gt;&gt; GetUniqueValuesAsync(AggregateFilter filter, string? key, string? cursor, int pageSize, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filter</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter.html">AggregateFilter</a></dt>
+    <dd></dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueValueDetails.html">UniqueValueDetails</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

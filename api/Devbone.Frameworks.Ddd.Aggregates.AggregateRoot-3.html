@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AggregateRoot&lt;TAggregate, TEntity, TIdentity&gt; | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AggregateRoot&lt;TAggregate, TEntity, TIdentity&gt; | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Provides the aggregate-owned command validation and execution portion of the aggregate lifecycle.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3">
+
+
+
+  <h1 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3" class="text-break">
+Class AggregateRoot&lt;TAggregate, TEntity, TIdentity&gt;  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.Ddd.html">Ddd</a>.<a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.html">Aggregates</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.Ddd.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides the aggregate-owned command validation and execution portion of the aggregate lifecycle.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AggregateRoot&lt;TAggregate, TEntity, TIdentity&gt; : IAggregateRoot&lt;TIdentity&gt;, IAggregateRoot, IAggregateSnapshotRoot where TAggregate : AggregateRoot&lt;TAggregate, TEntity, TIdentity&gt; where TEntity : IEntity&lt;TIdentity&gt; where TIdentity : IAggregateIdentity</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TAggregate</code></dt>
+    <dd><p>Concrete aggregate type.</p>
+</dd>
+    <dt><code>TEntity</code></dt>
+    <dd><p>Aggregate state entity type.</p>
+</dd>
+    <dt><code>TIdentity</code></dt>
+    <dd><p>Aggregate identity type.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AggregateRoot&lt;TAggregate, TEntity, TIdentity&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateRoot-1.html">IAggregateRoot</a>&lt;TIdentity&gt;</div>
+      <div><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateRoot.html">IAggregateRoot</a></div>
+      <div><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateSnapshotRoot.html">IAggregateSnapshotRoot</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3__ctor_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3__ctor__2_Devbone_Frameworks_Ddd_ChangeTracker_IChangeTracker__2__" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.#ctor(`2,Devbone.Frameworks.Ddd.ChangeTracker.IChangeTracker{`2})">
+  AggregateRoot(TIdentity, IChangeTracker&lt;TIdentity&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an aggregate shell for one identity and optionally connects it to the explicit change tracker that
+owns uncommitted events, uniqueness reservations, increments, and manual commit behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AggregateRoot(TIdentity id, IChangeTracker&lt;TIdentity&gt; changeTracker)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <span class="xref">TIdentity</span></dt>
+    <dd><p>Aggregate identity.</p>
+</dd>
+    <dt><code>changeTracker</code> <a class="xref" href="Devbone.Frameworks.Ddd.ChangeTracker.IChangeTracker-1.html">IChangeTracker</a>&lt;TIdentity&gt;</dt>
+    <dd><p>Change tracker used for uncommitted events and commit.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when <code class="paramref">id</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when <code class="typeparamref">TAggregate</code> is not the concrete runtime aggregate type.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when <code class="paramref">changeTracker</code> targets a different aggregate identity or was not created by <a class="xref" href="Devbone.Frameworks.Ddd.ChangeTracker.ChangeTrackerFactory.html">ChangeTrackerFactory</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_ChangeTracker" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.ChangeTracker">
+  ChangeTracker
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tracks uncommitted events and coordinates their explicit persistence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IChangeTracker&lt;TIdentity&gt;? ChangeTracker</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.ChangeTracker.IChangeTracker-1.html">IChangeTracker</a>&lt;TIdentity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3__aggrRootState" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3._aggrRootState">
+  _aggrRootState
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current in-memory aggregate state that gets mutated by applied events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TEntity? _aggrRootState</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TEntity</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_AggregateName_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.AggregateName*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_AggregateName" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.AggregateName">
+  AggregateName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the stable aggregate contract name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IAggregateName AggregateName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateName.html">IAggregateName</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_AggregateRevision_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.AggregateRevision*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_AggregateRevision" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.AggregateRevision">
+  AggregateRevision
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the client-visible revision of the last fully committed aggregate state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long AggregateRevision { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_AggregateState_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.AggregateState*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_AggregateState" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.AggregateState">
+  AggregateState
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets initialized aggregate state after verifying that the instance is still safe for domain reads and writes.
+Derived aggregate properties and handlers should use this accessor instead of reading <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot-3.html#Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3__aggrRootState">_aggrRootState</a> directly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TEntity AggregateState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TEntity</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Exceptions.AggregateFaultedException.html">AggregateFaultedException</a></dt>
+    <dd><p>Thrown when an unexpected lifecycle failure invalidated this instance.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when aggregate state has not been initialized.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_ConcurrencyToken_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.ConcurrencyToken*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_ConcurrencyToken" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.ConcurrencyToken">
+  ConcurrencyToken
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the opaque token of the last completely committed aggregate state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AggregateConcurrencyToken? ConcurrencyToken { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Core.AggregateConcurrencyToken.html">AggregateConcurrencyToken</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Fault_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Fault*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Fault" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Fault">
+  Fault
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the first unexpected lifecycle failure retained for diagnostics, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> while the instance is healthy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AggregateFault? Fault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.AggregateFault.html">AggregateFault</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_HasUncommittedEvents_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.HasUncommittedEvents*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_HasUncommittedEvents" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.HasUncommittedEvents">
+  HasUncommittedEvents
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasUncommittedEvents { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Id_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Id*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Id" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Id">
+  Id
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the immutable aggregate identity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TIdentity Id { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TIdentity</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_IsDeleted_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.IsDeleted*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_IsDeleted" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.IsDeleted">
+  IsDeleted
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether an aggregate-deleted event has marked this aggregate as deleted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsDeleted { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_IsFaulted_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.IsFaulted*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_IsFaulted" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.IsFaulted">
+  IsFaulted
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether an unexpected command, event-application, event-tracking, or rehydration failure made this instance unsafe for domain use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFaulted { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_IsNew_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.IsNew*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_IsNew" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.IsNew">
+  IsNew
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether no persisted or newly emitted event has been applied.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsNew { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_IsWritable_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.IsWritable*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_IsWritable" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.IsWritable">
+  IsWritable
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the aggregate can emit and track new events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsWritable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_SnapshotFormatVersion_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.SnapshotFormatVersion*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_SnapshotFormatVersion" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.SnapshotFormatVersion">
+  SnapshotFormatVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the payload contract version used by snapshots of this aggregate state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int SnapshotFormatVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Version_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Version*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Version" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Version">
+  Version
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the last aggregate stream position applied to this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Version { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_ApplyEvent_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.ApplyEvent*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_ApplyEvent_Devbone_Frameworks_Ddd_Aggregates_IAggregateEvent__0__2__" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.ApplyEvent(Devbone.Frameworks.Ddd.Aggregates.IAggregateEvent{`0,`2})">
+  ApplyEvent(IAggregateEvent&lt;TAggregate, TIdentity&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies a deserialized event instance to the aggregate state and updates version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ApplyEvent(IAggregateEvent&lt;TAggregate, TIdentity&gt; aggregateEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateEvent</code> <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateEvent-2.html">IAggregateEvent</a>&lt;TAggregate, TIdentity&gt;</dt>
+    <dd><p>Event instance to apply.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when <code class="paramref">aggregateEvent</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
+    <dd><p>Thrown when no explicit handler exists for the event type.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>Thrown when the selected domain event handler fails.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Commit_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Commit*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Commit_Devbone_Frameworks_Ddd_Core_AggregateConcurrencyToken_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Commit(Devbone.Frameworks.Ddd.Core.AggregateConcurrencyToken)">
+  Commit(AggregateConcurrencyToken?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Persists tracked events and clears them only after a successful manual commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEventStoredResult Commit(AggregateConcurrencyToken? expectedAggregateConcurrencyToken = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>expectedAggregateConcurrencyToken</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.AggregateConcurrencyToken.html">AggregateConcurrencyToken</a></dt>
+    <dd><p>Token returned with the state on which the command was based, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when the stream must not exist.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
+    <dd><p>The atomic event-store write result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Emit_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Emit*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Emit__1_Devbone_Frameworks_Ddd_Core_IRequestId___0_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Emit``1(Devbone.Frameworks.Ddd.Core.IRequestId,``0)">
+  Emit&lt;TEvent&gt;(IRequestId, TEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies and tracks a new domain event in the current unit of work.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IAggregateModificationResult Emit&lt;TEvent&gt;(IRequestId requestId, TEvent aggregateEvent) where TEvent : IAggregateEvent&lt;TAggregate, TIdentity&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>requestId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IRequestId.html">IRequestId</a></dt>
+    <dd><p>Request id used for idempotency and tracing.</p>
+</dd>
+    <dt><code>aggregateEvent</code> <span class="xref">TEvent</span></dt>
+    <dd><p>Event instance to emit.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IAggregateModificationResult.html">IAggregateModificationResult</a></dt>
+    <dd><p>A modification result containing validation errors when emission fails.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TEvent</code></dt>
+    <dd><p>Event type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_EnsureUsable_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.EnsureUsable*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_EnsureUsable" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.EnsureUsable">
+  EnsureUsable()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Guards derived domain operations against reading or modifying an aggregate whose current in-memory state cannot be trusted.
+Expected validation failures represented by a result do not fault the aggregate and therefore do not trigger this guard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void EnsureUsable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Exceptions.AggregateFaultedException.html">AggregateFaultedException</a></dt>
+    <dd><p>Thrown when an unexpected lifecycle failure invalidated this instance.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_GetNextIncrement_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.GetNextIncrement*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_GetNextIncrement_System_String_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.GetNextIncrement(System.String)">
+  GetNextIncrement(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolves the next global increment value for a named event property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected long GetNextIncrement(string propertyName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>propertyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Property name that is marked with <code>IncrementGlobalAttribute</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The next increment value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when the aggregate is read-only or no increment was allocated for <code class="paramref">propertyName</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_HandleAsync_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.HandleAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_HandleAsync__1___0_Devbone_Frameworks_Ddd_Commands_IAggregateCommandHandler__0__2___0__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.HandleAsync``1(``0,Devbone.Frameworks.Ddd.Commands.IAggregateCommandHandler{`0,`2,``0},System.Threading.CancellationToken)">
+  HandleAsync&lt;TCommand&gt;(TCommand, IAggregateCommandHandler&lt;TAggregate, TIdentity, TCommand&gt;, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;IAggregateModificationResult&gt; HandleAsync&lt;TCommand&gt;(TCommand command, IAggregateCommandHandler&lt;TAggregate, TIdentity, TCommand&gt; handler, CancellationToken cancellationToken = default) where TCommand : Command&lt;TIdentity&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>command</code> <span class="xref">TCommand</span></dt>
+    <dd></dd>
+    <dt><code>handler</code> <a class="xref" href="Devbone.Frameworks.Ddd.Commands.IAggregateCommandHandler-3.html">IAggregateCommandHandler</a>&lt;TAggregate, TIdentity, TCommand&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IAggregateModificationResult.html">IAggregateModificationResult</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TCommand</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Load_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Load*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Load_Devbone_Frameworks_Ddd_Snapshots_AggregateRehydration_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Load(Devbone.Frameworks.Ddd.Snapshots.AggregateRehydration)">
+  Load(AggregateRehydration)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restores aggregate state from a snapshot when available and applies every following event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Load(AggregateRehydration rehydration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rehydration</code> <a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.AggregateRehydration.html">AggregateRehydration</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Load_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Load*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Load_System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_Ddd_Repositories_IStoredEvent__" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Load(System.Collections.Generic.IReadOnlyCollection{Devbone.Frameworks.Ddd.Repositories.IStoredEvent})">
+  Load(IReadOnlyCollection&lt;IStoredEvent&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rebuilds aggregate state from a complete, ordered event stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Load(IReadOnlyCollection&lt;IStoredEvent&gt; storedEvents)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>storedEvents</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/Repositories/IStoredEvent.cs">IStoredEvent</a>&gt;</dt>
+    <dd><p>Continuous event rows ordered by aggregate version.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when <code class="paramref">storedEvents</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when stream order, versions, identities, contracts, payload metadata, deserialization, or event application are invalid.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
+    <dd><p>Thrown when an apply handler cannot be resolved.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_RegisterEventManually_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.RegisterEventManually*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_RegisterEventManually__1_System_Action___0__" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.RegisterEventManually``1(System.Action{``0})">
+  RegisterEventManually&lt;TAggregateEvent&gt;(Action&lt;TAggregateEvent&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers an explicit event handler instead of convention-based <code>Apply</code> lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void RegisterEventManually&lt;TAggregateEvent&gt;(Action&lt;TAggregateEvent&gt; handler) where TAggregateEvent : IAggregateEvent&lt;TAggregate, TIdentity&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>handler</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;TAggregateEvent&gt;</dt>
+    <dd><p>Handler delegate that mutates aggregate state.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TAggregateEvent</code></dt>
+    <dd><p>Event type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when <code class="paramref">handler</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when a handler for <code class="typeparamref">TAggregateEvent</code> is already registered.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_ReplaceAggregateState_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.ReplaceAggregateState*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_ReplaceAggregateState__1_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.ReplaceAggregateState(`1)">
+  ReplaceAggregateState(TEntity)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Replaces the aggregate state with a fully constructed and validated state object in one reference assignment.
+Callers must build the replacement without mutating the current state; immutable state objects make this transition atomic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ReplaceAggregateState(TEntity aggregateState)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateState</code> <span class="xref">TEntity</span></dt>
+    <dd><p>Complete replacement state produced after all event checks have succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when <code class="paramref">aggregateState</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Exceptions.AggregateFaultedException.html">AggregateFaultedException</a></dt>
+    <dd><p>Thrown when an unexpected lifecycle failure invalidated this instance.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_ToJson_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.ToJson*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_ToJson" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.ToJson">
+  ToJson()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ToJson()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

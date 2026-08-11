@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IDatabaseEvent | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IDatabaseEvent | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Defines the persisted representation of a domain event in the event store.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent">
+
+
+
+  <h1 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent" class="text-break">
+Interface IDatabaseEvent  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.html">EventSourcing</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.html">Dbs</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.html">Events</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventSourcing.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Defines the persisted representation of a domain event in the event store.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IDatabaseEvent</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_AggregateCommitEventCount_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.AggregateCommitEventCount*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_AggregateCommitEventCount" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.AggregateCommitEventCount">
+  AggregateCommitEventCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the total number of events in the atomic commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int AggregateCommitEventCount { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_AggregateConcurrencyToken_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.AggregateConcurrencyToken*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_AggregateConcurrencyToken" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.AggregateConcurrencyToken">
+  AggregateConcurrencyToken
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the opaque token representing the aggregate state after this atomic commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string AggregateConcurrencyToken { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_AggregateId_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.AggregateId*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_AggregateId" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.AggregateId">
+  AggregateId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the aggregate identifier this event belongs to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string AggregateId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_AggregateLifecycle_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.AggregateLifecycle*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_AggregateLifecycle" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.AggregateLifecycle">
+  AggregateLifecycle
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether this event establishes, changes, or deletes its aggregate stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AggregateLifecycle AggregateLifecycle { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.AggregateLifecycle.html">AggregateLifecycle</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_AggregateName_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.AggregateName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_AggregateName" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.AggregateName">
+  AggregateName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the aggregate type name this event belongs to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string AggregateName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_AggregateRevision_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.AggregateRevision*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_AggregateRevision" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.AggregateRevision">
+  AggregateRevision
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the client-visible revision assigned once to all events in one atomic aggregate commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long AggregateRevision { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_AggregateRouteId_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.AggregateRouteId*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_AggregateRouteId" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.AggregateRouteId">
+  AggregateRouteId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the stable logical infrastructure route assigned to this event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string? AggregateRouteId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_AggregateRouteVersion_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.AggregateRouteVersion*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_AggregateRouteVersion" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.AggregateRouteVersion">
+  AggregateRouteVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the persisted logical route version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int? AggregateRouteVersion { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_CreationDate_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.CreationDate*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_CreationDate" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.CreationDate">
+  CreationDate
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the event creation timestamp.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTime CreationDate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_EventId_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.EventId*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_EventId" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.EventId">
+  EventId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the unique event identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string EventId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_EventName_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.EventName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_EventName" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.EventName">
+  EventName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the event type name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string EventName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_EventOrder_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.EventOrder*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_EventOrder" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.EventOrder">
+  EventOrder
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the zero-based event position inside the atomic commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int EventOrder { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_EventSequence_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.EventSequence*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_EventSequence" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.EventSequence">
+  EventSequence
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the one-based position of this event in the aggregate stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long EventSequence { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_EventVersion_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.EventVersion*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_EventVersion" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.EventVersion">
+  EventVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the event schema version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int EventVersion { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_Payload_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.Payload*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_Payload" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.Payload">
+  Payload
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the serialized event payload.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Payload { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_PreviousAggregateConcurrencyToken_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.PreviousAggregateConcurrencyToken*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_PreviousAggregateConcurrencyToken" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.PreviousAggregateConcurrencyToken">
+  PreviousAggregateConcurrencyToken
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the token of the aggregate state that preceded this atomic commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string? PreviousAggregateConcurrencyToken { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_Privacy_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.Privacy*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_Privacy" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.Privacy">
+  Privacy
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the optional application-supplied privacy descriptor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">EventPrivacyDescriptor? Privacy { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyDescriptor.html">EventPrivacyDescriptor</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_RequestId_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.RequestId*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_RequestId" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.RequestId">
+  RequestId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the request identifier used for idempotency and correlation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string RequestId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_TenantId_" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.TenantId*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_TenantId" data-uid="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.TenantId">
+  TenantId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the optional tenant context carried independently of routing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string? TenantId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

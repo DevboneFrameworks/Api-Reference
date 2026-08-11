@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IAggregateSnapshotStore | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IAggregateSnapshotStore | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Exposes snapshot-aware aggregate persistence and transparent rehydration data loading.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore">
+
+
+
+  <h1 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore" class="text-break">
+Interface IAggregateSnapshotStore  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.html">EventSourcing</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.html">Snapshots</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventSourcing.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Exposes snapshot-aware aggregate persistence and transparent rehydration data loading.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IAggregateSnapshotStore</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_DeleteSnapshot_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.DeleteSnapshot*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_DeleteSnapshot_System_String_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.DeleteSnapshot(System.String,System.String)">
+  DeleteSnapshot(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deletes the derived snapshot for one aggregate without deleting events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DeleteSnapshot(string aggregateName, string aggregateId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_DeleteSnapshotAsync_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.DeleteSnapshotAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_DeleteSnapshotAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.DeleteSnapshotAsync(System.String,System.String,System.Threading.CancellationToken)">
+  DeleteSnapshotAsync(string, string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deletes asynchronously the derived snapshot for one aggregate without deleting events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task DeleteSnapshotAsync(string aggregateName, string aggregateId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_HasProcessedRequest_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.HasProcessedRequest*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_HasProcessedRequest_System_String_System_String_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.HasProcessedRequest(System.String,System.String,System.String)">
+  HasProcessedRequest(string, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether one request was already committed for an aggregate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool HasProcessedRequest(string aggregateName, string aggregateId, string requestId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>requestId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_HasProcessedRequestAsync_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.HasProcessedRequestAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_HasProcessedRequestAsync_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.HasProcessedRequestAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+  HasProcessedRequestAsync(string, string, string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines asynchronously whether one request was already committed for an aggregate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;bool&gt; HasProcessedRequestAsync(string aggregateName, string aggregateId, string requestId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>requestId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_LoadForRehydration_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.LoadForRehydration*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_LoadForRehydration_System_String_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.LoadForRehydration(System.String,System.String)">
+  LoadForRehydration(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads the newest enabled snapshot and every event after it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AggregateRehydration LoadForRehydration(string aggregateName, string aggregateId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.AggregateRehydration.html">AggregateRehydration</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_LoadForRehydrationAsync_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.LoadForRehydrationAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_LoadForRehydrationAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.LoadForRehydrationAsync(System.String,System.String,System.Threading.CancellationToken)">
+  LoadForRehydrationAsync(string, string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads asynchronously the newest enabled snapshot and every event after it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;AggregateRehydration&gt; LoadForRehydrationAsync(string aggregateName, string aggregateId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.AggregateRehydration.html">AggregateRehydration</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_ShouldCreateSnapshot_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.ShouldCreateSnapshot*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_ShouldCreateSnapshot_System_String_System_String_System_Int64_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.ShouldCreateSnapshot(System.String,System.String,System.Int64)">
+  ShouldCreateSnapshot(string, string, long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the next complete aggregate state should be snapshotted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ShouldCreateSnapshot(string aggregateName, string aggregateId, long eventSequence)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>eventSequence</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_ShouldCreateSnapshotAsync_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.ShouldCreateSnapshotAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_ShouldCreateSnapshotAsync_System_String_System_String_System_Int64_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.ShouldCreateSnapshotAsync(System.String,System.String,System.Int64,System.Threading.CancellationToken)">
+  ShouldCreateSnapshotAsync(string, string, long, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines asynchronously whether the next complete aggregate state should be snapshotted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;bool&gt; ShouldCreateSnapshotAsync(string aggregateName, string aggregateId, long eventSequence, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>eventSequence</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithOutboxAndSnapshot_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithOutboxAndSnapshot_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])">
+  StoreEventsWithOutboxAndSnapshot(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot, params IUniqueValue[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores one event commit, outbox messages, and an eligible snapshot atomically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StoreEventsWithOutboxAndSnapshot(IDatabaseEvent[] events, OutboxMessage[] outboxMessages, AggregateSnapshot snapshot, params IUniqueValue[] uniqueValues)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>[]</dt>
+    <dd></dd>
+    <dt><code>outboxMessages</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.html">OutboxMessage</a>[]</dt>
+    <dd></dd>
+    <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
+    <dd></dd>
+    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.html">IUniqueValue</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithOutboxAndSnapshotAsync_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithOutboxAndSnapshotAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)">
+  StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot, IUniqueValue[]?, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores one event commit, outbox messages, and an eligible snapshot atomically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent[] events, OutboxMessage[] outboxMessages, AggregateSnapshot snapshot, IUniqueValue[]? uniqueValues = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>[]</dt>
+    <dd></dd>
+    <dt><code>outboxMessages</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.html">OutboxMessage</a>[]</dt>
+    <dd></dd>
+    <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
+    <dd></dd>
+    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.html">IUniqueValue</a>[]</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithSnapshot_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshot*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithSnapshot_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])">
+  StoreEventsWithSnapshot(IDatabaseEvent[], AggregateSnapshot, params IUniqueValue[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores one event commit and an eligible snapshot atomically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StoreEventsWithSnapshot(IDatabaseEvent[] events, AggregateSnapshot snapshot, params IUniqueValue[] uniqueValues)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>[]</dt>
+    <dd></dd>
+    <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
+    <dd></dd>
+    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.html">IUniqueValue</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithSnapshotAsync_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshotAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithSnapshotAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)">
+  StoreEventsWithSnapshotAsync(IDatabaseEvent[], AggregateSnapshot, IUniqueValue[]?, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stores one event commit and an eligible snapshot atomically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task StoreEventsWithSnapshotAsync(IDatabaseEvent[] events, AggregateSnapshot snapshot, IUniqueValue[]? uniqueValues = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>[]</dt>
+    <dd></dd>
+    <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
+    <dd></dd>
+    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.html">IUniqueValue</a>[]</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TimeMachineOptions | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TimeMachineOptions | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Configures the read-only event-store schema inspected by the Time Machine.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions">
+
+
+
+  <h1 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions" class="text-break">
+Class TimeMachineOptions  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.html">EventSourcing</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.html">TimeMachine</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.html">Data</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventSourcing.TimeMachine.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Configures the read-only event-store schema inspected by the Time Machine.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class TimeMachineOptions : IValidatableObject</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TimeMachineOptions</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.ivalidatableobject">IValidatableObject</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions__ctor_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions__ctor" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.#ctor">
+  TimeMachineOptions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeMachineOptions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_SECTION_NAME" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.SECTION_NAME">
+  SECTION_NAME
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the configuration section name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string SECTION_NAME = &quot;TimeMachine&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_AggregateCommitTableName_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.AggregateCommitTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_AggregateCommitTableName" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.AggregateCommitTableName">
+  AggregateCommitTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the aggregate commit table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+public string AggregateCommitTableName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_CommandTimeoutSeconds_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.CommandTimeoutSeconds*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_CommandTimeoutSeconds" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.CommandTimeoutSeconds">
+  CommandTimeoutSeconds
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the PostgreSQL command timeout in seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Range(1, 300)]
+public int CommandTimeoutSeconds { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_ConnectionStringName_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.ConnectionStringName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_ConnectionStringName" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.ConnectionStringName">
+  ConnectionStringName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the name of the read-only PostgreSQL connection string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+public string ConnectionStringName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_DatabaseSchema_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.DatabaseSchema*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_DatabaseSchema" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.DatabaseSchema">
+  DatabaseSchema
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the PostgreSQL schema containing event-store tables.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+public string DatabaseSchema { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_DefaultPageSize_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.DefaultPageSize*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_DefaultPageSize" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.DefaultPageSize">
+  DefaultPageSize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the initial number of records per page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Range(1, 500)]
+public int DefaultPageSize { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_EnableResendRequests_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.EnableResendRequests*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_EnableResendRequests" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.EnableResendRequests">
+  EnableResendRequests
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether operators may request an outbox replay from the diagnostics UI. Disabled by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableResendRequests { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_EnableResendRequests_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Even when enabled the Time Machine only <b>records</b> a request; it never publishes. Execution belongs
+to the application instances hosting the resend worker, which are the only processes with broker
+credentials. That separation is why a diagnostics UI embedded in an application can offer this at all.
+</p>
+<p>
+A replay reaches every consumer of the affected streams, including other applications on a shared
+broker. Enabling this therefore <b>requires</b> <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_ResendAuthorizationPolicy">ResendAuthorizationPolicy</a>; configuration
+validation rejects the combination of an enabled feature and an unset policy at startup.
+</p>
+</div>
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_EventTableName_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.EventTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_EventTableName" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.EventTableName">
+  EventTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the event table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+public string EventTableName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_IncrementTableName_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.IncrementTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_IncrementTableName" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.IncrementTableName">
+  IncrementTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the global increment table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+public string IncrementTableName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_MaximumPageSize_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.MaximumPageSize*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_MaximumPageSize" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.MaximumPageSize">
+  MaximumPageSize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the largest accepted page size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Range(1, 1000)]
+public int MaximumPageSize { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_OutboxTableName_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.OutboxTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_OutboxTableName" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.OutboxTableName">
+  OutboxTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the transactional outbox table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+public string OutboxTableName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_PrivacyDefinitionTableName_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.PrivacyDefinitionTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_PrivacyDefinitionTableName" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.PrivacyDefinitionTableName">
+  PrivacyDefinitionTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the event privacy definition table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+public string PrivacyDefinitionTableName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_PrivacyFieldTableName_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.PrivacyFieldTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_PrivacyFieldTableName" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.PrivacyFieldTableName">
+  PrivacyFieldTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the event privacy field table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+public string PrivacyFieldTableName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_PrivacySubjectTableName_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.PrivacySubjectTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_PrivacySubjectTableName" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.PrivacySubjectTableName">
+  PrivacySubjectTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the event privacy subject table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+public string PrivacySubjectTableName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_ResendAuthorizationPolicy_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.ResendAuthorizationPolicy*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_ResendAuthorizationPolicy" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.ResendAuthorizationPolicy">
+  ResendAuthorizationPolicy
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the authorization policy required to request a replay.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ResendAuthorizationPolicy { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_ResendAuthorizationPolicy_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Mandatory whenever <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_EnableResendRequests">EnableResendRequests</a> is set. Without it the only remaining gate is the
+authentication the Time Machine's own endpoint requires, so everyone who may read diagnostics could
+also publish to a shared broker — two permissions that exist precisely because they are not the same.</p>
+</div>
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_ResendRequestTableName_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.ResendRequestTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_ResendRequestTableName" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.ResendRequestTableName">
+  ResendRequestTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the operator resend-request table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ResendRequestTableName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_SnapshotTableName_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.SnapshotTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_SnapshotTableName" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.SnapshotTableName">
+  SnapshotTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the snapshot table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+public string SnapshotTableName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_UniqueTableName_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.UniqueTableName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_UniqueTableName" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.UniqueTableName">
+  UniqueTableName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the unique-value table name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+public string UniqueTableName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_Validate_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.Validate*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_Validate_System_ComponentModel_DataAnnotations_ValidationContext_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+  Validate(ValidationContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rejects option combinations that individually look valid and together are not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ValidationResult&gt; Validate(ValidationContext validationContext)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>validationContext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validationcontext">ValidationContext</a></dt>
+    <dd><p>Validation context supplied by the options framework.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validationresult">ValidationResult</a>&gt;</dt>
+    <dd><p>One result per rejected combination; empty when the configuration is usable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_Validate_System_ComponentModel_DataAnnotations_ValidationContext__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Runs through <code>ValidateDataAnnotations</code> and <code>ValidateOnStart</code>, so a deployment with an unsafe
+combination fails to boot rather than serving a page that grants more than intended.</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

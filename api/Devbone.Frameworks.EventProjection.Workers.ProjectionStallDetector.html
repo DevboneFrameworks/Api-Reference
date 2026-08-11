@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ProjectionStallDetector | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ProjectionStallDetector | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Samples the stored-but-unapplied events of every configured aggregate and reports them as metrics and, past a configured age, as a warning.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventProjection.Workers.ProjectionStallDetector">
+
+
+
+  <h1 id="Devbone_Frameworks_EventProjection_Workers_ProjectionStallDetector" data-uid="Devbone.Frameworks.EventProjection.Workers.ProjectionStallDetector" class="text-break">
+Class ProjectionStallDetector  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.html">EventProjection</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Workers.html">Workers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Samples the stored-but-unapplied events of every configured aggregate and reports them as metrics and, past
+a configured age, as a warning.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ProjectionStallDetector : BackgroundService, IHostedService, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.backgroundservice">BackgroundService</a></div>
+      <div><span class="xref">ProjectionStallDetector</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice">IHostedService</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.backgroundservice.startasync">BackgroundService.StartAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.backgroundservice.stopasync">BackgroundService.StopAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.backgroundservice.dispose">BackgroundService.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.backgroundservice.executetask">BackgroundService.ExecuteTask</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Devbone_Frameworks_EventProjection_Workers_ProjectionStallDetector_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+The pipeline applies raw events only in contiguous sequence, so a missing event leaves later ones stored
+and unapplied: the aggregate stalls rather than diverging. That is the better failure mode and it is the
+reason a global read cursor was judged unnecessary — but it only holds while someone notices the stall.
+Nothing else in the pipeline does: the raw processor settles the message and adds zero to the applied
+counter, and the pending-notification sweep only looks at events that were already applied.
+</p>
+<p>
+Detection is separate from repair on purpose. Repair is an operator-triggered replay through the outbox,
+which reaches every consumer of the affected streams; this worker never triggers one, it only makes the
+need visible.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Workers_ProjectionStallDetector__ctor_" data-uid="Devbone.Frameworks.EventProjection.Workers.ProjectionStallDetector.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Workers_ProjectionStallDetector__ctor_Devbone_Frameworks_EventProjection_Persistence_IRawProjectionStallReader_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_Microsoft_Extensions_Logging_ILogger_Devbone_Frameworks_EventProjection_Workers_ProjectionStallDetector__System_TimeProvider_" data-uid="Devbone.Frameworks.EventProjection.Workers.ProjectionStallDetector.#ctor(Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStallReader,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions,Microsoft.Extensions.Logging.ILogger{Devbone.Frameworks.EventProjection.Workers.ProjectionStallDetector},System.TimeProvider)">
+  ProjectionStallDetector(IRawProjectionStallReader, ProjectionPipelineOptions, ILogger&lt;ProjectionStallDetector&gt;, TimeProvider?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the stall detector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectionStallDetector(IRawProjectionStallReader store, ProjectionPipelineOptions options, ILogger&lt;ProjectionStallDetector&gt; logger, TimeProvider? timeProvider = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>store</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStallReader.html">IRawProjectionStallReader</a></dt>
+    <dd><p>Raw projection stall reader.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html">ProjectionPipelineOptions</a></dt>
+    <dd><p>Projection options.</p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Workers.ProjectionStallDetector.html">ProjectionStallDetector</a>&gt;</dt>
+    <dd><p>Logger.</p>
+</dd>
+    <dt><code>timeProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a></dt>
+    <dd><p>Clock used to age samples; defaults to the system clock.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Workers_ProjectionStallDetector_ExecuteAsync_" data-uid="Devbone.Frameworks.EventProjection.Workers.ProjectionStallDetector.ExecuteAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Workers_ProjectionStallDetector_ExecuteAsync_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Workers.ProjectionStallDetector.ExecuteAsync(System.Threading.CancellationToken)">
+  ExecuteAsync(CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method is called when the <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice">IHostedService</a> starts. The implementation should return a task that represents
+the lifetime of the long running operation(s) being performed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Task ExecuteAsync(CancellationToken stoppingToken)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stoppingToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Triggered when <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice.stopasync">StopAsync(CancellationToken)</a> is called.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> that represents the long running operations.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Workers_ProjectionStallDetector_ExecuteAsync_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>See <a href="https://learn.microsoft.com/dotnet/core/extensions/workers">Worker Services in .NET</a> for implementation guidelines.</p>
+</div>
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Workers_ProjectionStallDetector_SampleAsync_" data-uid="Devbone.Frameworks.EventProjection.Workers.ProjectionStallDetector.SampleAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Workers_ProjectionStallDetector_SampleAsync_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Workers.ProjectionStallDetector.SampleAsync(System.Threading.CancellationToken)">
+  SampleAsync(CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Samples every configured aggregate once, reporting the metrics and any aged stall.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SampleAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task completing after every aggregate was sampled.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Workers_ProjectionStallDetector_SampleAsync_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Public so a single pass can be triggered on demand — from a health check, a diagnostics endpoint, or a
+test — without running the hosted service and waiting for its interval.</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
