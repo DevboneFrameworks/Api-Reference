@@ -653,38 +653,6 @@ Derived aggregate properties and handlers should use this accessor instead of re
 
 
 
-  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_SnapshotFormatVersion_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.SnapshotFormatVersion*"></a>
-
-  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_SnapshotFormatVersion" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.SnapshotFormatVersion">
-  SnapshotFormatVersion
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the payload contract version used by snapshots of this aggregate state.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual int SnapshotFormatVersion { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Version_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Version*"></a>
 
   <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Version" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Version">
@@ -791,7 +759,9 @@ Derived aggregate properties and handlers should use this accessor instead of re
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
-    <dd><p>The atomic event-store write result.</p>
+    <dd><p>The atomic event-store write result. A successful commit that wrote at least one event carries an
+<a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html#Devbone_Frameworks_Ddd_Results_IEventStoredResult_CommitReceipt">CommitReceipt</a> naming the resulting stream position and token, and
+the aggregate's own <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateRoot.html#Devbone_Frameworks_Ddd_Aggregates_IAggregateRoot_ConcurrencyToken">ConcurrencyToken</a> is advanced to that token.</p>
 </dd>
   </dl>
 
@@ -977,6 +947,50 @@ Expected validation failures represented by a result do not fault the aggregate 
 
 
 
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_HasEventHandler_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.HasEventHandler*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_HasEventHandler__1" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.HasEventHandler``1">
+  HasEventHandler&lt;TAggregateEvent&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns whether a handler is already registered for one event type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool HasEventHandler&lt;TAggregateEvent&gt;() where TAggregateEvent : IAggregateEvent&lt;TAggregate, TIdentity&gt;</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when a handler is registered.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TAggregateEvent</code></dt>
+    <dd><p>Event type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_HasEventHandler__1_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Generated registrations consult this so an explicit <code>RegisterEventManually</code> call in the
+aggregate's constructor wins. That is what keeps the manual API an escape hatch rather than a
+conflict.</p>
+</div>
+
+
+
+
   <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Load_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Load*"></a>
 
   <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Load_Devbone_Frameworks_Ddd_Snapshots_AggregateRehydration_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Load(Devbone.Frameworks.Ddd.Snapshots.AggregateRehydration)">
@@ -1061,7 +1075,7 @@ Expected validation failures represented by a result do not fault the aggregate 
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Registers an explicit event handler instead of convention-based <code>Apply</code> lookup.</p>
+  <div class="markdown level1 summary"><p>Registers an explicit event handler, overriding convention-based <code>Apply</code> lookup for that event.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1089,6 +1103,13 @@ Expected validation failures represented by a result do not fault the aggregate 
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_RegisterEventManually__1_System_Action___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>An escape hatch, not the default. The bundled generator registers every <code>Apply(TEvent)</code> method
+a <code>partial</code> aggregate declares; call this only for a handler the generator cannot see or name -
+a differently named method, a delegate owned elsewhere, or an event type invisible at compile time.
+A registration made here wins over the generated one for the same event type, so the two do not
+conflict.</p>
+</div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
@@ -1099,6 +1120,44 @@ Expected validation failures represented by a result do not fault the aggregate 
     <dd><p>Thrown when a handler for <code class="typeparamref">TAggregateEvent</code> is already registered.</p>
 </dd>
   </dl>
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_RegisterGeneratedEventHandlers_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.RegisterGeneratedEventHandlers*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_RegisterGeneratedEventHandlers" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.RegisterGeneratedEventHandlers">
+  RegisterGeneratedEventHandlers()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers the convention-based <code>Apply</code> handlers discovered at compile time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RegisterGeneratedEventHandlers()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_RegisterGeneratedEventHandlers_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The bundled source generator overrides this in a <code>partial</code> declaration of the aggregate, which
+is why aggregates with private <code>Apply</code> methods must be declared <code>partial</code>: generated code
+can only reach a private method from inside the type that declares it.
+</p>
+<p>
+It runs once, on first use, rather than from the constructor. A virtual call during construction
+would run before the derived type's fields are initialized.
+</p>
+</div>
+
 
 
 

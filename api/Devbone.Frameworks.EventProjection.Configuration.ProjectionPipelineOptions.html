@@ -279,6 +279,38 @@ Class ProjectionPipelineOptions
 
 
 
+  <a id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_DeadLetterEvidenceRetention_" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.DeadLetterEvidenceRetention*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_DeadLetterEvidenceRetention" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.DeadLetterEvidenceRetention">
+  DeadLetterEvidenceRetention
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets how long payload-free dead-letter evidence remains queryable independently of broker retention.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan DeadLetterEvidenceRetention { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_InternalAddressPrefix_" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.InternalAddressPrefix*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_InternalAddressPrefix" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.InternalAddressPrefix">
@@ -333,6 +365,39 @@ Class ProjectionPipelineOptions
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.KafkaProjectionOptions.html">KafkaProjectionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_MaximumDerivedHandlerAttemptCount_" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.MaximumDerivedHandlerAttemptCount*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_MaximumDerivedHandlerAttemptCount" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.MaximumDerivedHandlerAttemptCount">
+  MaximumDerivedHandlerAttemptCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the total number of attempts allowed for an application derived handler before its position is
+terminally dead-lettered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaximumDerivedHandlerAttemptCount { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
   </dl>
 
@@ -843,12 +908,13 @@ while it runs. The metrics are reported on every sample regardless.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the selected projection transport.</p>
+  <div class="markdown level1 summary"><p>Gets the name of the selected projection transport, matched case-insensitively against the registered
+transport providers. See <a class="xref" href="Devbone.Frameworks.EventProjection.Transport.ProjectionTransportNames.html">ProjectionTransportNames</a> for the names the platform ships.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProjectionTransportKind Transport { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Transport { get; init; }</code></pre>
   </div>
 
 
@@ -857,7 +923,7 @@ while it runs. The metrics are reported on every sample regardless.</p>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionTransportKind.html">ProjectionTransportKind</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 

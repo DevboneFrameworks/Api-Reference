@@ -1104,6 +1104,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Ddd.Extensions.ResultExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Ddd.Extensions.ResultExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Ddd.Extensions.ResultExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Extensions.ResultExtensions.yml\" sourcestartlinenumber=\"1\">Reads the commit receipt out of the results a command pipeline hands back.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.Ddd.Extensions.SystemTextJsonExtensions.yml",
       "output": {
         ".html": {
@@ -1566,6 +1580,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Ddd.Results.AggregateCommitReceipt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Ddd.Results.AggregateCommitReceipt.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Ddd.Results.AggregateCommitReceipt",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Results.AggregateCommitReceipt.yml\" sourcestartlinenumber=\"1\">Names exactly what one successful aggregate commit wrote, so a caller can refer to that commit afterwards\ninstead of guessing where the write side got to.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.Ddd.Results.AggregateModificationResult.yml",
       "output": {
         ".html": {
@@ -1843,6 +1871,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshot",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshot.yml\" sourcestartlinenumber=\"1\">Represents serialized aggregate state at one complete event-commit boundary.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshotUnreadableException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshotUnreadableException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshotUnreadableException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshotUnreadableException.yml\" sourcestartlinenumber=\"1\">Signals that a persisted snapshot exists but this build cannot interpret its payload, so the aggregate has\nto be rebuilt from its events instead.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2192,7 +2234,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventBus.Bus.ConfiguredEventBusResolver",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Bus.ConfiguredEventBusResolver.yml\" sourcestartlinenumber=\"1\">Lazily creates Kafka and RabbitMQ buses from logical target configuration.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Bus.ConfiguredEventBusResolver.yml\" sourcestartlinenumber=\"1\">Lazily creates transport buses from logical target configuration.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2277,6 +2319,34 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventBus.Bus.ITransportEventBus",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Bus.ITransportEventBus.yml\" sourcestartlinenumber=\"1\">Represents a transport-agnostic event bus entry point.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.Bus.KafkaBusOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.yml\" sourcestartlinenumber=\"1\">Configures the Kafka adapter.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.yml\" sourcestartlinenumber=\"1\">Configures the RabbitMQ adapter.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2644,6 +2714,104 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.Kafka.DependencyInjection.KafkaEventBusServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.Kafka.DependencyInjection.KafkaEventBusServiceCollectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.Kafka.DependencyInjection.KafkaEventBusServiceCollectionExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Kafka.DependencyInjection.KafkaEventBusServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Registers the Apache Kafka transport with the Devbone event bus.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.Kafka.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.Kafka.DependencyInjection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.Kafka.DependencyInjection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.Kafka.KafkaEventBus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.Kafka.KafkaEventBus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.Kafka.KafkaEventBus",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Kafka.KafkaEventBus.yml\" sourcestartlinenumber=\"1\">Kafka event bus exposing the transport-agnostic publisher and subscriber APIs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.Kafka.KafkaEventBusProviderFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.Kafka.KafkaEventBusProviderFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.Kafka.KafkaEventBusProviderFactory",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Kafka.KafkaEventBusProviderFactory.yml\" sourcestartlinenumber=\"1\">Creates Kafka event-bus instances for logical targets.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.Kafka.KafkaEventPublisher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.Kafka.KafkaEventPublisher.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.Kafka.KafkaEventPublisher",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Kafka.KafkaEventPublisher.yml\" sourcestartlinenumber=\"1\">Kafka implementation of <xref href=\"Devbone.Frameworks.EventBus.Publishing.IEventPublisher\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.Kafka.KafkaEventSubscriber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.Kafka.KafkaEventSubscriber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.Kafka.KafkaEventSubscriber",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Kafka.KafkaEventSubscriber.yml\" sourcestartlinenumber=\"1\">Kafka implementation of <xref href=\"Devbone.Frameworks.EventBus.Subscribing.IEventSubscriber\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.Kafka.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.Kafka.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.Kafka",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.yml",
       "output": {
         ".html": {
@@ -2994,6 +3162,104 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.RabbitMq.DependencyInjection.RabbitMqEventBusServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.RabbitMq.DependencyInjection.RabbitMqEventBusServiceCollectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.RabbitMq.DependencyInjection.RabbitMqEventBusServiceCollectionExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.RabbitMq.DependencyInjection.RabbitMqEventBusServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Registers the RabbitMQ transport with the Devbone event bus.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.RabbitMq.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.RabbitMq.DependencyInjection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.RabbitMq.DependencyInjection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.RabbitMq.RabbitMqEventBus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.RabbitMq.RabbitMqEventBus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.RabbitMq.RabbitMqEventBus",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.RabbitMq.RabbitMqEventBus.yml\" sourcestartlinenumber=\"1\">RabbitMQ event bus exposing the modern transport-agnostic API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.RabbitMq.RabbitMqEventBusProviderFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.RabbitMq.RabbitMqEventBusProviderFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.RabbitMq.RabbitMqEventBusProviderFactory",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.RabbitMq.RabbitMqEventBusProviderFactory.yml\" sourcestartlinenumber=\"1\">Creates RabbitMQ event-bus instances for logical targets.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.RabbitMq.RabbitMqEventPublisher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.RabbitMq.RabbitMqEventPublisher.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.RabbitMq.RabbitMqEventPublisher",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.RabbitMq.RabbitMqEventPublisher.yml\" sourcestartlinenumber=\"1\">RabbitMQ implementation of <xref href=\"Devbone.Frameworks.EventBus.Publishing.IEventPublisher\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.RabbitMq.RabbitMqEventSubscriber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.RabbitMq.RabbitMqEventSubscriber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.RabbitMq.RabbitMqEventSubscriber",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.RabbitMq.RabbitMqEventSubscriber.yml\" sourcestartlinenumber=\"1\">RabbitMQ implementation of <xref href=\"Devbone.Frameworks.EventBus.Subscribing.IEventSubscriber\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.RabbitMq.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.RabbitMq.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.RabbitMq",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventBus.Subscribing.ConsumedMessage-1.yml",
       "output": {
         ".html": {
@@ -3074,174 +3340,6 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventBus.Subscribing",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Transports.Kafka.KafkaBusOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Transports.Kafka.KafkaBusOptions.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Transports.Kafka.KafkaBusOptions",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Transports.Kafka.KafkaBusOptions.yml\" sourcestartlinenumber=\"1\">Configures the Kafka adapter.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Transports.Kafka.KafkaEventBus.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Transports.Kafka.KafkaEventBus.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Transports.Kafka.KafkaEventBus",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Transports.Kafka.KafkaEventBus.yml\" sourcestartlinenumber=\"1\">Kafka event bus exposing the transport-agnostic publisher and subscriber APIs.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Transports.Kafka.KafkaEventBusProviderFactory.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Transports.Kafka.KafkaEventBusProviderFactory.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Transports.Kafka.KafkaEventBusProviderFactory",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Transports.Kafka.KafkaEventBusProviderFactory.yml\" sourcestartlinenumber=\"1\">Creates Kafka event-bus instances for logical targets.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Transports.Kafka.KafkaEventPublisher.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Transports.Kafka.KafkaEventPublisher.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Transports.Kafka.KafkaEventPublisher",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Transports.Kafka.KafkaEventPublisher.yml\" sourcestartlinenumber=\"1\">Kafka implementation of <xref href=\"Devbone.Frameworks.EventBus.Publishing.IEventPublisher\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Transports.Kafka.KafkaEventSubscriber.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Transports.Kafka.KafkaEventSubscriber.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Transports.Kafka.KafkaEventSubscriber",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Transports.Kafka.KafkaEventSubscriber.yml\" sourcestartlinenumber=\"1\">Kafka implementation of <xref href=\"Devbone.Frameworks.EventBus.Subscribing.IEventSubscriber\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Transports.Kafka.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Transports.Kafka.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Transports.Kafka",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqBusOptions.yml\" sourcestartlinenumber=\"1\">Configures the RabbitMQ adapter.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqEventBus.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqEventBus.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqEventBus",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqEventBus.yml\" sourcestartlinenumber=\"1\">RabbitMQ event bus exposing the modern transport-agnostic API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqEventBusProviderFactory.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqEventBusProviderFactory.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqEventBusProviderFactory",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqEventBusProviderFactory.yml\" sourcestartlinenumber=\"1\">Creates RabbitMQ event-bus instances for logical targets.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqEventPublisher.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqEventPublisher.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqEventPublisher",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqEventPublisher.yml\" sourcestartlinenumber=\"1\">RabbitMQ implementation of <xref href=\"Devbone.Frameworks.EventBus.Publishing.IEventPublisher\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqEventSubscriber.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqEventSubscriber.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqEventSubscriber",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Transports.RabbitMq.RabbitMqEventSubscriber.yml\" sourcestartlinenumber=\"1\">RabbitMQ implementation of <xref href=\"Devbone.Frameworks.EventBus.Subscribing.IEventSubscriber\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Transports.RabbitMq.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Transports.RabbitMq.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Transports.RabbitMq",
       "Summary": null
     },
     {
@@ -3327,6 +3425,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventPersistence.Client",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventPersistence.Contracts.Commits.AggregateCommitBarrierDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventPersistence.Contracts.Commits.AggregateCommitBarrierDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventPersistence.Contracts.Commits.AggregateCommitBarrierDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventPersistence.Contracts.Commits.AggregateCommitBarrierDto.yml\" sourcestartlinenumber=\"1\">Describes the durable position of one aggregate commit, without its payloads.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3638,6 +3750,510 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.yml\" sourcestartlinenumber=\"1\">Configures bounded read-your-writes waiting against the projection database.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptionsValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptionsValidator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptionsValidator",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptionsValidator.yml\" sourcestartlinenumber=\"1\">Fails configuration that cannot produce a working waiter, at the first resolution rather than at the first\nrequest that needs one.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Configuration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Configuration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.IReadModelConsistencyBarrier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.IReadModelConsistencyBarrier.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Consistency.IReadModelConsistencyBarrier",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Consistency.IReadModelConsistencyBarrier.yml\" sourcestartlinenumber=\"1\">Answers, once and without blocking, whether the read models have observed a set of committed positions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.IReadModelWaiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.IReadModelWaiter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Consistency.IReadModelWaiter",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Consistency.IReadModelWaiter.yml\" sourcestartlinenumber=\"1\">Waits, within a bounded budget, until a framework-standard projection reflects one committed aggregate\nchange.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrier.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrier",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrier.yml\" sourcestartlinenumber=\"1\">Names one position a read model must have reached: an aggregate, and the stream position a commit wrote.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierProgress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierProgress.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierProgress",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierProgress.yml\" sourcestartlinenumber=\"1\">Reports how far one observed layer has come towards one barrier.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierResult",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierResult.yml\" sourcestartlinenumber=\"1\">The combined answer for one batch of barriers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierState",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierState.yml\" sourcestartlinenumber=\"1\">Reports whether a barrier has been reached, may still be reached, or never will be.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelConsistencyBarrier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelConsistencyBarrier.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelConsistencyBarrier",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelConsistencyBarrier.yml\" sourcestartlinenumber=\"1\">Checks barriers against the MongoDB read models in one batch, without blocking.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelFailureCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelFailureCodes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelFailureCodes",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelFailureCodes.yml\" sourcestartlinenumber=\"1\">Stable identifiers for the reasons a barrier can be declared unreachable.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelProjections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelProjections.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelProjections",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelProjections.yml\" sourcestartlinenumber=\"1\">Names the framework's own projections, so a caller does not have to spell the convention itself.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitOutcome.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitOutcome.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitOutcome",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitOutcome.yml\" sourcestartlinenumber=\"1\">Reports how a wait ended. Every value except <xref href=\"Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitOutcome.CaughtUp\" data-throw-if-not-resolved=\"false\"></xref> means the caller must decide what to do,\nwhich is why they are distinguished rather than collapsed into one failure.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.yml\" sourcestartlinenumber=\"1\">Reports how far the observed layer had progressed when a bounded wait ended.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaiter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaiter",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaiter.yml\" sourcestartlinenumber=\"1\">Waits for projection progress by polling, with every wait on the same aggregate type served by one shared\nquery per tick.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Consistency",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.DependencyInjection.ReadModelWaiterServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.DependencyInjection.ReadModelWaiterServiceCollectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.DependencyInjection.ReadModelWaiterServiceCollectionExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.DependencyInjection.ReadModelWaiterServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Registers bounded read-your-writes waiting in an application composition root.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.DependencyInjection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.DependencyInjection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Observability.ReadModelWaiterInstrumentation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Observability.ReadModelWaiterInstrumentation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Observability.ReadModelWaiterInstrumentation",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Observability.ReadModelWaiterInstrumentation.yml\" sourcestartlinenumber=\"1\">Owns the low-cardinality OpenTelemetry instruments of read-your-writes waiting.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Observability.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Observability.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Observability",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionFailureReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionFailureReader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionFailureReader",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionFailureReader.yml\" sourcestartlinenumber=\"1\">Reads durable terminal projection failures in batches.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionWatermarkReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionWatermarkReader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionWatermarkReader",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionWatermarkReader.yml\" sourcestartlinenumber=\"1\">Reads projection progress. Separated from the waiting and barrier logic so those are testable without a\ndatabase, and so a deployment storing its read models elsewhere can supply its own reader.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.MongoProjectionWatermarkReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.MongoProjectionWatermarkReader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Persistence.MongoProjectionWatermarkReader",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Persistence.MongoProjectionWatermarkReader.yml\" sourcestartlinenumber=\"1\">Reads projection progress from the MongoDB collections the pipeline writes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionCollections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionCollections.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionCollections",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionCollections.yml\" sourcestartlinenumber=\"1\">Resolves the aggregate-specific MongoDB collections the projection pipeline writes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionEventPosition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionEventPosition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionEventPosition",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionEventPosition.yml\" sourcestartlinenumber=\"1\">Addresses one event of one aggregate stream.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFailure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFailure.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFailure",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFailure.yml\" sourcestartlinenumber=\"1\">Describes one payload-free durable projection failure.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.yml\" sourcestartlinenumber=\"1\">Names the stored fields a reader needs to establish projection progress.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionWatermark.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionWatermark.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionWatermark",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionWatermark.yml\" sourcestartlinenumber=\"1\">Reports how far one projection document has been carried, without reading the document itself.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Persistence",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Registry.IProjectionRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Registry.IProjectionRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Registry.IProjectionRegistry",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Registry.IProjectionRegistry.yml\" sourcestartlinenumber=\"1\">Reads the projections a deployment publishes, so a caller's request can be validated and frozen before the\ncommand runs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.yml\" sourcestartlinenumber=\"1\">Reads the projection registry the workers publish, with a short cache.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.yml\" sourcestartlinenumber=\"1\">One projection a deployment publishes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Registry.ProjectionKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Registry.ProjectionKind.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Registry.ProjectionKind",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Registry.ProjectionKind.yml\" sourcestartlinenumber=\"1\">Distinguishes the framework's own layers from application-owned query models.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.yml\" sourcestartlinenumber=\"1\">A versioned snapshot of explicitly requested projection metadata.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Registry.ProjectionSelection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Registry.ProjectionSelection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Registry.ProjectionSelection",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Registry.ProjectionSelection.yml\" sourcestartlinenumber=\"1\">The outcome of turning a caller's projection request into a concrete, frozen set.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Registry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Registry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Registry",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Configuration.AggregateProjectionOptions.yml",
       "output": {
         ".html": {
@@ -3719,20 +4335,6 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptionsValidator",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptionsValidator.yml\" sourcestartlinenumber=\"1\">Validates projection configuration before workers connect to external systems.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Configuration.ProjectionTransportKind.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventProjection.Configuration.ProjectionTransportKind.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventProjection.Configuration.ProjectionTransportKind",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Configuration.ProjectionTransportKind.yml\" sourcestartlinenumber=\"1\">Identifies the broker implementation used by the projection worker.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3848,6 +4450,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessageFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessageFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessageFactory",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessageFactory.yml\" sourcestartlinenumber=\"1\">Creates privacy-conscious dead-letter records with a replayable original message representation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Contracts.ProjectionEvent.yml",
       "output": {
         ".html": {
@@ -3859,6 +4475,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Contracts.ProjectionEvent",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Contracts.ProjectionEvent.yml\" sourcestartlinenumber=\"1\">Represents one validated canonical domain event ready for projection.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Contracts.ProjectionFailureCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Contracts.ProjectionFailureCodes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Contracts.ProjectionFailureCodes",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Contracts.ProjectionFailureCodes.yml\" sourcestartlinenumber=\"1\">Stable projection failure classifications stored independently of broker retention.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3914,7 +4544,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.DependencyInjection.ProjectionServiceCollectionExtensions",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.DependencyInjection.ProjectionServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Registers the projection pipeline: the always-on raw and merged layers, the transport adapters, and the\nderived layer that carries application-owned query models.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.DependencyInjection.ProjectionServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Registers the projection pipeline: the always-on raw and merged layers, the adapters of the selected\ntransport, and the derived layer that carries application-owned query models.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4012,6 +4642,62 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Ingestion",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.DependencyInjection.KafkaProjectionServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.DependencyInjection.KafkaProjectionServiceCollectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Kafka.DependencyInjection.KafkaProjectionServiceCollectionExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Kafka.DependencyInjection.KafkaProjectionServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Registers the Apache Kafka transport with the Devbone projection pipeline.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.DependencyInjection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Kafka.DependencyInjection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.yml\" sourcestartlinenumber=\"1\">Creates the Kafka publisher, consumer, and topology initializer for the projection pipeline.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Kafka",
       "Summary": null
     },
     {
@@ -4184,6 +4870,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore.yml\" sourcestartlinenumber=\"1\">Records how far each application query model has processed each aggregate.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.IProjectionDependencyLookup.yml",
       "output": {
         ".html": {
@@ -4310,6 +5010,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionKind.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionKind",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionKind.yml\" sourcestartlinenumber=\"1\">Distinguishes the framework's own layers from application-owned query models.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration.yml\" sourcestartlinenumber=\"1\">One entry of the published projection registry.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer.yml",
       "output": {
         ".html": {
@@ -4320,7 +5048,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer.yml\" sourcestartlinenumber=\"1\">Creates required aggregate-specific MongoDB indexes before consumers start.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer.yml\" sourcestartlinenumber=\"1\">Creates required aggregate-specific MongoDB indexes before consumers start, and publishes the projections\nthis deployment maintains.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4548,6 +5276,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionNames.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionNames.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionNames",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionNames.yml\" sourcestartlinenumber=\"1\">Owns the public names of the framework's own projections, and the rule that keeps application handlers off\nthem.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionReference.yml",
       "output": {
         ".html": {
@@ -4587,6 +5329,90 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Projections",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.RabbitMq.DependencyInjection.RabbitMqProjectionServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.RabbitMq.DependencyInjection.RabbitMqProjectionServiceCollectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.RabbitMq.DependencyInjection.RabbitMqProjectionServiceCollectionExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.RabbitMq.DependencyInjection.RabbitMqProjectionServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Registers the RabbitMQ transport with the Devbone projection pipeline.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.RabbitMq.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.RabbitMq.DependencyInjection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.RabbitMq.DependencyInjection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.RabbitMq.RabbitMqProjectionQueueNames.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.RabbitMq.RabbitMqProjectionQueueNames.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.RabbitMq.RabbitMqProjectionQueueNames",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.RabbitMq.RabbitMqProjectionQueueNames.yml\" sourcestartlinenumber=\"1\">Creates stable RabbitMQ queue names from logical projection addresses.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.RabbitMq.RabbitMqProjectionTransportProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.RabbitMq.RabbitMqProjectionTransportProvider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.RabbitMq.RabbitMqProjectionTransportProvider",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.RabbitMq.RabbitMqProjectionTransportProvider.yml\" sourcestartlinenumber=\"1\">Creates the RabbitMQ publisher, consumer, and topology initializer for the projection pipeline.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.RabbitMq.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.RabbitMq.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.RabbitMq",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Transport.ConfiguredProjectionTransportResolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Transport.ConfiguredProjectionTransportResolver.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Transport.ConfiguredProjectionTransportResolver",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Transport.ConfiguredProjectionTransportResolver.yml\" sourcestartlinenumber=\"1\">Selects the one registered transport provider that matches the configured transport name.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4632,59 +5458,17 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Transport.Kafka.KafkaConsumerRunner.yml",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Transport.IProjectionTransportProvider.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventProjection.Transport.Kafka.KafkaConsumerRunner.html"
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Transport.IProjectionTransportProvider.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventProjection.Transport.Kafka.KafkaConsumerRunner",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Transport.Kafka.KafkaConsumerRunner.yml\" sourcestartlinenumber=\"1\">Implements at-least-once Kafka consumption with explicit offset commits.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Transport.Kafka.KafkaProjectionMessagePublisher.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventProjection.Transport.Kafka.KafkaProjectionMessagePublisher.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventProjection.Transport.Kafka.KafkaProjectionMessagePublisher",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Transport.Kafka.KafkaProjectionMessagePublisher.yml\" sourcestartlinenumber=\"1\">Publishes idempotent, acknowledged internal projection messages to Kafka.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Transport.Kafka.KafkaProjectionTransportInitializer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventProjection.Transport.Kafka.KafkaProjectionTransportInitializer.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventProjection.Transport.Kafka.KafkaProjectionTransportInitializer",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Transport.Kafka.KafkaProjectionTransportInitializer.yml\" sourcestartlinenumber=\"1\">Represents Kafka topology initialization when topics are provisioned externally or by broker auto-creation.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Transport.Kafka.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventProjection.Transport.Kafka.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventProjection.Transport.Kafka",
-      "Summary": null
+      "Title": "Devbone.Frameworks.EventProjection.Transport.IProjectionTransportProvider",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Transport.IProjectionTransportProvider.yml\" sourcestartlinenumber=\"1\">Creates the publisher, consumer, and topology initializer of one concrete projection transport.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4758,87 +5542,17 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionConnectionFactory.yml",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Transport.ProjectionTransportNames.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionConnectionFactory.html"
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Transport.ProjectionTransportNames.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionConnectionFactory",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionConnectionFactory.yml\" sourcestartlinenumber=\"1\">Creates RabbitMQ connections without performing broker I/O during dependency construction.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionMessageConsumer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionMessageConsumer.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionMessageConsumer",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionMessageConsumer.yml\" sourcestartlinenumber=\"1\">Consumes RabbitMQ projection queues with manual acknowledgements and at-least-once redelivery.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionMessagePublisher.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionMessagePublisher.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionMessagePublisher",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionMessagePublisher.yml\" sourcestartlinenumber=\"1\">Publishes persistent internal projection messages with mandatory routing and publisher confirms.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionQueueNames.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionQueueNames.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionQueueNames",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionQueueNames.yml\" sourcestartlinenumber=\"1\">Creates stable RabbitMQ queue names from logical projection addresses.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionTopology.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionTopology.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionTopology",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.RabbitMqProjectionTopology.yml\" sourcestartlinenumber=\"1\">Declares durable RabbitMQ projection exchanges, queues, and bindings idempotently.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventProjection.Transport.RabbitMq.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventProjection.Transport.RabbitMq",
-      "Summary": null
+      "Title": "Devbone.Frameworks.EventProjection.Transport.ProjectionTransportNames",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Transport.ProjectionTransportNames.yml\" sourcestartlinenumber=\"1\">Defines the transport names shipped by the platform and accepted by\n<xref href=\"Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.Transport\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -6818,11 +7532,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "api/toc.html"
-        },
         ".json": {
           "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""
@@ -6841,11 +7555,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
         ".json": {
           "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
         }
       },
       "version": ""

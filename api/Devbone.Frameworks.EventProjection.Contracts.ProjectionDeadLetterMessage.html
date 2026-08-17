@@ -177,6 +177,134 @@ Class ProjectionDeadLetterMessage
 </h2>
 
 
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_AggregateId_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.AggregateId*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_AggregateId" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.AggregateId">
+  AggregateId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the aggregate identifier when it could be established without guessing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? AggregateId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_AggregateName_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.AggregateName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_AggregateName" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.AggregateName">
+  AggregateName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the aggregate contract name when the rejected message exposed a reliable route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? AggregateName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_EventSequence_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.EventSequence*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_EventSequence" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.EventSequence">
+  EventSequence
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the rejected event sequence when the message exposed one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? EventSequence { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_FailureCode_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.FailureCode*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_FailureCode" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.FailureCode">
+  FailureCode
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the stable payload-free failure classification.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FailureCode { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_MessageKey_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.MessageKey*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_MessageKey" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.MessageKey">
@@ -318,6 +446,39 @@ Class ProjectionDeadLetterMessage
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public required string OriginalMessageSha256 { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_ProjectionName_" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.ProjectionName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionDeadLetterMessage_ProjectionName" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionDeadLetterMessage.ProjectionName">
+  ProjectionName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the stable public projection name when the failure belongs to one application-derived handler.
+Missing means the failure affects the aggregate pipeline and every downstream projection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ProjectionName { get; init; }</code></pre>
   </div>
 
 

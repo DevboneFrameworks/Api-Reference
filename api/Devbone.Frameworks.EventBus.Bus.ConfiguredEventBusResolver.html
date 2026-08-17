@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ConfiguredEventBusResolver | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Lazily creates Kafka and RabbitMQ buses from logical target configuration.">
+      <meta name="description" content="Lazily creates transport buses from logical target configuration.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class ConfiguredEventBusResolver
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventBus.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Lazily creates Kafka and RabbitMQ buses from logical target configuration.</p>
+  <div class="markdown summary"><p>Lazily creates transport buses from logical target configuration.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -151,49 +151,16 @@ Class ConfiguredEventBusResolver
 
 
 
+  <h2 id="Devbone_Frameworks_EventBus_Bus_ConfiguredEventBusResolver_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This package is transport-neutral: it knows how to resolve a target to a provider, not how to talk to a
+broker. Supply the provider factories from the transport packages you actually use -
+<code>Devbone.Frameworks.EventBus.Kafka</code>, <code>Devbone.Frameworks.EventBus.RabbitMq</code> - so that an
+application referencing one broker's client does not ship the other's.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
 </h2>
-
-
-  <a id="Devbone_Frameworks_EventBus_Bus_ConfiguredEventBusResolver__ctor_" data-uid="Devbone.Frameworks.EventBus.Bus.ConfiguredEventBusResolver.#ctor*"></a>
-
-  <h3 id="Devbone_Frameworks_EventBus_Bus_ConfiguredEventBusResolver__ctor_Devbone_Frameworks_EventBus_Bus_EventBusTargetsOptions_Devbone_Frameworks_EventBus_Contracts_Serialization_IEventSerializer_Microsoft_Extensions_Logging_ILogger_" data-uid="Devbone.Frameworks.EventBus.Bus.ConfiguredEventBusResolver.#ctor(Devbone.Frameworks.EventBus.Bus.EventBusTargetsOptions,Devbone.Frameworks.EventBus.Contracts.Serialization.IEventSerializer,Microsoft.Extensions.Logging.ILogger)">
-  ConfiguredEventBusResolver(EventBusTargetsOptions, IEventSerializer?, ILogger?)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Devbone.Frameworks.EventBus.Bus.ConfiguredEventBusResolver.html">ConfiguredEventBusResolver</a> class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConfiguredEventBusResolver(EventBusTargetsOptions options, IEventSerializer? serializer = null, ILogger? logger = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventBus.Bus.EventBusTargetsOptions.html">EventBusTargetsOptions</a></dt>
-    <dd><p>Logical-to-physical bus target configuration.</p>
-</dd>
-    <dt><code>serializer</code> <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Serialization.IEventSerializer.html">IEventSerializer</a></dt>
-    <dd><p>Optional shared event serializer.</p>
-</dd>
-    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
-    <dd><p>Optional shared event-bus logger.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
 
 
   <a id="Devbone_Frameworks_EventBus_Bus_ConfiguredEventBusResolver__ctor_" data-uid="Devbone.Frameworks.EventBus.Bus.ConfiguredEventBusResolver.#ctor*"></a>

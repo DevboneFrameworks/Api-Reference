@@ -216,6 +216,592 @@ Applications opt in by registering the source and meter with their OpenTelemetry
 
 
 
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_CompleteCommit_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.CompleteCommit*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_CompleteCommit_System_Diagnostics_Activity_System_String_System_String_System_Int64_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.CompleteCommit(System.Diagnostics.Activity,System.String,System.String,System.Int64)">
+  CompleteCommit(Activity?, string, string, long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Completes one successful manual settlement.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CompleteCommit(Activity? activity, string messagingSystem, string destination, long startedAt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
+    <dd></dd>
+    <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>startedAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_CompleteConsume_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.CompleteConsume*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_CompleteConsume_System_Diagnostics_Activity_System_String_System_String_System_Boolean_System_Int64_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.CompleteConsume(System.Diagnostics.Activity,System.String,System.String,System.Boolean,System.Int64)">
+  CompleteConsume(Activity?, string, string, bool, long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Completes one consumer-handler operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CompleteConsume(Activity? activity, string messagingSystem, string destination, bool committed, long startedAt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
+    <dd></dd>
+    <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>committed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>startedAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_CompleteOutboxDispatch_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.CompleteOutboxDispatch*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_CompleteOutboxDispatch_System_Diagnostics_Activity_System_String_System_Int64_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.CompleteOutboxDispatch(System.Diagnostics.Activity,System.String,System.Int64)">
+  CompleteOutboxDispatch(Activity?, string, long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Completes one outbox dispatch attempt.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CompleteOutboxDispatch(Activity? activity, string outcome, long startedAt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
+    <dd></dd>
+    <dt><code>outcome</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>startedAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_CompletePublish_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.CompletePublish*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_CompletePublish_System_Diagnostics_Activity_System_String_System_String_System_String_System_Int64_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.CompletePublish(System.Diagnostics.Activity,System.String,System.String,System.String,System.Int64)">
+  CompletePublish(Activity?, string, string, string, long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Completes one producer operation with its transport outcome.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CompletePublish(Activity? activity, string messagingSystem, string destination, string outcome, long startedAt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
+    <dd></dd>
+    <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>outcome</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>startedAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_EnrichConsume_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.EnrichConsume*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_EnrichConsume_System_Diagnostics_Activity_Devbone_Frameworks_EventBus_Contracts_Messaging_EventMetadata_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.EnrichConsume(System.Diagnostics.Activity,Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata)">
+  EnrichConsume(Activity?, EventMetadata)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds low-cardinality event contract tags after envelope deserialization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void EnrichConsume(Activity? activity, EventMetadata metadata)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
+    <dd></dd>
+    <dt><code>metadata</code> <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata.html">EventMetadata</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_FailCommit_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.FailCommit*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_FailCommit_System_Diagnostics_Activity_System_String_System_String_System_Exception_System_Int64_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.FailCommit(System.Diagnostics.Activity,System.String,System.String,System.Exception,System.Int64)">
+  FailCommit(Activity?, string, string, Exception, long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Records a failed manual settlement.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void FailCommit(Activity? activity, string messagingSystem, string destination, Exception exception, long startedAt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
+    <dd></dd>
+    <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+    <dt><code>startedAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_FailConsume_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.FailConsume*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_FailConsume_System_Diagnostics_Activity_System_String_System_String_System_Exception_System_Int64_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.FailConsume(System.Diagnostics.Activity,System.String,System.String,System.Exception,System.Int64)">
+  FailConsume(Activity?, string, string, Exception, long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Records an unexpected consumer or deserialization exception.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void FailConsume(Activity? activity, string messagingSystem, string destination, Exception exception, long startedAt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
+    <dd></dd>
+    <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+    <dt><code>startedAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_FailOutboxDispatch_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.FailOutboxDispatch*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_FailOutboxDispatch_System_Diagnostics_Activity_System_Exception_System_Int64_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.FailOutboxDispatch(System.Diagnostics.Activity,System.Exception,System.Int64)">
+  FailOutboxDispatch(Activity?, Exception, long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Records an unexpected outbox dispatch exception.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void FailOutboxDispatch(Activity? activity, Exception exception, long startedAt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
+    <dd></dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+    <dt><code>startedAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_FailPublish_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.FailPublish*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_FailPublish_System_Diagnostics_Activity_System_String_System_String_System_Exception_System_Int64_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.FailPublish(System.Diagnostics.Activity,System.String,System.String,System.Exception,System.Int64)">
+  FailPublish(Activity?, string, string, Exception, long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Records an unexpected producer exception without event identity or payload data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void FailPublish(Activity? activity, string messagingSystem, string destination, Exception exception, long startedAt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
+    <dd></dd>
+    <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+    <dt><code>startedAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_ResolveTraceParent_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.ResolveTraceParent*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_ResolveTraceParent_System_String_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.ResolveTraceParent(System.String)">
+  ResolveTraceParent(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolves the W3C traceparent injected into a transport message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ResolveTraceParent(string? metadataTraceParent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>metadataTraceParent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_ResolveTraceState_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.ResolveTraceState*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_ResolveTraceState_System_String_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.ResolveTraceState(System.String)">
+  ResolveTraceState(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolves the W3C tracestate injected into a transport message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? ResolveTraceState(string? metadataTraceState)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>metadataTraceState</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartCommit_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.StartCommit*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartCommit_System_String_System_String_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.StartCommit(System.String,System.String)">
+  StartCommit(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts one explicit manual settlement span.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Activity? StartCommit(string messagingSystem, string destination)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartConsume_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.StartConsume*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartConsume_System_String_System_String_System_String_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.StartConsume(System.String,System.String,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})">
+  StartConsume(string, string, string, IReadOnlyDictionary&lt;string, string&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts a consumer span using the remote W3C context carried by transport headers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Activity? StartConsume(string messagingSystem, string destination, string consumerName, IReadOnlyDictionary&lt;string, string&gt; headers)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>consumerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>headers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartOutboxDispatch_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.StartOutboxDispatch*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartOutboxDispatch_Devbone_Frameworks_EventBus_Contracts_Messaging_EventMetadata_System_String_System_String_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.StartOutboxDispatch(Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata,System.String,System.String)">
+  StartOutboxDispatch(EventMetadata, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts an outbox dispatch span using the trace context captured in the immutable envelope.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Activity? StartOutboxDispatch(EventMetadata metadata, string eventBusId, string destination)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>metadata</code> <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata.html">EventMetadata</a></dt>
+    <dd></dd>
+    <dt><code>eventBusId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartPublish_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.StartPublish*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartPublish_System_String_System_String_Devbone_Frameworks_EventBus_Contracts_Messaging_EventMetadata_" data-uid="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.StartPublish(System.String,System.String,Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata)">
+  StartPublish(string, string, EventMetadata)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts one producer span around a concrete transport publish.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Activity? StartPublish(string messagingSystem, string destination, EventMetadata metadata)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>metadata</code> <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata.html">EventMetadata</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 

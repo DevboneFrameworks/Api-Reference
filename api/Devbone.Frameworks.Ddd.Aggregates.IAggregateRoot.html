@@ -438,7 +438,9 @@ Interface IAggregateRoot
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
-    <dd><p>The atomic event-store write result.</p>
+    <dd><p>The atomic event-store write result. A successful commit that wrote at least one event carries an
+<a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html#Devbone_Frameworks_Ddd_Results_IEventStoredResult_CommitReceipt">CommitReceipt</a> naming the resulting stream position and token, and
+the aggregate's own <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateRoot.html#Devbone_Frameworks_Ddd_Aggregates_IAggregateRoot_ConcurrencyToken">ConcurrencyToken</a> is advanced to that token.</p>
 </dd>
   </dl>
 

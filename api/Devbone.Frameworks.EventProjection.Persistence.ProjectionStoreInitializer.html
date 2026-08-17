@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ProjectionStoreInitializer | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Creates required aggregate-specific MongoDB indexes before consumers start.">
+      <meta name="description" content="Creates required aggregate-specific MongoDB indexes before consumers start, and publishes the projections this deployment maintains.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,8 @@ Class ProjectionStoreInitializer
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Creates required aggregate-specific MongoDB indexes before consumers start.</p>
+  <div class="markdown summary"><p>Creates required aggregate-specific MongoDB indexes before consumers start, and publishes the projections
+this deployment maintains.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -158,8 +159,8 @@ Class ProjectionStoreInitializer
 
   <a id="Devbone_Frameworks_EventProjection_Persistence_ProjectionStoreInitializer__ctor_" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_EventProjection_Persistence_ProjectionStoreInitializer__ctor_Devbone_Frameworks_EventProjection_Persistence_IProjectionStoreMaintenance_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer.#ctor(Devbone.Frameworks.EventProjection.Persistence.IProjectionStoreMaintenance,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions)">
-  ProjectionStoreInitializer(IProjectionStoreMaintenance, ProjectionPipelineOptions)
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_ProjectionStoreInitializer__ctor_Devbone_Frameworks_EventProjection_Persistence_IProjectionStoreMaintenance_Devbone_Frameworks_EventProjection_Persistence_IProjectionCheckpointStore_Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer.#ctor(Devbone.Frameworks.EventProjection.Persistence.IProjectionStoreMaintenance,Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore,Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions)">
+  ProjectionStoreInitializer(IProjectionStoreMaintenance, IProjectionCheckpointStore, DerivedProjectionRegistry, ProjectionPipelineOptions)
   
   </h3>
 
@@ -168,13 +169,19 @@ Class ProjectionStoreInitializer
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProjectionStoreInitializer(IProjectionStoreMaintenance storeMaintenance, ProjectionPipelineOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProjectionStoreInitializer(IProjectionStoreMaintenance storeMaintenance, IProjectionCheckpointStore checkpoints, DerivedProjectionRegistry derivedRegistry, ProjectionPipelineOptions options)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>storeMaintenance</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionStoreMaintenance.html">IProjectionStoreMaintenance</a></dt>
     <dd><p>Projection-store maintenance port.</p>
+</dd>
+    <dt><code>checkpoints</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore.html">IProjectionCheckpointStore</a></dt>
+    <dd><p>Store owning the checkpoint and registry collections.</p>
+</dd>
+    <dt><code>derivedRegistry</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.html">DerivedProjectionRegistry</a></dt>
+    <dd><p>Registered application handlers.</p>
 </dd>
     <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html">ProjectionPipelineOptions</a></dt>
     <dd><p>Projection options.</p>

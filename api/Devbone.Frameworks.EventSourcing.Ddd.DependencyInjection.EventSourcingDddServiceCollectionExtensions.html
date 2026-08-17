@@ -208,6 +208,12 @@ This does not register a bus or an outbox dispatcher. Persistence and publicatio
 concerns: a commit is durable once the event and its outbox row are written, and delivery is a later,
 independently retried step.
 </p>
+<p>
+It does register the canonical envelope serializer, because an outbox row carries an envelope and the
+mapper cannot be constructed without one. The registration uses <code>TryAdd</code>, so an application that
+registers its own serializer keeps it, and calling <code>AddDevboneEventBus</code> as well does not produce a
+second instance - the bytes written to an outbox row and the bytes published must be identical.
+</p>
 </div>
 
   <h4 class="section">Exceptions</h4>

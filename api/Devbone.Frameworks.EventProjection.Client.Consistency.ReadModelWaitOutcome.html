@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum ReadModelWaitOutcome | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum ReadModelWaitOutcome | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Reports how a wait ended. Every value except  means the caller must decide what to do, which is why they are distinguished rather than collapsed into one failure.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitOutcome">
+
+
+
+
+  <h1 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitOutcome" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitOutcome" class="text-break">
+Enum ReadModelWaitOutcome  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.html">EventProjection</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Client.html">Client</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.html">Consistency</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.Client.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Reports how a wait ended. Every value except <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitOutcome.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitOutcome_CaughtUp">CaughtUp</a> means the caller must decide what to do,
+which is why they are distinguished rather than collapsed into one failure.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum ReadModelWaitOutcome</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitOutcome_CaughtUp"><code>CaughtUp = 0</code></dt>
+  
+  <dd><p>The observed layer reached the requested event sequence or a later one. The query that follows sees the
+commit.</p>
+</dd>
+    <dt id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitOutcome_Rejected"><code>Rejected = 3</code></dt>
+  
+  <dd><p>The wait was refused because too many waits were already in flight. Load shedding: the request has not
+been observed at all, and the caller should degrade rather than queue behind the cap.</p>
+</dd>
+    <dt id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitOutcome_Stalled"><code>Stalled = 2</code></dt>
+  
+  <dd><p>The event reached the read side and cannot be applied, because an earlier event of the same stream is
+missing. The pipeline stalls rather than diverging, so this never resolves by waiting longer and the
+wait is abandoned immediately instead of burning the remaining budget. Closing the gap is an operator
+action.</p>
+</dd>
+    <dt id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitOutcome_Timeout"><code>Timeout = 1</code></dt>
+  
+  <dd><p>The budget expired while the projection was still behind. Ordinary under load and the outcome to map
+onto a deferred or queued response, because the projection is still progressing.</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

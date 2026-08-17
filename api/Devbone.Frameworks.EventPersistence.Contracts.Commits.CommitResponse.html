@@ -212,6 +212,46 @@ Class CommitResponse
 
 
 
+  <a id="Devbone_Frameworks_EventPersistence_Contracts_Commits_CommitResponse_Barrier_" data-uid="Devbone.Frameworks.EventPersistence.Contracts.Commits.CommitResponse.Barrier*"></a>
+
+  <h3 id="Devbone_Frameworks_EventPersistence_Contracts_Commits_CommitResponse_Barrier" data-uid="Devbone.Frameworks.EventPersistence.Contracts.Commits.CommitResponse.Barrier">
+  Barrier
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets what the already existing commit wrote. Present only when
+<a class="xref" href="Devbone.Frameworks.EventPersistence.Contracts.Commits.CommitResponse.html#Devbone_Frameworks_EventPersistence_Contracts_Commits_CommitResponse_AlreadyCommitted">AlreadyCommitted</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AggregateCommitBarrierDto? Barrier { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventPersistence.Contracts.Commits.AggregateCommitBarrierDto.html">AggregateCommitBarrierDto</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventPersistence_Contracts_Commits_CommitResponse_Barrier_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Deliberately absent for a fresh commit. The client assigned the sequences and the token itself and the
+gateway wrote exactly those rows, so returning them would be a second copy of a value that cannot
+disagree — and a field that cannot disagree today is a field that drifts tomorrow. For a repeated
+request identity the situation is the opposite: the client's values describe a commit that never
+happened, and only the stored ones are true.</p>
+</div>
+
+
+
+
   <a id="Devbone_Frameworks_EventPersistence_Contracts_Commits_CommitResponse_EventIds_" data-uid="Devbone.Frameworks.EventPersistence.Contracts.Commits.CommitResponse.EventIds*"></a>
 
   <h3 id="Devbone_Frameworks_EventPersistence_Contracts_Commits_CommitResponse_EventIds" data-uid="Devbone.Frameworks.EventPersistence.Contracts.Commits.CommitResponse.EventIds">

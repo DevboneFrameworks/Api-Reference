@@ -164,6 +164,13 @@ Class EventStoredResult
     </div>
   </dd></dl>
 
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Devbone.Frameworks.Ddd.Extensions.ResultExtensions.html#Devbone_Frameworks_Ddd_Extensions_ResultExtensions_GetCommitReceipt_Devbone_Frameworks_Ddd_Results_IResult_">ResultExtensions.GetCommitReceipt(IResult)</a>
+  </div>
+  </dd></dl>
 
 
 
@@ -180,7 +187,7 @@ Class EventStoredResult
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates an initially successful persistence outcome.</p>
+  <div class="markdown level1 summary"><p>Creates an initially successful persistence outcome without a commit receipt.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -196,7 +203,50 @@ Class EventStoredResult
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_Ddd_Results_EventStoredResult__ctor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is what a persistence port returns. The port writes the rows it was handed and reports the outcome;
+the receipt is assembled one layer up, by the change tracker that owns the commit as a whole.</p>
+</div>
 
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Results_EventStoredResult__ctor_" data-uid="Devbone.Frameworks.Ddd.Results.EventStoredResult.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Results_EventStoredResult__ctor_Devbone_Frameworks_Ddd_Results_AggregateCommitReceipt_" data-uid="Devbone.Frameworks.Ddd.Results.EventStoredResult.#ctor(Devbone.Frameworks.Ddd.Results.AggregateCommitReceipt)">
+  EventStoredResult(AggregateCommitReceipt)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a successful persistence outcome that names the commit it wrote.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventStoredResult(AggregateCommitReceipt commitReceipt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>commitReceipt</code> <a class="xref" href="Devbone.Frameworks.Ddd.Results.AggregateCommitReceipt.html">AggregateCommitReceipt</a></dt>
+    <dd><p>What the commit wrote.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when <code class="paramref">commitReceipt</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
 
 
 
@@ -229,6 +279,47 @@ Class EventStoredResult
 
 
 
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Results_EventStoredResult_CommitReceipt_" data-uid="Devbone.Frameworks.Ddd.Results.EventStoredResult.CommitReceipt*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Results_EventStoredResult_CommitReceipt" data-uid="Devbone.Frameworks.Ddd.Results.EventStoredResult.CommitReceipt">
+  CommitReceipt
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets what the commit wrote, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when nothing was written.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AggregateCommitReceipt? CommitReceipt { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.AggregateCommitReceipt.html">AggregateCommitReceipt</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_Ddd_Results_EventStoredResult_CommitReceipt_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Present only for a successful commit that produced at least one event. A failed commit, and a commit of
+an aggregate with no uncommitted events, both leave this <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>: there is no position to
+name.</p>
+</div>
 
 
 

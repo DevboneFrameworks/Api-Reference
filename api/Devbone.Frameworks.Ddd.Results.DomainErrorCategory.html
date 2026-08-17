@@ -117,6 +117,25 @@ Enum DomainErrorCategory
   <h2 id="fields">Fields
 </h2>
   <dl class="parameters">
+    <dt id="Devbone_Frameworks_Ddd_Results_DomainErrorCategory_Authorization"><code>Authorization = 7</code></dt>
+  <dd><p>Indicates that the caller is known but is not permitted to perform this operation.</p>
+<p>
+Distinct from <a class="xref" href="Devbone.Frameworks.Ddd.Results.DomainErrorCategory.html#Devbone_Frameworks_Ddd_Results_DomainErrorCategory_Validation">Validation</a>: the command is well-formed and the aggregate state permits the
+operation in principle, but this caller may not perform it. An API layer maps the two differently —
+typically 400 against 403 — so reporting an authorization failure as a validation failure is a wire
+defect rather than a naming preference.
+</p>
+<p>
+Per-command authorization belongs in <code>ValidateAggregateAsync</code>, because that is the first stage at
+which the aggregate's own state is available: <code>ValidateInputAsync</code> runs before the lock and before
+rehydration, so it cannot decide "may this caller act on <em>this</em> aggregate".
+</p>
+<p>
+This category does not authenticate anyone and does not decide policy. It classifies a decision the
+application has already made.
+</p>
+</dd>
+  
     <dt id="Devbone_Frameworks_Ddd_Results_DomainErrorCategory_Concurrency"><code>Concurrency = 4</code></dt>
   
   <dd><p>Indicates an optimistic or pessimistic concurrency conflict.</p>

@@ -260,6 +260,51 @@ them, so the zero-code deployment produces exactly the same broker traffic as be
 </h2>
 
 
+  <a id="Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_Describe_" data-uid="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.Describe*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_Describe_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_" data-uid="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.Describe(Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions)">
+  Describe(ProjectionPipelineOptions)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Describes every projection this deployment maintains, framework layers included.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;ProjectionRegistration&gt; Describe(ProjectionPipelineOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html">ProjectionPipelineOptions</a></dt>
+    <dd><p>Validated projection options naming the configured aggregates.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration.html">ProjectionRegistration</a>&gt;</dt>
+    <dd><p>The registry entries to publish.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when <code class="paramref">options</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_HandlersFor_" data-uid="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.HandlersFor*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_HandlersFor_System_String_" data-uid="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.HandlersFor(System.String)">

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AggregateSnapshotUnreadableException | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AggregateSnapshotUnreadableException | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Signals that a persisted snapshot exists but this build cannot interpret its payload, so the aggregate has to be rebuilt from its events instead.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshotUnreadableException">
+
+
+
+  <h1 id="Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshotUnreadableException" data-uid="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshotUnreadableException" class="text-break">
+Class AggregateSnapshotUnreadableException  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.Ddd.html">Ddd</a>.<a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.html">Snapshots</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.Ddd.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Signals that a persisted snapshot exists but this build cannot interpret its payload, so the aggregate has
+to be rebuilt from its events instead.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class AggregateSnapshotUnreadableException : InvalidOperationException, ISerializable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.systemexception">SystemException</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></div>
+      <div><span class="xref">AggregateSnapshotUnreadableException</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializable">ISerializable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception">Exception.GetBaseException()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.tostring">Exception.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.gettype">Exception.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.targetsite">Exception.TargetSite</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.message">Exception.Message</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.data">Exception.Data</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.innerexception">Exception.InnerException</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.helplink">Exception.HelpLink</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.source">Exception.Source</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.hresult">Exception.HResult</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.stacktrace">Exception.StackTrace</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshotUnreadableException_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+A snapshot is a replaceable cache and never the source of truth, so an unreadable one must not make a
+stream unwritable. This exception exists to separate that recoverable case from the failures that are not
+recoverable: a snapshot addressing a different aggregate, invalid metadata, or an event in the tail that
+cannot be replayed all keep throwing their original exception, because rebuilding would not help and the
+silence would hide an infrastructure defect.
+</p>
+<p>
+<code>CommandExecutor</code> handles this automatically — it discards the aggregate, reloads the complete event
+stream and logs a warning. Code that rehydrates by hand should do the same: catch this exception, build a
+fresh aggregate, and call <code>Load(IReadOnlyCollection&lt;IStoredEvent&gt;)</code> with the full stream. The
+instance that threw is faulted and must be discarded.
+</p>
+<p>
+In practice this means a state type whose shape changed since the snapshot was written — adding or removing
+a single property is enough, because the payload has to round-trip losslessly. The other cause is a row
+written by a platform version that used a different snapshot format, which is what makes changing that
+format a self-healing operation rather than a migration.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshotUnreadableException__ctor_" data-uid="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshotUnreadableException.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshotUnreadableException__ctor_System_String_System_String_System_Int64_System_Int32_System_Exception_" data-uid="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshotUnreadableException.#ctor(System.String,System.String,System.Int64,System.Int32,System.Exception)">
+  AggregateSnapshotUnreadableException(string, string, long, int, Exception)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the exception from the snapshot coordinates that could not be interpreted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AggregateSnapshotUnreadableException(string aggregateName, string aggregateId, long aggregateVersion, int snapshotFormatVersion, Exception innerException)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Stable aggregate contract name the snapshot belongs to.</p>
+</dd>
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Identity of the aggregate the snapshot belongs to.</p>
+</dd>
+    <dt><code>aggregateVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Event position the snapshot represents.</p>
+</dd>
+    <dt><code>snapshotFormatVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Serialized state contract version recorded on the snapshot.</p>
+</dd>
+    <dt><code>innerException</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The serializer failure that made the payload unusable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when <code class="paramref">innerException</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshotUnreadableException_AggregateId_" data-uid="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshotUnreadableException.AggregateId*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshotUnreadableException_AggregateId" data-uid="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshotUnreadableException.AggregateId">
+  AggregateId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the identity of the aggregate the snapshot belongs to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AggregateId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshotUnreadableException_AggregateName_" data-uid="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshotUnreadableException.AggregateName*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshotUnreadableException_AggregateName" data-uid="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshotUnreadableException.AggregateName">
+  AggregateName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the stable aggregate contract name the snapshot belongs to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AggregateName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshotUnreadableException_AggregateVersion_" data-uid="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshotUnreadableException.AggregateVersion*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshotUnreadableException_AggregateVersion" data-uid="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshotUnreadableException.AggregateVersion">
+  AggregateVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the event position the unreadable snapshot represents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long AggregateVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshotUnreadableException_SnapshotFormatVersion_" data-uid="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshotUnreadableException.SnapshotFormatVersion*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshotUnreadableException_SnapshotFormatVersion" data-uid="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshotUnreadableException.SnapshotFormatVersion">
+  SnapshotFormatVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the serialized state contract version recorded on the unreadable snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SnapshotFormatVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

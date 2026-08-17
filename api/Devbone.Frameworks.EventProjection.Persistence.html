@@ -126,8 +126,14 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration.html">ProjectionRegistration</a></dt>
+      <dd><p>One entry of the published projection registry.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer.html">ProjectionStoreInitializer</a></dt>
-      <dd><p>Creates required aggregate-specific MongoDB indexes before consumers start.</p>
+      <dd><p>Creates required aggregate-specific MongoDB indexes before consumers start, and publishes the projections
+this deployment maintains.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -141,6 +147,11 @@ Interfaces
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore.html">IMergedProjectionStore</a></dt>
       <dd><p>Persists visible, reference-enriched aggregate projections.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore.html">IProjectionCheckpointStore</a></dt>
+      <dd><p>Records how far each application query model has processed each aggregate.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -161,6 +172,14 @@ Interfaces
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStore.html">IRawProjectionStore</a></dt>
       <dd><p>Persists immutable events and exposes the current aggregate-specific raw projection state.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionKind.html">ProjectionKind</a></dt>
+      <dd><p>Distinguishes the framework's own layers from application-owned query models.</p>
 </dd>
     </dl>
 

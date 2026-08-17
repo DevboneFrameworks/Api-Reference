@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ReadModelWaitResult | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ReadModelWaitResult | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Reports how far the observed layer had progressed when a bounded wait ended.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult">
+
+
+
+  <h1 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult" class="text-break">
+Class ReadModelWaitResult  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.html">EventProjection</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Client.html">Client</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.html">Consistency</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.Client.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Reports how far the observed layer had progressed when a bounded wait ended.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record ReadModelWaitResult : IEquatable&lt;ReadModelWaitResult&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ReadModelWaitResult</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.html">ReadModelWaitResult</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Returned rather than thrown, including for the unhappy outcomes. A projection that has not caught up yet is
+an expected state of a correctly working system, and every outcome here carries a different sensible
+response — retry, defer, alert, shed — which an exception would flatten into one.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult__ctor_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult__ctor" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.#ctor">
+  ReadModelWaitResult()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadModelWaitResult()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_Barrier_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.Barrier*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_Barrier" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.Barrier">
+  Barrier
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the position that was waited for.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required ReadModelBarrier Barrier { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrier.html">ReadModelBarrier</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_Elapsed_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.Elapsed*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_Elapsed" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.Elapsed">
+  Elapsed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets how long the wait took, including the first read.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required TimeSpan Elapsed { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_FailureCode_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.FailureCode*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_FailureCode" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.FailureCode">
+  FailureCode
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the stable reason the barrier is unreachable, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>. Set only for
+<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitOutcome.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitOutcome_Stalled">Stalled</a>. See <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelFailureCodes.html">ReadModelFailureCodes</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? FailureCode { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_IsCaughtUp_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.IsCaughtUp*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_IsCaughtUp" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.IsCaughtUp">
+  IsCaughtUp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the read model reflects the requested commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCaughtUp { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_IsDeleted_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.IsDeleted*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_IsDeleted" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.IsDeleted">
+  IsDeleted
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the aggregate reached its terminal deleted state at or before the observed position. A
+caught-up wait with this set means the following query correctly finds nothing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDeleted { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_ObservedEventSequence_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.ObservedEventSequence*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_ObservedEventSequence" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.ObservedEventSequence">
+  ObservedEventSequence
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the last position actually observed, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when the projection held no document
+for the aggregate. Under at-least-once delivery a caught-up value may exceed the barrier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? ObservedEventSequence { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_Outcome_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.Outcome*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_Outcome" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.Outcome">
+  Outcome
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets how the wait ended.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required ReadModelWaitOutcome Outcome { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitOutcome.html">ReadModelWaitOutcome</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_Reads_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.Reads*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_Reads" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.Reads">
+  Reads
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets how many times the projection was read, so polling cost stays measurable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required int Reads { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_Equals_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.Equals*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_Equals_Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.Equals(Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult)">
+  Equals(ReadModelWaitResult?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(ReadModelWaitResult? other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.html">ReadModelWaitResult</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_Equals_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.Equals*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_Equals_System_Object_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.Equals(System.Object)">
+  Equals(object?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_GetHashCode_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.GetHashCode*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_GetHashCode" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_ToString_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.ToString*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_ToString" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_op_Equality_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.op_Equality*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_op_Equality_Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.op_Equality(Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult,Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult)">
+  operator ==(ReadModelWaitResult?, ReadModelWaitResult?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(ReadModelWaitResult? left, ReadModelWaitResult? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.html">ReadModelWaitResult</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.html">ReadModelWaitResult</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_op_Inequality_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.op_Inequality*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_op_Inequality_Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitResult_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.op_Inequality(Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult,Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult)">
+  operator !=(ReadModelWaitResult?, ReadModelWaitResult?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(ReadModelWaitResult? left, ReadModelWaitResult? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.html">ReadModelWaitResult</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitResult.html">ReadModelWaitResult</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

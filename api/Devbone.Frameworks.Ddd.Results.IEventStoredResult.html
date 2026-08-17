@@ -128,7 +128,55 @@ Interface IEventStoredResult
     </div>
   </dd></dl>
 
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Devbone.Frameworks.Ddd.Extensions.ResultExtensions.html#Devbone_Frameworks_Ddd_Extensions_ResultExtensions_GetCommitReceipt_Devbone_Frameworks_Ddd_Results_IResult_">ResultExtensions.GetCommitReceipt(IResult)</a>
+  </div>
+  </dd></dl>
 
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Results_IEventStoredResult_CommitReceipt_" data-uid="Devbone.Frameworks.Ddd.Results.IEventStoredResult.CommitReceipt*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Results_IEventStoredResult_CommitReceipt" data-uid="Devbone.Frameworks.Ddd.Results.IEventStoredResult.CommitReceipt">
+  CommitReceipt
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets what the commit wrote, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when nothing was written.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AggregateCommitReceipt? CommitReceipt { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.AggregateCommitReceipt.html">AggregateCommitReceipt</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_Ddd_Results_IEventStoredResult_CommitReceipt_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Present only for a successful commit that produced at least one event. A failed commit, and a commit of
+an aggregate with no uncommitted events, both leave this <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>: there is no position to
+name.</p>
+</div>
 
 
 

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ReadModelWaiterOptions | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ReadModelWaiterOptions | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Configures bounded read-your-writes waiting against the projection database.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions">
+
+
+
+  <h1 id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions" class="text-break">
+Class ReadModelWaiterOptions  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.html">EventProjection</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Client.html">Client</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Configuration.html">Configuration</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.Client.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Configures bounded read-your-writes waiting against the projection database.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ReadModelWaiterOptions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ReadModelWaiterOptions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions__ctor_" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions__ctor" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.#ctor">
+  ReadModelWaiterOptions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadModelWaiterOptions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_SECTION_NAME" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.SECTION_NAME">
+  SECTION_NAME
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The configuration section these options bind from.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string SECTION_NAME = &quot;ReadModelWaiter&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_ConnectionString_" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.ConnectionString*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_ConnectionString" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.ConnectionString">
+  ConnectionString
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the MongoDB connection string of the projection database. Required unless the application
+supplies its own database instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ConnectionString { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_DatabaseName_" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.DatabaseName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_DatabaseName" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.DatabaseName">
+  DatabaseName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the projection database name. It must be the database the projection pipeline writes; a
+waiter pointed at an empty database reports a projection that never catches up.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DatabaseName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_DefaultTimeout_" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.DefaultTimeout*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_DefaultTimeout" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.DefaultTimeout">
+  DefaultTimeout
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the budget used when a request names none. Deliberately short: past a second or two a
+caller is better served by a deferred response than by a held connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan DefaultTimeout { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_MaximumConcurrentWaits_" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.MaximumConcurrentWaits*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_MaximumConcurrentWaits" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.MaximumConcurrentWaits">
+  MaximumConcurrentWaits
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets how many waits may be in flight at once. Reaching it sheds further waits immediately
+instead of queueing them, so a projection outage degrades responses rather than exhausting the host.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaximumConcurrentWaits { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_MaximumTimeout_" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.MaximumTimeout*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_MaximumTimeout" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.MaximumTimeout">
+  MaximumTimeout
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the largest budget a single request may ask for. Requests above it are clamped, so one
+caller cannot hold a slot for as long as it likes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan MaximumTimeout { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_PendingRetryAfter_" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.PendingRetryAfter*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_PendingRetryAfter" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.PendingRetryAfter">
+  PendingRetryAfter
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the delay a non-blocking barrier check reports when a barrier is still pending.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan PendingRetryAfter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_PendingRetryAfter_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>One value for every pending reason, on purpose. A cause-aware delay — longer for a stream that is
+replaying than for a projection one event behind — is plausible and unmeasured, and a guessed heuristic
+here would be indistinguishable from a tuned one until it was wrong in production.</p>
+</div>
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_PollInterval_" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.PollInterval*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_PollInterval" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.PollInterval">
+  PollInterval
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets how often a pending wait re-reads the projection. The floor on how long a wait outlives the
+write it is waiting for, and the ceiling on how much load waiting adds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan PollInterval { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_RegistryCacheDuration_" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.RegistryCacheDuration*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_RegistryCacheDuration" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.RegistryCacheDuration">
+  RegistryCacheDuration
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets how long the published projection registry is cached.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan RegistryCacheDuration { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_RegistryCacheDuration_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The registry changes only when a projection worker starts, while it is read on the acceptance path of
+every request that names a projection. Short-lived rather than permanent, so a newly deployed handler
+becomes resolvable without restarting the API host.</p>
+</div>
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_StallProbeAfter_" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.StallProbeAfter*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_StallProbeAfter" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.StallProbeAfter">
+  StallProbeAfter
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets how long a wait runs before it starts probing for a stalled stream. Every probe is an extra
+query, and almost every wait ends long before this, so it pays only for the ones that do not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan StallProbeAfter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_StallProbeInterval_" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.StallProbeInterval*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_StallProbeInterval" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.StallProbeInterval">
+  StallProbeInterval
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets how often the stall probe repeats once it has started.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan StallProbeInterval { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_StallThreshold_" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.StallThreshold*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_StallThreshold" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.StallThreshold">
+  StallThreshold
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets how long an event may sit stored-but-unapplied before the wait treats the stream as
+stalled rather than slow.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan StallThreshold { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_StallThreshold_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A replay legitimately leaves events waiting for a predecessor while it runs, so a short value would call
+a repair in progress a stall. This is the same distinction the pipeline's own stall detector draws, and
+it should be set below the pipeline's <code>StallWarningAge</code> so a request gives up before an operator is
+paged.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_Validate_" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.Validate*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_Validate_System_Boolean_" data-uid="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.Validate(System.Boolean)">
+  Validate(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates the configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Validate(bool requireConnection = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>requireConnection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether a connection string and database name must be present, which they need not be when the
+application registers its own database instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when a value cannot produce a working waiter.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

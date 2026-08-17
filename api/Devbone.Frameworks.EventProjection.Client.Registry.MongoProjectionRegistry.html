@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MongoProjectionRegistry | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MongoProjectionRegistry | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Reads the projection registry the workers publish, with a short cache.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry">
+
+
+
+  <h1 id="Devbone_Frameworks_EventProjection_Client_Registry_MongoProjectionRegistry" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry" class="text-break">
+Class MongoProjectionRegistry  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.html">EventProjection</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Client.html">Client</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.html">Registry</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.Client.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Reads the projection registry the workers publish, with a short cache.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class MongoProjectionRegistry : IProjectionRegistry</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">MongoProjectionRegistry</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.IProjectionRegistry.html">IProjectionRegistry</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Devbone_Frameworks_EventProjection_Client_Registry_MongoProjectionRegistry_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Cached because the registry changes only when a worker starts, while it is read on the acceptance path of
+every request that names a projection. The cache is deliberately short-lived rather than permanent: a newly
+deployed handler should become resolvable without restarting the API host.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Registry_MongoProjectionRegistry__ctor_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_MongoProjectionRegistry__ctor_MongoDB_Driver_IMongoDatabase_Microsoft_Extensions_Options_IOptions_Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions__" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.#ctor(MongoDB.Driver.IMongoDatabase,Microsoft.Extensions.Options.IOptions{Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions})">
+  MongoProjectionRegistry(IMongoDatabase, IOptions&lt;ReadModelWaiterOptions&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the registry reader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MongoProjectionRegistry(IMongoDatabase database, IOptions&lt;ReadModelWaiterOptions&gt; options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>database</code> <span class="xref">IMongoDatabase</span></dt>
+    <dd><p>Database the projection workers publish into.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1">IOptions</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.html">ReadModelWaiterOptions</a>&gt;</dt>
+    <dd><p>Validated configuration.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when an argument is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Registry_MongoProjectionRegistry_GetProjectionsAsync_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.GetProjectionsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_MongoProjectionRegistry_GetProjectionsAsync_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.GetProjectionsAsync(System.Threading.CancellationToken)">
+  GetProjectionsAsync(CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets every published projection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;ProjectionDescriptor&gt;&gt; GetProjectionsAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.html">ProjectionDescriptor</a>&gt;&gt;</dt>
+    <dd><p>The published projections, possibly empty when no worker has started yet.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Registry_MongoProjectionRegistry_ResolveAsync_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.ResolveAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_MongoProjectionRegistry_ResolveAsync_System_Collections_Generic_IReadOnlyCollection_System_String__System_Collections_Generic_IReadOnlyCollection_System_String__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.ResolveAsync(System.Collections.Generic.IReadOnlyCollection{System.String},System.Collections.Generic.IReadOnlyCollection{System.String},System.Threading.CancellationToken)">
+  ResolveAsync(IReadOnlyCollection&lt;string&gt;?, IReadOnlyCollection&lt;string&gt;, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Turns a caller's request into the concrete set of projections to wait for.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ProjectionSelection&gt; ResolveAsync(IReadOnlyCollection&lt;string&gt;? requestedNames, IReadOnlyCollection&lt;string&gt; aggregateNames, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>requestedNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Explicit projection names, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for every published projection that observes one of
+<code class="paramref">aggregateNames</code>.</p>
+</dd>
+    <dt><code>aggregateNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The aggregate types the command wrote.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionSelection.html">ProjectionSelection</a>&gt;</dt>
+    <dd><p>The resolved selection, including anything that could not be resolved.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Client_Registry_MongoProjectionRegistry_ResolveAsync_System_Collections_Generic_IReadOnlyCollection_System_String__System_Collections_Generic_IReadOnlyCollection_System_String__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The result is a snapshot. Freezing and storing it is the caller's job: a projection registered after
+acceptance must not retroactively extend a request that is already in flight.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when <code class="paramref">aggregateNames</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Registry_MongoProjectionRegistry_ResolveMetadataAsync_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.ResolveMetadataAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_MongoProjectionRegistry_ResolveMetadataAsync_System_Collections_Generic_IReadOnlyCollection_System_String__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.ResolveMetadataAsync(System.Collections.Generic.IReadOnlyCollection{System.String},System.Threading.CancellationToken)">
+  ResolveMetadataAsync(IReadOnlyCollection&lt;string&gt;, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolves explicit public projection names to a versioned metadata snapshot before a command executes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ProjectionMetadataSelection&gt; ResolveMetadataAsync(IReadOnlyCollection&lt;string&gt; requestedNames, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>requestedNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The explicit stable public names supplied by the caller.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.html">ProjectionMetadataSelection</a>&gt;</dt>
+    <dd><p>The frozen metadata and any unknown names.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Client_Registry_MongoProjectionRegistry_ResolveMetadataAsync_System_Collections_Generic_IReadOnlyCollection_System_String__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This operation does not infer projection names from aggregates. A client names the read model it intends
+to query; the stored aggregate applicability is used only after commit to form exact barriers for the
+aggregates the command actually wrote.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when <code class="paramref">requestedNames</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when no name is supplied or a name is empty.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

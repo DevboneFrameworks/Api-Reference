@@ -189,6 +189,48 @@ Class SystemTextJsonAggregateEventSerializer
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_SystemTextJsonAggregateEventSerializer_SUPPORTED_SNAPSHOT_FORMAT_VERSION" data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.SystemTextJsonAggregateEventSerializer.SUPPORTED_SNAPSHOT_FORMAT_VERSION">
+  SUPPORTED_SNAPSHOT_FORMAT_VERSION
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The one snapshot state format this platform writes and reads.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int SUPPORTED_SNAPSHOT_FORMAT_VERSION = 1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_SystemTextJsonAggregateEventSerializer_SUPPORTED_SNAPSHOT_FORMAT_VERSION_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>It is a platform-wide constant rather than a per-aggregate choice, because reading a second format
+would need a second serializer and none can be supplied. It is still persisted with every snapshot and
+carried across the gateway, so that changing the format later is a single change here: rows written by
+the previous version stop being readable, and the read path discards and rebuilds them from events
+instead of failing. Bump it only together with a serializer that produces the new shape.</p>
+</div>
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 

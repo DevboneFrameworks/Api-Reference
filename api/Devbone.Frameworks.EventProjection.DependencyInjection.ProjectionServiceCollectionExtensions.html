@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ProjectionServiceCollectionExtensions | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Registers the projection pipeline: the always-on raw and merged layers, the transport adapters, and the derived layer that carries application-owned query models.">
+      <meta name="description" content="Registers the projection pipeline: the always-on raw and merged layers, the adapters of the selected transport, and the derived layer that carries application-owned query models.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,8 +97,8 @@ Class ProjectionServiceCollectionExtensions
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Registers the projection pipeline: the always-on raw and merged layers, the transport adapters, and the
-derived layer that carries application-owned query models.</p>
+  <div class="markdown summary"><p>Registers the projection pipeline: the always-on raw and merged layers, the adapters of the selected
+transport, and the derived layer that carries application-owned query models.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -196,10 +196,18 @@ derived layer that carries application-owned query models.</p>
 
 
   <h4 class="section" id="Devbone_Frameworks_EventProjection_DependencyInjection_ProjectionServiceCollectionExtensions_AddDevboneEventProjection_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Register application query models with
+  <div class="markdown level1 remarks"><p>
+This package carries no broker client. Register the transport for your broker in the same composition
+root — <code>AddDevboneKafkaEventProjection()</code> from <code>Devbone.Frameworks.EventProjection.Kafka</code> or
+<code>AddDevboneRabbitMqEventProjection()</code> from <code>Devbone.Frameworks.EventProjection.RabbitMq</code> — in
+either order, and select it with <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html#Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_Transport">Transport</a>.
+</p>
+<p>
+Register application query models with
 <a class="xref" href="Devbone.Frameworks.EventProjection.DependencyInjection.ProjectionServiceCollectionExtensions.html#Devbone_Frameworks_EventProjection_DependencyInjection_ProjectionServiceCollectionExtensions_AddProjectionHandler__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_">AddProjectionHandler&lt;THandler&gt;(IServiceCollection)</a> after calling this method. Every
 registration here is a singleton: the pipeline holds broker connections and a MongoDB client for the
-lifetime of the host, and no part of it is request-scoped.</p>
+lifetime of the host, and no part of it is request-scoped.
+</p>
 </div>
 
 
@@ -248,8 +256,11 @@ lifetime of the host, and no part of it is request-scoped.</p>
 
   <h4 class="section" id="Devbone_Frameworks_EventProjection_DependencyInjection_ProjectionServiceCollectionExtensions_AddProjectionHandler__1_Microsoft_Extensions_DependencyInjection_IServiceCollection__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Handlers observe merged state at least as new as the event they are handling, and inherit ordering,
-dedupe, bounded retry, and dead-lettering from the pipeline. Because delivery is at-least-once and the
-merged document may already reflect later events, handlers must be idempotent.</p>
+dedupe, and retry from the pipeline. Because delivery is at-least-once and the merged document may
+already reflect later events, handlers must be idempotent. Handler exceptions retry through the selected
+transport and terminally dead-letter at
+<a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html#Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_MaximumDerivedHandlerAttemptCount">MaximumDerivedHandlerAttemptCount</a> without advancing that
+handler's checkpoint.</p>
 </div>
 
 

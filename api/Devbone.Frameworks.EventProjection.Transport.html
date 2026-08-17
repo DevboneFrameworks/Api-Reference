@@ -95,6 +95,11 @@
 Classes
 </h3>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Transport.ConfiguredProjectionTransportResolver.html">ConfiguredProjectionTransportResolver</a></dt>
+      <dd><p>Selects the one registered transport provider that matches the configured transport name.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Transport.ProjectionConsumedMessage.html">ProjectionConsumedMessage</a></dt>
       <dd><p>Carries one broker message into a transport-independent projection processor.</p>
 </dd>
@@ -114,6 +119,12 @@ Classes
       <dd><p>Initializes projection transport topology before background consumers start.</p>
 </dd>
     </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Transport.ProjectionTransportNames.html">ProjectionTransportNames</a></dt>
+      <dd><p>Defines the transport names shipped by the platform and accepted by
+<a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html#Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_Transport">Transport</a>.</p>
+</dd>
+    </dl>
     <h3 id="interfaces">
 Interfaces
 </h3>
@@ -130,6 +141,11 @@ Interfaces
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Transport.IProjectionTransportInitializer.html">IProjectionTransportInitializer</a></dt>
       <dd><p>Initializes broker topology before projection consumers start.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Transport.IProjectionTransportProvider.html">IProjectionTransportProvider</a></dt>
+      <dd><p>Creates the publisher, consumer, and topology initializer of one concrete projection transport.</p>
 </dd>
     </dl>
     <h3 id="enums">

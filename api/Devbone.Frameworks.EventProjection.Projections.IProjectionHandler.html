@@ -129,6 +129,55 @@ ends in the aggregate's dead-letter destination.
 </div>
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Projections_IProjectionHandler_ProjectionName_" data-uid="Devbone.Frameworks.EventProjection.Projections.IProjectionHandler.ProjectionName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_IProjectionHandler_ProjectionName" data-uid="Devbone.Frameworks.EventProjection.Projections.IProjectionHandler.ProjectionName">
+  ProjectionName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the stable public name of the query model this handler maintains.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string ProjectionName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Projections_IProjectionHandler_ProjectionName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is what a caller asks progress by, and what it stores in a frozen consistency selection. It must
+therefore be independent of the handler class name, the collection it writes, its consumer group and
+its broker addresses — all four are deployment details that change, and a renamed one must not
+invalidate a name a client persisted.
+</p>
+<p>
+Must not end in <code>.raw</code> or <code>.merged</code>: those name the framework's own layers, which are
+answered from the projection document rather than from a handler checkpoint. A handler claiming one
+would be asked for progress and never consulted.
+</p>
+</div>
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 

@@ -157,8 +157,8 @@ a handler can rely on seeing merged state at least as new as the event it was to
 
   <a id="Devbone_Frameworks_EventProjection_Projections_DerivedProjectionProcessor__ctor_" data-uid="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_EventProjection_Projections_DerivedProjectionProcessor__ctor_Devbone_Frameworks_EventProjection_Persistence_IMergedProjectionStore_Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_" data-uid="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.#ctor(Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore,Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry)">
-  DerivedProjectionProcessor(IMergedProjectionStore, DerivedProjectionRegistry)
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_DerivedProjectionProcessor__ctor_Devbone_Frameworks_EventProjection_Persistence_IMergedProjectionStore_Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_Devbone_Frameworks_EventProjection_Persistence_IProjectionCheckpointStore_" data-uid="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.#ctor(Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore,Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry,Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore)">
+  DerivedProjectionProcessor(IMergedProjectionStore, DerivedProjectionRegistry, IProjectionCheckpointStore)
   
   </h3>
 
@@ -167,7 +167,7 @@ a handler can rely on seeing merged state at least as new as the event it was to
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DerivedProjectionProcessor(IMergedProjectionStore mergedStore, DerivedProjectionRegistry registry)</code></pre>
+    <pre><code class="lang-csharp hljs">public DerivedProjectionProcessor(IMergedProjectionStore mergedStore, DerivedProjectionRegistry registry, IProjectionCheckpointStore checkpoints)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -177,6 +177,9 @@ a handler can rely on seeing merged state at least as new as the event it was to
 </dd>
     <dt><code>registry</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.html">DerivedProjectionRegistry</a></dt>
     <dd><p>Registered application handlers.</p>
+</dd>
+    <dt><code>checkpoints</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore.html">IProjectionCheckpointStore</a></dt>
+    <dd><p>Store recording how far each handler has processed each aggregate.</p>
 </dd>
   </dl>
 

@@ -153,6 +153,110 @@ Class ProjectionCollectionNames
 </h2>
 
 
+  <a id="Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_Checkpoints_" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.Checkpoints*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_Checkpoints" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.Checkpoints">
+  Checkpoints()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the collection recording how far each application query model has processed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Checkpoints()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The collection name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_Checkpoints_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>One collection for every projection rather than one per aggregate, because a derived handler may
+observe several aggregate types and a caller asks for several projections at once. The document key
+carries the aggregate, so the read stays a keyed lookup.</p>
+</div>
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_DerivedAttempts_" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.DerivedAttempts*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_DerivedAttempts" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.DerivedAttempts">
+  DerivedAttempts()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the payload-free derived-handler attempt collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string DerivedAttempts()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The collection name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_Failures_" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.Failures*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_Failures" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.Failures">
+  Failures()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the payload-free durable dead-letter evidence collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Failures()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The collection name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_Merged_" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.Merged*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_Merged_System_String_" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.Merged(System.String)">
@@ -252,6 +356,39 @@ Class ProjectionCollectionNames
     <dd><p>Exact aggregate name.</p>
 </dd>
   </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The collection name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_Registry_" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.Registry*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_Registry" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.Registry">
+  Registry()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the collection listing the projections this deployment maintains.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Registry()</code></pre>
+  </div>
+
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
