@@ -205,6 +205,106 @@ topics are subscribed only when a worker runs its consumer loop.</p>
 
 
 
+  <a id="Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionTransportProvider__ctor_" data-uid="Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionTransportProvider__ctor_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_Devbone_Frameworks_EventProjection_Configuration_ProjectionAddressNames_Microsoft_Extensions_Logging_ILoggerFactory_Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionReadiness_" data-uid="Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.#ctor(Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions,Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames,Microsoft.Extensions.Logging.ILoggerFactory,Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness)">
+  KafkaProjectionTransportProvider(ProjectionPipelineOptions, ProjectionAddressNames, ILoggerFactory, KafkaProjectionReadiness)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the Kafka transport provider with shared worker assignment/readiness state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaProjectionTransportProvider(ProjectionPipelineOptions options, ProjectionAddressNames addresses, ILoggerFactory loggerFactory, KafkaProjectionReadiness readiness)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html">ProjectionPipelineOptions</a></dt>
+    <dd><p>Validated projection options.</p>
+</dd>
+    <dt><code>addresses</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames.html">ProjectionAddressNames</a></dt>
+    <dd><p>Logical projection address resolver.</p>
+</dd>
+    <dt><code>loggerFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggerfactory">ILoggerFactory</a></dt>
+    <dd><p>Logger factory for the transport adapters.</p>
+</dd>
+    <dt><code>readiness</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.html">KafkaProjectionReadiness</a></dt>
+    <dd><p>Shared Kafka worker readiness state.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when an argument is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionTransportProvider__ctor_" data-uid="Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionTransportProvider__ctor_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_Devbone_Frameworks_EventProjection_Configuration_ProjectionAddressNames_Microsoft_Extensions_Logging_ILoggerFactory_Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionReadiness_Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_" data-uid="Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.#ctor(Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions,Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames,Microsoft.Extensions.Logging.ILoggerFactory,Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness,Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry)">
+  KafkaProjectionTransportProvider(ProjectionPipelineOptions, ProjectionAddressNames, ILoggerFactory, KafkaProjectionReadiness, DerivedProjectionRegistry)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the Kafka transport provider with shared readiness and the derived subscriptions whose
+internal topics must pass startup preflight.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaProjectionTransportProvider(ProjectionPipelineOptions options, ProjectionAddressNames addresses, ILoggerFactory loggerFactory, KafkaProjectionReadiness readiness, DerivedProjectionRegistry derivedRegistry)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html">ProjectionPipelineOptions</a></dt>
+    <dd><p>Validated projection options.</p>
+</dd>
+    <dt><code>addresses</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames.html">ProjectionAddressNames</a></dt>
+    <dd><p>Logical projection address resolver.</p>
+</dd>
+    <dt><code>loggerFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggerfactory">ILoggerFactory</a></dt>
+    <dd><p>Logger factory for the transport adapters.</p>
+</dd>
+    <dt><code>readiness</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.html">KafkaProjectionReadiness</a></dt>
+    <dd><p>Shared Kafka worker readiness state.</p>
+</dd>
+    <dt><code>derivedRegistry</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.html">DerivedProjectionRegistry</a></dt>
+    <dd><p>Registered application-derived projections.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when an argument is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -318,8 +418,8 @@ initializer that completes without contacting the broker.</p>
 
 
   <h4 class="section" id="Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionTransportProvider_CreateInitializer_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Kafka topics are provisioned externally or by broker auto-creation, so the returned initializer
-completes without contacting the broker. It exists so the pipeline has one uniform startup step.</p>
+  <div class="markdown level1 remarks"><p>Kafka topics are provisioned externally. The returned initializer verifies their complete expected set
+before store initialization and consumers, without creating topics from guessed broker defaults.</p>
 </div>
 
 

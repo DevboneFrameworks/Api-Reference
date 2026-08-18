@@ -21423,6 +21423,42 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.DependencyInjection.KafkaProjectionServiceCollectionExtensions.AddDevboneKafkaEventProjection
   fullName: Devbone.Frameworks.EventProjection.Kafka.DependencyInjection.KafkaProjectionServiceCollectionExtensions.AddDevboneKafkaEventProjection
   nameWithType: KafkaProjectionServiceCollectionExtensions.AddDevboneKafkaEventProjection
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness
+  name: KafkaProjectionReadiness
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.html
+  commentId: T:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness
+  nameWithType: KafkaProjectionReadiness
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.#ctor
+  name: KafkaProjectionReadiness()
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionReadiness__ctor
+  commentId: M:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.#ctor
+  name.vb: New()
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.KafkaProjectionReadiness()
+  fullName.vb: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.New()
+  nameWithType: KafkaProjectionReadiness.KafkaProjectionReadiness()
+  nameWithType.vb: KafkaProjectionReadiness.New()
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.#ctor*
+  name: KafkaProjectionReadiness
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionReadiness__ctor_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.KafkaProjectionReadiness
+  fullName.vb: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.New
+  nameWithType: KafkaProjectionReadiness.KafkaProjectionReadiness
+  nameWithType.vb: KafkaProjectionReadiness.New
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.GetSnapshot
+  name: GetSnapshot()
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionReadiness_GetSnapshot
+  commentId: M:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.GetSnapshot
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.GetSnapshot()
+  nameWithType: KafkaProjectionReadiness.GetSnapshot()
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.GetSnapshot*
+  name: GetSnapshot
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionReadiness_GetSnapshot_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.GetSnapshot
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.GetSnapshot
+  nameWithType: KafkaProjectionReadiness.GetSnapshot
 - uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider
   name: KafkaProjectionTransportProvider
   href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.html
@@ -21438,6 +21474,24 @@ references:
   fullName.vb: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.New(Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions, Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames, Microsoft.Extensions.Logging.ILoggerFactory)
   nameWithType: KafkaProjectionTransportProvider.KafkaProjectionTransportProvider(ProjectionPipelineOptions, ProjectionAddressNames, ILoggerFactory)
   nameWithType.vb: KafkaProjectionTransportProvider.New(ProjectionPipelineOptions, ProjectionAddressNames, ILoggerFactory)
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.#ctor(Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions,Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames,Microsoft.Extensions.Logging.ILoggerFactory,Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness)
+  name: KafkaProjectionTransportProvider(ProjectionPipelineOptions, ProjectionAddressNames, ILoggerFactory, KafkaProjectionReadiness)
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionTransportProvider__ctor_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_Devbone_Frameworks_EventProjection_Configuration_ProjectionAddressNames_Microsoft_Extensions_Logging_ILoggerFactory_Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionReadiness_
+  commentId: M:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.#ctor(Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions,Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames,Microsoft.Extensions.Logging.ILoggerFactory,Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness)
+  name.vb: New(ProjectionPipelineOptions, ProjectionAddressNames, ILoggerFactory, KafkaProjectionReadiness)
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.KafkaProjectionTransportProvider(Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions, Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames, Microsoft.Extensions.Logging.ILoggerFactory, Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness)
+  fullName.vb: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.New(Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions, Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames, Microsoft.Extensions.Logging.ILoggerFactory, Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness)
+  nameWithType: KafkaProjectionTransportProvider.KafkaProjectionTransportProvider(ProjectionPipelineOptions, ProjectionAddressNames, ILoggerFactory, KafkaProjectionReadiness)
+  nameWithType.vb: KafkaProjectionTransportProvider.New(ProjectionPipelineOptions, ProjectionAddressNames, ILoggerFactory, KafkaProjectionReadiness)
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.#ctor(Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions,Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames,Microsoft.Extensions.Logging.ILoggerFactory,Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness,Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry)
+  name: KafkaProjectionTransportProvider(ProjectionPipelineOptions, ProjectionAddressNames, ILoggerFactory, KafkaProjectionReadiness, DerivedProjectionRegistry)
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionTransportProvider__ctor_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_Devbone_Frameworks_EventProjection_Configuration_ProjectionAddressNames_Microsoft_Extensions_Logging_ILoggerFactory_Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionReadiness_Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_
+  commentId: M:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.#ctor(Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions,Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames,Microsoft.Extensions.Logging.ILoggerFactory,Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness,Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry)
+  name.vb: New(ProjectionPipelineOptions, ProjectionAddressNames, ILoggerFactory, KafkaProjectionReadiness, DerivedProjectionRegistry)
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.KafkaProjectionTransportProvider(Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions, Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames, Microsoft.Extensions.Logging.ILoggerFactory, Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness, Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry)
+  fullName.vb: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.New(Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions, Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames, Microsoft.Extensions.Logging.ILoggerFactory, Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness, Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry)
+  nameWithType: KafkaProjectionTransportProvider.KafkaProjectionTransportProvider(ProjectionPipelineOptions, ProjectionAddressNames, ILoggerFactory, KafkaProjectionReadiness, DerivedProjectionRegistry)
+  nameWithType.vb: KafkaProjectionTransportProvider.New(ProjectionPipelineOptions, ProjectionAddressNames, ILoggerFactory, KafkaProjectionReadiness, DerivedProjectionRegistry)
 - uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.#ctor*
   name: KafkaProjectionTransportProvider
   href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionTransportProvider__ctor_
@@ -21495,6 +21549,273 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.TransportName
   fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.TransportName
   nameWithType: KafkaProjectionTransportProvider.TransportName
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness
+  name: KafkaProjectionWorkerReadiness
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html
+  commentId: T:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness
+  nameWithType: KafkaProjectionWorkerReadiness
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.#ctor(System.String,System.String,System.String,System.Collections.Generic.IReadOnlyList{System.String},Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus,System.Int32,System.Collections.Generic.IReadOnlyList{System.String},System.DateTimeOffset)
+  name: KafkaProjectionWorkerReadiness(string, string, string, IReadOnlyList<string>, KafkaProjectionWorkerStatus, int, IReadOnlyList<string>, DateTimeOffset)
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness__ctor_System_String_System_String_System_String_System_Collections_Generic_IReadOnlyList_System_String__Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerStatus_System_Int32_System_Collections_Generic_IReadOnlyList_System_String__System_DateTimeOffset_
+  commentId: M:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.#ctor(System.String,System.String,System.String,System.Collections.Generic.IReadOnlyList{System.String},Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus,System.Int32,System.Collections.Generic.IReadOnlyList{System.String},System.DateTimeOffset)
+  name.vb: New(String, String, String, IReadOnlyList(Of String), KafkaProjectionWorkerStatus, Integer, IReadOnlyList(Of String), DateTimeOffset)
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.KafkaProjectionWorkerReadiness(string, string, string, System.Collections.Generic.IReadOnlyList<string>, Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus, int, System.Collections.Generic.IReadOnlyList<string>, System.DateTimeOffset)
+  fullName.vb: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.New(String, String, String, System.Collections.Generic.IReadOnlyList(Of String), Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus, Integer, System.Collections.Generic.IReadOnlyList(Of String), System.DateTimeOffset)
+  nameWithType: KafkaProjectionWorkerReadiness.KafkaProjectionWorkerReadiness(string, string, string, IReadOnlyList<string>, KafkaProjectionWorkerStatus, int, IReadOnlyList<string>, DateTimeOffset)
+  nameWithType.vb: KafkaProjectionWorkerReadiness.New(String, String, String, IReadOnlyList(Of String), KafkaProjectionWorkerStatus, Integer, IReadOnlyList(Of String), DateTimeOffset)
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.#ctor*
+  name: KafkaProjectionWorkerReadiness
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness__ctor_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.KafkaProjectionWorkerReadiness
+  fullName.vb: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.New
+  nameWithType: KafkaProjectionWorkerReadiness.KafkaProjectionWorkerReadiness
+  nameWithType.vb: KafkaProjectionWorkerReadiness.New
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.AssignedPartitionCount
+  name: AssignedPartitionCount
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_AssignedPartitionCount
+  commentId: P:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.AssignedPartitionCount
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.AssignedPartitionCount
+  nameWithType: KafkaProjectionWorkerReadiness.AssignedPartitionCount
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.AssignedPartitionCount*
+  name: AssignedPartitionCount
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_AssignedPartitionCount_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.AssignedPartitionCount
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.AssignedPartitionCount
+  nameWithType: KafkaProjectionWorkerReadiness.AssignedPartitionCount
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.AssignedSourceAddresses
+  name: AssignedSourceAddresses
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_AssignedSourceAddresses
+  commentId: P:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.AssignedSourceAddresses
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.AssignedSourceAddresses
+  nameWithType: KafkaProjectionWorkerReadiness.AssignedSourceAddresses
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.AssignedSourceAddresses*
+  name: AssignedSourceAddresses
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_AssignedSourceAddresses_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.AssignedSourceAddresses
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.AssignedSourceAddresses
+  nameWithType: KafkaProjectionWorkerReadiness.AssignedSourceAddresses
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.BootstrapServers
+  name: BootstrapServers
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_BootstrapServers
+  commentId: P:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.BootstrapServers
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.BootstrapServers
+  nameWithType: KafkaProjectionWorkerReadiness.BootstrapServers
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.BootstrapServers*
+  name: BootstrapServers
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_BootstrapServers_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.BootstrapServers
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.BootstrapServers
+  nameWithType: KafkaProjectionWorkerReadiness.BootstrapServers
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.ConsumerGroupId
+  name: ConsumerGroupId
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_ConsumerGroupId
+  commentId: P:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.ConsumerGroupId
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.ConsumerGroupId
+  nameWithType: KafkaProjectionWorkerReadiness.ConsumerGroupId
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.ConsumerGroupId*
+  name: ConsumerGroupId
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_ConsumerGroupId_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.ConsumerGroupId
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.ConsumerGroupId
+  nameWithType: KafkaProjectionWorkerReadiness.ConsumerGroupId
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Deconstruct(System.String@,System.String@,System.String@,System.Collections.Generic.IReadOnlyList{System.String}@,Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus@,System.Int32@,System.Collections.Generic.IReadOnlyList{System.String}@,System.DateTimeOffset@)
+  name: Deconstruct(out string, out string, out string, out IReadOnlyList<string>, out KafkaProjectionWorkerStatus, out int, out IReadOnlyList<string>, out DateTimeOffset)
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_Deconstruct_System_String__System_String__System_String__System_Collections_Generic_IReadOnlyList_System_String___Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerStatus__System_Int32__System_Collections_Generic_IReadOnlyList_System_String___System_DateTimeOffset__
+  commentId: M:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Deconstruct(System.String@,System.String@,System.String@,System.Collections.Generic.IReadOnlyList{System.String}@,Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus@,System.Int32@,System.Collections.Generic.IReadOnlyList{System.String}@,System.DateTimeOffset@)
+  name.vb: Deconstruct(String, String, String, IReadOnlyList(Of String), KafkaProjectionWorkerStatus, Integer, IReadOnlyList(Of String), DateTimeOffset)
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Deconstruct(out string, out string, out string, out System.Collections.Generic.IReadOnlyList<string>, out Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus, out int, out System.Collections.Generic.IReadOnlyList<string>, out System.DateTimeOffset)
+  fullName.vb: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Deconstruct(String, String, String, System.Collections.Generic.IReadOnlyList(Of String), Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus, Integer, System.Collections.Generic.IReadOnlyList(Of String), System.DateTimeOffset)
+  nameWithType: KafkaProjectionWorkerReadiness.Deconstruct(out string, out string, out string, out IReadOnlyList<string>, out KafkaProjectionWorkerStatus, out int, out IReadOnlyList<string>, out DateTimeOffset)
+  nameWithType.vb: KafkaProjectionWorkerReadiness.Deconstruct(String, String, String, IReadOnlyList(Of String), KafkaProjectionWorkerStatus, Integer, IReadOnlyList(Of String), DateTimeOffset)
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Deconstruct*
+  name: Deconstruct
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_Deconstruct_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Deconstruct
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Deconstruct
+  nameWithType: KafkaProjectionWorkerReadiness.Deconstruct
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Equals(Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness)
+  name: Equals(KafkaProjectionWorkerReadiness?)
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_Equals_Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_
+  commentId: M:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Equals(Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness)
+  name.vb: Equals(KafkaProjectionWorkerReadiness)
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Equals(Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Equals(Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness)
+  nameWithType: KafkaProjectionWorkerReadiness.Equals(KafkaProjectionWorkerReadiness?)
+  nameWithType.vb: KafkaProjectionWorkerReadiness.Equals(KafkaProjectionWorkerReadiness)
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_Equals_System_Object_
+  commentId: M:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Equals(object?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Equals(Object)
+  nameWithType: KafkaProjectionWorkerReadiness.Equals(object?)
+  nameWithType.vb: KafkaProjectionWorkerReadiness.Equals(Object)
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Equals*
+  name: Equals
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_Equals_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Equals
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Equals
+  nameWithType: KafkaProjectionWorkerReadiness.Equals
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.GetHashCode
+  name: GetHashCode()
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_GetHashCode
+  commentId: M:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.GetHashCode
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.GetHashCode()
+  nameWithType: KafkaProjectionWorkerReadiness.GetHashCode()
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.GetHashCode*
+  name: GetHashCode
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_GetHashCode_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.GetHashCode
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.GetHashCode
+  nameWithType: KafkaProjectionWorkerReadiness.GetHashCode
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.IsReady
+  name: IsReady
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_IsReady
+  commentId: P:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.IsReady
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.IsReady
+  nameWithType: KafkaProjectionWorkerReadiness.IsReady
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.IsReady*
+  name: IsReady
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_IsReady_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.IsReady
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.IsReady
+  nameWithType: KafkaProjectionWorkerReadiness.IsReady
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.LastTransitionAtUtc
+  name: LastTransitionAtUtc
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_LastTransitionAtUtc
+  commentId: P:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.LastTransitionAtUtc
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.LastTransitionAtUtc
+  nameWithType: KafkaProjectionWorkerReadiness.LastTransitionAtUtc
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.LastTransitionAtUtc*
+  name: LastTransitionAtUtc
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_LastTransitionAtUtc_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.LastTransitionAtUtc
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.LastTransitionAtUtc
+  nameWithType: KafkaProjectionWorkerReadiness.LastTransitionAtUtc
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.SourceAddresses
+  name: SourceAddresses
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_SourceAddresses
+  commentId: P:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.SourceAddresses
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.SourceAddresses
+  nameWithType: KafkaProjectionWorkerReadiness.SourceAddresses
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.SourceAddresses*
+  name: SourceAddresses
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_SourceAddresses_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.SourceAddresses
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.SourceAddresses
+  nameWithType: KafkaProjectionWorkerReadiness.SourceAddresses
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Status
+  name: Status
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_Status
+  commentId: P:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Status
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Status
+  nameWithType: KafkaProjectionWorkerReadiness.Status
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Status*
+  name: Status
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_Status_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Status
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.Status
+  nameWithType: KafkaProjectionWorkerReadiness.Status
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.ToString
+  name: ToString()
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_ToString
+  commentId: M:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.ToString
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.ToString()
+  nameWithType: KafkaProjectionWorkerReadiness.ToString()
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.ToString*
+  name: ToString
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_ToString_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.ToString
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.ToString
+  nameWithType: KafkaProjectionWorkerReadiness.ToString
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.WorkerName
+  name: WorkerName
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_WorkerName
+  commentId: P:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.WorkerName
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.WorkerName
+  nameWithType: KafkaProjectionWorkerReadiness.WorkerName
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.WorkerName*
+  name: WorkerName
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_WorkerName_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.WorkerName
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.WorkerName
+  nameWithType: KafkaProjectionWorkerReadiness.WorkerName
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.op_Equality(Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness,Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness)
+  name: operator ==(KafkaProjectionWorkerReadiness?, KafkaProjectionWorkerReadiness?)
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_op_Equality_Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_
+  commentId: M:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.op_Equality(Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness,Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness)
+  name.vb: =(KafkaProjectionWorkerReadiness, KafkaProjectionWorkerReadiness)
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.operator ==(Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness?, Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.=(Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness, Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness)
+  nameWithType: KafkaProjectionWorkerReadiness.operator ==(KafkaProjectionWorkerReadiness?, KafkaProjectionWorkerReadiness?)
+  nameWithType.vb: KafkaProjectionWorkerReadiness.=(KafkaProjectionWorkerReadiness, KafkaProjectionWorkerReadiness)
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.op_Equality*
+  name: operator ==
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_op_Equality_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.op_Equality
+  name.vb: =
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.operator ==
+  fullName.vb: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.=
+  nameWithType: KafkaProjectionWorkerReadiness.operator ==
+  nameWithType.vb: KafkaProjectionWorkerReadiness.=
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.op_Inequality(Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness,Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness)
+  name: operator !=(KafkaProjectionWorkerReadiness?, KafkaProjectionWorkerReadiness?)
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_op_Inequality_Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_
+  commentId: M:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.op_Inequality(Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness,Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness)
+  name.vb: <>(KafkaProjectionWorkerReadiness, KafkaProjectionWorkerReadiness)
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.operator !=(Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness?, Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.<>(Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness, Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness)
+  nameWithType: KafkaProjectionWorkerReadiness.operator !=(KafkaProjectionWorkerReadiness?, KafkaProjectionWorkerReadiness?)
+  nameWithType.vb: KafkaProjectionWorkerReadiness.<>(KafkaProjectionWorkerReadiness, KafkaProjectionWorkerReadiness)
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.op_Inequality*
+  name: operator !=
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerReadiness_op_Inequality_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.op_Inequality
+  name.vb: <>
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.operator !=
+  fullName.vb: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.<>
+  nameWithType: KafkaProjectionWorkerReadiness.operator !=
+  nameWithType.vb: KafkaProjectionWorkerReadiness.<>
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus
+  name: KafkaProjectionWorkerStatus
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.html
+  commentId: T:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus
+  nameWithType: KafkaProjectionWorkerStatus
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.Assigned
+  name: Assigned
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerStatus_Assigned
+  commentId: F:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.Assigned
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.Assigned
+  nameWithType: KafkaProjectionWorkerStatus.Assigned
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.IntentRegistered
+  name: IntentRegistered
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerStatus_IntentRegistered
+  commentId: F:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.IntentRegistered
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.IntentRegistered
+  nameWithType: KafkaProjectionWorkerStatus.IntentRegistered
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.Lost
+  name: Lost
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerStatus_Lost
+  commentId: F:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.Lost
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.Lost
+  nameWithType: KafkaProjectionWorkerStatus.Lost
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.Revoked
+  name: Revoked
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerStatus_Revoked
+  commentId: F:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.Revoked
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.Revoked
+  nameWithType: KafkaProjectionWorkerStatus.Revoked
+- uid: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.Stopped
+  name: Stopped
+  href: api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.html#Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerStatus_Stopped
+  commentId: F:Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.Stopped
+  fullName: Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.Stopped
+  nameWithType: KafkaProjectionWorkerStatus.Stopped
 - uid: Devbone.Frameworks.EventProjection.MongoDb.Configuration
   name: Devbone.Frameworks.EventProjection.MongoDb.Configuration
   href: api/Devbone.Frameworks.EventProjection.MongoDb.Configuration.html

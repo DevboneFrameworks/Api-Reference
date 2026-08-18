@@ -208,6 +208,11 @@ Register application query models with
 registration here is a singleton: the pipeline holds broker connections and a MongoDB client for the
 lifetime of the host, and no part of it is request-scoped.
 </p>
+<p>
+Static configuration is validated through <code>ValidateOnStart</code>. Store initialization then connects to
+MongoDB and rejects a standalone server before consumer workers start, because raw persistence requires
+transactions on an initialized replica set or sharded cluster.
+</p>
 </div>
 
 

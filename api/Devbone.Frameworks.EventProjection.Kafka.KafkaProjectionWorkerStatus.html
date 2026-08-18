@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Namespace Devbone.Frameworks.EventProjection.Kafka | Devbone Event-Driven Platform </title>
+      <title>Enum KafkaProjectionWorkerStatus | Devbone Event-Driven Platform </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Namespace Devbone.Frameworks.EventProjection.Kafka | Devbone Event-Driven Platform ">
+      <meta name="title" content="Enum KafkaProjectionWorkerStatus | Devbone Event-Driven Platform ">
       
-      
+      <meta name="description" content="Describes the Kafka group-membership state of one projection worker.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,39 +84,61 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Devbone.Frameworks.EventProjection.Kafka">
+        <article data-uid="Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus">
 
-  <h1 id="Devbone_Frameworks_EventProjection_Kafka" data-uid="Devbone.Frameworks.EventProjection.Kafka" class="text-break">Namespace Devbone.Frameworks.EventProjection.Kafka</h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
 
-    <h3 id="classes">
-Classes
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.html">KafkaProjectionReadiness</a></dt>
-      <dd><p>Exposes bounded, payload-free Kafka subscription and assignment state for projection-host readiness checks.</p>
+
+
+  <h1 id="Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerStatus" data-uid="Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus" class="text-break">
+Enum KafkaProjectionWorkerStatus  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.html">EventProjection</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Kafka.html">Kafka</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.Kafka.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Describes the Kafka group-membership state of one projection worker.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum KafkaProjectionWorkerStatus</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerStatus_Assigned"><code>Assigned = 1</code></dt>
+  
+  <dd><p>The consumer group has completed an assignment for this worker.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.html">KafkaProjectionTransportProvider</a></dt>
-      <dd><p>Creates the Kafka publisher, consumer, and topology initializer for the projection pipeline.</p>
+    <dt id="Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerStatus_IntentRegistered"><code>IntentRegistered = 0</code></dt>
+  
+  <dd><p>The worker has declared its group and intended sources but has not received an assignment.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html">KafkaProjectionWorkerReadiness</a></dt>
-      <dd><p>Reports one Kafka projection worker's configured subscription intent and latest actual group assignment.</p>
+    <dt id="Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerStatus_Lost"><code>Lost = 3</code></dt>
+  
+  <dd><p>The consumer lost its assignment without a clean revoke.</p>
 </dd>
-    </dl>
-    <h3 id="enums">
-Enums
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.html">KafkaProjectionWorkerStatus</a></dt>
-      <dd><p>Describes the Kafka group-membership state of one projection worker.</p>
+    <dt id="Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerStatus_Revoked"><code>Revoked = 2</code></dt>
+  
+  <dd><p>The previous assignment was revoked during a group rebalance.</p>
 </dd>
-    </dl>
+    <dt id="Devbone_Frameworks_EventProjection_Kafka_KafkaProjectionWorkerStatus_Stopped"><code>Stopped = 4</code></dt>
+  
+  <dd><p>The worker's consumer loop stopped.</p>
+</dd>
+  </dl>
+
 
 
 </article>

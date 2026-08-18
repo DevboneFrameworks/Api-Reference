@@ -4674,6 +4674,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionReadiness.yml\" sourcestartlinenumber=\"1\">Exposes bounded, payload-free Kafka subscription and assignment state for projection-host readiness checks.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.yml",
       "output": {
         ".html": {
@@ -4685,6 +4699,34 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionTransportProvider.yml\" sourcestartlinenumber=\"1\">Creates the Kafka publisher, consumer, and topology initializer for the projection pipeline.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerReadiness.yml\" sourcestartlinenumber=\"1\">Reports one Kafka projection worker's configured subscription intent and latest actual group assignment.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Kafka.KafkaProjectionWorkerStatus.yml\" sourcestartlinenumber=\"1\">Describes the Kafka group-membership state of one projection worker.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5048,7 +5090,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer.yml\" sourcestartlinenumber=\"1\">Creates required aggregate-specific MongoDB indexes before consumers start, and publishes the projections\nthis deployment maintains.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer.yml\" sourcestartlinenumber=\"1\">Verifies the MongoDB transaction topology, creates required aggregate-specific indexes before consumers\nstart, and publishes the projections this deployment maintains.</p>\n"
     },
     {
       "type": "ManagedReference",
