@@ -118,10 +118,8 @@ command runs.</p>
 
   <h2 id="Devbone_Frameworks_EventProjection_Client_Registry_IProjectionRegistry_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>
-The registry is a shared store written by the projection worker at startup, not an in-process catalogue.
-Handlers are registered in the worker while names are asked for in the API host, so a catalogue populated by
-registration would be empty exactly where it is read and would report every correctly registered projection
-as unknown.
+Definition catalogues and leased worker capabilities are shared stores written by projection workers, not an
+in-process catalogue. Handlers are registered in the worker while names are asked for in the API host.
 </p>
 <p>
 Resolve at request acceptance, not after the command commits. An unknown name discovered afterwards leaves a
@@ -159,7 +157,7 @@ durable write with a wait that can never succeed, and the caller cannot tell tha
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.html">ProjectionDescriptor</a>&gt;&gt;</dt>
-    <dd><p>The published projections, possibly empty when no worker has started yet.</p>
+    <dd><p>Known projections with current executor availability, possibly empty before definitions publish.</p>
 </dd>
   </dl>
 
@@ -257,7 +255,7 @@ acceptance must not retroactively extend a request that is already in flight.</p
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.html">ProjectionMetadataSelection</a>&gt;</dt>
-    <dd><p>The frozen metadata and any unknown names.</p>
+    <dd><p>The frozen metadata plus unknown and unavailable names.</p>
 </dd>
   </dl>
 

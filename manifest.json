@@ -4152,7 +4152,21 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.yml\" sourcestartlinenumber=\"1\">Reads the projection registry the workers publish, with a short cache.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.yml\" sourcestartlinenumber=\"1\">Reads reconstructible definition catalogues and non-expired worker capabilities with a short cache.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Registry.ProjectionAvailability.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Registry.ProjectionAvailability.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Registry.ProjectionAvailability",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Registry.ProjectionAvailability.yml\" sourcestartlinenumber=\"1\">Reports whether at least one live worker can execute a known definition.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4279,6 +4293,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames.yml\" sourcestartlinenumber=\"1\">Resolves aggregate-specific input and internal broker addresses.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.yml\" sourcestartlinenumber=\"1\">Configures reconstructible definition metadata and leased worker-capability advertisements.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4870,6 +4898,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.DerivedProjectionDependency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.DerivedProjectionDependency.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.DerivedProjectionDependency",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.DerivedProjectionDependency.yml\" sourcestartlinenumber=\"1\">Represents one definition-fenced, tenant-isolated edge from an application output to a framework source.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.DerivedProjectionDependencyPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.DerivedProjectionDependencyPage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.DerivedProjectionDependencyPage",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.DerivedProjectionDependencyPage.yml\" sourcestartlinenumber=\"1\">Represents one bounded reverse-dependency lookup page.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.IDerivedProjectionDependencyStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.IDerivedProjectionDependencyStore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.IDerivedProjectionDependencyStore",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.IDerivedProjectionDependencyStore.yml\" sourcestartlinenumber=\"1\">Stores payload-free dependency provenance for application-owned derived projection outputs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore.yml",
       "output": {
         ".html": {
@@ -4898,6 +4968,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore.yml\" sourcestartlinenumber=\"1\">Publishes reconstructible projection definitions separately from leased worker capabilities.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.IProjectionDependencyLookup.yml",
       "output": {
         ".html": {
@@ -4909,6 +4993,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Persistence.IProjectionDependencyLookup",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.IProjectionDependencyLookup.yml\" sourcestartlinenumber=\"1\">Finds raw projections that directly depend on a referenced aggregate.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore.yml\" sourcestartlinenumber=\"1\">Stores durable, coalescing work for application-owned projection definitions.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4996,6 +5094,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionCapabilityAdvertisement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionCapabilityAdvertisement.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionCapabilityAdvertisement",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionCapabilityAdvertisement.yml\" sourcestartlinenumber=\"1\">One worker instance's complete, leased executable capability set.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.yml",
       "output": {
         ".html": {
@@ -5010,6 +5122,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionDefinitionPublication.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionDefinitionPublication.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionDefinitionPublication",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionDefinitionPublication.yml\" sourcestartlinenumber=\"1\">One deployment artifact's complete reconstructible definition catalogue.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencyOutput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencyOutput.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencyOutput",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencyOutput.yml\" sourcestartlinenumber=\"1\">Identifies one application-owned output independently of its dependency sources.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.yml\" sourcestartlinenumber=\"1\">Identifies one framework-owned aggregate document and the position observed while producing an output.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionEventConflictException.yml",
       "output": {
         ".html": {
@@ -5021,6 +5175,62 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionEventConflictException",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionEventConflictException.yml\" sourcestartlinenumber=\"1\">Reports that an <code>EventId</code> was reused with different metadata or payload. Retried until\n<xref href=\"Devbone.Frameworks.EventProjection.Persistence.ProjectionEventConflictException.MaximumAttempts\" data-throw-if-not-resolved=\"false\"></xref> is exceeded, since the conflict is deterministic and never self-resolves.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.yml\" sourcestartlinenumber=\"1\">Identifies one aggregate-shaped custom-projection execution unit and its newest cause.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationClaim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationClaim.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationClaim",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationClaim.yml\" sourcestartlinenumber=\"1\">One opaque, lease-bounded right to complete a projection invalidation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationRecord.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationRecord",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationRecord.yml\" sourcestartlinenumber=\"1\">One current durable invalidation record.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationStatus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationStatus",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationStatus.yml\" sourcestartlinenumber=\"1\">Represents the durable lifecycle state of one projection invalidation.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5062,7 +5272,21 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer.yml\" sourcestartlinenumber=\"1\">Verifies the MongoDB transaction topology, creates required aggregate-specific indexes before consumers\nstart, and publishes the projections this deployment maintains.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer.yml\" sourcestartlinenumber=\"1\">Verifies the MongoDB transaction topology, creates required aggregate-specific indexes before consumers\nstart, and publishes the complete reconstructible definition catalogue from this deployment artifact.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity.yml\" sourcestartlinenumber=\"1\">Resolved stable identities used by one projection worker process.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5108,6 +5332,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.yml\" sourcestartlinenumber=\"1\">Carries one merged update and tracks the tenant-scoped framework documents read while producing its output.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.yml",
       "output": {
         ".html": {
@@ -5133,6 +5371,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.yml\" sourcestartlinenumber=\"1\">Resolves which application handlers exist for which aggregate, and whether the derived layer is active at\nall. When no handler is registered the pipeline neither publishes merged notifications nor subscribes to\nthem, so the zero-code deployment produces exactly the same broker traffic as before this layer existed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.IDependencyTrackingProjectionHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.IDependencyTrackingProjectionHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.IDependencyTrackingProjectionHandler",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.IDependencyTrackingProjectionHandler.yml\" sourcestartlinenumber=\"1\">Builds an application-owned query model while tracking additional framework-owned aggregate documents read\nduring execution.</p>\n"
     },
     {
       "type": "ManagedReference",

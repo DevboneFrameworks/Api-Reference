@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Namespace Devbone.Frameworks.EventProjection.Configuration | Devbone Event-Driven Platform </title>
+      <title>Enum ProjectionInvalidationStatus | Devbone Event-Driven Platform </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Namespace Devbone.Frameworks.EventProjection.Configuration | Devbone Event-Driven Platform ">
+      <meta name="title" content="Enum ProjectionInvalidationStatus | Devbone Event-Driven Platform ">
       
-      
+      <meta name="description" content="Represents the durable lifecycle state of one projection invalidation.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,56 +84,61 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Devbone.Frameworks.EventProjection.Configuration">
+        <article data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationStatus">
 
-  <h1 id="Devbone_Frameworks_EventProjection_Configuration" data-uid="Devbone.Frameworks.EventProjection.Configuration" class="text-break">Namespace Devbone.Frameworks.EventProjection.Configuration</h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
 
-    <h3 id="classes">
-Classes
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.AggregateProjectionOptions.html">AggregateProjectionOptions</a></dt>
-      <dd><p>Configures one aggregate-specific projection and input broker address.</p>
+
+
+  <h1 id="Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidationStatus" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationStatus" class="text-break">
+Enum ProjectionInvalidationStatus  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.html">EventProjection</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.html">Persistence</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents the durable lifecycle state of one projection invalidation.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum ProjectionInvalidationStatus</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidationStatus_Checkpointed"><code>Checkpointed = 4</code></dt>
+  
+  <dd><p>The application write and its definition-aware checkpoint both completed.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.KafkaProjectionOptions.html">KafkaProjectionOptions</a></dt>
-      <dd><p>Configures Kafka consumers.</p>
+    <dt id="Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidationStatus_Claimed"><code>Claimed = 1</code></dt>
+  
+  <dd><p>One executor owns a time-bounded fenced claim.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.MongoProjectionOptions.html">MongoProjectionOptions</a></dt>
-      <dd><p>Configures the MongoDB projection store.</p>
+    <dt id="Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidationStatus_Completed"><code>Completed = 2</code></dt>
+  
+  <dd><p>The application write completed for the recorded source position.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames.html">ProjectionAddressNames</a></dt>
-      <dd><p>Resolves aggregate-specific input and internal broker addresses.</p>
+    <dt id="Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidationStatus_Dirty"><code>Dirty = 0</code></dt>
+  
+  <dd><p>The work awaits an executor.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.html">ProjectionControlPlaneOptions</a></dt>
-      <dd><p>Configures reconstructible definition metadata and leased worker-capability advertisements.</p>
+    <dt id="Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidationStatus_Terminal"><code>Terminal = 3</code></dt>
+  
+  <dd><p>The recorded source position reached the terminal retry policy.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html">ProjectionPipelineOptions</a></dt>
-      <dd><p>Configures the complete event-bus-to-MongoDB projection pipeline.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptionsValidator.html">ProjectionPipelineOptionsValidator</a></dt>
-      <dd><p>Validates projection configuration before workers connect to external systems.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.RabbitMqProjectionOptions.html">RabbitMqProjectionOptions</a></dt>
-      <dd><p>Configures RabbitMQ consumers and projection-owned topology.</p>
-</dd>
-    </dl>
+  </dl>
+
 
 
 </article>

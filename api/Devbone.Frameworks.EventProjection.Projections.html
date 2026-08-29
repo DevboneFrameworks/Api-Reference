@@ -100,6 +100,11 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.html">DependencyTrackingProjectionContext</a></dt>
+      <dd><p>Carries one merged update and tracks the tenant-scoped framework documents read while producing its output.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.html">DerivedProjectionProcessor</a></dt>
       <dd><p>Drives application projection handlers from merged-state notifications.</p>
 </dd>
@@ -170,6 +175,12 @@ them.</p>
     <h3 id="interfaces">
 Interfaces
 </h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.IDependencyTrackingProjectionHandler.html">IDependencyTrackingProjectionHandler</a></dt>
+      <dd><p>Builds an application-owned query model while tracking additional framework-owned aggregate documents read
+during execution.</p>
+</dd>
+    </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.IProjectionHandler.html">IProjectionHandler</a></dt>
       <dd><p>Builds one application-owned query model on top of the framework-standard raw and merged layers.</p>

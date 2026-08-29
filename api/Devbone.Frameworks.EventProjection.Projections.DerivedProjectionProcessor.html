@@ -157,17 +157,17 @@ a handler can rely on seeing merged state at least as new as the event it was to
 
   <a id="Devbone_Frameworks_EventProjection_Projections_DerivedProjectionProcessor__ctor_" data-uid="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_EventProjection_Projections_DerivedProjectionProcessor__ctor_Devbone_Frameworks_EventProjection_Persistence_IMergedProjectionStore_Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_Devbone_Frameworks_EventProjection_Persistence_IProjectionCheckpointStore_" data-uid="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.#ctor(Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore,Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry,Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore)">
-  DerivedProjectionProcessor(IMergedProjectionStore, DerivedProjectionRegistry, IProjectionCheckpointStore)
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_DerivedProjectionProcessor__ctor_Devbone_Frameworks_EventProjection_Persistence_IMergedProjectionStore_Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_Devbone_Frameworks_EventProjection_Persistence_IProjectionControlPlaneStore_Devbone_Frameworks_EventProjection_Persistence_IProjectionCheckpointStore_Devbone_Frameworks_EventProjection_Persistence_IProjectionInvalidationStore_Devbone_Frameworks_EventProjection_Persistence_IDerivedProjectionDependencyStore_Devbone_Frameworks_EventProjection_Persistence_ProjectionWorkerIdentity_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_" data-uid="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.#ctor(Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore,Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry,Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore,Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore,Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore,Devbone.Frameworks.EventProjection.Persistence.IDerivedProjectionDependencyStore,Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions)">
+  DerivedProjectionProcessor(IMergedProjectionStore, DerivedProjectionRegistry, IProjectionControlPlaneStore, IProjectionCheckpointStore, IProjectionInvalidationStore, IDerivedProjectionDependencyStore, ProjectionWorkerIdentity, ProjectionPipelineOptions)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes derived projection processing.</p>
+  <div class="markdown level1 summary"><p>Initializes derived projection processing with durable dependency provenance for tracked-read handlers.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DerivedProjectionProcessor(IMergedProjectionStore mergedStore, DerivedProjectionRegistry registry, IProjectionCheckpointStore checkpoints)</code></pre>
+    <pre><code class="lang-csharp hljs">public DerivedProjectionProcessor(IMergedProjectionStore mergedStore, DerivedProjectionRegistry registry, IProjectionControlPlaneStore controlPlane, IProjectionCheckpointStore checkpoints, IProjectionInvalidationStore invalidations, IDerivedProjectionDependencyStore dependencies, ProjectionWorkerIdentity workerIdentity, ProjectionPipelineOptions options)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -178,8 +178,74 @@ a handler can rely on seeing merged state at least as new as the event it was to
     <dt><code>registry</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.html">DerivedProjectionRegistry</a></dt>
     <dd><p>Registered application handlers.</p>
 </dd>
+    <dt><code>controlPlane</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore.html">IProjectionControlPlaneStore</a></dt>
+    <dd><p>Durable current-definition reader.</p>
+</dd>
     <dt><code>checkpoints</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore.html">IProjectionCheckpointStore</a></dt>
     <dd><p>Store recording how far each handler has processed each aggregate.</p>
+</dd>
+    <dt><code>invalidations</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore.html">IProjectionInvalidationStore</a></dt>
+    <dd><p>Durable custom-projection work ledger.</p>
+</dd>
+    <dt><code>dependencies</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IDerivedProjectionDependencyStore.html">IDerivedProjectionDependencyStore</a></dt>
+    <dd><p>Store atomically replacing successful outputs' tracked dependency sets.</p>
+</dd>
+    <dt><code>workerIdentity</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity.html">ProjectionWorkerIdentity</a></dt>
+    <dd><p>Identity used to own fenced work claims.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html">ProjectionPipelineOptions</a></dt>
+    <dd><p>Claim-lease and completed-evidence settings.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Projections_DerivedProjectionProcessor__ctor_" data-uid="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_DerivedProjectionProcessor__ctor_Devbone_Frameworks_EventProjection_Persistence_IMergedProjectionStore_Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_Devbone_Frameworks_EventProjection_Persistence_IProjectionControlPlaneStore_Devbone_Frameworks_EventProjection_Persistence_IProjectionCheckpointStore_Devbone_Frameworks_EventProjection_Persistence_IProjectionInvalidationStore_Devbone_Frameworks_EventProjection_Persistence_ProjectionWorkerIdentity_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_" data-uid="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.#ctor(Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore,Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry,Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore,Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore,Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore,Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions)">
+  DerivedProjectionProcessor(IMergedProjectionStore, DerivedProjectionRegistry, IProjectionControlPlaneStore, IProjectionCheckpointStore, IProjectionInvalidationStore, ProjectionWorkerIdentity, ProjectionPipelineOptions)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes derived projection processing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DerivedProjectionProcessor(IMergedProjectionStore mergedStore, DerivedProjectionRegistry registry, IProjectionControlPlaneStore controlPlane, IProjectionCheckpointStore checkpoints, IProjectionInvalidationStore invalidations, ProjectionWorkerIdentity workerIdentity, ProjectionPipelineOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mergedStore</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore.html">IMergedProjectionStore</a></dt>
+    <dd><p>Merged projection store.</p>
+</dd>
+    <dt><code>registry</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.html">DerivedProjectionRegistry</a></dt>
+    <dd><p>Registered application handlers.</p>
+</dd>
+    <dt><code>controlPlane</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore.html">IProjectionControlPlaneStore</a></dt>
+    <dd><p>Durable current-definition reader.</p>
+</dd>
+    <dt><code>checkpoints</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore.html">IProjectionCheckpointStore</a></dt>
+    <dd><p>Store recording how far each handler has processed each aggregate.</p>
+</dd>
+    <dt><code>invalidations</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore.html">IProjectionInvalidationStore</a></dt>
+    <dd><p>Durable custom-projection work ledger.</p>
+</dd>
+    <dt><code>workerIdentity</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity.html">ProjectionWorkerIdentity</a></dt>
+    <dd><p>Identity used to own fenced work claims.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html">ProjectionPipelineOptions</a></dt>
+    <dd><p>Claim-lease and completed-evidence settings.</p>
 </dd>
   </dl>
 

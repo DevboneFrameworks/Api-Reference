@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class MongoProjectionRegistry | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Reads the projection registry the workers publish, with a short cache.">
+      <meta name="description" content="Reads reconstructible definition catalogues and non-expired worker capabilities with a short cache.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class MongoProjectionRegistry
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.Client.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Reads the projection registry the workers publish, with a short cache.</p>
+  <div class="markdown summary"><p>Reads reconstructible definition catalogues and non-expired worker capabilities with a short cache.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -151,9 +151,8 @@ Class MongoProjectionRegistry
 
 
   <h2 id="Devbone_Frameworks_EventProjection_Client_Registry_MongoProjectionRegistry_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>Cached because the registry changes only when a worker starts, while it is read on the acceptance path of
-every request that names a projection. The cache is deliberately short-lived rather than permanent: a newly
-deployed handler should become resolvable without restarting the API host.</p>
+  <div class="markdown level0 remarks"><p>Definitions answer whether a public name is known; capability leases answer whether its current definition
+is executable now. The two facts are deliberately not collapsed into eternal per-name upserts.</p>
 </div>
 
 
@@ -232,7 +231,7 @@ deployed handler should become resolvable without restarting the API host.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.html">ProjectionDescriptor</a>&gt;&gt;</dt>
-    <dd><p>The published projections, possibly empty when no worker has started yet.</p>
+    <dd><p>Known projections with current executor availability, possibly empty before definitions publish.</p>
 </dd>
   </dl>
 
@@ -330,7 +329,7 @@ acceptance must not retroactively extend a request that is already in flight.</p
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.html">ProjectionMetadataSelection</a>&gt;</dt>
-    <dd><p>The frozen metadata and any unknown names.</p>
+    <dd><p>The frozen metadata plus unknown and unavailable names.</p>
 </dd>
   </dl>
 

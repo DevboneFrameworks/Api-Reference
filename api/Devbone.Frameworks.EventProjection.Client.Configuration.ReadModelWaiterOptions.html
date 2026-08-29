@@ -479,9 +479,10 @@ write it is waiting for, and the ceiling on how much load waiting adds.</p>
 
 
   <h4 class="section" id="Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions_RegistryCacheDuration_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The registry changes only when a projection worker starts, while it is read on the acceptance path of
-every request that names a projection. Short-lived rather than permanent, so a newly deployed handler
-becomes resolvable without restarting the API host.</p>
+  <div class="markdown level1 remarks"><p>Definitions change at deployment boundaries and availability changes when worker capabilities start or
+expire, while the registry is read on the acceptance path of every request that names a projection.
+Short-lived rather than permanent, so deployments and expired leases become visible without restarting
+the API host.</p>
 </div>
 
 

@@ -253,6 +253,43 @@ therefore several barriers, and "the write is visible" is the conjunction of the
 
 
 
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrier_DefinitionVersion_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrier.DefinitionVersion*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrier_DefinitionVersion" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrier.DefinitionVersion">
+  DefinitionVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the opaque definition version required for an application query model, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>
+for a framework-owned raw or merged layer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? DefinitionVersion { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrier_DefinitionVersion_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A frozen projection selection supplies this value. Keeping it on the barrier prevents progress written
+by an older definition under the same public name from satisfying a request accepted for a newer one.</p>
+</div>
+
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrier_EventSequence_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrier.EventSequence*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrier_EventSequence" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrier.EventSequence">
@@ -432,8 +469,8 @@ consistency selection stores names, and two ways of saying the same thing is how
 
   <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrier_On_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrier.On*"></a>
 
-  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrier_On_System_String_System_String_System_String_System_Int64_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrier.On(System.String,System.String,System.String,System.Int64)">
-  On(string, string, string, long)
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrier_On_System_String_System_String_System_String_System_String_System_Int64_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrier.On(System.String,System.String,System.String,System.String,System.Int64)">
+  On(string, string, string, string, long)
   
   </h3>
 
@@ -442,13 +479,16 @@ consistency selection stores names, and two ways of saying the same thing is how
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ReadModelBarrier On(string projectionName, string aggregateName, string aggregateId, long eventSequence)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ReadModelBarrier On(string projectionName, string definitionVersion, string aggregateName, string aggregateId, long eventSequence)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>projectionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Public projection name declared by its handler.</p>
+</dd>
+    <dt><code>definitionVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Frozen opaque version of the selected projection definition.</p>
 </dd>
     <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Exact aggregate contract name.</p>
@@ -627,7 +667,8 @@ projection after its own write needs.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>Thrown when the aggregate name, identifier or projection name is missing.</p>
+    <dd><p>Thrown when the aggregate name, identifier, or projection name is missing, or when an application query
+model has no definition version.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
     <dd><p>Thrown when the event sequence is not positive.</p>

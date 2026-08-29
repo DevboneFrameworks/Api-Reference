@@ -100,6 +100,16 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.DerivedProjectionDependency.html">DerivedProjectionDependency</a></dt>
+      <dd><p>Represents one definition-fenced, tenant-isolated edge from an application output to a framework source.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.DerivedProjectionDependencyPage.html">DerivedProjectionDependencyPage</a></dt>
+      <dd><p>Represents one bounded reverse-dependency lookup page.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionDependencyLookup.html">MongoProjectionDependencyLookup</a></dt>
       <dd><p>Uses aggregate-local BSON dependency arrays as a tenant-isolated reverse lookup.</p>
 </dd>
@@ -115,14 +125,49 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionCapabilityAdvertisement.html">ProjectionCapabilityAdvertisement</a></dt>
+      <dd><p>One worker instance's complete, leased executable capability set.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.html">ProjectionCollectionNames</a></dt>
       <dd><p>Resolves aggregate-specific MongoDB collection names.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionDefinitionPublication.html">ProjectionDefinitionPublication</a></dt>
+      <dd><p>One deployment artifact's complete reconstructible definition catalogue.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencyOutput.html">ProjectionDependencyOutput</a></dt>
+      <dd><p>Identifies one application-owned output independently of its dependency sources.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.html">ProjectionDependencySource</a></dt>
+      <dd><p>Identifies one framework-owned aggregate document and the position observed while producing an output.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionEventConflictException.html">ProjectionEventConflictException</a></dt>
       <dd><p>Reports that an <code>EventId</code> was reused with different metadata or payload. Retried until
 <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionEventConflictException.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionEventConflictException_MaximumAttempts">MaximumAttempts</a> is exceeded, since the conflict is deterministic and never self-resolves.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.html">ProjectionInvalidation</a></dt>
+      <dd><p>Identifies one aggregate-shaped custom-projection execution unit and its newest cause.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationClaim.html">ProjectionInvalidationClaim</a></dt>
+      <dd><p>One opaque, lease-bounded right to complete a projection invalidation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationRecord.html">ProjectionInvalidationRecord</a></dt>
+      <dd><p>One current durable invalidation record.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -133,7 +178,12 @@ Classes
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer.html">ProjectionStoreInitializer</a></dt>
       <dd><p>Verifies the MongoDB transaction topology, creates required aggregate-specific indexes before consumers
-start, and publishes the projections this deployment maintains.</p>
+start, and publishes the complete reconstructible definition catalogue from this deployment artifact.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity.html">ProjectionWorkerIdentity</a></dt>
+      <dd><p>Resolved stable identities used by one projection worker process.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -145,6 +195,11 @@ start, and publishes the projections this deployment maintains.</p>
 Interfaces
 </h3>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IDerivedProjectionDependencyStore.html">IDerivedProjectionDependencyStore</a></dt>
+      <dd><p>Stores payload-free dependency provenance for application-owned derived projection outputs.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore.html">IMergedProjectionStore</a></dt>
       <dd><p>Persists visible, reference-enriched aggregate projections.</p>
 </dd>
@@ -155,8 +210,18 @@ Interfaces
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore.html">IProjectionControlPlaneStore</a></dt>
+      <dd><p>Publishes reconstructible projection definitions separately from leased worker capabilities.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionDependencyLookup.html">IProjectionDependencyLookup</a></dt>
       <dd><p>Finds raw projections that directly depend on a referenced aggregate.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore.html">IProjectionInvalidationStore</a></dt>
+      <dd><p>Stores durable, coalescing work for application-owned projection definitions.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -177,6 +242,11 @@ Interfaces
     <h3 id="enums">
 Enums
 </h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationStatus.html">ProjectionInvalidationStatus</a></dt>
+      <dd><p>Represents the durable lifecycle state of one projection invalidation.</p>
+</dd>
+    </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionKind.html">ProjectionKind</a></dt>
       <dd><p>Distinguishes the framework's own layers from application-owned query models.</p>

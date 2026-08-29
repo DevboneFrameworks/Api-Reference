@@ -152,8 +152,8 @@ Class MergedProjectionProcessor
 
   <a id="Devbone_Frameworks_EventProjection_Projections_MergedProjectionProcessor__ctor_" data-uid="Devbone.Frameworks.EventProjection.Projections.MergedProjectionProcessor.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_EventProjection_Projections_MergedProjectionProcessor__ctor_Devbone_Frameworks_EventProjection_Persistence_IRawProjectionStore_Devbone_Frameworks_EventProjection_Persistence_IMergedProjectionStore_Devbone_Frameworks_EventProjection_Persistence_IProjectionDependencyLookup_Devbone_Frameworks_EventProjection_Projections_ProjectionEnricher_Devbone_Frameworks_EventProjection_Transport_IProjectionMessagePublisher_Devbone_Frameworks_EventProjection_Configuration_ProjectionAddressNames_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_" data-uid="Devbone.Frameworks.EventProjection.Projections.MergedProjectionProcessor.#ctor(Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStore,Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore,Devbone.Frameworks.EventProjection.Persistence.IProjectionDependencyLookup,Devbone.Frameworks.EventProjection.Projections.ProjectionEnricher,Devbone.Frameworks.EventProjection.Transport.IProjectionMessagePublisher,Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions,Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry)">
-  MergedProjectionProcessor(IRawProjectionStore, IMergedProjectionStore, IProjectionDependencyLookup, ProjectionEnricher, IProjectionMessagePublisher, ProjectionAddressNames, ProjectionPipelineOptions, DerivedProjectionRegistry)
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_MergedProjectionProcessor__ctor_Devbone_Frameworks_EventProjection_Persistence_IRawProjectionStore_Devbone_Frameworks_EventProjection_Persistence_IMergedProjectionStore_Devbone_Frameworks_EventProjection_Persistence_IProjectionDependencyLookup_Devbone_Frameworks_EventProjection_Projections_ProjectionEnricher_Devbone_Frameworks_EventProjection_Transport_IProjectionMessagePublisher_Devbone_Frameworks_EventProjection_Configuration_ProjectionAddressNames_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_Devbone_Frameworks_EventProjection_Persistence_IProjectionControlPlaneStore_Devbone_Frameworks_EventProjection_Persistence_IProjectionInvalidationStore_" data-uid="Devbone.Frameworks.EventProjection.Projections.MergedProjectionProcessor.#ctor(Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStore,Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore,Devbone.Frameworks.EventProjection.Persistence.IProjectionDependencyLookup,Devbone.Frameworks.EventProjection.Projections.ProjectionEnricher,Devbone.Frameworks.EventProjection.Transport.IProjectionMessagePublisher,Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions,Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry,Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore,Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore)">
+  MergedProjectionProcessor(IRawProjectionStore, IMergedProjectionStore, IProjectionDependencyLookup, ProjectionEnricher, IProjectionMessagePublisher, ProjectionAddressNames, ProjectionPipelineOptions, DerivedProjectionRegistry, IProjectionControlPlaneStore, IProjectionInvalidationStore)
   
   </h3>
 
@@ -162,7 +162,7 @@ Class MergedProjectionProcessor
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MergedProjectionProcessor(IRawProjectionStore rawStore, IMergedProjectionStore mergedStore, IProjectionDependencyLookup dependencyLookup, ProjectionEnricher enricher, IProjectionMessagePublisher publisher, ProjectionAddressNames addresses, ProjectionPipelineOptions options, DerivedProjectionRegistry derivedProjections)</code></pre>
+    <pre><code class="lang-csharp hljs">public MergedProjectionProcessor(IRawProjectionStore rawStore, IMergedProjectionStore mergedStore, IProjectionDependencyLookup dependencyLookup, ProjectionEnricher enricher, IProjectionMessagePublisher publisher, ProjectionAddressNames addresses, ProjectionPipelineOptions options, DerivedProjectionRegistry derivedProjections, IProjectionControlPlaneStore controlPlane, IProjectionInvalidationStore invalidations)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -190,6 +190,75 @@ Class MergedProjectionProcessor
 </dd>
     <dt><code>derivedProjections</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.html">DerivedProjectionRegistry</a></dt>
     <dd><p>Registered application projection handlers.</p>
+</dd>
+    <dt><code>controlPlane</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore.html">IProjectionControlPlaneStore</a></dt>
+    <dd><p>Durable current-definition reader.</p>
+</dd>
+    <dt><code>invalidations</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore.html">IProjectionInvalidationStore</a></dt>
+    <dd><p>Durable custom-projection work ledger.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Projections_MergedProjectionProcessor__ctor_" data-uid="Devbone.Frameworks.EventProjection.Projections.MergedProjectionProcessor.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_MergedProjectionProcessor__ctor_Devbone_Frameworks_EventProjection_Persistence_IRawProjectionStore_Devbone_Frameworks_EventProjection_Persistence_IMergedProjectionStore_Devbone_Frameworks_EventProjection_Persistence_IProjectionDependencyLookup_Devbone_Frameworks_EventProjection_Projections_ProjectionEnricher_Devbone_Frameworks_EventProjection_Transport_IProjectionMessagePublisher_Devbone_Frameworks_EventProjection_Configuration_ProjectionAddressNames_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_Devbone_Frameworks_EventProjection_Persistence_IProjectionControlPlaneStore_Devbone_Frameworks_EventProjection_Persistence_IProjectionInvalidationStore_Devbone_Frameworks_EventProjection_Persistence_IDerivedProjectionDependencyStore_" data-uid="Devbone.Frameworks.EventProjection.Projections.MergedProjectionProcessor.#ctor(Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStore,Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore,Devbone.Frameworks.EventProjection.Persistence.IProjectionDependencyLookup,Devbone.Frameworks.EventProjection.Projections.ProjectionEnricher,Devbone.Frameworks.EventProjection.Transport.IProjectionMessagePublisher,Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions,Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry,Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore,Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore,Devbone.Frameworks.EventProjection.Persistence.IDerivedProjectionDependencyStore)">
+  MergedProjectionProcessor(IRawProjectionStore, IMergedProjectionStore, IProjectionDependencyLookup, ProjectionEnricher, IProjectionMessagePublisher, ProjectionAddressNames, ProjectionPipelineOptions, DerivedProjectionRegistry, IProjectionControlPlaneStore, IProjectionInvalidationStore, IDerivedProjectionDependencyStore)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes merged processing with a separate derived dependency provenance store.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MergedProjectionProcessor(IRawProjectionStore rawStore, IMergedProjectionStore mergedStore, IProjectionDependencyLookup dependencyLookup, ProjectionEnricher enricher, IProjectionMessagePublisher publisher, ProjectionAddressNames addresses, ProjectionPipelineOptions options, DerivedProjectionRegistry derivedProjections, IProjectionControlPlaneStore controlPlane, IProjectionInvalidationStore invalidations, IDerivedProjectionDependencyStore derivedDependencies)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rawStore</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStore.html">IRawProjectionStore</a></dt>
+    <dd><p>Raw projection store.</p>
+</dd>
+    <dt><code>mergedStore</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore.html">IMergedProjectionStore</a></dt>
+    <dd><p>Merged projection store.</p>
+</dd>
+    <dt><code>dependencyLookup</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionDependencyLookup.html">IProjectionDependencyLookup</a></dt>
+    <dd><p>Tenant-isolated aggregate-enrichment dependency lookup.</p>
+</dd>
+    <dt><code>enricher</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionEnricher.html">ProjectionEnricher</a></dt>
+    <dd><p>Reference enricher.</p>
+</dd>
+    <dt><code>publisher</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Transport.IProjectionMessagePublisher.html">IProjectionMessagePublisher</a></dt>
+    <dd><p>Internal publisher.</p>
+</dd>
+    <dt><code>addresses</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames.html">ProjectionAddressNames</a></dt>
+    <dd><p>Broker-address resolver.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html">ProjectionPipelineOptions</a></dt>
+    <dd><p>Projection options.</p>
+</dd>
+    <dt><code>derivedProjections</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.html">DerivedProjectionRegistry</a></dt>
+    <dd><p>Registered application projection handlers.</p>
+</dd>
+    <dt><code>controlPlane</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore.html">IProjectionControlPlaneStore</a></dt>
+    <dd><p>Durable current-definition reader.</p>
+</dd>
+    <dt><code>invalidations</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore.html">IProjectionInvalidationStore</a></dt>
+    <dd><p>Durable custom-projection work ledger.</p>
+</dd>
+    <dt><code>derivedDependencies</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IDerivedProjectionDependencyStore.html">IDerivedProjectionDependencyStore</a></dt>
+    <dd><p>Definition-fenced derived-output dependency provenance.</p>
 </dd>
   </dl>
 

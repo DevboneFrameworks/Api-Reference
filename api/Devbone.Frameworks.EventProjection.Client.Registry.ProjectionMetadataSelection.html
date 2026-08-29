@@ -155,8 +155,8 @@ applicability metadata at that point.</p>
 
   <a id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection__ctor_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection__ctor_System_String_System_Collections_Generic_IReadOnlyList_Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor__System_Collections_Generic_IReadOnlyList_System_String__" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.#ctor(System.String,System.Collections.Generic.IReadOnlyList{Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor},System.Collections.Generic.IReadOnlyList{System.String})">
-  ProjectionMetadataSelection(string, IReadOnlyList&lt;ProjectionDescriptor&gt;, IReadOnlyList&lt;string&gt;)
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection__ctor_System_String_System_Collections_Generic_IReadOnlyList_Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor__System_Collections_Generic_IReadOnlyList_System_String__System_Collections_Generic_IReadOnlyList_System_String__" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.#ctor(System.String,System.Collections.Generic.IReadOnlyList{Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor},System.Collections.Generic.IReadOnlyList{System.String},System.Collections.Generic.IReadOnlyList{System.String})">
+  ProjectionMetadataSelection(string, IReadOnlyList&lt;ProjectionDescriptor&gt;, IReadOnlyList&lt;string&gt;, IReadOnlyList&lt;string&gt;)
   
   </h3>
 
@@ -165,7 +165,7 @@ applicability metadata at that point.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProjectionMetadataSelection(string RegistryVersion, IReadOnlyList&lt;ProjectionDescriptor&gt; Projections, IReadOnlyList&lt;string&gt; UnknownNames)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProjectionMetadataSelection(string RegistryVersion, IReadOnlyList&lt;ProjectionDescriptor&gt; Projections, IReadOnlyList&lt;string&gt; UnknownNames, IReadOnlyList&lt;string&gt; UnavailableNames)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -179,6 +179,9 @@ applicability metadata at that point.</p>
     <dt><code>UnknownNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd><p>Requested names that were not present in the snapshot.</p>
 </dd>
+    <dt><code>UnavailableNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Requested definitions for which no live executor was advertised.</p>
+</dd>
   </dl>
 
 
@@ -188,7 +191,7 @@ applicability metadata at that point.</p>
 
 
 
-  <h4 class="section" id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection__ctor_System_String_System_Collections_Generic_IReadOnlyList_Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor__System_Collections_Generic_IReadOnlyList_System_String___remarks">Remarks</h4>
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection__ctor_System_String_System_Collections_Generic_IReadOnlyList_Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor__System_Collections_Generic_IReadOnlyList_System_String__System_Collections_Generic_IReadOnlyList_System_String___remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Store this value with an accepted request. Re-resolving names during polling would allow a deployment to
 change what an in-flight request means. Aggregate identifiers and target sequences are deliberately absent:
 they become known only after the command returns its commit receipt and are combined with this frozen
@@ -298,6 +301,38 @@ applicability metadata at that point.</p>
 
 
 
+  <a id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection_UnavailableNames_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.UnavailableNames*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection_UnavailableNames" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.UnavailableNames">
+  UnavailableNames
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Requested definitions for which no live executor was advertised.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;string&gt; UnavailableNames { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection_UnknownNames_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.UnknownNames*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection_UnknownNames" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.UnknownNames">
@@ -336,8 +371,8 @@ applicability metadata at that point.</p>
 
   <a id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection_Deconstruct_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.Deconstruct*"></a>
 
-  <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection_Deconstruct_System_String__System_Collections_Generic_IReadOnlyList_Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor___System_Collections_Generic_IReadOnlyList_System_String___" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.Deconstruct(System.String@,System.Collections.Generic.IReadOnlyList{Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor}@,System.Collections.Generic.IReadOnlyList{System.String}@)">
-  Deconstruct(out string, out IReadOnlyList&lt;ProjectionDescriptor&gt;, out IReadOnlyList&lt;string&gt;)
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection_Deconstruct_System_String__System_Collections_Generic_IReadOnlyList_Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor___System_Collections_Generic_IReadOnlyList_System_String___System_Collections_Generic_IReadOnlyList_System_String___" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.Deconstruct(System.String@,System.Collections.Generic.IReadOnlyList{Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor}@,System.Collections.Generic.IReadOnlyList{System.String}@,System.Collections.Generic.IReadOnlyList{System.String}@)">
+  Deconstruct(out string, out IReadOnlyList&lt;ProjectionDescriptor&gt;, out IReadOnlyList&lt;string&gt;, out IReadOnlyList&lt;string&gt;)
   
   </h3>
 
@@ -345,7 +380,7 @@ applicability metadata at that point.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Deconstruct(out string RegistryVersion, out IReadOnlyList&lt;ProjectionDescriptor&gt; Projections, out IReadOnlyList&lt;string&gt; UnknownNames)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Deconstruct(out string RegistryVersion, out IReadOnlyList&lt;ProjectionDescriptor&gt; Projections, out IReadOnlyList&lt;string&gt; UnknownNames, out IReadOnlyList&lt;string&gt; UnavailableNames)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -355,6 +390,8 @@ applicability metadata at that point.</p>
     <dt><code>Projections</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.html">ProjectionDescriptor</a>&gt;</dt>
     <dd></dd>
     <dt><code>UnknownNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>UnavailableNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd></dd>
   </dl>
 

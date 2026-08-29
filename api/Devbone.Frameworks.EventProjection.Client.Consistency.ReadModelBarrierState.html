@@ -130,6 +130,11 @@ says why, and the situation needs an operator rather than a longer budget.</p>
   
   <dd><p>The observed layer reached the requested position or a later one. A query that follows sees the commit.</p>
 </dd>
+    <dt id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrierState_Unavailable"><code>Unavailable = 3</code></dt>
+  
+  <dd><p>The definition is known, but no live worker currently advertises the exact definition. A later worker
+start may change this state, but spending the current request budget cannot make progress by itself.</p>
+</dd>
   </dl>
 
 

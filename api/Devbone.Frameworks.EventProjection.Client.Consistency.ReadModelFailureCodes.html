@@ -253,6 +253,37 @@ stream is missing. Raw events apply only in contiguous sequence, so this never r
 
 
 
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelFailureCodes_PROJECTION_UNAVAILABLE" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelFailureCodes.PROJECTION_UNAVAILABLE">
+  PROJECTION_UNAVAILABLE
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The definition exists, but no non-expired worker capability can execute it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PROJECTION_UNAVAILABLE = &quot;readmodel.projection.unavailable&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelFailureCodes_UNKNOWN_PROJECTION" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelFailureCodes.UNKNOWN_PROJECTION">
   UNKNOWN_PROJECTION
   
@@ -280,9 +311,9 @@ stream is missing. Raw events apply only in contiguous sequence, so this never r
 
 
   <h4 class="section" id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelFailureCodes_UNKNOWN_PROJECTION_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Failing rather than pending is the whole point. A typo, a renamed handler or a worker that never
-started would otherwise present as a projection that is merely slow, and a caller would poll for it
-until its deadline expired.</p>
+  <div class="markdown level1 remarks"><p>Failing rather than pending is the whole point. A typo or a removed definition would otherwise present
+as a projection that is merely slow, and a caller would poll for it until its deadline expired. A known
+definition whose workers never started or whose leases expired uses <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelFailureCodes.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelFailureCodes_PROJECTION_UNAVAILABLE">PROJECTION_UNAVAILABLE</a>.</p>
 </div>
 
 

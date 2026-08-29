@@ -135,64 +135,10 @@ would report a query model as caught up that never received the event.
 </h2>
 
 
-  <a id="Devbone_Frameworks_EventProjection_Persistence_IProjectionCheckpointStore_PublishRegistryAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore.PublishRegistryAsync*"></a>
-
-  <h3 id="Devbone_Frameworks_EventProjection_Persistence_IProjectionCheckpointStore_PublishRegistryAsync_System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_EventProjection_Persistence_ProjectionRegistration__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore.PublishRegistryAsync(System.Collections.Generic.IReadOnlyCollection{Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration},System.Threading.CancellationToken)">
-  PublishRegistryAsync(IReadOnlyCollection&lt;ProjectionRegistration&gt;, CancellationToken)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Publishes the set of projections this deployment maintains.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task PublishRegistryAsync(IReadOnlyCollection&lt;ProjectionRegistration&gt; projections, CancellationToken cancellationToken = default)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>projections</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration.html">ProjectionRegistration</a>&gt;</dt>
-    <dd><p>Every projection the deployment offers, framework layers included.</p>
-</dd>
-    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd><p>Cancellation token.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task completing after the registry is durable.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section" id="Devbone_Frameworks_EventProjection_Persistence_IProjectionCheckpointStore_PublishRegistryAsync_System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_EventProjection_Persistence_ProjectionRegistration__System_Threading_CancellationToken__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>A shared store rather than an in-process catalogue, and that is the whole point: handlers are registered
-in the projection worker while the names are asked for in the API host, so a catalogue populated by
-registration would be empty exactly where it is read and would report every correctly registered
-projection as unknown.</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown when <code class="paramref">projections</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
   <a id="Devbone_Frameworks_EventProjection_Persistence_IProjectionCheckpointStore_RecordAppliedAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore.RecordAppliedAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventProjection_Persistence_IProjectionCheckpointStore_RecordAppliedAsync_System_String_System_String_System_String_System_Int64_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore.RecordAppliedAsync(System.String,System.String,System.String,System.Int64,System.Threading.CancellationToken)">
-  RecordAppliedAsync(string, string, string, long, CancellationToken)
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_IProjectionCheckpointStore_RecordAppliedAsync_System_String_System_String_System_String_System_String_System_Int64_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore.RecordAppliedAsync(System.String,System.String,System.String,System.String,System.Int64,System.Threading.CancellationToken)">
+  RecordAppliedAsync(string, string, string, string, long, CancellationToken)
   
   </h3>
 
@@ -201,13 +147,16 @@ projection as unknown.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task RecordAppliedAsync(string projectionName, string aggregateName, string aggregateId, long eventSequence, CancellationToken cancellationToken = default)</code></pre>
+    <pre><code class="lang-csharp hljs">Task RecordAppliedAsync(string projectionName, string definitionVersion, string aggregateName, string aggregateId, long eventSequence, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>projectionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Stable public projection name.</p>
+</dd>
+    <dt><code>definitionVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Opaque version of the definition that produced the output.</p>
 </dd>
     <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Exact aggregate contract name.</p>
@@ -236,7 +185,7 @@ projection as unknown.</p>
 
 
 
-  <h4 class="section" id="Devbone_Frameworks_EventProjection_Persistence_IProjectionCheckpointStore_RecordAppliedAsync_System_String_System_String_System_String_System_Int64_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Persistence_IProjectionCheckpointStore_RecordAppliedAsync_System_String_System_String_System_String_System_String_System_Int64_System_Threading_CancellationToken__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Monotonic: a redelivered older position leaves the checkpoint where it is, so duplicate delivery is a
 no-op for progress exactly as it is for the query model.</p>
 </div>

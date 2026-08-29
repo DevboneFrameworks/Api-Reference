@@ -102,7 +102,7 @@ Class MongoProjectionStore
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class MongoProjectionStore : IRawProjectionStore, IProjectionReferenceSource, IMergedProjectionStore, IProjectionStoreMaintenance, IRawProjectionStallReader, IProjectionCheckpointStore</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class MongoProjectionStore : IRawProjectionStore, IProjectionReferenceSource, IMergedProjectionStore, IProjectionStoreMaintenance, IRawProjectionStallReader, IProjectionCheckpointStore, IProjectionControlPlaneStore, IProjectionInvalidationStore, IDerivedProjectionDependencyStore</code></pre>
   </div>
 
 
@@ -125,6 +125,9 @@ Class MongoProjectionStore
       <div><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionStoreMaintenance.html">IProjectionStoreMaintenance</a></div>
       <div><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStallReader.html">IRawProjectionStallReader</a></div>
       <div><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore.html">IProjectionCheckpointStore</a></div>
+      <div><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore.html">IProjectionControlPlaneStore</a></div>
+      <div><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore.html">IProjectionInvalidationStore</a></div>
+      <div><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IDerivedProjectionDependencyStore.html">IDerivedProjectionDependencyStore</a></div>
     </dd>
   </dl>
 
@@ -216,6 +219,48 @@ Class MongoProjectionStore
 </h2>
 
 
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_AbandonAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.AbandonAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_AbandonAsync_Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidationClaim_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.AbandonAsync(Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationClaim,System.Threading.CancellationToken)">
+  AbandonAsync(ProjectionInvalidationClaim, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a failed non-terminal claim to dirty state for retry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; AbandonAsync(ProjectionInvalidationClaim claim, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>claim</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationClaim.html">ProjectionInvalidationClaim</a></dt>
+    <dd><p>Fenced claim returned by <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore.html#Devbone_Frameworks_EventProjection_Persistence_IProjectionInvalidationStore_TryClaimAsync_Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidation_System_String_System_TimeSpan_System_Threading_CancellationToken_">TryClaimAsync(ProjectionInvalidation, string, TimeSpan, CancellationToken)</a>.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> only when the claim still owns the current work generation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_ClaimPendingNotificationsAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.ClaimPendingNotificationsAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_ClaimPendingNotificationsAsync_System_String_System_Int32_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.ClaimPendingNotificationsAsync(System.String,System.Int32,System.TimeSpan,System.Threading.CancellationToken)">
@@ -256,6 +301,93 @@ conditional update, so only one instance wins it per sweep, and an abandoned cla
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.PendingRawProjectionNotification.html">PendingRawProjectionNotification</a>&gt;&gt;</dt>
     <dd><p>The notifications this call successfully claimed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_CompleteAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.CompleteAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_CompleteAsync_Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidationClaim_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.CompleteAsync(Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationClaim,System.TimeSpan,System.Threading.CancellationToken)">
+  CompleteAsync(ProjectionInvalidationClaim, TimeSpan, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Marks a claimed execution complete and starts its bounded evidence retention.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; CompleteAsync(ProjectionInvalidationClaim claim, TimeSpan retention, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>claim</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationClaim.html">ProjectionInvalidationClaim</a></dt>
+    <dd><p>Fenced claim returned by <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore.html#Devbone_Frameworks_EventProjection_Persistence_IProjectionInvalidationStore_TryClaimAsync_Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidation_System_String_System_TimeSpan_System_Threading_CancellationToken_">TryClaimAsync(ProjectionInvalidation, string, TimeSpan, CancellationToken)</a>.</p>
+</dd>
+    <dt><code>retention</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>Positive completed-record retention.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> only when the claim still owns the current work generation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_ConfirmCheckpointAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.ConfirmCheckpointAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_ConfirmCheckpointAsync_Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidation_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.ConfirmCheckpointAsync(Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation,System.Threading.CancellationToken)">
+  ConfirmCheckpointAsync(ProjectionInvalidation, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Marks checkpoint repair complete for the exact current work generation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; ConfirmCheckpointAsync(ProjectionInvalidation invalidation, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidation</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.html">ProjectionInvalidation</a></dt>
+    <dd><p>Completed generation whose checkpoint was recorded.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> only when the completed generation still matched.</p>
 </dd>
   </dl>
 
@@ -343,6 +475,112 @@ conditional update, so only one instance wins it per sweep, and an abandoned cla
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
     <dd><p>A task completing when indexes exist.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_FindCurrentDependentsAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.FindCurrentDependentsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_FindCurrentDependentsAsync_System_String_System_String_System_Int64_System_String_System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_EventProjection_Persistence_ProjectionRegistration__System_Int32_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.FindCurrentDependentsAsync(System.String,System.String,System.Int64,System.String,System.Collections.Generic.IReadOnlyCollection{Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration},System.Int32,System.Threading.CancellationToken)">
+  FindCurrentDependentsAsync(string, string, long, string?, IReadOnlyCollection&lt;ProjectionRegistration&gt;, int, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds a bounded page of outputs owned by current definitions whose published dependency set contains
+the changed source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;DerivedProjectionDependencyPage&gt; FindCurrentDependentsAsync(string sourceAggregateName, string sourceAggregateId, long sourceEventSequence, string? tenantId, IReadOnlyCollection&lt;ProjectionRegistration&gt; currentDefinitions, int maximumCount, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourceAggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Changed source aggregate name.</p>
+</dd>
+    <dt><code>sourceAggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Changed source aggregate identifier.</p>
+</dd>
+    <dt><code>sourceEventSequence</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Changed source position; already observed positions are excluded.</p>
+</dd>
+    <dt><code>tenantId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Tenant shared by the changed source and dependent outputs.</p>
+</dd>
+    <dt><code>currentDefinitions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration.html">ProjectionRegistration</a>&gt;</dt>
+    <dd><p>Exact current definition fences eligible to receive work.</p>
+</dd>
+    <dt><code>maximumCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Positive maximum number of returned edges.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.DerivedProjectionDependencyPage.html">DerivedProjectionDependencyPage</a>&gt;</dt>
+    <dd><p>A bounded, deterministically ordered page and whether more matches existed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_FindDependentsAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.FindDependentsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_FindDependentsAsync_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.FindDependentsAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+  FindDependentsAsync(string, string, string?, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds outputs in one tenant whose current dependency set contains the changed source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;DerivedProjectionDependency&gt;&gt; FindDependentsAsync(string sourceAggregateName, string sourceAggregateId, string? tenantId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourceAggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Changed source aggregate name.</p>
+</dd>
+    <dt><code>sourceAggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Changed source aggregate identifier.</p>
+</dd>
+    <dt><code>tenantId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Tenant shared by the changed source and dependent outputs.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.DerivedProjectionDependency.html">DerivedProjectionDependency</a>&gt;&gt;</dt>
+    <dd><p>Deterministically ordered matching dependency edges, possibly empty.</p>
 </dd>
   </dl>
 
@@ -544,6 +782,48 @@ genuinely waiting for a predecessor rather than merely in flight.</p>
 
 
 
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_InvalidateAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.InvalidateAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_InvalidateAsync_Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidation_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.InvalidateAsync(Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation,System.Threading.CancellationToken)">
+  InvalidateAsync(ProjectionInvalidation, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates or advances one dirty work record and returns its current durable state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ProjectionInvalidationRecord&gt; InvalidateAsync(ProjectionInvalidation invalidation, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidation</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.html">ProjectionInvalidation</a></dt>
+    <dd><p>Aggregate-shaped work to make dirty.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationRecord.html">ProjectionInvalidationRecord</a>&gt;</dt>
+    <dd><p>The current record after coalescing the supplied source position.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_MarkRawNotificationPublishedAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.MarkRawNotificationPublishedAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_MarkRawNotificationPublishedAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.MarkRawNotificationPublishedAsync(System.String,System.String,System.Threading.CancellationToken)">
@@ -576,6 +856,51 @@ genuinely waiting for a predecessor rather than merely in flight.</p>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
     <dd><p>A task completing after the marker update.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_MarkTerminalAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.MarkTerminalAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_MarkTerminalAsync_Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidationClaim_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.MarkTerminalAsync(Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationClaim,System.TimeSpan,System.Threading.CancellationToken)">
+  MarkTerminalAsync(ProjectionInvalidationClaim, TimeSpan, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Marks a terminally rejected claim and starts its bounded evidence retention.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; MarkTerminalAsync(ProjectionInvalidationClaim claim, TimeSpan retention, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>claim</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationClaim.html">ProjectionInvalidationClaim</a></dt>
+    <dd><p>Fenced claim returned by <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore.html#Devbone_Frameworks_EventProjection_Persistence_IProjectionInvalidationStore_TryClaimAsync_Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidation_System_String_System_TimeSpan_System_Threading_CancellationToken_">TryClaimAsync(ProjectionInvalidation, string, TimeSpan, CancellationToken)</a>.</p>
+</dd>
+    <dt><code>retention</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>Positive terminal-record retention.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> only when the claim still owns the current work generation.</p>
 </dd>
   </dl>
 
@@ -631,25 +956,25 @@ genuinely waiting for a predecessor rather than merely in flight.</p>
 
 
 
-  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_PublishRegistryAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.PublishRegistryAsync*"></a>
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_PublishCapabilitiesAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.PublishCapabilitiesAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_PublishRegistryAsync_System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_EventProjection_Persistence_ProjectionRegistration__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.PublishRegistryAsync(System.Collections.Generic.IReadOnlyCollection{Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration},System.Threading.CancellationToken)">
-  PublishRegistryAsync(IReadOnlyCollection&lt;ProjectionRegistration&gt;, CancellationToken)
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_PublishCapabilitiesAsync_Devbone_Frameworks_EventProjection_Persistence_ProjectionCapabilityAdvertisement_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.PublishCapabilitiesAsync(Devbone.Frameworks.EventProjection.Persistence.ProjectionCapabilityAdvertisement,System.Threading.CancellationToken)">
+  PublishCapabilitiesAsync(ProjectionCapabilityAdvertisement, CancellationToken)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Publishes the set of projections this deployment maintains.</p>
+  <div class="markdown level1 summary"><p>Replaces one worker instance's complete capability advertisement and renews its lease.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task PublishRegistryAsync(IReadOnlyCollection&lt;ProjectionRegistration&gt; projections, CancellationToken cancellationToken = default)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task PublishCapabilitiesAsync(ProjectionCapabilityAdvertisement advertisement, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>projections</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration.html">ProjectionRegistration</a>&gt;</dt>
-    <dd><p>Every projection the deployment offers, framework layers included.</p>
+    <dt><code>advertisement</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionCapabilityAdvertisement.html">ProjectionCapabilityAdvertisement</a></dt>
+    <dd><p>Complete capability set owned by one instance.</p>
 </dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd><p>Cancellation token.</p>
@@ -659,7 +984,7 @@ genuinely waiting for a predecessor rather than merely in flight.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task completing after the registry is durable.</p>
+    <dd><p>A task completing after the advertisement is durable.</p>
 </dd>
   </dl>
 
@@ -669,26 +994,228 @@ genuinely waiting for a predecessor rather than merely in flight.</p>
 
 
 
-  <h4 class="section" id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_PublishRegistryAsync_System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_EventProjection_Persistence_ProjectionRegistration__System_Threading_CancellationToken__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>A shared store rather than an in-process catalogue, and that is the whole point: handlers are registered
-in the projection worker while the names are asked for in the API host, so a catalogue populated by
-registration would be empty exactly where it is read and would report every correctly registered
-projection as unknown.</p>
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_PublishDefinitionsAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.PublishDefinitionsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_PublishDefinitionsAsync_Devbone_Frameworks_EventProjection_Persistence_ProjectionDefinitionPublication_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.PublishDefinitionsAsync(Devbone.Frameworks.EventProjection.Persistence.ProjectionDefinitionPublication,System.Threading.CancellationToken)">
+  PublishDefinitionsAsync(ProjectionDefinitionPublication, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Replaces one deployment's complete definition catalogue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task PublishDefinitionsAsync(ProjectionDefinitionPublication publication, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>publication</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionDefinitionPublication.html">ProjectionDefinitionPublication</a></dt>
+    <dd><p>Complete catalogue from the deployment artifact.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task completing after the catalogue is durable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_ReadAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.ReadAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_ReadAsync_Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidation_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.ReadAsync(Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation,System.Threading.CancellationToken)">
+  ReadAsync(ProjectionInvalidation, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads one current work record by its tenant-scoped logical identity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ProjectionInvalidationRecord?&gt; ReadAsync(ProjectionInvalidation invalidation, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidation</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.html">ProjectionInvalidation</a></dt>
+    <dd><p>Work identity; its cause fields are ignored for lookup.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationRecord.html">ProjectionInvalidationRecord</a>&gt;</dt>
+    <dd><p>The current record, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when no producer created it.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_ReadDerivedDefinitionsAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.ReadDerivedDefinitionsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_ReadDerivedDefinitionsAsync_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.ReadDerivedDefinitionsAsync(System.String,System.Threading.CancellationToken)">
+  ReadDerivedDefinitionsAsync(string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the current durable derived definitions that observe one aggregate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;ProjectionRegistration&gt;&gt; ReadDerivedDefinitionsAsync(string aggregateName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Exact aggregate contract name.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration.html">ProjectionRegistration</a>&gt;&gt;</dt>
+    <dd><p>Equivalent current definitions, independent of executor liveness.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_ReadDerivedDefinitionsAsync_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Capability advertisements are deliberately not consulted. An unavailable executor must not prevent
+durable work from being produced for a known definition.</p>
 </div>
 
-  <h4 class="section">Exceptions</h4>
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_ReadForOutputAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.ReadForOutputAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_ReadForOutputAsync_Devbone_Frameworks_EventProjection_Persistence_ProjectionDependencyOutput_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.ReadForOutputAsync(Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencyOutput,System.Threading.CancellationToken)">
+  ReadForOutputAsync(ProjectionDependencyOutput, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the complete dependency set currently published for one output.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;DerivedProjectionDependency&gt;&gt; ReadForOutputAsync(ProjectionDependencyOutput output, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown when <code class="paramref">projections</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dt><code>output</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencyOutput.html">ProjectionDependencyOutput</a></dt>
+    <dd><p>Definition-fenced output identity.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
 </dd>
   </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.DerivedProjectionDependency.html">DerivedProjectionDependency</a>&gt;&gt;</dt>
+    <dd><p>Deterministically ordered dependency edges, possibly empty.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_ReadNextCompletedAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.ReadNextCompletedAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_ReadNextCompletedAsync_System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_EventProjection_Persistence_ProjectionRegistration__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.ReadNextCompletedAsync(System.Collections.Generic.IReadOnlyCollection{Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration},System.Threading.CancellationToken)">
+  ReadNextCompletedAsync(IReadOnlyCollection&lt;ProjectionRegistration&gt;, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the oldest completed application write whose checkpoint still needs repair.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ProjectionInvalidationRecord?&gt; ReadNextCompletedAsync(IReadOnlyCollection&lt;ProjectionRegistration&gt; definitions, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>definitions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration.html">ProjectionRegistration</a>&gt;</dt>
+    <dd><p>Definitions executable by the repairing worker.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationRecord.html">ProjectionInvalidationRecord</a>&gt;</dt>
+    <dd><p>The completed record, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when none matches.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
 
 
 
   <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_RecordAppliedAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.RecordAppliedAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_RecordAppliedAsync_System_String_System_String_System_String_System_Int64_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.RecordAppliedAsync(System.String,System.String,System.String,System.Int64,System.Threading.CancellationToken)">
-  RecordAppliedAsync(string, string, string, long, CancellationToken)
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_RecordAppliedAsync_System_String_System_String_System_String_System_String_System_Int64_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.RecordAppliedAsync(System.String,System.String,System.String,System.String,System.Int64,System.Threading.CancellationToken)">
+  RecordAppliedAsync(string, string, string, string, long, CancellationToken)
   
   </h3>
 
@@ -697,13 +1224,16 @@ projection as unknown.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task RecordAppliedAsync(string projectionName, string aggregateName, string aggregateId, long eventSequence, CancellationToken cancellationToken = default)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task RecordAppliedAsync(string projectionName, string definitionVersion, string aggregateName, string aggregateId, long eventSequence, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>projectionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Stable public projection name.</p>
+</dd>
+    <dt><code>definitionVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Opaque version of the definition that produced the output.</p>
 </dd>
     <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Exact aggregate contract name.</p>
@@ -732,7 +1262,7 @@ projection as unknown.</p>
 
 
 
-  <h4 class="section" id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_RecordAppliedAsync_System_String_System_String_System_String_System_Int64_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_RecordAppliedAsync_System_String_System_String_System_String_System_String_System_Int64_System_Threading_CancellationToken__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Monotonic: a redelivered older position leaves the checkpoint where it is, so duplicate delivery is a
 no-op for progress exactly as it is for the query model.</p>
 </div>
@@ -746,6 +1276,147 @@ no-op for progress exactly as it is for the query model.</p>
     <dd><p>Thrown when <code class="paramref">eventSequence</code> is not positive.</p>
 </dd>
   </dl>
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_ReplaceAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.ReplaceAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_ReplaceAsync_Devbone_Frameworks_EventProjection_Persistence_ProjectionDependencyOutput_System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_EventProjection_Persistence_ProjectionDependencySource__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.ReplaceAsync(Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencyOutput,System.Collections.Generic.IReadOnlyCollection{Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource},System.Threading.CancellationToken)">
+  ReplaceAsync(ProjectionDependencyOutput, IReadOnlyCollection&lt;ProjectionDependencySource&gt;, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Atomically replaces the complete dependency set of one definition-fenced output.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task ReplaceAsync(ProjectionDependencyOutput output, IReadOnlyCollection&lt;ProjectionDependencySource&gt; sources, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>output</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencyOutput.html">ProjectionDependencyOutput</a></dt>
+    <dd><p>Output identity whose dependency set is replaced.</p>
+</dd>
+    <dt><code>sources</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.html">ProjectionDependencySource</a>&gt;</dt>
+    <dd><p>Complete, unique source set observed by the successful output write.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task completing after the replacement is durable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_TryClaimAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.TryClaimAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_TryClaimAsync_Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidation_System_String_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.TryClaimAsync(Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation,System.String,System.TimeSpan,System.Threading.CancellationToken)">
+  TryClaimAsync(ProjectionInvalidation, string, TimeSpan, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to claim dirty or lease-expired work for one executor instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ProjectionInvalidationClaim?&gt; TryClaimAsync(ProjectionInvalidation invalidation, string claimedBy, TimeSpan leaseDuration, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidation</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.html">ProjectionInvalidation</a></dt>
+    <dd><p>Identity of the work to claim.</p>
+</dd>
+    <dt><code>claimedBy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Worker instance identity.</p>
+</dd>
+    <dt><code>leaseDuration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>Positive claim lease duration.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationClaim.html">ProjectionInvalidationClaim</a>&gt;</dt>
+    <dd><p>The fenced claim, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when another executor owns current work.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_TryClaimNextAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.TryClaimNextAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_TryClaimNextAsync_System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_EventProjection_Persistence_ProjectionRegistration__System_String_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.TryClaimNextAsync(System.Collections.Generic.IReadOnlyCollection{Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration},System.String,System.TimeSpan,System.Threading.CancellationToken)">
+  TryClaimNextAsync(IReadOnlyCollection&lt;ProjectionRegistration&gt;, string, TimeSpan, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Claims the oldest outstanding work executable by one of the supplied definitions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ProjectionInvalidationClaim?&gt; TryClaimNextAsync(IReadOnlyCollection&lt;ProjectionRegistration&gt; definitions, string claimedBy, TimeSpan leaseDuration, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>definitions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration.html">ProjectionRegistration</a>&gt;</dt>
+    <dd><p>Definitions executable by the claiming worker.</p>
+</dd>
+    <dt><code>claimedBy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Worker instance identity.</p>
+</dd>
+    <dt><code>leaseDuration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>Positive claim lease duration.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidationClaim.html">ProjectionInvalidationClaim</a>&gt;</dt>
+    <dd><p>The fenced claim, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when no matching work is ready.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
 
 
 
@@ -781,6 +1452,51 @@ no-op for progress exactly as it is for the query model.</p>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
     <dd><p>A task completing after persistence.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_WithdrawCapabilitiesAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.WithdrawCapabilitiesAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_WithdrawCapabilitiesAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.WithdrawCapabilitiesAsync(System.String,System.String,System.Threading.CancellationToken)">
+  WithdrawCapabilitiesAsync(string, string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Withdraws only the capability advertisement owned by the named instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task WithdrawCapabilitiesAsync(string deploymentId, string instanceId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>deploymentId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Stable deployment identity.</p>
+</dd>
+    <dt><code>instanceId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Worker instance identity.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task completing after withdrawal.</p>
 </dd>
   </dl>
 

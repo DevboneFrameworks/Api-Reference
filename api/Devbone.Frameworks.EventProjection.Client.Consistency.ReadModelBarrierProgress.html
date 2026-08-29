@@ -216,8 +216,9 @@ Class ReadModelBarrierProgress
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the stable reason the barrier is unreachable, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> unless
-<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierProgress.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrierProgress_State">State</a> is <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierState.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrierState_Failed">Failed</a>. See <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelFailureCodes.html">ReadModelFailureCodes</a>.</p>
+  <div class="markdown level1 summary"><p>Gets the stable reason the barrier is unreachable or unavailable, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> unless
+<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierProgress.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrierProgress_State">State</a> is <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierState.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrierState_Failed">Failed</a> or
+<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierState.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrierState_Unavailable">Unavailable</a>. See <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelFailureCodes.html">ReadModelFailureCodes</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -348,7 +349,7 @@ the aggregate. Under at-least-once delivery a satisfied value may exceed the bar
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether the barrier is reached, still pending, or unreachable.</p>
+  <div class="markdown level1 summary"><p>Gets whether the barrier is reached, pending, unavailable, or unreachable.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

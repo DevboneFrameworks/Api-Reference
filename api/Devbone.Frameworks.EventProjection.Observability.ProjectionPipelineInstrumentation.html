@@ -278,6 +278,130 @@ Class ProjectionPipelineInstrumentation
 
 
 
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_DerivedDependencyCyclesSkipped" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.DerivedDependencyCyclesSkipped">
+  DerivedDependencyCyclesSkipped
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Counts derived dependency edges skipped because their output was already visited.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Counter&lt;long&gt; DerivedDependencyCyclesSkipped</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1">Counter</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_DerivedDependencyFanOutLimited" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.DerivedDependencyFanOutLimited">
+  DerivedDependencyFanOutLimited
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Counts source changes whose derived dependency fan-out exceeded its configured page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Counter&lt;long&gt; DerivedDependencyFanOutLimited</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1">Counter</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_DerivedDependencyInvalidations" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.DerivedDependencyInvalidations">
+  DerivedDependencyInvalidations
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Counts durable derived-output invalidations produced from tracked reverse dependencies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Counter&lt;long&gt; DerivedDependencyInvalidations</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1">Counter</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_DerivedDependencyPropagationLimited" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.DerivedDependencyPropagationLimited">
+  DerivedDependencyPropagationLimited
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Counts derived dependency propagation stopped by depth or visited-path bounds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Counter&lt;long&gt; DerivedDependencyPropagationLimited</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1">Counter</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_DerivedProjectionsApplied" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.DerivedProjectionsApplied">
   DerivedProjectionsApplied
   

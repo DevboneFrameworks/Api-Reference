@@ -149,8 +149,8 @@ Class ProjectionDescriptor
 
   <a id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor__ctor_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor__ctor_System_String_Devbone_Frameworks_EventProjection_Client_Registry_ProjectionKind_System_Collections_Generic_IReadOnlyList_System_String__" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.#ctor(System.String,Devbone.Frameworks.EventProjection.Client.Registry.ProjectionKind,System.Collections.Generic.IReadOnlyList{System.String})">
-  ProjectionDescriptor(string, ProjectionKind, IReadOnlyList&lt;string&gt;)
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor__ctor_System_String_System_String_Devbone_Frameworks_EventProjection_Client_Registry_ProjectionKind_System_Collections_Generic_IReadOnlyList_System_String__Devbone_Frameworks_EventProjection_Client_Registry_ProjectionAvailability_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.#ctor(System.String,System.String,Devbone.Frameworks.EventProjection.Client.Registry.ProjectionKind,System.Collections.Generic.IReadOnlyList{System.String},Devbone.Frameworks.EventProjection.Client.Registry.ProjectionAvailability)">
+  ProjectionDescriptor(string, string, ProjectionKind, IReadOnlyList&lt;string&gt;, ProjectionAvailability)
   
   </h3>
 
@@ -159,7 +159,7 @@ Class ProjectionDescriptor
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProjectionDescriptor(string ProjectionName, ProjectionKind Kind, IReadOnlyList&lt;string&gt; AggregateNames)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProjectionDescriptor(string ProjectionName, string DefinitionVersion, ProjectionKind Kind, IReadOnlyList&lt;string&gt; AggregateNames, ProjectionAvailability Availability)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -167,11 +167,17 @@ Class ProjectionDescriptor
     <dt><code>ProjectionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Stable public projection name.</p>
 </dd>
+    <dt><code>DefinitionVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Opaque version of the transformation and output semantics.</p>
+</dd>
     <dt><code>Kind</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionKind.html">ProjectionKind</a></dt>
     <dd><p>Which layer maintains it.</p>
 </dd>
     <dt><code>AggregateNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd><p>The aggregate types it observes.</p>
+</dd>
+    <dt><code>Availability</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionAvailability.html">ProjectionAvailability</a></dt>
+    <dd><p>Whether a live worker currently advertises this exact definition.</p>
 </dd>
   </dl>
 
@@ -212,6 +218,70 @@ Class ProjectionDescriptor
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor_Availability_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.Availability*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor_Availability" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.Availability">
+  Availability
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether a live worker currently advertises this exact definition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectionAvailability Availability { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionAvailability.html">ProjectionAvailability</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor_DefinitionVersion_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.DefinitionVersion*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor_DefinitionVersion" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.DefinitionVersion">
+  DefinitionVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opaque version of the transformation and output semantics.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DefinitionVersion { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 
@@ -292,8 +362,8 @@ Class ProjectionDescriptor
 
   <a id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor_Deconstruct_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.Deconstruct*"></a>
 
-  <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor_Deconstruct_System_String__Devbone_Frameworks_EventProjection_Client_Registry_ProjectionKind__System_Collections_Generic_IReadOnlyList_System_String___" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.Deconstruct(System.String@,Devbone.Frameworks.EventProjection.Client.Registry.ProjectionKind@,System.Collections.Generic.IReadOnlyList{System.String}@)">
-  Deconstruct(out string, out ProjectionKind, out IReadOnlyList&lt;string&gt;)
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor_Deconstruct_System_String__System_String__Devbone_Frameworks_EventProjection_Client_Registry_ProjectionKind__System_Collections_Generic_IReadOnlyList_System_String___Devbone_Frameworks_EventProjection_Client_Registry_ProjectionAvailability__" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.Deconstruct(System.String@,System.String@,Devbone.Frameworks.EventProjection.Client.Registry.ProjectionKind@,System.Collections.Generic.IReadOnlyList{System.String}@,Devbone.Frameworks.EventProjection.Client.Registry.ProjectionAvailability@)">
+  Deconstruct(out string, out string, out ProjectionKind, out IReadOnlyList&lt;string&gt;, out ProjectionAvailability)
   
   </h3>
 
@@ -301,16 +371,20 @@ Class ProjectionDescriptor
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Deconstruct(out string ProjectionName, out ProjectionKind Kind, out IReadOnlyList&lt;string&gt; AggregateNames)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Deconstruct(out string ProjectionName, out string DefinitionVersion, out ProjectionKind Kind, out IReadOnlyList&lt;string&gt; AggregateNames, out ProjectionAvailability Availability)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>ProjectionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
+    <dt><code>DefinitionVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
     <dt><code>Kind</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionKind.html">ProjectionKind</a></dt>
     <dd></dd>
     <dt><code>AggregateNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>Availability</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionAvailability.html">ProjectionAvailability</a></dt>
     <dd></dd>
   </dl>
 

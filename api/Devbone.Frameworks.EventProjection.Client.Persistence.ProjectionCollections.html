@@ -161,8 +161,8 @@ either side moves.</p>
 
   <a id="Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionCollections_CheckpointKey_" data-uid="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionCollections.CheckpointKey*"></a>
 
-  <h3 id="Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionCollections_CheckpointKey_System_String_System_String_System_String_" data-uid="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionCollections.CheckpointKey(System.String,System.String,System.String)">
-  CheckpointKey(string, string, string)
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionCollections_CheckpointKey_System_String_System_String_System_String_System_String_" data-uid="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionCollections.CheckpointKey(System.String,System.String,System.String,System.String)">
+  CheckpointKey(string, string, string, string)
   
   </h3>
 
@@ -171,13 +171,16 @@ either side moves.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string CheckpointKey(string projectionName, string aggregateName, string aggregateId)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string CheckpointKey(string projectionName, string definitionVersion, string aggregateName, string aggregateId)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>projectionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Public projection name.</p>
+</dd>
+    <dt><code>definitionVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Opaque definition version.</p>
 </dd>
     <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Aggregate contract name.</p>
@@ -217,6 +220,39 @@ either side moves.</p>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string Checkpoints()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The collection name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionCollections_Definitions_" data-uid="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionCollections.Definitions*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionCollections_Definitions" data-uid="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionCollections.Definitions">
+  Definitions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets deployment-owned reconstructible definition catalogues.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Definitions()</code></pre>
   </div>
 
 
@@ -405,19 +441,19 @@ either side moves.</p>
 
 
 
-  <a id="Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionCollections_Registry_" data-uid="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionCollections.Registry*"></a>
+  <a id="Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionCollections_WorkerCapabilities_" data-uid="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionCollections.WorkerCapabilities*"></a>
 
-  <h3 id="Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionCollections_Registry" data-uid="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionCollections.Registry">
-  Registry()
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionCollections_WorkerCapabilities" data-uid="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionCollections.WorkerCapabilities">
+  WorkerCapabilities()
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the collection listing the projections a deployment maintains.</p>
+  <div class="markdown level1 summary"><p>Gets leased instance-owned worker capability advertisements.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Registry()</code></pre>
+    <pre><code class="lang-csharp hljs">public static string WorkerCapabilities()</code></pre>
   </div>
 
 

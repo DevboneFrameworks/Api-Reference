@@ -282,7 +282,8 @@ Class ReadModelBarrierResult
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the combined state. <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierState.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrierState_Failed">Failed</a> when any barrier failed,
-<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierState.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrierState_Pending">Pending</a> when any is still pending, otherwise
+<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierState.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrierState_Unavailable">Unavailable</a> when no failure exists but an executor is unavailable,
+<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierState.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrierState_Pending">Pending</a> when any remaining barrier is pending, otherwise
 <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierState.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrierState_Satisfied">Satisfied</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -305,9 +306,8 @@ Class ReadModelBarrierResult
 
 
   <h4 class="section" id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrierResult_State_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Failure outranks pending on purpose. A batch containing one unreachable barrier is not something that
-becomes true by waiting, and reporting it as pending would keep a caller polling for a condition that
-can no longer occur.</p>
+  <div class="markdown level1 remarks"><p>Failure outranks unavailable, and unavailable outranks pending. Neither should be flattened into ordinary
+projection lag: one needs repair and the other needs a live deployment before progress can resume.</p>
 </div>
 
 
