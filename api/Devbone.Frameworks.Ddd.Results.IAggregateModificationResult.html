@@ -128,13 +128,6 @@ Interface IAggregateModificationResult
     </div>
   </dd></dl>
 
-  <dl class="typelist extensionMethods">
-    <dt>Extension Methods</dt>
-    <dd>
-  <div>
-      <a class="xref" href="Devbone.Frameworks.Ddd.Extensions.ResultExtensions.html#Devbone_Frameworks_Ddd_Extensions_ResultExtensions_GetCommitReceipt_Devbone_Frameworks_Ddd_Results_IResult_">ResultExtensions.GetCommitReceipt(IResult)</a>
-  </div>
-  </dd></dl>
 
 
 
@@ -173,10 +166,9 @@ Interface IAggregateModificationResult
 
 
   <h4 class="section" id="Devbone_Frameworks_Ddd_Results_IAggregateModificationResult_CommitReceipt_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> covers three ordinary outcomes as well as failure: a batch that emitted no event,
-a batch rejected before it reached persistence, and a duplicate request identity that was skipped
-because the original commit already exists. A caller that needs the position of the earlier commit in
-the duplicate case reads it from the event store by request identity.</p>
+  <div class="markdown level1 remarks"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> covers two ordinary outcomes as well as failure: a batch that emitted no event
+and a batch rejected before it reached persistence. A duplicate request identity carries the receipt
+of the original commit, marked <a class="xref" href="Devbone.Frameworks.Ddd.Results.AggregateCommitReceipt.html#Devbone_Frameworks_Ddd_Results_AggregateCommitReceipt_AlreadyCommitted">AlreadyCommitted</a>.</p>
 </div>
 
 

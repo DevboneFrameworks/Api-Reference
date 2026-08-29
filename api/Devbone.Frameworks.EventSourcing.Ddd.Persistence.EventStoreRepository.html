@@ -524,7 +524,7 @@ which no later retry can repair.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IIncrementGlobalResult[] GetNextIncrements(IReadOnlySet&lt;IIncrementGlobalProperty&gt; incrementGlobals)</code></pre>
+    <pre><code class="lang-csharp hljs">public IncrementGlobalAllocation[] GetNextIncrements(IReadOnlySet&lt;IIncrementGlobalProperty&gt; incrementGlobals)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -536,7 +536,7 @@ which no later retry can repair.
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/Results/IIncrementGlobalResult.cs">IIncrementGlobalResult</a>[]</dt>
+    <dt><a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/Results/IncrementGlobalAllocation.cs">IncrementGlobalAllocation</a>[]</dt>
     <dd><p>Distinct next values allocated atomically for the requested keys.</p>
 </dd>
   </dl>

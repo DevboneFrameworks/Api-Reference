@@ -130,6 +130,9 @@ Class AggregateModificationResult
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="Devbone.Frameworks.Ddd.Results.Result.html#Devbone_Frameworks_Ddd_Results_Result_AddResult_Devbone_Frameworks_Ddd_Results_IResult_">Result.AddResult(IResult)</a>
+    </div>
+    <div>
       <a class="xref" href="Devbone.Frameworks.Ddd.Results.Result.html#Devbone_Frameworks_Ddd_Results_Result_AddError_Devbone_Frameworks_Ddd_Results_DomainError_">Result.AddError(DomainError)</a>
     </div>
     <div>
@@ -161,13 +164,6 @@ Class AggregateModificationResult
     </div>
   </dd></dl>
 
-  <dl class="typelist extensionMethods">
-    <dt>Extension Methods</dt>
-    <dd>
-  <div>
-      <a class="xref" href="Devbone.Frameworks.Ddd.Extensions.ResultExtensions.html#Devbone_Frameworks_Ddd_Extensions_ResultExtensions_GetCommitReceipt_Devbone_Frameworks_Ddd_Results_IResult_">ResultExtensions.GetCommitReceipt(IResult)</a>
-  </div>
-  </dd></dl>
 
 
 
@@ -270,60 +266,11 @@ Class AggregateModificationResult
 
 
   <h4 class="section" id="Devbone_Frameworks_Ddd_Results_AggregateModificationResult_CommitReceipt_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> covers three ordinary outcomes as well as failure: a batch that emitted no event,
-a batch rejected before it reached persistence, and a duplicate request identity that was skipped
-because the original commit already exists. A caller that needs the position of the earlier commit in
-the duplicate case reads it from the event store by request identity.</p>
+  <div class="markdown level1 remarks"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> covers two ordinary outcomes as well as failure: a batch that emitted no event
+and a batch rejected before it reached persistence. A duplicate request identity carries the receipt
+of the original commit, marked <a class="xref" href="Devbone.Frameworks.Ddd.Results.AggregateCommitReceipt.html#Devbone_Frameworks_Ddd_Results_AggregateCommitReceipt_AlreadyCommitted">AlreadyCommitted</a>.</p>
 </div>
 
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="Devbone_Frameworks_Ddd_Results_AggregateModificationResult_AddResult_" data-uid="Devbone.Frameworks.Ddd.Results.AggregateModificationResult.AddResult*"></a>
-
-  <h3 id="Devbone_Frameworks_Ddd_Results_AggregateModificationResult_AddResult_Devbone_Frameworks_Ddd_Results_IResult_" data-uid="Devbone.Frameworks.Ddd.Results.AggregateModificationResult.AddResult(Devbone.Frameworks.Ddd.Results.IResult)">
-  AddResult(IResult)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Merges another result and adopts its commit receipt when it carries one.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void AddResult(IResult result)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>result</code> <a class="xref" href="Devbone.Frameworks.Ddd.Results.IResult.html">IResult</a></dt>
-    <dd><p>Result whose errors, and commit receipt when present, are taken over.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section" id="Devbone_Frameworks_Ddd_Results_AggregateModificationResult_AddResult_Devbone_Frameworks_Ddd_Results_IResult__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The receipt travels with the merge rather than being assigned by the orchestrating code, because a
-command result is assembled from several partial results and every path that merges the commit outcome
-should carry it. An assignment at one call site would be correct there and missing everywhere else.</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown when <code class="paramref">result</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
 
 
 

@@ -130,7 +130,6 @@ Class Result
       <div><a class="xref" href="Devbone.Frameworks.Ddd.Results.CommandCreationResult-2.html">CommandCreationResult&lt;TCommand, TIdentity&gt;</a></div>
       <div><a class="xref" href="Devbone.Frameworks.Ddd.Results.CommandCreationResults-1.html">CommandCreationResults&lt;TIdentity&gt;</a></div>
       <div><a class="xref" href="Devbone.Frameworks.Ddd.Results.EventStoredResult.html">EventStoredResult</a></div>
-      <div><a class="xref" href="Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.html">IncrementGlobalResult</a></div>
       <div><a class="xref" href="Devbone.Frameworks.Ddd.Results.LockResult.html">LockResult</a></div>
     </dd>
   </dl>
@@ -161,13 +160,6 @@ Class Result
     </div>
   </dd></dl>
 
-  <dl class="typelist extensionMethods">
-    <dt>Extension Methods</dt>
-    <dd>
-  <div>
-      <a class="xref" href="Devbone.Frameworks.Ddd.Extensions.ResultExtensions.html#Devbone_Frameworks_Ddd_Extensions_ResultExtensions_GetCommitReceipt_Devbone_Frameworks_Ddd_Results_IResult_">ResultExtensions.GetCommitReceipt(IResult)</a>
-  </div>
-  </dd></dl>
 
 
 
@@ -405,7 +397,7 @@ Class Result
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void AddResult(IResult result)</code></pre>
+    <pre><code class="lang-csharp hljs">public void AddResult(IResult result)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -423,9 +415,8 @@ Class Result
 
 
   <h4 class="section" id="Devbone_Frameworks_Ddd_Results_Result_AddResult_Devbone_Frameworks_Ddd_Results_IResult__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Virtual so a result type that carries more than errors can take that part over during the merge as well.
-<a class="xref" href="Devbone.Frameworks.Ddd.Results.AggregateModificationResult.html">AggregateModificationResult</a> uses it to adopt the commit receipt of the persistence result
-it is combined with.</p>
+  <div class="markdown level1 remarks"><p>A result merge copies errors only. Operations that own an additional value must propagate it explicitly
+at their orchestration boundary rather than relying on subtype-specific merge behavior.</p>
 </div>
 
   <h4 class="section">Exceptions</h4>

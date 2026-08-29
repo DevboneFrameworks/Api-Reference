@@ -478,7 +478,7 @@ and performs the aggregate's explicit commit only after successful handling.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task&lt;IResult&gt; Handle(IEnumerable&lt;Command&lt;TIdentity&gt;&gt; commands, CancellationToken cancellationToken = default)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;IAggregateModificationResult&gt; Handle(IEnumerable&lt;Command&lt;TIdentity&gt;&gt; commands, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -493,7 +493,7 @@ and performs the aggregate's explicit commit only after successful handling.</p>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IResult.html">IResult</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IAggregateModificationResult.html">IAggregateModificationResult</a>&gt;</dt>
     <dd><p>A task containing the combined validation, handling, and commit result.</p>
 </dd>
   </dl>
@@ -520,7 +520,7 @@ and performs the aggregate's explicit commit only after successful handling.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IResult&gt; HandleLockedAsync(IEnumerable&lt;Command&lt;TIdentity&gt;&gt; commands, Func&lt;TIdentity, TAggregate&gt; buildAggregate, CancellationToken cancellationToken = default)</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;IAggregateModificationResult&gt; HandleLockedAsync(IEnumerable&lt;Command&lt;TIdentity&gt;&gt; commands, Func&lt;TIdentity, TAggregate&gt; buildAggregate, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -538,7 +538,7 @@ and performs the aggregate's explicit commit only after successful handling.</p>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IResult.html">IResult</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IAggregateModificationResult.html">IAggregateModificationResult</a>&gt;</dt>
     <dd><p>A task containing validation, handling, idempotency, and commit outcomes.</p>
 </dd>
   </dl>

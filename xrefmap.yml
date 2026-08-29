@@ -4308,24 +4308,6 @@ references:
   commentId: Overload:Devbone.Frameworks.Ddd.Extensions.EventExtensions.ToStoredEvent
   fullName: Devbone.Frameworks.Ddd.Extensions.EventExtensions.ToStoredEvent
   nameWithType: EventExtensions.ToStoredEvent
-- uid: Devbone.Frameworks.Ddd.Extensions.ResultExtensions
-  name: ResultExtensions
-  href: api/Devbone.Frameworks.Ddd.Extensions.ResultExtensions.html
-  commentId: T:Devbone.Frameworks.Ddd.Extensions.ResultExtensions
-  fullName: Devbone.Frameworks.Ddd.Extensions.ResultExtensions
-  nameWithType: ResultExtensions
-- uid: Devbone.Frameworks.Ddd.Extensions.ResultExtensions.GetCommitReceipt(Devbone.Frameworks.Ddd.Results.IResult)
-  name: GetCommitReceipt(IResult)
-  href: api/Devbone.Frameworks.Ddd.Extensions.ResultExtensions.html#Devbone_Frameworks_Ddd_Extensions_ResultExtensions_GetCommitReceipt_Devbone_Frameworks_Ddd_Results_IResult_
-  commentId: M:Devbone.Frameworks.Ddd.Extensions.ResultExtensions.GetCommitReceipt(Devbone.Frameworks.Ddd.Results.IResult)
-  fullName: Devbone.Frameworks.Ddd.Extensions.ResultExtensions.GetCommitReceipt(Devbone.Frameworks.Ddd.Results.IResult)
-  nameWithType: ResultExtensions.GetCommitReceipt(IResult)
-- uid: Devbone.Frameworks.Ddd.Extensions.ResultExtensions.GetCommitReceipt*
-  name: GetCommitReceipt
-  href: api/Devbone.Frameworks.Ddd.Extensions.ResultExtensions.html#Devbone_Frameworks_Ddd_Extensions_ResultExtensions_GetCommitReceipt_
-  commentId: Overload:Devbone.Frameworks.Ddd.Extensions.ResultExtensions.GetCommitReceipt
-  fullName: Devbone.Frameworks.Ddd.Extensions.ResultExtensions.GetCommitReceipt
-  nameWithType: ResultExtensions.GetCommitReceipt
 - uid: Devbone.Frameworks.Ddd.Extensions.SystemTextJsonExtensions
   name: SystemTextJsonExtensions
   href: api/Devbone.Frameworks.Ddd.Extensions.SystemTextJsonExtensions.html
@@ -6730,18 +6712,6 @@ references:
   fullName.vb: Devbone.Frameworks.Ddd.Results.AggregateModificationResult.New
   nameWithType: AggregateModificationResult.AggregateModificationResult
   nameWithType.vb: AggregateModificationResult.New
-- uid: Devbone.Frameworks.Ddd.Results.AggregateModificationResult.AddResult(Devbone.Frameworks.Ddd.Results.IResult)
-  name: AddResult(IResult)
-  href: api/Devbone.Frameworks.Ddd.Results.AggregateModificationResult.html#Devbone_Frameworks_Ddd_Results_AggregateModificationResult_AddResult_Devbone_Frameworks_Ddd_Results_IResult_
-  commentId: M:Devbone.Frameworks.Ddd.Results.AggregateModificationResult.AddResult(Devbone.Frameworks.Ddd.Results.IResult)
-  fullName: Devbone.Frameworks.Ddd.Results.AggregateModificationResult.AddResult(Devbone.Frameworks.Ddd.Results.IResult)
-  nameWithType: AggregateModificationResult.AddResult(IResult)
-- uid: Devbone.Frameworks.Ddd.Results.AggregateModificationResult.AddResult*
-  name: AddResult
-  href: api/Devbone.Frameworks.Ddd.Results.AggregateModificationResult.html#Devbone_Frameworks_Ddd_Results_AggregateModificationResult_AddResult_
-  commentId: Overload:Devbone.Frameworks.Ddd.Results.AggregateModificationResult.AddResult
-  fullName: Devbone.Frameworks.Ddd.Results.AggregateModificationResult.AddResult
-  nameWithType: AggregateModificationResult.AddResult
 - uid: Devbone.Frameworks.Ddd.Results.AggregateModificationResult.CommitReceipt
   name: CommitReceipt
   href: api/Devbone.Frameworks.Ddd.Results.AggregateModificationResult.html#Devbone_Frameworks_Ddd_Results_AggregateModificationResult_CommitReceipt
@@ -7301,36 +7271,6 @@ references:
   commentId: Overload:Devbone.Frameworks.Ddd.Results.IEventStoredResult.CommitReceipt
   fullName: Devbone.Frameworks.Ddd.Results.IEventStoredResult.CommitReceipt
   nameWithType: IEventStoredResult.CommitReceipt
-- uid: Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult
-  name: IIncrementGlobalResult
-  href: api/Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.html
-  commentId: T:Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult
-  fullName: Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult
-  nameWithType: IIncrementGlobalResult
-- uid: Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.IncrementRequest
-  name: IncrementRequest
-  href: api/Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.html#Devbone_Frameworks_Ddd_Results_IIncrementGlobalResult_IncrementRequest
-  commentId: P:Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.IncrementRequest
-  fullName: Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.IncrementRequest
-  nameWithType: IIncrementGlobalResult.IncrementRequest
-- uid: Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.IncrementRequest*
-  name: IncrementRequest
-  href: api/Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.html#Devbone_Frameworks_Ddd_Results_IIncrementGlobalResult_IncrementRequest_
-  commentId: Overload:Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.IncrementRequest
-  fullName: Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.IncrementRequest
-  nameWithType: IIncrementGlobalResult.IncrementRequest
-- uid: Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.Value
-  name: Value
-  href: api/Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.html#Devbone_Frameworks_Ddd_Results_IIncrementGlobalResult_Value
-  commentId: P:Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.Value
-  fullName: Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.Value
-  nameWithType: IIncrementGlobalResult.Value
-- uid: Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.Value*
-  name: Value
-  href: api/Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.html#Devbone_Frameworks_Ddd_Results_IIncrementGlobalResult_Value_
-  commentId: Overload:Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.Value
-  fullName: Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.Value
-  nameWithType: IIncrementGlobalResult.Value
 - uid: Devbone.Frameworks.Ddd.Results.ILockResult
   name: ILockResult
   href: api/Devbone.Frameworks.Ddd.Results.ILockResult.html
@@ -7403,54 +7343,138 @@ references:
   commentId: Overload:Devbone.Frameworks.Ddd.Results.IResult.Success
   fullName: Devbone.Frameworks.Ddd.Results.IResult.Success
   nameWithType: IResult.Success
-- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalResult
-  name: IncrementGlobalResult
-  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.html
-  commentId: T:Devbone.Frameworks.Ddd.Results.IncrementGlobalResult
-  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalResult
-  nameWithType: IncrementGlobalResult
-- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.#ctor(Devbone.Frameworks.Ddd.IncrementValues.IncrementGlobalProperty,System.Int64)
-  name: IncrementGlobalResult(IncrementGlobalProperty, long)
-  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalResult__ctor_Devbone_Frameworks_Ddd_IncrementValues_IncrementGlobalProperty_System_Int64_
-  commentId: M:Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.#ctor(Devbone.Frameworks.Ddd.IncrementValues.IncrementGlobalProperty,System.Int64)
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation
+  name: IncrementGlobalAllocation
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html
+  commentId: T:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation
+  nameWithType: IncrementGlobalAllocation
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.#ctor(Devbone.Frameworks.Ddd.IncrementValues.IncrementGlobalProperty,System.Int64)
+  name: IncrementGlobalAllocation(IncrementGlobalProperty, long)
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation__ctor_Devbone_Frameworks_Ddd_IncrementValues_IncrementGlobalProperty_System_Int64_
+  commentId: M:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.#ctor(Devbone.Frameworks.Ddd.IncrementValues.IncrementGlobalProperty,System.Int64)
   name.vb: New(IncrementGlobalProperty, Long)
-  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.IncrementGlobalResult(Devbone.Frameworks.Ddd.IncrementValues.IncrementGlobalProperty, long)
-  fullName.vb: Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.New(Devbone.Frameworks.Ddd.IncrementValues.IncrementGlobalProperty, Long)
-  nameWithType: IncrementGlobalResult.IncrementGlobalResult(IncrementGlobalProperty, long)
-  nameWithType.vb: IncrementGlobalResult.New(IncrementGlobalProperty, Long)
-- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.#ctor*
-  name: IncrementGlobalResult
-  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalResult__ctor_
-  commentId: Overload:Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.#ctor
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.IncrementGlobalAllocation(Devbone.Frameworks.Ddd.IncrementValues.IncrementGlobalProperty, long)
+  fullName.vb: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.New(Devbone.Frameworks.Ddd.IncrementValues.IncrementGlobalProperty, Long)
+  nameWithType: IncrementGlobalAllocation.IncrementGlobalAllocation(IncrementGlobalProperty, long)
+  nameWithType.vb: IncrementGlobalAllocation.New(IncrementGlobalProperty, Long)
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.#ctor*
+  name: IncrementGlobalAllocation
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation__ctor_
+  commentId: Overload:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.#ctor
   name.vb: New
-  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.IncrementGlobalResult
-  fullName.vb: Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.New
-  nameWithType: IncrementGlobalResult.IncrementGlobalResult
-  nameWithType.vb: IncrementGlobalResult.New
-- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.IncrementRequest
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.IncrementGlobalAllocation
+  fullName.vb: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.New
+  nameWithType: IncrementGlobalAllocation.IncrementGlobalAllocation
+  nameWithType.vb: IncrementGlobalAllocation.New
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Equals(Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation)
+  name: Equals(IncrementGlobalAllocation?)
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_Equals_Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_
+  commentId: M:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Equals(Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation)
+  name.vb: Equals(IncrementGlobalAllocation)
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Equals(Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation?)
+  fullName.vb: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Equals(Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation)
+  nameWithType: IncrementGlobalAllocation.Equals(IncrementGlobalAllocation?)
+  nameWithType.vb: IncrementGlobalAllocation.Equals(IncrementGlobalAllocation)
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_Equals_System_Object_
+  commentId: M:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Equals(object?)
+  fullName.vb: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Equals(Object)
+  nameWithType: IncrementGlobalAllocation.Equals(object?)
+  nameWithType.vb: IncrementGlobalAllocation.Equals(Object)
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Equals*
+  name: Equals
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_Equals_
+  commentId: Overload:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Equals
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Equals
+  nameWithType: IncrementGlobalAllocation.Equals
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.GetHashCode
+  name: GetHashCode()
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_GetHashCode
+  commentId: M:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.GetHashCode
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.GetHashCode()
+  nameWithType: IncrementGlobalAllocation.GetHashCode()
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.GetHashCode*
+  name: GetHashCode
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_GetHashCode_
+  commentId: Overload:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.GetHashCode
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.GetHashCode
+  nameWithType: IncrementGlobalAllocation.GetHashCode
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.IncrementRequest
   name: IncrementRequest
-  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalResult_IncrementRequest
-  commentId: P:Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.IncrementRequest
-  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.IncrementRequest
-  nameWithType: IncrementGlobalResult.IncrementRequest
-- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.IncrementRequest*
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_IncrementRequest
+  commentId: P:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.IncrementRequest
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.IncrementRequest
+  nameWithType: IncrementGlobalAllocation.IncrementRequest
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.IncrementRequest*
   name: IncrementRequest
-  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalResult_IncrementRequest_
-  commentId: Overload:Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.IncrementRequest
-  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.IncrementRequest
-  nameWithType: IncrementGlobalResult.IncrementRequest
-- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.Value
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_IncrementRequest_
+  commentId: Overload:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.IncrementRequest
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.IncrementRequest
+  nameWithType: IncrementGlobalAllocation.IncrementRequest
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.ToString
+  name: ToString()
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_ToString
+  commentId: M:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.ToString
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.ToString()
+  nameWithType: IncrementGlobalAllocation.ToString()
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.ToString*
+  name: ToString
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_ToString_
+  commentId: Overload:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.ToString
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.ToString
+  nameWithType: IncrementGlobalAllocation.ToString
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Value
   name: Value
-  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalResult_Value
-  commentId: P:Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.Value
-  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.Value
-  nameWithType: IncrementGlobalResult.Value
-- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.Value*
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_Value
+  commentId: P:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Value
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Value
+  nameWithType: IncrementGlobalAllocation.Value
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Value*
   name: Value
-  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalResult_Value_
-  commentId: Overload:Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.Value
-  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.Value
-  nameWithType: IncrementGlobalResult.Value
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_Value_
+  commentId: Overload:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Value
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.Value
+  nameWithType: IncrementGlobalAllocation.Value
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.op_Equality(Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation,Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation)
+  name: operator ==(IncrementGlobalAllocation?, IncrementGlobalAllocation?)
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_op_Equality_Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_
+  commentId: M:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.op_Equality(Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation,Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation)
+  name.vb: =(IncrementGlobalAllocation, IncrementGlobalAllocation)
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.operator ==(Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation?, Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation?)
+  fullName.vb: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.=(Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation, Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation)
+  nameWithType: IncrementGlobalAllocation.operator ==(IncrementGlobalAllocation?, IncrementGlobalAllocation?)
+  nameWithType.vb: IncrementGlobalAllocation.=(IncrementGlobalAllocation, IncrementGlobalAllocation)
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.op_Equality*
+  name: operator ==
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_op_Equality_
+  commentId: Overload:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.op_Equality
+  name.vb: =
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.operator ==
+  fullName.vb: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.=
+  nameWithType: IncrementGlobalAllocation.operator ==
+  nameWithType.vb: IncrementGlobalAllocation.=
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.op_Inequality(Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation,Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation)
+  name: operator !=(IncrementGlobalAllocation?, IncrementGlobalAllocation?)
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_op_Inequality_Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_
+  commentId: M:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.op_Inequality(Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation,Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation)
+  name.vb: <>(IncrementGlobalAllocation, IncrementGlobalAllocation)
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.operator !=(Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation?, Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation?)
+  fullName.vb: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.<>(Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation, Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation)
+  nameWithType: IncrementGlobalAllocation.operator !=(IncrementGlobalAllocation?, IncrementGlobalAllocation?)
+  nameWithType.vb: IncrementGlobalAllocation.<>(IncrementGlobalAllocation, IncrementGlobalAllocation)
+- uid: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.op_Inequality*
+  name: operator !=
+  href: api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html#Devbone_Frameworks_Ddd_Results_IncrementGlobalAllocation_op_Inequality_
+  commentId: Overload:Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.op_Inequality
+  name.vb: <>
+  fullName: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.operator !=
+  fullName.vb: Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.<>
+  nameWithType: IncrementGlobalAllocation.operator !=
+  nameWithType.vb: IncrementGlobalAllocation.<>
 - uid: Devbone.Frameworks.Ddd.Results.LockResult
   name: LockResult
   href: api/Devbone.Frameworks.Ddd.Results.LockResult.html

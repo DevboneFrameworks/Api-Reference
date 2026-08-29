@@ -1104,20 +1104,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.Ddd.Extensions.ResultExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.Ddd.Extensions.ResultExtensions.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.Ddd.Extensions.ResultExtensions",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Extensions.ResultExtensions.yml\" sourcestartlinenumber=\"1\">Reads the commit receipt out of the results a command pipeline hands back.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.Ddd.Extensions.SystemTextJsonExtensions.yml",
       "output": {
         ".html": {
@@ -1748,20 +1734,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.yml\" sourcestartlinenumber=\"1\">Defines the result of reserving one aggregate-scoped global increment.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.Ddd.Results.ILockResult.yml",
       "output": {
         ".html": {
@@ -1790,17 +1762,17 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.yml",
+      "source_relative_path": "api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.html"
+          "relative_path": "api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Devbone.Frameworks.Ddd.Results.IncrementGlobalResult",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Results.IncrementGlobalResult.yml\" sourcestartlinenumber=\"1\">Represents one successfully allocated global increment value.</p>\n"
+      "Title": "Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.yml\" sourcestartlinenumber=\"1\">Represents one successfully allocated aggregate-scoped increment value.</p>\n"
     },
     {
       "type": "ManagedReference",

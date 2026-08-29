@@ -280,7 +280,7 @@ guards, fault handling, telemetry, or explicit aggregate commit semantics.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IIncrementGlobalResult GetNextIncrement(IIncrementGlobalProperty incrementRequest)</code></pre>
+    <pre><code class="lang-csharp hljs">IncrementGlobalAllocation GetNextIncrement(IIncrementGlobalProperty incrementRequest)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -292,7 +292,7 @@ guards, fault handling, telemetry, or explicit aggregate commit semantics.</p>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IIncrementGlobalResult.html">IIncrementGlobalResult</a></dt>
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html">IncrementGlobalAllocation</a></dt>
     <dd><p>The allocated increment and its key.</p>
 </dd>
   </dl>
