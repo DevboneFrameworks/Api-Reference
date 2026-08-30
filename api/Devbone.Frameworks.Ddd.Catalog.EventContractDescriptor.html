@@ -362,7 +362,7 @@ the version-aware verification rules inapplicable to this contract — it is nev
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a stable hash over <a class="xref" href="Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.html#Devbone_Frameworks_Ddd_Catalog_EventContractDescriptor_Fields">Fields</a>, for a quick &quot;did the payload change at all&quot; comparison.</p>
+  <div class="markdown level1 summary"><p>Gets a stable hash over <a class="xref" href="Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.html#Devbone_Frameworks_Ddd_Catalog_EventContractDescriptor_Fields">Fields</a>, for compact artifact diffs and integrity checks.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -385,8 +385,8 @@ the version-aware verification rules inapplicable to this contract — it is nev
 
   <h4 class="section" id="Devbone_Frameworks_Ddd_Catalog_EventContractDescriptor_FieldsFingerprint_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The hash alone cannot classify a change: adding an optional property is allowed without a new version,
-renaming one is not, and both change the hash. Verification therefore compares
-<a class="xref" href="Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.html#Devbone_Frameworks_Ddd_Catalog_EventContractDescriptor_Fields">Fields</a> and uses this value only as a shortcut when nothing changed.</p>
+renaming one is not, and both change the hash. Verification therefore always compares
+<a class="xref" href="Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.html#Devbone_Frameworks_Ddd_Catalog_EventContractDescriptor_Fields">Fields</a> and never trusts this derived value as compatibility evidence by itself.</p>
 </div>
 
 
