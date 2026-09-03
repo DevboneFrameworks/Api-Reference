@@ -260,6 +260,12 @@ public class UniqueValueBuilderAttribute : Attribute, IUniqueAttribute</code></p
 
 
 
+  <h2 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>The decorated property is first, followed by selected siblings in reflection order, not array order.
+Values are concatenated without a delimiter; comparison and optional JSON serialization apply to each
+component. Ambiguous raw concatenations collide before hashing. Changing encoding changes persisted
+reservations and requires an explicit migration.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors

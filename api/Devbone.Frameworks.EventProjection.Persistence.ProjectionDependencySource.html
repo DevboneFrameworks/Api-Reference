@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ProjectionDependencySource | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Identifies one framework-owned aggregate document and the position observed while producing an output.">
+      <meta name="description" content="Identifies one framework-owned aggregate document and either its observed position or explicit absence.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class ProjectionDependencySource
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Identifies one framework-owned aggregate document and the position observed while producing an output.</p>
+  <div class="markdown summary"><p>Identifies one framework-owned aggregate document and either its observed position or explicit absence.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -154,7 +154,7 @@ Class ProjectionDependencySource
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Identifies one framework-owned aggregate document and the position observed while producing an output.</p>
+  <div class="markdown level1 summary"><p>Identifies one framework-owned aggregate document and either its observed position or explicit absence.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -171,7 +171,7 @@ Class ProjectionDependencySource
     <dd><p>Source aggregate identifier.</p>
 </dd>
     <dt><code>ObservedSequence</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd><p>Source event sequence observed by the handler.</p>
+    <dd><p>Source event sequence observed by the handler, or zero with <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionDependencySource_IsAbsent">IsAbsent</a>.</p>
 </dd>
   </dl>
 
@@ -254,6 +254,42 @@ Class ProjectionDependencySource
 
 
 
+  <a id="Devbone_Frameworks_EventProjection_Persistence_ProjectionDependencySource_IsAbsent_" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.IsAbsent*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_ProjectionDependencySource_IsAbsent" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.IsAbsent">
+  IsAbsent
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the handler observed no tenant-visible source document instead of a positive sequence.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAbsent { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Persistence_ProjectionDependencySource_IsAbsent_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>An absent source uses an <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionDependencySource_ObservedSequence">ObservedSequence</a> of zero only as an in-memory placeholder. Stores
+persist this distinct marker and omit the positive-sequence field.</p>
+</div>
+
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Persistence_ProjectionDependencySource_ObservedSequence_" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.ObservedSequence*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Persistence_ProjectionDependencySource_ObservedSequence" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.ObservedSequence">
@@ -261,7 +297,7 @@ Class ProjectionDependencySource
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Source event sequence observed by the handler.</p>
+  <div class="markdown level1 summary"><p>Source event sequence observed by the handler, or zero with <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionDependencySource_IsAbsent">IsAbsent</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

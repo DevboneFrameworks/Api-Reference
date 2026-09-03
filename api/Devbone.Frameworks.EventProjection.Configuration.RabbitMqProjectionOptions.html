@@ -539,7 +539,8 @@ Class RabbitMqProjectionOptions
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether each queue permits only one active consumer across application replicas.</p>
+  <div class="markdown level1 summary"><p>Gets whether each ordered queue permits only one active consumer across application replicas. Must be
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>; the property remains bindable so invalid legacy configuration fails explicitly.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

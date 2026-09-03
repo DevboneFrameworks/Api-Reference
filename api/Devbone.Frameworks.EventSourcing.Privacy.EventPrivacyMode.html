@@ -123,11 +123,12 @@ Enum EventPrivacyMode
 </dd>
     <dt id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyMode_Optional"><code>Optional = 1</code></dt>
   
-  <dd><p>Persists and validates privacy metadata when an application supplies it.</p>
+  <dd><p>Requires and validates a privacy assessment for every event and snapshot while allowing contracts
+without a registered privacy definition.</p>
 </dd>
     <dt id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyMode_Required"><code>Required = 2</code></dt>
   
-  <dd><p>Requires an explicit privacy assessment for every stored event.</p>
+  <dd><p>Requires a privacy assessment and a registered privacy definition for every stored event.</p>
 </dd>
   </dl>
 

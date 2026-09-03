@@ -174,7 +174,7 @@ durable write with a wait that can never succeed, and the caller cannot tell tha
   <a id="Devbone_Frameworks_EventProjection_Client_Registry_IProjectionRegistry_ResolveAsync_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.IProjectionRegistry.ResolveAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_IProjectionRegistry_ResolveAsync_System_Collections_Generic_IReadOnlyCollection_System_String__System_Collections_Generic_IReadOnlyCollection_System_String__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.IProjectionRegistry.ResolveAsync(System.Collections.Generic.IReadOnlyCollection{System.String},System.Collections.Generic.IReadOnlyCollection{System.String},System.Threading.CancellationToken)">
-  ResolveAsync(IReadOnlyCollection&lt;string&gt;?, IReadOnlyCollection&lt;string&gt;, CancellationToken)
+  ResolveAsync(IReadOnlyCollection&lt;string&gt;, IReadOnlyCollection&lt;string&gt;, CancellationToken)
   
   </h3>
 
@@ -183,14 +183,13 @@ durable write with a wait that can never succeed, and the caller cannot tell tha
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ProjectionSelection&gt; ResolveAsync(IReadOnlyCollection&lt;string&gt;? requestedNames, IReadOnlyCollection&lt;string&gt; aggregateNames, CancellationToken cancellationToken = default)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ProjectionSelection&gt; ResolveAsync(IReadOnlyCollection&lt;string&gt; requestedNames, IReadOnlyCollection&lt;string&gt; aggregateNames, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>requestedNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>Explicit projection names, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for every published projection that observes one of
-<code class="paramref">aggregateNames</code>.</p>
+    <dd><p>Explicit stable public projection names.</p>
 </dd>
     <dt><code>aggregateNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd><p>The aggregate types the command wrote.</p>
@@ -221,7 +220,10 @@ acceptance must not retroactively extend a request that is already in flight.</p
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown when <code class="paramref">aggregateNames</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown when either collection is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when no projection name is supplied or a name is empty.</p>
 </dd>
   </dl>
 

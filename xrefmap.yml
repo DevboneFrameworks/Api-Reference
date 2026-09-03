@@ -1518,6 +1518,48 @@ references:
   commentId: Overload:Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateEventMetadataFactory.Instance
   fullName: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateEventMetadataFactory.Instance
   nameWithType: AggregateEventMetadataFactory.Instance
+- uid: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException
+  name: AggregateRehydrationException
+  href: api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.html
+  commentId: T:Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException
+  fullName: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException
+  nameWithType: AggregateRehydrationException
+- uid: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventName
+  name: EventName
+  href: api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.html#Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventName
+  commentId: P:Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventName
+  fullName: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventName
+  nameWithType: AggregateRehydrationException.EventName
+- uid: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventName*
+  name: EventName
+  href: api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.html#Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventName_
+  commentId: Overload:Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventName
+  fullName: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventName
+  nameWithType: AggregateRehydrationException.EventName
+- uid: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventSequence
+  name: EventSequence
+  href: api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.html#Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventSequence
+  commentId: P:Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventSequence
+  fullName: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventSequence
+  nameWithType: AggregateRehydrationException.EventSequence
+- uid: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventSequence*
+  name: EventSequence
+  href: api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.html#Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventSequence_
+  commentId: Overload:Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventSequence
+  fullName: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventSequence
+  nameWithType: AggregateRehydrationException.EventSequence
+- uid: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventVersion
+  name: EventVersion
+  href: api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.html#Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventVersion
+  commentId: P:Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventVersion
+  fullName: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventVersion
+  nameWithType: AggregateRehydrationException.EventVersion
+- uid: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventVersion*
+  name: EventVersion
+  href: api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.html#Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventVersion_
+  commentId: Overload:Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventVersion
+  fullName: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventVersion
+  nameWithType: AggregateRehydrationException.EventVersion
 - uid: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.IAggregateEventMetadataFactory
   name: IAggregateEventMetadataFactory
   href: api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.IAggregateEventMetadataFactory.html
@@ -2187,6 +2229,18 @@ references:
   commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.ToString
   fullName: Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.ToString
   nameWithType: EventContractDescriptor.ToString
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.Uniqueness
+  name: Uniqueness
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.html#Devbone_Frameworks_Ddd_Catalog_EventContractDescriptor_Uniqueness
+  commentId: P:Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.Uniqueness
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.Uniqueness
+  nameWithType: EventContractDescriptor.Uniqueness
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.Uniqueness*
+  name: Uniqueness
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.html#Devbone_Frameworks_Ddd_Catalog_EventContractDescriptor_Uniqueness_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.Uniqueness
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.Uniqueness
+  nameWithType: EventContractDescriptor.Uniqueness
 - uid: Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.op_Equality(Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor,Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor)
   name: operator ==(EventContractDescriptor?, EventContractDescriptor?)
   href: api/Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.html#Devbone_Frameworks_Ddd_Catalog_EventContractDescriptor_op_Equality_Devbone_Frameworks_Ddd_Catalog_EventContractDescriptor_Devbone_Frameworks_Ddd_Catalog_EventContractDescriptor_
@@ -2559,6 +2613,366 @@ references:
   fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractRoute.<>
   nameWithType: EventContractRoute.operator !=
   nameWithType.vb: EventContractRoute.<>
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration
+  name: EventContractUniqueDeclaration
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html
+  commentId: T:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration
+  nameWithType: EventContractUniqueDeclaration
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.#ctor
+  name: EventContractUniqueDeclaration()
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration__ctor
+  commentId: M:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.#ctor
+  name.vb: New()
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.EventContractUniqueDeclaration()
+  fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.New()
+  nameWithType: EventContractUniqueDeclaration.EventContractUniqueDeclaration()
+  nameWithType.vb: EventContractUniqueDeclaration.New()
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.#ctor*
+  name: EventContractUniqueDeclaration
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration__ctor_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.EventContractUniqueDeclaration
+  fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.New
+  nameWithType: EventContractUniqueDeclaration.EventContractUniqueDeclaration
+  nameWithType.vb: EventContractUniqueDeclaration.New
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.CompareStrategy
+  name: CompareStrategy
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_CompareStrategy
+  commentId: P:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.CompareStrategy
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.CompareStrategy
+  nameWithType: EventContractUniqueDeclaration.CompareStrategy
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.CompareStrategy*
+  name: CompareStrategy
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_CompareStrategy_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.CompareStrategy
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.CompareStrategy
+  nameWithType: EventContractUniqueDeclaration.CompareStrategy
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Components
+  name: Components
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_Components
+  commentId: P:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Components
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Components
+  nameWithType: EventContractUniqueDeclaration.Components
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Components*
+  name: Components
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_Components_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Components
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Components
+  nameWithType: EventContractUniqueDeclaration.Components
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Composition
+  name: Composition
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_Composition
+  commentId: P:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Composition
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Composition
+  nameWithType: EventContractUniqueDeclaration.Composition
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Composition*
+  name: Composition
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_Composition_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Composition
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Composition
+  nameWithType: EventContractUniqueDeclaration.Composition
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Equals(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration)
+  name: Equals(EventContractUniqueDeclaration?)
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_Equals_Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_
+  commentId: M:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Equals(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration)
+  name.vb: Equals(EventContractUniqueDeclaration)
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Equals(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration?)
+  fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Equals(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration)
+  nameWithType: EventContractUniqueDeclaration.Equals(EventContractUniqueDeclaration?)
+  nameWithType.vb: EventContractUniqueDeclaration.Equals(EventContractUniqueDeclaration)
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_Equals_System_Object_
+  commentId: M:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Equals(object?)
+  fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Equals(Object)
+  nameWithType: EventContractUniqueDeclaration.Equals(object?)
+  nameWithType.vb: EventContractUniqueDeclaration.Equals(Object)
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Equals*
+  name: Equals
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_Equals_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Equals
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Equals
+  nameWithType: EventContractUniqueDeclaration.Equals
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.GetHashCode
+  name: GetHashCode()
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_GetHashCode
+  commentId: M:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.GetHashCode
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.GetHashCode()
+  nameWithType: EventContractUniqueDeclaration.GetHashCode()
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.GetHashCode*
+  name: GetHashCode
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_GetHashCode_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.GetHashCode
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.GetHashCode
+  nameWithType: EventContractUniqueDeclaration.GetHashCode
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.IsCaseSensitive
+  name: IsCaseSensitive
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_IsCaseSensitive
+  commentId: P:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.IsCaseSensitive
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.IsCaseSensitive
+  nameWithType: EventContractUniqueDeclaration.IsCaseSensitive
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.IsCaseSensitive*
+  name: IsCaseSensitive
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_IsCaseSensitive_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.IsCaseSensitive
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.IsCaseSensitive
+  nameWithType: EventContractUniqueDeclaration.IsCaseSensitive
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.JsonName
+  name: JsonName
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_JsonName
+  commentId: P:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.JsonName
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.JsonName
+  nameWithType: EventContractUniqueDeclaration.JsonName
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.JsonName*
+  name: JsonName
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_JsonName_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.JsonName
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.JsonName
+  nameWithType: EventContractUniqueDeclaration.JsonName
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Key
+  name: Key
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_Key
+  commentId: P:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Key
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Key
+  nameWithType: EventContractUniqueDeclaration.Key
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Key*
+  name: Key
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_Key_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Key
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Key
+  nameWithType: EventContractUniqueDeclaration.Key
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.MemberName
+  name: MemberName
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_MemberName
+  commentId: P:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.MemberName
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.MemberName
+  nameWithType: EventContractUniqueDeclaration.MemberName
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.MemberName*
+  name: MemberName
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_MemberName_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.MemberName
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.MemberName
+  nameWithType: EventContractUniqueDeclaration.MemberName
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Scope
+  name: Scope
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_Scope
+  commentId: P:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Scope
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Scope
+  nameWithType: EventContractUniqueDeclaration.Scope
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Scope*
+  name: Scope
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_Scope_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Scope
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.Scope
+  nameWithType: EventContractUniqueDeclaration.Scope
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.ToString
+  name: ToString()
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_ToString
+  commentId: M:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.ToString
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.ToString()
+  nameWithType: EventContractUniqueDeclaration.ToString()
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.ToString*
+  name: ToString
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_ToString_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.ToString
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.ToString
+  nameWithType: EventContractUniqueDeclaration.ToString
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.UseSerialization
+  name: UseSerialization
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_UseSerialization
+  commentId: P:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.UseSerialization
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.UseSerialization
+  nameWithType: EventContractUniqueDeclaration.UseSerialization
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.UseSerialization*
+  name: UseSerialization
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_UseSerialization_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.UseSerialization
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.UseSerialization
+  nameWithType: EventContractUniqueDeclaration.UseSerialization
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.op_Equality(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration,Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration)
+  name: operator ==(EventContractUniqueDeclaration?, EventContractUniqueDeclaration?)
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_op_Equality_Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_
+  commentId: M:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.op_Equality(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration,Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration)
+  name.vb: =(EventContractUniqueDeclaration, EventContractUniqueDeclaration)
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.operator ==(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration?, Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration?)
+  fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.=(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration, Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration)
+  nameWithType: EventContractUniqueDeclaration.operator ==(EventContractUniqueDeclaration?, EventContractUniqueDeclaration?)
+  nameWithType.vb: EventContractUniqueDeclaration.=(EventContractUniqueDeclaration, EventContractUniqueDeclaration)
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.op_Equality*
+  name: operator ==
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_op_Equality_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.op_Equality
+  name.vb: =
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.operator ==
+  fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.=
+  nameWithType: EventContractUniqueDeclaration.operator ==
+  nameWithType.vb: EventContractUniqueDeclaration.=
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.op_Inequality(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration,Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration)
+  name: operator !=(EventContractUniqueDeclaration?, EventContractUniqueDeclaration?)
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_op_Inequality_Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_
+  commentId: M:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.op_Inequality(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration,Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration)
+  name.vb: <>(EventContractUniqueDeclaration, EventContractUniqueDeclaration)
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.operator !=(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration?, Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration?)
+  fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.<>(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration, Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration)
+  nameWithType: EventContractUniqueDeclaration.operator !=(EventContractUniqueDeclaration?, EventContractUniqueDeclaration?)
+  nameWithType.vb: EventContractUniqueDeclaration.<>(EventContractUniqueDeclaration, EventContractUniqueDeclaration)
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.op_Inequality*
+  name: operator !=
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueDeclaration_op_Inequality_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.op_Inequality
+  name.vb: <>
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.operator !=
+  fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.<>
+  nameWithType: EventContractUniqueDeclaration.operator !=
+  nameWithType.vb: EventContractUniqueDeclaration.<>
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness
+  name: EventContractUniqueness
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html
+  commentId: T:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness
+  nameWithType: EventContractUniqueness
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.#ctor
+  name: EventContractUniqueness()
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness__ctor
+  commentId: M:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.#ctor
+  name.vb: New()
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.EventContractUniqueness()
+  fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.New()
+  nameWithType: EventContractUniqueness.EventContractUniqueness()
+  nameWithType.vb: EventContractUniqueness.New()
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.#ctor*
+  name: EventContractUniqueness
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness__ctor_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.EventContractUniqueness
+  fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.New
+  nameWithType: EventContractUniqueness.EventContractUniqueness
+  nameWithType.vb: EventContractUniqueness.New
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Declarations
+  name: Declarations
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_Declarations
+  commentId: P:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Declarations
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Declarations
+  nameWithType: EventContractUniqueness.Declarations
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Declarations*
+  name: Declarations
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_Declarations_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Declarations
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Declarations
+  nameWithType: EventContractUniqueness.Declarations
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Equals(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness)
+  name: Equals(EventContractUniqueness?)
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_Equals_Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_
+  commentId: M:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Equals(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness)
+  name.vb: Equals(EventContractUniqueness)
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Equals(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness?)
+  fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Equals(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness)
+  nameWithType: EventContractUniqueness.Equals(EventContractUniqueness?)
+  nameWithType.vb: EventContractUniqueness.Equals(EventContractUniqueness)
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_Equals_System_Object_
+  commentId: M:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Equals(object?)
+  fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Equals(Object)
+  nameWithType: EventContractUniqueness.Equals(object?)
+  nameWithType.vb: EventContractUniqueness.Equals(Object)
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Equals*
+  name: Equals
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_Equals_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Equals
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Equals
+  nameWithType: EventContractUniqueness.Equals
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Fingerprint
+  name: Fingerprint
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_Fingerprint
+  commentId: P:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Fingerprint
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Fingerprint
+  nameWithType: EventContractUniqueness.Fingerprint
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Fingerprint*
+  name: Fingerprint
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_Fingerprint_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Fingerprint
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.Fingerprint
+  nameWithType: EventContractUniqueness.Fingerprint
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.GetHashCode
+  name: GetHashCode()
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_GetHashCode
+  commentId: M:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.GetHashCode
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.GetHashCode()
+  nameWithType: EventContractUniqueness.GetHashCode()
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.GetHashCode*
+  name: GetHashCode
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_GetHashCode_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.GetHashCode
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.GetHashCode
+  nameWithType: EventContractUniqueness.GetHashCode
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.IsRuntimeComputed
+  name: IsRuntimeComputed
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_IsRuntimeComputed
+  commentId: P:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.IsRuntimeComputed
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.IsRuntimeComputed
+  nameWithType: EventContractUniqueness.IsRuntimeComputed
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.IsRuntimeComputed*
+  name: IsRuntimeComputed
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_IsRuntimeComputed_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.IsRuntimeComputed
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.IsRuntimeComputed
+  nameWithType: EventContractUniqueness.IsRuntimeComputed
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.ToString
+  name: ToString()
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_ToString
+  commentId: M:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.ToString
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.ToString()
+  nameWithType: EventContractUniqueness.ToString()
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.ToString*
+  name: ToString
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_ToString_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.ToString
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.ToString
+  nameWithType: EventContractUniqueness.ToString
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.op_Equality(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness,Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness)
+  name: operator ==(EventContractUniqueness?, EventContractUniqueness?)
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_op_Equality_Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_
+  commentId: M:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.op_Equality(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness,Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness)
+  name.vb: =(EventContractUniqueness, EventContractUniqueness)
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.operator ==(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness?, Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness?)
+  fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.=(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness, Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness)
+  nameWithType: EventContractUniqueness.operator ==(EventContractUniqueness?, EventContractUniqueness?)
+  nameWithType.vb: EventContractUniqueness.=(EventContractUniqueness, EventContractUniqueness)
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.op_Equality*
+  name: operator ==
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_op_Equality_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.op_Equality
+  name.vb: =
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.operator ==
+  fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.=
+  nameWithType: EventContractUniqueness.operator ==
+  nameWithType.vb: EventContractUniqueness.=
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.op_Inequality(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness,Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness)
+  name: operator !=(EventContractUniqueness?, EventContractUniqueness?)
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_op_Inequality_Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_
+  commentId: M:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.op_Inequality(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness,Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness)
+  name.vb: <>(EventContractUniqueness, EventContractUniqueness)
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.operator !=(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness?, Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness?)
+  fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.<>(Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness, Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness)
+  nameWithType: EventContractUniqueness.operator !=(EventContractUniqueness?, EventContractUniqueness?)
+  nameWithType.vb: EventContractUniqueness.<>(EventContractUniqueness, EventContractUniqueness)
+- uid: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.op_Inequality*
+  name: operator !=
+  href: api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html#Devbone_Frameworks_Ddd_Catalog_EventContractUniqueness_op_Inequality_
+  commentId: Overload:Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.op_Inequality
+  name.vb: <>
+  fullName: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.operator !=
+  fullName.vb: Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.<>
+  nameWithType: EventContractUniqueness.operator !=
+  nameWithType.vb: EventContractUniqueness.<>
 - uid: Devbone.Frameworks.Ddd.Catalog.EventContractViolation
   name: EventContractViolation
   href: api/Devbone.Frameworks.Ddd.Catalog.EventContractViolation.html
@@ -18115,13 +18529,13 @@ references:
   fullName: Devbone.Frameworks.EventProjection.Client.Registry.IProjectionRegistry.GetProjectionsAsync
   nameWithType: IProjectionRegistry.GetProjectionsAsync
 - uid: Devbone.Frameworks.EventProjection.Client.Registry.IProjectionRegistry.ResolveAsync(System.Collections.Generic.IReadOnlyCollection{System.String},System.Collections.Generic.IReadOnlyCollection{System.String},System.Threading.CancellationToken)
-  name: ResolveAsync(IReadOnlyCollection<string>?, IReadOnlyCollection<string>, CancellationToken)
+  name: ResolveAsync(IReadOnlyCollection<string>, IReadOnlyCollection<string>, CancellationToken)
   href: api/Devbone.Frameworks.EventProjection.Client.Registry.IProjectionRegistry.html#Devbone_Frameworks_EventProjection_Client_Registry_IProjectionRegistry_ResolveAsync_System_Collections_Generic_IReadOnlyCollection_System_String__System_Collections_Generic_IReadOnlyCollection_System_String__System_Threading_CancellationToken_
   commentId: M:Devbone.Frameworks.EventProjection.Client.Registry.IProjectionRegistry.ResolveAsync(System.Collections.Generic.IReadOnlyCollection{System.String},System.Collections.Generic.IReadOnlyCollection{System.String},System.Threading.CancellationToken)
   name.vb: ResolveAsync(IReadOnlyCollection(Of String), IReadOnlyCollection(Of String), CancellationToken)
-  fullName: Devbone.Frameworks.EventProjection.Client.Registry.IProjectionRegistry.ResolveAsync(System.Collections.Generic.IReadOnlyCollection<string>?, System.Collections.Generic.IReadOnlyCollection<string>, System.Threading.CancellationToken)
+  fullName: Devbone.Frameworks.EventProjection.Client.Registry.IProjectionRegistry.ResolveAsync(System.Collections.Generic.IReadOnlyCollection<string>, System.Collections.Generic.IReadOnlyCollection<string>, System.Threading.CancellationToken)
   fullName.vb: Devbone.Frameworks.EventProjection.Client.Registry.IProjectionRegistry.ResolveAsync(System.Collections.Generic.IReadOnlyCollection(Of String), System.Collections.Generic.IReadOnlyCollection(Of String), System.Threading.CancellationToken)
-  nameWithType: IProjectionRegistry.ResolveAsync(IReadOnlyCollection<string>?, IReadOnlyCollection<string>, CancellationToken)
+  nameWithType: IProjectionRegistry.ResolveAsync(IReadOnlyCollection<string>, IReadOnlyCollection<string>, CancellationToken)
   nameWithType.vb: IProjectionRegistry.ResolveAsync(IReadOnlyCollection(Of String), IReadOnlyCollection(Of String), CancellationToken)
 - uid: Devbone.Frameworks.EventProjection.Client.Registry.IProjectionRegistry.ResolveAsync*
   name: ResolveAsync
@@ -18181,13 +18595,13 @@ references:
   fullName: Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.GetProjectionsAsync
   nameWithType: MongoProjectionRegistry.GetProjectionsAsync
 - uid: Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.ResolveAsync(System.Collections.Generic.IReadOnlyCollection{System.String},System.Collections.Generic.IReadOnlyCollection{System.String},System.Threading.CancellationToken)
-  name: ResolveAsync(IReadOnlyCollection<string>?, IReadOnlyCollection<string>, CancellationToken)
+  name: ResolveAsync(IReadOnlyCollection<string>, IReadOnlyCollection<string>, CancellationToken)
   href: api/Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.html#Devbone_Frameworks_EventProjection_Client_Registry_MongoProjectionRegistry_ResolveAsync_System_Collections_Generic_IReadOnlyCollection_System_String__System_Collections_Generic_IReadOnlyCollection_System_String__System_Threading_CancellationToken_
   commentId: M:Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.ResolveAsync(System.Collections.Generic.IReadOnlyCollection{System.String},System.Collections.Generic.IReadOnlyCollection{System.String},System.Threading.CancellationToken)
   name.vb: ResolveAsync(IReadOnlyCollection(Of String), IReadOnlyCollection(Of String), CancellationToken)
-  fullName: Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.ResolveAsync(System.Collections.Generic.IReadOnlyCollection<string>?, System.Collections.Generic.IReadOnlyCollection<string>, System.Threading.CancellationToken)
+  fullName: Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.ResolveAsync(System.Collections.Generic.IReadOnlyCollection<string>, System.Collections.Generic.IReadOnlyCollection<string>, System.Threading.CancellationToken)
   fullName.vb: Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.ResolveAsync(System.Collections.Generic.IReadOnlyCollection(Of String), System.Collections.Generic.IReadOnlyCollection(Of String), System.Threading.CancellationToken)
-  nameWithType: MongoProjectionRegistry.ResolveAsync(IReadOnlyCollection<string>?, IReadOnlyCollection<string>, CancellationToken)
+  nameWithType: MongoProjectionRegistry.ResolveAsync(IReadOnlyCollection<string>, IReadOnlyCollection<string>, CancellationToken)
   nameWithType.vb: MongoProjectionRegistry.ResolveAsync(IReadOnlyCollection(Of String), IReadOnlyCollection(Of String), CancellationToken)
 - uid: Devbone.Frameworks.EventProjection.Client.Registry.MongoProjectionRegistry.ResolveAsync*
   name: ResolveAsync
@@ -25083,6 +25497,18 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.GetHashCode
   fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.GetHashCode
   nameWithType: ProjectionDependencySource.GetHashCode
+- uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.IsAbsent
+  name: IsAbsent
+  href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionDependencySource_IsAbsent
+  commentId: P:Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.IsAbsent
+  fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.IsAbsent
+  nameWithType: ProjectionDependencySource.IsAbsent
+- uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.IsAbsent*
+  name: IsAbsent
+  href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionDependencySource_IsAbsent_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.IsAbsent
+  fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.IsAbsent
+  nameWithType: ProjectionDependencySource.IsAbsent
 - uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.ObservedSequence
   name: ObservedSequence
   href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionDependencySource_ObservedSequence
@@ -26517,6 +26943,15 @@ references:
   commentId: T:Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor
   fullName: Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor
   nameWithType: DerivedProjectionProcessor
+- uid: Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.#ctor(Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore,Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStore,Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry,Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore,Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore,Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore,Devbone.Frameworks.EventProjection.Persistence.IDerivedProjectionDependencyStore,Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions)
+  name: DerivedProjectionProcessor(IMergedProjectionStore, IRawProjectionStore, DerivedProjectionRegistry, IProjectionControlPlaneStore, IProjectionCheckpointStore, IProjectionInvalidationStore, IDerivedProjectionDependencyStore, ProjectionWorkerIdentity, ProjectionPipelineOptions)
+  href: api/Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.html#Devbone_Frameworks_EventProjection_Projections_DerivedProjectionProcessor__ctor_Devbone_Frameworks_EventProjection_Persistence_IMergedProjectionStore_Devbone_Frameworks_EventProjection_Persistence_IRawProjectionStore_Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_Devbone_Frameworks_EventProjection_Persistence_IProjectionControlPlaneStore_Devbone_Frameworks_EventProjection_Persistence_IProjectionCheckpointStore_Devbone_Frameworks_EventProjection_Persistence_IProjectionInvalidationStore_Devbone_Frameworks_EventProjection_Persistence_IDerivedProjectionDependencyStore_Devbone_Frameworks_EventProjection_Persistence_ProjectionWorkerIdentity_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.#ctor(Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore,Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStore,Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry,Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore,Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore,Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore,Devbone.Frameworks.EventProjection.Persistence.IDerivedProjectionDependencyStore,Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions)
+  name.vb: New(IMergedProjectionStore, IRawProjectionStore, DerivedProjectionRegistry, IProjectionControlPlaneStore, IProjectionCheckpointStore, IProjectionInvalidationStore, IDerivedProjectionDependencyStore, ProjectionWorkerIdentity, ProjectionPipelineOptions)
+  fullName: Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.DerivedProjectionProcessor(Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore, Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStore, Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry, Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore, Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore, Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore, Devbone.Frameworks.EventProjection.Persistence.IDerivedProjectionDependencyStore, Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity, Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.New(Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore, Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStore, Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry, Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore, Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore, Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore, Devbone.Frameworks.EventProjection.Persistence.IDerivedProjectionDependencyStore, Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity, Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions)
+  nameWithType: DerivedProjectionProcessor.DerivedProjectionProcessor(IMergedProjectionStore, IRawProjectionStore, DerivedProjectionRegistry, IProjectionControlPlaneStore, IProjectionCheckpointStore, IProjectionInvalidationStore, IDerivedProjectionDependencyStore, ProjectionWorkerIdentity, ProjectionPipelineOptions)
+  nameWithType.vb: DerivedProjectionProcessor.New(IMergedProjectionStore, IRawProjectionStore, DerivedProjectionRegistry, IProjectionControlPlaneStore, IProjectionCheckpointStore, IProjectionInvalidationStore, IDerivedProjectionDependencyStore, ProjectionWorkerIdentity, ProjectionPipelineOptions)
 - uid: Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.#ctor(Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore,Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry,Devbone.Frameworks.EventProjection.Persistence.IProjectionControlPlaneStore,Devbone.Frameworks.EventProjection.Persistence.IProjectionCheckpointStore,Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore,Devbone.Frameworks.EventProjection.Persistence.IDerivedProjectionDependencyStore,Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions)
   name: DerivedProjectionProcessor(IMergedProjectionStore, DerivedProjectionRegistry, IProjectionControlPlaneStore, IProjectionCheckpointStore, IProjectionInvalidationStore, IDerivedProjectionDependencyStore, ProjectionWorkerIdentity, ProjectionPipelineOptions)
   href: api/Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.html#Devbone_Frameworks_EventProjection_Projections_DerivedProjectionProcessor__ctor_Devbone_Frameworks_EventProjection_Persistence_IMergedProjectionStore_Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_Devbone_Frameworks_EventProjection_Persistence_IProjectionControlPlaneStore_Devbone_Frameworks_EventProjection_Persistence_IProjectionCheckpointStore_Devbone_Frameworks_EventProjection_Persistence_IProjectionInvalidationStore_Devbone_Frameworks_EventProjection_Persistence_IDerivedProjectionDependencyStore_Devbone_Frameworks_EventProjection_Persistence_ProjectionWorkerIdentity_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_

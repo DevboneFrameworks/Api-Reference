@@ -281,8 +281,8 @@ republishing to a shared broker.</p>
 
 
   <h4 class="section" id="Devbone_Frameworks_EventBus_Outbox_Resend_ResendOptions_LeaseDuration_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Must comfortably exceed the time one batch takes at the slowest permitted rate, or a healthy instance
-loses its own lease mid-batch and the request is picked up twice.</p>
+  <div class="markdown level1 remarks"><p>Progress renews this lease after every confirmed message and during longer rate-limit waits. It must
+still comfortably exceed one broker publication plus one durable progress update.</p>
 </div>
 
 

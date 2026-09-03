@@ -146,7 +146,7 @@ the changed source.</p>
     <dd><p>Changed source aggregate identifier.</p>
 </dd>
     <dt><code>sourceEventSequence</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd><p>Changed source position; already observed positions are excluded.</p>
+    <dd><p>Changed source position; already observed positive positions are excluded.</p>
 </dd>
     <dt><code>tenantId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Tenant shared by the changed source and dependent outputs.</p>
@@ -290,7 +290,7 @@ the changed source.</p>
     <dd><p>Output identity whose dependency set is replaced.</p>
 </dd>
     <dt><code>sources</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.html">ProjectionDependencySource</a>&gt;</dt>
-    <dd><p>Complete, unique source set observed by the successful output write.</p>
+    <dd><p>Complete, unique set of positive or absent sources from the successful output write.</p>
 </dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd><p>Cancellation token.</p>

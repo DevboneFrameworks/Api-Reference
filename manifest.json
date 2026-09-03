@@ -306,6 +306,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.yml\" sourcestartlinenumber=\"1\">Adds persisted event coordinates to an unexpected deserialization or application failure during aggregate replay.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.IAggregateEventMetadataFactory.yml",
       "output": {
         ".html": {
@@ -485,6 +499,34 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.Ddd.Catalog.EventContractRoute",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Catalog.EventContractRoute.yml\" sourcestartlinenumber=\"1\">Describes one configured publication target of an aggregate.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueDeclaration.yml\" sourcestartlinenumber=\"1\">Describes one attribute-driven reservation, without containing an instance's reserved value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Catalog.EventContractUniqueness.yml\" sourcestartlinenumber=\"1\">Describes declared write-side uniqueness independently of serialized payload shape.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5160,7 +5202,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.yml\" sourcestartlinenumber=\"1\">Identifies one framework-owned aggregate document and the position observed while producing an output.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionDependencySource.yml\" sourcestartlinenumber=\"1\">Identifies one framework-owned aggregate document and either its observed position or explicit absence.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5384,7 +5426,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Projections.IDependencyTrackingProjectionHandler",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.IDependencyTrackingProjectionHandler.yml\" sourcestartlinenumber=\"1\">Builds an application-owned query model while tracking additional framework-owned aggregate documents read\nduring execution.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.IDependencyTrackingProjectionHandler.yml\" sourcestartlinenumber=\"1\">Builds an application-owned query model while tracking other framework-owned aggregate documents read\nduring execution.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7798,11 +7840,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "api/toc.json"
-        },
         ".html": {
           "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
       "version": ""
@@ -7821,11 +7863,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "toc.json"
-        },
         ".html": {
           "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""

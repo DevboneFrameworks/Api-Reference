@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class EventPersistenceGatewayException | Devbone Event-Driven Platform </title>
+      <title>Class AggregateRehydrationException | Devbone Event-Driven Platform </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class EventPersistenceGatewayException | Devbone Event-Driven Platform ">
+      <meta name="title" content="Class AggregateRehydrationException | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Reports an HTTP gateway rejection that cannot be represented by a DDD result contract.">
+      <meta name="description" content="Adds persisted event coordinates to an unexpected deserialization or application failure during aggregate replay.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,25 +84,25 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Devbone.Frameworks.EventPersistence.Client.EventPersistenceGatewayException">
+        <article data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException">
 
 
 
-  <h1 id="Devbone_Frameworks_EventPersistence_Client_EventPersistenceGatewayException" data-uid="Devbone.Frameworks.EventPersistence.Client.EventPersistenceGatewayException" class="text-break">
-Class EventPersistenceGatewayException  
+  <h1 id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException" data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException" class="text-break">
+Class AggregateRehydrationException  
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventPersistence.html">EventPersistence</a>.<a class="xref" href="Devbone.Frameworks.EventPersistence.Client.html">Client</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventPersistence.Client.dll</dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.Ddd.html">Ddd</a>.<a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.html">Aggregates</a>.<a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.html">Infrastructure</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.Ddd.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Reports an HTTP gateway rejection that cannot be represented by a DDD result contract.</p>
+  <div class="markdown summary"><p>Adds persisted event coordinates to an unexpected deserialization or application failure during aggregate replay.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class EventPersistenceGatewayException : Exception, ISerializable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class AggregateRehydrationException : InvalidOperationException, ISerializable</code></pre>
   </div>
 
 
@@ -113,7 +113,9 @@ Class EventPersistenceGatewayException
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></div>
-      <div><span class="xref">EventPersistenceGatewayException</span></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.systemexception">SystemException</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></div>
+      <div><span class="xref">AggregateRehydrationException</span></div>
     </dd>
   </dl>
 
@@ -178,65 +180,30 @@ Class EventPersistenceGatewayException
 
 
 
-
-
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="Devbone_Frameworks_EventPersistence_Client_EventPersistenceGatewayException__ctor_" data-uid="Devbone.Frameworks.EventPersistence.Client.EventPersistenceGatewayException.#ctor*"></a>
-
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_EventPersistenceGatewayException__ctor_System_Net_HttpStatusCode_System_Collections_Generic_IReadOnlyList_Devbone_Frameworks_EventPersistence_Contracts_Errors_GatewayError__" data-uid="Devbone.Frameworks.EventPersistence.Client.EventPersistenceGatewayException.#ctor(System.Net.HttpStatusCode,System.Collections.Generic.IReadOnlyList{Devbone.Frameworks.EventPersistence.Contracts.Errors.GatewayError})">
-  EventPersistenceGatewayException(HttpStatusCode, IReadOnlyList&lt;GatewayError&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Initializes an exception for one rejected gateway request.</p>
+  <h2 id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Wraps serializer and event-application failures only. Storage acquisition, unknown contracts, stream gaps,
+identity and lifecycle validation can throw other exceptions. The inner cause is not necessarily a data
+error; application policy decides whether to handle it. Do not log payload-bearing inner exceptions.</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EventPersistenceGatewayException(HttpStatusCode statusCode, IReadOnlyList&lt;GatewayError&gt; errors)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>statusCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.httpstatuscode">HttpStatusCode</a></dt>
-    <dd><p>HTTP response status.</p>
-</dd>
-    <dt><code>errors</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.EventPersistence.Contracts/Errors/GatewayError.cs">GatewayError</a>&gt;</dt>
-    <dd><p>Structured gateway errors.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
 
 
   <h2 class="section" id="properties">Properties
 </h2>
 
 
-  <a id="Devbone_Frameworks_EventPersistence_Client_EventPersistenceGatewayException_Errors_" data-uid="Devbone.Frameworks.EventPersistence.Client.EventPersistenceGatewayException.Errors*"></a>
+  <a id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventName_" data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventName*"></a>
 
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_EventPersistenceGatewayException_Errors" data-uid="Devbone.Frameworks.EventPersistence.Client.EventPersistenceGatewayException.Errors">
-  Errors
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventName" data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventName">
+  EventName
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets structured gateway errors.</p>
+  <div class="markdown level1 summary"><p>Gets the stable contract of the event that could not be deserialized or applied.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;GatewayError&gt; Errors { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string EventName { get; }</code></pre>
   </div>
 
 
@@ -245,7 +212,7 @@ Class EventPersistenceGatewayException
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.EventPersistence.Contracts/Errors/GatewayError.cs">GatewayError</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 
@@ -256,19 +223,19 @@ Class EventPersistenceGatewayException
 
 
 
-  <a id="Devbone_Frameworks_EventPersistence_Client_EventPersistenceGatewayException_StatusCode_" data-uid="Devbone.Frameworks.EventPersistence.Client.EventPersistenceGatewayException.StatusCode*"></a>
+  <a id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventSequence_" data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventSequence*"></a>
 
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_EventPersistenceGatewayException_StatusCode" data-uid="Devbone.Frameworks.EventPersistence.Client.EventPersistenceGatewayException.StatusCode">
-  StatusCode
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventSequence" data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventSequence">
+  EventSequence
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the HTTP response status.</p>
+  <div class="markdown level1 summary"><p>Gets the event position within its aggregate instance's stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HttpStatusCode StatusCode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long EventSequence { get; }</code></pre>
   </div>
 
 
@@ -277,7 +244,39 @@ Class EventPersistenceGatewayException
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.httpstatuscode">HttpStatusCode</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventVersion_" data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventVersion*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventVersion" data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventVersion">
+  EventVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the persisted payload-schema version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int EventVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
   </dl>
 

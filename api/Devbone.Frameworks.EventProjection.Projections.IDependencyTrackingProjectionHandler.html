@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IDependencyTrackingProjectionHandler | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Builds an application-owned query model while tracking additional framework-owned aggregate documents read during execution.">
+      <meta name="description" content="Builds an application-owned query model while tracking other framework-owned aggregate documents read during execution.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Interface IDependencyTrackingProjectionHandler
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Builds an application-owned query model while tracking additional framework-owned aggregate documents read
+  <div class="markdown summary"><p>Builds an application-owned query model while tracking other framework-owned aggregate documents read
 during execution.</p>
 </div>
   <div class="markdown conceptual"></div>
@@ -135,6 +135,9 @@ during execution.</p>
   <h2 id="Devbone_Frameworks_EventProjection_Projections_IDependencyTrackingProjectionHandler_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>This additive handler shape leaves <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.IProjectionHandler.html">IProjectionHandler</a> unchanged. Implement it only when the
 handler reads related merged documents through <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_ReadMergedAsync_System_String_System_String_System_Threading_CancellationToken_">ReadMergedAsync(string, string, CancellationToken)</a>.
+This includes sources already enriched into the triggering merged state: reading embedded JSON alone
+records no derived dependency. Increase DefinitionVersion when retrofitting tracking so existing outputs
+are rebuilt and acquire their missing dependency sets.
 Database, remote-service, and other reads outside that method remain opaque and retain conservative static
 <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.IProjectionHandler.html#Devbone_Frameworks_EventProjection_Projections_IProjectionHandler_CanHandle_System_String_">CanHandle(string)</a> triggers.</p>
 </div>
