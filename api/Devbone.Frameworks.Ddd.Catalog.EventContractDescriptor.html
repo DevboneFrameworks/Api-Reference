@@ -292,8 +292,8 @@ declaration rather than any particular event instance.
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the declared payload-schema version, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when it could not be resolved
-statically.</p>
+  <div class="markdown level1 summary"><p>Gets the positive current write version declared by <code>EventContractAttribute</code>, or
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when reading a legacy catalogue that did not resolve one.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -315,9 +315,9 @@ statically.</p>
 
 
   <h4 class="section" id="Devbone_Frameworks_Ddd_Catalog_EventContractDescriptor_EventVersion_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The version reaches the event through its base constructor, so it is derivable only when the value is a
-literal or a constant parameter default. An unresolved version is reported as a build warning and makes
-the version-aware verification rules inapplicable to this contract — it is never guessed.</p>
+  <div class="markdown level1 remarks"><p>The generator reads the attribute's integer literal or named compile-time constant directly. A
+non-positive declaration is reported and omitted rather than producing a new descriptor with a null
+version. Null remains supported here so older committed catalogue documents can still be compared.</p>
 </div>
 
 

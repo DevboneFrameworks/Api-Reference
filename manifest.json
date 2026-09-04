@@ -1058,7 +1058,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.Ddd.Events.EventContractAttribute",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Events.EventContractAttribute.yml\" sourcestartlinenumber=\"1\">Defines the stable persistence and transport key of an aggregate event independently of its CLR type name.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Events.EventContractAttribute.yml\" sourcestartlinenumber=\"1\">Defines the stable persistence and transport key and current write version of an aggregate event.</p>\n"
     },
     {
       "type": "ManagedReference",

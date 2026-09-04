@@ -196,15 +196,15 @@ references:
   fullName.vb: Devbone.Frameworks.Ddd.Aggregates.AggregateEvent(Of TAggregateEvent, TAggregate, TIdentity)
   nameWithType: AggregateEvent<TAggregateEvent, TAggregate, TIdentity>
   nameWithType.vb: AggregateEvent(Of TAggregateEvent, TAggregate, TIdentity)
-- uid: Devbone.Frameworks.Ddd.Aggregates.AggregateEvent`3.#ctor(System.Int32)
-  name: AggregateEvent(int)
-  href: api/Devbone.Frameworks.Ddd.Aggregates.AggregateEvent-3.html#Devbone_Frameworks_Ddd_Aggregates_AggregateEvent_3__ctor_System_Int32_
-  commentId: M:Devbone.Frameworks.Ddd.Aggregates.AggregateEvent`3.#ctor(System.Int32)
-  name.vb: New(Integer)
-  fullName: Devbone.Frameworks.Ddd.Aggregates.AggregateEvent<TAggregateEvent, TAggregate, TIdentity>.AggregateEvent(int)
-  fullName.vb: Devbone.Frameworks.Ddd.Aggregates.AggregateEvent(Of TAggregateEvent, TAggregate, TIdentity).New(Integer)
-  nameWithType: AggregateEvent<TAggregateEvent, TAggregate, TIdentity>.AggregateEvent(int)
-  nameWithType.vb: AggregateEvent(Of TAggregateEvent, TAggregate, TIdentity).New(Integer)
+- uid: Devbone.Frameworks.Ddd.Aggregates.AggregateEvent`3.#ctor
+  name: AggregateEvent()
+  href: api/Devbone.Frameworks.Ddd.Aggregates.AggregateEvent-3.html#Devbone_Frameworks_Ddd_Aggregates_AggregateEvent_3__ctor
+  commentId: M:Devbone.Frameworks.Ddd.Aggregates.AggregateEvent`3.#ctor
+  name.vb: New()
+  fullName: Devbone.Frameworks.Ddd.Aggregates.AggregateEvent<TAggregateEvent, TAggregate, TIdentity>.AggregateEvent()
+  fullName.vb: Devbone.Frameworks.Ddd.Aggregates.AggregateEvent(Of TAggregateEvent, TAggregate, TIdentity).New()
+  nameWithType: AggregateEvent<TAggregateEvent, TAggregate, TIdentity>.AggregateEvent()
+  nameWithType.vb: AggregateEvent(Of TAggregateEvent, TAggregate, TIdentity).New()
 - uid: Devbone.Frameworks.Ddd.Aggregates.AggregateEvent`3.#ctor*
   name: AggregateEvent
   href: api/Devbone.Frameworks.Ddd.Aggregates.AggregateEvent-3.html#Devbone_Frameworks_Ddd_Aggregates_AggregateEvent_3__ctor_
@@ -4542,15 +4542,15 @@ references:
   commentId: T:Devbone.Frameworks.Ddd.Events.EventContractAttribute
   fullName: Devbone.Frameworks.Ddd.Events.EventContractAttribute
   nameWithType: EventContractAttribute
-- uid: Devbone.Frameworks.Ddd.Events.EventContractAttribute.#ctor(System.String)
-  name: EventContractAttribute(string)
-  href: api/Devbone.Frameworks.Ddd.Events.EventContractAttribute.html#Devbone_Frameworks_Ddd_Events_EventContractAttribute__ctor_System_String_
-  commentId: M:Devbone.Frameworks.Ddd.Events.EventContractAttribute.#ctor(System.String)
-  name.vb: New(String)
-  fullName: Devbone.Frameworks.Ddd.Events.EventContractAttribute.EventContractAttribute(string)
-  fullName.vb: Devbone.Frameworks.Ddd.Events.EventContractAttribute.New(String)
-  nameWithType: EventContractAttribute.EventContractAttribute(string)
-  nameWithType.vb: EventContractAttribute.New(String)
+- uid: Devbone.Frameworks.Ddd.Events.EventContractAttribute.#ctor(System.String,System.Int32)
+  name: EventContractAttribute(string, int)
+  href: api/Devbone.Frameworks.Ddd.Events.EventContractAttribute.html#Devbone_Frameworks_Ddd_Events_EventContractAttribute__ctor_System_String_System_Int32_
+  commentId: M:Devbone.Frameworks.Ddd.Events.EventContractAttribute.#ctor(System.String,System.Int32)
+  name.vb: New(String, Integer)
+  fullName: Devbone.Frameworks.Ddd.Events.EventContractAttribute.EventContractAttribute(string, int)
+  fullName.vb: Devbone.Frameworks.Ddd.Events.EventContractAttribute.New(String, Integer)
+  nameWithType: EventContractAttribute.EventContractAttribute(string, int)
+  nameWithType.vb: EventContractAttribute.New(String, Integer)
 - uid: Devbone.Frameworks.Ddd.Events.EventContractAttribute.#ctor*
   name: EventContractAttribute
   href: api/Devbone.Frameworks.Ddd.Events.EventContractAttribute.html#Devbone_Frameworks_Ddd_Events_EventContractAttribute__ctor_
@@ -4572,6 +4572,18 @@ references:
   commentId: Overload:Devbone.Frameworks.Ddd.Events.EventContractAttribute.Name
   fullName: Devbone.Frameworks.Ddd.Events.EventContractAttribute.Name
   nameWithType: EventContractAttribute.Name
+- uid: Devbone.Frameworks.Ddd.Events.EventContractAttribute.Version
+  name: Version
+  href: api/Devbone.Frameworks.Ddd.Events.EventContractAttribute.html#Devbone_Frameworks_Ddd_Events_EventContractAttribute_Version
+  commentId: P:Devbone.Frameworks.Ddd.Events.EventContractAttribute.Version
+  fullName: Devbone.Frameworks.Ddd.Events.EventContractAttribute.Version
+  nameWithType: EventContractAttribute.Version
+- uid: Devbone.Frameworks.Ddd.Events.EventContractAttribute.Version*
+  name: Version
+  href: api/Devbone.Frameworks.Ddd.Events.EventContractAttribute.html#Devbone_Frameworks_Ddd_Events_EventContractAttribute_Version_
+  commentId: Overload:Devbone.Frameworks.Ddd.Events.EventContractAttribute.Version
+  fullName: Devbone.Frameworks.Ddd.Events.EventContractAttribute.Version
+  nameWithType: EventContractAttribute.Version
 - uid: Devbone.Frameworks.Ddd.Events.IAggregateCreatedEvent`1
   name: IAggregateCreatedEvent<TIdentity>
   href: api/Devbone.Frameworks.Ddd.Events.IAggregateCreatedEvent-1.html

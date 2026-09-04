@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class EventContractAttribute | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Defines the stable persistence and transport key of an aggregate event independently of its CLR type name.">
+      <meta name="description" content="Defines the stable persistence and transport key and current write version of an aggregate event.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class EventContractAttribute
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.Ddd.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Defines the stable persistence and transport key of an aggregate event independently of its CLR type name.</p>
+  <div class="markdown summary"><p>Defines the stable persistence and transport key and current write version of an aggregate event.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -253,7 +253,7 @@ public sealed class EventContractAttribute : Attribute</code></pre>
 
   <h2 id="Devbone_Frameworks_Ddd_Events_EventContractAttribute_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>Every aggregate event must declare this attribute. Keep the contract unchanged across CLR type renames.
-Compatible event schema evolution should keep this key unchanged and increment the event version instead.</p>
+Compatible event schema evolution should keep this key unchanged and increment <a class="xref" href="Devbone.Frameworks.Ddd.Events.EventContractAttribute.html#Devbone_Frameworks_Ddd_Events_EventContractAttribute_Version">Version</a> instead.</p>
 </div>
 
 
@@ -263,24 +263,27 @@ Compatible event schema evolution should keep this key unchanged and increment t
 
   <a id="Devbone_Frameworks_Ddd_Events_EventContractAttribute__ctor_" data-uid="Devbone.Frameworks.Ddd.Events.EventContractAttribute.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Events_EventContractAttribute__ctor_System_String_" data-uid="Devbone.Frameworks.Ddd.Events.EventContractAttribute.#ctor(System.String)">
-  EventContractAttribute(string)
+  <h3 id="Devbone_Frameworks_Ddd_Events_EventContractAttribute__ctor_System_String_System_Int32_" data-uid="Devbone.Frameworks.Ddd.Events.EventContractAttribute.#ctor(System.String,System.Int32)">
+  EventContractAttribute(string, int)
   
   </h3>
 
   <div class="markdown level1 summary"><p>Declares the durable key written to the event store and published to external consumers, decoupling it from
-the CLR type name and from payload-schema versioning.</p>
+the CLR type name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EventContractAttribute(string name)</code></pre>
+    <pre><code class="lang-csharp hljs">public EventContractAttribute(string name, int version)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Non-empty event key persisted in the event store and published on transports.</p>
+</dd>
+    <dt><code>version</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Positive current payload-schema version written for newly emitted events.</p>
 </dd>
   </dl>
 
@@ -296,6 +299,9 @@ the CLR type name and from payload-schema versioning.</p>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
     <dd><p>Thrown when <code class="paramref">name</code> is empty or whitespace.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown when <code class="paramref">version</code> is not positive.</p>
 </dd>
   </dl>
 
@@ -333,6 +339,42 @@ the CLR type name and from payload-schema versioning.</p>
 
 
 
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Events_EventContractAttribute_Version_" data-uid="Devbone.Frameworks.Ddd.Events.EventContractAttribute.Version*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Events_EventContractAttribute_Version" data-uid="Devbone.Frameworks.Ddd.Events.EventContractAttribute.Version">
+  Version
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current payload-schema version written for newly emitted events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Version { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_Ddd_Events_EventContractAttribute_Version_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Replayed events expose the version persisted with their own row through
+<code>IAggregateEvent.Version</code>; that historical value can be lower than this declaration.</p>
+</div>
 
 
 

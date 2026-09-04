@@ -173,25 +173,19 @@ stable event contract, JSON serialization, and extraction of uniqueness and incr
 
   <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateEvent_3__ctor_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateEvent`3.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateEvent_3__ctor_System_Int32_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateEvent`3.#ctor(System.Int32)">
-  AggregateEvent(int)
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateEvent_3__ctor" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateEvent`3.#ctor">
+  AggregateEvent()
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates an event with the payload-schema version that is persisted separately from its aggregate stream position.</p>
+  <div class="markdown level1 summary"><p>Creates an event with the write version declared by <a class="xref" href="Devbone.Frameworks.Ddd.Events.EventContractAttribute.html">EventContractAttribute</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AggregateEvent(int eventVersion)</code></pre>
+    <pre><code class="lang-csharp hljs">protected AggregateEvent()</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>eventVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Version of the event schema.</p>
-</dd>
-  </dl>
 
 
 
@@ -285,7 +279,8 @@ public virtual string EventName { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Version { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public int Version { get; }</code></pre>
   </div>
 
 
