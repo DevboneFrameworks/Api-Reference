@@ -1560,6 +1560,18 @@ references:
   commentId: Overload:Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventVersion
   fullName: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventVersion
   nameWithType: AggregateRehydrationException.EventVersion
+- uid: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayException
+  name: AggregateReplayException
+  href: api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayException.html
+  commentId: T:Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayException
+  fullName: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayException
+  nameWithType: AggregateReplayException
+- uid: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayValidationException
+  name: AggregateReplayValidationException
+  href: api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayValidationException.html
+  commentId: T:Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayValidationException
+  fullName: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayValidationException
+  nameWithType: AggregateReplayValidationException
 - uid: Devbone.Frameworks.Ddd.Aggregates.Infrastructure.IAggregateEventMetadataFactory
   name: IAggregateEventMetadataFactory
   href: api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.IAggregateEventMetadataFactory.html
@@ -9291,6 +9303,102 @@ references:
   commentId: Overload:Devbone.Frameworks.Ddd.UniqueValues.UniqueAttribute.UseSerialization
   fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueAttribute.UseSerialization
   nameWithType: UniqueAttribute.UseSerialization
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute
+  name: UniqueCollectionAttribute
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html
+  commentId: T:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute
+  nameWithType: UniqueCollectionAttribute
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.#ctor(Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection,System.String,System.Boolean,Devbone.Frameworks.Ddd.UniqueValues.UniqueScopeKind)
+  name: UniqueCollectionAttribute(UniqueCollectionSelection, string?, bool, UniqueScopeKind)
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute__ctor_Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionSelection_System_String_System_Boolean_Devbone_Frameworks_Ddd_UniqueValues_UniqueScopeKind_
+  commentId: M:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.#ctor(Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection,System.String,System.Boolean,Devbone.Frameworks.Ddd.UniqueValues.UniqueScopeKind)
+  name.vb: New(UniqueCollectionSelection, String, Boolean, UniqueScopeKind)
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.UniqueCollectionAttribute(Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection, string?, bool, Devbone.Frameworks.Ddd.UniqueValues.UniqueScopeKind)
+  fullName.vb: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.New(Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection, String, Boolean, Devbone.Frameworks.Ddd.UniqueValues.UniqueScopeKind)
+  nameWithType: UniqueCollectionAttribute.UniqueCollectionAttribute(UniqueCollectionSelection, string?, bool, UniqueScopeKind)
+  nameWithType.vb: UniqueCollectionAttribute.New(UniqueCollectionSelection, String, Boolean, UniqueScopeKind)
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.#ctor*
+  name: UniqueCollectionAttribute
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute__ctor_
+  commentId: Overload:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.UniqueCollectionAttribute
+  fullName.vb: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.New
+  nameWithType: UniqueCollectionAttribute.UniqueCollectionAttribute
+  nameWithType.vb: UniqueCollectionAttribute.New
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.IsCaseSensitive
+  name: IsCaseSensitive
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_IsCaseSensitive
+  commentId: P:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.IsCaseSensitive
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.IsCaseSensitive
+  nameWithType: UniqueCollectionAttribute.IsCaseSensitive
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.IsCaseSensitive*
+  name: IsCaseSensitive
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_IsCaseSensitive_
+  commentId: Overload:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.IsCaseSensitive
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.IsCaseSensitive
+  nameWithType: UniqueCollectionAttribute.IsCaseSensitive
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.KeyName
+  name: KeyName
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_KeyName
+  commentId: P:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.KeyName
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.KeyName
+  nameWithType: UniqueCollectionAttribute.KeyName
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.KeyName*
+  name: KeyName
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_KeyName_
+  commentId: Overload:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.KeyName
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.KeyName
+  nameWithType: UniqueCollectionAttribute.KeyName
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.ScopeKind
+  name: ScopeKind
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_ScopeKind
+  commentId: P:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.ScopeKind
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.ScopeKind
+  nameWithType: UniqueCollectionAttribute.ScopeKind
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.ScopeKind*
+  name: ScopeKind
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_ScopeKind_
+  commentId: Overload:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.ScopeKind
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.ScopeKind
+  nameWithType: UniqueCollectionAttribute.ScopeKind
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.Selection
+  name: Selection
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_Selection
+  commentId: P:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.Selection
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.Selection
+  nameWithType: UniqueCollectionAttribute.Selection
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.Selection*
+  name: Selection
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_Selection_
+  commentId: Overload:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.Selection
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.Selection
+  nameWithType: UniqueCollectionAttribute.Selection
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection
+  name: UniqueCollectionSelection
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.html
+  commentId: T:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection
+  nameWithType: UniqueCollectionSelection
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.DictionaryEntries
+  name: DictionaryEntries
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionSelection_DictionaryEntries
+  commentId: F:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.DictionaryEntries
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.DictionaryEntries
+  nameWithType: UniqueCollectionSelection.DictionaryEntries
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.DictionaryKeys
+  name: DictionaryKeys
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionSelection_DictionaryKeys
+  commentId: F:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.DictionaryKeys
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.DictionaryKeys
+  nameWithType: UniqueCollectionSelection.DictionaryKeys
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.Elements
+  name: Elements
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionSelection_Elements
+  commentId: F:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.Elements
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.Elements
+  nameWithType: UniqueCollectionSelection.Elements
 - uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCompare
   name: UniqueCompare
   href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCompare.html
@@ -9348,6 +9456,21 @@ references:
   fullName.vb: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.New
   nameWithType: UniqueProperty.UniqueProperty
   nameWithType.vb: UniqueProperty.New
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Collection(Devbone.Frameworks.Ddd.UniqueValues.UniqueScope,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean)
+  name: Collection(UniqueScope, string, IEnumerable<string>, bool)
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty_Collection_Devbone_Frameworks_Ddd_UniqueValues_UniqueScope_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_
+  commentId: M:Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Collection(Devbone.Frameworks.Ddd.UniqueValues.UniqueScope,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean)
+  name.vb: Collection(UniqueScope, String, IEnumerable(Of String), Boolean)
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Collection(Devbone.Frameworks.Ddd.UniqueValues.UniqueScope, string, System.Collections.Generic.IEnumerable<string>, bool)
+  fullName.vb: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Collection(Devbone.Frameworks.Ddd.UniqueValues.UniqueScope, String, System.Collections.Generic.IEnumerable(Of String), Boolean)
+  nameWithType: UniqueProperty.Collection(UniqueScope, string, IEnumerable<string>, bool)
+  nameWithType.vb: UniqueProperty.Collection(UniqueScope, String, IEnumerable(Of String), Boolean)
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Collection*
+  name: Collection
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty_Collection_
+  commentId: Overload:Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Collection
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Collection
+  nameWithType: UniqueProperty.Collection
 - uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Equals(Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty)
   name: Equals(UniqueProperty?)
   href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty_Equals_Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty_
@@ -9396,6 +9519,18 @@ references:
   commentId: Overload:Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.IsCaseSensitive
   fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.IsCaseSensitive
   nameWithType: UniqueProperty.IsCaseSensitive
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.IsCollection
+  name: IsCollection
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty_IsCollection
+  commentId: P:Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.IsCollection
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.IsCollection
+  nameWithType: UniqueProperty.IsCollection
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.IsCollection*
+  name: IsCollection
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty_IsCollection_
+  commentId: Overload:Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.IsCollection
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.IsCollection
+  nameWithType: UniqueProperty.IsCollection
 - uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.IsDummyValue
   name: IsDummyValue
   href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty_IsDummyValue
@@ -9420,6 +9555,36 @@ references:
   commentId: Overload:Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Key
   fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Key
   nameWithType: UniqueProperty.Key
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.MAXIMUM_COLLECTION_BYTES
+  name: MAXIMUM_COLLECTION_BYTES
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty_MAXIMUM_COLLECTION_BYTES
+  commentId: F:Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.MAXIMUM_COLLECTION_BYTES
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.MAXIMUM_COLLECTION_BYTES
+  nameWithType: UniqueProperty.MAXIMUM_COLLECTION_BYTES
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.MAXIMUM_COLLECTION_MEMBERS
+  name: MAXIMUM_COLLECTION_MEMBERS
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty_MAXIMUM_COLLECTION_MEMBERS
+  commentId: F:Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.MAXIMUM_COLLECTION_MEMBERS
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.MAXIMUM_COLLECTION_MEMBERS
+  nameWithType: UniqueProperty.MAXIMUM_COLLECTION_MEMBERS
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.MAXIMUM_COLLECTION_MEMBER_BYTES
+  name: MAXIMUM_COLLECTION_MEMBER_BYTES
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty_MAXIMUM_COLLECTION_MEMBER_BYTES
+  commentId: F:Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.MAXIMUM_COLLECTION_MEMBER_BYTES
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.MAXIMUM_COLLECTION_MEMBER_BYTES
+  nameWithType: UniqueProperty.MAXIMUM_COLLECTION_MEMBER_BYTES
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Members
+  name: Members
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty_Members
+  commentId: P:Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Members
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Members
+  nameWithType: UniqueProperty.Members
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Members*
+  name: Members
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty_Members_
+  commentId: Overload:Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Members
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Members
+  nameWithType: UniqueProperty.Members
 - uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.Scope
   name: Scope
   href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty_Scope
@@ -9582,6 +9747,18 @@ references:
   commentId: Overload:Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.CompareStrategy
   fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.CompareStrategy
   nameWithType: UniqueValueBuilderAttribute.CompareStrategy
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.Composition
+  name: Composition
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_Composition
+  commentId: P:Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.Composition
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.Composition
+  nameWithType: UniqueValueBuilderAttribute.Composition
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.Composition*
+  name: Composition
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_Composition_
+  commentId: Overload:Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.Composition
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.Composition
+  nameWithType: UniqueValueBuilderAttribute.Composition
 - uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.IsCaseSensitive
   name: IsCaseSensitive
   href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_IsCaseSensitive
@@ -9642,6 +9819,24 @@ references:
   commentId: Overload:Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.UseSerialization
   fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.UseSerialization
   nameWithType: UniqueValueBuilderAttribute.UseSerialization
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition
+  name: UniqueValueComposition
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition.html
+  commentId: T:Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition
+  nameWithType: UniqueValueComposition
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition.Concatenate
+  name: Concatenate
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueValueComposition_Concatenate
+  commentId: F:Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition.Concatenate
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition.Concatenate
+  nameWithType: UniqueValueComposition.Concatenate
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition.JsonArray
+  name: JsonArray
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueValueComposition_JsonArray
+  commentId: F:Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition.JsonArray
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition.JsonArray
+  nameWithType: UniqueValueComposition.JsonArray
 - uid: Devbone.Frameworks.Ddd.ValueObjects
   name: Devbone.Frameworks.Ddd.ValueObjects
   href: api/Devbone.Frameworks.Ddd.ValueObjects.html
@@ -15339,6 +15534,18 @@ references:
   commentId: Overload:Devbone.Frameworks.EventPersistence.Contracts.Commits.UniqueValueDto.Key
   fullName: Devbone.Frameworks.EventPersistence.Contracts.Commits.UniqueValueDto.Key
   nameWithType: UniqueValueDto.Key
+- uid: Devbone.Frameworks.EventPersistence.Contracts.Commits.UniqueValueDto.Members
+  name: Members
+  href: api/Devbone.Frameworks.EventPersistence.Contracts.Commits.UniqueValueDto.html#Devbone_Frameworks_EventPersistence_Contracts_Commits_UniqueValueDto_Members
+  commentId: P:Devbone.Frameworks.EventPersistence.Contracts.Commits.UniqueValueDto.Members
+  fullName: Devbone.Frameworks.EventPersistence.Contracts.Commits.UniqueValueDto.Members
+  nameWithType: UniqueValueDto.Members
+- uid: Devbone.Frameworks.EventPersistence.Contracts.Commits.UniqueValueDto.Members*
+  name: Members
+  href: api/Devbone.Frameworks.EventPersistence.Contracts.Commits.UniqueValueDto.html#Devbone_Frameworks_EventPersistence_Contracts_Commits_UniqueValueDto_Members_
+  commentId: Overload:Devbone.Frameworks.EventPersistence.Contracts.Commits.UniqueValueDto.Members
+  fullName: Devbone.Frameworks.EventPersistence.Contracts.Commits.UniqueValueDto.Members
+  nameWithType: UniqueValueDto.Members
 - uid: Devbone.Frameworks.EventPersistence.Contracts.Commits.UniqueValueDto.Scope
   name: Scope
   href: api/Devbone.Frameworks.EventPersistence.Contracts.Commits.UniqueValueDto.html#Devbone_Frameworks_EventPersistence_Contracts_Commits_UniqueValueDto_Scope
@@ -31554,30 +31761,30 @@ references:
   commentId: T:Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore
   fullName: Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore
   nameWithType: ITransactionalOutboxEventStore
-- uid: Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  name: StoreEventsWithOutbox(IDatabaseEvent[], OutboxMessage[], params IUniqueValue[])
-  href: api/Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.html#Devbone_Frameworks_EventSourcing_Outbox_ITransactionalOutboxEventStore_StoreEventsWithOutbox_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___
-  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  name.vb: StoreEventsWithOutbox(IDatabaseEvent(), OutboxMessage(), ParamArray IUniqueValue())
-  fullName: Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[], params Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage(), ParamArray Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue())
-  nameWithType: ITransactionalOutboxEventStore.StoreEventsWithOutbox(IDatabaseEvent[], OutboxMessage[], params IUniqueValue[])
-  nameWithType.vb: ITransactionalOutboxEventStore.StoreEventsWithOutbox(IDatabaseEvent(), OutboxMessage(), ParamArray IUniqueValue())
+- uid: Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  name: StoreEventsWithOutbox(IDatabaseEvent[], OutboxMessage[], params IUniqueReservation[])
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.html#Devbone_Frameworks_EventSourcing_Outbox_ITransactionalOutboxEventStore_StoreEventsWithOutbox_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  name.vb: StoreEventsWithOutbox(IDatabaseEvent(), OutboxMessage(), ParamArray IUniqueReservation())
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[], params Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage(), ParamArray Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation())
+  nameWithType: ITransactionalOutboxEventStore.StoreEventsWithOutbox(IDatabaseEvent[], OutboxMessage[], params IUniqueReservation[])
+  nameWithType.vb: ITransactionalOutboxEventStore.StoreEventsWithOutbox(IDatabaseEvent(), OutboxMessage(), ParamArray IUniqueReservation())
 - uid: Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutbox*
   name: StoreEventsWithOutbox
   href: api/Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.html#Devbone_Frameworks_EventSourcing_Outbox_ITransactionalOutboxEventStore_StoreEventsWithOutbox_
   commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutbox
   fullName: Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutbox
   nameWithType: ITransactionalOutboxEventStore.StoreEventsWithOutbox
-- uid: Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)
-  name: StoreEventsWithOutboxAsync(IDatabaseEvent[], OutboxMessage[], IUniqueValue[]?, CancellationToken)
-  href: api/Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.html#Devbone_Frameworks_EventSourcing_Outbox_ITransactionalOutboxEventStore_StoreEventsWithOutboxAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___System_Threading_CancellationToken_
-  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)
-  name.vb: StoreEventsWithOutboxAsync(IDatabaseEvent(), OutboxMessage(), IUniqueValue(), CancellationToken)
-  fullName: Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[], Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[]?, System.Threading.CancellationToken)
-  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage(), Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue(), System.Threading.CancellationToken)
-  nameWithType: ITransactionalOutboxEventStore.StoreEventsWithOutboxAsync(IDatabaseEvent[], OutboxMessage[], IUniqueValue[]?, CancellationToken)
-  nameWithType.vb: ITransactionalOutboxEventStore.StoreEventsWithOutboxAsync(IDatabaseEvent(), OutboxMessage(), IUniqueValue(), CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)
+  name: StoreEventsWithOutboxAsync(IDatabaseEvent[], OutboxMessage[], IUniqueReservation[]?, CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.html#Devbone_Frameworks_EventSourcing_Outbox_ITransactionalOutboxEventStore_StoreEventsWithOutboxAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)
+  name.vb: StoreEventsWithOutboxAsync(IDatabaseEvent(), OutboxMessage(), IUniqueReservation(), CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[], Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[]?, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage(), Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation(), System.Threading.CancellationToken)
+  nameWithType: ITransactionalOutboxEventStore.StoreEventsWithOutboxAsync(IDatabaseEvent[], OutboxMessage[], IUniqueReservation[]?, CancellationToken)
+  nameWithType.vb: ITransactionalOutboxEventStore.StoreEventsWithOutboxAsync(IDatabaseEvent(), OutboxMessage(), IUniqueReservation(), CancellationToken)
 - uid: Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutboxAsync*
   name: StoreEventsWithOutboxAsync
   href: api/Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.html#Devbone_Frameworks_EventSourcing_Outbox_ITransactionalOutboxEventStore_StoreEventsWithOutboxAsync_
@@ -33825,6 +34032,36 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetOwnedLocks
   fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetOwnedLocks
   nameWithType: EventStore.GetOwnedLocks
+- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueReservation(System.String,System.String)
+  name: GetUniqueReservation(string, string)
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetUniqueReservation_System_String_System_String_
+  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueReservation(System.String,System.String)
+  name.vb: GetUniqueReservation(String, String)
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueReservation(string, string)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueReservation(String, String)
+  nameWithType: EventStore.GetUniqueReservation(string, string)
+  nameWithType.vb: EventStore.GetUniqueReservation(String, String)
+- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueReservation*
+  name: GetUniqueReservation
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetUniqueReservation_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueReservation
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueReservation
+  nameWithType: EventStore.GetUniqueReservation
+- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueReservationAsync(System.String,System.String,System.Threading.CancellationToken)
+  name: GetUniqueReservationAsync(string, string, CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetUniqueReservationAsync_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueReservationAsync(System.String,System.String,System.Threading.CancellationToken)
+  name.vb: GetUniqueReservationAsync(String, String, CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueReservationAsync(string, string, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueReservationAsync(String, String, System.Threading.CancellationToken)
+  nameWithType: EventStore.GetUniqueReservationAsync(string, string, CancellationToken)
+  nameWithType.vb: EventStore.GetUniqueReservationAsync(String, String, CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueReservationAsync*
+  name: GetUniqueReservationAsync
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetUniqueReservationAsync_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueReservationAsync
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueReservationAsync
+  nameWithType: EventStore.GetUniqueReservationAsync
 - uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueValue(System.String,System.String)
   name: GetUniqueValue(string, string)
   href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetUniqueValue_System_String_System_String_
@@ -34104,30 +34341,30 @@ references:
   fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent())
   nameWithType: EventStore.StoreEvents(IDatabaseEvent[])
   nameWithType.vb: EventStore.StoreEvents(IDatabaseEvent())
-- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  name: StoreEvents(IDatabaseEvent[], IUniqueValue[])
-  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEvents_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___
-  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  name.vb: StoreEvents(IDatabaseEvent(), IUniqueValue())
-  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue())
-  nameWithType: EventStore.StoreEvents(IDatabaseEvent[], IUniqueValue[])
-  nameWithType.vb: EventStore.StoreEvents(IDatabaseEvent(), IUniqueValue())
+- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  name: StoreEvents(IDatabaseEvent[], IUniqueReservation[])
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEvents_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___
+  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  name.vb: StoreEvents(IDatabaseEvent(), IUniqueReservation())
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation())
+  nameWithType: EventStore.StoreEvents(IDatabaseEvent[], IUniqueReservation[])
+  nameWithType.vb: EventStore.StoreEvents(IDatabaseEvent(), IUniqueReservation())
 - uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEvents*
   name: StoreEvents
   href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEvents_
   commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEvents
   fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEvents
   nameWithType: EventStore.StoreEvents
-- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)
-  name: StoreEventsAsync(IDatabaseEvent[], IUniqueValue[]?, CancellationToken)
-  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___System_Threading_CancellationToken_
-  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)
-  name.vb: StoreEventsAsync(IDatabaseEvent(), IUniqueValue(), CancellationToken)
-  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[]?, System.Threading.CancellationToken)
-  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue(), System.Threading.CancellationToken)
-  nameWithType: EventStore.StoreEventsAsync(IDatabaseEvent[], IUniqueValue[]?, CancellationToken)
-  nameWithType.vb: EventStore.StoreEventsAsync(IDatabaseEvent(), IUniqueValue(), CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)
+  name: StoreEventsAsync(IDatabaseEvent[], IUniqueReservation[]?, CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)
+  name.vb: StoreEventsAsync(IDatabaseEvent(), IUniqueReservation(), CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[]?, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation(), System.Threading.CancellationToken)
+  nameWithType: EventStore.StoreEventsAsync(IDatabaseEvent[], IUniqueReservation[]?, CancellationToken)
+  nameWithType.vb: EventStore.StoreEventsAsync(IDatabaseEvent(), IUniqueReservation(), CancellationToken)
 - uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],System.Threading.CancellationToken)
   name: StoreEventsAsync(IDatabaseEvent[], CancellationToken)
   href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___System_Threading_CancellationToken_
@@ -34143,90 +34380,90 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsAsync
   fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsAsync
   nameWithType: EventStore.StoreEventsAsync
-- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  name: StoreEventsWithOutbox(IDatabaseEvent[], OutboxMessage[]?, params IUniqueValue[])
-  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutbox_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___
-  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  name.vb: StoreEventsWithOutbox(IDatabaseEvent(), OutboxMessage(), ParamArray IUniqueValue())
-  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[]?, params Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage(), ParamArray Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue())
-  nameWithType: EventStore.StoreEventsWithOutbox(IDatabaseEvent[], OutboxMessage[]?, params IUniqueValue[])
-  nameWithType.vb: EventStore.StoreEventsWithOutbox(IDatabaseEvent(), OutboxMessage(), ParamArray IUniqueValue())
+- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  name: StoreEventsWithOutbox(IDatabaseEvent[], OutboxMessage[]?, params IUniqueReservation[])
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutbox_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___
+  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  name.vb: StoreEventsWithOutbox(IDatabaseEvent(), OutboxMessage(), ParamArray IUniqueReservation())
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[]?, params Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage(), ParamArray Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation())
+  nameWithType: EventStore.StoreEventsWithOutbox(IDatabaseEvent[], OutboxMessage[]?, params IUniqueReservation[])
+  nameWithType.vb: EventStore.StoreEventsWithOutbox(IDatabaseEvent(), OutboxMessage(), ParamArray IUniqueReservation())
 - uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutbox*
   name: StoreEventsWithOutbox
   href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutbox_
   commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutbox
   fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutbox
   nameWithType: EventStore.StoreEventsWithOutbox
-- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  name: StoreEventsWithOutboxAndSnapshot(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot?, params IUniqueValue[])
-  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutboxAndSnapshot_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___
-  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  name.vb: StoreEventsWithOutboxAndSnapshot(IDatabaseEvent(), OutboxMessage(), AggregateSnapshot, ParamArray IUniqueValue())
-  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[], Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot?, params Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage(), Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, ParamArray Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue())
-  nameWithType: EventStore.StoreEventsWithOutboxAndSnapshot(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot?, params IUniqueValue[])
-  nameWithType.vb: EventStore.StoreEventsWithOutboxAndSnapshot(IDatabaseEvent(), OutboxMessage(), AggregateSnapshot, ParamArray IUniqueValue())
+- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  name: StoreEventsWithOutboxAndSnapshot(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot?, params IUniqueReservation[])
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutboxAndSnapshot_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___
+  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  name.vb: StoreEventsWithOutboxAndSnapshot(IDatabaseEvent(), OutboxMessage(), AggregateSnapshot, ParamArray IUniqueReservation())
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[], Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot?, params Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage(), Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, ParamArray Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation())
+  nameWithType: EventStore.StoreEventsWithOutboxAndSnapshot(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot?, params IUniqueReservation[])
+  nameWithType.vb: EventStore.StoreEventsWithOutboxAndSnapshot(IDatabaseEvent(), OutboxMessage(), AggregateSnapshot, ParamArray IUniqueReservation())
 - uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshot*
   name: StoreEventsWithOutboxAndSnapshot
   href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutboxAndSnapshot_
   commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshot
   fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshot
   nameWithType: EventStore.StoreEventsWithOutboxAndSnapshot
-- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)
-  name: StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot?, IUniqueValue[]?, CancellationToken)
-  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutboxAndSnapshotAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___System_Threading_CancellationToken_
-  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)
-  name.vb: StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent(), OutboxMessage(), AggregateSnapshot, IUniqueValue(), CancellationToken)
-  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[], Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot?, Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[]?, System.Threading.CancellationToken)
-  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage(), Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue(), System.Threading.CancellationToken)
-  nameWithType: EventStore.StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot?, IUniqueValue[]?, CancellationToken)
-  nameWithType.vb: EventStore.StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent(), OutboxMessage(), AggregateSnapshot, IUniqueValue(), CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)
+  name: StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot?, IUniqueReservation[]?, CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutboxAndSnapshotAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)
+  name.vb: StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent(), OutboxMessage(), AggregateSnapshot, IUniqueReservation(), CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[], Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot?, Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[]?, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage(), Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation(), System.Threading.CancellationToken)
+  nameWithType: EventStore.StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot?, IUniqueReservation[]?, CancellationToken)
+  nameWithType.vb: EventStore.StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent(), OutboxMessage(), AggregateSnapshot, IUniqueReservation(), CancellationToken)
 - uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshotAsync*
   name: StoreEventsWithOutboxAndSnapshotAsync
   href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutboxAndSnapshotAsync_
   commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshotAsync
   fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshotAsync
   nameWithType: EventStore.StoreEventsWithOutboxAndSnapshotAsync
-- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)
-  name: StoreEventsWithOutboxAsync(IDatabaseEvent[], OutboxMessage[]?, IUniqueValue[]?, CancellationToken)
-  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutboxAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___System_Threading_CancellationToken_
-  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)
-  name.vb: StoreEventsWithOutboxAsync(IDatabaseEvent(), OutboxMessage(), IUniqueValue(), CancellationToken)
-  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[]?, Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[]?, System.Threading.CancellationToken)
-  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage(), Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue(), System.Threading.CancellationToken)
-  nameWithType: EventStore.StoreEventsWithOutboxAsync(IDatabaseEvent[], OutboxMessage[]?, IUniqueValue[]?, CancellationToken)
-  nameWithType.vb: EventStore.StoreEventsWithOutboxAsync(IDatabaseEvent(), OutboxMessage(), IUniqueValue(), CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)
+  name: StoreEventsWithOutboxAsync(IDatabaseEvent[], OutboxMessage[]?, IUniqueReservation[]?, CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutboxAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)
+  name.vb: StoreEventsWithOutboxAsync(IDatabaseEvent(), OutboxMessage(), IUniqueReservation(), CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[]?, Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[]?, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage(), Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation(), System.Threading.CancellationToken)
+  nameWithType: EventStore.StoreEventsWithOutboxAsync(IDatabaseEvent[], OutboxMessage[]?, IUniqueReservation[]?, CancellationToken)
+  nameWithType.vb: EventStore.StoreEventsWithOutboxAsync(IDatabaseEvent(), OutboxMessage(), IUniqueReservation(), CancellationToken)
 - uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAsync*
   name: StoreEventsWithOutboxAsync
   href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutboxAsync_
   commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAsync
   fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAsync
   nameWithType: EventStore.StoreEventsWithOutboxAsync
-- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  name: StoreEventsWithSnapshot(IDatabaseEvent[], AggregateSnapshot?, params IUniqueValue[])
-  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithSnapshot_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___
-  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  name.vb: StoreEventsWithSnapshot(IDatabaseEvent(), AggregateSnapshot, ParamArray IUniqueValue())
-  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot?, params Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, ParamArray Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue())
-  nameWithType: EventStore.StoreEventsWithSnapshot(IDatabaseEvent[], AggregateSnapshot?, params IUniqueValue[])
-  nameWithType.vb: EventStore.StoreEventsWithSnapshot(IDatabaseEvent(), AggregateSnapshot, ParamArray IUniqueValue())
+- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  name: StoreEventsWithSnapshot(IDatabaseEvent[], AggregateSnapshot?, params IUniqueReservation[])
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithSnapshot_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___
+  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  name.vb: StoreEventsWithSnapshot(IDatabaseEvent(), AggregateSnapshot, ParamArray IUniqueReservation())
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot?, params Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, ParamArray Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation())
+  nameWithType: EventStore.StoreEventsWithSnapshot(IDatabaseEvent[], AggregateSnapshot?, params IUniqueReservation[])
+  nameWithType.vb: EventStore.StoreEventsWithSnapshot(IDatabaseEvent(), AggregateSnapshot, ParamArray IUniqueReservation())
 - uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshot*
   name: StoreEventsWithSnapshot
   href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithSnapshot_
   commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshot
   fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshot
   nameWithType: EventStore.StoreEventsWithSnapshot
-- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)
-  name: StoreEventsWithSnapshotAsync(IDatabaseEvent[], AggregateSnapshot?, IUniqueValue[]?, CancellationToken)
-  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithSnapshotAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___System_Threading_CancellationToken_
-  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)
-  name.vb: StoreEventsWithSnapshotAsync(IDatabaseEvent(), AggregateSnapshot, IUniqueValue(), CancellationToken)
-  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot?, Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[]?, System.Threading.CancellationToken)
-  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue(), System.Threading.CancellationToken)
-  nameWithType: EventStore.StoreEventsWithSnapshotAsync(IDatabaseEvent[], AggregateSnapshot?, IUniqueValue[]?, CancellationToken)
-  nameWithType.vb: EventStore.StoreEventsWithSnapshotAsync(IDatabaseEvent(), AggregateSnapshot, IUniqueValue(), CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)
+  name: StoreEventsWithSnapshotAsync(IDatabaseEvent[], AggregateSnapshot?, IUniqueReservation[]?, CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithSnapshotAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)
+  name.vb: StoreEventsWithSnapshotAsync(IDatabaseEvent(), AggregateSnapshot, IUniqueReservation(), CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot?, Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[]?, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation(), System.Threading.CancellationToken)
+  nameWithType: EventStore.StoreEventsWithSnapshotAsync(IDatabaseEvent[], AggregateSnapshot?, IUniqueReservation[]?, CancellationToken)
+  nameWithType.vb: EventStore.StoreEventsWithSnapshotAsync(IDatabaseEvent(), AggregateSnapshot, IUniqueReservation(), CancellationToken)
 - uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshotAsync*
   name: StoreEventsWithSnapshotAsync
   href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithSnapshotAsync_
@@ -34326,6 +34563,21 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetNextIncrementsAsync
   fullName: Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetNextIncrementsAsync
   nameWithType: IAsyncEventStore.GetNextIncrementsAsync
+- uid: Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetUniqueReservationAsync(System.String,System.String,System.Threading.CancellationToken)
+  name: GetUniqueReservationAsync(string, string, CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.html#Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_GetUniqueReservationAsync_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetUniqueReservationAsync(System.String,System.String,System.Threading.CancellationToken)
+  name.vb: GetUniqueReservationAsync(String, String, CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetUniqueReservationAsync(string, string, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetUniqueReservationAsync(String, String, System.Threading.CancellationToken)
+  nameWithType: IAsyncEventStore.GetUniqueReservationAsync(string, string, CancellationToken)
+  nameWithType.vb: IAsyncEventStore.GetUniqueReservationAsync(String, String, CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetUniqueReservationAsync*
+  name: GetUniqueReservationAsync
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.html#Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_GetUniqueReservationAsync_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetUniqueReservationAsync
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetUniqueReservationAsync
+  nameWithType: IAsyncEventStore.GetUniqueReservationAsync
 - uid: Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.GetUniqueValueAsync(System.String,System.String,System.Threading.CancellationToken)
   name: GetUniqueValueAsync(string, string, CancellationToken)
   href: api/Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.html#Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_GetUniqueValueAsync_System_String_System_String_System_Threading_CancellationToken_
@@ -34386,15 +34638,15 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.RemoveUniquesAsync
   fullName: Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.RemoveUniquesAsync
   nameWithType: IAsyncEventStore.RemoveUniquesAsync
-- uid: Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)
-  name: StoreEventsAsync(IDatabaseEvent[], IUniqueValue[], CancellationToken)
-  href: api/Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.html#Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_StoreEventsAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___System_Threading_CancellationToken_
-  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)
-  name.vb: StoreEventsAsync(IDatabaseEvent(), IUniqueValue(), CancellationToken)
-  fullName: Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[], System.Threading.CancellationToken)
-  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue(), System.Threading.CancellationToken)
-  nameWithType: IAsyncEventStore.StoreEventsAsync(IDatabaseEvent[], IUniqueValue[], CancellationToken)
-  nameWithType.vb: IAsyncEventStore.StoreEventsAsync(IDatabaseEvent(), IUniqueValue(), CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)
+  name: StoreEventsAsync(IDatabaseEvent[], IUniqueReservation[], CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.html#Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_StoreEventsAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)
+  name.vb: StoreEventsAsync(IDatabaseEvent(), IUniqueReservation(), CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[], System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation(), System.Threading.CancellationToken)
+  nameWithType: IAsyncEventStore.StoreEventsAsync(IDatabaseEvent[], IUniqueReservation[], CancellationToken)
+  nameWithType.vb: IAsyncEventStore.StoreEventsAsync(IDatabaseEvent(), IUniqueReservation(), CancellationToken)
 - uid: Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.StoreEventsAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],System.Threading.CancellationToken)
   name: StoreEventsAsync(IDatabaseEvent[], CancellationToken)
   href: api/Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.html#Devbone_Frameworks_EventSourcing_Repositories_IAsyncEventStore_StoreEventsAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___System_Threading_CancellationToken_
@@ -34458,6 +34710,21 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.IEventStore.GetNextIncrements
   fullName: Devbone.Frameworks.EventSourcing.Repositories.IEventStore.GetNextIncrements
   nameWithType: IEventStore.GetNextIncrements
+- uid: Devbone.Frameworks.EventSourcing.Repositories.IEventStore.GetUniqueReservation(System.String,System.String)
+  name: GetUniqueReservation(string, string)
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.IEventStore.html#Devbone_Frameworks_EventSourcing_Repositories_IEventStore_GetUniqueReservation_System_String_System_String_
+  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.IEventStore.GetUniqueReservation(System.String,System.String)
+  name.vb: GetUniqueReservation(String, String)
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.IEventStore.GetUniqueReservation(string, string)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.IEventStore.GetUniqueReservation(String, String)
+  nameWithType: IEventStore.GetUniqueReservation(string, string)
+  nameWithType.vb: IEventStore.GetUniqueReservation(String, String)
+- uid: Devbone.Frameworks.EventSourcing.Repositories.IEventStore.GetUniqueReservation*
+  name: GetUniqueReservation
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.IEventStore.html#Devbone_Frameworks_EventSourcing_Repositories_IEventStore_GetUniqueReservation_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.IEventStore.GetUniqueReservation
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.IEventStore.GetUniqueReservation
+  nameWithType: IEventStore.GetUniqueReservation
 - uid: Devbone.Frameworks.EventSourcing.Repositories.IEventStore.LoadAggregate(System.String)
   name: LoadAggregate(string)
   href: api/Devbone.Frameworks.EventSourcing.Repositories.IEventStore.html#Devbone_Frameworks_EventSourcing_Repositories_IEventStore_LoadAggregate_System_String_
@@ -34497,15 +34764,15 @@ references:
   fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.IEventStore.StoreEvents(ParamArray Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent())
   nameWithType: IEventStore.StoreEvents(params IDatabaseEvent[])
   nameWithType.vb: IEventStore.StoreEvents(ParamArray IDatabaseEvent())
-- uid: Devbone.Frameworks.EventSourcing.Repositories.IEventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  name: StoreEvents(IDatabaseEvent[], params IUniqueValue[])
-  href: api/Devbone.Frameworks.EventSourcing.Repositories.IEventStore.html#Devbone_Frameworks_EventSourcing_Repositories_IEventStore_StoreEvents_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___
-  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.IEventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  name.vb: StoreEvents(IDatabaseEvent(), ParamArray IUniqueValue())
-  fullName: Devbone.Frameworks.EventSourcing.Repositories.IEventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], params Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.IEventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), ParamArray Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue())
-  nameWithType: IEventStore.StoreEvents(IDatabaseEvent[], params IUniqueValue[])
-  nameWithType.vb: IEventStore.StoreEvents(IDatabaseEvent(), ParamArray IUniqueValue())
+- uid: Devbone.Frameworks.EventSourcing.Repositories.IEventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  name: StoreEvents(IDatabaseEvent[], params IUniqueReservation[])
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.IEventStore.html#Devbone_Frameworks_EventSourcing_Repositories_IEventStore_StoreEvents_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___
+  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.IEventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  name.vb: StoreEvents(IDatabaseEvent(), ParamArray IUniqueReservation())
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.IEventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], params Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.IEventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), ParamArray Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation())
+  nameWithType: IEventStore.StoreEvents(IDatabaseEvent[], params IUniqueReservation[])
+  nameWithType.vb: IEventStore.StoreEvents(IDatabaseEvent(), ParamArray IUniqueReservation())
 - uid: Devbone.Frameworks.EventSourcing.Repositories.IEventStore.StoreEvents*
   name: StoreEvents
   href: api/Devbone.Frameworks.EventSourcing.Repositories.IEventStore.html#Devbone_Frameworks_EventSourcing_Repositories_IEventStore_StoreEvents_
@@ -34866,6 +35133,18 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.SnapshotOptions
   fullName: Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.SnapshotOptions
   nameWithType: EventStoreSettings.SnapshotOptions
+- uid: Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.UniqueReservationTableName
+  name: UniqueReservationTableName
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.html#Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_UniqueReservationTableName
+  commentId: P:Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.UniqueReservationTableName
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.UniqueReservationTableName
+  nameWithType: EventStoreSettings.UniqueReservationTableName
+- uid: Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.UniqueReservationTableName*
+  name: UniqueReservationTableName
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.html#Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_UniqueReservationTableName_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.UniqueReservationTableName
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.UniqueReservationTableName
+  nameWithType: EventStoreSettings.UniqueReservationTableName
 - uid: Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.UniqueTableName
   name: UniqueTableName
   href: api/Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.html#Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_UniqueTableName
@@ -36429,60 +36708,60 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.ShouldCreateSnapshotAsync
   fullName: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.ShouldCreateSnapshotAsync
   nameWithType: IAggregateSnapshotStore.ShouldCreateSnapshotAsync
-- uid: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  name: StoreEventsWithOutboxAndSnapshot(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot, params IUniqueValue[])
-  href: api/Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.html#Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithOutboxAndSnapshot_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___
-  commentId: M:Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  name.vb: StoreEventsWithOutboxAndSnapshot(IDatabaseEvent(), OutboxMessage(), AggregateSnapshot, ParamArray IUniqueValue())
-  fullName: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[], Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, params Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  fullName.vb: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage(), Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, ParamArray Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue())
-  nameWithType: IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot, params IUniqueValue[])
-  nameWithType.vb: IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot(IDatabaseEvent(), OutboxMessage(), AggregateSnapshot, ParamArray IUniqueValue())
+- uid: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  name: StoreEventsWithOutboxAndSnapshot(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot, params IUniqueReservation[])
+  href: api/Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.html#Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithOutboxAndSnapshot_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___
+  commentId: M:Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  name.vb: StoreEventsWithOutboxAndSnapshot(IDatabaseEvent(), OutboxMessage(), AggregateSnapshot, ParamArray IUniqueReservation())
+  fullName: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[], Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, params Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  fullName.vb: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage(), Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, ParamArray Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation())
+  nameWithType: IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot, params IUniqueReservation[])
+  nameWithType.vb: IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot(IDatabaseEvent(), OutboxMessage(), AggregateSnapshot, ParamArray IUniqueReservation())
 - uid: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot*
   name: StoreEventsWithOutboxAndSnapshot
   href: api/Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.html#Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithOutboxAndSnapshot_
   commentId: Overload:Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot
   fullName: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot
   nameWithType: IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot
-- uid: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)
-  name: StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot, IUniqueValue[]?, CancellationToken)
-  href: api/Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.html#Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithOutboxAndSnapshotAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___System_Threading_CancellationToken_
-  commentId: M:Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)
-  name.vb: StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent(), OutboxMessage(), AggregateSnapshot, IUniqueValue(), CancellationToken)
-  fullName: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[], Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[]?, System.Threading.CancellationToken)
-  fullName.vb: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage(), Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue(), System.Threading.CancellationToken)
-  nameWithType: IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot, IUniqueValue[]?, CancellationToken)
-  nameWithType.vb: IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent(), OutboxMessage(), AggregateSnapshot, IUniqueValue(), CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)
+  name: StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot, IUniqueReservation[]?, CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.html#Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithOutboxAndSnapshotAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)
+  name.vb: StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent(), OutboxMessage(), AggregateSnapshot, IUniqueReservation(), CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[], Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[]?, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage(), Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation(), System.Threading.CancellationToken)
+  nameWithType: IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot, IUniqueReservation[]?, CancellationToken)
+  nameWithType.vb: IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent(), OutboxMessage(), AggregateSnapshot, IUniqueReservation(), CancellationToken)
 - uid: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync*
   name: StoreEventsWithOutboxAndSnapshotAsync
   href: api/Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.html#Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithOutboxAndSnapshotAsync_
   commentId: Overload:Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync
   fullName: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync
   nameWithType: IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync
-- uid: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  name: StoreEventsWithSnapshot(IDatabaseEvent[], AggregateSnapshot, params IUniqueValue[])
-  href: api/Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.html#Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithSnapshot_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___
-  commentId: M:Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  name.vb: StoreEventsWithSnapshot(IDatabaseEvent(), AggregateSnapshot, ParamArray IUniqueValue())
-  fullName: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, params Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])
-  fullName.vb: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, ParamArray Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue())
-  nameWithType: IAggregateSnapshotStore.StoreEventsWithSnapshot(IDatabaseEvent[], AggregateSnapshot, params IUniqueValue[])
-  nameWithType.vb: IAggregateSnapshotStore.StoreEventsWithSnapshot(IDatabaseEvent(), AggregateSnapshot, ParamArray IUniqueValue())
+- uid: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  name: StoreEventsWithSnapshot(IDatabaseEvent[], AggregateSnapshot, params IUniqueReservation[])
+  href: api/Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.html#Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithSnapshot_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___
+  commentId: M:Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  name.vb: StoreEventsWithSnapshot(IDatabaseEvent(), AggregateSnapshot, ParamArray IUniqueReservation())
+  fullName: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, params Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])
+  fullName.vb: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, ParamArray Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation())
+  nameWithType: IAggregateSnapshotStore.StoreEventsWithSnapshot(IDatabaseEvent[], AggregateSnapshot, params IUniqueReservation[])
+  nameWithType.vb: IAggregateSnapshotStore.StoreEventsWithSnapshot(IDatabaseEvent(), AggregateSnapshot, ParamArray IUniqueReservation())
 - uid: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshot*
   name: StoreEventsWithSnapshot
   href: api/Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.html#Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithSnapshot_
   commentId: Overload:Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshot
   fullName: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshot
   nameWithType: IAggregateSnapshotStore.StoreEventsWithSnapshot
-- uid: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)
-  name: StoreEventsWithSnapshotAsync(IDatabaseEvent[], AggregateSnapshot, IUniqueValue[]?, CancellationToken)
-  href: api/Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.html#Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithSnapshotAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___System_Threading_CancellationToken_
-  commentId: M:Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)
-  name.vb: StoreEventsWithSnapshotAsync(IDatabaseEvent(), AggregateSnapshot, IUniqueValue(), CancellationToken)
-  fullName: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[]?, System.Threading.CancellationToken)
-  fullName.vb: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue(), System.Threading.CancellationToken)
-  nameWithType: IAggregateSnapshotStore.StoreEventsWithSnapshotAsync(IDatabaseEvent[], AggregateSnapshot, IUniqueValue[]?, CancellationToken)
-  nameWithType.vb: IAggregateSnapshotStore.StoreEventsWithSnapshotAsync(IDatabaseEvent(), AggregateSnapshot, IUniqueValue(), CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)
+  name: StoreEventsWithSnapshotAsync(IDatabaseEvent[], AggregateSnapshot, IUniqueReservation[]?, CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.html#Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithSnapshotAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)
+  name.vb: StoreEventsWithSnapshotAsync(IDatabaseEvent(), AggregateSnapshot, IUniqueReservation(), CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[], Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[]?, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent(), Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot, Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation(), System.Threading.CancellationToken)
+  nameWithType: IAggregateSnapshotStore.StoreEventsWithSnapshotAsync(IDatabaseEvent[], AggregateSnapshot, IUniqueReservation[]?, CancellationToken)
+  nameWithType.vb: IAggregateSnapshotStore.StoreEventsWithSnapshotAsync(IDatabaseEvent(), AggregateSnapshot, IUniqueReservation(), CancellationToken)
 - uid: Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshotAsync*
   name: StoreEventsWithSnapshotAsync
   href: api/Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.html#Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithSnapshotAsync_
@@ -41059,6 +41338,48 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.IUnique.RequestId
   fullName: Devbone.Frameworks.EventSourcing.Uniques.IUnique.RequestId
   nameWithType: IUnique.RequestId
+- uid: Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation
+  name: IUniqueReservation
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html
+  commentId: T:Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation
+  nameWithType: IUniqueReservation
+- uid: Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.IsCollection
+  name: IsCollection
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html#Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation_IsCollection
+  commentId: P:Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.IsCollection
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.IsCollection
+  nameWithType: IUniqueReservation.IsCollection
+- uid: Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.IsCollection*
+  name: IsCollection
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html#Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation_IsCollection_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.IsCollection
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.IsCollection
+  nameWithType: IUniqueReservation.IsCollection
+- uid: Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.ValueCaseSensitive
+  name: ValueCaseSensitive
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html#Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation_ValueCaseSensitive
+  commentId: P:Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.ValueCaseSensitive
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.ValueCaseSensitive
+  nameWithType: IUniqueReservation.ValueCaseSensitive
+- uid: Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.ValueCaseSensitive*
+  name: ValueCaseSensitive
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html#Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation_ValueCaseSensitive_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.ValueCaseSensitive
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.ValueCaseSensitive
+  nameWithType: IUniqueReservation.ValueCaseSensitive
+- uid: Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.Values
+  name: Values
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html#Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation_Values
+  commentId: P:Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.Values
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.Values
+  nameWithType: IUniqueReservation.Values
+- uid: Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.Values*
+  name: Values
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html#Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation_Values_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.Values
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.Values
+  nameWithType: IUniqueReservation.Values
 - uid: Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue
   name: IUniqueValue
   href: api/Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.html
@@ -41203,6 +41524,150 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.Unique.RequestId
   fullName: Devbone.Frameworks.EventSourcing.Uniques.Unique.RequestId
   nameWithType: Unique.RequestId
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState
+  name: UniqueReservationState
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html
+  commentId: T:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState
+  nameWithType: UniqueReservationState
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.#ctor
+  name: UniqueReservationState()
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState__ctor
+  commentId: M:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.#ctor
+  name.vb: New()
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.UniqueReservationState()
+  fullName.vb: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.New()
+  nameWithType: UniqueReservationState.UniqueReservationState()
+  nameWithType.vb: UniqueReservationState.New()
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.#ctor*
+  name: UniqueReservationState
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState__ctor_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.UniqueReservationState
+  fullName.vb: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.New
+  nameWithType: UniqueReservationState.UniqueReservationState
+  nameWithType.vb: UniqueReservationState.New
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Equals(Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState)
+  name: Equals(UniqueReservationState?)
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_Equals_Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_
+  commentId: M:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Equals(Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState)
+  name.vb: Equals(UniqueReservationState)
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Equals(Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Equals(Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState)
+  nameWithType: UniqueReservationState.Equals(UniqueReservationState?)
+  nameWithType.vb: UniqueReservationState.Equals(UniqueReservationState)
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_Equals_System_Object_
+  commentId: M:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Equals(object?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Equals(Object)
+  nameWithType: UniqueReservationState.Equals(object?)
+  nameWithType.vb: UniqueReservationState.Equals(Object)
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Equals*
+  name: Equals
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_Equals_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Equals
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Equals
+  nameWithType: UniqueReservationState.Equals
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.GetHashCode
+  name: GetHashCode()
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_GetHashCode
+  commentId: M:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.GetHashCode
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.GetHashCode()
+  nameWithType: UniqueReservationState.GetHashCode()
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.GetHashCode*
+  name: GetHashCode
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_GetHashCode_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.GetHashCode
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.GetHashCode
+  nameWithType: UniqueReservationState.GetHashCode
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.IsCollection
+  name: IsCollection
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_IsCollection
+  commentId: P:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.IsCollection
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.IsCollection
+  nameWithType: UniqueReservationState.IsCollection
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.IsCollection*
+  name: IsCollection
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_IsCollection_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.IsCollection
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.IsCollection
+  nameWithType: UniqueReservationState.IsCollection
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Scope
+  name: Scope
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_Scope
+  commentId: P:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Scope
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Scope
+  nameWithType: UniqueReservationState.Scope
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Scope*
+  name: Scope
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_Scope_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Scope
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.Scope
+  nameWithType: UniqueReservationState.Scope
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.ToString
+  name: ToString()
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_ToString
+  commentId: M:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.ToString
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.ToString()
+  nameWithType: UniqueReservationState.ToString()
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.ToString*
+  name: ToString
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_ToString_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.ToString
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.ToString
+  nameWithType: UniqueReservationState.ToString
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.ValueHashes
+  name: ValueHashes
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_ValueHashes
+  commentId: P:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.ValueHashes
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.ValueHashes
+  nameWithType: UniqueReservationState.ValueHashes
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.ValueHashes*
+  name: ValueHashes
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_ValueHashes_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.ValueHashes
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.ValueHashes
+  nameWithType: UniqueReservationState.ValueHashes
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.op_Equality(Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState,Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState)
+  name: operator ==(UniqueReservationState?, UniqueReservationState?)
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_op_Equality_Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_
+  commentId: M:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.op_Equality(Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState,Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState)
+  name.vb: =(UniqueReservationState, UniqueReservationState)
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.operator ==(Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState?, Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.=(Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState, Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState)
+  nameWithType: UniqueReservationState.operator ==(UniqueReservationState?, UniqueReservationState?)
+  nameWithType.vb: UniqueReservationState.=(UniqueReservationState, UniqueReservationState)
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.op_Equality*
+  name: operator ==
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_op_Equality_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.op_Equality
+  name.vb: =
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.operator ==
+  fullName.vb: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.=
+  nameWithType: UniqueReservationState.operator ==
+  nameWithType.vb: UniqueReservationState.=
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.op_Inequality(Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState,Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState)
+  name: operator !=(UniqueReservationState?, UniqueReservationState?)
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_op_Inequality_Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_
+  commentId: M:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.op_Inequality(Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState,Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState)
+  name.vb: <>(UniqueReservationState, UniqueReservationState)
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.operator !=(Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState?, Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.<>(Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState, Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState)
+  nameWithType: UniqueReservationState.operator !=(UniqueReservationState?, UniqueReservationState?)
+  nameWithType.vb: UniqueReservationState.<>(UniqueReservationState, UniqueReservationState)
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.op_Inequality*
+  name: operator !=
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueReservationState_op_Inequality_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.op_Inequality
+  name.vb: <>
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.operator !=
+  fullName.vb: Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.<>
+  nameWithType: UniqueReservationState.operator !=
+  nameWithType.vb: UniqueReservationState.<>
 - uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValue
   name: UniqueValue
   href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValue.html
@@ -41299,3 +41764,81 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHash.ValueHash
   fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHash.ValueHash
   nameWithType: UniqueValueHash.ValueHash
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet
+  name: UniqueValueSet
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.html
+  commentId: T:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet
+  nameWithType: UniqueValueSet
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.#ctor(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.DateTime,System.Boolean)
+  name: UniqueValueSet(string, string, string, IEnumerable<string>, string, DateTime, bool)
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueSet__ctor_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__System_String_System_DateTime_System_Boolean_
+  commentId: M:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.#ctor(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.DateTime,System.Boolean)
+  name.vb: New(String, String, String, IEnumerable(Of String), String, Date, Boolean)
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.UniqueValueSet(string, string, string, System.Collections.Generic.IEnumerable<string>, string, System.DateTime, bool)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.New(String, String, String, System.Collections.Generic.IEnumerable(Of String), String, Date, Boolean)
+  nameWithType: UniqueValueSet.UniqueValueSet(string, string, string, IEnumerable<string>, string, DateTime, bool)
+  nameWithType.vb: UniqueValueSet.New(String, String, String, IEnumerable(Of String), String, Date, Boolean)
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.#ctor*
+  name: UniqueValueSet
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueSet__ctor_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.UniqueValueSet
+  fullName.vb: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.New
+  nameWithType: UniqueValueSet.UniqueValueSet
+  nameWithType.vb: UniqueValueSet.New
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.IsCollection
+  name: IsCollection
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueSet_IsCollection
+  commentId: P:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.IsCollection
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.IsCollection
+  nameWithType: UniqueValueSet.IsCollection
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.IsCollection*
+  name: IsCollection
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueSet_IsCollection_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.IsCollection
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.IsCollection
+  nameWithType: UniqueValueSet.IsCollection
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.MAXIMUM_BYTES
+  name: MAXIMUM_BYTES
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueSet_MAXIMUM_BYTES
+  commentId: F:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.MAXIMUM_BYTES
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.MAXIMUM_BYTES
+  nameWithType: UniqueValueSet.MAXIMUM_BYTES
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.MAXIMUM_MEMBERS
+  name: MAXIMUM_MEMBERS
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueSet_MAXIMUM_MEMBERS
+  commentId: F:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.MAXIMUM_MEMBERS
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.MAXIMUM_MEMBERS
+  nameWithType: UniqueValueSet.MAXIMUM_MEMBERS
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.MAXIMUM_MEMBER_BYTES
+  name: MAXIMUM_MEMBER_BYTES
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueSet_MAXIMUM_MEMBER_BYTES
+  commentId: F:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.MAXIMUM_MEMBER_BYTES
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.MAXIMUM_MEMBER_BYTES
+  nameWithType: UniqueValueSet.MAXIMUM_MEMBER_BYTES
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.ValueCaseSensitive
+  name: ValueCaseSensitive
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueSet_ValueCaseSensitive
+  commentId: P:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.ValueCaseSensitive
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.ValueCaseSensitive
+  nameWithType: UniqueValueSet.ValueCaseSensitive
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.ValueCaseSensitive*
+  name: ValueCaseSensitive
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueSet_ValueCaseSensitive_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.ValueCaseSensitive
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.ValueCaseSensitive
+  nameWithType: UniqueValueSet.ValueCaseSensitive
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.Values
+  name: Values
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueSet_Values
+  commentId: P:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.Values
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.Values
+  nameWithType: UniqueValueSet.Values
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.Values*
+  name: Values
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueSet_Values_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.Values
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.Values
+  nameWithType: UniqueValueSet.Values

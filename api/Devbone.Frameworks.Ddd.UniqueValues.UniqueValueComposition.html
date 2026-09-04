@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Namespace Devbone.Frameworks.Ddd.UniqueValues | Devbone Event-Driven Platform </title>
+      <title>Enum UniqueValueComposition | Devbone Event-Driven Platform </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Namespace Devbone.Frameworks.Ddd.UniqueValues | Devbone Event-Driven Platform ">
+      <meta name="title" content="Enum UniqueValueComposition | Devbone Event-Driven Platform ">
       
-      
+      <meta name="description" content="Chooses the persisted encoding of a composed uniqueness reservation.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,75 +84,49 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Devbone.Frameworks.Ddd.UniqueValues">
+        <article data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition">
 
-  <h1 id="Devbone_Frameworks_Ddd_UniqueValues" data-uid="Devbone.Frameworks.Ddd.UniqueValues" class="text-break">Namespace Devbone.Frameworks.Ddd.UniqueValues</h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
 
-    <h3 id="classes">
-Classes
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueAttribute.html">UniqueAttribute</a></dt>
-      <dd><p>Marks an event property as a unique value that must be tracked externally.</p>
+
+
+  <h1 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueComposition" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition" class="text-break">
+Enum UniqueValueComposition  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.Ddd.html">Ddd</a>.<a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.html">UniqueValues</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.Ddd.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Chooses the persisted encoding of a composed uniqueness reservation.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum UniqueValueComposition</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueComposition_Concatenate"><code>Concatenate = 0</code></dt>
+  
+  <dd><p>Concatenates included components in reflection order using the legacy serialization setting.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html">UniqueCollectionAttribute</a></dt>
-      <dd><p>Declares complete replacement of a unique string set, atomically with its event commit.</p>
+    <dt id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueComposition_JsonArray"><code>JsonArray = 1</code></dt>
+  
+  <dd><p>Serializes one JSON array in reflection order, preserving nulls and excluded component positions.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html">UniqueProperty</a></dt>
-      <dd><p>Represents one concrete scope, key, and value reservation extracted from an event instance and persisted atomically with its event.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueScope.html">UniqueScope</a></dt>
-      <dd><p>Identifies the stable namespace in which a unique key and value combination must be reserved.
-Separating the scope from the key prevents unrelated aggregate contracts from accidentally sharing
-one database uniqueness constraint while still allowing explicitly global constraints.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.html">UniqueValueBuilderAttribute</a></dt>
-      <dd><p>Builds a composed unique value from multiple event properties.</p>
-</dd>
-    </dl>
-    <h3 id="interfaces">
-Interfaces
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.IUniqueAttribute.html">IUniqueAttribute</a></dt>
-      <dd><p>Defines metadata used to derive a unique persistence key from an event property.</p>
-</dd>
-    </dl>
-    <h3 id="enums">
-Enums
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.html">UniqueCollectionSelection</a></dt>
-      <dd><p>Selects the independently reserved members of a collection declaration.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueCompare.html">UniqueCompare</a></dt>
-      <dd><p>Controls when an annotated event property contributes a concrete value or placeholder reservation to a uniqueness index.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueScopeKind.html">UniqueScopeKind</a></dt>
-      <dd><p>Selects whether an event attribute reserves a value inside its aggregate contract or across all aggregate contracts.
-Custom runtime scopes remain available through <a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueScope.html">UniqueScope</a> and <a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html">UniqueProperty</a>.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition.html">UniqueValueComposition</a></dt>
-      <dd><p>Chooses the persisted encoding of a composed uniqueness reservation.</p>
-</dd>
-    </dl>
+  </dl>
+
 
 
 </article>

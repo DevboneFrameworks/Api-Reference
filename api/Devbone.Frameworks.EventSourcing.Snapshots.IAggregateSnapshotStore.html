@@ -446,8 +446,8 @@ Interface IAggregateSnapshotStore
 
   <a id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithOutboxAndSnapshot_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithOutboxAndSnapshot_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])">
-  StoreEventsWithOutboxAndSnapshot(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot, params IUniqueValue[])
+  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithOutboxAndSnapshot_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])">
+  StoreEventsWithOutboxAndSnapshot(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot, params IUniqueReservation[])
   
   </h3>
 
@@ -456,7 +456,7 @@ Interface IAggregateSnapshotStore
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void StoreEventsWithOutboxAndSnapshot(IDatabaseEvent[] events, OutboxMessage[] outboxMessages, AggregateSnapshot snapshot, params IUniqueValue[] uniqueValues)</code></pre>
+    <pre><code class="lang-csharp hljs">void StoreEventsWithOutboxAndSnapshot(IDatabaseEvent[] events, OutboxMessage[] outboxMessages, AggregateSnapshot snapshot, params IUniqueReservation[] uniqueValues)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -467,7 +467,7 @@ Interface IAggregateSnapshotStore
     <dd></dd>
     <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
     <dd></dd>
-    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.html">IUniqueValue</a>[]</dt>
+    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html">IUniqueReservation</a>[]</dt>
     <dd></dd>
   </dl>
 
@@ -484,8 +484,8 @@ Interface IAggregateSnapshotStore
 
   <a id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithOutboxAndSnapshotAsync_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithOutboxAndSnapshotAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)">
-  StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot, IUniqueValue[]?, CancellationToken)
+  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithOutboxAndSnapshotAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)">
+  StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot, IUniqueReservation[]?, CancellationToken)
   
   </h3>
 
@@ -494,7 +494,7 @@ Interface IAggregateSnapshotStore
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent[] events, OutboxMessage[] outboxMessages, AggregateSnapshot snapshot, IUniqueValue[]? uniqueValues = null, CancellationToken cancellationToken = default)</code></pre>
+    <pre><code class="lang-csharp hljs">Task StoreEventsWithOutboxAndSnapshotAsync(IDatabaseEvent[] events, OutboxMessage[] outboxMessages, AggregateSnapshot snapshot, IUniqueReservation[]? uniqueValues = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -505,7 +505,7 @@ Interface IAggregateSnapshotStore
     <dd></dd>
     <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
     <dd></dd>
-    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.html">IUniqueValue</a>[]</dt>
+    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html">IUniqueReservation</a>[]</dt>
     <dd></dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
@@ -529,8 +529,8 @@ Interface IAggregateSnapshotStore
 
   <a id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithSnapshot_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshot*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithSnapshot_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])">
-  StoreEventsWithSnapshot(IDatabaseEvent[], AggregateSnapshot, params IUniqueValue[])
+  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithSnapshot_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])">
+  StoreEventsWithSnapshot(IDatabaseEvent[], AggregateSnapshot, params IUniqueReservation[])
   
   </h3>
 
@@ -539,7 +539,7 @@ Interface IAggregateSnapshotStore
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void StoreEventsWithSnapshot(IDatabaseEvent[] events, AggregateSnapshot snapshot, params IUniqueValue[] uniqueValues)</code></pre>
+    <pre><code class="lang-csharp hljs">void StoreEventsWithSnapshot(IDatabaseEvent[] events, AggregateSnapshot snapshot, params IUniqueReservation[] uniqueValues)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -548,7 +548,7 @@ Interface IAggregateSnapshotStore
     <dd></dd>
     <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
     <dd></dd>
-    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.html">IUniqueValue</a>[]</dt>
+    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html">IUniqueReservation</a>[]</dt>
     <dd></dd>
   </dl>
 
@@ -565,8 +565,8 @@ Interface IAggregateSnapshotStore
 
   <a id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithSnapshotAsync_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshotAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithSnapshotAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[],System.Threading.CancellationToken)">
-  StoreEventsWithSnapshotAsync(IDatabaseEvent[], AggregateSnapshot, IUniqueValue[]?, CancellationToken)
+  <h3 id="Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_StoreEventsWithSnapshotAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)">
+  StoreEventsWithSnapshotAsync(IDatabaseEvent[], AggregateSnapshot, IUniqueReservation[]?, CancellationToken)
   
   </h3>
 
@@ -575,7 +575,7 @@ Interface IAggregateSnapshotStore
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task StoreEventsWithSnapshotAsync(IDatabaseEvent[] events, AggregateSnapshot snapshot, IUniqueValue[]? uniqueValues = null, CancellationToken cancellationToken = default)</code></pre>
+    <pre><code class="lang-csharp hljs">Task StoreEventsWithSnapshotAsync(IDatabaseEvent[] events, AggregateSnapshot snapshot, IUniqueReservation[]? uniqueValues = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -584,7 +584,7 @@ Interface IAggregateSnapshotStore
     <dd></dd>
     <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
     <dd></dd>
-    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.html">IUniqueValue</a>[]</dt>
+    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html">IUniqueReservation</a>[]</dt>
     <dd></dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>

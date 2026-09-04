@@ -116,7 +116,10 @@ Interface IUniqueValueRepository
 
 
   <h2 id="Devbone_Frameworks_Ddd_Repositories_IUniqueValueRepository_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>Event rows and unique-index changes supplied to one method must commit or fail atomically.</p>
+  <div class="markdown level0 remarks"><p>Event rows and unique-index changes supplied to one method must commit or fail atomically.
+The aggregate commit pipeline supplies the last declaration per scope/key in event order;
+intermediate declarations are not conflict-checked. Successful scalar replacement releases the
+previous value. Omitted declarations retain ownership, and failed writes retain all old reservations.</p>
 </div>
 
 

@@ -320,6 +320,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayException.yml\" sourcestartlinenumber=\"1\">Identifies failures interpreting or validating an already acquired aggregate event stream.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayValidationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayValidationException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayValidationException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayValidationException.yml\" sourcestartlinenumber=\"1\">Reports deterministic contract, ordering, identity, version, lifecycle or token validation failure during event replay.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.Ddd.Aggregates.Infrastructure.IAggregateEventMetadataFactory.yml",
       "output": {
         ".html": {
@@ -2084,6 +2112,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.yml\" sourcestartlinenumber=\"1\">Declares complete replacement of a unique string set, atomically with its event commit.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.yml\" sourcestartlinenumber=\"1\">Selects the independently reserved members of a collection declaration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCompare.yml",
       "output": {
         ".html": {
@@ -2151,6 +2207,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.yml\" sourcestartlinenumber=\"1\">Builds a composed unique value from multiple event properties.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition.yml\" sourcestartlinenumber=\"1\">Chooses the persisted encoding of a composed uniqueness reservation.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7754,6 +7824,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.yml\" sourcestartlinenumber=\"1\">Describes one complete scalar or collection replacement owned by an aggregate and logical key.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.yml",
       "output": {
         ".html": {
@@ -7796,6 +7880,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.yml\" sourcestartlinenumber=\"1\">Describes persisted group membership without exposing original reserved values.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValue.yml",
       "output": {
         ".html": {
@@ -7821,6 +7919,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHash",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHash.yml\" sourcestartlinenumber=\"1\">Represents a unique value projection containing only hashed value information.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.yml\" sourcestartlinenumber=\"1\">Supplies a bounded, immutable complete set replacement; an empty set releases its members.</p>\n"
     },
     {
       "type": "ManagedReference",

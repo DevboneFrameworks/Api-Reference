@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface IUniqueValue | Devbone Event-Driven Platform </title>
+      <title>Interface IUniqueReservation | Devbone Event-Driven Platform </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface IUniqueValue | Devbone Event-Driven Platform ">
+      <meta name="title" content="Interface IUniqueReservation | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Defines a unique value request that includes raw value and hash information.">
+      <meta name="description" content="Describes one complete scalar or collection replacement owned by an aggregate and logical key.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue">
+        <article data-uid="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation">
 
 
 
-  <h1 id="Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue" data-uid="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue" class="text-break">
-Interface IUniqueValue  
+  <h1 id="Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation" data-uid="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation" class="text-break">
+Interface IUniqueReservation  
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,12 @@ Interface IUniqueValue
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventSourcing.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Defines a unique value request that includes raw value and hash information.</p>
+  <div class="markdown summary"><p>Describes one complete scalar or collection replacement owned by an aggregate and logical key.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IUniqueValue : IUniqueReservation, IUnique</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IUniqueReservation : IUnique</code></pre>
   </div>
 
 
@@ -114,12 +114,6 @@ Interface IUniqueValue
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
-    <div>
-      <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html#Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation_IsCollection">IUniqueReservation.IsCollection</a>
-    </div>
-    <div>
-      <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html#Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation_Values">IUniqueReservation.Values</a>
-    </div>
     <div>
       <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUnique.html#Devbone_Frameworks_EventSourcing_Uniques_IUnique_AggregateId">IUnique.AggregateId</a>
     </div>
@@ -146,19 +140,19 @@ Interface IUniqueValue
 </h2>
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue_Value_" data-uid="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.Value*"></a>
+  <a id="Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation_IsCollection_" data-uid="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.IsCollection*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue_Value" data-uid="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.Value">
-  Value
+  <h3 id="Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation_IsCollection" data-uid="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.IsCollection">
+  IsCollection
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the raw unique value.</p>
+  <div class="markdown level1 summary"><p>Gets whether the group accepts multiple members, including zero.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Value { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">bool IsCollection { get; }</code></pre>
   </div>
 
 
@@ -167,7 +161,7 @@ Interface IUniqueValue
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -178,14 +172,14 @@ Interface IUniqueValue
 
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue_ValueCaseSensitive_" data-uid="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.ValueCaseSensitive*"></a>
+  <a id="Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation_ValueCaseSensitive_" data-uid="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.ValueCaseSensitive*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue_ValueCaseSensitive" data-uid="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.ValueCaseSensitive">
+  <h3 id="Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation_ValueCaseSensitive" data-uid="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.ValueCaseSensitive">
   ValueCaseSensitive
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether scalar hash generation preserves case.</p>
+  <div class="markdown level1 summary"><p>Gets whether normalization preserves case.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -210,19 +204,19 @@ Interface IUniqueValue
 
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue_ValueHash_" data-uid="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.ValueHash*"></a>
+  <a id="Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation_Values_" data-uid="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.Values*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue_ValueHash" data-uid="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.ValueHash">
-  ValueHash
+  <h3 id="Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation_Values" data-uid="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.Values">
+  Values
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the computed hash of <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.html#Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue_Value">Value</a>.</p>
+  <div class="markdown level1 summary"><p>Gets the raw values to normalize and hash; a scalar has exactly one.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string ValueHash { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IReadOnlyList&lt;string&gt; Values { get; }</code></pre>
   </div>
 
 
@@ -231,7 +225,7 @@ Interface IUniqueValue
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd></dd>
   </dl>
 

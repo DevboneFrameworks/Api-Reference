@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class AggregateRehydrationException | Devbone Event-Driven Platform </title>
+      <title>Class AggregateReplayValidationException | Devbone Event-Driven Platform </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class AggregateRehydrationException | Devbone Event-Driven Platform ">
+      <meta name="title" content="Class AggregateReplayValidationException | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Adds persisted event coordinates to an unexpected deserialization or application failure during aggregate replay.">
+      <meta name="description" content="Reports deterministic contract, ordering, identity, version, lifecycle or token validation failure during event replay.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException">
+        <article data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayValidationException">
 
 
 
-  <h1 id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException" data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException" class="text-break">
-Class AggregateRehydrationException  
+  <h1 id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateReplayValidationException" data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayValidationException" class="text-break">
+Class AggregateReplayValidationException  
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,12 @@ Class AggregateRehydrationException
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.Ddd.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Adds persisted event coordinates to an unexpected deserialization or application failure during aggregate replay.</p>
+  <div class="markdown summary"><p>Reports deterministic contract, ordering, identity, version, lifecycle or token validation failure during event replay.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class AggregateRehydrationException : AggregateReplayException, ISerializable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class AggregateReplayValidationException : AggregateReplayException, ISerializable</code></pre>
   </div>
 
 
@@ -116,7 +116,7 @@ Class AggregateRehydrationException
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.systemexception">SystemException</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></div>
       <div><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateReplayException.html">AggregateReplayException</a></div>
-      <div><span class="xref">AggregateRehydrationException</span></div>
+      <div><span class="xref">AggregateReplayValidationException</span></div>
     </dd>
   </dl>
 
@@ -177,111 +177,6 @@ Class AggregateRehydrationException
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
   </dd></dl>
-
-
-
-
-  <h2 id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>Wraps serializer and event-application failures only, excluding cancellation and timeouts. Deterministic
-validation failures share the AggregateReplayException base. The inner cause is not necessarily a data
-error; application policy decides whether to handle it. Do not log payload-bearing inner exceptions.</p>
-</div>
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventName_" data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventName*"></a>
-
-  <h3 id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventName" data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventName">
-  EventName
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the stable contract of the event that could not be deserialized or applied.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string EventName { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventSequence_" data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventSequence*"></a>
-
-  <h3 id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventSequence" data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventSequence">
-  EventSequence
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the event position within its aggregate instance's stream.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long EventSequence { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventVersion_" data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventVersion*"></a>
-
-  <h3 id="Devbone_Frameworks_Ddd_Aggregates_Infrastructure_AggregateRehydrationException_EventVersion" data-uid="Devbone.Frameworks.Ddd.Aggregates.Infrastructure.AggregateRehydrationException.EventVersion">
-  EventVersion
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the persisted payload-schema version.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int EventVersion { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
 
 
 

@@ -239,6 +239,48 @@ Aggregate locking is exposed separately through <a class="xref" href="Devbone.Fr
 
 
 
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_IEventStore_GetUniqueReservation_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IEventStore.GetUniqueReservation*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_IEventStore_GetUniqueReservation_System_String_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IEventStore.GetUniqueReservation(System.String,System.String)">
+  GetUniqueReservation(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads scalar or collection membership without exposing original values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">UniqueReservationState? GetUniqueReservation(string aggregateId, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Owning aggregate identifier.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Logical key.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html">UniqueReservationState</a></dt>
+    <dd><p>Group and hashes, or null when absent. Empty groups have no hashes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventSourcing_Repositories_IEventStore_LoadAggregate_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IEventStore.LoadAggregate*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Repositories_IEventStore_LoadAggregate_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IEventStore.LoadAggregate(System.String)">
@@ -346,8 +388,8 @@ Aggregate locking is exposed separately through <a class="xref" href="Devbone.Fr
 
   <a id="Devbone_Frameworks_EventSourcing_Repositories_IEventStore_StoreEvents_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IEventStore.StoreEvents*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_IEventStore_StoreEvents_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Uniques_IUniqueValue___" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IEventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue[])">
-  StoreEvents(IDatabaseEvent[], params IUniqueValue[])
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_IEventStore_StoreEvents_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___" data-uid="Devbone.Frameworks.EventSourcing.Repositories.IEventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])">
+  StoreEvents(IDatabaseEvent[], params IUniqueReservation[])
   
   </h3>
 
@@ -356,7 +398,7 @@ Aggregate locking is exposed separately through <a class="xref" href="Devbone.Fr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void StoreEvents(IDatabaseEvent[] events, params IUniqueValue[] uniqueValues)</code></pre>
+    <pre><code class="lang-csharp hljs">void StoreEvents(IDatabaseEvent[] events, params IUniqueReservation[] uniqueValues)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -364,7 +406,7 @@ Aggregate locking is exposed separately through <a class="xref" href="Devbone.Fr
     <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>[]</dt>
     <dd><p>The events to store.</p>
 </dd>
-    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValue.html">IUniqueValue</a>[]</dt>
+    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html">IUniqueReservation</a>[]</dt>
     <dd><p>Optional unique values to upsert in the same transaction.</p>
 </dd>
   </dl>

@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class UniqueValueBuilderAttribute | Devbone Event-Driven Platform </title>
+      <title>Class UniqueCollectionAttribute | Devbone Event-Driven Platform </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class UniqueValueBuilderAttribute | Devbone Event-Driven Platform ">
+      <meta name="title" content="Class UniqueCollectionAttribute | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Builds a composed unique value from multiple event properties.">
+      <meta name="description" content="Declares complete replacement of a unique string set, atomically with its event commit.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute">
+        <article data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute">
 
 
 
-  <h1 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute" class="text-break">
-Class UniqueValueBuilderAttribute  
+  <h1 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute" class="text-break">
+Class UniqueCollectionAttribute  
   </h1>
 
   <div class="facts text-secondary">
@@ -97,13 +97,13 @@ Class UniqueValueBuilderAttribute
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.Ddd.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Builds a composed unique value from multiple event properties.</p>
+  <div class="markdown summary"><p>Declares complete replacement of a unique string set, atomically with its event commit.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Property, Inherited = true, AllowMultiple = false)]
-public class UniqueValueBuilderAttribute : Attribute, IUniqueAttribute</code></pre>
+public sealed class UniqueCollectionAttribute : Attribute</code></pre>
   </div>
 
 
@@ -114,16 +114,10 @@ public class UniqueValueBuilderAttribute : Attribute, IUniqueAttribute</code></p
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute">Attribute</a></div>
-      <div><span class="xref">UniqueValueBuilderAttribute</span></div>
+      <div><span class="xref">UniqueCollectionAttribute</span></div>
     </dd>
   </dl>
 
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.IUniqueAttribute.html">IUniqueAttribute</a></div>
-    </dd>
-  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -244,9 +238,6 @@ public class UniqueValueBuilderAttribute : Attribute, IUniqueAttribute</code></p
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -260,52 +251,40 @@ public class UniqueValueBuilderAttribute : Attribute, IUniqueAttribute</code></p
 
 
 
-  <h2 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>The decorated property is first, followed by selected siblings in reflection order, not array order.
-By default values are concatenated without a delimiter; comparison and optional JSON serialization apply to each
-component. Ambiguous raw concatenations collide before hashing. Changing encoding changes persisted
-reservations and requires an explicit migration.</p>
-</div>
 
 
   <h2 class="section" id="constructors">Constructors
 </h2>
 
 
-  <a id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute__ctor_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.#ctor*"></a>
+  <a id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute__ctor_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute__ctor_System_String___Devbone_Frameworks_Ddd_UniqueValues_UniqueCompare_System_Boolean_System_Boolean_System_String_Devbone_Frameworks_Ddd_UniqueValues_UniqueScopeKind_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.#ctor(System.String[],Devbone.Frameworks.Ddd.UniqueValues.UniqueCompare,System.Boolean,System.Boolean,System.String,Devbone.Frameworks.Ddd.UniqueValues.UniqueScopeKind)">
-  UniqueValueBuilderAttribute(string[], UniqueCompare, bool, bool, string?, UniqueScopeKind)
+  <h3 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute__ctor_Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionSelection_System_String_System_Boolean_Devbone_Frameworks_Ddd_UniqueValues_UniqueScopeKind_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.#ctor(Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection,System.String,System.Boolean,Devbone.Frameworks.Ddd.UniqueValues.UniqueScopeKind)">
+  UniqueCollectionAttribute(UniqueCollectionSelection, string?, bool, UniqueScopeKind)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Configures a composite external uniqueness key assembled from the decorated property and named sibling properties.</p>
+  <div class="markdown level1 summary"><p>Configures explicit member selection and the shared uniqueness namespace.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniqueValueBuilderAttribute(string[] propertyNames, UniqueCompare compareStrategy = UniqueCompare.IfNotNull, bool useSerialization = false, bool isCaseSensitive = true, string? keyName = null, UniqueScopeKind scopeKind = UniqueScopeKind.Aggregate)</code></pre>
+    <pre><code class="lang-csharp hljs">public UniqueCollectionAttribute(UniqueCollectionSelection selection, string? keyName = null, bool isCaseSensitive = true, UniqueScopeKind scopeKind = UniqueScopeKind.Aggregate)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>propertyNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd><p>Property names to concatenate for the composed key value.</p>
-</dd>
-    <dt><code>compareStrategy</code> <a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueCompare.html">UniqueCompare</a></dt>
-    <dd><p>Defines when a property value is included.</p>
-</dd>
-    <dt><code>useSerialization</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Indicates whether participating values should be serialized.</p>
-</dd>
-    <dt><code>isCaseSensitive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Indicates whether composed values should be compared case-sensitively.</p>
+    <dt><code>selection</code> <a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.html">UniqueCollectionSelection</a></dt>
+    <dd><p>Elements, dictionary keys, or dictionary key/value pairs.</p>
 </dd>
     <dt><code>keyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Optional key name. Defaults to the decorated member name.</p>
+    <dd><p>Stable logical key, defaulting to the property name.</p>
+</dd>
+    <dt><code>isCaseSensitive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether normalized members retain case.</p>
 </dd>
     <dt><code>scopeKind</code> <a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueScopeKind.html">UniqueScopeKind</a></dt>
-    <dd><p>Selects aggregate-scoped uniqueness by default or explicitly global uniqueness.</p>
+    <dd><p>Aggregate-contract scope or explicitly global scope.</p>
 </dd>
   </dl>
 
@@ -317,18 +296,6 @@ reservations and requires an explicit migration.</p>
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown when <code class="paramref">propertyNames</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or no key name is available.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>Thrown when any element of <code class="paramref">propertyNames</code> is null, empty, or whitespace.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown when <code class="paramref">scopeKind</code> is not defined.</p>
-</dd>
-  </dl>
 
 
 
@@ -336,89 +303,14 @@ reservations and requires an explicit migration.</p>
 </h2>
 
 
-  <a id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_CompareStrategy_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.CompareStrategy*"></a>
+  <a id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_IsCaseSensitive_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.IsCaseSensitive*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_CompareStrategy" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.CompareStrategy">
-  CompareStrategy
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the condition that controls when values contribute to uniqueness.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniqueCompare CompareStrategy { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueCompare.html">UniqueCompare</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_Composition_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.Composition*"></a>
-
-  <h3 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_Composition" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.Composition">
-  Composition
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets or sets the opt-in encoding. JsonArray always uses JSON and ignores UseSerialization.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniqueValueComposition Composition { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueComposition.html">UniqueValueComposition</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-  <h4 class="section" id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_Composition_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>JsonArray keeps the decorated property first and selected siblings in reflection order. Excluded
-components occupy null slots; if every component is excluded a dummy replaces the reservation. Always includes
-actual nulls as JSON null, distinct from empty strings. Changing mode requires reservation migration.</p>
-</div>
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown for an undefined composition mode.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_IsCaseSensitive_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.IsCaseSensitive*"></a>
-
-  <h3 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_IsCaseSensitive" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.IsCaseSensitive">
+  <h3 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_IsCaseSensitive" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.IsCaseSensitive">
   IsCaseSensitive
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a value indicating whether comparison is case-sensitive.</p>
+  <div class="markdown level1 summary"><p>Gets whether members retain case during normalization.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -443,14 +335,14 @@ actual nulls as JSON null, distinct from empty strings. Changing mode requires r
 
 
 
-  <a id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_KeyName_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.KeyName*"></a>
+  <a id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_KeyName_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.KeyName*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_KeyName" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.KeyName">
+  <h3 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_KeyName" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.KeyName">
   KeyName
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the persistence key used for the composed unique value.</p>
+  <div class="markdown level1 summary"><p>Gets the logical key shared by competing owners.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -475,46 +367,14 @@ actual nulls as JSON null, distinct from empty strings. Changing mode requires r
 
 
 
-  <a id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_PropertyNames_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.PropertyNames*"></a>
+  <a id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_ScopeKind_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.ScopeKind*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_PropertyNames" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.PropertyNames">
-  PropertyNames
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the property names that participate in the composed unique value.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] PropertyNames { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_ScopeKind_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.ScopeKind*"></a>
-
-  <h3 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_ScopeKind" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.ScopeKind">
+  <h3 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_ScopeKind" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.ScopeKind">
   ScopeKind
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether the unique key is scoped to its aggregate contract or shared globally.</p>
+  <div class="markdown level1 summary"><p>Gets the uniqueness namespace selection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -539,19 +399,19 @@ actual nulls as JSON null, distinct from empty strings. Changing mode requires r
 
 
 
-  <a id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_UseSerialization_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.UseSerialization*"></a>
+  <a id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_Selection_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.Selection*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueValueBuilderAttribute_UseSerialization" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueValueBuilderAttribute.UseSerialization">
-  UseSerialization
+  <h3 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_Selection" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.Selection">
+  Selection
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a value indicating whether values are serialized before comparison.</p>
+  <div class="markdown level1 summary"><p>Gets the explicit extraction selection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool UseSerialization { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public UniqueCollectionSelection Selection { get; }</code></pre>
   </div>
 
 
@@ -560,7 +420,7 @@ actual nulls as JSON null, distinct from empty strings. Changing mode requires r
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.html">UniqueCollectionSelection</a></dt>
     <dd></dd>
   </dl>
 
