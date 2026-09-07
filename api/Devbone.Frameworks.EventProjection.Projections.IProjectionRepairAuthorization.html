@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Namespace Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints | Devbone Event-Driven Platform </title>
+      <title>Interface IProjectionRepairAuthorization | Devbone Event-Driven Platform </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Namespace Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints | Devbone Event-Driven Platform ">
+      <meta name="title" content="Interface IProjectionRepairAuthorization | Devbone Event-Driven Platform ">
       
-      
+      <meta name="description" content="Applies application-owned authorization before repair acceptance and progress disclosure.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,26 +84,90 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints">
+        <article data-uid="Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization">
 
-  <h1 id="Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints" class="text-break">Namespace Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints</h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
 
-    <h3 id="classes">
-Classes
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html">TimeMachineEndpointMetadata</a></dt>
-      <dd><p>Identifies a Time Machine component, interactive infrastructure, or guarding endpoint.</p>
+
+  <h1 id="Devbone_Frameworks_EventProjection_Projections_IProjectionRepairAuthorization" data-uid="Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization" class="text-break">
+Interface IProjectionRepairAuthorization  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.html">EventProjection</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Projections.html">Projections</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Applies application-owned authorization before repair acceptance and progress disclosure.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IProjectionRepairAuthorization</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventProjection_Projections_IProjectionRepairAuthorization_AuthorizeAsync_" data-uid="Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.AuthorizeAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_IProjectionRepairAuthorization_AuthorizeAsync_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_System_String_System_Boolean_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.AuthorizeAsync(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget,System.String,System.Boolean,System.Threading.CancellationToken)">
+  AuthorizeAsync(ProjectionRepairTarget, string?, bool, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Authorizes one exact target and tenant and returns trusted audit attribution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;string?&gt; AuthorizeAsync(ProjectionRepairTarget target, string? tenantId, bool isMutation, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html">ProjectionRepairTarget</a></dt>
+    <dd><p>Target being repaired or disclosed; called for every frozen output.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointRouteBuilderExtensions.html">TimeMachineEndpointRouteBuilderExtensions</a></dt>
-      <dd><p>Maps the Event Sourcing Time Machine into an ASP.NET Core application.</p>
+    <dt><code>tenantId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Requested tenant boundary.</p>
 </dd>
-    </dl>
+    <dt><code>isMutation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether authorization is for a new repair request.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Trusted actor name, or null to deny. Never trust a caller-supplied actor name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
 
 
 </article>

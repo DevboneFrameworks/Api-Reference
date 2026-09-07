@@ -299,8 +299,97 @@ public sealed class UniqueCollectionAttribute : Attribute</code></pre>
 
 
 
+  <a id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute__ctor_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute__ctor_Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionSelection_System_String___System_String_System_Boolean_Devbone_Frameworks_Ddd_UniqueValues_UniqueScopeKind_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.#ctor(Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection,System.String[],System.String,System.Boolean,Devbone.Frameworks.Ddd.UniqueValues.UniqueScopeKind)">
+  UniqueCollectionAttribute(UniqueCollectionSelection, string[], string?, bool, UniqueScopeKind)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures member selection plus sibling components framed into every reserved member.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniqueCollectionAttribute(UniqueCollectionSelection selection, string[] componentPropertyNames, string? keyName = null, bool isCaseSensitive = true, UniqueScopeKind scopeKind = UniqueScopeKind.Aggregate)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>selection</code> <a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection.html">UniqueCollectionSelection</a></dt>
+    <dd><p>Elements, dictionary keys, or dictionary key/value pairs.</p>
+</dd>
+    <dt><code>componentPropertyNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>Sibling CLR property names included after the selected member components.</p>
+</dd>
+    <dt><code>keyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Stable logical key, defaulting to the property name.</p>
+</dd>
+    <dt><code>isCaseSensitive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether normalized string components retain case.</p>
+</dd>
+    <dt><code>scopeKind</code> <a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueScopeKind.html">UniqueScopeKind</a></dt>
+    <dd><p>Aggregate-contract scope or explicitly global scope.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when <code class="paramref">componentPropertyNames</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when the component list contains a blank name.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown when a selection or scope value is undefined.</p>
+</dd>
+  </dl>
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_ComponentPropertyNames_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.ComponentPropertyNames*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_ComponentPropertyNames" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.ComponentPropertyNames">
+  ComponentPropertyNames
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets sibling CLR property names framed after every selected member, in reflection order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] ComponentPropertyNames { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
 
 
   <a id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_IsCaseSensitive_" data-uid="Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.IsCaseSensitive*"></a>

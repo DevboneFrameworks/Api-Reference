@@ -155,9 +155,9 @@ contract, never an edit to an existing one, because historic events keep their s
 must still deserialize into the current CLR type.
 </p>
 <p>
-The rules are deliberately <b>not</b> scoped by event version. Reading a stored event overwrites the
-payload's version field with the persisted one, so bumping a version neither breaks nor legitimizes
-anything — a changed version is reported as a signal, not as permission.
+The rules are deliberately <b>not</b> scoped by event version. Replay restores the persisted event-version
+metadata after payload construction, so bumping a version neither breaks nor legitimizes anything — a
+changed version is reported as a signal, not as permission.
 </p>
 </div>
 

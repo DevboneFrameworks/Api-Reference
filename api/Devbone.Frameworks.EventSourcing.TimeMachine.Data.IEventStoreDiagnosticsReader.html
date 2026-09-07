@@ -516,6 +516,51 @@ Interface IEventStoreDiagnosticsReader
 
 
 
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetUniqueReservationsAsync_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetUniqueReservationsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetUniqueReservationsAsync_Devbone_Frameworks_EventSourcing_TimeMachine_Data_AggregateFilter_System_String_System_String_System_Int32_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetUniqueReservationsAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter,System.String,System.String,System.Int32,System.Threading.CancellationToken)">
+  GetUniqueReservationsAsync(AggregateFilter, string?, string?, int, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads a page of current unique-reservation groups, including groups without members.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;PageResult&lt;UniqueReservationDetails&gt;&gt; GetUniqueReservationsAsync(AggregateFilter filter, string? key, string? cursor, int pageSize, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filter</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter.html">AggregateFilter</a></dt>
+    <dd></dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html">UniqueReservationDetails</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetUniqueValuesAsync_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetUniqueValuesAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetUniqueValuesAsync_Devbone_Frameworks_EventSourcing_TimeMachine_Data_AggregateFilter_System_String_System_String_System_Int32_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetUniqueValuesAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter,System.String,System.String,System.Int32,System.Threading.CancellationToken)">

@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Namespace Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints | Devbone Event-Driven Platform </title>
+      <title>Enum ProjectionInvocationReasons | Devbone Event-Driven Platform </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Namespace Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints | Devbone Event-Driven Platform ">
+      <meta name="title" content="Enum ProjectionInvocationReasons | Devbone Event-Driven Platform ">
       
-      
+      <meta name="description" content="Durable requirements coalesced into one current-state handler invocation.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,27 +84,66 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints">
+        <article data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons">
 
-  <h1 id="Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints" class="text-break">Namespace Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints</h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
 
-    <h3 id="classes">
-Classes
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html">TimeMachineEndpointMetadata</a></dt>
-      <dd><p>Identifies a Time Machine component, interactive infrastructure, or guarding endpoint.</p>
+
+
+  <h1 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionInvocationReasons" data-uid="Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons" class="text-break">
+Enum ProjectionInvocationReasons  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.html">EventProjection</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.html">Contracts</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Durable requirements coalesced into one current-state handler invocation.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Flags]
+public enum ProjectionInvocationReasons</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="Devbone_Frameworks_EventProjection_Contracts_ProjectionInvocationReasons_DefinitionRebuild"><code>DefinitionRebuild = 1</code></dt>
+  
+  <dd><p>A changed definition scheduled a scan; the writer must migrate existing outputs.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointRouteBuilderExtensions.html">TimeMachineEndpointRouteBuilderExtensions</a></dt>
-      <dd><p>Maps the Event Sourcing Time Machine into an ASP.NET Core application.</p>
+    <dt id="Devbone_Frameworks_EventProjection_Contracts_ProjectionInvocationReasons_DependencyRebuild"><code>DependencyRebuild = 4</code></dt>
+  
+  <dd><p>A bounded fan-out scheduled a current-definition fallback scan.</p>
 </dd>
-    </dl>
+    <dt id="Devbone_Frameworks_EventProjection_Contracts_ProjectionInvocationReasons_DependencyRefresh"><code>DependencyRefresh = 2</code></dt>
+  
+  <dd><p>A tracked aggregate dependency changed.</p>
+</dd>
+    <dt id="Devbone_Frameworks_EventProjection_Contracts_ProjectionInvocationReasons_Repair"><code>Repair = 8</code></dt>
+  
+  <dd><p>An explicit repair request requires recomputation even at an unchanged source position.</p>
+</dd>
+    <dt id="Devbone_Frameworks_EventProjection_Contracts_ProjectionInvocationReasons_SourceUpdate"><code>SourceUpdate = 0</code></dt>
+  
+  <dd><p>Ordinary source-position work without an additional recomputation requirement.</p>
+</dd>
+  </dl>
 
+
+  <h2 id="Devbone_Frameworks_EventProjection_Contracts_ProjectionInvocationReasons_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Flags may combine. Recovery and broker delivery are execution paths, not reasons.</p>
+</div>
 
 </article>
 

@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Namespace Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints | Devbone Event-Driven Platform </title>
+      <title>Enum ProjectionRepairStatus | Devbone Event-Driven Platform </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Namespace Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints | Devbone Event-Driven Platform ">
+      <meta name="title" content="Enum ProjectionRepairStatus | Devbone Event-Driven Platform ">
       
-      
+      <meta name="description" content="Describes durable repair progress independently of ordinary projection checkpoints.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,26 +84,57 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints">
+        <article data-uid="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus">
 
-  <h1 id="Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints" class="text-break">Namespace Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints</h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
 
-    <h3 id="classes">
-Classes
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html">TimeMachineEndpointMetadata</a></dt>
-      <dd><p>Identifies a Time Machine component, interactive infrastructure, or guarding endpoint.</p>
+
+
+  <h1 id="Devbone_Frameworks_EventProjection_Projections_ProjectionRepairStatus" data-uid="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus" class="text-break">
+Enum ProjectionRepairStatus  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.html">EventProjection</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Projections.html">Projections</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Describes durable repair progress independently of ordinary projection checkpoints.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum ProjectionRepairStatus</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="Devbone_Frameworks_EventProjection_Projections_ProjectionRepairStatus_Blocked"><code>Blocked = 3</code></dt>
+  
+  <dd><p>The frozen graph cannot execute, for example because of a cycle or retired definition.</p>
 </dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointRouteBuilderExtensions.html">TimeMachineEndpointRouteBuilderExtensions</a></dt>
-      <dd><p>Maps the Event Sourcing Time Machine into an ASP.NET Core application.</p>
+    <dt id="Devbone_Frameworks_EventProjection_Projections_ProjectionRepairStatus_Completed"><code>Completed = 1</code></dt>
+  
+  <dd><p>Every frozen output completed this request's own work generation.</p>
 </dd>
-    </dl>
+    <dt id="Devbone_Frameworks_EventProjection_Projections_ProjectionRepairStatus_Failed"><code>Failed = 2</code></dt>
+  
+  <dd><p>At least one output failed terminally; dependent outputs were not reported complete.</p>
+</dd>
+    <dt id="Devbone_Frameworks_EventProjection_Projections_ProjectionRepairStatus_Pending"><code>Pending = 0</code></dt>
+  
+  <dd><p>Work is awaiting scheduling or completion.</p>
+</dd>
+  </dl>
+
 
 
 </article>

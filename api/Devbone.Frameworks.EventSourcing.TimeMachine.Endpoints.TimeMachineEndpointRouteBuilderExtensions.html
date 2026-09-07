@@ -191,6 +191,13 @@ Class TimeMachineEndpointRouteBuilderExtensions
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointRouteBuilderExtensions_MapDevboneTimeMachine_Microsoft_AspNetCore_Builder_WebApplication_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>At a subpath the returned builder configures the outer guarding endpoint. Chained authorization and
+arbitrary application metadata are not copied onto inner component endpoints, which the DI endpoint
+catalogue exposes with mount-relative patterns. At the root the component builder is returned directly.
+Both paths mark UI and interactive endpoints with <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html">TimeMachineEndpointMetadata</a>; the subpath
+guard carries it too. Static assets and consumer endpoints are excluded from this ownership marker.</p>
+</div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">

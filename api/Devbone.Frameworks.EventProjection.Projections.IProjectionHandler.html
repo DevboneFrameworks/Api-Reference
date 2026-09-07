@@ -172,6 +172,11 @@ revision, and storage location.
 This version fences invalidations, failure attempts, checkpoints, dependencies, and barriers. Publishing
 a changed version schedules a resumable scan over current merged inputs, while the fence ensures its work
 and progress cannot inherit old-definition evidence.
+The scan schedules recomputation, not output-schema migration: insert-if-absent leaves existing documents
+unchanged even after successful handler completion. Use an idempotent replacement or selective upsert
+that actually migrates existing output, preserving application-owned immutable values. Scans cover current
+surviving inputs, not deleted inputs or historical per-event moments. Scan completion means work was
+durably scheduled; it does not certify handler completion or inspect application collections.
 </p>
 </div>
 

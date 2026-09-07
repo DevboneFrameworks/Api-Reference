@@ -4604,6 +4604,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.yml\" sourcestartlinenumber=\"1\">Durable requirements coalesced into one current-state handler invocation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Contracts.RawProjectionNotification.yml",
       "output": {
         ".html": {
@@ -5542,6 +5556,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.yml\" sourcestartlinenumber=\"1\">Applies application-owned authorization before repair acceptance and progress disclosure.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.JsonMergePatchApplier.yml",
       "output": {
         ".html": {
@@ -5679,6 +5707,90 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionReference",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionReference.yml\" sourcestartlinenumber=\"1\">Identifies one aggregate reference found in a JSON projection field.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.yml\" sourcestartlinenumber=\"1\">One output's repair progress; no old checkpoint is accepted as its completion evidence.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.yml\" sourcestartlinenumber=\"1\">One authorized view of a persisted repair request.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.yml\" sourcestartlinenumber=\"1\">Requests bounded, explicit recomputation independently of event resend and source positions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.yml\" sourcestartlinenumber=\"1\">Accepts idempotent scoped repair requests and reads their independent completion evidence.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.yml\" sourcestartlinenumber=\"1\">Describes durable repair progress independently of ordinary projection checkpoints.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.yml\" sourcestartlinenumber=\"1\">Identifies an aggregate-shaped derived output and its exact current definition.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -6662,6 +6774,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.yml\" sourcestartlinenumber=\"1\">Reads a consistent durable outbox inventory independently of dispatch operations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxStore.yml",
       "output": {
         ".html": {
@@ -6743,6 +6869,34 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.Outbox.OutboxRetry",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRetry.yml\" sourcestartlinenumber=\"1\">Describes a retry scheduled after an outbox publication failure.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.yml\" sourcestartlinenumber=\"1\">Periodically caches durable outbox state for nonblocking observable metrics.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.yml\" sourcestartlinenumber=\"1\">One durable outbox inventory; expired claims are counted as pending.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7726,6 +7880,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.yml\" sourcestartlinenumber=\"1\">Represents one persisted unique-reservation group and its current member hashes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueValueDetails.yml",
       "output": {
         ".html": {
@@ -7779,6 +7947,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.TimeMachine.DependencyInjection",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.yml\" sourcestartlinenumber=\"1\">Identifies a Time Machine component, interactive infrastructure, or guarding endpoint.</p>\n"
     },
     {
       "type": "ManagedReference",

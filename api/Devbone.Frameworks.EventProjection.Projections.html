@@ -168,6 +168,31 @@ them.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html">ProjectionRepairOutputProgress</a></dt>
+      <dd><p>One output's repair progress; no old checkpoint is accepted as its completion evidence.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html">ProjectionRepairProgress</a></dt>
+      <dd><p>One authorized view of a persisted repair request.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html">ProjectionRepairRequest</a></dt>
+      <dd><p>Requests bounded, explicit recomputation independently of event resend and source positions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.html">ProjectionRepairService</a></dt>
+      <dd><p>Accepts idempotent scoped repair requests and reads their independent completion evidence.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html">ProjectionRepairTarget</a></dt>
+      <dd><p>Identifies an aggregate-shaped derived output and its exact current definition.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionStateTransition.html">ProjectionStateTransition</a></dt>
       <dd><p>Applies lifecycle-aware event semantics to one raw aggregate projection.</p>
 </dd>
@@ -194,6 +219,19 @@ during execution.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.IProjectionReferenceSource.html">IProjectionReferenceSource</a></dt>
       <dd><p>Loads raw projection states used for cross-aggregate enrichment.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.html">IProjectionRepairAuthorization</a></dt>
+      <dd><p>Applies application-owned authorization before repair acceptance and progress disclosure.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.html">ProjectionRepairStatus</a></dt>
+      <dd><p>Describes durable repair progress independently of ordinary projection checkpoints.</p>
 </dd>
     </dl>
 

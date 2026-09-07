@@ -120,6 +120,16 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.html">OutboxStateSampler</a></dt>
+      <dd><p>Periodically caches durable outbox state for nonblocking observable metrics.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html">OutboxStateSnapshot</a></dt>
+      <dd><p>One durable outbox inventory; expired claims are counted as pending.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxNotificationListener.html">PostgresOutboxNotificationListener</a></dt>
       <dd><p>Waits on a dedicated PostgreSQL connection for transactional outbox notifications.</p>
 </dd>
@@ -135,6 +145,11 @@ Interfaces
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.IOutboxNotificationListener.html">IOutboxNotificationListener</a></dt>
       <dd><p>Waits for database-level hints that dispatchable outbox work may be available.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.html">IOutboxStateReader</a></dt>
+      <dd><p>Reads a consistent durable outbox inventory independently of dispatch operations.</p>
 </dd>
     </dl>
     <dl class="jumplist">

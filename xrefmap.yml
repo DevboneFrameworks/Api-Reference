@@ -9330,6 +9330,15 @@ references:
   fullName.vb: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.New(Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection, String, Boolean, Devbone.Frameworks.Ddd.UniqueValues.UniqueScopeKind)
   nameWithType: UniqueCollectionAttribute.UniqueCollectionAttribute(UniqueCollectionSelection, string?, bool, UniqueScopeKind)
   nameWithType.vb: UniqueCollectionAttribute.New(UniqueCollectionSelection, String, Boolean, UniqueScopeKind)
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.#ctor(Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection,System.String[],System.String,System.Boolean,Devbone.Frameworks.Ddd.UniqueValues.UniqueScopeKind)
+  name: UniqueCollectionAttribute(UniqueCollectionSelection, string[], string?, bool, UniqueScopeKind)
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute__ctor_Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionSelection_System_String___System_String_System_Boolean_Devbone_Frameworks_Ddd_UniqueValues_UniqueScopeKind_
+  commentId: M:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.#ctor(Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection,System.String[],System.String,System.Boolean,Devbone.Frameworks.Ddd.UniqueValues.UniqueScopeKind)
+  name.vb: New(UniqueCollectionSelection, String(), String, Boolean, UniqueScopeKind)
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.UniqueCollectionAttribute(Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection, string[], string?, bool, Devbone.Frameworks.Ddd.UniqueValues.UniqueScopeKind)
+  fullName.vb: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.New(Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionSelection, String(), String, Boolean, Devbone.Frameworks.Ddd.UniqueValues.UniqueScopeKind)
+  nameWithType: UniqueCollectionAttribute.UniqueCollectionAttribute(UniqueCollectionSelection, string[], string?, bool, UniqueScopeKind)
+  nameWithType.vb: UniqueCollectionAttribute.New(UniqueCollectionSelection, String(), String, Boolean, UniqueScopeKind)
 - uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.#ctor*
   name: UniqueCollectionAttribute
   href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute__ctor_
@@ -9339,6 +9348,18 @@ references:
   fullName.vb: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.New
   nameWithType: UniqueCollectionAttribute.UniqueCollectionAttribute
   nameWithType.vb: UniqueCollectionAttribute.New
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.ComponentPropertyNames
+  name: ComponentPropertyNames
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_ComponentPropertyNames
+  commentId: P:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.ComponentPropertyNames
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.ComponentPropertyNames
+  nameWithType: UniqueCollectionAttribute.ComponentPropertyNames
+- uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.ComponentPropertyNames*
+  name: ComponentPropertyNames
+  href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_ComponentPropertyNames_
+  commentId: Overload:Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.ComponentPropertyNames
+  fullName: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.ComponentPropertyNames
+  nameWithType: UniqueCollectionAttribute.ComponentPropertyNames
 - uid: Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.IsCaseSensitive
   name: IsCaseSensitive
   href: api/Devbone.Frameworks.Ddd.UniqueValues.UniqueCollectionAttribute.html#Devbone_Frameworks_Ddd_UniqueValues_UniqueCollectionAttribute_IsCaseSensitive
@@ -20562,6 +20583,18 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.GetHashCode
   fullName: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.GetHashCode
   nameWithType: MergedProjectionContext.GetHashCode
+- uid: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.InvocationReasons
+  name: InvocationReasons
+  href: api/Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_InvocationReasons
+  commentId: P:Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.InvocationReasons
+  fullName: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.InvocationReasons
+  nameWithType: MergedProjectionContext.InvocationReasons
+- uid: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.InvocationReasons*
+  name: InvocationReasons
+  href: api/Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_InvocationReasons_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.InvocationReasons
+  fullName: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.InvocationReasons
+  nameWithType: MergedProjectionContext.InvocationReasons
 - uid: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.Merged
   name: Merged
   href: api/Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_Merged
@@ -21804,6 +21837,42 @@ references:
   commentId: F:Devbone.Frameworks.EventProjection.Contracts.ProjectionFailureCodes.DERIVED_HANDLER_FAILED
   fullName: Devbone.Frameworks.EventProjection.Contracts.ProjectionFailureCodes.DERIVED_HANDLER_FAILED
   nameWithType: ProjectionFailureCodes.DERIVED_HANDLER_FAILED
+- uid: Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons
+  name: ProjectionInvocationReasons
+  href: api/Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.html
+  commentId: T:Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons
+  fullName: Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons
+  nameWithType: ProjectionInvocationReasons
+- uid: Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.DefinitionRebuild
+  name: DefinitionRebuild
+  href: api/Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.html#Devbone_Frameworks_EventProjection_Contracts_ProjectionInvocationReasons_DefinitionRebuild
+  commentId: F:Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.DefinitionRebuild
+  fullName: Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.DefinitionRebuild
+  nameWithType: ProjectionInvocationReasons.DefinitionRebuild
+- uid: Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.DependencyRebuild
+  name: DependencyRebuild
+  href: api/Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.html#Devbone_Frameworks_EventProjection_Contracts_ProjectionInvocationReasons_DependencyRebuild
+  commentId: F:Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.DependencyRebuild
+  fullName: Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.DependencyRebuild
+  nameWithType: ProjectionInvocationReasons.DependencyRebuild
+- uid: Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.DependencyRefresh
+  name: DependencyRefresh
+  href: api/Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.html#Devbone_Frameworks_EventProjection_Contracts_ProjectionInvocationReasons_DependencyRefresh
+  commentId: F:Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.DependencyRefresh
+  fullName: Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.DependencyRefresh
+  nameWithType: ProjectionInvocationReasons.DependencyRefresh
+- uid: Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.Repair
+  name: Repair
+  href: api/Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.html#Devbone_Frameworks_EventProjection_Contracts_ProjectionInvocationReasons_Repair
+  commentId: F:Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.Repair
+  fullName: Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.Repair
+  nameWithType: ProjectionInvocationReasons.Repair
+- uid: Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.SourceUpdate
+  name: SourceUpdate
+  href: api/Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.html#Devbone_Frameworks_EventProjection_Contracts_ProjectionInvocationReasons_SourceUpdate
+  commentId: F:Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.SourceUpdate
+  fullName: Devbone.Frameworks.EventProjection.Contracts.ProjectionInvocationReasons.SourceUpdate
+  nameWithType: ProjectionInvocationReasons.SourceUpdate
 - uid: Devbone.Frameworks.EventProjection.Contracts.RawProjectionNotification
   name: RawProjectionNotification
   href: api/Devbone.Frameworks.EventProjection.Contracts.RawProjectionNotification.html
@@ -25194,6 +25263,18 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.DerivedAttempts
   fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.DerivedAttempts
   nameWithType: ProjectionCollectionNames.DerivedAttempts
+- uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.DerivedDependencies
+  name: DerivedDependencies()
+  href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_DerivedDependencies
+  commentId: M:Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.DerivedDependencies
+  fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.DerivedDependencies()
+  nameWithType: ProjectionCollectionNames.DerivedDependencies()
+- uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.DerivedDependencies*
+  name: DerivedDependencies
+  href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_DerivedDependencies_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.DerivedDependencies
+  fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.DerivedDependencies
+  nameWithType: ProjectionCollectionNames.DerivedDependencies
 - uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.Failures
   name: Failures()
   href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_Failures
@@ -25275,6 +25356,18 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.RawEvents
   fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.RawEvents
   nameWithType: ProjectionCollectionNames.RawEvents
+- uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.Repairs
+  name: Repairs()
+  href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_Repairs
+  commentId: M:Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.Repairs
+  fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.Repairs()
+  nameWithType: ProjectionCollectionNames.Repairs()
+- uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.Repairs*
+  name: Repairs
+  href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_Repairs_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.Repairs
+  fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.Repairs
+  nameWithType: ProjectionCollectionNames.Repairs
 - uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.WorkerCapabilities
   name: WorkerCapabilities()
   href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionCollectionNames.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionCollectionNames_WorkerCapabilities
@@ -26007,6 +26100,18 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.InputEventSequence
   fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.InputEventSequence
   nameWithType: ProjectionInvalidation.InputEventSequence
+- uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.InvocationReasons
+  name: InvocationReasons
+  href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidation_InvocationReasons
+  commentId: P:Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.InvocationReasons
+  fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.InvocationReasons
+  nameWithType: ProjectionInvalidation.InvocationReasons
+- uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.InvocationReasons*
+  name: InvocationReasons
+  href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidation_InvocationReasons_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.InvocationReasons
+  fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.InvocationReasons
+  nameWithType: ProjectionInvalidation.InvocationReasons
 - uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.IsDeleted
   name: IsDeleted
   href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionInvalidation.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidation_IsDeleted
@@ -27117,6 +27222,21 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.Current
   fullName: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.Current
   nameWithType: DependencyTrackingProjectionContext.Current
+- uid: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.DeclareDerivedDependency(System.String,System.String,System.String)
+  name: DeclareDerivedDependency(string, string, string)
+  href: api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_DeclareDerivedDependency_System_String_System_String_System_String_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.DeclareDerivedDependency(System.String,System.String,System.String)
+  name.vb: DeclareDerivedDependency(String, String, String)
+  fullName: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.DeclareDerivedDependency(string, string, string)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.DeclareDerivedDependency(String, String, String)
+  nameWithType: DependencyTrackingProjectionContext.DeclareDerivedDependency(string, string, string)
+  nameWithType.vb: DependencyTrackingProjectionContext.DeclareDerivedDependency(String, String, String)
+- uid: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.DeclareDerivedDependency*
+  name: DeclareDerivedDependency
+  href: api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_DeclareDerivedDependency_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.DeclareDerivedDependency
+  fullName: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.DeclareDerivedDependency
+  nameWithType: DependencyTrackingProjectionContext.DeclareDerivedDependency
 - uid: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.Merged
   name: Merged
   href: api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_Merged
@@ -27414,6 +27534,27 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Projections.IProjectionReferenceSource.FindVisibleAsync
   fullName: Devbone.Frameworks.EventProjection.Projections.IProjectionReferenceSource.FindVisibleAsync
   nameWithType: IProjectionReferenceSource.FindVisibleAsync
+- uid: Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization
+  name: IProjectionRepairAuthorization
+  href: api/Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.html
+  commentId: T:Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization
+  fullName: Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization
+  nameWithType: IProjectionRepairAuthorization
+- uid: Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.AuthorizeAsync(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget,System.String,System.Boolean,System.Threading.CancellationToken)
+  name: AuthorizeAsync(ProjectionRepairTarget, string?, bool, CancellationToken)
+  href: api/Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.html#Devbone_Frameworks_EventProjection_Projections_IProjectionRepairAuthorization_AuthorizeAsync_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_System_String_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.AuthorizeAsync(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget,System.String,System.Boolean,System.Threading.CancellationToken)
+  name.vb: AuthorizeAsync(ProjectionRepairTarget, String, Boolean, CancellationToken)
+  fullName: Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.AuthorizeAsync(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget, string?, bool, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.AuthorizeAsync(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget, String, Boolean, System.Threading.CancellationToken)
+  nameWithType: IProjectionRepairAuthorization.AuthorizeAsync(ProjectionRepairTarget, string?, bool, CancellationToken)
+  nameWithType.vb: IProjectionRepairAuthorization.AuthorizeAsync(ProjectionRepairTarget, String, Boolean, CancellationToken)
+- uid: Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.AuthorizeAsync*
+  name: AuthorizeAsync
+  href: api/Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.html#Devbone_Frameworks_EventProjection_Projections_IProjectionRepairAuthorization_AuthorizeAsync_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.AuthorizeAsync
+  fullName: Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.AuthorizeAsync
+  nameWithType: IProjectionRepairAuthorization.AuthorizeAsync
 - uid: Devbone.Frameworks.EventProjection.Projections.JsonMergePatchApplier
   name: JsonMergePatchApplier
   href: api/Devbone.Frameworks.EventProjection.Projections.JsonMergePatchApplier.html
@@ -28155,6 +28296,795 @@ references:
   fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionReference.<>
   nameWithType: ProjectionReference.operator !=
   nameWithType.vb: ProjectionReference.<>
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress
+  name: ProjectionRepairOutputProgress
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html
+  commentId: T:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress
+  nameWithType: ProjectionRepairOutputProgress
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.#ctor(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget,System.String,System.Int32)
+  name: ProjectionRepairOutputProgress(ProjectionRepairTarget, string, int)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress__ctor_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_System_String_System_Int32_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.#ctor(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget,System.String,System.Int32)
+  name.vb: New(ProjectionRepairTarget, String, Integer)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.ProjectionRepairOutputProgress(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget, string, int)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.New(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget, String, Integer)
+  nameWithType: ProjectionRepairOutputProgress.ProjectionRepairOutputProgress(ProjectionRepairTarget, string, int)
+  nameWithType.vb: ProjectionRepairOutputProgress.New(ProjectionRepairTarget, String, Integer)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.#ctor*
+  name: ProjectionRepairOutputProgress
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress__ctor_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.ProjectionRepairOutputProgress
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.New
+  nameWithType: ProjectionRepairOutputProgress.ProjectionRepairOutputProgress
+  nameWithType.vb: ProjectionRepairOutputProgress.New
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.AttemptCount
+  name: AttemptCount
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_AttemptCount
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.AttemptCount
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.AttemptCount
+  nameWithType: ProjectionRepairOutputProgress.AttemptCount
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.AttemptCount*
+  name: AttemptCount
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_AttemptCount_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.AttemptCount
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.AttemptCount
+  nameWithType: ProjectionRepairOutputProgress.AttemptCount
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Deconstruct(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget@,System.String@,System.Int32@)
+  name: Deconstruct(out ProjectionRepairTarget, out string, out int)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_Deconstruct_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget__System_String__System_Int32__
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Deconstruct(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget@,System.String@,System.Int32@)
+  name.vb: Deconstruct(ProjectionRepairTarget, String, Integer)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Deconstruct(out Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget, out string, out int)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Deconstruct(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget, String, Integer)
+  nameWithType: ProjectionRepairOutputProgress.Deconstruct(out ProjectionRepairTarget, out string, out int)
+  nameWithType.vb: ProjectionRepairOutputProgress.Deconstruct(ProjectionRepairTarget, String, Integer)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Deconstruct*
+  name: Deconstruct
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_Deconstruct_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Deconstruct
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Deconstruct
+  nameWithType: ProjectionRepairOutputProgress.Deconstruct
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Equals(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress)
+  name: Equals(ProjectionRepairOutputProgress?)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_Equals_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Equals(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress)
+  name.vb: Equals(ProjectionRepairOutputProgress)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Equals(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Equals(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress)
+  nameWithType: ProjectionRepairOutputProgress.Equals(ProjectionRepairOutputProgress?)
+  nameWithType.vb: ProjectionRepairOutputProgress.Equals(ProjectionRepairOutputProgress)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_Equals_System_Object_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Equals(object?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Equals(Object)
+  nameWithType: ProjectionRepairOutputProgress.Equals(object?)
+  nameWithType.vb: ProjectionRepairOutputProgress.Equals(Object)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Equals*
+  name: Equals
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_Equals_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Equals
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Equals
+  nameWithType: ProjectionRepairOutputProgress.Equals
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.GetHashCode
+  name: GetHashCode()
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_GetHashCode
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.GetHashCode
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.GetHashCode()
+  nameWithType: ProjectionRepairOutputProgress.GetHashCode()
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.GetHashCode*
+  name: GetHashCode
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_GetHashCode_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.GetHashCode
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.GetHashCode
+  nameWithType: ProjectionRepairOutputProgress.GetHashCode
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Status
+  name: Status
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_Status
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Status
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Status
+  nameWithType: ProjectionRepairOutputProgress.Status
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Status*
+  name: Status
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_Status_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Status
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Status
+  nameWithType: ProjectionRepairOutputProgress.Status
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Target
+  name: Target
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_Target
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Target
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Target
+  nameWithType: ProjectionRepairOutputProgress.Target
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Target*
+  name: Target
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_Target_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Target
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.Target
+  nameWithType: ProjectionRepairOutputProgress.Target
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.ToString
+  name: ToString()
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_ToString
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.ToString
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.ToString()
+  nameWithType: ProjectionRepairOutputProgress.ToString()
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.ToString*
+  name: ToString
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_ToString_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.ToString
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.ToString
+  nameWithType: ProjectionRepairOutputProgress.ToString
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.op_Equality(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress)
+  name: operator ==(ProjectionRepairOutputProgress?, ProjectionRepairOutputProgress?)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_op_Equality_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.op_Equality(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress)
+  name.vb: =(ProjectionRepairOutputProgress, ProjectionRepairOutputProgress)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.operator ==(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress?, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.=(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress)
+  nameWithType: ProjectionRepairOutputProgress.operator ==(ProjectionRepairOutputProgress?, ProjectionRepairOutputProgress?)
+  nameWithType.vb: ProjectionRepairOutputProgress.=(ProjectionRepairOutputProgress, ProjectionRepairOutputProgress)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.op_Equality*
+  name: operator ==
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_op_Equality_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.op_Equality
+  name.vb: =
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.operator ==
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.=
+  nameWithType: ProjectionRepairOutputProgress.operator ==
+  nameWithType.vb: ProjectionRepairOutputProgress.=
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.op_Inequality(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress)
+  name: operator !=(ProjectionRepairOutputProgress?, ProjectionRepairOutputProgress?)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_op_Inequality_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.op_Inequality(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress)
+  name.vb: <>(ProjectionRepairOutputProgress, ProjectionRepairOutputProgress)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.operator !=(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress?, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.<>(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress)
+  nameWithType: ProjectionRepairOutputProgress.operator !=(ProjectionRepairOutputProgress?, ProjectionRepairOutputProgress?)
+  nameWithType.vb: ProjectionRepairOutputProgress.<>(ProjectionRepairOutputProgress, ProjectionRepairOutputProgress)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.op_Inequality*
+  name: operator !=
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress_op_Inequality_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.op_Inequality
+  name.vb: <>
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.operator !=
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.<>
+  nameWithType: ProjectionRepairOutputProgress.operator !=
+  nameWithType.vb: ProjectionRepairOutputProgress.<>
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress
+  name: ProjectionRepairProgress
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html
+  commentId: T:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress
+  nameWithType: ProjectionRepairProgress
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.#ctor(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus,System.String,System.Collections.Generic.IReadOnlyList{Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress})
+  name: ProjectionRepairProgress(ProjectionRepairRequest, ProjectionRepairStatus, string?, IReadOnlyList<ProjectionRepairOutputProgress>)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress__ctor_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairStatus_System_String_System_Collections_Generic_IReadOnlyList_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress__
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.#ctor(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus,System.String,System.Collections.Generic.IReadOnlyList{Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress})
+  name.vb: New(ProjectionRepairRequest, ProjectionRepairStatus, String, IReadOnlyList(Of ProjectionRepairOutputProgress))
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.ProjectionRepairProgress(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus, string?, System.Collections.Generic.IReadOnlyList<Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress>)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.New(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus, String, System.Collections.Generic.IReadOnlyList(Of Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress))
+  nameWithType: ProjectionRepairProgress.ProjectionRepairProgress(ProjectionRepairRequest, ProjectionRepairStatus, string?, IReadOnlyList<ProjectionRepairOutputProgress>)
+  nameWithType.vb: ProjectionRepairProgress.New(ProjectionRepairRequest, ProjectionRepairStatus, String, IReadOnlyList(Of ProjectionRepairOutputProgress))
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.#ctor*
+  name: ProjectionRepairProgress
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress__ctor_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.ProjectionRepairProgress
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.New
+  nameWithType: ProjectionRepairProgress.ProjectionRepairProgress
+  nameWithType.vb: ProjectionRepairProgress.New
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Deconstruct(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest@,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus@,System.String@,System.Collections.Generic.IReadOnlyList{Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress}@)
+  name: Deconstruct(out ProjectionRepairRequest, out ProjectionRepairStatus, out string?, out IReadOnlyList<ProjectionRepairOutputProgress>)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_Deconstruct_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest__Devbone_Frameworks_EventProjection_Projections_ProjectionRepairStatus__System_String__System_Collections_Generic_IReadOnlyList_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairOutputProgress___
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Deconstruct(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest@,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus@,System.String@,System.Collections.Generic.IReadOnlyList{Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress}@)
+  name.vb: Deconstruct(ProjectionRepairRequest, ProjectionRepairStatus, String, IReadOnlyList(Of ProjectionRepairOutputProgress))
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Deconstruct(out Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest, out Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus, out string?, out System.Collections.Generic.IReadOnlyList<Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress>)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Deconstruct(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus, String, System.Collections.Generic.IReadOnlyList(Of Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress))
+  nameWithType: ProjectionRepairProgress.Deconstruct(out ProjectionRepairRequest, out ProjectionRepairStatus, out string?, out IReadOnlyList<ProjectionRepairOutputProgress>)
+  nameWithType.vb: ProjectionRepairProgress.Deconstruct(ProjectionRepairRequest, ProjectionRepairStatus, String, IReadOnlyList(Of ProjectionRepairOutputProgress))
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Deconstruct*
+  name: Deconstruct
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_Deconstruct_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Deconstruct
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Deconstruct
+  nameWithType: ProjectionRepairProgress.Deconstruct
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Equals(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress)
+  name: Equals(ProjectionRepairProgress?)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_Equals_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Equals(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress)
+  name.vb: Equals(ProjectionRepairProgress)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Equals(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Equals(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress)
+  nameWithType: ProjectionRepairProgress.Equals(ProjectionRepairProgress?)
+  nameWithType.vb: ProjectionRepairProgress.Equals(ProjectionRepairProgress)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_Equals_System_Object_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Equals(object?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Equals(Object)
+  nameWithType: ProjectionRepairProgress.Equals(object?)
+  nameWithType.vb: ProjectionRepairProgress.Equals(Object)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Equals*
+  name: Equals
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_Equals_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Equals
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Equals
+  nameWithType: ProjectionRepairProgress.Equals
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.FailureCode
+  name: FailureCode
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_FailureCode
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.FailureCode
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.FailureCode
+  nameWithType: ProjectionRepairProgress.FailureCode
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.FailureCode*
+  name: FailureCode
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_FailureCode_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.FailureCode
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.FailureCode
+  nameWithType: ProjectionRepairProgress.FailureCode
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.GetHashCode
+  name: GetHashCode()
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_GetHashCode
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.GetHashCode
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.GetHashCode()
+  nameWithType: ProjectionRepairProgress.GetHashCode()
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.GetHashCode*
+  name: GetHashCode
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_GetHashCode_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.GetHashCode
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.GetHashCode
+  nameWithType: ProjectionRepairProgress.GetHashCode
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Outputs
+  name: Outputs
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_Outputs
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Outputs
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Outputs
+  nameWithType: ProjectionRepairProgress.Outputs
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Outputs*
+  name: Outputs
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_Outputs_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Outputs
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Outputs
+  nameWithType: ProjectionRepairProgress.Outputs
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Request
+  name: Request
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_Request
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Request
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Request
+  nameWithType: ProjectionRepairProgress.Request
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Request*
+  name: Request
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_Request_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Request
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Request
+  nameWithType: ProjectionRepairProgress.Request
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Status
+  name: Status
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_Status
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Status
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Status
+  nameWithType: ProjectionRepairProgress.Status
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Status*
+  name: Status
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_Status_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Status
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.Status
+  nameWithType: ProjectionRepairProgress.Status
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.ToString
+  name: ToString()
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_ToString
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.ToString
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.ToString()
+  nameWithType: ProjectionRepairProgress.ToString()
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.ToString*
+  name: ToString
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_ToString_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.ToString
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.ToString
+  nameWithType: ProjectionRepairProgress.ToString
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.op_Equality(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress)
+  name: operator ==(ProjectionRepairProgress?, ProjectionRepairProgress?)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_op_Equality_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.op_Equality(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress)
+  name.vb: =(ProjectionRepairProgress, ProjectionRepairProgress)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.operator ==(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress?, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.=(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress)
+  nameWithType: ProjectionRepairProgress.operator ==(ProjectionRepairProgress?, ProjectionRepairProgress?)
+  nameWithType.vb: ProjectionRepairProgress.=(ProjectionRepairProgress, ProjectionRepairProgress)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.op_Equality*
+  name: operator ==
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_op_Equality_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.op_Equality
+  name.vb: =
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.operator ==
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.=
+  nameWithType: ProjectionRepairProgress.operator ==
+  nameWithType.vb: ProjectionRepairProgress.=
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.op_Inequality(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress)
+  name: operator !=(ProjectionRepairProgress?, ProjectionRepairProgress?)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_op_Inequality_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.op_Inequality(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress)
+  name.vb: <>(ProjectionRepairProgress, ProjectionRepairProgress)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.operator !=(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress?, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.<>(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress)
+  nameWithType: ProjectionRepairProgress.operator !=(ProjectionRepairProgress?, ProjectionRepairProgress?)
+  nameWithType.vb: ProjectionRepairProgress.<>(ProjectionRepairProgress, ProjectionRepairProgress)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.op_Inequality*
+  name: operator !=
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_op_Inequality_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.op_Inequality
+  name.vb: <>
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.operator !=
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.<>
+  nameWithType: ProjectionRepairProgress.operator !=
+  nameWithType.vb: ProjectionRepairProgress.<>
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest
+  name: ProjectionRepairRequest
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html
+  commentId: T:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest
+  nameWithType: ProjectionRepairRequest
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.#ctor(System.Guid,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget,System.String,System.String)
+  name: ProjectionRepairRequest(Guid, ProjectionRepairTarget, string?, string)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest__ctor_System_Guid_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_System_String_System_String_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.#ctor(System.Guid,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget,System.String,System.String)
+  name.vb: New(Guid, ProjectionRepairTarget, String, String)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.ProjectionRepairRequest(System.Guid, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget, string?, string)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.New(System.Guid, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget, String, String)
+  nameWithType: ProjectionRepairRequest.ProjectionRepairRequest(Guid, ProjectionRepairTarget, string?, string)
+  nameWithType.vb: ProjectionRepairRequest.New(Guid, ProjectionRepairTarget, String, String)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.#ctor*
+  name: ProjectionRepairRequest
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest__ctor_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.ProjectionRepairRequest
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.New
+  nameWithType: ProjectionRepairRequest.ProjectionRepairRequest
+  nameWithType.vb: ProjectionRepairRequest.New
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Deconstruct(System.Guid@,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget@,System.String@,System.String@)
+  name: Deconstruct(out Guid, out ProjectionRepairTarget, out string?, out string)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_Deconstruct_System_Guid__Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget__System_String__System_String__
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Deconstruct(System.Guid@,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget@,System.String@,System.String@)
+  name.vb: Deconstruct(Guid, ProjectionRepairTarget, String, String)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Deconstruct(out System.Guid, out Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget, out string?, out string)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Deconstruct(System.Guid, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget, String, String)
+  nameWithType: ProjectionRepairRequest.Deconstruct(out Guid, out ProjectionRepairTarget, out string?, out string)
+  nameWithType.vb: ProjectionRepairRequest.Deconstruct(Guid, ProjectionRepairTarget, String, String)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Deconstruct*
+  name: Deconstruct
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_Deconstruct_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Deconstruct
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Deconstruct
+  nameWithType: ProjectionRepairRequest.Deconstruct
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Equals(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest)
+  name: Equals(ProjectionRepairRequest?)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_Equals_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Equals(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest)
+  name.vb: Equals(ProjectionRepairRequest)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Equals(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Equals(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest)
+  nameWithType: ProjectionRepairRequest.Equals(ProjectionRepairRequest?)
+  nameWithType.vb: ProjectionRepairRequest.Equals(ProjectionRepairRequest)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_Equals_System_Object_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Equals(object?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Equals(Object)
+  nameWithType: ProjectionRepairRequest.Equals(object?)
+  nameWithType.vb: ProjectionRepairRequest.Equals(Object)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Equals*
+  name: Equals
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_Equals_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Equals
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Equals
+  nameWithType: ProjectionRepairRequest.Equals
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.GetHashCode
+  name: GetHashCode()
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_GetHashCode
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.GetHashCode
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.GetHashCode()
+  nameWithType: ProjectionRepairRequest.GetHashCode()
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.GetHashCode*
+  name: GetHashCode
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_GetHashCode_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.GetHashCode
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.GetHashCode
+  nameWithType: ProjectionRepairRequest.GetHashCode
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.IncludeDependents
+  name: IncludeDependents
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_IncludeDependents
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.IncludeDependents
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.IncludeDependents
+  nameWithType: ProjectionRepairRequest.IncludeDependents
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.IncludeDependents*
+  name: IncludeDependents
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_IncludeDependents_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.IncludeDependents
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.IncludeDependents
+  nameWithType: ProjectionRepairRequest.IncludeDependents
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.MaximumGraphNodes
+  name: MaximumGraphNodes
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_MaximumGraphNodes
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.MaximumGraphNodes
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.MaximumGraphNodes
+  nameWithType: ProjectionRepairRequest.MaximumGraphNodes
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.MaximumGraphNodes*
+  name: MaximumGraphNodes
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_MaximumGraphNodes_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.MaximumGraphNodes
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.MaximumGraphNodes
+  nameWithType: ProjectionRepairRequest.MaximumGraphNodes
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.RatePerSecond
+  name: RatePerSecond
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_RatePerSecond
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.RatePerSecond
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.RatePerSecond
+  nameWithType: ProjectionRepairRequest.RatePerSecond
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.RatePerSecond*
+  name: RatePerSecond
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_RatePerSecond_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.RatePerSecond
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.RatePerSecond
+  nameWithType: ProjectionRepairRequest.RatePerSecond
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Reason
+  name: Reason
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_Reason
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Reason
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Reason
+  nameWithType: ProjectionRepairRequest.Reason
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Reason*
+  name: Reason
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_Reason_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Reason
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Reason
+  nameWithType: ProjectionRepairRequest.Reason
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.RequestId
+  name: RequestId
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_RequestId
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.RequestId
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.RequestId
+  nameWithType: ProjectionRepairRequest.RequestId
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.RequestId*
+  name: RequestId
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_RequestId_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.RequestId
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.RequestId
+  nameWithType: ProjectionRepairRequest.RequestId
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Target
+  name: Target
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_Target
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Target
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Target
+  nameWithType: ProjectionRepairRequest.Target
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Target*
+  name: Target
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_Target_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Target
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.Target
+  nameWithType: ProjectionRepairRequest.Target
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.TenantId
+  name: TenantId
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_TenantId
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.TenantId
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.TenantId
+  nameWithType: ProjectionRepairRequest.TenantId
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.TenantId*
+  name: TenantId
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_TenantId_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.TenantId
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.TenantId
+  nameWithType: ProjectionRepairRequest.TenantId
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.ToString
+  name: ToString()
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_ToString
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.ToString
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.ToString()
+  nameWithType: ProjectionRepairRequest.ToString()
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.ToString*
+  name: ToString
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_ToString_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.ToString
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.ToString
+  nameWithType: ProjectionRepairRequest.ToString
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.op_Equality(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest)
+  name: operator ==(ProjectionRepairRequest?, ProjectionRepairRequest?)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_op_Equality_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.op_Equality(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest)
+  name.vb: =(ProjectionRepairRequest, ProjectionRepairRequest)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.operator ==(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest?, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.=(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest)
+  nameWithType: ProjectionRepairRequest.operator ==(ProjectionRepairRequest?, ProjectionRepairRequest?)
+  nameWithType.vb: ProjectionRepairRequest.=(ProjectionRepairRequest, ProjectionRepairRequest)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.op_Equality*
+  name: operator ==
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_op_Equality_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.op_Equality
+  name.vb: =
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.operator ==
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.=
+  nameWithType: ProjectionRepairRequest.operator ==
+  nameWithType.vb: ProjectionRepairRequest.=
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.op_Inequality(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest)
+  name: operator !=(ProjectionRepairRequest?, ProjectionRepairRequest?)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_op_Inequality_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.op_Inequality(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest)
+  name.vb: <>(ProjectionRepairRequest, ProjectionRepairRequest)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.operator !=(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest?, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.<>(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest)
+  nameWithType: ProjectionRepairRequest.operator !=(ProjectionRepairRequest?, ProjectionRepairRequest?)
+  nameWithType.vb: ProjectionRepairRequest.<>(ProjectionRepairRequest, ProjectionRepairRequest)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.op_Inequality*
+  name: operator !=
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_op_Inequality_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.op_Inequality
+  name.vb: <>
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.operator !=
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.<>
+  nameWithType: ProjectionRepairRequest.operator !=
+  nameWithType.vb: ProjectionRepairRequest.<>
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService
+  name: ProjectionRepairService
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.html
+  commentId: T:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService
+  nameWithType: ProjectionRepairService
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.#ctor(Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore,Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization)
+  name: ProjectionRepairService(MongoProjectionStore, IProjectionRepairAuthorization)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairService__ctor_Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_Devbone_Frameworks_EventProjection_Projections_IProjectionRepairAuthorization_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.#ctor(Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore,Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization)
+  name.vb: New(MongoProjectionStore, IProjectionRepairAuthorization)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.ProjectionRepairService(Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore, Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.New(Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore, Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization)
+  nameWithType: ProjectionRepairService.ProjectionRepairService(MongoProjectionStore, IProjectionRepairAuthorization)
+  nameWithType.vb: ProjectionRepairService.New(MongoProjectionStore, IProjectionRepairAuthorization)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.#ctor*
+  name: ProjectionRepairService
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairService__ctor_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.ProjectionRepairService
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.New
+  nameWithType: ProjectionRepairService.ProjectionRepairService
+  nameWithType.vb: ProjectionRepairService.New
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.ReadAsync(System.Guid,System.String,System.Threading.CancellationToken)
+  name: ReadAsync(Guid, string?, CancellationToken)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairService_ReadAsync_System_Guid_System_String_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.ReadAsync(System.Guid,System.String,System.Threading.CancellationToken)
+  name.vb: ReadAsync(Guid, String, CancellationToken)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.ReadAsync(System.Guid, string?, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.ReadAsync(System.Guid, String, System.Threading.CancellationToken)
+  nameWithType: ProjectionRepairService.ReadAsync(Guid, string?, CancellationToken)
+  nameWithType.vb: ProjectionRepairService.ReadAsync(Guid, String, CancellationToken)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.ReadAsync*
+  name: ReadAsync
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairService_ReadAsync_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.ReadAsync
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.ReadAsync
+  nameWithType: ProjectionRepairService.ReadAsync
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.RequestAsync(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest,System.Threading.CancellationToken)
+  name: RequestAsync(ProjectionRepairRequest, CancellationToken)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairService_RequestAsync_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRequest_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.RequestAsync(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest,System.Threading.CancellationToken)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.RequestAsync(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest, System.Threading.CancellationToken)
+  nameWithType: ProjectionRepairService.RequestAsync(ProjectionRepairRequest, CancellationToken)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.RequestAsync*
+  name: RequestAsync
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairService_RequestAsync_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.RequestAsync
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.RequestAsync
+  nameWithType: ProjectionRepairService.RequestAsync
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus
+  name: ProjectionRepairStatus
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.html
+  commentId: T:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus
+  nameWithType: ProjectionRepairStatus
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.Blocked
+  name: Blocked
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairStatus_Blocked
+  commentId: F:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.Blocked
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.Blocked
+  nameWithType: ProjectionRepairStatus.Blocked
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.Completed
+  name: Completed
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairStatus_Completed
+  commentId: F:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.Completed
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.Completed
+  nameWithType: ProjectionRepairStatus.Completed
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.Failed
+  name: Failed
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairStatus_Failed
+  commentId: F:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.Failed
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.Failed
+  nameWithType: ProjectionRepairStatus.Failed
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.Pending
+  name: Pending
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairStatus_Pending
+  commentId: F:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.Pending
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairStatus.Pending
+  nameWithType: ProjectionRepairStatus.Pending
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget
+  name: ProjectionRepairTarget
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html
+  commentId: T:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget
+  nameWithType: ProjectionRepairTarget
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.#ctor(System.String,System.String,System.String,System.String)
+  name: ProjectionRepairTarget(string, string, string, string)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget__ctor_System_String_System_String_System_String_System_String_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.#ctor(System.String,System.String,System.String,System.String)
+  name.vb: New(String, String, String, String)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.ProjectionRepairTarget(string, string, string, string)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.New(String, String, String, String)
+  nameWithType: ProjectionRepairTarget.ProjectionRepairTarget(string, string, string, string)
+  nameWithType.vb: ProjectionRepairTarget.New(String, String, String, String)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.#ctor*
+  name: ProjectionRepairTarget
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget__ctor_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.ProjectionRepairTarget
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.New
+  nameWithType: ProjectionRepairTarget.ProjectionRepairTarget
+  nameWithType.vb: ProjectionRepairTarget.New
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.AggregateId
+  name: AggregateId
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_AggregateId
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.AggregateId
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.AggregateId
+  nameWithType: ProjectionRepairTarget.AggregateId
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.AggregateId*
+  name: AggregateId
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_AggregateId_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.AggregateId
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.AggregateId
+  nameWithType: ProjectionRepairTarget.AggregateId
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.AggregateName
+  name: AggregateName
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_AggregateName
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.AggregateName
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.AggregateName
+  nameWithType: ProjectionRepairTarget.AggregateName
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.AggregateName*
+  name: AggregateName
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_AggregateName_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.AggregateName
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.AggregateName
+  nameWithType: ProjectionRepairTarget.AggregateName
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Deconstruct(System.String@,System.String@,System.String@,System.String@)
+  name: Deconstruct(out string, out string, out string, out string)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_Deconstruct_System_String__System_String__System_String__System_String__
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Deconstruct(System.String@,System.String@,System.String@,System.String@)
+  name.vb: Deconstruct(String, String, String, String)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Deconstruct(out string, out string, out string, out string)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Deconstruct(String, String, String, String)
+  nameWithType: ProjectionRepairTarget.Deconstruct(out string, out string, out string, out string)
+  nameWithType.vb: ProjectionRepairTarget.Deconstruct(String, String, String, String)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Deconstruct*
+  name: Deconstruct
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_Deconstruct_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Deconstruct
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Deconstruct
+  nameWithType: ProjectionRepairTarget.Deconstruct
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.DefinitionVersion
+  name: DefinitionVersion
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_DefinitionVersion
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.DefinitionVersion
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.DefinitionVersion
+  nameWithType: ProjectionRepairTarget.DefinitionVersion
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.DefinitionVersion*
+  name: DefinitionVersion
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_DefinitionVersion_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.DefinitionVersion
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.DefinitionVersion
+  nameWithType: ProjectionRepairTarget.DefinitionVersion
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Equals(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget)
+  name: Equals(ProjectionRepairTarget?)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_Equals_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Equals(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget)
+  name.vb: Equals(ProjectionRepairTarget)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Equals(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Equals(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget)
+  nameWithType: ProjectionRepairTarget.Equals(ProjectionRepairTarget?)
+  nameWithType.vb: ProjectionRepairTarget.Equals(ProjectionRepairTarget)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_Equals_System_Object_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Equals(object?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Equals(Object)
+  nameWithType: ProjectionRepairTarget.Equals(object?)
+  nameWithType.vb: ProjectionRepairTarget.Equals(Object)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Equals*
+  name: Equals
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_Equals_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Equals
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.Equals
+  nameWithType: ProjectionRepairTarget.Equals
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.GetHashCode
+  name: GetHashCode()
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_GetHashCode
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.GetHashCode
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.GetHashCode()
+  nameWithType: ProjectionRepairTarget.GetHashCode()
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.GetHashCode*
+  name: GetHashCode
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_GetHashCode_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.GetHashCode
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.GetHashCode
+  nameWithType: ProjectionRepairTarget.GetHashCode
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.ProjectionName
+  name: ProjectionName
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_ProjectionName
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.ProjectionName
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.ProjectionName
+  nameWithType: ProjectionRepairTarget.ProjectionName
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.ProjectionName*
+  name: ProjectionName
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_ProjectionName_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.ProjectionName
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.ProjectionName
+  nameWithType: ProjectionRepairTarget.ProjectionName
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.ToString
+  name: ToString()
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_ToString
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.ToString
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.ToString()
+  nameWithType: ProjectionRepairTarget.ToString()
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.ToString*
+  name: ToString
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_ToString_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.ToString
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.ToString
+  nameWithType: ProjectionRepairTarget.ToString
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.op_Equality(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget)
+  name: operator ==(ProjectionRepairTarget?, ProjectionRepairTarget?)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_op_Equality_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.op_Equality(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget)
+  name.vb: =(ProjectionRepairTarget, ProjectionRepairTarget)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.operator ==(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget?, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.=(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget)
+  nameWithType: ProjectionRepairTarget.operator ==(ProjectionRepairTarget?, ProjectionRepairTarget?)
+  nameWithType.vb: ProjectionRepairTarget.=(ProjectionRepairTarget, ProjectionRepairTarget)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.op_Equality*
+  name: operator ==
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_op_Equality_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.op_Equality
+  name.vb: =
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.operator ==
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.=
+  nameWithType: ProjectionRepairTarget.operator ==
+  nameWithType.vb: ProjectionRepairTarget.=
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.op_Inequality(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget)
+  name: operator !=(ProjectionRepairTarget?, ProjectionRepairTarget?)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_op_Inequality_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.op_Inequality(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget,Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget)
+  name.vb: <>(ProjectionRepairTarget, ProjectionRepairTarget)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.operator !=(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget?, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.<>(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget, Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget)
+  nameWithType: ProjectionRepairTarget.operator !=(ProjectionRepairTarget?, ProjectionRepairTarget?)
+  nameWithType.vb: ProjectionRepairTarget.<>(ProjectionRepairTarget, ProjectionRepairTarget)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.op_Inequality*
+  name: operator !=
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_op_Inequality_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.op_Inequality
+  name.vb: <>
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.operator !=
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.<>
+  nameWithType: ProjectionRepairTarget.operator !=
+  nameWithType.vb: ProjectionRepairTarget.<>
 - uid: Devbone.Frameworks.EventProjection.Projections.ProjectionStateTransition
   name: ProjectionStateTransition
   href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionStateTransition.html
@@ -31704,6 +32634,24 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.IOutboxNotificationListener.WaitAsync
   fullName: Devbone.Frameworks.EventSourcing.Outbox.IOutboxNotificationListener.WaitAsync
   nameWithType: IOutboxNotificationListener.WaitAsync
+- uid: Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader
+  name: IOutboxStateReader
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.html
+  commentId: T:Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader
+  nameWithType: IOutboxStateReader
+- uid: Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.ReadStateAsync(System.Threading.CancellationToken)
+  name: ReadStateAsync(CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.html#Devbone_Frameworks_EventSourcing_Outbox_IOutboxStateReader_ReadStateAsync_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.ReadStateAsync(System.Threading.CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.ReadStateAsync(System.Threading.CancellationToken)
+  nameWithType: IOutboxStateReader.ReadStateAsync(CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.ReadStateAsync*
+  name: ReadStateAsync
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.html#Devbone_Frameworks_EventSourcing_Outbox_IOutboxStateReader_ReadStateAsync_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.ReadStateAsync
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.ReadStateAsync
+  nameWithType: IOutboxStateReader.ReadStateAsync
 - uid: Devbone.Frameworks.EventSourcing.Outbox.IOutboxStore
   name: IOutboxStore
   href: api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxStore.html
@@ -32247,6 +33195,273 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxRetry.NextAttemptAtUtc
   fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRetry.NextAttemptAtUtc
   nameWithType: OutboxRetry.NextAttemptAtUtc
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler
+  name: OutboxStateSampler
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.html
+  commentId: T:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler
+  nameWithType: OutboxStateSampler
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.#ctor(Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader,System.String,System.TimeSpan,System.TimeSpan)
+  name: OutboxStateSampler(IOutboxStateReader, string, TimeSpan, TimeSpan)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSampler__ctor_Devbone_Frameworks_EventSourcing_Outbox_IOutboxStateReader_System_String_System_TimeSpan_System_TimeSpan_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.#ctor(Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader,System.String,System.TimeSpan,System.TimeSpan)
+  name.vb: New(IOutboxStateReader, String, TimeSpan, TimeSpan)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.OutboxStateSampler(Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader, string, System.TimeSpan, System.TimeSpan)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.New(Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader, String, System.TimeSpan, System.TimeSpan)
+  nameWithType: OutboxStateSampler.OutboxStateSampler(IOutboxStateReader, string, TimeSpan, TimeSpan)
+  nameWithType.vb: OutboxStateSampler.New(IOutboxStateReader, String, TimeSpan, TimeSpan)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.#ctor*
+  name: OutboxStateSampler
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSampler__ctor_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.OutboxStateSampler
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.New
+  nameWithType: OutboxStateSampler.OutboxStateSampler
+  nameWithType.vb: OutboxStateSampler.New
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.Dispose
+  name: Dispose()
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSampler_Dispose
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.Dispose
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.Dispose()
+  nameWithType: OutboxStateSampler.Dispose()
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.Dispose*
+  name: Dispose
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSampler_Dispose_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.Dispose
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.Dispose
+  nameWithType: OutboxStateSampler.Dispose
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.RunAsync(System.Threading.CancellationToken)
+  name: RunAsync(CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSampler_RunAsync_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.RunAsync(System.Threading.CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.RunAsync(System.Threading.CancellationToken)
+  nameWithType: OutboxStateSampler.RunAsync(CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.RunAsync*
+  name: RunAsync
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSampler_RunAsync_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.RunAsync
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.RunAsync
+  nameWithType: OutboxStateSampler.RunAsync
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.SampleAsync(System.Threading.CancellationToken)
+  name: SampleAsync(CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSampler_SampleAsync_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.SampleAsync(System.Threading.CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.SampleAsync(System.Threading.CancellationToken)
+  nameWithType: OutboxStateSampler.SampleAsync(CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.SampleAsync*
+  name: SampleAsync
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSampler_SampleAsync_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.SampleAsync
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.SampleAsync
+  nameWithType: OutboxStateSampler.SampleAsync
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot
+  name: OutboxStateSnapshot
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html
+  commentId: T:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot
+  nameWithType: OutboxStateSnapshot
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.#ctor(System.DateTimeOffset,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Nullable{System.TimeSpan})
+  name: OutboxStateSnapshot(DateTimeOffset, long, long, long, long, long, TimeSpan?)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot__ctor_System_DateTimeOffset_System_Int64_System_Int64_System_Int64_System_Int64_System_Int64_System_Nullable_System_TimeSpan__
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.#ctor(System.DateTimeOffset,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Nullable{System.TimeSpan})
+  name.vb: New(DateTimeOffset, Long, Long, Long, Long, Long, TimeSpan?)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.OutboxStateSnapshot(System.DateTimeOffset, long, long, long, long, long, System.TimeSpan?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.New(System.DateTimeOffset, Long, Long, Long, Long, Long, System.TimeSpan?)
+  nameWithType: OutboxStateSnapshot.OutboxStateSnapshot(DateTimeOffset, long, long, long, long, long, TimeSpan?)
+  nameWithType.vb: OutboxStateSnapshot.New(DateTimeOffset, Long, Long, Long, Long, Long, TimeSpan?)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.#ctor*
+  name: OutboxStateSnapshot
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot__ctor_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.OutboxStateSnapshot
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.New
+  nameWithType: OutboxStateSnapshot.OutboxStateSnapshot
+  nameWithType.vb: OutboxStateSnapshot.New
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Claimed
+  name: Claimed
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Claimed
+  commentId: P:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Claimed
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Claimed
+  nameWithType: OutboxStateSnapshot.Claimed
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Claimed*
+  name: Claimed
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Claimed_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Claimed
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Claimed
+  nameWithType: OutboxStateSnapshot.Claimed
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Deconstruct(System.DateTimeOffset@,System.Int64@,System.Int64@,System.Int64@,System.Int64@,System.Int64@,System.Nullable{System.TimeSpan}@)
+  name: Deconstruct(out DateTimeOffset, out long, out long, out long, out long, out long, out TimeSpan?)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Deconstruct_System_DateTimeOffset__System_Int64__System_Int64__System_Int64__System_Int64__System_Int64__System_Nullable_System_TimeSpan___
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Deconstruct(System.DateTimeOffset@,System.Int64@,System.Int64@,System.Int64@,System.Int64@,System.Int64@,System.Nullable{System.TimeSpan}@)
+  name.vb: Deconstruct(DateTimeOffset, Long, Long, Long, Long, Long, TimeSpan?)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Deconstruct(out System.DateTimeOffset, out long, out long, out long, out long, out long, out System.TimeSpan?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Deconstruct(System.DateTimeOffset, Long, Long, Long, Long, Long, System.TimeSpan?)
+  nameWithType: OutboxStateSnapshot.Deconstruct(out DateTimeOffset, out long, out long, out long, out long, out long, out TimeSpan?)
+  nameWithType.vb: OutboxStateSnapshot.Deconstruct(DateTimeOffset, Long, Long, Long, Long, Long, TimeSpan?)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Deconstruct*
+  name: Deconstruct
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Deconstruct_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Deconstruct
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Deconstruct
+  nameWithType: OutboxStateSnapshot.Deconstruct
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Equals(Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot)
+  name: Equals(OutboxStateSnapshot?)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Equals_Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Equals(Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot)
+  name.vb: Equals(OutboxStateSnapshot)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Equals(Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Equals(Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot)
+  nameWithType: OutboxStateSnapshot.Equals(OutboxStateSnapshot?)
+  nameWithType.vb: OutboxStateSnapshot.Equals(OutboxStateSnapshot)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Equals_System_Object_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Equals(object?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Equals(Object)
+  nameWithType: OutboxStateSnapshot.Equals(object?)
+  nameWithType.vb: OutboxStateSnapshot.Equals(Object)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Equals*
+  name: Equals
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Equals_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Equals
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Equals
+  nameWithType: OutboxStateSnapshot.Equals
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Failed
+  name: Failed
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Failed
+  commentId: P:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Failed
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Failed
+  nameWithType: OutboxStateSnapshot.Failed
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Failed*
+  name: Failed
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Failed_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Failed
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Failed
+  nameWithType: OutboxStateSnapshot.Failed
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.GetHashCode
+  name: GetHashCode()
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_GetHashCode
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.GetHashCode
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.GetHashCode()
+  nameWithType: OutboxStateSnapshot.GetHashCode()
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.GetHashCode*
+  name: GetHashCode
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_GetHashCode_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.GetHashCode
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.GetHashCode
+  nameWithType: OutboxStateSnapshot.GetHashCode
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.OldestOutstandingAge
+  name: OldestOutstandingAge
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_OldestOutstandingAge
+  commentId: P:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.OldestOutstandingAge
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.OldestOutstandingAge
+  nameWithType: OutboxStateSnapshot.OldestOutstandingAge
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.OldestOutstandingAge*
+  name: OldestOutstandingAge
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_OldestOutstandingAge_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.OldestOutstandingAge
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.OldestOutstandingAge
+  nameWithType: OutboxStateSnapshot.OldestOutstandingAge
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Pending
+  name: Pending
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Pending
+  commentId: P:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Pending
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Pending
+  nameWithType: OutboxStateSnapshot.Pending
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Pending*
+  name: Pending
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Pending_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Pending
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Pending
+  nameWithType: OutboxStateSnapshot.Pending
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Published
+  name: Published
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Published
+  commentId: P:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Published
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Published
+  nameWithType: OutboxStateSnapshot.Published
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Published*
+  name: Published
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Published_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Published
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Published
+  nameWithType: OutboxStateSnapshot.Published
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.RetryWait
+  name: RetryWait
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_RetryWait
+  commentId: P:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.RetryWait
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.RetryWait
+  nameWithType: OutboxStateSnapshot.RetryWait
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.RetryWait*
+  name: RetryWait
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_RetryWait_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.RetryWait
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.RetryWait
+  nameWithType: OutboxStateSnapshot.RetryWait
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.SampledAtUtc
+  name: SampledAtUtc
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_SampledAtUtc
+  commentId: P:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.SampledAtUtc
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.SampledAtUtc
+  nameWithType: OutboxStateSnapshot.SampledAtUtc
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.SampledAtUtc*
+  name: SampledAtUtc
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_SampledAtUtc_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.SampledAtUtc
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.SampledAtUtc
+  nameWithType: OutboxStateSnapshot.SampledAtUtc
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.ToString
+  name: ToString()
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_ToString
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.ToString
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.ToString()
+  nameWithType: OutboxStateSnapshot.ToString()
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.ToString*
+  name: ToString
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_ToString_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.ToString
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.ToString
+  nameWithType: OutboxStateSnapshot.ToString
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.op_Equality(Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot,Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot)
+  name: operator ==(OutboxStateSnapshot?, OutboxStateSnapshot?)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_op_Equality_Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.op_Equality(Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot,Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot)
+  name.vb: =(OutboxStateSnapshot, OutboxStateSnapshot)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.operator ==(Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot?, Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.=(Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot, Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot)
+  nameWithType: OutboxStateSnapshot.operator ==(OutboxStateSnapshot?, OutboxStateSnapshot?)
+  nameWithType.vb: OutboxStateSnapshot.=(OutboxStateSnapshot, OutboxStateSnapshot)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.op_Equality*
+  name: operator ==
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_op_Equality_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.op_Equality
+  name.vb: =
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.operator ==
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.=
+  nameWithType: OutboxStateSnapshot.operator ==
+  nameWithType.vb: OutboxStateSnapshot.=
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.op_Inequality(Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot,Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot)
+  name: operator !=(OutboxStateSnapshot?, OutboxStateSnapshot?)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_op_Inequality_Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.op_Inequality(Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot,Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot)
+  name.vb: <>(OutboxStateSnapshot, OutboxStateSnapshot)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.operator !=(Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot?, Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.<>(Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot, Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot)
+  nameWithType: OutboxStateSnapshot.operator !=(OutboxStateSnapshot?, OutboxStateSnapshot?)
+  nameWithType.vb: OutboxStateSnapshot.<>(OutboxStateSnapshot, OutboxStateSnapshot)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.op_Inequality*
+  name: operator !=
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_op_Inequality_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.op_Inequality
+  name.vb: <>
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.operator !=
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.<>
+  nameWithType: OutboxStateSnapshot.operator !=
+  nameWithType.vb: OutboxStateSnapshot.<>
 - uid: Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxNotificationListener
   name: PostgresOutboxNotificationListener
   href: api/Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxNotificationListener.html
@@ -32361,6 +33576,18 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.MarkPublishedAsync
   fullName: Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.MarkPublishedAsync
   nameWithType: PostgresOutboxStore.MarkPublishedAsync
+- uid: Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReadStateAsync(System.Threading.CancellationToken)
+  name: ReadStateAsync(CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.html#Devbone_Frameworks_EventSourcing_Outbox_PostgresOutboxStore_ReadStateAsync_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReadStateAsync(System.Threading.CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReadStateAsync(System.Threading.CancellationToken)
+  nameWithType: PostgresOutboxStore.ReadStateAsync(CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReadStateAsync*
+  name: ReadStateAsync
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.html#Devbone_Frameworks_EventSourcing_Outbox_PostgresOutboxStore_ReadStateAsync_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReadStateAsync
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReadStateAsync
+  nameWithType: PostgresOutboxStore.ReadStateAsync
 - uid: Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ScheduleRetryAsync(System.String,System.String,Devbone.Frameworks.EventSourcing.Outbox.OutboxRetry,System.Threading.CancellationToken)
   name: ScheduleRetryAsync(string, string, OutboxRetry, CancellationToken)
   href: api/Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.html#Devbone_Frameworks_EventSourcing_Outbox_PostgresOutboxStore_ScheduleRetryAsync_System_String_System_String_Devbone_Frameworks_EventSourcing_Outbox_OutboxRetry_System_Threading_CancellationToken_
@@ -37910,6 +39137,21 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetSuggestionsAsync
   fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetSuggestionsAsync
   nameWithType: IEventStoreDiagnosticsReader.GetSuggestionsAsync
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetUniqueReservationsAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter,System.String,System.String,System.Int32,System.Threading.CancellationToken)
+  name: GetUniqueReservationsAsync(AggregateFilter, string?, string?, int, CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetUniqueReservationsAsync_Devbone_Frameworks_EventSourcing_TimeMachine_Data_AggregateFilter_System_String_System_String_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetUniqueReservationsAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter,System.String,System.String,System.Int32,System.Threading.CancellationToken)
+  name.vb: GetUniqueReservationsAsync(AggregateFilter, String, String, Integer, CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetUniqueReservationsAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter, string?, string?, int, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetUniqueReservationsAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter, String, String, Integer, System.Threading.CancellationToken)
+  nameWithType: IEventStoreDiagnosticsReader.GetUniqueReservationsAsync(AggregateFilter, string?, string?, int, CancellationToken)
+  nameWithType.vb: IEventStoreDiagnosticsReader.GetUniqueReservationsAsync(AggregateFilter, String, String, Integer, CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetUniqueReservationsAsync*
+  name: GetUniqueReservationsAsync
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetUniqueReservationsAsync_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetUniqueReservationsAsync
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetUniqueReservationsAsync
+  nameWithType: IEventStoreDiagnosticsReader.GetUniqueReservationsAsync
 - uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.GetUniqueValuesAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter,System.String,System.String,System.Int32,System.Threading.CancellationToken)
   name: GetUniqueValuesAsync(AggregateFilter, string?, string?, int, CancellationToken)
   href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.IEventStoreDiagnosticsReader.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_IEventStoreDiagnosticsReader_GetUniqueValuesAsync_Devbone_Frameworks_EventSourcing_TimeMachine_Data_AggregateFilter_System_String_System_String_System_Int32_System_Threading_CancellationToken_
@@ -39055,6 +40297,21 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.PostgresEventStoreDiagnosticsReader.GetSuggestionsAsync
   fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.PostgresEventStoreDiagnosticsReader.GetSuggestionsAsync
   nameWithType: PostgresEventStoreDiagnosticsReader.GetSuggestionsAsync
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.PostgresEventStoreDiagnosticsReader.GetUniqueReservationsAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter,System.String,System.String,System.Int32,System.Threading.CancellationToken)
+  name: GetUniqueReservationsAsync(AggregateFilter, string?, string?, int, CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.PostgresEventStoreDiagnosticsReader.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_PostgresEventStoreDiagnosticsReader_GetUniqueReservationsAsync_Devbone_Frameworks_EventSourcing_TimeMachine_Data_AggregateFilter_System_String_System_String_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Data.PostgresEventStoreDiagnosticsReader.GetUniqueReservationsAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter,System.String,System.String,System.Int32,System.Threading.CancellationToken)
+  name.vb: GetUniqueReservationsAsync(AggregateFilter, String, String, Integer, CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.PostgresEventStoreDiagnosticsReader.GetUniqueReservationsAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter, string?, string?, int, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Data.PostgresEventStoreDiagnosticsReader.GetUniqueReservationsAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter, String, String, Integer, System.Threading.CancellationToken)
+  nameWithType: PostgresEventStoreDiagnosticsReader.GetUniqueReservationsAsync(AggregateFilter, string?, string?, int, CancellationToken)
+  nameWithType.vb: PostgresEventStoreDiagnosticsReader.GetUniqueReservationsAsync(AggregateFilter, String, String, Integer, CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.PostgresEventStoreDiagnosticsReader.GetUniqueReservationsAsync*
+  name: GetUniqueReservationsAsync
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.PostgresEventStoreDiagnosticsReader.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_PostgresEventStoreDiagnosticsReader_GetUniqueReservationsAsync_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.PostgresEventStoreDiagnosticsReader.GetUniqueReservationsAsync
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.PostgresEventStoreDiagnosticsReader.GetUniqueReservationsAsync
+  nameWithType: PostgresEventStoreDiagnosticsReader.GetUniqueReservationsAsync
 - uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.PostgresEventStoreDiagnosticsReader.GetUniqueValuesAsync(Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter,System.String,System.String,System.Int32,System.Threading.CancellationToken)
   name: GetUniqueValuesAsync(AggregateFilter, string?, string?, int, CancellationToken)
   href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.PostgresEventStoreDiagnosticsReader.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_PostgresEventStoreDiagnosticsReader_GetUniqueValuesAsync_Devbone_Frameworks_EventSourcing_TimeMachine_Data_AggregateFilter_System_String_System_String_System_Int32_System_Threading_CancellationToken_
@@ -41005,6 +42262,18 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.SnapshotTableName
   fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.SnapshotTableName
   nameWithType: TimeMachineOptions.SnapshotTableName
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.UniqueReservationTableName
+  name: UniqueReservationTableName
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_UniqueReservationTableName
+  commentId: P:Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.UniqueReservationTableName
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.UniqueReservationTableName
+  nameWithType: TimeMachineOptions.UniqueReservationTableName
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.UniqueReservationTableName*
+  name: UniqueReservationTableName
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_UniqueReservationTableName_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.UniqueReservationTableName
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.UniqueReservationTableName
+  nameWithType: TimeMachineOptions.UniqueReservationTableName
 - uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.UniqueTableName
   name: UniqueTableName
   href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_TimeMachineOptions_UniqueTableName
@@ -41029,6 +42298,225 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.Validate
   fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.TimeMachineOptions.Validate
   nameWithType: TimeMachineOptions.Validate
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails
+  name: UniqueReservationDetails
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html
+  commentId: T:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails
+  nameWithType: UniqueReservationDetails
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.#ctor(System.String,System.String,System.String,System.String,System.String,System.DateTime,System.Int32,System.Collections.Generic.IReadOnlyList{System.String})
+  name: UniqueReservationDetails(string, string, string, string, string, DateTime, int, IReadOnlyList<string>)
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails__ctor_System_String_System_String_System_String_System_String_System_String_System_DateTime_System_Int32_System_Collections_Generic_IReadOnlyList_System_String__
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.#ctor(System.String,System.String,System.String,System.String,System.String,System.DateTime,System.Int32,System.Collections.Generic.IReadOnlyList{System.String})
+  name.vb: New(String, String, String, String, String, Date, Integer, IReadOnlyList(Of String))
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.UniqueReservationDetails(string, string, string, string, string, System.DateTime, int, System.Collections.Generic.IReadOnlyList<string>)
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.New(String, String, String, String, String, Date, Integer, System.Collections.Generic.IReadOnlyList(Of String))
+  nameWithType: UniqueReservationDetails.UniqueReservationDetails(string, string, string, string, string, DateTime, int, IReadOnlyList<string>)
+  nameWithType.vb: UniqueReservationDetails.New(String, String, String, String, String, Date, Integer, IReadOnlyList(Of String))
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.#ctor*
+  name: UniqueReservationDetails
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails__ctor_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.UniqueReservationDetails
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.New
+  nameWithType: UniqueReservationDetails.UniqueReservationDetails
+  nameWithType.vb: UniqueReservationDetails.New
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.AggregateId
+  name: AggregateId
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_AggregateId
+  commentId: P:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.AggregateId
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.AggregateId
+  nameWithType: UniqueReservationDetails.AggregateId
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.AggregateId*
+  name: AggregateId
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_AggregateId_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.AggregateId
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.AggregateId
+  nameWithType: UniqueReservationDetails.AggregateId
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.AggregateName
+  name: AggregateName
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_AggregateName
+  commentId: P:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.AggregateName
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.AggregateName
+  nameWithType: UniqueReservationDetails.AggregateName
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.AggregateName*
+  name: AggregateName
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_AggregateName_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.AggregateName
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.AggregateName
+  nameWithType: UniqueReservationDetails.AggregateName
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.CreationDateUtc
+  name: CreationDateUtc
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_CreationDateUtc
+  commentId: P:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.CreationDateUtc
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.CreationDateUtc
+  nameWithType: UniqueReservationDetails.CreationDateUtc
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.CreationDateUtc*
+  name: CreationDateUtc
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_CreationDateUtc_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.CreationDateUtc
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.CreationDateUtc
+  nameWithType: UniqueReservationDetails.CreationDateUtc
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Deconstruct(System.String@,System.String@,System.String@,System.String@,System.String@,System.DateTime@,System.Int32@,System.Collections.Generic.IReadOnlyList{System.String}@)
+  name: Deconstruct(out string, out string, out string, out string, out string, out DateTime, out int, out IReadOnlyList<string>)
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_Deconstruct_System_String__System_String__System_String__System_String__System_String__System_DateTime__System_Int32__System_Collections_Generic_IReadOnlyList_System_String___
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Deconstruct(System.String@,System.String@,System.String@,System.String@,System.String@,System.DateTime@,System.Int32@,System.Collections.Generic.IReadOnlyList{System.String}@)
+  name.vb: Deconstruct(String, String, String, String, String, Date, Integer, IReadOnlyList(Of String))
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Deconstruct(out string, out string, out string, out string, out string, out System.DateTime, out int, out System.Collections.Generic.IReadOnlyList<string>)
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Deconstruct(String, String, String, String, String, Date, Integer, System.Collections.Generic.IReadOnlyList(Of String))
+  nameWithType: UniqueReservationDetails.Deconstruct(out string, out string, out string, out string, out string, out DateTime, out int, out IReadOnlyList<string>)
+  nameWithType.vb: UniqueReservationDetails.Deconstruct(String, String, String, String, String, Date, Integer, IReadOnlyList(Of String))
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Deconstruct*
+  name: Deconstruct
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_Deconstruct_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Deconstruct
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Deconstruct
+  nameWithType: UniqueReservationDetails.Deconstruct
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Equals(Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails)
+  name: Equals(UniqueReservationDetails?)
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_Equals_Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Equals(Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails)
+  name.vb: Equals(UniqueReservationDetails)
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Equals(Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Equals(Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails)
+  nameWithType: UniqueReservationDetails.Equals(UniqueReservationDetails?)
+  nameWithType.vb: UniqueReservationDetails.Equals(UniqueReservationDetails)
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_Equals_System_Object_
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Equals(object?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Equals(Object)
+  nameWithType: UniqueReservationDetails.Equals(object?)
+  nameWithType.vb: UniqueReservationDetails.Equals(Object)
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Equals*
+  name: Equals
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_Equals_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Equals
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Equals
+  nameWithType: UniqueReservationDetails.Equals
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.GetHashCode
+  name: GetHashCode()
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_GetHashCode
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.GetHashCode
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.GetHashCode()
+  nameWithType: UniqueReservationDetails.GetHashCode()
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.GetHashCode*
+  name: GetHashCode
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_GetHashCode_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.GetHashCode
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.GetHashCode
+  nameWithType: UniqueReservationDetails.GetHashCode
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Key
+  name: Key
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_Key
+  commentId: P:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Key
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Key
+  nameWithType: UniqueReservationDetails.Key
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Key*
+  name: Key
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_Key_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Key
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Key
+  nameWithType: UniqueReservationDetails.Key
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Kind
+  name: Kind
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_Kind
+  commentId: P:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Kind
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Kind
+  nameWithType: UniqueReservationDetails.Kind
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Kind*
+  name: Kind
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_Kind_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Kind
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.Kind
+  nameWithType: UniqueReservationDetails.Kind
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.MemberCount
+  name: MemberCount
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_MemberCount
+  commentId: P:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.MemberCount
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.MemberCount
+  nameWithType: UniqueReservationDetails.MemberCount
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.MemberCount*
+  name: MemberCount
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_MemberCount_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.MemberCount
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.MemberCount
+  nameWithType: UniqueReservationDetails.MemberCount
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.RequestId
+  name: RequestId
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_RequestId
+  commentId: P:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.RequestId
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.RequestId
+  nameWithType: UniqueReservationDetails.RequestId
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.RequestId*
+  name: RequestId
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_RequestId_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.RequestId
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.RequestId
+  nameWithType: UniqueReservationDetails.RequestId
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.ToString
+  name: ToString()
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_ToString
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.ToString
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.ToString()
+  nameWithType: UniqueReservationDetails.ToString()
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.ToString*
+  name: ToString
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_ToString_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.ToString
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.ToString
+  nameWithType: UniqueReservationDetails.ToString
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.ValueHashes
+  name: ValueHashes
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_ValueHashes
+  commentId: P:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.ValueHashes
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.ValueHashes
+  nameWithType: UniqueReservationDetails.ValueHashes
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.ValueHashes*
+  name: ValueHashes
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_ValueHashes_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.ValueHashes
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.ValueHashes
+  nameWithType: UniqueReservationDetails.ValueHashes
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.op_Equality(Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails,Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails)
+  name: operator ==(UniqueReservationDetails?, UniqueReservationDetails?)
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_op_Equality_Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.op_Equality(Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails,Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails)
+  name.vb: =(UniqueReservationDetails, UniqueReservationDetails)
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.operator ==(Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails?, Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.=(Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails, Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails)
+  nameWithType: UniqueReservationDetails.operator ==(UniqueReservationDetails?, UniqueReservationDetails?)
+  nameWithType.vb: UniqueReservationDetails.=(UniqueReservationDetails, UniqueReservationDetails)
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.op_Equality*
+  name: operator ==
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_op_Equality_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.op_Equality
+  name.vb: =
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.operator ==
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.=
+  nameWithType: UniqueReservationDetails.operator ==
+  nameWithType.vb: UniqueReservationDetails.=
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.op_Inequality(Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails,Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails)
+  name: operator !=(UniqueReservationDetails?, UniqueReservationDetails?)
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_op_Inequality_Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.op_Inequality(Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails,Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails)
+  name.vb: <>(UniqueReservationDetails, UniqueReservationDetails)
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.operator !=(Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails?, Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.<>(Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails, Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails)
+  nameWithType: UniqueReservationDetails.operator !=(UniqueReservationDetails?, UniqueReservationDetails?)
+  nameWithType.vb: UniqueReservationDetails.<>(UniqueReservationDetails, UniqueReservationDetails)
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.op_Inequality*
+  name: operator !=
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_UniqueReservationDetails_op_Inequality_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.op_Inequality
+  name.vb: <>
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.operator !=
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.<>
+  nameWithType: UniqueReservationDetails.operator !=
+  nameWithType.vb: UniqueReservationDetails.<>
 - uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueValueDetails
   name: UniqueValueDetails
   href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueValueDetails.html
@@ -41257,6 +42745,141 @@ references:
   commentId: N:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints
   fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints
   nameWithType: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata
+  name: TimeMachineEndpointMetadata
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html
+  commentId: T:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata
+  nameWithType: TimeMachineEndpointMetadata
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.#ctor(System.String)
+  name: TimeMachineEndpointMetadata(string)
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata__ctor_System_String_
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.TimeMachineEndpointMetadata(string)
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.New(String)
+  nameWithType: TimeMachineEndpointMetadata.TimeMachineEndpointMetadata(string)
+  nameWithType.vb: TimeMachineEndpointMetadata.New(String)
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.#ctor*
+  name: TimeMachineEndpointMetadata
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata__ctor_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.TimeMachineEndpointMetadata
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.New
+  nameWithType: TimeMachineEndpointMetadata.TimeMachineEndpointMetadata
+  nameWithType.vb: TimeMachineEndpointMetadata.New
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Deconstruct(System.String@)
+  name: Deconstruct(out string)
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_Deconstruct_System_String__
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Deconstruct(System.String@)
+  name.vb: Deconstruct(String)
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Deconstruct(out string)
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Deconstruct(String)
+  nameWithType: TimeMachineEndpointMetadata.Deconstruct(out string)
+  nameWithType.vb: TimeMachineEndpointMetadata.Deconstruct(String)
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Deconstruct*
+  name: Deconstruct
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_Deconstruct_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Deconstruct
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Deconstruct
+  nameWithType: TimeMachineEndpointMetadata.Deconstruct
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Equals(Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata)
+  name: Equals(TimeMachineEndpointMetadata?)
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_Equals_Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Equals(Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata)
+  name.vb: Equals(TimeMachineEndpointMetadata)
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Equals(Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Equals(Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata)
+  nameWithType: TimeMachineEndpointMetadata.Equals(TimeMachineEndpointMetadata?)
+  nameWithType.vb: TimeMachineEndpointMetadata.Equals(TimeMachineEndpointMetadata)
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_Equals_System_Object_
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Equals(object?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Equals(Object)
+  nameWithType: TimeMachineEndpointMetadata.Equals(object?)
+  nameWithType.vb: TimeMachineEndpointMetadata.Equals(Object)
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Equals*
+  name: Equals
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_Equals_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Equals
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.Equals
+  nameWithType: TimeMachineEndpointMetadata.Equals
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.GetHashCode
+  name: GetHashCode()
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_GetHashCode
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.GetHashCode
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.GetHashCode()
+  nameWithType: TimeMachineEndpointMetadata.GetHashCode()
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.GetHashCode*
+  name: GetHashCode
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_GetHashCode_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.GetHashCode
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.GetHashCode
+  nameWithType: TimeMachineEndpointMetadata.GetHashCode
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.PathBase
+  name: PathBase
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_PathBase
+  commentId: P:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.PathBase
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.PathBase
+  nameWithType: TimeMachineEndpointMetadata.PathBase
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.PathBase*
+  name: PathBase
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_PathBase_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.PathBase
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.PathBase
+  nameWithType: TimeMachineEndpointMetadata.PathBase
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.ToString
+  name: ToString()
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_ToString
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.ToString
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.ToString()
+  nameWithType: TimeMachineEndpointMetadata.ToString()
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.ToString*
+  name: ToString
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_ToString_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.ToString
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.ToString
+  nameWithType: TimeMachineEndpointMetadata.ToString
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.op_Equality(Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata,Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata)
+  name: operator ==(TimeMachineEndpointMetadata?, TimeMachineEndpointMetadata?)
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_op_Equality_Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.op_Equality(Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata,Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata)
+  name.vb: =(TimeMachineEndpointMetadata, TimeMachineEndpointMetadata)
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.operator ==(Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata?, Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.=(Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata, Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata)
+  nameWithType: TimeMachineEndpointMetadata.operator ==(TimeMachineEndpointMetadata?, TimeMachineEndpointMetadata?)
+  nameWithType.vb: TimeMachineEndpointMetadata.=(TimeMachineEndpointMetadata, TimeMachineEndpointMetadata)
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.op_Equality*
+  name: operator ==
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_op_Equality_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.op_Equality
+  name.vb: =
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.operator ==
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.=
+  nameWithType: TimeMachineEndpointMetadata.operator ==
+  nameWithType.vb: TimeMachineEndpointMetadata.=
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.op_Inequality(Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata,Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata)
+  name: operator !=(TimeMachineEndpointMetadata?, TimeMachineEndpointMetadata?)
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_op_Inequality_Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_
+  commentId: M:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.op_Inequality(Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata,Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata)
+  name.vb: <>(TimeMachineEndpointMetadata, TimeMachineEndpointMetadata)
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.operator !=(Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata?, Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.<>(Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata, Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata)
+  nameWithType: TimeMachineEndpointMetadata.operator !=(TimeMachineEndpointMetadata?, TimeMachineEndpointMetadata?)
+  nameWithType.vb: TimeMachineEndpointMetadata.<>(TimeMachineEndpointMetadata, TimeMachineEndpointMetadata)
+- uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.op_Inequality*
+  name: operator !=
+  href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.html#Devbone_Frameworks_EventSourcing_TimeMachine_Endpoints_TimeMachineEndpointMetadata_op_Inequality_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.op_Inequality
+  name.vb: <>
+  fullName: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.operator !=
+  fullName.vb: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointMetadata.<>
+  nameWithType: TimeMachineEndpointMetadata.operator !=
+  nameWithType.vb: TimeMachineEndpointMetadata.<>
 - uid: Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointRouteBuilderExtensions
   name: TimeMachineEndpointRouteBuilderExtensions
   href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Endpoints.TimeMachineEndpointRouteBuilderExtensions.html

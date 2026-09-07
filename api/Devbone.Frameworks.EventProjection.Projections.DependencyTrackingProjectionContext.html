@@ -250,6 +250,50 @@ Class DependencyTrackingProjectionContext
 </h2>
 
 
+  <a id="Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_DeclareDerivedDependency_" data-uid="Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.DeclareDerivedDependency*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_DeclareDerivedDependency_System_String_System_String_System_String_" data-uid="Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.DeclareDerivedDependency(System.String,System.String,System.String)">
+  DeclareDerivedDependency(string, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Declares an application-owned derived output actually read during this execution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DeclareDerivedDependency(string projectionName, string definitionVersion, string outputKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>projectionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Stable public name of the source projection.</p>
+</dd>
+    <dt><code>definitionVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Exact source definition read by the application.</p>
+</dd>
+    <dt><code>outputKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Aggregate-shaped source output identifier.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_DeclareDerivedDependency_System_String_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The application performs and authorizes its own read. Tenant identity is inherited from this context;
+a declaration cannot cross tenants. The complete set replaces earlier declarations only after the
+handler returns successfully. Increase this handler's DefinitionVersion when adding tracked reads.</p>
+</div>
+
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_ReadMergedAsync_" data-uid="Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.ReadMergedAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_ReadMergedAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.ReadMergedAsync(System.String,System.String,System.Threading.CancellationToken)">

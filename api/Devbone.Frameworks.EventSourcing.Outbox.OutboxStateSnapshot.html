@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class OutboxStateSnapshot | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class OutboxStateSnapshot | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="One durable outbox inventory; expired claims are counted as pending.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot">
+
+
+
+  <h1 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot" class="text-break">
+Class OutboxStateSnapshot  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.html">EventSourcing</a>.<a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.html">Outbox</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventSourcing.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>One durable outbox inventory; expired claims are counted as pending.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record OutboxStateSnapshot : IEquatable&lt;OutboxStateSnapshot&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">OutboxStateSnapshot</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html">OutboxStateSnapshot</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot__ctor_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot__ctor_System_DateTimeOffset_System_Int64_System_Int64_System_Int64_System_Int64_System_Int64_System_Nullable_System_TimeSpan__" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.#ctor(System.DateTimeOffset,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Nullable{System.TimeSpan})">
+  OutboxStateSnapshot(DateTimeOffset, long, long, long, long, long, TimeSpan?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>One durable outbox inventory; expired claims are counted as pending.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OutboxStateSnapshot(DateTimeOffset SampledAtUtc, long Pending, long Claimed, long RetryWait, long Published, long Failed, TimeSpan? OldestOutstandingAge)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>SampledAtUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd><p>Database sampling time.</p>
+</dd>
+    <dt><code>Pending</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Pending rows ready by time, plus expired claims; ordering may still block them.</p>
+</dd>
+    <dt><code>Claimed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Processing rows with a live lease.</p>
+</dd>
+    <dt><code>RetryWait</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Pending rows whose next attempt time is in the future.</p>
+</dd>
+    <dt><code>Published</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Retained published rows.</p>
+</dd>
+    <dt><code>Failed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Terminal failed rows, which can block later events.</p>
+</dd>
+    <dt><code>OldestOutstandingAge</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</dt>
+    <dd><p>Age of the oldest pending, claimed, retry-wait or failed row, or null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Claimed_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Claimed*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Claimed" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Claimed">
+  Claimed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Processing rows with a live lease.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long Claimed { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Failed_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Failed*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Failed" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Failed">
+  Failed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Terminal failed rows, which can block later events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long Failed { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_OldestOutstandingAge_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.OldestOutstandingAge*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_OldestOutstandingAge" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.OldestOutstandingAge">
+  OldestOutstandingAge
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Age of the oldest pending, claimed, retry-wait or failed row, or null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan? OldestOutstandingAge { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Pending_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Pending*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Pending" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Pending">
+  Pending
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pending rows ready by time, plus expired claims; ordering may still block them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long Pending { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Published_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Published*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Published" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Published">
+  Published
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retained published rows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long Published { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_RetryWait_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.RetryWait*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_RetryWait" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.RetryWait">
+  RetryWait
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pending rows whose next attempt time is in the future.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long RetryWait { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_SampledAtUtc_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.SampledAtUtc*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_SampledAtUtc" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.SampledAtUtc">
+  SampledAtUtc
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Database sampling time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTimeOffset SampledAtUtc { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Deconstruct_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Deconstruct*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Deconstruct_System_DateTimeOffset__System_Int64__System_Int64__System_Int64__System_Int64__System_Int64__System_Nullable_System_TimeSpan___" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Deconstruct(System.DateTimeOffset@,System.Int64@,System.Int64@,System.Int64@,System.Int64@,System.Int64@,System.Nullable{System.TimeSpan}@)">
+  Deconstruct(out DateTimeOffset, out long, out long, out long, out long, out long, out TimeSpan?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deconstruct(out DateTimeOffset SampledAtUtc, out long Pending, out long Claimed, out long RetryWait, out long Published, out long Failed, out TimeSpan? OldestOutstandingAge)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>SampledAtUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd></dd>
+    <dt><code>Pending</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+    <dt><code>Claimed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+    <dt><code>RetryWait</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+    <dt><code>Published</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+    <dt><code>Failed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+    <dt><code>OldestOutstandingAge</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Equals_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Equals*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Equals_Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Equals(Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot)">
+  Equals(OutboxStateSnapshot?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(OutboxStateSnapshot? other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html">OutboxStateSnapshot</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Equals_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Equals*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Equals_System_Object_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Equals(System.Object)">
+  Equals(object?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_GetHashCode_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.GetHashCode*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_GetHashCode" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_ToString_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.ToString*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_ToString" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_op_Equality_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.op_Equality*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_op_Equality_Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.op_Equality(Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot,Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot)">
+  operator ==(OutboxStateSnapshot?, OutboxStateSnapshot?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(OutboxStateSnapshot? left, OutboxStateSnapshot? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html">OutboxStateSnapshot</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html">OutboxStateSnapshot</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_op_Inequality_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.op_Inequality*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_op_Inequality_Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.op_Inequality(Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot,Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot)">
+  operator !=(OutboxStateSnapshot?, OutboxStateSnapshot?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(OutboxStateSnapshot? left, OutboxStateSnapshot? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html">OutboxStateSnapshot</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html">OutboxStateSnapshot</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
