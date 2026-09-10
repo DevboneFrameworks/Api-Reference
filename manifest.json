@@ -5388,6 +5388,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionStorageContract.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionStorageContract.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionStorageContract",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionStorageContract.yml\" sourcestartlinenumber=\"1\">Names the pipeline's persisted writer protocol independently of application artifact revisions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer.yml",
       "output": {
         ".html": {
@@ -5413,6 +5427,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity.yml\" sourcestartlinenumber=\"1\">Resolved stable identities used by one projection worker process.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException.yml\" sourcestartlinenumber=\"1\">Rejects a writer whose protocol cannot safely access the current projection database.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5735,6 +5763,34 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.yml\" sourcestartlinenumber=\"1\">One authorized view of a persisted repair request.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.yml\" sourcestartlinenumber=\"1\">Reports a deterministic repair rejection using a bounded, public classification.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.yml\" sourcestartlinenumber=\"1\">Classifies deterministic repair rejections independently of persistence implementation details.</p>\n"
     },
     {
       "type": "ManagedReference",

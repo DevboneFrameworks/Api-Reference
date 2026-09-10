@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface IProjectionRepairAuthorization | Devbone Event-Driven Platform </title>
+      <title>Class ProjectionStorageContract | Devbone Event-Driven Platform </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface IProjectionRepairAuthorization | Devbone Event-Driven Platform ">
+      <meta name="title" content="Class ProjectionStorageContract | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Applies application-owned authorization before repair acceptance and progress disclosure.">
+      <meta name="description" content="Names the pipeline&#39;s persisted writer protocol independently of application artifact revisions.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,82 +84,97 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization">
+        <article data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionStorageContract">
 
 
 
-  <h1 id="Devbone_Frameworks_EventProjection_Projections_IProjectionRepairAuthorization" data-uid="Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization" class="text-break">
-Interface IProjectionRepairAuthorization  
+  <h1 id="Devbone_Frameworks_EventProjection_Persistence_ProjectionStorageContract" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionStorageContract" class="text-break">
+Class ProjectionStorageContract  
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.html">EventProjection</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Projections.html">Projections</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.html">EventProjection</a>.<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.html">Persistence</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Applies application-owned authorization before repair acceptance and progress disclosure.</p>
+  <div class="markdown summary"><p>Names the pipeline's persisted writer protocol independently of application artifact revisions.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IProjectionRepairAuthorization</code></pre>
+    <pre><code class="lang-csharp hljs">public static class ProjectionStorageContract</code></pre>
   </div>
 
 
 
 
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ProjectionStorageContract</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
 
 
 
 
 
 
-
-
-
-  <h2 class="section" id="methods">Methods
+  <h2 class="section" id="fields">Fields
 </h2>
 
 
-  <a id="Devbone_Frameworks_EventProjection_Projections_IProjectionRepairAuthorization_AuthorizeAsync_" data-uid="Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.AuthorizeAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventProjection_Projections_IProjectionRepairAuthorization_AuthorizeAsync_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairTarget_System_String_System_Boolean_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.AuthorizeAsync(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget,System.String,System.Boolean,System.Threading.CancellationToken)">
-  AuthorizeAsync(ProjectionRepairTarget, string?, bool, CancellationToken)
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_ProjectionStorageContract_WRITER_VERSION" data-uid="Devbone.Frameworks.EventProjection.Persistence.ProjectionStorageContract.WRITER_VERSION">
+  WRITER_VERSION
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Authorizes one exact target and tenant and returns trusted audit attribution.</p>
+  <div class="markdown level1 summary"><p>The first transaction-fenced writer protocol. Increase only for incompatible storage semantics.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;string?&gt; AuthorizeAsync(ProjectionRepairTarget target, string? tenantId, bool isMutation, CancellationToken cancellationToken = default)</code></pre>
+    <pre><code class="lang-csharp hljs">public const int WRITER_VERSION = 1</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
+
+
+
+  <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><code>target</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairTarget.html">ProjectionRepairTarget</a></dt>
-    <dd><p>Target being repaired or disclosed; called for every frozen output.</p>
-</dd>
-    <dt><code>tenantId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Exact tenant boundary; null means tenantless, never every tenant.</p>
-</dd>
-    <dt><code>isMutation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Whether authorization is for a new repair request.</p>
-</dd>
-    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd><p>Cancellation token.</p>
-</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
   </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>Trusted actor name, or null to deny. Never trust a caller-supplied actor name.</p>
-</dd>
-  </dl>
-
-
 
 
 

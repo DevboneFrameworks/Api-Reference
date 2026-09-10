@@ -26781,6 +26781,18 @@ references:
   fullName.vb: Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration.<>
   nameWithType: ProjectionRegistration.operator !=
   nameWithType.vb: ProjectionRegistration.<>
+- uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionStorageContract
+  name: ProjectionStorageContract
+  href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionStorageContract.html
+  commentId: T:Devbone.Frameworks.EventProjection.Persistence.ProjectionStorageContract
+  fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionStorageContract
+  nameWithType: ProjectionStorageContract
+- uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionStorageContract.WRITER_VERSION
+  name: WRITER_VERSION
+  href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionStorageContract.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionStorageContract_WRITER_VERSION
+  commentId: F:Devbone.Frameworks.EventProjection.Persistence.ProjectionStorageContract.WRITER_VERSION
+  fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionStorageContract.WRITER_VERSION
+  nameWithType: ProjectionStorageContract.WRITER_VERSION
 - uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer
   name: ProjectionStoreInitializer
   href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionStoreInitializer.html
@@ -26988,6 +27000,30 @@ references:
   fullName.vb: Devbone.Frameworks.EventProjection.Persistence.ProjectionWorkerIdentity.<>
   nameWithType: ProjectionWorkerIdentity.operator !=
   nameWithType.vb: ProjectionWorkerIdentity.<>
+- uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException
+  name: ProjectionWriterContractException
+  href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException.html
+  commentId: T:Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException
+  fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException
+  nameWithType: ProjectionWriterContractException
+- uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException.#ctor
+  name: ProjectionWriterContractException()
+  href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionWriterContractException__ctor
+  commentId: M:Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException.#ctor
+  name.vb: New()
+  fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException.ProjectionWriterContractException()
+  fullName.vb: Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException.New()
+  nameWithType: ProjectionWriterContractException.ProjectionWriterContractException()
+  nameWithType.vb: ProjectionWriterContractException.New()
+- uid: Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException.#ctor*
+  name: ProjectionWriterContractException
+  href: api/Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException.html#Devbone_Frameworks_EventProjection_Persistence_ProjectionWriterContractException__ctor_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException.ProjectionWriterContractException
+  fullName.vb: Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractException.New
+  nameWithType: ProjectionWriterContractException.ProjectionWriterContractException
+  nameWithType.vb: ProjectionWriterContractException.New
 - uid: Devbone.Frameworks.EventProjection.Persistence.RawProjectionStallSnapshot
   name: RawProjectionStallSnapshot
   href: api/Devbone.Frameworks.EventProjection.Persistence.RawProjectionStallSnapshot.html
@@ -28626,6 +28662,90 @@ references:
   fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.<>
   nameWithType: ProjectionRepairProgress.operator !=
   nameWithType.vb: ProjectionRepairProgress.<>
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException
+  name: ProjectionRepairRejectedException
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.html
+  commentId: T:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException
+  nameWithType: ProjectionRepairRejectedException
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.#ctor(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode)
+  name: ProjectionRepairRejectedException(ProjectionRepairRejectionCode)
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRejectedException__ctor_Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRejectionCode_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.#ctor(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode)
+  name.vb: New(ProjectionRepairRejectionCode)
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.ProjectionRepairRejectedException(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.New(Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode)
+  nameWithType: ProjectionRepairRejectedException.ProjectionRepairRejectedException(ProjectionRepairRejectionCode)
+  nameWithType.vb: ProjectionRepairRejectedException.New(ProjectionRepairRejectionCode)
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.#ctor*
+  name: ProjectionRepairRejectedException
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRejectedException__ctor_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.ProjectionRepairRejectedException
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.New
+  nameWithType: ProjectionRepairRejectedException.ProjectionRepairRejectedException
+  nameWithType.vb: ProjectionRepairRejectedException.New
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.Code
+  name: Code
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRejectedException_Code
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.Code
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.Code
+  nameWithType: ProjectionRepairRejectedException.Code
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.Code*
+  name: Code
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRejectedException_Code_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.Code
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.Code
+  nameWithType: ProjectionRepairRejectedException.Code
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode
+  name: ProjectionRepairRejectionCode
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.html
+  commentId: T:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode
+  nameWithType: ProjectionRepairRejectionCode
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.DefinitionRetired
+  name: DefinitionRetired
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRejectionCode_DefinitionRetired
+  commentId: F:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.DefinitionRetired
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.DefinitionRetired
+  nameWithType: ProjectionRepairRejectionCode.DefinitionRetired
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.GraphLimitExceeded
+  name: GraphLimitExceeded
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRejectionCode_GraphLimitExceeded
+  commentId: F:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.GraphLimitExceeded
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.GraphLimitExceeded
+  nameWithType: ProjectionRepairRejectionCode.GraphLimitExceeded
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.IdempotencyConflict
+  name: IdempotencyConflict
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRejectionCode_IdempotencyConflict
+  commentId: F:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.IdempotencyConflict
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.IdempotencyConflict
+  nameWithType: ProjectionRepairRejectionCode.IdempotencyConflict
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.InputUnavailable
+  name: InputUnavailable
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRejectionCode_InputUnavailable
+  commentId: F:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.InputUnavailable
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.InputUnavailable
+  nameWithType: ProjectionRepairRejectionCode.InputUnavailable
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.InvalidRequest
+  name: InvalidRequest
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRejectionCode_InvalidRequest
+  commentId: F:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.InvalidRequest
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.InvalidRequest
+  nameWithType: ProjectionRepairRejectionCode.InvalidRequest
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.InvalidTarget
+  name: InvalidTarget
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRejectionCode_InvalidTarget
+  commentId: F:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.InvalidTarget
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.InvalidTarget
+  nameWithType: ProjectionRepairRejectionCode.InvalidTarget
+- uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.Unauthorized
+  name: Unauthorized
+  href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairRejectionCode_Unauthorized
+  commentId: F:Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.Unauthorized
+  fullName: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.Unauthorized
+  nameWithType: ProjectionRepairRejectionCode.Unauthorized
 - uid: Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest
   name: ProjectionRepairRequest
   href: api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRequest.html

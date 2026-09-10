@@ -216,7 +216,7 @@ insert-only application's existing documents on its behalf. Graph membership is 
     <dd><p>Previously accepted request identity.</p>
 </dd>
     <dt><code>tenantId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Exact tenant boundary.</p>
+    <dd><p>Exact tenant boundary; null means tenantless, empty and whitespace are invalid.</p>
 </dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd><p>Cancellation token.</p>
@@ -237,6 +237,12 @@ insert-only application's existing documents on its behalf. Graph membership is 
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.html">ProjectionRepairRejectedException</a></dt>
+    <dd><p>Invalid request identity/tenant or denied authorization.</p>
+</dd>
+  </dl>
 
 
 
@@ -279,6 +285,12 @@ insert-only application's existing documents on its behalf. Graph membership is 
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectedException.html">ProjectionRepairRejectedException</a></dt>
+    <dd><p>A deterministic request rejection; inspect its Code.</p>
+</dd>
+  </dl>
 
 
 
