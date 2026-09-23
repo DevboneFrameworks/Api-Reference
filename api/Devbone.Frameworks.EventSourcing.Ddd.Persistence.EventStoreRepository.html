@@ -175,8 +175,8 @@ which no later retry can repair.
 
   <a id="Devbone_Frameworks_EventSourcing_Ddd_Persistence_EventStoreRepository__ctor_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Persistence.EventStoreRepository.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_Ddd_Persistence_EventStoreRepository__ctor_Devbone_Frameworks_EventSourcing_Repositories_IEventStore_Devbone_Frameworks_EventSourcing_Outbox_ITransactionalOutboxEventStore_Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_Devbone_Frameworks_EventSourcing_Ddd_Routing_StoredEventRouteAssigner_Devbone_Frameworks_EventSourcing_Ddd_Mapping_StoredEventDatabaseEventMapper_Devbone_Frameworks_EventSourcing_Ddd_Mapping_StoredEventOutboxMessageMapper_Devbone_Frameworks_EventSourcing_Ddd_Mapping_DatabaseEventStoredEventMapper_Devbone_Frameworks_EventSourcing_Ddd_Mapping_EventPublicationContext_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Persistence.EventStoreRepository.#ctor(Devbone.Frameworks.EventSourcing.Repositories.IEventStore,Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore,Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore,Devbone.Frameworks.EventSourcing.Ddd.Routing.StoredEventRouteAssigner,Devbone.Frameworks.EventSourcing.Ddd.Mapping.StoredEventDatabaseEventMapper,Devbone.Frameworks.EventSourcing.Ddd.Mapping.StoredEventOutboxMessageMapper,Devbone.Frameworks.EventSourcing.Ddd.Mapping.DatabaseEventStoredEventMapper,Devbone.Frameworks.EventSourcing.Ddd.Mapping.EventPublicationContext)">
-  EventStoreRepository(IEventStore, ITransactionalOutboxEventStore, IAggregateSnapshotStore, StoredEventRouteAssigner, StoredEventDatabaseEventMapper, StoredEventOutboxMessageMapper, DatabaseEventStoredEventMapper, EventPublicationContext)
+  <h3 id="Devbone_Frameworks_EventSourcing_Ddd_Persistence_EventStoreRepository__ctor_Devbone_Frameworks_EventSourcing_Repositories_IEventStore_Devbone_Frameworks_EventSourcing_Outbox_ITransactionalOutboxEventStore_Devbone_Frameworks_EventSourcing_Snapshots_IAggregateSnapshotStore_Devbone_Frameworks_EventSourcing_Ddd_Routing_StoredEventRouteAssigner_Devbone_Frameworks_EventSourcing_Ddd_Mapping_StoredEventDatabaseEventMapper_Devbone_Frameworks_EventSourcing_Ddd_Mapping_StoredEventOutboxMessageMapper_Devbone_Frameworks_EventSourcing_Ddd_Mapping_DatabaseEventStoredEventMapper_Devbone_Frameworks_EventSourcing_Ddd_Mapping_EventPublicationContext_Devbone_Frameworks_EventSourcing_Ddd_Privacy_StoredEventFieldProtection_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Persistence.EventStoreRepository.#ctor(Devbone.Frameworks.EventSourcing.Repositories.IEventStore,Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore,Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore,Devbone.Frameworks.EventSourcing.Ddd.Routing.StoredEventRouteAssigner,Devbone.Frameworks.EventSourcing.Ddd.Mapping.StoredEventDatabaseEventMapper,Devbone.Frameworks.EventSourcing.Ddd.Mapping.StoredEventOutboxMessageMapper,Devbone.Frameworks.EventSourcing.Ddd.Mapping.DatabaseEventStoredEventMapper,Devbone.Frameworks.EventSourcing.Ddd.Mapping.EventPublicationContext,Devbone.Frameworks.EventSourcing.Ddd.Privacy.StoredEventFieldProtection)">
+  EventStoreRepository(IEventStore, ITransactionalOutboxEventStore, IAggregateSnapshotStore, StoredEventRouteAssigner, StoredEventDatabaseEventMapper, StoredEventOutboxMessageMapper, DatabaseEventStoredEventMapper, EventPublicationContext, StoredEventFieldProtection?)
   
   </h3>
 
@@ -185,7 +185,7 @@ which no later retry can repair.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EventStoreRepository(IEventStore eventStore, ITransactionalOutboxEventStore outboxStore, IAggregateSnapshotStore snapshotStore, StoredEventRouteAssigner routeAssigner, StoredEventDatabaseEventMapper eventMapper, StoredEventOutboxMessageMapper outboxMapper, DatabaseEventStoredEventMapper storedEventMapper, EventPublicationContext publicationContext)</code></pre>
+    <pre><code class="lang-csharp hljs">public EventStoreRepository(IEventStore eventStore, ITransactionalOutboxEventStore outboxStore, IAggregateSnapshotStore snapshotStore, StoredEventRouteAssigner routeAssigner, StoredEventDatabaseEventMapper eventMapper, StoredEventOutboxMessageMapper outboxMapper, DatabaseEventStoredEventMapper storedEventMapper, EventPublicationContext publicationContext, StoredEventFieldProtection? fieldProtection = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -213,6 +213,10 @@ which no later retry can repair.
 </dd>
     <dt><code>publicationContext</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Ddd.Mapping.EventPublicationContext.html">EventPublicationContext</a></dt>
     <dd><p>Producer and trace context stamped onto every outbox envelope.</p>
+</dd>
+    <dt><code>fieldProtection</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Ddd.Privacy.StoredEventFieldProtection.html">StoredEventFieldProtection</a></dt>
+    <dd><p>Protects the fields the registered privacy definitions mark as protected, before the envelope and the
+row exist; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when field protection is not enabled.</p>
 </dd>
   </dl>
 

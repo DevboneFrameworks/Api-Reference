@@ -168,6 +168,39 @@ them.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldFailureCodes.html">ProjectionRefoldFailureCodes</a></dt>
+      <dd><p>Stable values of <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRefoldProgress_FailureCode">FailureCode</a> for a persisted refold request that did not
+complete.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldProgress.html">ProjectionRefoldProgress</a></dt>
+      <dd><p>One authorized view of a persisted refold request.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldRejectedException.html">ProjectionRefoldRejectedException</a></dt>
+      <dd><p>Reports a deterministic refold rejection using a bounded, public classification.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldRequest.html">ProjectionRefoldRequest</a></dt>
+      <dd><p>Requests that one aggregate's raw state and merged document be recomputed from its stored raw events and
+that every current derived definition observing it be re-invoked, even at an unchanged event position.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldService.html">ProjectionRefoldService</a></dt>
+      <dd><p>Accepts idempotent refold requests and reads their independent completion evidence.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairFailureCodes.html">ProjectionRepairFailureCodes</a></dt>
+      <dd><p>Stable values of <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.html#Devbone_Frameworks_EventProjection_Projections_ProjectionRepairProgress_FailureCode">FailureCode</a> for a persisted repair request that did not
+complete.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairOutputProgress.html">ProjectionRepairOutputProgress</a></dt>
       <dd><p>One output's repair progress; no old checkpoint is accepted as its completion evidence.</p>
 </dd>
@@ -227,6 +260,11 @@ during execution.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.IProjectionRefoldAuthorization.html">IProjectionRefoldAuthorization</a></dt>
+      <dd><p>Applies application-owned authorization before refold acceptance and progress disclosure.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.IProjectionRepairAuthorization.html">IProjectionRepairAuthorization</a></dt>
       <dd><p>Applies application-owned authorization before repair acceptance and progress disclosure.</p>
 </dd>
@@ -234,6 +272,16 @@ during execution.</p>
     <h3 id="enums">
 Enums
 </h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldRejectionCode.html">ProjectionRefoldRejectionCode</a></dt>
+      <dd><p>Classifies deterministic refold rejections independently of persistence implementation details.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldStatus.html">ProjectionRefoldStatus</a></dt>
+      <dd><p>Describes durable refold progress independently of ordinary projection checkpoints.</p>
+</dd>
+    </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairRejectionCode.html">ProjectionRepairRejectionCode</a></dt>
       <dd><p>Classifies deterministic repair rejections independently of persistence implementation details.</p>

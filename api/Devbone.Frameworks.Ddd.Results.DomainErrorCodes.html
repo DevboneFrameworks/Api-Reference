@@ -402,6 +402,39 @@ Class DomainErrorCodes
 
 
 
+  <h3 id="Devbone_Frameworks_Ddd_Results_DomainErrorCodes_TENANT_MISMATCH" data-uid="Devbone.Frameworks.Ddd.Results.DomainErrorCodes.TENANT_MISMATCH">
+  TENANT_MISMATCH
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Identifies a commit whose tenant differs from the tenant fixed by the aggregate stream's first durable event,
+including a change from or to a tenantless stream. It is carried with <code>DomainErrorCategory.Conflict</code>
+and is never resolved by retrying: the tenant of the request, not the timing, is wrong.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TENANT_MISMATCH = &quot;ddd.tenant.mismatch&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="Devbone_Frameworks_Ddd_Results_DomainErrorCodes_UNIQUE_VALUE_CONFLICT" data-uid="Devbone.Frameworks.Ddd.Results.DomainErrorCodes.UNIQUE_VALUE_CONFLICT">
   UNIQUE_VALUE_CONFLICT
   

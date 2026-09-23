@@ -149,8 +149,8 @@ Class PrivacyDefinitionDetails
 
   <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PrivacyDefinitionDetails__ctor_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PrivacyDefinitionDetails__ctor_System_String_System_String_System_Int32_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Boolean__" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.#ctor(System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean})">
-  PrivacyDefinitionDetails(string, string, int, string, string?, string?, string?, string?, string?, string?, bool?)
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PrivacyDefinitionDetails__ctor_System_String_System_String_System_Int32_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Boolean__" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.#ctor(System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean})">
+  PrivacyDefinitionDetails(string, string, int, string, string?, string?, string?, string?, string?, string?, string?, string?, bool?)
   
   </h3>
 
@@ -159,7 +159,7 @@ Class PrivacyDefinitionDetails
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PrivacyDefinitionDetails(string AggregateName, string EventName, int EventVersion, string Classification, string? RetentionPolicy, string? FieldPath, string? DataCategory, string? SubjectType, string? SubjectRole, string? ErasureStrategy, bool? IsRequired)</code></pre>
+    <pre><code class="lang-csharp hljs">public PrivacyDefinitionDetails(string AggregateName, string EventName, int EventVersion, string Classification, string? RetentionPolicy, string? FieldPath, string? DataCategory, string? SubjectType, string? SubjectRole, string? Protection, string? ErasedValuePolicy, string? ErasedValuePlaceholder, bool? IsRequired)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -182,7 +182,11 @@ Class PrivacyDefinitionDetails
     <dd></dd>
     <dt><code>SubjectRole</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>ErasureStrategy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>Protection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>ErasedValuePolicy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>ErasedValuePlaceholder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>IsRequired</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
     <dd></dd>
@@ -296,10 +300,10 @@ Class PrivacyDefinitionDetails
 
 
 
-  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PrivacyDefinitionDetails_ErasureStrategy_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.ErasureStrategy*"></a>
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PrivacyDefinitionDetails_ErasedValuePlaceholder_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.ErasedValuePlaceholder*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PrivacyDefinitionDetails_ErasureStrategy" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.ErasureStrategy">
-  ErasureStrategy
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PrivacyDefinitionDetails_ErasedValuePlaceholder" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.ErasedValuePlaceholder">
+  ErasedValuePlaceholder
   
   </h3>
 
@@ -307,7 +311,38 @@ Class PrivacyDefinitionDetails
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? ErasureStrategy { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string? ErasedValuePlaceholder { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PrivacyDefinitionDetails_ErasedValuePolicy_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.ErasedValuePolicy*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PrivacyDefinitionDetails_ErasedValuePolicy" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.ErasedValuePolicy">
+  ErasedValuePolicy
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ErasedValuePolicy { get; init; }</code></pre>
   </div>
 
 
@@ -451,6 +486,37 @@ Class PrivacyDefinitionDetails
 
 
 
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PrivacyDefinitionDetails_Protection_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.Protection*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PrivacyDefinitionDetails_Protection" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.Protection">
+  Protection
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Protection { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PrivacyDefinitionDetails_RetentionPolicy_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.RetentionPolicy*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PrivacyDefinitionDetails_RetentionPolicy" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.RetentionPolicy">
@@ -550,8 +616,8 @@ Class PrivacyDefinitionDetails
 
   <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PrivacyDefinitionDetails_Deconstruct_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.Deconstruct*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PrivacyDefinitionDetails_Deconstruct_System_String__System_String__System_Int32__System_String__System_String__System_String__System_String__System_String__System_String__System_String__System_Nullable_System_Boolean___" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.Deconstruct(System.String@,System.String@,System.Int32@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.Nullable{System.Boolean}@)">
-  Deconstruct(out string, out string, out int, out string, out string?, out string?, out string?, out string?, out string?, out string?, out bool?)
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PrivacyDefinitionDetails_Deconstruct_System_String__System_String__System_Int32__System_String__System_String__System_String__System_String__System_String__System_String__System_String__System_String__System_String__System_Nullable_System_Boolean___" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.Deconstruct(System.String@,System.String@,System.Int32@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.Nullable{System.Boolean}@)">
+  Deconstruct(out string, out string, out int, out string, out string?, out string?, out string?, out string?, out string?, out string?, out string?, out string?, out bool?)
   
   </h3>
 
@@ -559,7 +625,7 @@ Class PrivacyDefinitionDetails
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Deconstruct(out string AggregateName, out string EventName, out int EventVersion, out string Classification, out string? RetentionPolicy, out string? FieldPath, out string? DataCategory, out string? SubjectType, out string? SubjectRole, out string? ErasureStrategy, out bool? IsRequired)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Deconstruct(out string AggregateName, out string EventName, out int EventVersion, out string Classification, out string? RetentionPolicy, out string? FieldPath, out string? DataCategory, out string? SubjectType, out string? SubjectRole, out string? Protection, out string? ErasedValuePolicy, out string? ErasedValuePlaceholder, out bool? IsRequired)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -582,7 +648,11 @@ Class PrivacyDefinitionDetails
     <dd></dd>
     <dt><code>SubjectRole</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>ErasureStrategy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>Protection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>ErasedValuePolicy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>ErasedValuePlaceholder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>IsRequired</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
     <dd></dd>

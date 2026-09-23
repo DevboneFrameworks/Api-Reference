@@ -654,6 +654,68 @@ nothing is waiting.</p>
 
 
 
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_RefoldsBlocked" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.RefoldsBlocked">
+  RefoldsBlocked
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Counts refold requests blocked because their stored raw events could not be folded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Counter&lt;long&gt; RefoldsBlocked</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1">Counter</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_RefoldsFolded" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.RefoldsFolded">
+  RefoldsFolded
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Counts refold requests whose raw state and merged document were recomputed from stored raw events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Counter&lt;long&gt; RefoldsFolded</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1">Counter</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="Devbone_Frameworks_EventProjection_Observability_ProjectionPipelineInstrumentation_UnappliedRawEvents" data-uid="Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.UnappliedRawEvents">
   UnappliedRawEvents
   

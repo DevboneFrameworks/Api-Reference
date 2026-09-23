@@ -120,6 +120,11 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionWriterContractInspector.html">MongoProjectionWriterContractInspector</a></dt>
+      <dd><p>Reads writer-contract evidence from MongoDB with plain finds and no write of any kind.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.PendingRawProjectionNotification.html">PendingRawProjectionNotification</a></dt>
       <dd><p>Binds an applied event to its pending aggregate-specific raw notification.</p>
 </dd>
@@ -127,6 +132,11 @@ Classes
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionCapabilityAdvertisement.html">ProjectionCapabilityAdvertisement</a></dt>
       <dd><p>One worker instance's complete, leased executable capability set.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionCapabilityLease.html">ProjectionCapabilityLease</a></dt>
+      <dd><p>One worker instance's live capability advertisement.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -197,6 +207,16 @@ start, and publishes the complete reconstructible definition catalogue from this
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractInspection.html">ProjectionWriterContractInspection</a></dt>
+      <dd><p>Read-only evidence about the writers that currently hold or advertise access to a projection database.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterLease.html">ProjectionWriterLease</a></dt>
+      <dd><p>One store instance's live admission to the fenced writer protocol.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.RawProjectionStallSnapshot.html">RawProjectionStallSnapshot</a></dt>
       <dd><p>Summarizes the stored-but-unapplied events of one aggregate.</p>
 </dd>
@@ -237,6 +257,11 @@ Interfaces
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionStoreMaintenance.html">IProjectionStoreMaintenance</a></dt>
       <dd><p>Maintains aggregate-specific projection-store infrastructure required before consumption starts.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionWriterContractInspector.html">IProjectionWriterContractInspector</a></dt>
+      <dd><p>Reads the evidence a writer-protocol cutover is checked against, without taking part in the protocol.</p>
 </dd>
     </dl>
     <dl class="jumplist">

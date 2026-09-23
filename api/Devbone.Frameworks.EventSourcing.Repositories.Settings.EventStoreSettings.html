@@ -547,6 +547,41 @@ Class EventStoreSettings
 
 
 
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_EnableFieldProtection_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.EnableFieldProtection*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_EnableFieldProtection" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.EnableFieldProtection">
+  EnableFieldProtection
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether protected privacy fields are encrypted at commit with their subject's key and
+the store refuses a protected field that arrives in plaintext. Valid only with
+<a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyMode.html#Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyMode_Required">Required</a>, because protection needs a registered definition for every
+event; a definition that marks a field protected requires this to be enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableFieldProtection { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_EventPrivacyDefinitionTableName_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.EventPrivacyDefinitionTableName*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_EventPrivacyDefinitionTableName" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.EventPrivacyDefinitionTableName">
@@ -792,7 +827,7 @@ Class EventStoreSettings
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyDefinition.html">EventPrivacyDefinition</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.EventSourcing/Privacy/EventPrivacyDefinition.cs">EventPrivacyDefinition</a>&gt;</dt>
     <dd></dd>
   </dl>
 

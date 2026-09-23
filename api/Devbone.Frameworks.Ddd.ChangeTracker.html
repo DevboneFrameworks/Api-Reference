@@ -95,6 +95,12 @@
 Classes
 </h3>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Ddd.ChangeTracker.AggregateCommitContext.html">AggregateCommitContext</a></dt>
+      <dd><p>Carries infrastructure metadata for one aggregate commit without adding it to domain event payloads.
+Create one immutable instance per request and pass it when constructing the aggregate's change tracker.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.Ddd.ChangeTracker.ChangeTrackerFactory.html">ChangeTrackerFactory</a></dt>
       <dd><p>Creates change trackers for writable aggregate instances without exposing operations that can add events or
 persist a partial aggregate operation outside <code>AggregateRoot.Emit</code> and <code>AggregateRoot.Commit</code>.</p>

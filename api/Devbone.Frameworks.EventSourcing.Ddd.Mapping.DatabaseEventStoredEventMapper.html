@@ -157,18 +157,26 @@ aggregate that rehydrates into the wrong state.</p>
 
   <a id="Devbone_Frameworks_EventSourcing_Ddd_Mapping_DatabaseEventStoredEventMapper__ctor_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Mapping.DatabaseEventStoredEventMapper.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_Ddd_Mapping_DatabaseEventStoredEventMapper__ctor" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Mapping.DatabaseEventStoredEventMapper.#ctor">
-  DatabaseEventStoredEventMapper()
+  <h3 id="Devbone_Frameworks_EventSourcing_Ddd_Mapping_DatabaseEventStoredEventMapper__ctor_Devbone_Frameworks_EventSourcing_Ddd_Privacy_StoredEventFieldProtection_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Mapping.DatabaseEventStoredEventMapper.#ctor(Devbone.Frameworks.EventSourcing.Ddd.Privacy.StoredEventFieldProtection)">
+  DatabaseEventStoredEventMapper(StoredEventFieldProtection?)
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates the mapper.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DatabaseEventStoredEventMapper()</code></pre>
+    <pre><code class="lang-csharp hljs">public DatabaseEventStoredEventMapper(StoredEventFieldProtection? fieldProtection = null)</code></pre>
   </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fieldProtection</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Ddd.Privacy.StoredEventFieldProtection.html">StoredEventFieldProtection</a></dt>
+    <dd><p>Unprotects tagged payload values on the way back to the DDD contract; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when field
+protection is not enabled. A destroyed key yields the placeholder the tag carries.</p>
+</dd>
+  </dl>
 
 
 
@@ -231,7 +239,7 @@ aggregate that rehydrates into the wrong state.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Maps a loaded event stream in order.</p>
+  <div class="markdown level1 summary"><p>Maps a loaded event stream in order, unprotecting every tagged value in one registry round trip.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

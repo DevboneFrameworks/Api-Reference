@@ -278,7 +278,7 @@ public class AggregateNameAttribute : Attribute</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Non-empty aggregate contract name.</p>
+    <dd><p>Nonblank aggregate contract name.</p>
 </dd>
   </dl>
 
@@ -293,7 +293,10 @@ public class AggregateNameAttribute : Attribute</code></pre>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown when <code class="paramref">name</code> is null or empty.</p>
+    <dd><p>Thrown when <code class="paramref">name</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when <code class="paramref">name</code> is empty or whitespace.</p>
 </dd>
   </dl>
 

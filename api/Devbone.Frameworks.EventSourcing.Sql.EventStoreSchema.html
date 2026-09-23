@@ -201,7 +201,7 @@ database processes that never execute .NET code. Both copies are the same file.<
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int SCHEMA_VERSION = 3</code></pre>
+    <pre><code class="lang-csharp hljs">public const int SCHEMA_VERSION = 4</code></pre>
   </div>
 
 
@@ -223,6 +223,48 @@ database processes that never execute .NET code. Both copies are the same file.<
 
   <h2 class="section" id="methods">Methods
 </h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_GetPostgresMigration3To4Script_" data-uid="Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.GetPostgresMigration3To4Script*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_GetPostgresMigration3To4Script" data-uid="Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.GetPostgresMigration3To4Script">
+  GetPostgresMigration3To4Script()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the PostgreSQL script that upgrades a schema version 3 database to version 4, the field
+protection model of privacy definitions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetPostgresMigration3To4Script()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The upgrade script. Run it exactly once, with every writer stopped, against a database that reports
+version 3; it verifies the version and refuses definitions it cannot map, naming them. The same file
+is packed as <code>sql/postgres/migrate-3-to-4.sql</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when the assembly was built without the embedded resource.</p>
+</dd>
+  </dl>
+
 
 
   <a id="Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_GetPostgresScript_" data-uid="Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.GetPostgresScript*"></a>

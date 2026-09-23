@@ -147,6 +147,11 @@ Class PayloadFormatter
 
 
 
+  <h2 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PayloadFormatter_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>A string that parses as a protected value tag is shown as a marker naming the key's prefix and what a
+reader yields once the key is destroyed. The Time Machine holds no key and never unprotects; the plain-text
+representation keeps the stored tag verbatim for anyone who needs the exact bytes.</p>
+</div>
 
 
   <h2 class="section" id="methods">Methods
@@ -182,6 +187,46 @@ Class PayloadFormatter
   <dl class="parameters">
     <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.FormattedPayload.html">FormattedPayload</a></dt>
     <dd><p>The formatted content and fallback information.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PayloadFormatter_RenderProtectedValue_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PayloadFormatter.RenderProtectedValue*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_PayloadFormatter_RenderProtectedValue_Devbone_Frameworks_Privacy_Protection_ProtectedValueTag_" data-uid="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PayloadFormatter.RenderProtectedValue(Devbone.Frameworks.Privacy.Protection.ProtectedValueTag)">
+  RenderProtectedValue(ProtectedValueTag)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the marker shown in place of one protected value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string RenderProtectedValue(ProtectedValueTag tag)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tag</code> <a class="xref" href="Devbone.Frameworks.Privacy.Protection.ProtectedValueTag.html">ProtectedValueTag</a></dt>
+    <dd><p>The parsed tag.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A marker naming the key prefix and the erased-value policy, never the ciphertext. The marker itself is
+ASCII so that it reads the same in every representation; the placeholder is quoted as JSON.</p>
 </dd>
   </dl>
 

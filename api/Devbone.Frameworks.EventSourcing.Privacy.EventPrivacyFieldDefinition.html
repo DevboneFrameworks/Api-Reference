@@ -141,6 +141,11 @@ Class EventPrivacyFieldDefinition
 
 
 
+  <h2 id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>A protected field names the subject whose key protects it, through <a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldDefinition.html#Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_SubjectType">SubjectType</a> and
+optionally <a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldDefinition.html#Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_SubjectRole">SubjectRole</a>, and carries the policy a reader applies once that key is destroyed.
+The policy travels inside the stored tagged value, so this definition is consulted at commit only.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -209,19 +214,19 @@ Class EventPrivacyFieldDefinition
 
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_ErasureStrategy_" data-uid="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldDefinition.ErasureStrategy*"></a>
+  <a id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_EffectiveErasedValue_" data-uid="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldDefinition.EffectiveErasedValue*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_ErasureStrategy" data-uid="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldDefinition.ErasureStrategy">
-  ErasureStrategy
+  <h3 id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_EffectiveErasedValue" data-uid="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldDefinition.EffectiveErasedValue">
+  EffectiveErasedValue
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the application-owned erasure strategy.</p>
+  <div class="markdown level1 summary"><p>Gets the effective erased-value policy of a protected field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public required EventPrivacyErasureStrategy ErasureStrategy { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ErasedValuePolicy EffectiveErasedValue { get; }</code></pre>
   </div>
 
 
@@ -230,7 +235,40 @@ Class EventPrivacyFieldDefinition
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyErasureStrategy.html">EventPrivacyErasureStrategy</a></dt>
+    <dt><a class="xref" href="Devbone.Frameworks.Privacy.Protection.ErasedValuePolicy.html">ErasedValuePolicy</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_ErasedValue_" data-uid="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldDefinition.ErasedValue*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_ErasedValue" data-uid="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldDefinition.ErasedValue">
+  ErasedValue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets what a reader yields for the field once its subject's key is destroyed. Meaningful only for a
+protected field; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> means <a class="xref" href="Devbone.Frameworks.Privacy.Protection.ErasedValuePolicy.html#Devbone_Frameworks_Privacy_Protection_ErasedValuePolicy_Default">Default</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErasedValuePolicy? ErasedValue { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Privacy.Protection.ErasedValuePolicy.html">ErasedValuePolicy</a></dt>
     <dd></dd>
   </dl>
 
@@ -305,6 +343,38 @@ Class EventPrivacyFieldDefinition
 
 
 
+  <a id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_Protection_" data-uid="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldDefinition.Protection*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_Protection" data-uid="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldDefinition.Protection">
+  Protection
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the field is protected at commit with its subject's key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventPrivacyFieldProtection Protection { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldProtection.html">EventPrivacyFieldProtection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_SubjectRole_" data-uid="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldDefinition.SubjectRole*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_SubjectRole" data-uid="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldDefinition.SubjectRole">
@@ -369,7 +439,8 @@ Class EventPrivacyFieldDefinition
 
 
   <h4 class="section" id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_SubjectType_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>A missing value means that the field is shared or cannot be assigned to one subject type.</p>
+  <div class="markdown level1 remarks"><p>A missing value means that the field is shared or cannot be assigned to one subject type. A protected
+field always names one.</p>
 </div>
 
 

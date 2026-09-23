@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Devbone.Frameworks.Privacy.Protection | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Devbone.Frameworks.Privacy.Protection | Devbone Event-Driven Platform ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.Privacy.Protection">
+
+  <h1 id="Devbone_Frameworks_Privacy_Protection" data-uid="Devbone.Frameworks.Privacy.Protection" class="text-break">Namespace Devbone.Frameworks.Privacy.Protection</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Privacy.Protection.ErasedValuePolicy.html">ErasedValuePolicy</a></dt>
+      <dd><p>The application's decision, per field, of what an erased value looks like. It travels inside the tagged
+string so that a reader needs no field definitions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Privacy.Protection.FieldProtectionException.html">FieldProtectionException</a></dt>
+      <dd><p>Protecting or unprotecting a value failed for a reason that is not a missing key: a plaintext that would be
+mistaken for a tag, an unsupported format version, a resolution for a different key, or ciphertext that
+does not authenticate. The message never contains the plaintext or key material.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Privacy.Protection.FieldProtector.html">FieldProtector</a></dt>
+      <dd><p>Protects and unprotects single string values with a subject key. Pure cryptography: it neither resolves
+keys nor caches them, so the write side and the projection fold keep control of resolution and of what an
+unreachable registry means for them.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Privacy.Protection.JsonTagUnprotector.html">JsonTagUnprotector</a></dt>
+      <dd><p>Unprotects every tagged string of one or more JSON documents in place, resolving the keys the tags name
+through a registry in batches. This is the reader's half of field protection for anyone who holds a payload
+without its definition: the projection fold, a rehydration mapper, an export.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Privacy.Protection.ProtectedValueTag.html">ProtectedValueTag</a></dt>
+      <dd><p>The stored form of a protected field value: <code>dbp:1:&lt;keyId&gt;:&lt;policy&gt;:&lt;payload&gt;</code>. The JSON type
+stays <code>string</code>, so catalogue, BSON limits and JSON Merge Patch are unaffected, and any reader recognises
+a protected value without knowing the field definitions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Privacy.Protection.TaggedJsonValue.html">TaggedJsonValue</a></dt>
+      <dd><p>One tagged string found in a JSON document, together with the node that holds it, so that the unprotected
+value can be written back in place. Tags are self-describing, so finding them needs no definition: every
+reader of a payload, whether it knows the event's contract or not, walks the document the same way.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Privacy.Protection.UnprotectedValue.html">UnprotectedValue</a></dt>
+      <dd><p>The result of unprotecting one tagged value.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Privacy.Protection.ErasedValuePolicyKind.html">ErasedValuePolicyKind</a></dt>
+      <dd><p>What a reader yields for a protected value whose key is destroyed or unknown.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Privacy.Protection.UnprotectOutcome.html">UnprotectOutcome</a></dt>
+      <dd><p>What unprotecting a tagged value produced.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

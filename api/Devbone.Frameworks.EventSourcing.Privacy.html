@@ -110,6 +110,19 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPayloadFieldProtector.html">EventPayloadFieldProtector</a></dt>
+      <dd><p>Protects the fields a registered definition marks as protected in a serialized event payload, and
+unprotects the tagged values of stored payloads. Both adapters, Direct mode and the Gateway, run their
+payloads through this class so that protection happens once, at one place, before the envelope and the
+database row exist.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPayloadProtectionRequest.html">EventPayloadProtectionRequest</a></dt>
+      <dd><p>One event as the protector sees it: contract identity, tenant, payload and descriptor.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyDefinition.html">EventPrivacyDefinition</a></dt>
       <dd><p>Defines the immutable privacy contract of one aggregate event and payload schema version.</p>
 </dd>
@@ -146,8 +159,8 @@ Enums
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyErasureStrategy.html">EventPrivacyErasureStrategy</a></dt>
-      <dd><p>Describes the application-owned action for one privacy-relevant event field.</p>
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldProtection.html">EventPrivacyFieldProtection</a></dt>
+      <dd><p>Whether a personal field is protected at commit with its subject's key.</p>
 </dd>
     </dl>
     <dl class="jumplist">

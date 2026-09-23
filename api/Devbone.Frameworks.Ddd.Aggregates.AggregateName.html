@@ -201,7 +201,7 @@ The name is used by storage, locking, and event metadata and should survive CLR 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Non-null aggregate name.</p>
+    <dd><p>Nonblank aggregate name.</p>
 </dd>
   </dl>
 
@@ -217,6 +217,9 @@ The name is used by storage, locking, and event metadata and should survive CLR 
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
     <dd><p>Thrown when <code class="paramref">value</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when <code class="paramref">value</code> is empty or whitespace.</p>
 </dd>
   </dl>
 

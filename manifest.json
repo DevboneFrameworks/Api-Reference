@@ -600,6 +600,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Ddd.ChangeTracker.AggregateCommitContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Ddd.ChangeTracker.AggregateCommitContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Ddd.ChangeTracker.AggregateCommitContext",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.ChangeTracker.AggregateCommitContext.yml\" sourcestartlinenumber=\"1\">Carries infrastructure metadata for one aggregate commit without adding it to domain event payloads.\nCreate one immutable instance per request and pass it when constructing the aggregate's change tracker.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.Ddd.ChangeTracker.ChangeTrackerFactory.yml",
       "output": {
         ".html": {
@@ -1591,6 +1605,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.Ddd.Repositories.IStoredEvent",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Repositories.IStoredEvent.yml\" sourcestartlinenumber=\"1\">Defines one durable event-store row and its publication state.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Ddd.Repositories.IStoredEventPublicationContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Ddd.Repositories.IStoredEventPublicationContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Ddd.Repositories.IStoredEventPublicationContext",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Repositories.IStoredEventPublicationContext.yml\" sourcestartlinenumber=\"1\">Optional request metadata used only while building immutable outbox envelopes.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5150,6 +5178,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.IProjectionWriterContractInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.IProjectionWriterContractInspector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.IProjectionWriterContractInspector",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.IProjectionWriterContractInspector.yml\" sourcestartlinenumber=\"1\">Reads the evidence a writer-protocol cutover is checked against, without taking part in the protocol.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStallReader.yml",
       "output": {
         ".html": {
@@ -5206,6 +5248,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.MongoProjectionWriterContractInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.MongoProjectionWriterContractInspector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.MongoProjectionWriterContractInspector",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.MongoProjectionWriterContractInspector.yml\" sourcestartlinenumber=\"1\">Reads writer-contract evidence from MongoDB with plain finds and no write of any kind.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.PendingRawProjectionNotification.yml",
       "output": {
         ".html": {
@@ -5231,6 +5287,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionCapabilityAdvertisement",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionCapabilityAdvertisement.yml\" sourcestartlinenumber=\"1\">One worker instance's complete, leased executable capability set.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionCapabilityLease.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionCapabilityLease.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionCapabilityLease",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionCapabilityLease.yml\" sourcestartlinenumber=\"1\">One worker instance's live capability advertisement.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5444,6 +5514,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractInspection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractInspection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractInspection",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterContractInspection.yml\" sourcestartlinenumber=\"1\">Read-only evidence about the writers that currently hold or advertise access to a projection database.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterLease.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterLease.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterLease",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Persistence.ProjectionWriterLease.yml\" sourcestartlinenumber=\"1\">One store instance's live admission to the fenced writer protocol.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Persistence.RawProjectionStallSnapshot.yml",
       "output": {
         ".html": {
@@ -5468,6 +5566,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Persistence",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Privacy.ProjectionEventUnprotector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Privacy.ProjectionEventUnprotector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Privacy.ProjectionEventUnprotector",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Privacy.ProjectionEventUnprotector.yml\" sourcestartlinenumber=\"1\">Unprotects the tagged values of a stored raw event before it is folded into raw state. This is the one\nplace where ciphertext becomes plaintext on the read side: <code>RawEvents_*</code> keeps what the envelope\ncarried, raw state and merged documents hold what the fold produced.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Privacy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Privacy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Privacy",
       "Summary": null
     },
     {
@@ -5581,6 +5707,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Projections.IProjectionReferenceSource",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.IProjectionReferenceSource.yml\" sourcestartlinenumber=\"1\">Loads raw projection states used for cross-aggregate enrichment.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.IProjectionRefoldAuthorization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.IProjectionRefoldAuthorization.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.IProjectionRefoldAuthorization",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.IProjectionRefoldAuthorization.yml\" sourcestartlinenumber=\"1\">Applies application-owned authorization before refold acceptance and progress disclosure.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5735,6 +5875,118 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionReference",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionReference.yml\" sourcestartlinenumber=\"1\">Identifies one aggregate reference found in a JSON projection field.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldFailureCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldFailureCodes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldFailureCodes",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldFailureCodes.yml\" sourcestartlinenumber=\"1\">Stable values of <xref href=\"Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldProgress.FailureCode\" data-throw-if-not-resolved=\"false\"></xref> for a persisted refold request that did not\ncomplete.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldProgress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldProgress.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldProgress",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldProgress.yml\" sourcestartlinenumber=\"1\">One authorized view of a persisted refold request.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldRejectedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldRejectedException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldRejectedException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldRejectedException.yml\" sourcestartlinenumber=\"1\">Reports a deterministic refold rejection using a bounded, public classification.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldRejectionCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldRejectionCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldRejectionCode",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldRejectionCode.yml\" sourcestartlinenumber=\"1\">Classifies deterministic refold rejections independently of persistence implementation details.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldRequest",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldRequest.yml\" sourcestartlinenumber=\"1\">Requests that one aggregate's raw state and merged document be recomputed from its stored raw events and\nthat every current derived definition observing it be re-invoked, even at an unchanged event position.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldService",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldService.yml\" sourcestartlinenumber=\"1\">Accepts idempotent refold requests and reads their independent completion evidence.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldStatus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldStatus",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldStatus.yml\" sourcestartlinenumber=\"1\">Describes durable refold progress independently of ordinary projection checkpoints.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairFailureCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairFailureCodes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.ProjectionRepairFailureCodes",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.ProjectionRepairFailureCodes.yml\" sourcestartlinenumber=\"1\">Stable values of <xref href=\"Devbone.Frameworks.EventProjection.Projections.ProjectionRepairProgress.FailureCode\" data-throw-if-not-resolved=\"false\"></xref> for a persisted repair request that did not\ncomplete.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -6466,6 +6718,62 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Ddd.Privacy.EventPrivacyCatalogCheck.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Ddd.Privacy.EventPrivacyCatalogCheck.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Ddd.Privacy.EventPrivacyCatalogCheck",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Ddd.Privacy.EventPrivacyCatalogCheck.yml\" sourcestartlinenumber=\"1\">Verifies at startup, against the generated contract catalogue, that every protected privacy field is a\nstring and that a field removed on erasure is nullable and optional. The store enforces the same at\ncommit; this check fails composition instead of the first command.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Ddd.Privacy.EventPrivacyCatalogGaps.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Ddd.Privacy.EventPrivacyCatalogGaps.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Ddd.Privacy.EventPrivacyCatalogGaps",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Ddd.Privacy.EventPrivacyCatalogGaps.yml\" sourcestartlinenumber=\"1\">The three ways the registered privacy definitions and the generated contract catalogue can disagree, as\nfound by <xref href=\"Devbone.Frameworks.EventSourcing.Ddd.Privacy.EventPrivacyCatalogCheck.FindGaps(System.Collections.Generic.IReadOnlyCollection%7bDevbone.Frameworks.EventSourcing.Privacy.EventPrivacyDefinition%7d%2cSystem.Collections.Generic.IReadOnlyCollection%7bSystem.String%7d%2cSystem.Collections.Generic.IReadOnlyList%7bDevbone.Frameworks.Ddd.Catalog.EventContractDescriptor%7d)\" data-throw-if-not-resolved=\"false\"></xref>. Empty on every list means every contract and every\nfield is either classified or declared non-personal, and every definition names something that exists.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Ddd.Privacy.StoredEventFieldProtection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Ddd.Privacy.StoredEventFieldProtection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Ddd.Privacy.StoredEventFieldProtection",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Ddd.Privacy.StoredEventFieldProtection.yml\" sourcestartlinenumber=\"1\">Applies field protection to DDD stored events before the envelope and the database row exist, and removes\nit from stored rows on the way back to the DDD contract. Both the Direct-mode repository and the Gateway\nservice run their events through this class, so the two modes protect identically.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Ddd.Privacy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Ddd.Privacy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Ddd.Privacy",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Ddd.Routing.AggregateRoute.yml",
       "output": {
         ".html": {
@@ -6617,6 +6925,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.DependencyInjection",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Exceptions.AggregateTenantMismatchException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Exceptions.AggregateTenantMismatchException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Exceptions.AggregateTenantMismatchException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Exceptions.AggregateTenantMismatchException.yml\" sourcestartlinenumber=\"1\">Represents a commit whose tenant differs from the tenant fixed by the aggregate stream's first durable event,\nincluding a change from or to a tenantless stream.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7040,6 +7362,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Privacy.EventPayloadFieldProtector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Privacy.EventPayloadFieldProtector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Privacy.EventPayloadFieldProtector",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Privacy.EventPayloadFieldProtector.yml\" sourcestartlinenumber=\"1\">Protects the fields a registered definition marks as protected in a serialized event payload, and\nunprotects the tagged values of stored payloads. Both adapters, Direct mode and the Gateway, run their\npayloads through this class so that protection happens once, at one place, before the envelope and the\ndatabase row exist.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Privacy.EventPayloadProtectionRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Privacy.EventPayloadProtectionRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Privacy.EventPayloadProtectionRequest",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Privacy.EventPayloadProtectionRequest.yml\" sourcestartlinenumber=\"1\">One event as the protector sees it: contract identity, tenant, payload and descriptor.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyClassification.yml",
       "output": {
         ".html": {
@@ -7082,20 +7432,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyErasureStrategy.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyErasureStrategy.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyErasureStrategy",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyErasureStrategy.yml\" sourcestartlinenumber=\"1\">Describes the application-owned action for one privacy-relevant event field.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldDefinition.yml",
       "output": {
         ".html": {
@@ -7107,6 +7443,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldDefinition",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldDefinition.yml\" sourcestartlinenumber=\"1\">Declares one privacy-relevant payload field for a stable event contract version.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldProtection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldProtection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldProtection",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyFieldProtection.yml\" sourcestartlinenumber=\"1\">Whether a personal field is protected at commit with its subject's key.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -8184,6 +8534,972 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.Uniques",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Client.SubjectKeyServiceClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Client.SubjectKeyServiceClient.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Client.SubjectKeyServiceClient",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Client.SubjectKeyServiceClient.yml\" sourcestartlinenumber=\"1\">The registry as seen through the key service's HTTP contract. Usually wrapped by\n<xref href=\"Devbone.Frameworks.Privacy.Keys.CachingSubjectKeyRegistry\" data-throw-if-not-resolved=\"false\"></xref>; see the DI extension.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Client.SubjectKeyServiceClientOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Client.SubjectKeyServiceClientOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Client.SubjectKeyServiceClientOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Client.SubjectKeyServiceClientOptions.yml\" sourcestartlinenumber=\"1\">Configures the HTTP client of the key service.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Client.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Client",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Contracts.KeyServiceError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Contracts.KeyServiceError.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Contracts.KeyServiceError",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Contracts.KeyServiceError.yml\" sourcestartlinenumber=\"1\">One error of the key service.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Contracts.KeyServiceErrorResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Contracts.KeyServiceErrorResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Contracts.KeyServiceErrorResponse",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Contracts.KeyServiceErrorResponse.yml\" sourcestartlinenumber=\"1\">Error body of every failed key service response.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Contracts.KeyServiceJson.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Contracts.KeyServiceJson.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Contracts.KeyServiceJson",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Contracts.KeyServiceJson.yml\" sourcestartlinenumber=\"1\">The serializer settings both the client and the service use.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Contracts.KeyServiceRoles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Contracts.KeyServiceRoles.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Contracts.KeyServiceRoles",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Contracts.KeyServiceRoles.yml\" sourcestartlinenumber=\"1\">The client roles the key service knows.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Contracts.KeyServiceRoutes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Contracts.KeyServiceRoutes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Contracts.KeyServiceRoutes",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Contracts.KeyServiceRoutes.yml\" sourcestartlinenumber=\"1\">The relative paths of the key service. The path version is part of the wire contract: a change is a new\npath, never a changed meaning under the old one.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyCreateRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyCreateRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Contracts.SubjectKeyCreateRequest",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyCreateRequest.yml\" sourcestartlinenumber=\"1\">Request body of <xref href=\"Devbone.Frameworks.Privacy.Contracts.KeyServiceRoutes.KEYS\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyCreateResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyCreateResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Contracts.SubjectKeyCreateResponse",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyCreateResponse.yml\" sourcestartlinenumber=\"1\">Response body of <xref href=\"Devbone.Frameworks.Privacy.Contracts.KeyServiceRoutes.KEYS\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyDestroyRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyDestroyRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Contracts.SubjectKeyDestroyRequest",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyDestroyRequest.yml\" sourcestartlinenumber=\"1\">Request body of <xref href=\"Devbone.Frameworks.Privacy.Contracts.KeyServiceRoutes.DESTROY\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyDestroyResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyDestroyResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Contracts.SubjectKeyDestroyResponse",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyDestroyResponse.yml\" sourcestartlinenumber=\"1\">Response body of <xref href=\"Devbone.Frameworks.Privacy.Contracts.KeyServiceRoutes.DESTROY\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Contracts.SubjectKeyDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyDto.yml\" sourcestartlinenumber=\"1\">One key on the wire, in create and resolve responses.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyResolveRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyResolveRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Contracts.SubjectKeyResolveRequest",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyResolveRequest.yml\" sourcestartlinenumber=\"1\">Request body of <xref href=\"Devbone.Frameworks.Privacy.Contracts.KeyServiceRoutes.RESOLVE\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyResolveResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyResolveResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Contracts.SubjectKeyResolveResponse",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Contracts.SubjectKeyResolveResponse.yml\" sourcestartlinenumber=\"1\">Response body of <xref href=\"Devbone.Frameworks.Privacy.Contracts.KeyServiceRoutes.RESOLVE\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Contracts.SubjectReferenceDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Contracts.SubjectReferenceDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Contracts.SubjectReferenceDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Contracts.SubjectReferenceDto.yml\" sourcestartlinenumber=\"1\">A subject reference on the wire.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Contracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Contracts.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Contracts",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.DependencyInjection.SubjectKeyServiceClientServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.DependencyInjection.SubjectKeyServiceClientServiceCollectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.DependencyInjection.SubjectKeyServiceClientServiceCollectionExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.DependencyInjection.SubjectKeyServiceClientServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Registers the key service client as the application's <xref href=\"Devbone.Frameworks.Privacy.Keys.ISubjectKeyRegistry\" data-throw-if-not-resolved=\"false\"></xref>, behind the\nper-caller cache.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.DependencyInjection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.DependencyInjection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceClientOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceClientOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceClientOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceClientOptions.yml\" sourcestartlinenumber=\"1\">One authenticated client of the key service and the roles it holds.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceDatabaseOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceDatabaseOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceDatabaseOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceDatabaseOptions.yml\" sourcestartlinenumber=\"1\">Connects the registry to its PostgreSQL database.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceOptions.yml\" sourcestartlinenumber=\"1\">Configures the key service endpoints: authenticated clients with their roles, the secret header, the cache\nwindow granted to callers, and the per-client rate limit.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Configuration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Configuration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.DependencyInjection.KeyServiceServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.DependencyInjection.KeyServiceServiceCollectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.DependencyInjection.KeyServiceServiceCollectionExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.DependencyInjection.KeyServiceServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Registers the key service endpoints and the PostgreSQL registry.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.DependencyInjection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.DependencyInjection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceClientIdentity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceClientIdentity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceClientIdentity",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceClientIdentity.yml\" sourcestartlinenumber=\"1\">The authenticated client of one request.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceEndpointFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceEndpointFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceEndpointFilter",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceEndpointFilter.yml\" sourcestartlinenumber=\"1\">Authenticates the client by its secret in constant time, checks the role the endpoint requires, and maps\nevery failure to the wire contract's error body. Logs carry the client name, status and code; never a\nsubject reference and never material.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceEndpoints.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceEndpoints.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceEndpoints",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceEndpoints.yml\" sourcestartlinenumber=\"1\">Maps the <code>/v1/keys</code> endpoints and the unauthenticated <code>/healthz</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceErrors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceErrors.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceErrors",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceErrors.yml\" sourcestartlinenumber=\"1\">Builds the error responses of the wire contract. Messages never carry a subject reference or material.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceRoleRequirement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceRoleRequirement.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceRoleRequirement",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.Endpoints.KeyServiceRoleRequirement.yml\" sourcestartlinenumber=\"1\">Endpoint metadata naming the role an endpoint requires.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Endpoints.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Endpoints.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Endpoints",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Health.IKeyServiceHealthCheck.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Health.IKeyServiceHealthCheck.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Health.IKeyServiceHealthCheck",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.Health.IKeyServiceHealthCheck.yml\" sourcestartlinenumber=\"1\">Answers the unauthenticated readiness endpoint: can this instance reach its registry and use its\nkey-encryption key?</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Health.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Health.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Health",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Storage.KeyServiceSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Storage.KeyServiceSchema.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Storage.KeyServiceSchema",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.Storage.KeyServiceSchema.yml\" sourcestartlinenumber=\"1\">The PostgreSQL schema script shipped inside this package and the schema version the assembly expects.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Storage.PostgresSubjectKeyRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Storage.PostgresSubjectKeyRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Storage.PostgresSubjectKeyRegistry",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.Storage.PostgresSubjectKeyRegistry.yml\" sourcestartlinenumber=\"1\">The registry over PostgreSQL: keys are stored wrapped by the configured key-encryption key, one active key\nper subject is enforced by a partial unique index, and destruction removes the wrapped material physically\nwhile the row stays as the audit record.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Storage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Storage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Storage",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Keys.CachingSubjectKeyRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Keys.CachingSubjectKeyRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Keys.CachingSubjectKeyRegistry",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Keys.CachingSubjectKeyRegistry.yml\" sourcestartlinenumber=\"1\">Caches registry answers per caller, bounded in time by the registry's window and the caller's own maximum,\nand bounded in size. A destruction through this instance evicts immediately; a destruction elsewhere becomes\nvisible when the cached answer expires, which is the window the guide states.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Keys.ISubjectKeyRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Keys.ISubjectKeyRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Keys.ISubjectKeyRegistry",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Keys.ISubjectKeyRegistry.yml\" sourcestartlinenumber=\"1\">The registry of subject keys. One key per subject reference; destruction is the erasure of everything\nprotected with it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Keys.InMemorySubjectKeyRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Keys.InMemorySubjectKeyRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Keys.InMemorySubjectKeyRegistry",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Keys.InMemorySubjectKeyRegistry.yml\" sourcestartlinenumber=\"1\">A registry held in process memory, for tests of the write side, the worker and application code. It keeps\nthe semantics of the key service: get-or-create is idempotent and race-safe, a destroyed subject that\nreturns receives a new key, destruction is idempotent, and an unavailable registry throws\n<xref href=\"Devbone.Frameworks.Privacy.Keys.SubjectKeyRegistryUnavailableException\" data-throw-if-not-resolved=\"false\"></xref> rather than answering.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyBatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyBatch.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Keys.SubjectKeyBatch",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Keys.SubjectKeyBatch.yml\" sourcestartlinenumber=\"1\">Validates registry request batches the same way in every implementation, so that a registry of the\napplication's own (over a KMS, for example) rejects what the platform's registries reject.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyCacheOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyCacheOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Keys.SubjectKeyCacheOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Keys.SubjectKeyCacheOptions.yml\" sourcestartlinenumber=\"1\">Bounds the per-caller key cache of <xref href=\"Devbone.Frameworks.Privacy.Keys.CachingSubjectKeyRegistry\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyDestruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyDestruction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Keys.SubjectKeyDestruction",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Keys.SubjectKeyDestruction.yml\" sourcestartlinenumber=\"1\">The audit record of a key destruction. It carries no key material and no subject reference; the identifier\nis opaque.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyErrorCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyErrorCodes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Keys.SubjectKeyErrorCodes",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Keys.SubjectKeyErrorCodes.yml\" sourcestartlinenumber=\"1\">The stable error codes of the key registry and the key service wire contract.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Keys.SubjectKeyId",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Keys.SubjectKeyId.yml\" sourcestartlinenumber=\"1\">The registry-assigned identifier of one subject key: 32 lowercase hexadecimal characters. It is never\nderived from the subject reference, so a tag carrying it reveals nothing about the subject.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyMaterial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyMaterial.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Keys.SubjectKeyMaterial",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Keys.SubjectKeyMaterial.yml\" sourcestartlinenumber=\"1\">An active subject key with its material, as returned to a caller that protects values.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyReference.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Keys.SubjectKeyReference",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Keys.SubjectKeyReference.yml\" sourcestartlinenumber=\"1\">Identifies the data subject a key belongs to: the pseudonymized triple the event privacy index already\nrecords per event. The same triple names the same key, so the reference must be stable and must never be a\nraw personal value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyRegistryException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyRegistryException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Keys.SubjectKeyRegistryException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Keys.SubjectKeyRegistryException.yml\" sourcestartlinenumber=\"1\">The registry answered and rejected the request. The message never contains key material or a subject\nreference.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyRegistryUnavailableException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyRegistryUnavailableException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Keys.SubjectKeyRegistryUnavailableException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Keys.SubjectKeyRegistryUnavailableException.yml\" sourcestartlinenumber=\"1\">The registry could not be reached or could not answer. A write side rejects its commit; a reader leaves its\ndelivery unsettled and retries. Never a dead letter, never a placeholder.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyResolution.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyResolution.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Keys.SubjectKeyResolution",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Keys.SubjectKeyResolution.yml\" sourcestartlinenumber=\"1\">The registry's answer for one key identifier a reader asked about.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Keys.SubjectKeyState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Keys.SubjectKeyState",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Keys.SubjectKeyState.yml\" sourcestartlinenumber=\"1\">The state of a subject key as the registry reports it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Keys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Keys.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Keys",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Observability.PrivacyInstrumentation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Observability.PrivacyInstrumentation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Observability.PrivacyInstrumentation",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Observability.PrivacyInstrumentation.yml\" sourcestartlinenumber=\"1\">Owns the low-cardinality OpenTelemetry instruments of field protection and key resolution. No instrument\ncarries a key identifier, a subject reference, a tenant or a value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Observability.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Observability.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Observability",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Protection.ErasedValuePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Protection.ErasedValuePolicy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Protection.ErasedValuePolicy",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Protection.ErasedValuePolicy.yml\" sourcestartlinenumber=\"1\">The application's decision, per field, of what an erased value looks like. It travels inside the tagged\nstring so that a reader needs no field definitions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Protection.ErasedValuePolicyKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Protection.ErasedValuePolicyKind.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Protection.ErasedValuePolicyKind",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Protection.ErasedValuePolicyKind.yml\" sourcestartlinenumber=\"1\">What a reader yields for a protected value whose key is destroyed or unknown.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Protection.FieldProtectionException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Protection.FieldProtectionException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Protection.FieldProtectionException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Protection.FieldProtectionException.yml\" sourcestartlinenumber=\"1\">Protecting or unprotecting a value failed for a reason that is not a missing key: a plaintext that would be\nmistaken for a tag, an unsupported format version, a resolution for a different key, or ciphertext that\ndoes not authenticate. The message never contains the plaintext or key material.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Protection.FieldProtector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Protection.FieldProtector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Protection.FieldProtector",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Protection.FieldProtector.yml\" sourcestartlinenumber=\"1\">Protects and unprotects single string values with a subject key. Pure cryptography: it neither resolves\nkeys nor caches them, so the write side and the projection fold keep control of resolution and of what an\nunreachable registry means for them.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Protection.JsonTagUnprotector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Protection.JsonTagUnprotector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Protection.JsonTagUnprotector",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Protection.JsonTagUnprotector.yml\" sourcestartlinenumber=\"1\">Unprotects every tagged string of one or more JSON documents in place, resolving the keys the tags name\nthrough a registry in batches. This is the reader's half of field protection for anyone who holds a payload\nwithout its definition: the projection fold, a rehydration mapper, an export.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Protection.ProtectedValueTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Protection.ProtectedValueTag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Protection.ProtectedValueTag",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Protection.ProtectedValueTag.yml\" sourcestartlinenumber=\"1\">The stored form of a protected field value: <code>dbp:1:&lt;keyId&gt;:&lt;policy&gt;:&lt;payload&gt;</code>. The JSON type\nstays <code>string</code>, so catalogue, BSON limits and JSON Merge Patch are unaffected, and any reader recognises\na protected value without knowing the field definitions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Protection.TaggedJsonValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Protection.TaggedJsonValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Protection.TaggedJsonValue",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Protection.TaggedJsonValue.yml\" sourcestartlinenumber=\"1\">One tagged string found in a JSON document, together with the node that holds it, so that the unprotected\nvalue can be written back in place. Tags are self-describing, so finding them needs no definition: every\nreader of a payload, whether it knows the event's contract or not, walks the document the same way.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Protection.UnprotectOutcome.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Protection.UnprotectOutcome.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Protection.UnprotectOutcome",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Protection.UnprotectOutcome.yml\" sourcestartlinenumber=\"1\">What unprotecting a tagged value produced.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Protection.UnprotectedValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Protection.UnprotectedValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Protection.UnprotectedValue",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Protection.UnprotectedValue.yml\" sourcestartlinenumber=\"1\">The result of unprotecting one tagged value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Protection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Protection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Protection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Wrapping.IKeyWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Wrapping.IKeyWrapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Wrapping.IKeyWrapper",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Wrapping.IKeyWrapper.yml\" sourcestartlinenumber=\"1\">Wraps subject keys with a key-encryption key the registry never stores. Implementations adapt a KMS or, for\ndevelopment and small deployments, a configured master key (<xref href=\"Devbone.Frameworks.Privacy.Wrapping.MasterKeyWrapper\" data-throw-if-not-resolved=\"false\"></xref>).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Wrapping.KeyWrappingException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Wrapping.KeyWrappingException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Wrapping.KeyWrappingException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Wrapping.KeyWrappingException.yml\" sourcestartlinenumber=\"1\">Wrapping or unwrapping failed. The message never contains key material.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Wrapping.MasterKeyWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Wrapping.MasterKeyWrapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Wrapping.MasterKeyWrapper",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Wrapping.MasterKeyWrapper.yml\" sourcestartlinenumber=\"1\">Wraps subject keys with one configured master key using AES-256-GCM. The wrapper identifier is bound as\nassociated data, so material wrapped under one identifier cannot be presented as another's.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Wrapping.MasterKeyWrapperOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Wrapping.MasterKeyWrapperOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Wrapping.MasterKeyWrapperOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Wrapping.MasterKeyWrapperOptions.yml\" sourcestartlinenumber=\"1\">Configures <xref href=\"Devbone.Frameworks.Privacy.Wrapping.MasterKeyWrapper\" data-throw-if-not-resolved=\"false\"></xref>: one key-encryption key held in configuration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Wrapping.WrappedKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Wrapping.WrappedKey.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Wrapping.WrappedKey",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Wrapping.WrappedKey.yml\" sourcestartlinenumber=\"1\">Subject key material as the registry stores it: wrapped by a named key-encryption key.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Wrapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Wrapping.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Wrapping",
       "Summary": null
     },
     {

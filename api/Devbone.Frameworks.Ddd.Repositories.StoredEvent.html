@@ -103,7 +103,7 @@ stream position, stable contract, schema version, request correlation, and exter
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StoredEvent : IStoredEvent</code></pre>
+    <pre><code class="lang-csharp hljs">public class StoredEvent : IStoredEvent, IStoredEventPublicationContext</code></pre>
   </div>
 
 
@@ -121,6 +121,7 @@ stream position, stable contract, schema version, request correlation, and exter
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a></div>
+      <div><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEventPublicationContext.html">IStoredEventPublicationContext</a></div>
     </dd>
   </dl>
 
@@ -478,6 +479,38 @@ stream position, stable contract, schema version, request correlation, and exter
 
 
 
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_CausationId_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.CausationId*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_CausationId" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.CausationId">
+  CausationId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the optional event identifier that caused this event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? CausationId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_CreationDate_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.CreationDate*"></a>
 
   <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_CreationDate" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.CreationDate">
@@ -684,6 +717,38 @@ A <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string? PreviousAggregateConcurrencyToken { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_PrincipalId_" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.PrincipalId*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_StoredEvent_PrincipalId" data-uid="Devbone.Frameworks.Ddd.Repositories.StoredEvent.PrincipalId">
+  PrincipalId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the optional producer-asserted actor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? PrincipalId { get; set; }</code></pre>
   </div>
 
 

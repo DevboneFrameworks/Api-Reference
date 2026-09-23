@@ -154,6 +154,195 @@ persist a partial aggregate operation outside <code>AggregateRoot.Emit</code> an
 </h2>
 
 
+  <a id="Devbone_Frameworks_Ddd_ChangeTracker_ChangeTrackerFactory_CreateWithContext_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.ChangeTrackerFactory.CreateWithContext*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_ChangeTracker_ChangeTrackerFactory_CreateWithContext__1___0_Devbone_Frameworks_Ddd_Repositories_IEventStreamWriter_Devbone_Frameworks_Ddd_Repositories_IUniqueValueRepository_Devbone_Frameworks_Ddd_Repositories_IIncrementValueRepository_Devbone_Frameworks_Ddd_ChangeTracker_AggregateCommitContext_Devbone_Frameworks_EventProjection_MongoDb_Configuration_ProjectionCompatibilityOptions_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.ChangeTrackerFactory.CreateWithContext``1(``0,Devbone.Frameworks.Ddd.Repositories.IEventStreamWriter,Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository,Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository,Devbone.Frameworks.Ddd.ChangeTracker.AggregateCommitContext,Devbone.Frameworks.EventProjection.MongoDb.Configuration.ProjectionCompatibilityOptions)">
+  CreateWithContext&lt;TIdentity&gt;(TIdentity, IEventStreamWriter, IUniqueValueRepository, IIncrementValueRepository, AggregateCommitContext, ProjectionCompatibilityOptions?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a change tracker with immutable request metadata for one aggregate commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IChangeTracker&lt;TIdentity&gt; CreateWithContext&lt;TIdentity&gt;(TIdentity idOfAggregate, IEventStreamWriter eventStreamWriter, IUniqueValueRepository uniqueValueRepository, IIncrementValueRepository incrementValueRepository, AggregateCommitContext commitContext, ProjectionCompatibilityOptions? projectionCompatibilityOptions = null) where TIdentity : IAggregateIdentity</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>idOfAggregate</code> <span class="xref">TIdentity</span></dt>
+    <dd><p>Identity shared by staged events.</p>
+</dd>
+    <dt><code>eventStreamWriter</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamWriter.html">IEventStreamWriter</a></dt>
+    <dd><p>Atomic event write port.</p>
+</dd>
+    <dt><code>uniqueValueRepository</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository.html">IUniqueValueRepository</a></dt>
+    <dd><p>Atomic unique-value write port.</p>
+</dd>
+    <dt><code>incrementValueRepository</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.html">IIncrementValueRepository</a></dt>
+    <dd><p>Increment reservation port.</p>
+</dd>
+    <dt><code>commitContext</code> <a class="xref" href="Devbone.Frameworks.Ddd.ChangeTracker.AggregateCommitContext.html">AggregateCommitContext</a></dt>
+    <dd><p>Tenant, actor, and cause of this request.</p>
+</dd>
+    <dt><code>projectionCompatibilityOptions</code> <a class="xref" href="Devbone.Frameworks.EventProjection.MongoDb.Configuration.ProjectionCompatibilityOptions.html">ProjectionCompatibilityOptions</a></dt>
+    <dd><p>Optional BSON compatibility limits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.ChangeTracker.IChangeTracker-1.html">IChangeTracker</a>&lt;TIdentity&gt;</dt>
+    <dd><p>A tracker bound to the supplied request context.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TIdentity</code></dt>
+    <dd><p>Strongly typed aggregate identity.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_ChangeTracker_ChangeTrackerFactory_CreateWithContext_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.ChangeTrackerFactory.CreateWithContext*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_ChangeTracker_ChangeTrackerFactory_CreateWithContext__1___0_Devbone_Frameworks_Ddd_Repositories_IEventStreamWriter_Devbone_Frameworks_Ddd_Repositories_IUniqueValueRepository_Devbone_Frameworks_Ddd_Repositories_IIncrementValueRepository_Devbone_Frameworks_Ddd_Privacy_IEventPrivacyDescriptorProvider_Devbone_Frameworks_Ddd_ChangeTracker_AggregateCommitContext_Devbone_Frameworks_EventProjection_MongoDb_Configuration_ProjectionCompatibilityOptions_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.ChangeTrackerFactory.CreateWithContext``1(``0,Devbone.Frameworks.Ddd.Repositories.IEventStreamWriter,Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository,Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository,Devbone.Frameworks.Ddd.Privacy.IEventPrivacyDescriptorProvider,Devbone.Frameworks.Ddd.ChangeTracker.AggregateCommitContext,Devbone.Frameworks.EventProjection.MongoDb.Configuration.ProjectionCompatibilityOptions)">
+  CreateWithContext&lt;TIdentity&gt;(TIdentity, IEventStreamWriter, IUniqueValueRepository, IIncrementValueRepository, IEventPrivacyDescriptorProvider, AggregateCommitContext, ProjectionCompatibilityOptions?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a privacy-aware tracker with immutable request metadata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IChangeTracker&lt;TIdentity&gt; CreateWithContext&lt;TIdentity&gt;(TIdentity idOfAggregate, IEventStreamWriter eventStreamWriter, IUniqueValueRepository uniqueValueRepository, IIncrementValueRepository incrementValueRepository, IEventPrivacyDescriptorProvider eventPrivacyDescriptorProvider, AggregateCommitContext commitContext, ProjectionCompatibilityOptions? projectionCompatibilityOptions = null) where TIdentity : IAggregateIdentity</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>idOfAggregate</code> <span class="xref">TIdentity</span></dt>
+    <dd><p>Identity shared by staged events.</p>
+</dd>
+    <dt><code>eventStreamWriter</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamWriter.html">IEventStreamWriter</a></dt>
+    <dd><p>Atomic event write port.</p>
+</dd>
+    <dt><code>uniqueValueRepository</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository.html">IUniqueValueRepository</a></dt>
+    <dd><p>Atomic unique-value write port.</p>
+</dd>
+    <dt><code>incrementValueRepository</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.html">IIncrementValueRepository</a></dt>
+    <dd><p>Increment reservation port.</p>
+</dd>
+    <dt><code>eventPrivacyDescriptorProvider</code> <a class="xref" href="Devbone.Frameworks.Ddd.Privacy.IEventPrivacyDescriptorProvider.html">IEventPrivacyDescriptorProvider</a></dt>
+    <dd><p>Application event privacy provider.</p>
+</dd>
+    <dt><code>commitContext</code> <a class="xref" href="Devbone.Frameworks.Ddd.ChangeTracker.AggregateCommitContext.html">AggregateCommitContext</a></dt>
+    <dd><p>Tenant, actor, and cause of this request.</p>
+</dd>
+    <dt><code>projectionCompatibilityOptions</code> <a class="xref" href="Devbone.Frameworks.EventProjection.MongoDb.Configuration.ProjectionCompatibilityOptions.html">ProjectionCompatibilityOptions</a></dt>
+    <dd><p>Optional BSON compatibility limits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.ChangeTracker.IChangeTracker-1.html">IChangeTracker</a>&lt;TIdentity&gt;</dt>
+    <dd><p>A privacy-aware tracker bound to the supplied request context.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TIdentity</code></dt>
+    <dd><p>Strongly typed aggregate identity.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_Ddd_ChangeTracker_ChangeTrackerFactory_CreateWithContext_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.ChangeTrackerFactory.CreateWithContext*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_ChangeTracker_ChangeTrackerFactory_CreateWithContext__1___0_Devbone_Frameworks_Ddd_Repositories_IEventStreamWriter_Devbone_Frameworks_Ddd_Repositories_IUniqueValueRepository_Devbone_Frameworks_Ddd_Repositories_IIncrementValueRepository_Devbone_Frameworks_Ddd_Privacy_IEventPrivacyDescriptorProvider_Devbone_Frameworks_Ddd_Privacy_IAggregateSnapshotPrivacyDescriptorProvider_Devbone_Frameworks_Ddd_ChangeTracker_AggregateCommitContext_Devbone_Frameworks_EventProjection_MongoDb_Configuration_ProjectionCompatibilityOptions_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.ChangeTrackerFactory.CreateWithContext``1(``0,Devbone.Frameworks.Ddd.Repositories.IEventStreamWriter,Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository,Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository,Devbone.Frameworks.Ddd.Privacy.IEventPrivacyDescriptorProvider,Devbone.Frameworks.Ddd.Privacy.IAggregateSnapshotPrivacyDescriptorProvider,Devbone.Frameworks.Ddd.ChangeTracker.AggregateCommitContext,Devbone.Frameworks.EventProjection.MongoDb.Configuration.ProjectionCompatibilityOptions)">
+  CreateWithContext&lt;TIdentity&gt;(TIdentity, IEventStreamWriter, IUniqueValueRepository, IIncrementValueRepository, IEventPrivacyDescriptorProvider, IAggregateSnapshotPrivacyDescriptorProvider, AggregateCommitContext, ProjectionCompatibilityOptions?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an event and snapshot privacy-aware tracker with immutable request metadata.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IChangeTracker&lt;TIdentity&gt; CreateWithContext&lt;TIdentity&gt;(TIdentity idOfAggregate, IEventStreamWriter eventStreamWriter, IUniqueValueRepository uniqueValueRepository, IIncrementValueRepository incrementValueRepository, IEventPrivacyDescriptorProvider eventPrivacyDescriptorProvider, IAggregateSnapshotPrivacyDescriptorProvider snapshotPrivacyDescriptorProvider, AggregateCommitContext commitContext, ProjectionCompatibilityOptions? projectionCompatibilityOptions = null) where TIdentity : IAggregateIdentity</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>idOfAggregate</code> <span class="xref">TIdentity</span></dt>
+    <dd><p>Identity shared by staged events.</p>
+</dd>
+    <dt><code>eventStreamWriter</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamWriter.html">IEventStreamWriter</a></dt>
+    <dd><p>Atomic event and snapshot write port.</p>
+</dd>
+    <dt><code>uniqueValueRepository</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository.html">IUniqueValueRepository</a></dt>
+    <dd><p>Atomic unique-value write port.</p>
+</dd>
+    <dt><code>incrementValueRepository</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.html">IIncrementValueRepository</a></dt>
+    <dd><p>Increment reservation port.</p>
+</dd>
+    <dt><code>eventPrivacyDescriptorProvider</code> <a class="xref" href="Devbone.Frameworks.Ddd.Privacy.IEventPrivacyDescriptorProvider.html">IEventPrivacyDescriptorProvider</a></dt>
+    <dd><p>Application event privacy provider.</p>
+</dd>
+    <dt><code>snapshotPrivacyDescriptorProvider</code> <a class="xref" href="Devbone.Frameworks.Ddd.Privacy.IAggregateSnapshotPrivacyDescriptorProvider.html">IAggregateSnapshotPrivacyDescriptorProvider</a></dt>
+    <dd><p>Application snapshot privacy provider.</p>
+</dd>
+    <dt><code>commitContext</code> <a class="xref" href="Devbone.Frameworks.Ddd.ChangeTracker.AggregateCommitContext.html">AggregateCommitContext</a></dt>
+    <dd><p>Tenant, actor, and cause of this request.</p>
+</dd>
+    <dt><code>projectionCompatibilityOptions</code> <a class="xref" href="Devbone.Frameworks.EventProjection.MongoDb.Configuration.ProjectionCompatibilityOptions.html">ProjectionCompatibilityOptions</a></dt>
+    <dd><p>Optional BSON compatibility limits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.ChangeTracker.IChangeTracker-1.html">IChangeTracker</a>&lt;TIdentity&gt;</dt>
+    <dd><p>A privacy-aware tracker bound to the supplied request context.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TIdentity</code></dt>
+    <dd><p>Strongly typed aggregate identity.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_Ddd_ChangeTracker_ChangeTrackerFactory_Create_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.ChangeTrackerFactory.Create*"></a>
 
   <h3 id="Devbone_Frameworks_Ddd_ChangeTracker_ChangeTrackerFactory_Create__1___0_Devbone_Frameworks_Ddd_Repositories_IEventStreamWriter_Devbone_Frameworks_Ddd_Repositories_IUniqueValueRepository_Devbone_Frameworks_Ddd_Repositories_IIncrementValueRepository_Devbone_Frameworks_Ddd_Privacy_IEventPrivacyDescriptorProvider_Devbone_Frameworks_Ddd_Privacy_IAggregateSnapshotPrivacyDescriptorProvider_Devbone_Frameworks_EventProjection_MongoDb_Configuration_ProjectionCompatibilityOptions_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.ChangeTrackerFactory.Create``1(``0,Devbone.Frameworks.Ddd.Repositories.IEventStreamWriter,Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository,Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository,Devbone.Frameworks.Ddd.Privacy.IEventPrivacyDescriptorProvider,Devbone.Frameworks.Ddd.Privacy.IAggregateSnapshotPrivacyDescriptorProvider,Devbone.Frameworks.EventProjection.MongoDb.Configuration.ProjectionCompatibilityOptions)">

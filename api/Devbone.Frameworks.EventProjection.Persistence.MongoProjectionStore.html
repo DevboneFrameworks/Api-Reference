@@ -158,6 +158,11 @@ Class MongoProjectionStore
 
 
 
+  <h2 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Refolds share the repair request collection and the node shape, so completion, failure and attempt accounting
+go through the same fenced paths as repair outputs. A refold document is told apart by <code>kind</code>, and it is
+invisible to repair scheduling until its fold phase has completed.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -201,6 +206,63 @@ Class MongoProjectionStore
 </dd>
     <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html">ProjectionPipelineOptions</a></dt>
     <dd><p>Configured complete-document size limits.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore__ctor_MongoDB_Driver_IMongoClient_MongoDB_Driver_IMongoDatabase_Devbone_Frameworks_EventProjection_Projections_ProjectionStateTransition_Devbone_Frameworks_EventProjection_Projections_ProjectionDependencyExtractor_Devbone_Frameworks_EventProjection_MongoDb_Serialization_ProjectionBsonConverter_Devbone_Frameworks_EventProjection_MongoDb_Validation_ProjectionCompatibilityValidator_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Folds raw events as stored; a payload carrying protected values is refused at the fold.</p>
+</div>
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore__ctor_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore__ctor_MongoDB_Driver_IMongoClient_MongoDB_Driver_IMongoDatabase_Devbone_Frameworks_EventProjection_Projections_ProjectionStateTransition_Devbone_Frameworks_EventProjection_Projections_ProjectionDependencyExtractor_Devbone_Frameworks_EventProjection_MongoDb_Serialization_ProjectionBsonConverter_Devbone_Frameworks_EventProjection_MongoDb_Validation_ProjectionCompatibilityValidator_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_Devbone_Frameworks_EventProjection_Privacy_ProjectionEventUnprotector_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.#ctor(MongoDB.Driver.IMongoClient,MongoDB.Driver.IMongoDatabase,Devbone.Frameworks.EventProjection.Projections.ProjectionStateTransition,Devbone.Frameworks.EventProjection.Projections.ProjectionDependencyExtractor,Devbone.Frameworks.EventProjection.MongoDb.Serialization.ProjectionBsonConverter,Devbone.Frameworks.EventProjection.MongoDb.Validation.ProjectionCompatibilityValidator,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions,Devbone.Frameworks.EventProjection.Privacy.ProjectionEventUnprotector)">
+  MongoProjectionStore(IMongoClient, IMongoDatabase, ProjectionStateTransition, ProjectionDependencyExtractor, ProjectionBsonConverter, ProjectionCompatibilityValidator, ProjectionPipelineOptions, ProjectionEventUnprotector)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the MongoDB projection store with an unprotector for protected payload values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MongoProjectionStore(IMongoClient client, IMongoDatabase database, ProjectionStateTransition transition, ProjectionDependencyExtractor dependencyExtractor, ProjectionBsonConverter bsonConverter, ProjectionCompatibilityValidator compatibilityValidator, ProjectionPipelineOptions options, ProjectionEventUnprotector unprotector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>client</code> <span class="xref">IMongoClient</span></dt>
+    <dd><p>MongoDB client used to create transaction sessions.</p>
+</dd>
+    <dt><code>database</code> <span class="xref">IMongoDatabase</span></dt>
+    <dd><p>Projection database.</p>
+</dd>
+    <dt><code>transition</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionStateTransition.html">ProjectionStateTransition</a></dt>
+    <dd><p>Lifecycle-aware state transition.</p>
+</dd>
+    <dt><code>dependencyExtractor</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionDependencyExtractor.html">ProjectionDependencyExtractor</a></dt>
+    <dd><p>Direct dependency extractor.</p>
+</dd>
+    <dt><code>bsonConverter</code> <a class="xref" href="Devbone.Frameworks.EventProjection.MongoDb.Serialization.ProjectionBsonConverter.html">ProjectionBsonConverter</a></dt>
+    <dd><p>Deterministic JSON-BSON converter shared with the write side.</p>
+</dd>
+    <dt><code>compatibilityValidator</code> <a class="xref" href="Devbone.Frameworks.EventProjection.MongoDb.Validation.ProjectionCompatibilityValidator.html">ProjectionCompatibilityValidator</a></dt>
+    <dd><p>Defensive read-side compatibility validator.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html">ProjectionPipelineOptions</a></dt>
+    <dd><p>Configured complete-document size limits.</p>
+</dd>
+    <dt><code>unprotector</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Privacy.ProjectionEventUnprotector.html">ProjectionEventUnprotector</a></dt>
+    <dd><p>Unprotects tagged payload values at the fold, so raw state and merged hold plaintext while <code>RawEvents_*</code> keeps ciphertext.</p>
 </dd>
   </dl>
 
@@ -820,6 +882,59 @@ genuinely waiting for a predecessor rather than merely in flight.</p>
 
 
 
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_IsDeletedAsync_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.IsDeletedAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_IsDeletedAsync_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.IsDeletedAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+  IsDeletedAsync(string, string, string?, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports whether a referenced aggregate reached its terminal deleted lifecycle in the same tenant context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; IsDeletedAsync(string aggregateName, string aggregateId, string? tenantId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Referenced aggregate name.</p>
+</dd>
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Referenced aggregate identifier.</p>
+</dd>
+    <dt><code>tenantId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Source tenant identifier.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> for a tombstone; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> when the aggregate is live or unknown.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_IsDeletedAsync_System_String_System_String_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The enricher resolves a reference to a tombstone as absent, keeping the scalar identifier, instead of
+reporting a missing reference that no retry can ever resolve. The default answers <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>
+so that a custom source keeps its previous behaviour until it implements the distinction.</p>
+</div>
 
 
 
