@@ -286,7 +286,7 @@ protected field; <a href="https://learn.microsoft.com/dotnet/csharp/language-ref
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the dot-separated JSON payload path.</p>
+  <div class="markdown level1 summary"><p>Gets the dot-separated JSON payload path, for example <code>email</code> or <code>address.street</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -307,6 +307,15 @@ protected field; <a href="https://learn.microsoft.com/dotnet/csharp/language-ref
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_FieldPath_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A segment may end with the element wildcard <code>[]</code> to address the same property of every object
+element of an array: <code>Loans[].BorrowerName</code> protects <code>BorrowerName</code> in each loan. Every element
+is protected under the one subject the field names; a wildcard does not bind elements to different
+subjects. Numeric indexes and a trailing wildcard (scalar array elements) are not supported. For a
+protected or required field, a path that lands on an array or a scalar where an object is expected is
+refused at commit rather than treated as a missing field; an optional unprotected field is never
+resolved by the store and its path is metadata only.</p>
+</div>
 
 
 

@@ -18801,6 +18801,12 @@ references:
   commentId: F:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.DEFINITION_VERSION
   fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.DEFINITION_VERSION
   nameWithType: ProjectionFields.DEFINITION_VERSION
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.DEPENDENCIES
+  name: DEPENDENCIES
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionFields_DEPENDENCIES
+  commentId: F:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.DEPENDENCIES
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.DEPENDENCIES
+  nameWithType: ProjectionFields.DEPENDENCIES
 - uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.DEPLOYMENT_ID
   name: DEPLOYMENT_ID
   href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionFields_DEPLOYMENT_ID
@@ -18843,6 +18849,12 @@ references:
   commentId: F:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.LEASE_UNTIL_UTC
   fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.LEASE_UNTIL_UTC
   nameWithType: ProjectionFields.LEASE_UNTIL_UTC
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.METADATA
+  name: METADATA
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionFields_METADATA
+  commentId: F:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.METADATA
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.METADATA
+  nameWithType: ProjectionFields.METADATA
 - uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.PROJECTION_KIND
   name: PROJECTION_KIND
   href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionFields_PROJECTION_KIND
@@ -18867,6 +18879,18 @@ references:
   commentId: F:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.REVISION
   fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.REVISION
   nameWithType: ProjectionFields.REVISION
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.STATE
+  name: STATE
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionFields_STATE
+  commentId: F:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.STATE
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.STATE
+  nameWithType: ProjectionFields.STATE
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.TENANT_ID
+  name: TENANT_ID
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionFields_TENANT_ID
+  commentId: F:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.TENANT_ID
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.TENANT_ID
+  nameWithType: ProjectionFields.TENANT_ID
 - uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.UPDATED_AT_UTC
   name: UPDATED_AT_UTC
   href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionFields_UPDATED_AT_UTC

@@ -344,6 +344,37 @@ bookkeeping are deliberately absent: this package reads how far a projection got
 
 
 
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionFields_DEPENDENCIES" data-uid="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.DEPENDENCIES">
+  DEPENDENCIES
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The raw document's unique direct aggregate references, each with <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionFields_AGGREGATE_NAME">AGGREGATE_NAME</a> and <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionFields_AGGREGATE_ID">AGGREGATE_ID</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEPENDENCIES = &quot;dependencies&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionFields_DEPLOYMENT_ID" data-uid="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.DEPLOYMENT_ID">
   DEPLOYMENT_ID
   
@@ -561,6 +592,37 @@ bookkeeping are deliberately absent: this package reads how far a projection got
 
 
 
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionFields_METADATA" data-uid="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.METADATA">
+  METADATA
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The metadata of the last applied event, as a native BSON document, on raw and merged documents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string METADATA = &quot;metadata&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionFields_PROJECTION_KIND" data-uid="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.PROJECTION_KIND">
   PROJECTION_KIND
   
@@ -665,6 +727,68 @@ bookkeeping are deliberately absent: this package reads how far a projection got
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public const string REVISION = &quot;revision&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionFields_STATE" data-uid="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.STATE">
+  STATE
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current state as a native BSON document, or BSON null for a raw tombstone.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string STATE = &quot;state&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionFields_TENANT_ID" data-uid="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.TENANT_ID">
+  TENANT_ID
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The tenant of the stream a raw or merged document belongs to; null for a tenantless stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TENANT_ID = &quot;tenantId&quot;</code></pre>
   </div>
 
 
