@@ -187,7 +187,11 @@ Class RabbitMqBusOptions
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the app instance id for broadcast-per-instance queue names.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the identity of this application instance for broadcast-per-instance subscriptions. Required
+for every <code>BroadcastPerInstance</code> subscription: use a value that is stable for one replica across
+restarts and distinct between replicas and processes, for example a StatefulSet ordinal. There is no
+machine-name fallback, because two processes on one host would share it and each receive only part of the
+broadcast.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -202,6 +206,41 @@ Class RabbitMqBusOptions
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_BroadcastQueueExpiry_" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.BroadcastQueueExpiry*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_BroadcastQueueExpiry" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.BroadcastQueueExpiry">
+  BroadcastQueueExpiry
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets how long a broadcast-per-instance queue survives without a consumer before RabbitMQ deletes it
+(<code>x-expires</code>). A short restart keeps the queue and its messages; the queue of an instance that is gone
+for good disappears instead of collecting every message until the broker blocks its publishers. Defaults to
+one hour; must be positive and at most 24.8 days, the largest value RabbitMQ accepts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan BroadcastQueueExpiry { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
     <dd></dd>
   </dl>
 
@@ -372,6 +411,40 @@ Class RabbitMqBusOptions
 
 
 
+  <a id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_MaxDeserializationAttempts_" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.MaxDeserializationAttempts*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_MaxDeserializationAttempts" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.MaxDeserializationAttempts">
+  MaxDeserializationAttempts
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets how many times a message that cannot be read is tried before it is moved to
+<a class="xref" href="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.html#Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_PoisonMessageDeadLetterStream">PoisonMessageDeadLetterStream</a>. Several attempts leave room for a rolling deployment in which
+an older consumer briefly sees a newer format. Defaults to 5; must be positive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxDeserializationAttempts { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_MessageSizeLimits_" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.MessageSizeLimits*"></a>
 
   <h3 id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_MessageSizeLimits" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.MessageSizeLimits">
@@ -468,6 +541,43 @@ Class RabbitMqBusOptions
 
 
 
+  <a id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_PoisonMessageDeadLetterStream_" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.PoisonMessageDeadLetterStream*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_PoisonMessageDeadLetterStream" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.PoisonMessageDeadLetterStream">
+  PoisonMessageDeadLetterStream
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the stream a message is moved to when this adapter cannot read it - malformed JSON, an unknown
+format version, a payload that does not fit the subscription's type - after <a class="xref" href="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.html#Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_MaxDeserializationAttempts">MaxDeserializationAttempts</a>
+attempts. The message keeps its original body and headers plus the <a class="xref" href="Devbone.Frameworks.EventBus.Subscribing.DeadLetterHeaderNames.html">DeadLetterHeaderNames</a>.
+Only once the dead-letter stream confirmed it is the original settled; until then it is retried. Without a
+stream (the default) such a message is returned after <a class="xref" href="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.html#Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_RedeliveryDelay">RedeliveryDelay</a> and blocks its queue until it is removed or
+the consumer can read it, which loses nothing but stops the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? PoisonMessageDeadLetterStream { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_Port_" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.Port*"></a>
 
   <h3 id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_Port" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.Port">
@@ -475,7 +585,8 @@ Class RabbitMqBusOptions
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the RabbitMQ port.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the RabbitMQ port. Use the broker's TLS listener port, usually 5671, together with
+<a class="xref" href="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.html#Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_UseTls">UseTls</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -564,6 +675,110 @@ Class RabbitMqBusOptions
 
 
 
+  <a id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_RedeliveryDelay_" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.RedeliveryDelay*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_RedeliveryDelay" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.RedeliveryDelay">
+  RedeliveryDelay
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets how long the subscriber waits before it returns a message to the queue - when the handler threw,
+did not commit, or the message cannot be read. RabbitMQ redelivers a requeued message at once, so
+without a pause a failing message loops as fast as the broker can deliver it. Deliveries on one channel are
+handled one at a time, so the pause holds back the following messages and queue order is kept. Defaults to one
+second; zero disables it; at most one hour.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan RedeliveryDelay { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_TlsServerName_" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.TlsServerName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_TlsServerName" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.TlsServerName">
+  TlsServerName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the name the broker certificate must carry, when it differs from <a class="xref" href="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.html#Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_HostName">HostName</a> (for
+example when connecting by IP address). Valid only with <a class="xref" href="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.html#Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_UseTls">UseTls</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? TlsServerName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_UseTls_" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.UseTls*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_UseTls" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.UseTls">
+  UseTls
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the connection uses TLS (AMQPS). The broker certificate is validated
+strictly against <a class="xref" href="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.html#Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_TlsServerName">TlsServerName</a>, or <a class="xref" href="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.html#Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_HostName">HostName</a> when none is given, through the
+operating system's trust store. Off by default, which sends credentials and every payload in plaintext:
+enable it for every non-local broker.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseTls { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_UserName_" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.UserName*"></a>
 
   <h3 id="Devbone_Frameworks_EventBus_Bus_RabbitMqBusOptions_UserName" data-uid="Devbone.Frameworks.EventBus.Bus.RabbitMqBusOptions.UserName">
@@ -571,7 +786,8 @@ Class RabbitMqBusOptions
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the RabbitMQ user name.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the RabbitMQ user name. The <code>guest</code> default is for a local broker only: RabbitMQ accepts
+<code>guest</code> from the loopback interface alone by default, so a remote broker refuses it at the first connect.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

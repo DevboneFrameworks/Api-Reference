@@ -148,7 +148,7 @@ Class ReadModelWaiterInstrumentation
 
 
   <h2 id="Devbone_Frameworks_EventProjection_Client_Observability_ReadModelWaiterInstrumentation_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>Aggregate name, layer and outcome are the only dimensions. Aggregate identifiers are deliberately absent:
+  <div class="markdown level0 remarks"><p>Aggregate name, projection name and outcome are the only dimensions. Aggregate identifiers are deliberately absent:
 they are unbounded, and an operator investigating one stuck aggregate needs the pipeline's own stall log,
 not a metric series per identifier.</p>
 </div>
@@ -320,7 +320,7 @@ approaching the cap: shedding starts there, and it starts silently.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Records how long waits took, dimensioned by aggregate, layer and outcome. Its count per outcome is also
+  <div class="markdown level1 summary"><p>Records how long waits took, dimensioned by <code>aggregate</code>, <code>projection</code> and <code>outcome</code>. Its count per outcome is also
 the rate of timeouts, stalls and shed requests, so no separate counter duplicates it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>

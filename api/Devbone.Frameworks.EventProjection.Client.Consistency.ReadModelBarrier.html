@@ -667,8 +667,9 @@ projection after its own write needs.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>Thrown when the aggregate name, identifier, or projection name is missing, or when an application query
-model has no definition version.</p>
+    <dd><p>Thrown when the aggregate name, identifier, or projection name is missing, when the aggregate name is not
+one the projection pipeline accepts (PascalCase ASCII letters and digits), when a raw or merged layer name
+belongs to another aggregate, or when an application query model has no definition version.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
     <dd><p>Thrown when the event sequence is not positive.</p>

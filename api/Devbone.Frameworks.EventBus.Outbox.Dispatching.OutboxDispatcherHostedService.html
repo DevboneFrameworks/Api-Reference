@@ -172,8 +172,8 @@ Class OutboxDispatcherHostedService
 
   <a id="Devbone_Frameworks_EventBus_Outbox_Dispatching_OutboxDispatcherHostedService__ctor_" data-uid="Devbone.Frameworks.EventBus.Outbox.Dispatching.OutboxDispatcherHostedService.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_EventBus_Outbox_Dispatching_OutboxDispatcherHostedService__ctor_Devbone_Frameworks_EventBus_Outbox_Dispatching_OutboxDispatcher_Devbone_Frameworks_EventSourcing_Outbox_IOutboxNotificationListener_Devbone_Frameworks_EventBus_Outbox_Dispatching_OutboxDispatcherOptions_Microsoft_Extensions_Logging_ILogger_Devbone_Frameworks_EventBus_Outbox_Dispatching_IOutboxClock_" data-uid="Devbone.Frameworks.EventBus.Outbox.Dispatching.OutboxDispatcherHostedService.#ctor(Devbone.Frameworks.EventBus.Outbox.Dispatching.OutboxDispatcher,Devbone.Frameworks.EventSourcing.Outbox.IOutboxNotificationListener,Devbone.Frameworks.EventBus.Outbox.Dispatching.OutboxDispatcherOptions,Microsoft.Extensions.Logging.ILogger,Devbone.Frameworks.EventBus.Outbox.Dispatching.IOutboxClock)">
-  OutboxDispatcherHostedService(OutboxDispatcher, IOutboxNotificationListener, OutboxDispatcherOptions, ILogger?, IOutboxClock?)
+  <h3 id="Devbone_Frameworks_EventBus_Outbox_Dispatching_OutboxDispatcherHostedService__ctor_Devbone_Frameworks_EventBus_Outbox_Dispatching_OutboxDispatcher_Devbone_Frameworks_EventSourcing_Outbox_IOutboxNotificationListener_Devbone_Frameworks_EventBus_Outbox_Dispatching_OutboxDispatcherOptions_Microsoft_Extensions_Logging_ILogger_System_TimeProvider_" data-uid="Devbone.Frameworks.EventBus.Outbox.Dispatching.OutboxDispatcherHostedService.#ctor(Devbone.Frameworks.EventBus.Outbox.Dispatching.OutboxDispatcher,Devbone.Frameworks.EventSourcing.Outbox.IOutboxNotificationListener,Devbone.Frameworks.EventBus.Outbox.Dispatching.OutboxDispatcherOptions,Microsoft.Extensions.Logging.ILogger,System.TimeProvider)">
+  OutboxDispatcherHostedService(OutboxDispatcher, IOutboxNotificationListener, OutboxDispatcherOptions, ILogger?, TimeProvider?)
   
   </h3>
 
@@ -182,7 +182,7 @@ Class OutboxDispatcherHostedService
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OutboxDispatcherHostedService(OutboxDispatcher dispatcher, IOutboxNotificationListener notificationListener, OutboxDispatcherOptions options, ILogger? logger = null, IOutboxClock? clock = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public OutboxDispatcherHostedService(OutboxDispatcher dispatcher, IOutboxNotificationListener notificationListener, OutboxDispatcherOptions options, ILogger? logger = null, TimeProvider? timeProvider = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -199,8 +199,8 @@ Class OutboxDispatcherHostedService
     <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
     <dd><p>Optional event-bus logger.</p>
 </dd>
-    <dt><code>clock</code> <a class="xref" href="Devbone.Frameworks.EventBus.Outbox.Dispatching.IOutboxClock.html">IOutboxClock</a></dt>
-    <dd><p>Optional UTC clock.</p>
+    <dt><code>timeProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a></dt>
+    <dd><p>Clock retry deadlines are compared with and waits run on; the system clock when omitted.</p>
 </dd>
   </dl>
 

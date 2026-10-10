@@ -402,6 +402,73 @@ Class DomainErrorCodes
 
 
 
+  <h3 id="Devbone_Frameworks_Ddd_Results_DomainErrorCodes_PROJECTION_INCOMPATIBLE" data-uid="Devbone.Frameworks.Ddd.Results.DomainErrorCodes.PROJECTION_INCOMPATIBLE">
+  PROJECTION_INCOMPATIBLE
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Identifies a commit rejected before persistence because the final aggregate state or an event payload cannot
+be represented in the MongoDB read side or exceeds a configured projection size limit. It is carried with
+<code>DomainErrorCategory.Validation</code>; the message names the offending path and limit, never a payload value.
+Retrying the same command fails identically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PROJECTION_INCOMPATIBLE = &quot;ddd.projection.incompatible&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_Ddd_Results_DomainErrorCodes_SUBJECT_ERASED" data-uid="Devbone.Frameworks.Ddd.Results.DomainErrorCodes.SUBJECT_ERASED">
+  SUBJECT_ERASED
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Identifies a commit rejected because it writes protected data about a subject whose key was destroyed. It is
+carried with <code>DomainErrorCategory.Conflict</code>, names no subject and is not retryable: the subject is erased, and
+the application refuses the command or writes it without that subject's data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string SUBJECT_ERASED = &quot;ddd.subject.erased&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="Devbone_Frameworks_Ddd_Results_DomainErrorCodes_TENANT_MISMATCH" data-uid="Devbone.Frameworks.Ddd.Results.DomainErrorCodes.TENANT_MISMATCH">
   TENANT_MISMATCH
   

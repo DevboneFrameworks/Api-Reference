@@ -175,7 +175,8 @@ Class JsonEventSerializer
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>options</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></dt>
-    <dd><p>Optional serializer options.</p>
+    <dd><p>Optional options for typed payloads in <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Serialization.JsonEventSerializer.html#Devbone_Frameworks_EventBus_Contracts_Serialization_JsonEventSerializer_Serialize__1_Devbone_Frameworks_EventBus_Contracts_Messaging_EventEnvelope___0__">Serialize&lt;TPayload&gt;(EventEnvelope&lt;TPayload&gt;)</a> and <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Serialization.JsonEventSerializer.html#Devbone_Frameworks_EventBus_Contracts_Serialization_JsonEventSerializer_Deserialize__1_System_ReadOnlyMemory_System_Byte__">Deserialize&lt;TPayload&gt;(ReadOnlyMemory&lt;byte&gt;)</a>.
+They never apply to the canonical metadata, which always uses the defaults of <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Serialization.JsonEventSerializer.html#Devbone_Frameworks_EventBus_Contracts_Serialization_JsonEventSerializer_CreateDefaultOptions">CreateDefaultOptions()</a>.</p>
 </dd>
   </dl>
 

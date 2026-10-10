@@ -197,7 +197,9 @@ instance that threw is faulted and must be discarded.
 </p>
 <p>
 In practice this means a state type whose shape changed since the snapshot was written — adding or removing
-a single property is enough, because the payload has to round-trip losslessly. The other cause is a row
+a single property is enough, because the payload has to round-trip losslessly — or whose constructor or a
+value converter now rejects what an old snapshot contains. Any exception raised while deserializing the
+payload is reported this way except cancellation, whatever its type. The other cause is a row
 written by a platform version that used a different snapshot format, which is what makes changing that
 format a self-healing operation rather than a migration.
 </p>

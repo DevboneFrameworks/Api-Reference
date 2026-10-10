@@ -193,10 +193,10 @@ protection is not enabled. A destroyed key yields the placeholder the tag carrie
 </h2>
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Ddd_Mapping_DatabaseEventStoredEventMapper_Map_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Mapping.DatabaseEventStoredEventMapper.Map*"></a>
+  <a id="Devbone_Frameworks_EventSourcing_Ddd_Mapping_DatabaseEventStoredEventMapper_MapAsync_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Mapping.DatabaseEventStoredEventMapper.MapAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_Ddd_Mapping_DatabaseEventStoredEventMapper_Map_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Mapping.DatabaseEventStoredEventMapper.Map(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent)">
-  Map(IDatabaseEvent)
+  <h3 id="Devbone_Frameworks_EventSourcing_Ddd_Mapping_DatabaseEventStoredEventMapper_MapAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Mapping.DatabaseEventStoredEventMapper.MapAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent,System.Threading.CancellationToken)">
+  MapAsync(IDatabaseEvent, CancellationToken)
   
   </h3>
 
@@ -205,7 +205,7 @@ protection is not enabled. A destroyed key yields the placeholder the tag carrie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IStoredEvent Map(IDatabaseEvent databaseEvent)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IStoredEvent&gt; MapAsync(IDatabaseEvent databaseEvent, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -213,11 +213,14 @@ protection is not enabled. A destroyed key yields the placeholder the tag carrie
     <dt><code>databaseEvent</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a></dt>
     <dd><p>Row loaded from the event store.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the subject key registry.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/Repositories/IStoredEvent.cs">IStoredEvent</a>&gt;</dt>
     <dd><p>The DDD stored event used for replay.</p>
 </dd>
   </dl>
@@ -232,10 +235,10 @@ protection is not enabled. A destroyed key yields the placeholder the tag carrie
 
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Ddd_Mapping_DatabaseEventStoredEventMapper_Map_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Mapping.DatabaseEventStoredEventMapper.Map*"></a>
+  <a id="Devbone_Frameworks_EventSourcing_Ddd_Mapping_DatabaseEventStoredEventMapper_MapAsync_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Mapping.DatabaseEventStoredEventMapper.MapAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_Ddd_Mapping_DatabaseEventStoredEventMapper_Map_System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent__" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Mapping.DatabaseEventStoredEventMapper.Map(System.Collections.Generic.IReadOnlyCollection{Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent})">
-  Map(IReadOnlyCollection&lt;IDatabaseEvent&gt;)
+  <h3 id="Devbone_Frameworks_EventSourcing_Ddd_Mapping_DatabaseEventStoredEventMapper_MapAsync_System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Mapping.DatabaseEventStoredEventMapper.MapAsync(System.Collections.Generic.IReadOnlyCollection{Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent},System.Threading.CancellationToken)">
+  MapAsync(IReadOnlyCollection&lt;IDatabaseEvent&gt;, CancellationToken)
   
   </h3>
 
@@ -244,7 +247,7 @@ protection is not enabled. A destroyed key yields the placeholder the tag carrie
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;IStoredEvent&gt; Map(IReadOnlyCollection&lt;IDatabaseEvent&gt; databaseEvents)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;IStoredEvent&gt;&gt; MapAsync(IReadOnlyCollection&lt;IDatabaseEvent&gt; databaseEvents, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -252,11 +255,14 @@ protection is not enabled. A destroyed key yields the placeholder the tag carrie
     <dt><code>databaseEvents</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>&gt;</dt>
     <dd><p>Rows in stream order.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the subject key registry.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>&gt;&gt;</dt>
     <dd><p>The DDD stored events in the same order.</p>
 </dd>
   </dl>

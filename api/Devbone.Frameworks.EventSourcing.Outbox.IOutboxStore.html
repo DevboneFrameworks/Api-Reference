@@ -263,6 +263,53 @@ Interface IOutboxStore
 
 
 
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_IOutboxStore_ReleaseClaimAsync_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.IOutboxStore.ReleaseClaimAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_IOutboxStore_ReleaseClaimAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.IOutboxStore.ReleaseClaimAsync(System.String,System.String,System.Threading.CancellationToken)">
+  ReleaseClaimAsync(string, string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns one leased message that was never handed to a transport, so another worker can claim it at once
+instead of after the lease expires. The dispatcher calls it for the rest of a batch when its lease
+is about to expire or the host stops. The default does nothing, which leaves the row to lease expiry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ReleaseClaimAsync(string eventId, string claimToken, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eventId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Event and outbox identifier.</p>
+</dd>
+    <dt><code>claimToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Current fencing token; a row leased under another token is left unchanged.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task completing after the release.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventSourcing_Outbox_IOutboxStore_ScheduleRetryAsync_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.IOutboxStore.ScheduleRetryAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Outbox_IOutboxStore_ScheduleRetryAsync_System_String_System_String_Devbone_Frameworks_EventSourcing_Outbox_OutboxRetry_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.IOutboxStore.ScheduleRetryAsync(System.String,System.String,Devbone.Frameworks.EventSourcing.Outbox.OutboxRetry,System.Threading.CancellationToken)">

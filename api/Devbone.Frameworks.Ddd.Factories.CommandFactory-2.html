@@ -213,7 +213,7 @@ It may validate that a referenced aggregate stream exists, but it does not dispa
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Safely creates a typed command and wraps exceptions into a failed result.</p>
+  <div class="markdown level1 summary"><p>Creates a typed command and turns an input error into a failed validation result.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -231,7 +231,7 @@ It may validate that a referenced aggregate stream exists, but it does not dispa
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.ICommandCreationResult-2.html">ICommandCreationResult</a>&lt;TCommand, TIdentity&gt;</dt>
-    <dd><p>Successful result with command, or failed result with parser/validation message.</p>
+    <dd><p>Successful result with command, or failed result with the input error's message.</p>
 </dd>
   </dl>
 
@@ -247,14 +247,20 @@ It may validate that a referenced aggregate stream exists, but it does not dispa
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2_CreateCommand__1_System_Func___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Only <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a> (including its null and out-of-range forms), <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a>
+and <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.overflowexception">OverflowException</a> are input errors: they are the channel a value object or parser uses to
+reject the caller's own input, and their message describes that input. Any other exception is a defect;
+it propagates rather than reaching the client as a validation message carrying its text.</p>
+</div>
 
 
 
 
-  <a id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2_ValidateId_" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2.ValidateId*"></a>
+  <a id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2_ValidateIdAsync_" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2.ValidateIdAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2_ValidateId__2_Devbone_Frameworks_Ddd_Results_IResult___0_Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2.ValidateId``2(Devbone.Frameworks.Ddd.Results.IResult,``0,Devbone.Frameworks.Ddd.Repositories.IEventStreamReader)">
-  ValidateId&lt;TCheckAggregate, TCheckIdentity&gt;(IResult, TCheckAggregate, IEventStreamReader)
+  <h3 id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2_ValidateIdAsync__2_Devbone_Frameworks_Ddd_Results_IResult___0_Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2.ValidateIdAsync``2(Devbone.Frameworks.Ddd.Results.IResult,``0,Devbone.Frameworks.Ddd.Repositories.IEventStreamReader,System.Threading.CancellationToken)">
+  ValidateIdAsync&lt;TCheckAggregate, TCheckIdentity&gt;(IResult, TCheckAggregate, IEventStreamReader, CancellationToken)
   
   </h3>
 
@@ -263,7 +269,7 @@ It may validate that a referenced aggregate stream exists, but it does not dispa
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected IResult ValidateId&lt;TCheckAggregate, TCheckIdentity&gt;(IResult result, TCheckAggregate notLoadedAggregate, IEventStreamReader eventStreamReader) where TCheckAggregate : IAggregateRoot&lt;TCheckIdentity&gt; where TCheckIdentity : IAggregateIdentity</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;IResult&gt; ValidateIdAsync&lt;TCheckAggregate, TCheckIdentity&gt;(IResult result, TCheckAggregate notLoadedAggregate, IEventStreamReader eventStreamReader, CancellationToken cancellationToken = default) where TCheckAggregate : IAggregateRoot&lt;TCheckIdentity&gt; where TCheckIdentity : IAggregateIdentity</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -277,11 +283,14 @@ It may validate that a referenced aggregate stream exists, but it does not dispa
     <dt><code>eventStreamReader</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.html">IEventStreamReader</a></dt>
     <dd><p>Repository used to load aggregate events.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the stream read.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IResult.html">IResult</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IResult.html">IResult</a>&gt;</dt>
     <dd><p>The same <code class="paramref">result</code> instance for fluent validation.</p>
 </dd>
   </dl>
@@ -305,10 +314,10 @@ It may validate that a referenced aggregate stream exists, but it does not dispa
 
 
 
-  <a id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2_ValidateId_" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2.ValidateId*"></a>
+  <a id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2_ValidateIdAsync_" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2.ValidateIdAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2_ValidateId__2_Devbone_Frameworks_Ddd_Results_IResult___0_System_Func_Devbone_Frameworks_Ddd_Repositories_IEventStreamReader__" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2.ValidateId``2(Devbone.Frameworks.Ddd.Results.IResult,``0,System.Func{Devbone.Frameworks.Ddd.Repositories.IEventStreamReader})">
-  ValidateId&lt;TCheckAggregate, TCheckIdentity&gt;(IResult, TCheckAggregate, Func&lt;IEventStreamReader&gt;)
+  <h3 id="Devbone_Frameworks_Ddd_Factories_CommandFactory_2_ValidateIdAsync__2_Devbone_Frameworks_Ddd_Results_IResult___0_System_Func_Devbone_Frameworks_Ddd_Repositories_IEventStreamReader__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Factories.CommandFactory`2.ValidateIdAsync``2(Devbone.Frameworks.Ddd.Results.IResult,``0,System.Func{Devbone.Frameworks.Ddd.Repositories.IEventStreamReader},System.Threading.CancellationToken)">
+  ValidateIdAsync&lt;TCheckAggregate, TCheckIdentity&gt;(IResult, TCheckAggregate, Func&lt;IEventStreamReader&gt;, CancellationToken)
   
   </h3>
 
@@ -317,7 +326,7 @@ It may validate that a referenced aggregate stream exists, but it does not dispa
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected IResult ValidateId&lt;TCheckAggregate, TCheckIdentity&gt;(IResult result, TCheckAggregate notLoadedAggregate, Func&lt;IEventStreamReader&gt; getEventStreamReader) where TCheckAggregate : IAggregateRoot&lt;TCheckIdentity&gt; where TCheckIdentity : IAggregateIdentity</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;IResult&gt; ValidateIdAsync&lt;TCheckAggregate, TCheckIdentity&gt;(IResult result, TCheckAggregate notLoadedAggregate, Func&lt;IEventStreamReader&gt; getEventStreamReader, CancellationToken cancellationToken = default) where TCheckAggregate : IAggregateRoot&lt;TCheckIdentity&gt; where TCheckIdentity : IAggregateIdentity</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -331,11 +340,14 @@ It may validate that a referenced aggregate stream exists, but it does not dispa
     <dt><code>getEventStreamReader</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.html">IEventStreamReader</a>&gt;</dt>
     <dd><p>Repository factory callback.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the stream read.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IResult.html">IResult</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IResult.html">IResult</a>&gt;</dt>
     <dd><p>The same <code class="paramref">result</code> instance for fluent validation.</p>
 </dd>
   </dl>

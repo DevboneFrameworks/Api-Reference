@@ -229,10 +229,10 @@ guards, fault handling, telemetry, or explicit aggregate commit semantics.</p>
 </h2>
 
 
-  <a id="Devbone_Frameworks_Ddd_ChangeTracker_IChangeTracker_1_GetCurrentIncrement_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.IChangeTracker`1.GetCurrentIncrement*"></a>
+  <a id="Devbone_Frameworks_Ddd_ChangeTracker_IChangeTracker_1_GetCurrentIncrementAsync_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.IChangeTracker`1.GetCurrentIncrementAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_ChangeTracker_IChangeTracker_1_GetCurrentIncrement_Devbone_Frameworks_Ddd_IncrementValues_IIncrementGlobalProperty_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.IChangeTracker`1.GetCurrentIncrement(Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty)">
-  GetCurrentIncrement(IIncrementGlobalProperty)
+  <h3 id="Devbone_Frameworks_Ddd_ChangeTracker_IChangeTracker_1_GetCurrentIncrementAsync_Devbone_Frameworks_Ddd_IncrementValues_IIncrementGlobalProperty_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.IChangeTracker`1.GetCurrentIncrementAsync(Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty,System.Threading.CancellationToken)">
+  GetCurrentIncrementAsync(IIncrementGlobalProperty, CancellationToken)
   
   </h3>
 
@@ -241,7 +241,7 @@ guards, fault handling, telemetry, or explicit aggregate commit semantics.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">long GetCurrentIncrement(IIncrementGlobalProperty incrementRequest)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;long&gt; GetCurrentIncrementAsync(IIncrementGlobalProperty incrementRequest, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -249,11 +249,14 @@ guards, fault handling, telemetry, or explicit aggregate commit semantics.</p>
     <dt><code>incrementRequest</code> <a class="xref" href="Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty.html">IIncrementGlobalProperty</a></dt>
     <dd><p>Increment key to query.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the read.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
     <dd><p>The current persisted increment.</p>
 </dd>
   </dl>
@@ -268,10 +271,10 @@ guards, fault handling, telemetry, or explicit aggregate commit semantics.</p>
 
 
 
-  <a id="Devbone_Frameworks_Ddd_ChangeTracker_IChangeTracker_1_GetNextIncrement_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.IChangeTracker`1.GetNextIncrement*"></a>
+  <a id="Devbone_Frameworks_Ddd_ChangeTracker_IChangeTracker_1_GetNextIncrementAsync_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.IChangeTracker`1.GetNextIncrementAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_ChangeTracker_IChangeTracker_1_GetNextIncrement_Devbone_Frameworks_Ddd_IncrementValues_IIncrementGlobalProperty_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.IChangeTracker`1.GetNextIncrement(Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty)">
-  GetNextIncrement(IIncrementGlobalProperty)
+  <h3 id="Devbone_Frameworks_Ddd_ChangeTracker_IChangeTracker_1_GetNextIncrementAsync_Devbone_Frameworks_Ddd_IncrementValues_IIncrementGlobalProperty_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.IChangeTracker`1.GetNextIncrementAsync(Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty,System.Threading.CancellationToken)">
+  GetNextIncrementAsync(IIncrementGlobalProperty, CancellationToken)
   
   </h3>
 
@@ -280,7 +283,7 @@ guards, fault handling, telemetry, or explicit aggregate commit semantics.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IncrementGlobalAllocation GetNextIncrement(IIncrementGlobalProperty incrementRequest)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IncrementGlobalAllocation&gt; GetNextIncrementAsync(IIncrementGlobalProperty incrementRequest, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -288,11 +291,14 @@ guards, fault handling, telemetry, or explicit aggregate commit semantics.</p>
     <dt><code>incrementRequest</code> <a class="xref" href="Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty.html">IIncrementGlobalProperty</a></dt>
     <dd><p>Increment key to reserve.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the allocation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html">IncrementGlobalAllocation</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html">IncrementGlobalAllocation</a>&gt;</dt>
     <dd><p>The allocated increment and its key.</p>
 </dd>
   </dl>

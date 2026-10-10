@@ -283,12 +283,13 @@ Class OutboxDispatcherOptions
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the maximum number of publish attempts before terminal failure.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the maximum number of publish attempts before terminal failure, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> (the
+default) to retry with the retry policy's capped delay until publication succeeds.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MaxAttempts { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int? MaxAttempts { get; init; }</code></pre>
   </div>
 
 
@@ -297,13 +298,18 @@ Class OutboxDispatcherOptions
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
   </dl>
 
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_EventBus_Outbox_Dispatching_OutboxDispatcherOptions_MaxAttempts_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A terminally failed row blocks every later event of its aggregate until it is requeued, so a limit turns a
+broker outage longer than the retry budget into blocked aggregates; without one they resume by themselves once
+the broker is back. Watch the outbox's oldest outstanding age and retry-wait depth instead.</p>
+</div>
 
 
 

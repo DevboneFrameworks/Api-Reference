@@ -186,6 +186,45 @@ Class MissingReferencesDelayProcessor
 
 
 
+  <a id="Devbone_Frameworks_EventProjection_Projections_MissingReferencesDelayProcessor__ctor_" data-uid="Devbone.Frameworks.EventProjection.Projections.MissingReferencesDelayProcessor.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_MissingReferencesDelayProcessor__ctor_Devbone_Frameworks_EventProjection_Transport_IProjectionMessagePublisher_Devbone_Frameworks_EventProjection_Configuration_ProjectionAddressNames_System_TimeProvider_" data-uid="Devbone.Frameworks.EventProjection.Projections.MissingReferencesDelayProcessor.#ctor(Devbone.Frameworks.EventProjection.Transport.IProjectionMessagePublisher,Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames,System.TimeProvider)">
+  MissingReferencesDelayProcessor(IProjectionMessagePublisher, ProjectionAddressNames, TimeProvider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes delayed retry processing with the clock the delay is measured and waited on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MissingReferencesDelayProcessor(IProjectionMessagePublisher publisher, ProjectionAddressNames addresses, TimeProvider timeProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>publisher</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Transport.IProjectionMessagePublisher.html">IProjectionMessagePublisher</a></dt>
+    <dd><p>Internal Kafka publisher.</p>
+</dd>
+    <dt><code>addresses</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames.html">ProjectionAddressNames</a></dt>
+    <dd><p>Projection address resolver.</p>
+</dd>
+    <dt><code>timeProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a></dt>
+    <dd><p>Clock the remaining delay is computed from and waited on.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 

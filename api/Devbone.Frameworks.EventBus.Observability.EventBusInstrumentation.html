@@ -238,13 +238,17 @@ Applications opt in by registering the source and meter with their OpenTelemetry
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
-    <dd></dd>
+    <dd><p>The activity started by <a class="xref" href="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.html#Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartCommit_System_String_System_String_">StartCommit(string, string)</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
     <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The transport name the settlement was performed against.</p>
+</dd>
     <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The stream, topic or queue the settled message was consumed from.</p>
+</dd>
     <dt><code>startedAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.gettimestamp">GetTimestamp()</a> value captured when the operation started, used to compute its duration.</p>
+</dd>
   </dl>
 
 
@@ -276,15 +280,20 @@ Applications opt in by registering the source and meter with their OpenTelemetry
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
-    <dd></dd>
+    <dd><p>The activity started by <a class="xref" href="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.html#Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartConsume_System_String_System_String_System_String_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__">StartConsume(string, string, string, IReadOnlyDictionary&lt;string, string&gt;)</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
     <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The transport name the operation was performed against.</p>
+</dd>
     <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The source stream, topic or queue name.</p>
+</dd>
     <dt><code>committed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>Whether the message's manual settlement was confirmed before this call.</p>
+</dd>
     <dt><code>startedAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.gettimestamp">GetTimestamp()</a> value captured when the operation started, used to compute its duration.</p>
+</dd>
   </dl>
 
 
@@ -316,11 +325,15 @@ Applications opt in by registering the source and meter with their OpenTelemetry
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
-    <dd></dd>
+    <dd><p>The activity started by <a class="xref" href="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.html#Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartOutboxDispatch_Devbone_Frameworks_EventBus_Contracts_Messaging_EventMetadata_System_String_System_String_">StartOutboxDispatch(EventMetadata, string, string)</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
     <dt><code>outcome</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The dispatch outcome; anything other than <span class="xref">Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.OUTCOME_SUCCESS</span> marks the
+activity's status as an error.</p>
+</dd>
     <dt><code>startedAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.gettimestamp">GetTimestamp()</a> value captured when the dispatch attempt started, used to compute its duration.</p>
+</dd>
   </dl>
 
 
@@ -352,15 +365,20 @@ Applications opt in by registering the source and meter with their OpenTelemetry
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
-    <dd></dd>
+    <dd><p>The activity started by <a class="xref" href="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.html#Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartPublish_System_String_System_String_Devbone_Frameworks_EventBus_Contracts_Messaging_EventMetadata_">StartPublish(string, string, EventMetadata)</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
     <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The transport name the operation was performed against.</p>
+</dd>
     <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The target stream, topic or queue name.</p>
+</dd>
     <dt><code>outcome</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The <a class="xref" href="Devbone.Frameworks.EventBus.Publishing.PublishOutcome.html">PublishOutcome</a> name describing the transport's confirmation state.</p>
+</dd>
     <dt><code>startedAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.gettimestamp">GetTimestamp()</a> value captured when the operation started, used to compute its duration.</p>
+</dd>
   </dl>
 
 
@@ -392,9 +410,11 @@ Applications opt in by registering the source and meter with their OpenTelemetry
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
-    <dd></dd>
+    <dd><p>The consumer activity started by <a class="xref" href="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.html#Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartConsume_System_String_System_String_System_String_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__">StartConsume(string, string, string, IReadOnlyDictionary&lt;string, string&gt;)</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
     <dt><code>metadata</code> <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata.html">EventMetadata</a></dt>
-    <dd></dd>
+    <dd><p>The deserialized event's canonical metadata.</p>
+</dd>
   </dl>
 
 
@@ -426,15 +446,20 @@ Applications opt in by registering the source and meter with their OpenTelemetry
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
-    <dd></dd>
+    <dd><p>The activity started by <a class="xref" href="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.html#Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartCommit_System_String_System_String_">StartCommit(string, string)</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
     <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The transport name the settlement was performed against.</p>
+</dd>
     <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The stream, topic or queue the settled message was consumed from.</p>
+</dd>
     <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
-    <dd></dd>
+    <dd><p>The exception the settlement attempt failed with.</p>
+</dd>
     <dt><code>startedAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.gettimestamp">GetTimestamp()</a> value captured when the operation started, used to compute its duration.</p>
+</dd>
   </dl>
 
 
@@ -466,15 +491,20 @@ Applications opt in by registering the source and meter with their OpenTelemetry
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
-    <dd></dd>
+    <dd><p>The activity started by <a class="xref" href="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.html#Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartConsume_System_String_System_String_System_String_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__">StartConsume(string, string, string, IReadOnlyDictionary&lt;string, string&gt;)</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
     <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The transport name the operation was performed against.</p>
+</dd>
     <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The source stream, topic or queue name.</p>
+</dd>
     <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
-    <dd></dd>
+    <dd><p>The exception the consume or deserialization attempt failed with.</p>
+</dd>
     <dt><code>startedAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.gettimestamp">GetTimestamp()</a> value captured when the operation started, used to compute its duration.</p>
+</dd>
   </dl>
 
 
@@ -506,11 +536,14 @@ Applications opt in by registering the source and meter with their OpenTelemetry
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
-    <dd></dd>
+    <dd><p>The activity started by <a class="xref" href="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.html#Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartOutboxDispatch_Devbone_Frameworks_EventBus_Contracts_Messaging_EventMetadata_System_String_System_String_">StartOutboxDispatch(EventMetadata, string, string)</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
     <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
-    <dd></dd>
+    <dd><p>The exception the dispatch attempt failed with.</p>
+</dd>
     <dt><code>startedAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.gettimestamp">GetTimestamp()</a> value captured when the dispatch attempt started, used to compute its duration.</p>
+</dd>
   </dl>
 
 
@@ -542,15 +575,20 @@ Applications opt in by registering the source and meter with their OpenTelemetry
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>activity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
-    <dd></dd>
+    <dd><p>The activity started by <a class="xref" href="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.html#Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_StartPublish_System_String_System_String_Devbone_Frameworks_EventBus_Contracts_Messaging_EventMetadata_">StartPublish(string, string, EventMetadata)</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
     <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The transport name the operation was performed against.</p>
+</dd>
     <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The target stream, topic or queue name.</p>
+</dd>
     <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
-    <dd></dd>
+    <dd><p>The exception the publish attempt failed with.</p>
+</dd>
     <dt><code>startedAt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.gettimestamp">GetTimestamp()</a> value captured when the operation started, used to compute its duration.</p>
+</dd>
   </dl>
 
 
@@ -582,13 +620,17 @@ Applications opt in by registering the source and meter with their OpenTelemetry
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>metadataTraceParent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A previously resolved traceparent carried in the event's own
+metadata, used as a fallback when there is no active local <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a> (e.g. inside an
+outbox dispatcher running outside a request/consume scope).</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The current activity's id when one is active; otherwise <code class="paramref">metadataTraceParent</code>.</p>
+</dd>
   </dl>
 
 
@@ -619,13 +661,17 @@ Applications opt in by registering the source and meter with their OpenTelemetry
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>metadataTraceState</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A previously resolved tracestate carried in the event's own metadata,
+used as a fallback when there is no active local <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a>.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The current activity's trace state, possibly <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, when one is active; otherwise
+<code class="paramref">metadataTraceState</code>.</p>
+</dd>
   </dl>
 
 
@@ -634,6 +680,11 @@ Applications opt in by registering the source and meter with their OpenTelemetry
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_ResolveTraceState_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The state follows the same source as <a class="xref" href="Devbone.Frameworks.EventBus.Observability.EventBusInstrumentation.html#Devbone_Frameworks_EventBus_Observability_EventBusInstrumentation_ResolveTraceParent_System_String_">ResolveTraceParent(string?)</a>: an active activity without a trace state
+used to fall back to the metadata's, which belongs to another trace than the activity's traceparent sent beside
+it.</p>
+</div>
 
 
 
@@ -656,15 +707,18 @@ Applications opt in by registering the source and meter with their OpenTelemetry
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The transport name (e.g. <code>kafka</code>, <code>rabbitmq</code>).</p>
+</dd>
     <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The stream, topic or queue the settled message was consumed from.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
-    <dd></dd>
+    <dd><p>The started client <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when no listener is sampling.</p>
+</dd>
   </dl>
 
 
@@ -695,19 +749,25 @@ Applications opt in by registering the source and meter with their OpenTelemetry
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The transport name (e.g. <code>kafka</code>, <code>rabbitmq</code>).</p>
+</dd>
     <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The source stream, topic or queue name.</p>
+</dd>
     <dt><code>consumerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The consumer group or subscription name, recorded as the consumer's group tag.</p>
+</dd>
     <dt><code>headers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>The transport headers the message arrived with; searched for the W3C
+traceparent/tracestate headers to continue the producer's trace.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
-    <dd></dd>
+    <dd><p>The started consumer <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when no listener is sampling.</p>
+</dd>
   </dl>
 
 
@@ -738,17 +798,22 @@ Applications opt in by registering the source and meter with their OpenTelemetry
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>metadata</code> <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata.html">EventMetadata</a></dt>
-    <dd></dd>
+    <dd><p>The persisted event's canonical metadata, supplying both the remote trace
+context to continue and the low-cardinality event contract tags.</p>
+</dd>
     <dt><code>eventBusId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The logical event bus the outbox row is being dispatched to.</p>
+</dd>
     <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The target stream, topic or queue name.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
-    <dd></dd>
+    <dd><p>The started internal <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when no listener is sampling.</p>
+</dd>
   </dl>
 
 
@@ -779,17 +844,21 @@ Applications opt in by registering the source and meter with their OpenTelemetry
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>messagingSystem</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The transport name (e.g. <code>kafka</code>, <code>rabbitmq</code>).</p>
+</dd>
     <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The target stream, topic or queue name.</p>
+</dd>
     <dt><code>metadata</code> <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata.html">EventMetadata</a></dt>
-    <dd></dd>
+    <dd><p>The event's canonical metadata, used to add low-cardinality event contract tags.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a></dt>
-    <dd></dd>
+    <dd><p>The started producer <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.activity">Activity</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when no listener is sampling.</p>
+</dd>
   </dl>
 
 

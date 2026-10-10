@@ -234,7 +234,7 @@ Class InMemoryEventRepository
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Persists one event row.</p>
+  <div class="markdown level1 summary"><p>Persists one event, a convenience for arranging tests.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -252,7 +252,7 @@ Class InMemoryEventRepository
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
-    <dd><p>A successful result after persistence, or a failed result for conflicts and persistence errors.</p>
+    <dd><p>The write result.</p>
 </dd>
   </dl>
 
@@ -273,7 +273,7 @@ Class InMemoryEventRepository
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Persists one event row together with unique value constraints.</p>
+  <div class="markdown level1 summary"><p>Persists one event with unique values, a convenience for arranging tests.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -287,14 +287,14 @@ Class InMemoryEventRepository
     <dd><p>Stored event row.</p>
 </dd>
     <dt><code>uniqueValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html">UniqueProperty</a>&gt;</dt>
-    <dd><p>Unique value constraints derived from the event.</p>
+    <dd><p>Unique value constraints.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
-    <dd><p>A successful atomic write result, or a failed result without partial event or unique-index changes.</p>
+    <dd><p>The atomic write result.</p>
 </dd>
   </dl>
 
@@ -315,7 +315,7 @@ Class InMemoryEventRepository
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Persists multiple event rows.</p>
+  <div class="markdown level1 summary"><p>Persists events atomically; the port method delegates here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -333,7 +333,7 @@ Class InMemoryEventRepository
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
-    <dd><p>A successful result after the complete atomic batch, or a failed result without partial writes.</p>
+    <dd><p>The atomic write result.</p>
 </dd>
   </dl>
 
@@ -354,7 +354,7 @@ Class InMemoryEventRepository
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Persists event rows together with unique value constraints.</p>
+  <div class="markdown level1 summary"><p>Persists events with unique values atomically; the port method delegates here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -368,14 +368,14 @@ Class InMemoryEventRepository
     <dd><p>Stored event rows.</p>
 </dd>
     <dt><code>uniqueValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html">UniqueProperty</a>&gt;</dt>
-    <dd><p>Unique value constraints derived from events.</p>
+    <dd><p>Unique value constraints.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
-    <dd><p>A successful atomic write result, or a failed result without partial event or unique-index changes.</p>
+    <dd><p>The atomic write result.</p>
 </dd>
   </dl>
 
@@ -396,7 +396,7 @@ Class InMemoryEventRepository
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Persists all event rows, unique values, and the supplied snapshot atomically.</p>
+  <div class="markdown level1 summary"><p>Persists events, unique values and a snapshot atomically; the port method delegates here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -407,55 +407,20 @@ Class InMemoryEventRepository
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>[]</dt>
-    <dd></dd>
+    <dd><p>Stored event rows.</p>
+</dd>
     <dt><code>uniqueValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html">UniqueProperty</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>Unique value constraints.</p>
+</dd>
     <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_GetAggregateIds_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.GetAggregateIds*"></a>
-
-  <h3 id="Devbone_Frameworks_Ddd_Testing_InMemoryEventRepository_GetAggregateIds_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_" data-uid="Devbone.Frameworks.Ddd.Testing.InMemoryEventRepository.GetAggregateIds(Devbone.Frameworks.Ddd.Aggregates.IAggregateName)">
-  GetAggregateIds(IAggregateName)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets all aggregate ids known for the specified aggregate name.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; GetAggregateIds(IAggregateName aggregateName)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>aggregateName</code> <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateName.html">IAggregateName</a></dt>
-    <dd><p>Aggregate name.</p>
+    <dd><p>Snapshot to store.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>Known aggregate id values.</p>
+    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
+    <dd><p>The atomic write result.</p>
 </dd>
   </dl>
 
@@ -476,7 +441,7 @@ Class InMemoryEventRepository
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the current increment for one key.</p>
+  <div class="markdown level1 summary"><p>Reads the current increment value; the port method delegates here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -494,7 +459,7 @@ Class InMemoryEventRepository
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd><p>Current increment value.</p>
+    <dd><p>The current value.</p>
 </dd>
   </dl>
 
@@ -515,7 +480,7 @@ Class InMemoryEventRepository
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Reserves and returns next increment values for each requested key.</p>
+  <div class="markdown level1 summary"><p>Allocates the next increment values atomically; the port method delegates here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -532,8 +497,8 @@ Class InMemoryEventRepository
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html">IncrementGlobalAllocation</a>[]</dt>
-    <dd><p>Distinct next values allocated atomically for the requested keys.</p>
+    <dt><a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/Results/IncrementGlobalAllocation.cs">IncrementGlobalAllocation</a>[]</dt>
+    <dd><p>One allocation per key.</p>
 </dd>
   </dl>
 
@@ -565,13 +530,15 @@ Class InMemoryEventRepository
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IIdentity.html">IIdentity</a></dt>
-    <dd></dd>
+    <dd><p>Identity of the aggregate whose snapshot is requested.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
-    <dd></dd>
+    <dd><p>The stored snapshot, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when none has been persisted.</p>
+</dd>
   </dl>
 
 
@@ -591,7 +558,7 @@ Class InMemoryEventRepository
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Determines whether one request was already committed for the aggregate.</p>
+  <div class="markdown level1 summary"><p>Determines synchronously whether a request was already committed; the port method delegates here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -602,17 +569,21 @@ Class InMemoryEventRepository
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateName.html">IAggregateName</a></dt>
-    <dd></dd>
+    <dd><p>Stable aggregate contract name.</p>
+</dd>
     <dt><code>aggregateId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IIdentity.html">IIdentity</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate identity.</p>
+</dd>
     <dt><code>requestId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IRequestId.html">IRequestId</a></dt>
-    <dd></dd>
+    <dd><p>Request identity to look up.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when an event of the request is stored.</p>
+</dd>
   </dl>
 
 
@@ -632,7 +603,7 @@ Class InMemoryEventRepository
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Loads all stored events for an aggregate instance.</p>
+  <div class="markdown level1 summary"><p>Loads a stream synchronously, for assertions in tests; the port method delegates here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -646,14 +617,14 @@ Class InMemoryEventRepository
     <dd><p>Aggregate identity.</p>
 </dd>
     <dt><code>skipPublishCheck</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Indicates whether unpublished-state checks are skipped.</p>
+    <dd><p>Ignored by the in-memory store, which has no publication state.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>&gt;</dt>
-    <dd><p>Stored event sequence ordered by aggregate version.</p>
+    <dd><p>The stored events in stream order.</p>
 </dd>
   </dl>
 
@@ -674,7 +645,7 @@ Class InMemoryEventRepository
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Loads an optional snapshot and every event after it for one aggregate.</p>
+  <div class="markdown level1 summary"><p>Loads the latest snapshot and the following events synchronously; the port method delegates here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -685,17 +656,21 @@ Class InMemoryEventRepository
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateName.html">IAggregateName</a></dt>
-    <dd></dd>
+    <dd><p>Stable aggregate contract name.</p>
+</dd>
     <dt><code>aggregateId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IIdentity.html">IIdentity</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate identity.</p>
+</dd>
     <dt><code>skipPublishCheck</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>Ignored by the in-memory store, which has no publication state.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.AggregateRehydration.html">AggregateRehydration</a></dt>
-    <dd></dd>
+    <dd><p>The optional snapshot and every following event.</p>
+</dd>
   </dl>
 
 
@@ -715,7 +690,7 @@ Class InMemoryEventRepository
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Removes tracked unique values for an aggregate instance.</p>
+  <div class="markdown level1 summary"><p>Removes every unique reservation of an aggregate; the port method delegates here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -733,7 +708,7 @@ Class InMemoryEventRepository
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
-    <dd><p>Write result.</p>
+    <dd><p>The write result.</p>
 </dd>
   </dl>
 
@@ -754,7 +729,7 @@ Class InMemoryEventRepository
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Determines whether aggregate state at the supplied stream position should be snapshotted.</p>
+  <div class="markdown level1 summary"><p>Determines synchronously whether a snapshot is due; the port method delegates here.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -765,17 +740,21 @@ Class InMemoryEventRepository
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Stable aggregate contract name.</p>
+</dd>
     <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate identity value.</p>
+</dd>
     <dt><code>aggregateVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>Stream position reached by the commit.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when a snapshot is due at this position.</p>
+</dd>
   </dl>
 
 

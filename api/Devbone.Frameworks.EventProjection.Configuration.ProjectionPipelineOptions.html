@@ -343,6 +343,45 @@ Class ProjectionPipelineOptions
 
 
 
+  <a id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_FinishedRequestRetention_" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.FinishedRequestRetention*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_FinishedRequestRetention" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.FinishedRequestRetention">
+  FinishedRequestRetention
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets how long a finished repair or refold request, and a decided refold request in the inbox, remain readable
+before MongoDB removes them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan FinishedRequestRetention { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_FinishedRequestRetention_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A repair or refold request expires this long after it reaches <code>Completed</code>, <code>Failed</code> or <code>Blocked</code>,
+a rejected inbox request this long after its rejection, and an accepted inbox request together with the refold
+it started. Pending and running requests never expire. Once a request has expired, its identity counts as new:
+placing it again repairs or refolds again.</p>
+</div>
+
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_InternalAddressPrefix_" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.InternalAddressPrefix*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_InternalAddressPrefix" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.InternalAddressPrefix">
@@ -531,6 +570,47 @@ Class ProjectionPipelineOptions
 
 
 
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_MaximumConcurrentDependentRefreshes_" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.MaximumConcurrentDependentRefreshes*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_MaximumConcurrentDependentRefreshes" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.MaximumConcurrentDependentRefreshes">
+  MaximumConcurrentDependentRefreshes
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum number of enrichment refreshes for the dependents of one changed aggregate that are published at
+once. The refreshes go out in groups of this size, each acknowledged before the next starts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaximumConcurrentDependentRefreshes { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_MaximumConcurrentDependentRefreshes_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>One merged delivery publishes a refresh for every aggregate that references the changed one, and settles only
+when all of them are acknowledged. On Kafka a confirmed publish costs a round trip, so publishing them one after
+another lets an aggregate referenced by tens of thousands of others outlast the consumer's
+<code>max.poll.interval.ms</code>: the consumer is evicted and the delivery repeats without end. Concurrent publishes
+share those round trips. The RabbitMQ publisher confirms one message at a time whatever this value is. Set 1 to
+publish sequentially.</p>
+</div>
 
 
 
@@ -1040,6 +1120,38 @@ instead of redelivered indefinitely.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_RefoldRequests_" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.RefoldRequests*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_RefoldRequests" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.RefoldRequests">
+  RefoldRequests
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether and from whom this worker accepts refold requests placed by API hosts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectionRefoldRequestOptions RefoldRequests { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionRefoldRequestOptions.html">ProjectionRefoldRequestOptions</a></dt>
     <dd></dd>
   </dl>
 

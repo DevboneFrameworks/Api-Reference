@@ -187,7 +187,13 @@ Class PublishOptions
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets optional transport headers.</p>
+  <div class="markdown level1 summary"><p>Gets or sets optional application transport headers. A canonical header the publisher derives from the envelope</p>
+<ul>
+<li><code>traceparent</code>, <code>x-event-id</code>, <code>x-tenant-id</code> and every other <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Messaging.TransportHeaderNames.html">TransportHeaderNames</a>
+value - and the <code>x-dead-letter-</code> prefix are reserved and refused in any casing: consumers read the last
+value of a header, so an application value would replace the event's own identity or join a foreign trace.
+Forwarded HTTP headers therefore need filtering before they are passed here.</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -209,6 +215,12 @@ Class PublishOptions
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>A header name is reserved or blank.</p>
+</dd>
+  </dl>
 
 
 
@@ -236,6 +248,49 @@ Class PublishOptions
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventBus_Publishing_PublishOptions_IsReservedHeaderName_" data-uid="Devbone.Frameworks.EventBus.Publishing.PublishOptions.IsReservedHeaderName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Publishing_PublishOptions_IsReservedHeaderName_System_String_" data-uid="Devbone.Frameworks.EventBus.Publishing.PublishOptions.IsReservedHeaderName(System.String)">
+  IsReservedHeaderName(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether <code class="paramref">name</code> is reserved and cannot be set as an application header.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsReservedHeaderName(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The header name.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> for a canonical header or a dead-letter header name, in any casing.</p>
+</dd>
+  </dl>
+
+
+
 
 
 

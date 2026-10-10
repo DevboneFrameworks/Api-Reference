@@ -125,8 +125,9 @@ commit.</p>
 </dd>
     <dt id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitOutcome_Rejected"><code>Rejected = 3</code></dt>
   
-  <dd><p>The wait was refused because too many waits were already in flight. Load shedding: the request has not
-been observed at all, and the caller should degrade rather than queue behind the cap.</p>
+  <dd><p>The wait was refused because too many waits were already in flight, or ended because the waiter was disposed
+while the host shut down. Load shedding: the request has not been observed to completion, and the caller
+should degrade rather than queue behind the cap.</p>
 </dd>
     <dt id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitOutcome_Stalled"><code>Stalled = 2</code></dt>
   

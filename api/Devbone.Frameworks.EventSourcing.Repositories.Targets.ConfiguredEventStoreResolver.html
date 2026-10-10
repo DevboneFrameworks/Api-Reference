@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ConfiguredEventStoreResolver | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Lazily creates PostgreSQL event stores from logical target configuration.">
+      <meta name="description" content="Lazily creates PostgreSQL event stores from logical target configuration, and owns them: disposing the resolver disposes every store it created, which closes the manual lock sessions those stores hold.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,12 +97,13 @@ Class ConfiguredEventStoreResolver
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventSourcing.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Lazily creates PostgreSQL event stores from logical target configuration.</p>
+  <div class="markdown summary"><p>Lazily creates PostgreSQL event stores from logical target configuration, and owns them: disposing the
+resolver disposes every store it created, which closes the manual lock sessions those stores hold.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ConfiguredEventStoreResolver : IEventStoreResolver</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ConfiguredEventStoreResolver : IEventStoreResolver, IDisposable, IAsyncDisposable</code></pre>
   </div>
 
 
@@ -120,6 +121,8 @@ Class ConfiguredEventStoreResolver
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Targets.IEventStoreResolver.html">IEventStoreResolver</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
     </dd>
   </dl>
 
@@ -163,7 +166,7 @@ Class ConfiguredEventStoreResolver
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Targets.ConfiguredEventStoreResolver.html">ConfiguredEventStoreResolver</a> class.</p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Targets.ConfiguredEventStoreResolver.html">ConfiguredEventStoreResolver</a> class whose stores do not log.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -189,8 +192,107 @@ Class ConfiguredEventStoreResolver
 
 
 
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Targets_ConfiguredEventStoreResolver__ctor_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Targets.ConfiguredEventStoreResolver.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Targets_ConfiguredEventStoreResolver__ctor_Devbone_Frameworks_EventSourcing_Repositories_Targets_EventStoreTargetsOptions_Microsoft_Extensions_Logging_ILoggerFactory_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Targets.ConfiguredEventStoreResolver.#ctor(Devbone.Frameworks.EventSourcing.Repositories.Targets.EventStoreTargetsOptions,Microsoft.Extensions.Logging.ILoggerFactory)">
+  ConfiguredEventStoreResolver(EventStoreTargetsOptions, ILoggerFactory)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Targets.ConfiguredEventStoreResolver.html">ConfiguredEventStoreResolver</a> class whose stores log through
+<code class="paramref">loggerFactory</code>, under the category of <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.EventStore.html">EventStore</a>. Without it, rollback
+failures, lock-session failures and schema mismatches of every resolved store go unreported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConfiguredEventStoreResolver(EventStoreTargetsOptions options, ILoggerFactory loggerFactory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Targets.EventStoreTargetsOptions.html">EventStoreTargetsOptions</a></dt>
+    <dd><p>Logical-to-physical event-store configuration.</p>
+</dd>
+    <dt><code>loggerFactory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggerfactory">ILoggerFactory</a></dt>
+    <dd><p>The factory creating each store's logger.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Targets_ConfiguredEventStoreResolver_Dispose_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Targets.ConfiguredEventStoreResolver.Dispose*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Targets_ConfiguredEventStoreResolver_Dispose" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Targets.ConfiguredEventStoreResolver.Dispose">
+  Dispose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disposes every store this resolver created, closing their manual lock sessions; later resolutions throw.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Targets_ConfiguredEventStoreResolver_DisposeAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Targets.ConfiguredEventStoreResolver.DisposeAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Targets_ConfiguredEventStoreResolver_DisposeAsync" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Targets.ConfiguredEventStoreResolver.DisposeAsync">
+  DisposeAsync()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously disposes every store this resolver created, closing their manual lock sessions; later
+resolutions throw.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask DisposeAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd><p>A task completing after every created store was disposed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
   <a id="Devbone_Frameworks_EventSourcing_Repositories_Targets_ConfiguredEventStoreResolver_Resolve_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Targets.ConfiguredEventStoreResolver.Resolve*"></a>
@@ -229,6 +331,12 @@ Class ConfiguredEventStoreResolver
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The resolver was disposed.</p>
+</dd>
+  </dl>
 
 
 

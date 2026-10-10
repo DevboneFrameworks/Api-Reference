@@ -144,6 +144,10 @@ Class EventPublicationContext
 
 
 
+  <h2 id="Devbone_Frameworks_EventSourcing_Ddd_Mapping_EventPublicationContext_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>There is deliberately no actor: a person who acts belongs in the event payload as a protected field under that
+person's key, while <a class="xref" href="Devbone.Frameworks.EventSourcing.Ddd.Mapping.EventPublicationContext.html#Devbone_Frameworks_EventSourcing_Ddd_Mapping_EventPublicationContext_SourceId">SourceId</a> and <a class="xref" href="Devbone.Frameworks.EventSourcing.Ddd.Mapping.EventPublicationContext.html#Devbone_Frameworks_EventSourcing_Ddd_Mapping_EventPublicationContext_CausationId">CausationId</a> record technical provenance.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -240,38 +244,10 @@ Class EventPublicationContext
 
 
 
-
-
-
-
-  <a id="Devbone_Frameworks_EventSourcing_Ddd_Mapping_EventPublicationContext_PrincipalId_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Mapping.EventPublicationContext.PrincipalId*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Ddd_Mapping_EventPublicationContext_PrincipalId" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Mapping.EventPublicationContext.PrincipalId">
-  PrincipalId
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets or sets the user or system principal identifier.</p>
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Ddd_Mapping_EventPublicationContext_CorrelationId_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The value is written into every immutable outbox envelope unprotected, survives the erasure of a data subject
+and is republished verbatim by every resend. It must be a technical identifier and never carry personal data.</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? PrincipalId { get; init; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
 
 
 

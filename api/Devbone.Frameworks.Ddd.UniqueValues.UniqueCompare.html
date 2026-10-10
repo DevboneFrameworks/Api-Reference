@@ -119,11 +119,13 @@ Enum UniqueCompare
   <dl class="parameters">
     <dt id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCompare_Always"><code>Always = 0</code></dt>
   
-  <dd><p>Always includes the property and substitutes an empty value for <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+  <dd><p>Always includes the property and substitutes an empty value for <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>; without
+serialization that empty value is blank and therefore releases instead of reserving.</p>
 </dd>
     <dt id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCompare_IfNotNull"><code>IfNotNull = 1</code></dt>
   
-  <dd><p>Includes the property only when its value is not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+  <dd><p>Includes the property only when its value is not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>; a blank text value still
+releases instead of reserving.</p>
 </dd>
     <dt id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCompare_IfNotNullOrWhitespace"><code>IfNotNullOrWhitespace = 2</code></dt>
   
@@ -132,6 +134,12 @@ Enum UniqueCompare
   </dl>
 
 
+  <h2 id="Devbone_Frameworks_Ddd_UniqueValues_UniqueCompare_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>An excluded value produces a dummy reservation that releases the aggregate's previous value for the key.
+Independently of the strategy, legacy scalar extraction treats a resulting string that is empty or
+whitespace as no value and releases as well, because every store trims before comparing and no store can
+hold a blank reservation. Serialized and JSON-array values are JSON text and therefore never blank.</p>
+</div>
 
 </article>
 

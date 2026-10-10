@@ -176,6 +176,44 @@ Class EventMetadata
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Devbone_Frameworks_EventBus_Contracts_Messaging_EventMetadata_MAXIMUM_SHORT_STRING_BYTES" data-uid="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata.MAXIMUM_SHORT_STRING_BYTES">
+  MAXIMUM_SHORT_STRING_BYTES
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Longest accepted <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata.html#Devbone_Frameworks_EventBus_Contracts_Messaging_EventMetadata_EventId">EventId</a>, <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata.html#Devbone_Frameworks_EventBus_Contracts_Messaging_EventMetadata_EventName">EventName</a> and <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata.html#Devbone_Frameworks_EventBus_Contracts_Messaging_EventMetadata_CorrelationId">CorrelationId</a>, in UTF-8 bytes.
+RabbitMQ carries them as AMQP short strings, which hold at most 255 bytes; a longer value could never be
+published there and would be retried without end, so it is refused for every transport before the event is
+stored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MAXIMUM_SHORT_STRING_BYTES = 255</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -496,6 +534,12 @@ Class EventMetadata
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_EventBus_Contracts_Messaging_EventMetadata_CorrelationId_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Like every metadata value, it is written once, never protected, survives the erasure of a data subject and is
+republished verbatim by every resend. It must therefore be a technical identifier and never carry personal
+data: do not forward an arbitrary client header into it. A person who acts belongs in the event payload as a
+protected field under that person's key; the envelope deliberately has no actor field.</p>
+</div>
 
 
 
@@ -706,38 +750,6 @@ A <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string? PreviousAggregateConcurrencyToken { get; init; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventBus_Contracts_Messaging_EventMetadata_PrincipalId_" data-uid="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata.PrincipalId*"></a>
-
-  <h3 id="Devbone_Frameworks_EventBus_Contracts_Messaging_EventMetadata_PrincipalId" data-uid="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata.PrincipalId">
-  PrincipalId
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets or sets the principal or system identifier.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? PrincipalId { get; init; }</code></pre>
   </div>
 
 

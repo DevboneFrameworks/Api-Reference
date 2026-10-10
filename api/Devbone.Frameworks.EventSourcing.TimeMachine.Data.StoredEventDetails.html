@@ -165,47 +165,68 @@ Class StoredEventDetails
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>EventId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Unique identifier of the stored event.</p>
+</dd>
     <dt><code>RequestId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Identifier of the aggregate command request that produced this event, shared by every event committed together.</p>
+</dd>
     <dt><code>TenantId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Tenant context the event was committed under, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when tenancy is not in use.</p>
+</dd>
     <dt><code>CreationDateUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
-    <dd></dd>
+    <dd><p>Commit timestamp of the event, in UTC.</p>
+</dd>
     <dt><code>AggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate contract name the event belongs to.</p>
+</dd>
     <dt><code>AggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate identity the event belongs to.</p>
+</dd>
     <dt><code>AggregateRouteId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Resolved logical route identifier persisted with the event, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when routing is not configured.</p>
+</dd>
     <dt><code>AggregateRouteVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
-    <dd></dd>
+    <dd><p>Version of the resolved route persisted with the event, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when routing is not configured.</p>
+</dd>
     <dt><code>AggregateRevision</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate revision assigned to the commit that produced this event.</p>
+</dd>
     <dt><code>EventSequence</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>Monotonic, gap-free position of this event within its aggregate stream; this is the read-side watermark, compared with <code>&gt;=</code> rather than equality.</p>
+</dd>
     <dt><code>EventOrder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Position of this event among the events produced by its own commit, for commits that emit more than one event.</p>
+</dd>
     <dt><code>AggregateLifecycle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Lifecycle marker of the event (for example creation, ordinary, or deletion) preserved through storage and bus boundaries.</p>
+</dd>
     <dt><code>EventName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Event contract name, the wire type identifier ending in <code>.created</code> or <code>.deleted</code> for lifecycle events.</p>
+</dd>
     <dt><code>EventVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Version of the event contract that produced this payload.</p>
+</dd>
     <dt><code>PrivacyClassification</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Privacy classification recorded for the event, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when privacy support is disabled.</p>
+</dd>
     <dt><code>PrivacyRetentionPolicy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Retention policy recorded for the event, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when none applies.</p>
+</dd>
     <dt><code>PrivacyDataSubjects</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Data subject references recorded for the event, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when none apply.</p>
+</dd>
     <dt><code>Payload</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Serialized event payload exactly as persisted.</p>
+</dd>
     <dt><code>PreviousAggregateConcurrencyToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Concurrency token in effect before this event was committed, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for the first event in the stream.</p>
+</dd>
     <dt><code>AggregateConcurrencyToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Opaque concurrency token established after this event was committed.</p>
+</dd>
     <dt><code>AggregateCommitEventCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Total number of events produced by the commit this event belongs to.</p>
+</dd>
   </dl>
 
 
@@ -230,7 +251,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Total number of events produced by the commit this event belongs to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -261,7 +283,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Opaque concurrency token established after this event was committed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -292,7 +315,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregate identity the event belongs to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -323,7 +347,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Lifecycle marker of the event (for example creation, ordinary, or deletion) preserved through storage and bus boundaries.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -354,7 +379,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregate contract name the event belongs to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -385,7 +411,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregate revision assigned to the commit that produced this event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -416,7 +443,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resolved logical route identifier persisted with the event, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when routing is not configured.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -447,7 +475,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Version of the resolved route persisted with the event, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when routing is not configured.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -478,7 +507,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Commit timestamp of the event, in UTC.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -509,7 +539,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Unique identifier of the stored event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -540,7 +571,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Event contract name, the wire type identifier ending in <code>.created</code> or <code>.deleted</code> for lifecycle events.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -571,7 +603,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Position of this event among the events produced by its own commit, for commits that emit more than one event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -602,7 +635,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Monotonic, gap-free position of this event within its aggregate stream; this is the read-side watermark, compared with <code>&gt;=</code> rather than equality.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -633,7 +667,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Version of the event contract that produced this payload.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -664,7 +699,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Serialized event payload exactly as persisted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -695,7 +731,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Concurrency token in effect before this event was committed, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for the first event in the stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -726,7 +763,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Privacy classification recorded for the event, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when privacy support is disabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -757,7 +795,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Data subject references recorded for the event, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when none apply.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -788,7 +827,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Retention policy recorded for the event, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when none applies.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -819,7 +859,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Identifier of the aggregate command request that produced this event, shared by every event committed together.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -850,7 +891,8 @@ Class StoredEventDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Tenant context the event was committed under, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when tenancy is not in use.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">

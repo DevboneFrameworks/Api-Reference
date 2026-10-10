@@ -159,7 +159,8 @@ Class HttpEventPersistenceRepository
 
   <h2 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>The repository is safe for concurrent use when its <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> is safe for concurrent use.
-Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve the established application API.</p>
+Every port is asynchronous and passes the caller's cancellation token to the HTTP request; the synchronous HTTP calls the
+synchronous ports needed were removed with them (Devbone.Frameworks.EventPersistence.Client 6.0.0).</p>
 </div>
 
 
@@ -216,213 +217,10 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
 </h2>
 
 
-  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEvents_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEvents*"></a>
+  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEventsAsync_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEventsAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEvents_Devbone_Frameworks_Ddd_Repositories_IStoredEvent_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEvents(Devbone.Frameworks.Ddd.Repositories.IStoredEvent)">
-  AddEvents(IStoredEvent)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Persists one event row.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEventStoredResult AddEvents(IStoredEvent @event)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>event</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a></dt>
-    <dd><p>Stored event row.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
-    <dd><p>A successful result after persistence, or a failed result for conflicts and persistence errors.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEvents_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEvents*"></a>
-
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEvents_Devbone_Frameworks_Ddd_Repositories_IStoredEvent_System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty__" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEvents(Devbone.Frameworks.Ddd.Repositories.IStoredEvent,System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty})">
-  AddEvents(IStoredEvent, IReadOnlySet&lt;UniqueProperty&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Persists one event row together with unique value constraints.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEventStoredResult AddEvents(IStoredEvent @event, IReadOnlySet&lt;UniqueProperty&gt; uniqueValues)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>event</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a></dt>
-    <dd><p>Stored event row.</p>
-</dd>
-    <dt><code>uniqueValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html">UniqueProperty</a>&gt;</dt>
-    <dd><p>Unique value constraints derived from the event.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
-    <dd><p>A successful atomic write result, or a failed result without partial event or unique-index changes.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEvents_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEvents*"></a>
-
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEvents_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEvents(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[])">
-  AddEvents(IStoredEvent[])
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Persists multiple event rows.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEventStoredResult AddEvents(IStoredEvent[] events)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>[]</dt>
-    <dd><p>Stored event rows.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
-    <dd><p>A successful result after the complete atomic batch, or a failed result without partial writes.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEvents_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEvents*"></a>
-
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEvents_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty__" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEvents(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[],System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty})">
-  AddEvents(IStoredEvent[], IReadOnlySet&lt;UniqueProperty&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Persists event rows together with unique value constraints.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEventStoredResult AddEvents(IStoredEvent[] events, IReadOnlySet&lt;UniqueProperty&gt; uniqueValues)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>[]</dt>
-    <dd><p>Stored event rows.</p>
-</dd>
-    <dt><code>uniqueValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html">UniqueProperty</a>&gt;</dt>
-    <dd><p>Unique value constraints derived from events.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
-    <dd><p>A successful atomic write result, or a failed result without partial event or unique-index changes.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEvents_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEvents*"></a>
-
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEvents_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty__Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshot_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEvents(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[],System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty},Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshot)">
-  AddEvents(IStoredEvent[], IReadOnlySet&lt;UniqueProperty&gt;, AggregateSnapshot)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Persists all event rows, unique values, and the supplied snapshot atomically.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEventStoredResult AddEvents(IStoredEvent[] events, IReadOnlySet&lt;UniqueProperty&gt; uniqueValues, AggregateSnapshot snapshot)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>[]</dt>
-    <dd></dd>
-    <dt><code>uniqueValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html">UniqueProperty</a>&gt;</dt>
-    <dd></dd>
-    <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEvents_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEvents*"></a>
-
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEvents_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty__Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshot_System_String_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEvents(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[],System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty},Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshot,System.String)">
-  AddEvents(IStoredEvent[], IReadOnlySet&lt;UniqueProperty&gt;, AggregateSnapshot?, string)
+  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEventsAsync_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty__Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshot_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEventsAsync(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[],System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty},Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshot,System.String,System.Threading.CancellationToken)">
+  AddEventsAsync(IStoredEvent[], IReadOnlySet&lt;UniqueProperty&gt;, AggregateSnapshot?, string, CancellationToken)
   
   </h3>
 
@@ -431,7 +229,7 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEventStoredResult AddEvents(IStoredEvent[] events, IReadOnlySet&lt;UniqueProperty&gt; uniqueValues, AggregateSnapshot? snapshot, string aggregateStateJson)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IEventStoredResult&gt; AddEventsAsync(IStoredEvent[] events, IReadOnlySet&lt;UniqueProperty&gt; uniqueValues, AggregateSnapshot? snapshot, string aggregateStateJson, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -448,11 +246,14 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
     <dt><code>aggregateStateJson</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Final aggregate state used by the remote write-side compatibility guard.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the write.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a>&gt;</dt>
     <dd><p>The atomic persistence result.</p>
 </dd>
   </dl>
@@ -467,32 +268,41 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
 
 
 
-  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_GetAggregateIds_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.GetAggregateIds*"></a>
+  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEventsAsync_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEventsAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_GetAggregateIds_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.GetAggregateIds(Devbone.Frameworks.Ddd.Aggregates.IAggregateName)">
-  GetAggregateIds(IAggregateName)
+  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEventsAsync_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty__Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshot_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEventsAsync(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[],System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty},Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshot,System.Threading.CancellationToken)">
+  AddEventsAsync(IStoredEvent[], IReadOnlySet&lt;UniqueProperty&gt;, AggregateSnapshot, CancellationToken)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets all aggregate ids known for the specified aggregate name.</p>
+  <div class="markdown level1 summary"><p>Persists all event rows, unique values, and the supplied snapshot atomically.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; GetAggregateIds(IAggregateName aggregateName)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IEventStoredResult&gt; AddEventsAsync(IStoredEvent[] events, IReadOnlySet&lt;UniqueProperty&gt; uniqueValues, AggregateSnapshot snapshot, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>aggregateName</code> <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateName.html">IAggregateName</a></dt>
-    <dd><p>Aggregate name.</p>
+    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>[]</dt>
+    <dd><p>Stored event rows to persist.</p>
+</dd>
+    <dt><code>uniqueValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html">UniqueProperty</a>&gt;</dt>
+    <dd><p>Unique value constraints derived from the events.</p>
+</dd>
+    <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
+    <dd><p>Aggregate snapshot to persist alongside the events, replacing any prior snapshot for the aggregate.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the write.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>Known aggregate id values.</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a>&gt;</dt>
+    <dd><p>A successful atomic write result, or a failed result without partial event, unique-index, or snapshot changes.</p>
 </dd>
   </dl>
 
@@ -506,10 +316,97 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
 
 
 
-  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_GetCurrentIncrements_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.GetCurrentIncrements*"></a>
+  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEventsAsync_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEventsAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_GetCurrentIncrements_Devbone_Frameworks_Ddd_IncrementValues_IIncrementGlobalProperty_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.GetCurrentIncrements(Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty)">
-  GetCurrentIncrements(IIncrementGlobalProperty)
+  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEventsAsync_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEventsAsync(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[],System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty},System.Threading.CancellationToken)">
+  AddEventsAsync(IStoredEvent[], IReadOnlySet&lt;UniqueProperty&gt;, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Persists event rows together with unique value constraints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IEventStoredResult&gt; AddEventsAsync(IStoredEvent[] events, IReadOnlySet&lt;UniqueProperty&gt; uniqueValues, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>[]</dt>
+    <dd><p>Stored event rows.</p>
+</dd>
+    <dt><code>uniqueValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html">UniqueProperty</a>&gt;</dt>
+    <dd><p>Unique value constraints derived from events.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the write.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a>&gt;</dt>
+    <dd><p>A successful atomic write result, or a failed result without partial event or unique-index changes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEventsAsync_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEventsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_AddEventsAsync_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.AddEventsAsync(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[],System.Threading.CancellationToken)">
+  AddEventsAsync(IStoredEvent[], CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Persists multiple event rows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IEventStoredResult&gt; AddEventsAsync(IStoredEvent[] events, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>[]</dt>
+    <dd><p>Stored event rows.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the write.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a>&gt;</dt>
+    <dd><p>A successful result after the complete atomic batch, or a failed result without partial writes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_GetCurrentIncrementsAsync_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.GetCurrentIncrementsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_GetCurrentIncrementsAsync_Devbone_Frameworks_Ddd_IncrementValues_IIncrementGlobalProperty_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.GetCurrentIncrementsAsync(Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty,System.Threading.CancellationToken)">
+  GetCurrentIncrementsAsync(IIncrementGlobalProperty, CancellationToken)
   
   </h3>
 
@@ -518,7 +415,7 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long GetCurrentIncrements(IIncrementGlobalProperty incrementGlobal)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;long&gt; GetCurrentIncrementsAsync(IIncrementGlobalProperty incrementGlobal, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -526,11 +423,14 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
     <dt><code>incrementGlobal</code> <a class="xref" href="Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty.html">IIncrementGlobalProperty</a></dt>
     <dd><p>Increment key.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the read.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
     <dd><p>Current increment value.</p>
 </dd>
   </dl>
@@ -545,10 +445,10 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
 
 
 
-  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_GetNextIncrements_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.GetNextIncrements*"></a>
+  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_GetNextIncrementsAsync_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.GetNextIncrementsAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_GetNextIncrements_System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_IncrementValues_IIncrementGlobalProperty__" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.GetNextIncrements(System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty})">
-  GetNextIncrements(IReadOnlySet&lt;IIncrementGlobalProperty&gt;)
+  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_GetNextIncrementsAsync_System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_IncrementValues_IIncrementGlobalProperty__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.GetNextIncrementsAsync(System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty},System.Threading.CancellationToken)">
+  GetNextIncrementsAsync(IReadOnlySet&lt;IIncrementGlobalProperty&gt;, CancellationToken)
   
   </h3>
 
@@ -557,7 +457,7 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IncrementGlobalAllocation[] GetNextIncrements(IReadOnlySet&lt;IIncrementGlobalProperty&gt; incrementGlobals)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IncrementGlobalAllocation[]&gt; GetNextIncrementsAsync(IReadOnlySet&lt;IIncrementGlobalProperty&gt; incrementGlobals, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -565,11 +465,14 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
     <dt><code>incrementGlobals</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty.html">IIncrementGlobalProperty</a>&gt;</dt>
     <dd><p>Increment keys.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the allocation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html">IncrementGlobalAllocation</a>[]</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html">IncrementGlobalAllocation</a>[]&gt;</dt>
     <dd><p>Distinct next values allocated atomically for the requested keys.</p>
 </dd>
   </dl>
@@ -584,10 +487,10 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
 
 
 
-  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_HasProcessedRequest_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.HasProcessedRequest*"></a>
+  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_HasProcessedRequestAsync_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.HasProcessedRequestAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_HasProcessedRequest_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Core_IIdentity_Devbone_Frameworks_Ddd_Core_IRequestId_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.HasProcessedRequest(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IIdentity,Devbone.Frameworks.Ddd.Core.IRequestId)">
-  HasProcessedRequest(IAggregateName, IIdentity, IRequestId)
+  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_HasProcessedRequestAsync_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Core_IIdentity_Devbone_Frameworks_Ddd_Core_IRequestId_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.HasProcessedRequestAsync(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IIdentity,Devbone.Frameworks.Ddd.Core.IRequestId,System.Threading.CancellationToken)">
+  HasProcessedRequestAsync(IAggregateName, IIdentity, IRequestId, CancellationToken)
   
   </h3>
 
@@ -596,23 +499,30 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HasProcessedRequest(IAggregateName aggregateName, IIdentity aggregateId, IRequestId requestId)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; HasProcessedRequestAsync(IAggregateName aggregateName, IIdentity aggregateId, IRequestId requestId, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateName.html">IAggregateName</a></dt>
-    <dd></dd>
+    <dd><p>Stable aggregate contract name.</p>
+</dd>
     <dt><code>aggregateId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IIdentity.html">IIdentity</a></dt>
-    <dd></dd>
+    <dd><p>Globally unique aggregate identity.</p>
+</dd>
     <dt><code>requestId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IRequestId.html">IRequestId</a></dt>
-    <dd></dd>
+    <dd><p>Request identity to check for idempotent retry detection.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the read.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when an event carrying <code class="paramref">requestId</code> was already committed; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
   </dl>
 
 
@@ -625,10 +535,10 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
 
 
 
-  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_LoadAggregate_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.LoadAggregate*"></a>
+  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_LoadAggregateAsync_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.LoadAggregateAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_LoadAggregate_Devbone_Frameworks_Ddd_Core_IIdentity_System_Boolean_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.LoadAggregate(Devbone.Frameworks.Ddd.Core.IIdentity,System.Boolean)">
-  LoadAggregate(IIdentity, bool)
+  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_LoadAggregateAsync_Devbone_Frameworks_Ddd_Core_IIdentity_System_Boolean_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.LoadAggregateAsync(Devbone.Frameworks.Ddd.Core.IIdentity,System.Boolean,System.Threading.CancellationToken)">
+  LoadAggregateAsync(IIdentity, bool, CancellationToken)
   
   </h3>
 
@@ -637,7 +547,7 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;IStoredEvent&gt; LoadAggregate(IIdentity aggregateId, bool skipPublishCheck = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;IStoredEvent&gt;&gt; LoadAggregateAsync(IIdentity aggregateId, bool skipPublishCheck = false, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -648,11 +558,14 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
     <dt><code>skipPublishCheck</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd><p>Indicates whether unpublished-state checks are skipped.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the read.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>&gt;&gt;</dt>
     <dd><p>Stored event sequence ordered by aggregate version.</p>
 </dd>
   </dl>
@@ -667,10 +580,10 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
 
 
 
-  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_LoadForRehydration_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.LoadForRehydration*"></a>
+  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_LoadForRehydrationAsync_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.LoadForRehydrationAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_LoadForRehydration_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Core_IIdentity_System_Boolean_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.LoadForRehydration(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IIdentity,System.Boolean)">
-  LoadForRehydration(IAggregateName, IIdentity, bool)
+  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_LoadForRehydrationAsync_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Core_IIdentity_System_Boolean_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.LoadForRehydrationAsync(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IIdentity,System.Boolean,System.Threading.CancellationToken)">
+  LoadForRehydrationAsync(IAggregateName, IIdentity, bool, CancellationToken)
   
   </h3>
 
@@ -679,23 +592,32 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AggregateRehydration LoadForRehydration(IAggregateName aggregateName, IIdentity aggregateId, bool skipPublishCheck = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;AggregateRehydration&gt; LoadForRehydrationAsync(IAggregateName aggregateName, IIdentity aggregateId, bool skipPublishCheck = false, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateName.html">IAggregateName</a></dt>
-    <dd></dd>
+    <dd><p>Stable aggregate contract name.</p>
+</dd>
     <dt><code>aggregateId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IIdentity.html">IIdentity</a></dt>
-    <dd></dd>
+    <dd><p>Globally unique aggregate identity.</p>
+</dd>
     <dt><code>skipPublishCheck</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, includes events that have not yet been confirmed published; used for
+existence and state checks that neither execute a command nor publish anything, so an unpublished
+trailing event must not block them. Defaults to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> for ordinary rehydration.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the read.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.AggregateRehydration.html">AggregateRehydration</a></dt>
-    <dd></dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.AggregateRehydration.html">AggregateRehydration</a>&gt;</dt>
+    <dd><p>The optional snapshot and every subsequent event needed to rehydrate the aggregate.</p>
+</dd>
   </dl>
 
 
@@ -708,10 +630,10 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
 
 
 
-  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_RemoveUniques_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.RemoveUniques*"></a>
+  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_RemoveUniquesAsync_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.RemoveUniquesAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_RemoveUniques_Devbone_Frameworks_Ddd_Core_IIdentity_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.RemoveUniques(Devbone.Frameworks.Ddd.Core.IIdentity)">
-  RemoveUniques(IIdentity)
+  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_RemoveUniquesAsync_Devbone_Frameworks_Ddd_Core_IIdentity_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.RemoveUniquesAsync(Devbone.Frameworks.Ddd.Core.IIdentity,System.Threading.CancellationToken)">
+  RemoveUniquesAsync(IIdentity, CancellationToken)
   
   </h3>
 
@@ -720,7 +642,7 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEventStoredResult RemoveUniques(IIdentity aggregateId)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IEventStoredResult&gt; RemoveUniquesAsync(IIdentity aggregateId, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -728,11 +650,14 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
     <dt><code>aggregateId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IIdentity.html">IIdentity</a></dt>
     <dd><p>Aggregate identity.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the write.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a>&gt;</dt>
     <dd><p>Write result.</p>
 </dd>
   </dl>
@@ -747,10 +672,10 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
 
 
 
-  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_ShouldCreateSnapshot_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.ShouldCreateSnapshot*"></a>
+  <a id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_ShouldCreateSnapshotAsync_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.ShouldCreateSnapshotAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_ShouldCreateSnapshot_System_String_System_String_System_Int64_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.ShouldCreateSnapshot(System.String,System.String,System.Int64)">
-  ShouldCreateSnapshot(string, string, long)
+  <h3 id="Devbone_Frameworks_EventPersistence_Client_HttpEventPersistenceRepository_ShouldCreateSnapshotAsync_System_String_System_String_System_Int64_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventPersistence.Client.HttpEventPersistenceRepository.ShouldCreateSnapshotAsync(System.String,System.String,System.Int64,System.Threading.CancellationToken)">
+  ShouldCreateSnapshotAsync(string, string, long, CancellationToken)
   
   </h3>
 
@@ -759,23 +684,30 @@ Synchronous DDD ports intentionally perform synchronous HTTP calls to preserve t
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ShouldCreateSnapshot(string aggregateName, string aggregateId, long aggregateVersion)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; ShouldCreateSnapshotAsync(string aggregateName, string aggregateId, long aggregateVersion, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Stable aggregate contract name.</p>
+</dd>
     <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Globally unique aggregate identity value.</p>
+</dd>
     <dt><code>aggregateVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>Stream position reached after the events being committed are applied.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the read.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when a snapshot should be created at this position; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
   </dl>
 
 

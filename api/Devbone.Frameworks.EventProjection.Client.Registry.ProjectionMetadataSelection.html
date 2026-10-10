@@ -369,6 +369,62 @@ applicability metadata at that point.</p>
 </h2>
 
 
+  <a id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection_CreateBarriers_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.CreateBarriers*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection_CreateBarriers_System_Collections_Generic_IEnumerable_Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWrite__" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.CreateBarriers(System.Collections.Generic.IEnumerable{Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWrite})">
+  CreateBarriers(IEnumerable&lt;ReadModelWrite&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Combines this frozen selection with what the command actually wrote, exactly once after the commit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;ReadModelBarrier&gt; CreateBarriers(IEnumerable&lt;ReadModelWrite&gt; writes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>writes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWrite.html">ReadModelWrite</a>&gt;</dt>
+    <dd><p>The aggregate positions the command's commit receipts report.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrier.html">ReadModelBarrier</a>&gt;</dt>
+    <dd><p>One barrier per selected projection and written aggregate it observes, at the highest position written for
+that aggregate, ordered by projection name and aggregate identifier. Store them with the request and reuse
+them unchanged for every poll.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection_CreateBarriers_System_Collections_Generic_IEnumerable_Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWrite___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The framework layers become <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrier.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrier_OnRaw_System_String_System_String_System_Int64_">OnRaw(string, string, long)</a> and <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrier.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrier_OnMerged_System_String_System_String_System_Int64_">OnMerged(string, string, long)</a>
+barriers; an application query model carries its frozen <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor.html#Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor_DefinitionVersion">DefinitionVersion</a>,
+so a later definition cannot satisfy it. A written aggregate the projection does not observe produces no
+barrier. Before 8.3.0 every API host implemented this rule itself.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when <code class="paramref">writes</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when the selection is not <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.html#Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection_IsValid">IsValid</a>.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection_Deconstruct_" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.Deconstruct*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Client_Registry_ProjectionMetadataSelection_Deconstruct_System_String__System_Collections_Generic_IReadOnlyList_Devbone_Frameworks_EventProjection_Client_Registry_ProjectionDescriptor___System_Collections_Generic_IReadOnlyList_System_String___System_Collections_Generic_IReadOnlyList_System_String___" data-uid="Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.Deconstruct(System.String@,System.Collections.Generic.IReadOnlyList{Devbone.Frameworks.EventProjection.Client.Registry.ProjectionDescriptor}@,System.Collections.Generic.IReadOnlyList{System.String}@,System.Collections.Generic.IReadOnlyList{System.String}@)">

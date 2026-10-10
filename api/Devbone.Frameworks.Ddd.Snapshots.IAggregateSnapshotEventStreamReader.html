@@ -115,10 +115,7 @@ Interface IAggregateSnapshotEventStreamReader
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.html#Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_LoadAggregate_Devbone_Frameworks_Ddd_Core_IIdentity_System_Boolean_">IEventStreamReader.LoadAggregate(IIdentity, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.html#Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_GetAggregateIds_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_">IEventStreamReader.GetAggregateIds(IAggregateName)</a>
+      <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.html#Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_LoadAggregateAsync_Devbone_Frameworks_Ddd_Core_IIdentity_System_Boolean_System_Threading_CancellationToken_">IEventStreamReader.LoadAggregateAsync(IIdentity, bool, CancellationToken)</a>
     </div>
   </dd></dl>
 
@@ -131,10 +128,10 @@ Interface IAggregateSnapshotEventStreamReader
 </h2>
 
 
-  <a id="Devbone_Frameworks_Ddd_Snapshots_IAggregateSnapshotEventStreamReader_HasProcessedRequest_" data-uid="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotEventStreamReader.HasProcessedRequest*"></a>
+  <a id="Devbone_Frameworks_Ddd_Snapshots_IAggregateSnapshotEventStreamReader_HasProcessedRequestAsync_" data-uid="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotEventStreamReader.HasProcessedRequestAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Snapshots_IAggregateSnapshotEventStreamReader_HasProcessedRequest_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Core_IIdentity_Devbone_Frameworks_Ddd_Core_IRequestId_" data-uid="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotEventStreamReader.HasProcessedRequest(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IIdentity,Devbone.Frameworks.Ddd.Core.IRequestId)">
-  HasProcessedRequest(IAggregateName, IIdentity, IRequestId)
+  <h3 id="Devbone_Frameworks_Ddd_Snapshots_IAggregateSnapshotEventStreamReader_HasProcessedRequestAsync_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Core_IIdentity_Devbone_Frameworks_Ddd_Core_IRequestId_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotEventStreamReader.HasProcessedRequestAsync(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IIdentity,Devbone.Frameworks.Ddd.Core.IRequestId,System.Threading.CancellationToken)">
+  HasProcessedRequestAsync(IAggregateName, IIdentity, IRequestId, CancellationToken)
   
   </h3>
 
@@ -143,23 +140,30 @@ Interface IAggregateSnapshotEventStreamReader
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool HasProcessedRequest(IAggregateName aggregateName, IIdentity aggregateId, IRequestId requestId)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;bool&gt; HasProcessedRequestAsync(IAggregateName aggregateName, IIdentity aggregateId, IRequestId requestId, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateName.html">IAggregateName</a></dt>
-    <dd></dd>
+    <dd><p>Stable aggregate contract name.</p>
+</dd>
     <dt><code>aggregateId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IIdentity.html">IIdentity</a></dt>
-    <dd></dd>
+    <dd><p>Globally unique aggregate identity.</p>
+</dd>
     <dt><code>requestId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IRequestId.html">IRequestId</a></dt>
-    <dd></dd>
+    <dd><p>Request identity to check for idempotent retry detection.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the read.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when an event carrying <code class="paramref">requestId</code> was already committed; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
   </dl>
 
 
@@ -172,10 +176,10 @@ Interface IAggregateSnapshotEventStreamReader
 
 
 
-  <a id="Devbone_Frameworks_Ddd_Snapshots_IAggregateSnapshotEventStreamReader_LoadForRehydration_" data-uid="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotEventStreamReader.LoadForRehydration*"></a>
+  <a id="Devbone_Frameworks_Ddd_Snapshots_IAggregateSnapshotEventStreamReader_LoadForRehydrationAsync_" data-uid="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotEventStreamReader.LoadForRehydrationAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Snapshots_IAggregateSnapshotEventStreamReader_LoadForRehydration_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Core_IIdentity_System_Boolean_" data-uid="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotEventStreamReader.LoadForRehydration(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IIdentity,System.Boolean)">
-  LoadForRehydration(IAggregateName, IIdentity, bool)
+  <h3 id="Devbone_Frameworks_Ddd_Snapshots_IAggregateSnapshotEventStreamReader_LoadForRehydrationAsync_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Core_IIdentity_System_Boolean_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotEventStreamReader.LoadForRehydrationAsync(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IIdentity,System.Boolean,System.Threading.CancellationToken)">
+  LoadForRehydrationAsync(IAggregateName, IIdentity, bool, CancellationToken)
   
   </h3>
 
@@ -184,23 +188,32 @@ Interface IAggregateSnapshotEventStreamReader
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">AggregateRehydration LoadForRehydration(IAggregateName aggregateName, IIdentity aggregateId, bool skipPublishCheck = false)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;AggregateRehydration&gt; LoadForRehydrationAsync(IAggregateName aggregateName, IIdentity aggregateId, bool skipPublishCheck = false, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateName.html">IAggregateName</a></dt>
-    <dd></dd>
+    <dd><p>Stable aggregate contract name.</p>
+</dd>
     <dt><code>aggregateId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IIdentity.html">IIdentity</a></dt>
-    <dd></dd>
+    <dd><p>Globally unique aggregate identity.</p>
+</dd>
     <dt><code>skipPublishCheck</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>When <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, includes events that have not yet been confirmed published; used for
+existence and state checks that neither execute a command nor publish anything, so an unpublished
+trailing event must not block them. Defaults to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> for ordinary rehydration.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the read.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.AggregateRehydration.html">AggregateRehydration</a></dt>
-    <dd></dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.AggregateRehydration.html">AggregateRehydration</a>&gt;</dt>
+    <dd><p>The optional snapshot and every subsequent event needed to rehydrate the aggregate.</p>
+</dd>
   </dl>
 
 

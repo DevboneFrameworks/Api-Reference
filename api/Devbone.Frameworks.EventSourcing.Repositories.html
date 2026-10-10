@@ -96,21 +96,22 @@ Classes
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.EventStore.html">EventStore</a></dt>
-      <dd><p>Contains asynchronous event store operations that mirror the synchronous API.</p>
+      <dd><p>Contains the core event store operations of <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.IEventStore.html">IEventStore</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.StoredStreamIdentity.html">StoredStreamIdentity</a></dt>
+      <dd><p>One identity recorded for an aggregate stream: what a caller is authorized against, read without event
+payloads.</p>
 </dd>
     </dl>
     <h3 id="interfaces">
 Interfaces
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.html">IAsyncEventStore</a></dt>
-      <dd><p>Defines the asynchronous public API contract for core event persistence and retrieval.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.IEventStore.html">IEventStore</a></dt>
-      <dd><p>Defines the synchronous public API contract for event persistence and retrieval.
-Aggregate locking is exposed separately through <a class="xref" href="Devbone.Frameworks.EventSourcing.Locks.IAggregateLockStore.html">IAggregateLockStore</a>.</p>
+      <dd><p>Defines the public API contract for core event persistence and retrieval, and the handle a configured store is
+reached through.</p>
 </dd>
     </dl>
 

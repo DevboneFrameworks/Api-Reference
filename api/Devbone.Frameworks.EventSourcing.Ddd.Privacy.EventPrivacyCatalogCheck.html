@@ -243,13 +243,19 @@ scalar arrays, maps and objects beyond the catalogue's nesting depth count as on
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Ddd_Privacy_EventPrivacyCatalogCheck_Verify_System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyDefinition__System_Collections_Generic_IReadOnlyList_Devbone_Frameworks_Ddd_Catalog_EventContractDescriptor___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The catalogue describes the current write version of each contract only. A definition for that version is
+verified; a definition for an earlier version is kept for events already stored, governs no write and is
+skipped, because the current shape says nothing about the old one. A catalogue without versions
+verifies every definition, as before.</p>
+</div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>Thrown when a contract with protected fields is not in the catalogue, a protected path is not in the
-contract (including a path into an array without the element wildcard), is not a string, or is removed
-on erasure while it is required or not nullable.</p>
+    <dd><p>Thrown when a contract with protected fields is not in the catalogue, a definition names a version newer
+than the catalogue's, a protected path is not in the contract (including a path into an array without the
+element wildcard), is not a string, or is removed on erasure while it is required or not nullable.</p>
 </dd>
   </dl>
 

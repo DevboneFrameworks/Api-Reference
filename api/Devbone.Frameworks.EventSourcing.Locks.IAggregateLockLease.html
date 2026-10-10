@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IAggregateLockLease | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Represents exclusive ownership of one aggregate advisory lock. Disposing the lease releases the owning PostgreSQL session lock exactly once.">
+      <meta name="description" content="Represents exclusive ownership of one aggregate advisory lock. Disposing the lease asynchronously releases the owning PostgreSQL session lock exactly once.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -98,12 +98,12 @@ Interface IAggregateLockLease
   </div>
 
   <div class="markdown summary"><p>Represents exclusive ownership of one aggregate advisory lock.
-Disposing the lease releases the owning PostgreSQL session lock exactly once.</p>
+Disposing the lease asynchronously releases the owning PostgreSQL session lock exactly once.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IAggregateLockLease : IDisposable, IAsyncDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IAggregateLockLease : IAsyncDisposable</code></pre>
   </div>
 
 
@@ -116,9 +116,6 @@ Disposing the lease releases the owning PostgreSQL session lock exactly once.</p
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync">IAsyncDisposable.DisposeAsync()</a>
     </div>
   </dd></dl>
@@ -126,6 +123,11 @@ Disposing the lease releases the owning PostgreSQL session lock exactly once.</p
 
 
 
+  <h2 id="Devbone_Frameworks_EventSourcing_Locks_IAggregateLockLease_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>The lease is released with <code>await using</code> or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync">DisposeAsync()</a>. A synchronous
+<code>Dispose</code> was removed in Devbone.Frameworks.EventSourcing 22.0.0: the release runs
+<code>pg_advisory_unlock</code> on the lease's session, and a synchronous release blocked a thread on that round trip.</p>
+</div>
 
 
   <h2 class="section" id="properties">Properties
@@ -171,7 +173,7 @@ Disposing the lease releases the owning PostgreSQL session lock exactly once.</p
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a value indicating whether ownership has already been released.</p>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether ownership has already been released explicitly, by disposing this lease.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -192,7 +194,73 @@ Disposing the lease releases the owning PostgreSQL session lock exactly once.</p
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Locks_IAggregateLockLease_IsReleased_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>It reports the holder's own release only. A lease whose PostgreSQL session ended underneath it still reports
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> here; <a class="xref" href="Devbone.Frameworks.EventSourcing.Locks.IAggregateLockLease.html#Devbone_Frameworks_EventSourcing_Locks_IAggregateLockLease_IsHeldAsync_System_Threading_CancellationToken_">IsHeldAsync(CancellationToken)</a> is the member that can see that.</p>
+</div>
 
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Locks_IAggregateLockLease_IsHeldAsync_" data-uid="Devbone.Frameworks.EventSourcing.Locks.IAggregateLockLease.IsHeldAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Locks_IAggregateLockLease_IsHeldAsync_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Locks.IAggregateLockLease.IsHeldAsync(System.Threading.CancellationToken)">
+  IsHeldAsync(CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether this lease still holds its lock, including whether the session holding it is still alive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; IsHeldAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the check.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the lock is still held; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> after an explicit release or when
+the session that held it is gone.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Locks_IAggregateLockLease_IsHeldAsync_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Added in Devbone.Frameworks.EventSourcing 20.3.0. A session advisory lock lives exactly as long as
+its session: a server restart, a failover, <code>pg_terminate_backend</code>, <code>idle_session_timeout</code> or a
+dropped connection releases it without the holder noticing. The leases of <code>EventStore</code> answer with one
+trivial round trip on the lease's own session, so a live session means a held lock; any failure means the
+lock is gone, and that answer is final.
+</p>
+<p>
+The default implementation can only see an explicit release and returns <code>IsReleased == false</code>.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p><code class="paramref">cancellationToken</code> was cancelled.</p>
+</dd>
+  </dl>
 
 
 

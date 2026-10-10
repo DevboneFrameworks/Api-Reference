@@ -133,7 +133,10 @@ them, so the zero-code deployment produces exactly the same broker traffic as be
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.MissingReferencesRetryProcessor.html">MissingReferencesRetryProcessor</a></dt>
-      <dd><p>Retries incomplete same-tenant reference enrichment with bounded attempts.</p>
+      <dd><p>Retries incomplete same-tenant reference enrichment with bounded attempts. Once the references resolve, or the
+aggregate was deleted meanwhile, it hands the aggregate back to the merged stage through an ordinary raw-applied
+notification instead of writing merged state itself: the merged stage also creates the durable derived work and
+refreshes the dependents, which a second write path had skipped.</p>
 </dd>
     </dl>
     <dl class="jumplist">

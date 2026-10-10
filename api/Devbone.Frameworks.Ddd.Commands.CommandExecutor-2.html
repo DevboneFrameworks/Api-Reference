@@ -361,57 +361,6 @@ and performs the aggregate's explicit commit only after successful handling.</p>
 </h2>
 
 
-  <a id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_ExecuteLocked_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.ExecuteLocked*"></a>
-
-  <h3 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_ExecuteLocked_Devbone_Frameworks_Ddd_Core_IRequestId__1_System_Func_Devbone_Frameworks_Ddd_Results_IAggregateModificationResult__" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.ExecuteLocked(Devbone.Frameworks.Ddd.Core.IRequestId,`1,System.Func{Devbone.Frameworks.Ddd.Results.IAggregateModificationResult})">
-  ExecuteLocked(IRequestId, TIdentity, Func&lt;IAggregateModificationResult&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Executes the given callback under an aggregate lock.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IAggregateModificationResult&gt; ExecuteLocked(IRequestId requestId, TIdentity aggregateId, Func&lt;IAggregateModificationResult&gt; executor)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>requestId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IRequestId.html">IRequestId</a></dt>
-    <dd><p>Request identity recorded as the lock owner.</p>
-</dd>
-    <dt><code>aggregateId</code> <span class="xref">TIdentity</span></dt>
-    <dd><p>Identity of the aggregate stream to lock.</p>
-</dd>
-    <dt><code>executor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IAggregateModificationResult.html">IAggregateModificationResult</a>&gt;</dt>
-    <dd><p>Synchronous operation invoked only after lock acquisition.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IAggregateModificationResult.html">IAggregateModificationResult</a>&gt;</dt>
-    <dd><p>The callback result, or a failed result when lock acquisition is rejected.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown when an argument is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
   <a id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_ExecuteLockedAsync_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.ExecuteLockedAsync*"></a>
 
   <h3 id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_ExecuteLockedAsync_Devbone_Frameworks_Ddd_Core_IRequestId__1_System_Func_System_Threading_Tasks_Task_Devbone_Frameworks_Ddd_Results_IAggregateModificationResult___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Commands.CommandExecutor`2.ExecuteLockedAsync(Devbone.Frameworks.Ddd.Core.IRequestId,`1,System.Func{System.Threading.Tasks.Task{Devbone.Frameworks.Ddd.Results.IAggregateModificationResult}},System.Threading.CancellationToken)">
@@ -456,6 +405,10 @@ and performs the aggregate's explicit commit only after successful handling.</p>
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_ExecuteLockedAsync_Devbone_Frameworks_Ddd_Core_IRequestId__1_System_Func_System_Threading_Tasks_Task_Devbone_Frameworks_Ddd_Results_IAggregateModificationResult___System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The callback does not see the lock, so nothing here checks it before a commit the callback makes;
+<a class="xref" href="Devbone.Frameworks.Ddd.Commands.CommandExecutor-2.html#Devbone_Frameworks_Ddd_Commands_CommandExecutor_2_HandleLockedAsync_System_Collections_Generic_IEnumerable_Devbone_Frameworks_Ddd_Commands_Command__1___System_Func__1__0__System_Threading_CancellationToken_">HandleLockedAsync(IEnumerable&lt;Command&lt;TIdentity&gt;&gt;, Func&lt;TIdentity, TAggregate&gt;, CancellationToken)</a> does.</p>
+</div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
@@ -560,6 +513,10 @@ and performs the aggregate's explicit commit only after successful handling.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
     <dd><p>Thrown when the persisted event stream is inconsistent.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p>Thrown when <code class="paramref">cancellationToken</code> is cancelled while locking, loading, validating or executing.
+Nothing is committed, the aggregate is not reported faulted, and the lock is released.</p>
 </dd>
   </dl>
 

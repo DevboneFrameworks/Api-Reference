@@ -102,8 +102,9 @@ Classes
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.Privacy.KeyService.Storage.PostgresSubjectKeyRegistry.html">PostgresSubjectKeyRegistry</a></dt>
       <dd><p>The registry over PostgreSQL: keys are stored wrapped by the configured key-encryption key, one active key
-per subject is enforced by a partial unique index, and destruction removes the wrapped material physically
-while the row stays as the audit record.</p>
+per subject is enforced by a partial unique index, and destruction clears the wrapped material while the row
+stays as the audit record. Clearing is an <code>UPDATE</code>: the old value survives in dead tuples, the write-ahead
+log and backups until they expire or the key-encryption key is rotated and the previous one destroyed.</p>
 </dd>
     </dl>
 

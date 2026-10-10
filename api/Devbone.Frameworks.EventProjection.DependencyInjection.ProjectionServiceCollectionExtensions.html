@@ -204,9 +204,15 @@ either order, and select it with <a class="xref" href="Devbone.Frameworks.EventP
 </p>
 <p>
 Register application query models with
-<a class="xref" href="Devbone.Frameworks.EventProjection.DependencyInjection.ProjectionServiceCollectionExtensions.html#Devbone_Frameworks_EventProjection_DependencyInjection_ProjectionServiceCollectionExtensions_AddProjectionHandler__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_">AddProjectionHandler&lt;THandler&gt;(IServiceCollection)</a> after calling this method. Every
-registration here is a singleton: the pipeline holds broker connections and a MongoDB client for the
-lifetime of the host, and no part of it is request-scoped.
+<a class="xref" href="Devbone.Frameworks.EventProjection.DependencyInjection.ProjectionServiceCollectionExtensions.html#Devbone_Frameworks_EventProjection_DependencyInjection_ProjectionServiceCollectionExtensions_AddProjectionHandler__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_">AddProjectionHandler&lt;THandler&gt;(IServiceCollection)</a> after calling this method. Almost every
+registration here is a singleton, because the pipeline holds broker connections and a MongoDB client for the
+lifetime of the host. Two kinds are scoped: handlers, which each invocation resolves from a new scope, and
+<a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRepairService.html">ProjectionRepairService</a> and <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionRefoldService.html">ProjectionRefoldService</a> together with their
+authorization policies, which an application resolves in the scope of the request it serves.
+</p>
+<p>
+This is the only supported way to compose the processors; replace a store by registering your own
+implementation of its port after this call, because the last registration of a service wins.
 </p>
 <p>
 Static configuration is validated through <code>ValidateOnStart</code>. Store initialization then connects to
@@ -260,12 +266,21 @@ transactions on an initialized replica set or sharded cluster.
 
 
   <h4 class="section" id="Devbone_Frameworks_EventProjection_DependencyInjection_ProjectionServiceCollectionExtensions_AddProjectionHandler__1_Microsoft_Extensions_DependencyInjection_IServiceCollection__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Handlers observe merged state at least as new as the event they are handling, and inherit ordering,
+  <div class="markdown level1 remarks"><p>
+Handlers observe merged state at least as new as the event they are handling, and inherit ordering,
 dedupe, and retry from the pipeline. Because delivery is at-least-once and the merged document may
 already reflect later events, handlers must be idempotent. Handler exceptions retry through the selected
 transport and terminally dead-letter at
 <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html#Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_MaximumDerivedHandlerAttemptCount">MaximumDerivedHandlerAttemptCount</a> without advancing that
-handler's checkpoint.</p>
+handler's checkpoint.
+</p>
+<p>
+The handler is registered scoped and resolved from a new scope for every invocation, so it may depend on
+scoped services such as an Entity Framework <code>DbContext</code>; the scope is disposed when the invocation
+ends. One additional instance is resolved at startup to read <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.IProjectionHandler.html#Devbone_Frameworks_EventProjection_Projections_IProjectionHandler_ProjectionName">ProjectionName</a>,
+<a class="xref" href="Devbone.Frameworks.EventProjection.Projections.IProjectionHandler.html#Devbone_Frameworks_EventProjection_Projections_IProjectionHandler_DefinitionVersion">DefinitionVersion</a> and <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.IProjectionHandler.html#Devbone_Frameworks_EventProjection_Projections_IProjectionHandler_CanHandle_System_String_">CanHandle(string)</a>, which must
+therefore not depend on per-invocation state. Before 14.0.0 handlers were singletons.
+</p>
 </div>
 
 

@@ -102,7 +102,7 @@ Class AggregateLock
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class AggregateLock : IAggregateLock, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class AggregateLock : IAggregateLock, IAsyncDisposable</code></pre>
   </div>
 
 
@@ -120,7 +120,7 @@ Class AggregateLock
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IAggregateLock.html">IAggregateLock</a></div>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
     </dd>
   </dl>
 
@@ -159,8 +159,8 @@ Class AggregateLock
 
   <a id="Devbone_Frameworks_Ddd_Repositories_AggregateLock__ctor_" data-uid="Devbone.Frameworks.Ddd.Repositories.AggregateLock.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Repositories_AggregateLock__ctor_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Core_IIdentity_Devbone_Frameworks_Ddd_Core_IRequestId_System_DateTime_System_Action_Devbone_Frameworks_Ddd_Core_IRequestId_Devbone_Frameworks_Ddd_Core_IIdentity__" data-uid="Devbone.Frameworks.Ddd.Repositories.AggregateLock.#ctor(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IIdentity,Devbone.Frameworks.Ddd.Core.IRequestId,System.DateTime,System.Action{Devbone.Frameworks.Ddd.Core.IRequestId,Devbone.Frameworks.Ddd.Core.IIdentity})">
-  AggregateLock(IAggregateName, IIdentity, IRequestId, DateTime, Action&lt;IRequestId, IIdentity&gt;)
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_AggregateLock__ctor_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_Devbone_Frameworks_Ddd_Core_IIdentity_Devbone_Frameworks_Ddd_Core_IRequestId_System_DateTime_System_Func_Devbone_Frameworks_Ddd_Core_IRequestId_Devbone_Frameworks_Ddd_Core_IIdentity_System_Threading_Tasks_ValueTask__" data-uid="Devbone.Frameworks.Ddd.Repositories.AggregateLock.#ctor(Devbone.Frameworks.Ddd.Aggregates.IAggregateName,Devbone.Frameworks.Ddd.Core.IIdentity,Devbone.Frameworks.Ddd.Core.IRequestId,System.DateTime,System.Func{Devbone.Frameworks.Ddd.Core.IRequestId,Devbone.Frameworks.Ddd.Core.IIdentity,System.Threading.Tasks.ValueTask})">
+  AggregateLock(IAggregateName, IIdentity, IRequestId, DateTime, Func&lt;IRequestId, IIdentity, ValueTask&gt;)
   
   </h3>
 
@@ -169,7 +169,7 @@ Class AggregateLock
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AggregateLock(IAggregateName aggregateName, IIdentity aggregateId, IRequestId requestId, DateTime creationDate, Action&lt;IRequestId, IIdentity&gt; unlockCallback)</code></pre>
+    <pre><code class="lang-csharp hljs">public AggregateLock(IAggregateName aggregateName, IIdentity aggregateId, IRequestId requestId, DateTime creationDate, Func&lt;IRequestId, IIdentity, ValueTask&gt; unlockCallback)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -186,7 +186,7 @@ Class AggregateLock
     <dt><code>creationDate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
     <dd><p>Lock acquisition timestamp.</p>
 </dd>
-    <dt><code>unlockCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Core.IRequestId.html">IRequestId</a>, <a class="xref" href="Devbone.Frameworks.Ddd.Core.IIdentity.html">IIdentity</a>&gt;</dt>
+    <dt><code>unlockCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Core.IRequestId.html">IRequestId</a>, <a class="xref" href="Devbone.Frameworks.Ddd.Core.IIdentity.html">IIdentity</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a>&gt;</dt>
     <dd><p>Repository callback that releases ownership.</p>
 </dd>
   </dl>
@@ -315,7 +315,7 @@ Class AggregateLock
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a value indicating whether ownership has already been released.</p>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether ownership has already been released explicitly, by disposing this lock.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -336,6 +336,10 @@ Class AggregateLock
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_Ddd_Repositories_AggregateLock_IsReleased_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>It reports the holder's own release only. A lock whose backing session or stream was lost underneath it
+still reports <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> here; <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IAggregateLock.html#Devbone_Frameworks_Ddd_Repositories_IAggregateLock_IsHeldAsync_System_Threading_CancellationToken_">IsHeldAsync(CancellationToken)</a> is the member that can see that.</p>
+</div>
 
 
 
@@ -376,10 +380,10 @@ Class AggregateLock
 </h2>
 
 
-  <a id="Devbone_Frameworks_Ddd_Repositories_AggregateLock_Dispose_" data-uid="Devbone.Frameworks.Ddd.Repositories.AggregateLock.Dispose*"></a>
+  <a id="Devbone_Frameworks_Ddd_Repositories_AggregateLock_DisposeAsync_" data-uid="Devbone.Frameworks.Ddd.Repositories.AggregateLock.DisposeAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Repositories_AggregateLock_Dispose" data-uid="Devbone.Frameworks.Ddd.Repositories.AggregateLock.Dispose">
-  Dispose()
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_AggregateLock_DisposeAsync" data-uid="Devbone.Frameworks.Ddd.Repositories.AggregateLock.DisposeAsync">
+  DisposeAsync()
   
   </h3>
 
@@ -387,10 +391,15 @@ Class AggregateLock
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+    <pre><code class="lang-csharp hljs">public ValueTask DisposeAsync()</code></pre>
   </div>
 
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
 
 
 

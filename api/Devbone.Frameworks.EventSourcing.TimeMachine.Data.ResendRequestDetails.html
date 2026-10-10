@@ -169,39 +169,56 @@ application instances holding broker credentials are what execute them.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>ResendRequestId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Identifier of the replay request.</p>
+</dd>
     <dt><code>AggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate contract name the replay is scoped to, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when unscoped.</p>
+</dd>
     <dt><code>AggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate identity the replay is scoped to, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when unscoped.</p>
+</dd>
     <dt><code>FromCreatedAtUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
-    <dd></dd>
+    <dd><p>Inclusive lower bound on original event commit time, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when unbounded.</p>
+</dd>
     <dt><code>ToCreatedAtUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
-    <dd></dd>
+    <dd><p>Inclusive upper bound on original event commit time, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when unbounded.</p>
+</dd>
     <dt><code>RatePerSecond</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Mandatory rate limit applied while executing the replay.</p>
+</dd>
     <dt><code>Reason</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Mandatory operator-supplied reason recorded for the replay.</p>
+</dd>
     <dt><code>RequestedBy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Identity of the operator who requested the replay.</p>
+</dd>
     <dt><code>RequestedAtUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
-    <dd></dd>
+    <dd><p>Timestamp the request was recorded, in UTC.</p>
+</dd>
     <dt><code>Status</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Current execution status of the request (for example pending, claimed, running, completed, or failed).</p>
+</dd>
     <dt><code>ClaimedBy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Identifier of the broker-credentialed instance currently executing the request, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when unclaimed.</p>
+</dd>
     <dt><code>LeaseExpiresAtUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
-    <dd></dd>
+    <dd><p>Expiration of the current execution lease, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when unclaimed.</p>
+</dd>
     <dt><code>CursorAggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate identity the execution cursor last resumed from, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> before execution starts.</p>
+</dd>
     <dt><code>CursorEventSequence</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
-    <dd></dd>
+    <dd><p>Event sequence the execution cursor last resumed from, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> before execution starts.</p>
+</dd>
     <dt><code>PublishedCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>Number of original outbox envelopes republished verbatim so far.</p>
+</dd>
     <dt><code>CompletedAtUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
-    <dd></dd>
+    <dd><p>Timestamp the request finished, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> while still in progress.</p>
+</dd>
     <dt><code>LastErrorMessage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Message of the most recent execution failure, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when none occurred.</p>
+</dd>
   </dl>
 
 
@@ -230,7 +247,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregate identity the replay is scoped to, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when unscoped.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -261,7 +279,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregate contract name the replay is scoped to, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when unscoped.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -292,7 +311,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Identifier of the broker-credentialed instance currently executing the request, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when unclaimed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -323,7 +343,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Timestamp the request finished, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> while still in progress.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -354,7 +375,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregate identity the execution cursor last resumed from, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> before execution starts.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -385,7 +407,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Event sequence the execution cursor last resumed from, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> before execution starts.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -416,7 +439,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inclusive lower bound on original event commit time, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when unbounded.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -447,7 +471,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Message of the most recent execution failure, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when none occurred.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -478,7 +503,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Expiration of the current execution lease, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when unclaimed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -509,7 +535,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of original outbox envelopes republished verbatim so far.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -540,7 +567,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Mandatory rate limit applied while executing the replay.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -571,7 +599,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Mandatory operator-supplied reason recorded for the replay.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -602,7 +631,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Timestamp the request was recorded, in UTC.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -633,7 +663,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Identity of the operator who requested the replay.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -664,7 +695,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Identifier of the replay request.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -695,7 +727,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Current execution status of the request (for example pending, claimed, running, completed, or failed).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -726,7 +759,8 @@ application instances holding broker credentials are what execute them.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inclusive upper bound on original event commit time, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when unbounded.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">

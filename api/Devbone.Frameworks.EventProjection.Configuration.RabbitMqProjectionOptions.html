@@ -379,7 +379,7 @@ Class RabbitMqProjectionOptions
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the RabbitMQ AMQP port.</p>
+  <div class="markdown level1 summary"><p>Gets the RabbitMQ AMQP port. Use the broker's TLS listener port, usually 5671, with <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.RabbitMqProjectionOptions.html#Devbone_Frameworks_EventProjection_Configuration_RabbitMqProjectionOptions_UseTls">UseTls</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -500,6 +500,39 @@ Class RabbitMqProjectionOptions
 
 
 
+  <a id="Devbone_Frameworks_EventProjection_Configuration_RabbitMqProjectionOptions_TlsServerName_" data-uid="Devbone.Frameworks.EventProjection.Configuration.RabbitMqProjectionOptions.TlsServerName*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Configuration_RabbitMqProjectionOptions_TlsServerName" data-uid="Devbone.Frameworks.EventProjection.Configuration.RabbitMqProjectionOptions.TlsServerName">
+  TlsServerName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name the broker certificate must carry when it differs from <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.RabbitMqProjectionOptions.html#Devbone_Frameworks_EventProjection_Configuration_RabbitMqProjectionOptions_HostName">HostName</a>, for example when
+connecting by IP address. Valid only with <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.RabbitMqProjectionOptions.html#Devbone_Frameworks_EventProjection_Configuration_RabbitMqProjectionOptions_UseTls">UseTls</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? TlsServerName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Configuration_RabbitMqProjectionOptions_UseQuorumQueues_" data-uid="Devbone.Frameworks.EventProjection.Configuration.RabbitMqProjectionOptions.UseQuorumQueues*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Configuration_RabbitMqProjectionOptions_UseQuorumQueues" data-uid="Devbone.Frameworks.EventProjection.Configuration.RabbitMqProjectionOptions.UseQuorumQueues">
@@ -546,6 +579,41 @@ Class RabbitMqProjectionOptions
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool UseSingleActiveConsumer { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Configuration_RabbitMqProjectionOptions_UseTls_" data-uid="Devbone.Frameworks.EventProjection.Configuration.RabbitMqProjectionOptions.UseTls*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Configuration_RabbitMqProjectionOptions_UseTls" data-uid="Devbone.Frameworks.EventProjection.Configuration.RabbitMqProjectionOptions.UseTls">
+  UseTls
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the connection uses TLS (AMQPS). The broker certificate is validated strictly against
+<a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.RabbitMqProjectionOptions.html#Devbone_Frameworks_EventProjection_Configuration_RabbitMqProjectionOptions_TlsServerName">TlsServerName</a>, or <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.RabbitMqProjectionOptions.html#Devbone_Frameworks_EventProjection_Configuration_RabbitMqProjectionOptions_HostName">HostName</a> when none is given, through the operating system's trust
+store. Off by default, which sends credentials and every payload in plaintext: enable it for every non-local
+broker.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseTls { get; init; }</code></pre>
   </div>
 
 

@@ -121,45 +121,6 @@ Interface ITransactionalOutboxEventStore
 </h2>
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Outbox_ITransactionalOutboxEventStore_StoreEventsWithOutbox_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutbox*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_ITransactionalOutboxEventStore_StoreEventsWithOutbox_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___" data-uid="Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])">
-  StoreEventsWithOutbox(IDatabaseEvent[], OutboxMessage[], params IUniqueReservation[])
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Stores events, unique values and their exact outbound envelopes atomically.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void StoreEventsWithOutbox(IDatabaseEvent[] events, OutboxMessage[] outboxMessages, params IUniqueReservation[] uniqueValues)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>[]</dt>
-    <dd><p>Events to append as one aggregate commit.</p>
-</dd>
-    <dt><code>outboxMessages</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.html">OutboxMessage</a>[]</dt>
-    <dd><p>One outbound message for every event.</p>
-</dd>
-    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html">IUniqueReservation</a>[]</dt>
-    <dd><p>Optional unique values written in the same transaction.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
   <a id="Devbone_Frameworks_EventSourcing_Outbox_ITransactionalOutboxEventStore_StoreEventsWithOutboxAsync_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutboxAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Outbox_ITransactionalOutboxEventStore_StoreEventsWithOutboxAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.StoreEventsWithOutboxAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)">

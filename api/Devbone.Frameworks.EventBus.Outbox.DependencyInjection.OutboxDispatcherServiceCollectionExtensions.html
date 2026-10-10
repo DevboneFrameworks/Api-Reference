@@ -263,6 +263,11 @@ Delivery is at-least-once. The dispatcher claims a row with a lease, publishes, 
 between publish and settle re-delivers after the lease expires, which is why consumers must settle
 manually and deduplicate.
 </p>
+<p>
+When the composition registers an <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreIdentity.html">EventStoreIdentity</a>, as <code>AddDevboneEventSourcing</code> does, the
+dispatcher must name the same store: resolving it otherwise throws <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a>, so
+the host does not start.
+</p>
 </div>
 
   <h4 class="section">Exceptions</h4>

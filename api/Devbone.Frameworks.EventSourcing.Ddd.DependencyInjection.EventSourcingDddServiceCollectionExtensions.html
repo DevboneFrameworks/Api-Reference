@@ -204,6 +204,10 @@ Everything registered here is a singleton. The adapter is stateless; the event s
 factory and no per-request state.
 </p>
 <p>
+It registers an <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreIdentity.html">EventStoreIdentity</a> with the <code>EventStoreId</code> the routes name; an outbox dispatcher
+registered beside it must name the same store.
+</p>
+<p>
 This does not register a bus or an outbox dispatcher. Persistence and publication are separate
 concerns: a commit is durable once the event and its outbox row are written, and delivery is a later,
 independently retried step.
@@ -220,6 +224,10 @@ second instance - the bytes written to an outbox row and the bytes published mus
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
     <dd><p>Thrown when an argument is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when the routing is invalid, or when its route versions name more than one event store: Direct mode writes
+every aggregate to the one store registered here.</p>
 </dd>
   </dl>
 

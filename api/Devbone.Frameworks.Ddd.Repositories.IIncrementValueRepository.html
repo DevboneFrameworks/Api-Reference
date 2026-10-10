@@ -125,10 +125,10 @@ Implementations must allocate values atomically so concurrent commits cannot rec
 </h2>
 
 
-  <a id="Devbone_Frameworks_Ddd_Repositories_IIncrementValueRepository_GetCurrentIncrements_" data-uid="Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.GetCurrentIncrements*"></a>
+  <a id="Devbone_Frameworks_Ddd_Repositories_IIncrementValueRepository_GetCurrentIncrementsAsync_" data-uid="Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.GetCurrentIncrementsAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Repositories_IIncrementValueRepository_GetCurrentIncrements_Devbone_Frameworks_Ddd_IncrementValues_IIncrementGlobalProperty_" data-uid="Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.GetCurrentIncrements(Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty)">
-  GetCurrentIncrements(IIncrementGlobalProperty)
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_IIncrementValueRepository_GetCurrentIncrementsAsync_Devbone_Frameworks_Ddd_IncrementValues_IIncrementGlobalProperty_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.GetCurrentIncrementsAsync(Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty,System.Threading.CancellationToken)">
+  GetCurrentIncrementsAsync(IIncrementGlobalProperty, CancellationToken)
   
   </h3>
 
@@ -137,7 +137,7 @@ Implementations must allocate values atomically so concurrent commits cannot rec
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">long GetCurrentIncrements(IIncrementGlobalProperty incrementGlobal)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;long&gt; GetCurrentIncrementsAsync(IIncrementGlobalProperty incrementGlobal, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -145,11 +145,14 @@ Implementations must allocate values atomically so concurrent commits cannot rec
     <dt><code>incrementGlobal</code> <a class="xref" href="Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty.html">IIncrementGlobalProperty</a></dt>
     <dd><p>Increment key.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the read.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
     <dd><p>Current increment value.</p>
 </dd>
   </dl>
@@ -164,10 +167,10 @@ Implementations must allocate values atomically so concurrent commits cannot rec
 
 
 
-  <a id="Devbone_Frameworks_Ddd_Repositories_IIncrementValueRepository_GetNextIncrements_" data-uid="Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.GetNextIncrements*"></a>
+  <a id="Devbone_Frameworks_Ddd_Repositories_IIncrementValueRepository_GetNextIncrementsAsync_" data-uid="Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.GetNextIncrementsAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Repositories_IIncrementValueRepository_GetNextIncrements_System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_IncrementValues_IIncrementGlobalProperty__" data-uid="Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.GetNextIncrements(System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty})">
-  GetNextIncrements(IReadOnlySet&lt;IIncrementGlobalProperty&gt;)
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_IIncrementValueRepository_GetNextIncrementsAsync_System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_IncrementValues_IIncrementGlobalProperty__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.GetNextIncrementsAsync(System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty},System.Threading.CancellationToken)">
+  GetNextIncrementsAsync(IReadOnlySet&lt;IIncrementGlobalProperty&gt;, CancellationToken)
   
   </h3>
 
@@ -176,7 +179,7 @@ Implementations must allocate values atomically so concurrent commits cannot rec
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IncrementGlobalAllocation[] GetNextIncrements(IReadOnlySet&lt;IIncrementGlobalProperty&gt; incrementGlobals)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IncrementGlobalAllocation[]&gt; GetNextIncrementsAsync(IReadOnlySet&lt;IIncrementGlobalProperty&gt; incrementGlobals, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -184,11 +187,14 @@ Implementations must allocate values atomically so concurrent commits cannot rec
     <dt><code>incrementGlobals</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.IncrementValues.IIncrementGlobalProperty.html">IIncrementGlobalProperty</a>&gt;</dt>
     <dd><p>Increment keys.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the allocation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html">IncrementGlobalAllocation</a>[]</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IncrementGlobalAllocation.html">IncrementGlobalAllocation</a>[]&gt;</dt>
     <dd><p>Distinct next values allocated atomically for the requested keys.</p>
 </dd>
   </dl>

@@ -138,6 +138,9 @@ Class EventStoreSettings
       <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Settings.DatabaseSettings.html#Devbone_Frameworks_EventSourcing_Repositories_Settings_DatabaseSettings_Password">DatabaseSettings.Password</a>
     </div>
     <div>
+      <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Settings.DatabaseSettings.html#Devbone_Frameworks_EventSourcing_Repositories_Settings_DatabaseSettings_ConnectionOptions">DatabaseSettings.ConnectionOptions</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
     <div>
@@ -197,6 +200,37 @@ Class EventStoreSettings
 
   <h2 class="section" id="fields">Fields
 </h2>
+
+
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_DEFAULT_AGGREGATE_COMMIT_TABLE_NAME" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.DEFAULT_AGGREGATE_COMMIT_TABLE_NAME">
+  DEFAULT_AGGREGATE_COMMIT_TABLE_NAME
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default aggregate commits table name, the table <code>schema.sql</code> creates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_AGGREGATE_COMMIT_TABLE_NAME = &quot;aggregate_commits&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
 
 
 
@@ -355,6 +389,69 @@ Class EventStoreSettings
 
 
 
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_DEFAULT_EVENT_TABLE_NAME" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.DEFAULT_EVENT_TABLE_NAME">
+  DEFAULT_EVENT_TABLE_NAME
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default events table name, the table <code>schema.sql</code> creates. Every table name defaults to the shipped
+schema; a custom name needs a schema adapted to it, and the store checks on first use that it exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_EVENT_TABLE_NAME = &quot;events&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_DEFAULT_INCREMENT_TABLE_NAME" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.DEFAULT_INCREMENT_TABLE_NAME">
+  DEFAULT_INCREMENT_TABLE_NAME
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default global increments table name, the table <code>schema.sql</code> creates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_INCREMENT_TABLE_NAME = &quot;increments&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_DEFAULT_OUTBOX_NOTIFICATION_CHANNEL" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.DEFAULT_OUTBOX_NOTIFICATION_CHANNEL">
   DEFAULT_OUTBOX_NOTIFICATION_CHANNEL
   
@@ -447,6 +544,37 @@ Class EventStoreSettings
 
 
 
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_DEFAULT_UNIQUE_TABLE_NAME" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.DEFAULT_UNIQUE_TABLE_NAME">
+  DEFAULT_UNIQUE_TABLE_NAME
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default unique values table name, the table <code>schema.sql</code> creates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_UNIQUE_TABLE_NAME = &quot;uniques&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -463,7 +591,7 @@ Class EventStoreSettings
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public required string AggregateCommitTableName { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string AggregateCommitTableName { get; init; }</code></pre>
   </div>
 
 
@@ -690,7 +818,7 @@ event; a definition that marks a field protected requires this to be enabled.</p
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public required string EventTableName { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string EventTableName { get; init; }</code></pre>
   </div>
 
 
@@ -722,7 +850,7 @@ event; a definition that marks a field protected requires this to be enabled.</p
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public required string IncrementGlobalAggrTableName { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string IncrementGlobalAggrTableName { get; init; }</code></pre>
   </div>
 
 
@@ -1043,7 +1171,42 @@ with required definitions.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public required string UniqueTableName { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string UniqueTableName { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_UniqueValueHashKey_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.UniqueValueHashKey*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_UniqueValueHashKey" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.UniqueValueHashKey">
+  UniqueValueHashKey
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the base64-encoded secret of at least 32 bytes the store keys unique-value hashes with. Hold it
+outside the database, in the secret store every writer of this event store reads; the Direct adapter and the
+Gateway must use the same key. It cannot be rotated: the store keeps only the keyed hash, so a new key needs
+the plaintext values. Losing it means no reservation can be matched again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public required string UniqueValueHashKey { get; init; }</code></pre>
   </div>
 
 

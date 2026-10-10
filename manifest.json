@@ -120,7 +120,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.Ddd.Aggregates.AggregateName",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Aggregates.AggregateName.yml\" sourcestartlinenumber=\"1\">Protects the stable aggregate-stream contract name from accidental null, empty, or whitespace values.\nThe name is used by storage, locking, and event metadata and should survive CLR type renames.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Aggregates.AggregateName.yml\" sourcestartlinenumber=\"1\">Protects the stable aggregate-stream contract name from accidental null, empty, or whitespace values.\nThe name is used by storage, locking, and event metadata and should survive CLR type renames. It is\npersisted exactly as declared and equals the identity prefix ignoring case.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1129,34 +1129,6 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.Ddd.Exceptions.AggregateFaultedException",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Exceptions.AggregateFaultedException.yml\" sourcestartlinenumber=\"1\">Prevents domain reads, writes, command dispatch, or serialization from continuing against an aggregate instance\nwhose in-memory state may differ from the state reproducible from its persisted event stream.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.Ddd.Exceptions.AggregateReadonlyException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.Ddd.Exceptions.AggregateReadonlyException.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.Ddd.Exceptions.AggregateReadonlyException",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Exceptions.AggregateReadonlyException.yml\" sourcestartlinenumber=\"1\">Indicates that an operation attempted to change an aggregate configured as read-only.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.Ddd.Exceptions.AggregateWasDeleted.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.Ddd.Exceptions.AggregateWasDeleted.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.Ddd.Exceptions.AggregateWasDeleted",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Ddd.Exceptions.AggregateWasDeleted.yml\" sourcestartlinenumber=\"1\">Indicates that an operation cannot continue because the aggregate event stream contains a deletion event.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2402,7 +2374,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventBus.Bus.IEventBusProviderFactory",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Bus.IEventBusProviderFactory.yml\" sourcestartlinenumber=\"1\">Creates one transport-specific event bus from a validated logical target.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Bus.IEventBusProviderFactory.yml\" sourcestartlinenumber=\"1\">Creates one transport-specific event bus from a validated logical target. This is how the separately packaged\nKafka and RabbitMQ transports plug into the transport-neutral resolver; it is not an extension point for further\ntransports, because a target carries options for those two only.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2476,17 +2448,17 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Contracts.Messaging.AggregateConcurrencyToken.yml",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.Contracts.Messaging.AggregateConcurrencyTokens.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Contracts.Messaging.AggregateConcurrencyToken.html"
+          "relative_path": "api/Devbone.Frameworks.EventBus.Contracts.Messaging.AggregateConcurrencyTokens.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Contracts.Messaging.AggregateConcurrencyToken",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Contracts.Messaging.AggregateConcurrencyToken.yml\" sourcestartlinenumber=\"1\">Creates and validates the canonical opaque 128-bit token used for aggregate concurrency checks.</p>\n"
+      "Title": "Devbone.Frameworks.EventBus.Contracts.Messaging.AggregateConcurrencyTokens",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Contracts.Messaging.AggregateConcurrencyTokens.yml\" sourcestartlinenumber=\"1\">Creates and validates the canonical opaque 128-bit token used for aggregate concurrency checks.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2756,48 +2728,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Ddd.Publishing.RoutedPublishResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Ddd.Publishing.RoutedPublishResult.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Ddd.Publishing.RoutedPublishResult",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Ddd.Publishing.RoutedPublishResult.yml\" sourcestartlinenumber=\"1\">Combines the selected aggregate route with the broker publish outcome.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Ddd.Publishing.StoredEventPublisher.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Ddd.Publishing.StoredEventPublisher.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Ddd.Publishing.StoredEventPublisher",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Ddd.Publishing.StoredEventPublisher.yml\" sourcestartlinenumber=\"1\">Publishes DDD stored events through their persisted logical route without changing outbox state.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Ddd.Publishing.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Ddd.Publishing.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Ddd.Publishing",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventBus.DependencyInjection.EventBusServiceCollectionExtensions.yml",
       "output": {
         ".html": {
@@ -2994,20 +2924,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Outbox.Dispatching.IOutboxClock.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Outbox.Dispatching.IOutboxClock.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Outbox.Dispatching.IOutboxClock",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Outbox.Dispatching.IOutboxClock.yml\" sourcestartlinenumber=\"1\">Supplies UTC timestamps to outbox dispatch components.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventBus.Outbox.Dispatching.IOutboxRetryPolicy.yml",
       "output": {
         ".html": {
@@ -3117,20 +3033,6 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventBus.Outbox.Dispatching.OutboxWorkerIdGenerator",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Outbox.Dispatching.OutboxWorkerIdGenerator.yml\" sourcestartlinenumber=\"1\">Creates process-local worker identifiers for outbox lease diagnostics.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventBus.Outbox.Dispatching.SystemOutboxClock.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventBus.Outbox.Dispatching.SystemOutboxClock.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventBus.Outbox.Dispatching.SystemOutboxClock",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Outbox.Dispatching.SystemOutboxClock.yml\" sourcestartlinenumber=\"1\">Supplies timestamps from the system clock.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3386,6 +3288,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.Subscribing.DeadLetterHeaderNames.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.Subscribing.DeadLetterHeaderNames.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.Subscribing.DeadLetterHeaderNames",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Subscribing.DeadLetterHeaderNames.yml\" sourcestartlinenumber=\"1\">Header names a transport adapter adds when it moves a message it cannot read to the configured poison-message\ndead-letter stream. The message keeps its original body and headers; these describe why and from where.\nThe original may hold personal data: keep dead-letter streams under explicit retention and access control, and\nnever copy their content into logs or telemetry.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventBus.Subscribing.EventBusNames.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventBus.Subscribing.EventBusNames.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventBus.Subscribing.EventBusNames",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventBus.Subscribing.EventBusNames.yml\" sourcestartlinenumber=\"1\">The one transport-neutral naming rule for what a subscription and its queue are built from. Both brokers\nread some characters as more than a name: a Kafka topic starting with <code>^</code> is a regular-expression subscription,\n<code>*</code> and <code>#</code> are wildcards in a RabbitMQ binding key, and a RabbitMQ queue is named\n<code>{consumer}.{stream}</code> or <code>{consumer}.{instance}.{stream}</code>, which is ambiguous as soon as a consumer name or\nan instance identity holds a dot. Each of those silently delivers another stream's messages; the rule refuses them,\nRabbitMQ's reserved <code>amq.</code> prefix, and names that would exceed the 255-byte queue-name limit.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventBus.Subscribing.IEventSubscriber.yml",
       "output": {
         ".html": {
@@ -3592,7 +3522,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventPersistence.Contracts.Commits.PublicationContextDto",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventPersistence.Contracts.Commits.PublicationContextDto.yml\" sourcestartlinenumber=\"1\">Supplies correlation and principal metadata that is not part of the domain payload.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventPersistence.Contracts.Commits.PublicationContextDto.yml\" sourcestartlinenumber=\"1\">Supplies correlation and tracing metadata that is not part of the domain payload.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3862,6 +3792,174 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.Configuration.EventPersistenceGatewayOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.Configuration.EventPersistenceGatewayOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventPersistence.Gateway.Configuration.EventPersistenceGatewayOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventPersistence.Gateway.Configuration.EventPersistenceGatewayOptions.yml\" sourcestartlinenumber=\"1\">Configures authenticated callers and embedded outbox dispatch for the gateway host.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayClientOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayClientOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayClientOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayClientOptions.yml\" sourcestartlinenumber=\"1\">Defines one authenticated producer and its aggregate and tenant authorization boundaries.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.yml\" sourcestartlinenumber=\"1\">Configures the embedded outbox dispatcher of every event store target, bound from\n<code>EventPersistenceGateway:Outbox</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.Configuration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventPersistence.Gateway.Configuration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.DependencyInjection.EventPersistenceGatewayServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.DependencyInjection.EventPersistenceGatewayServiceCollectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventPersistence.Gateway.DependencyInjection.EventPersistenceGatewayServiceCollectionExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventPersistence.Gateway.DependencyInjection.EventPersistenceGatewayServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Registers the Event Persistence Gateway in a host's service collection.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.DependencyInjection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventPersistence.Gateway.DependencyInjection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.Endpoints.EventPersistenceEndpoints.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.Endpoints.EventPersistenceEndpoints.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventPersistence.Gateway.Endpoints.EventPersistenceEndpoints",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventPersistence.Gateway.Endpoints.EventPersistenceEndpoints.yml\" sourcestartlinenumber=\"1\">Maps the versioned Event Persistence Gateway HTTP API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.Endpoints.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.Endpoints.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventPersistence.Gateway.Endpoints",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.Observability.GatewayInstrumentation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.Observability.GatewayInstrumentation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventPersistence.Gateway.Observability.GatewayInstrumentation",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventPersistence.Gateway.Observability.GatewayInstrumentation.yml\" sourcestartlinenumber=\"1\">The gateway's own metrics: what the libraries it hosts cannot see, because they happen in the HTTP layer.\nTags stay low-cardinality; no client, aggregate or tenant identity becomes a dimension.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.Observability.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventPersistence.Gateway.Observability.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventPersistence.Gateway.Observability",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Configuration.ProjectionRefoldRequesterOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Configuration.ProjectionRefoldRequesterOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Configuration.ProjectionRefoldRequesterOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Configuration.ProjectionRefoldRequesterOptions.yml\" sourcestartlinenumber=\"1\">Options of <xref href=\"Devbone.Frameworks.EventProjection.Client.Refolds.IProjectionRefoldRequester\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Configuration.ProjectionRefoldRequesterOptionsValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Configuration.ProjectionRefoldRequesterOptionsValidator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Configuration.ProjectionRefoldRequesterOptionsValidator",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Configuration.ProjectionRefoldRequesterOptionsValidator.yml\" sourcestartlinenumber=\"1\">Fails a requester configuration at host start rather than at the first request.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.yml",
       "output": {
         ".html": {
@@ -4072,6 +4170,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWrite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWrite.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWrite",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWrite.yml\" sourcestartlinenumber=\"1\">One aggregate position a command wrote, as its commit receipt reports it: the input\n<xref href=\"Devbone.Frameworks.EventProjection.Client.Registry.ProjectionMetadataSelection.CreateBarriers(System.Collections.Generic.IEnumerable%7bDevbone.Frameworks.EventProjection.Client.Consistency.ReadModelWrite%7d)\" data-throw-if-not-resolved=\"false\"></xref> combines with a frozen selection.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Consistency.yml",
       "output": {
         ".html": {
@@ -4083,6 +4195,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Client.Consistency",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.DependencyInjection.ProjectionRefoldRequesterServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.DependencyInjection.ProjectionRefoldRequesterServiceCollectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.DependencyInjection.ProjectionRefoldRequesterServiceCollectionExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.DependencyInjection.ProjectionRefoldRequesterServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Registers the placing of refold requests in an API host.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4254,6 +4380,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.RefoldRequestFields.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.RefoldRequestFields.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Persistence.RefoldRequestFields",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Persistence.RefoldRequestFields.yml\" sourcestartlinenumber=\"1\">Names the fields and values of the refold request inbox and of the refold documents in the repair collection.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Persistence.yml",
       "output": {
         ".html": {
@@ -4264,6 +4404,90 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Client.Persistence",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Refolds.IProjectionRefoldRequester.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Refolds.IProjectionRefoldRequester.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Refolds.IProjectionRefoldRequester",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Refolds.IProjectionRefoldRequester.yml\" sourcestartlinenumber=\"1\">Places refold requests for the projection worker and reads their progress, without making the caller a projection\nwriter.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Refolds.RefoldRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Refolds.RefoldRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Refolds.RefoldRequest",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Refolds.RefoldRequest.yml\" sourcestartlinenumber=\"1\">A request that the projection worker recompute one aggregate's raw state and merged document from its stored raw\nevents, and re-invoke every derived output observing it. An API host places it; the worker accepts and runs it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Refolds.RefoldRequestConflictException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Refolds.RefoldRequestConflictException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Refolds.RefoldRequestConflictException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Refolds.RefoldRequestConflictException.yml\" sourcestartlinenumber=\"1\">A request identity was placed before with different fields.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Refolds.RefoldRequestProgress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Refolds.RefoldRequestProgress.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Refolds.RefoldRequestProgress",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Refolds.RefoldRequestProgress.yml\" sourcestartlinenumber=\"1\">The progress of one placed refold request.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Refolds.RefoldRequestStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Refolds.RefoldRequestStatus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Refolds.RefoldRequestStatus",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Client.Refolds.RefoldRequestStatus.yml\" sourcestartlinenumber=\"1\">Where a placed refold request stands.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Client.Refolds.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Client.Refolds.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Client.Refolds",
       "Summary": null
     },
     {
@@ -4478,6 +4702,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Configuration.ProjectionRefoldRequestOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Configuration.ProjectionRefoldRequestOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Configuration.ProjectionRefoldRequestOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Configuration.ProjectionRefoldRequestOptions.yml\" sourcestartlinenumber=\"1\">Configures the acceptance of refold requests that API hosts place through\n<code>Devbone.Frameworks.EventProjection.Client</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Configuration.RabbitMqProjectionOptions.yml",
       "output": {
         ".html": {
@@ -4646,6 +4884,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Contracts.ProjectionMalformedMessageException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Contracts.ProjectionMalformedMessageException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Contracts.ProjectionMalformedMessageException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Contracts.ProjectionMalformedMessageException.yml\" sourcestartlinenumber=\"1\">Reports a projection message that can never be processed because of its own shape: it is not valid JSON of the\nexpected contract, or its key does not name the aggregate it carries. A consumer moves it to the generic\ndead-letter address and settles it instead of retrying it without end; any other failure stays retryable. The\nmessage never contains payload content.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Contracts.RawProjectionNotification.yml",
       "output": {
         ".html": {
@@ -4797,6 +5049,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Ingestion",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.DependencyInjection.KafkaProjectionHealthCheckBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Kafka.DependencyInjection.KafkaProjectionHealthCheckBuilderExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Kafka.DependencyInjection.KafkaProjectionHealthCheckBuilderExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Kafka.DependencyInjection.KafkaProjectionHealthCheckBuilderExtensions.yml\" sourcestartlinenumber=\"1\">Contributes the Kafka projection transport's readiness check: every consumer this process started has completed\nits consumer-group assignment.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5021,6 +5287,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Observability.ProjectionPipelineInstrumentation.yml\" sourcestartlinenumber=\"1\">Owns low-cardinality OpenTelemetry activity and metric instruments for the projection pipeline.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Observability.ProjectionTraceContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Observability.ProjectionTraceContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Observability.ProjectionTraceContext",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Observability.ProjectionTraceContext.yml\" sourcestartlinenumber=\"1\">Carries the W3C trace context across the projection pipeline's own publications, so one domain event's raw,\nmerged and derived stages appear in the trace of the command that produced it.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5790,7 +6070,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Projections.MissingReferencesRetryProcessor",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.MissingReferencesRetryProcessor.yml\" sourcestartlinenumber=\"1\">Retries incomplete same-tenant reference enrichment with bounded attempts.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.MissingReferencesRetryProcessor.yml\" sourcestartlinenumber=\"1\">Retries incomplete same-tenant reference enrichment with bounded attempts. Once the references resolve, or the\naggregate was deleted meanwhile, it hands the aggregate back to the merged stage through an ordinary raw-applied\nnotification instead of writing merged state itself: the merged stage also creates the durable derived work and\nrefreshes the dependents, which a second write path had skipped.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -6127,6 +6407,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventProjection.Projections",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.RabbitMq.DependencyInjection.RabbitMqProjectionHealthCheckBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.RabbitMq.DependencyInjection.RabbitMqProjectionHealthCheckBuilderExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.RabbitMq.DependencyInjection.RabbitMqProjectionHealthCheckBuilderExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.RabbitMq.DependencyInjection.RabbitMqProjectionHealthCheckBuilderExtensions.yml\" sourcestartlinenumber=\"1\">Contributes the RabbitMQ projection transport's readiness check: every consumer this process started consumes.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -6900,6 +7194,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.DependencyInjection.EventStoreHealthCheckBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.DependencyInjection.EventStoreHealthCheckBuilderExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.DependencyInjection.EventStoreHealthCheckBuilderExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.DependencyInjection.EventStoreHealthCheckBuilderExtensions.yml\" sourcestartlinenumber=\"1\">Contributes the event store's readiness check: the database can be opened and has the schema version and tables\nthis assembly requires.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventSourcing.DependencyInjection.EventStoreServiceCollectionExtensions.yml",
       "output": {
         ".html": {
@@ -6911,6 +7219,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.DependencyInjection.EventStoreServiceCollectionExtensions",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.DependencyInjection.EventStoreServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Registers the PostgreSQL event store with the lifetimes it requires.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.DependencyInjection.OutboxStateSamplerServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.DependencyInjection.OutboxStateSamplerServiceCollectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.DependencyInjection.OutboxStateSamplerServiceCollectionExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.DependencyInjection.OutboxStateSamplerServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Runs an <xref href=\"Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler\" data-throw-if-not-resolved=\"false\"></xref> as a hosted service, so a host that opts in reports the\n<code>devbone.eventsourcing.outbox.*</code> gauges without writing the hosted service itself.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -6942,6 +7264,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Exceptions.EventStoreConflictException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Exceptions.EventStoreConflictException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Exceptions.EventStoreConflictException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Exceptions.EventStoreConflictException.yml\" sourcestartlinenumber=\"1\">Reports that a commit was refused because one of its events reuses an event identifier or an occupied stream\nposition. The commit was rolled back; nothing was written.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Exceptions.EventStoreSchemaMismatchException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Exceptions.EventStoreSchemaMismatchException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Exceptions.EventStoreSchemaMismatchException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Exceptions.EventStoreSchemaMismatchException.yml\" sourcestartlinenumber=\"1\">Reports that the database an event store connects to does not have the schema this assembly requires: another\nschema version, or a configured table that does not exist. Raised before the store's first operation, so\nnothing has been written.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Exceptions.OptimisticConcurrencyException.yml",
       "output": {
         ".html": {
@@ -6953,6 +7303,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.Exceptions.OptimisticConcurrencyException",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Exceptions.OptimisticConcurrencyException.yml\" sourcestartlinenumber=\"1\">Represents an optimistic concurrency conflict while writing events.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Exceptions.UniqueReservationConflictException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Exceptions.UniqueReservationConflictException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Exceptions.UniqueReservationConflictException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Exceptions.UniqueReservationConflictException.yml\" sourcestartlinenumber=\"1\">Reports that a commit was refused because a unique-value reservation is held by another owner, or because\nthe same owner and key would occupy a second scope or kind. The commit was rolled back; nothing was written.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7064,7 +7428,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.Locks.IAggregateLockLease",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Locks.IAggregateLockLease.yml\" sourcestartlinenumber=\"1\">Represents exclusive ownership of one aggregate advisory lock.\nDisposing the lease releases the owning PostgreSQL session lock exactly once.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Locks.IAggregateLockLease.yml\" sourcestartlinenumber=\"1\">Represents exclusive ownership of one aggregate advisory lock.\nDisposing the lease asynchronously releases the owning PostgreSQL session lock exactly once.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7149,6 +7513,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.Outbox.IOutboxNotificationListener",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxNotificationListener.yml\" sourcestartlinenumber=\"1\">Waits for database-level hints that dispatchable outbox work may be available.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxRequeue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxRequeue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Outbox.IOutboxRequeue",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxRequeue.yml\" sourcestartlinenumber=\"1\">Returns a terminally failed outbox row to dispatch. A failed row blocks every later event of its\naggregate, because the claim delivers an aggregate's events in order; once the cause is fixed - a broker that\nwas unreachable for longer than a configured attempt limit, a missing topic or exchange - an operator requeues\nit and the aggregate resumes. The stored envelope is published unchanged; a row whose envelope cannot be read\nor does not match its columns fails again on its first attempt.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7526,21 +7904,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.Repositories.EventStore",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.yml\" sourcestartlinenumber=\"1\">Contains asynchronous event store operations that mirror the synchronous API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.yml\" sourcestartlinenumber=\"1\">Defines the asynchronous public API contract for core event persistence and retrieval.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.yml\" sourcestartlinenumber=\"1\">Contains the core event store operations of <xref href=\"Devbone.Frameworks.EventSourcing.Repositories.IEventStore\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7554,7 +7918,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.Repositories.IEventStore",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Repositories.IEventStore.yml\" sourcestartlinenumber=\"1\">Defines the synchronous public API contract for event persistence and retrieval.\nAggregate locking is exposed separately through <xref href=\"Devbone.Frameworks.EventSourcing.Locks.IAggregateLockStore\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Repositories.IEventStore.yml\" sourcestartlinenumber=\"1\">Defines the public API contract for core event persistence and retrieval, and the handle a configured store is\nreached through.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7569,6 +7933,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.Repositories.Settings.DatabaseSettings",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Repositories.Settings.DatabaseSettings.yml\" sourcestartlinenumber=\"1\">Defines base database connection settings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreIdentity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreIdentity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreIdentity",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreIdentity.yml\" sourcestartlinenumber=\"1\">The logical identifier of the one event store a composition writes to, registered so that the components composed\nbeside it can check that they name the same store.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7600,6 +7978,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Repositories.StoredStreamIdentity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Repositories.StoredStreamIdentity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Repositories.StoredStreamIdentity",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Repositories.StoredStreamIdentity.yml\" sourcestartlinenumber=\"1\">One identity recorded for an aggregate stream: what a caller is authorized against, read without event\npayloads.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Repositories.Targets.ConfiguredEventStoreResolver.yml",
       "output": {
         ".html": {
@@ -7610,7 +8002,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.Repositories.Targets.ConfiguredEventStoreResolver",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Repositories.Targets.ConfiguredEventStoreResolver.yml\" sourcestartlinenumber=\"1\">Lazily creates PostgreSQL event stores from logical target configuration.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Repositories.Targets.ConfiguredEventStoreResolver.yml\" sourcestartlinenumber=\"1\">Lazily creates PostgreSQL event stores from logical target configuration, and owns them: disposing the\nresolver disposes every store it created, which closes the manual lock sessions those stores hold.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7723,6 +8115,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.Resend.IOutboxReplayReader",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Resend.IOutboxReplayReader.yml\" sourcestartlinenumber=\"1\">Reads already published outbox envelopes in replay order.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Resend.IResendRequestCancellation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Resend.IResendRequestCancellation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Resend.IResendRequestCancellation",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Resend.IResendRequestCancellation.yml\" sourcestartlinenumber=\"1\">Withdraws a resend request that is waiting or running. A replay reaches every consumer of the\naffected streams, including foreign applications on a shared broker, so an operator must be able to stop one\nwithout stopping every executor. A running executor notices at its next progress report - after at most one\nmore envelope - because progress and settlement require the request to still be processing under its claim.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7946,7 +8352,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.TimeMachine.Data.DatabaseOperationGuard",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.DatabaseOperationGuard.yml\" sourcestartlinenumber=\"1\">Coalesces the initial database probe and suppresses repeated operations until PostgreSQL is explicitly retried.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.DatabaseOperationGuard.yml\" sourcestartlinenumber=\"1\">Coalesces the initial database probe and suppresses repeated operations while PostgreSQL is unreachable, until it\nis explicitly retried.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -8538,6 +8944,90 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Hosting.Health.DevboneHealthEndpointRouteBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Hosting.Health.DevboneHealthEndpointRouteBuilderExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Hosting.Health.DevboneHealthEndpointRouteBuilderExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Hosting.Health.DevboneHealthEndpointRouteBuilderExtensions.yml\" sourcestartlinenumber=\"1\">Maps the anonymous liveness and readiness endpoints an orchestrator probes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Hosting.Health.DevboneHealthOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Hosting.Health.DevboneHealthOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Hosting.Health.DevboneHealthOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Hosting.Health.DevboneHealthOptions.yml\" sourcestartlinenumber=\"1\">Where the liveness and readiness endpoints are served. Bound from the <xref href=\"Devbone.Frameworks.Hosting.Health.DevboneHealthOptions.SECTION_NAME\" data-throw-if-not-resolved=\"false\"></xref> configuration\nsection when the host has one, then adjusted in code.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Hosting.Health.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Hosting.Health.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Hosting.Health",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Hosting.Telemetry.DevboneTelemetryOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Hosting.Telemetry.DevboneTelemetryOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Hosting.Telemetry.DevboneTelemetryOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Hosting.Telemetry.DevboneTelemetryOptions.yml\" sourcestartlinenumber=\"1\">What a host adds to the platform's telemetry: its own service name default, its own sources and meters, and\nwhether logs are exported. Where telemetry goes is never an option here; the standard <code>OTEL_*</code> variables\ndecide it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Hosting.Telemetry.DevboneTelemetryServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Hosting.Telemetry.DevboneTelemetryServiceCollectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Hosting.Telemetry.DevboneTelemetryServiceCollectionExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Hosting.Telemetry.DevboneTelemetryServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Registers OpenTelemetry traces, metrics and logs for the platform's instrumentation and exports them over OTLP,\nconfigured by the standard <code>OTEL_*</code> variables. Without <code>OTEL_EXPORTER_OTLP_ENDPOINT</code> nothing is\nregistered and nothing is exported, so the libraries' sources and meters stay as inactive as they are without\nthis package.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Hosting.Telemetry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Hosting.Telemetry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Hosting.Telemetry",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.Privacy.Client.SubjectKeyServiceClient.yml",
       "output": {
         ".html": {
@@ -8776,6 +9266,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.DependencyInjection.KeyServiceClientHealthCheckBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.DependencyInjection.KeyServiceClientHealthCheckBuilderExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.DependencyInjection.KeyServiceClientHealthCheckBuilderExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.DependencyInjection.KeyServiceClientHealthCheckBuilderExtensions.yml\" sourcestartlinenumber=\"1\">Contributes the key service client's readiness check: the key service this process calls answers its health route.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.Privacy.DependencyInjection.SubjectKeyServiceClientServiceCollectionExtensions.yml",
       "output": {
         ".html": {
@@ -8857,6 +9361,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.Privacy.KeyService.Configuration",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.DependencyInjection.KeyServiceHealthCheckBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.DependencyInjection.KeyServiceHealthCheckBuilderExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.DependencyInjection.KeyServiceHealthCheckBuilderExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.DependencyInjection.KeyServiceHealthCheckBuilderExtensions.yml\" sourcestartlinenumber=\"1\">Contributes the key service's own readiness check: its registry and key-encryption key answer, as on\n<code>/healthz</code>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -9000,6 +9518,62 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Maintenance.KeyServiceCommands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Maintenance.KeyServiceCommands.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Maintenance.KeyServiceCommands",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.Maintenance.KeyServiceCommands.yml\" sourcestartlinenumber=\"1\">The key service host's maintenance commands, kept in the library so the host stays a composition root and the\ncommands are tested where their behaviour lives.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Maintenance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Maintenance.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Maintenance",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Observability.KeyServiceInstrumentation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Observability.KeyServiceInstrumentation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Observability.KeyServiceInstrumentation",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.Observability.KeyServiceInstrumentation.yml\" sourcestartlinenumber=\"1\">Owns the key service's own metrics: requests by operation and outcome, and the keys the PostgreSQL registry\ncreated and destroyed. No instrument carries a subject, a key identifier, a tenant or a client name; every tag\nvalue comes from the fixed sets below.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Observability.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Observability.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.KeyService.Observability",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.Privacy.KeyService.Storage.KeyServiceSchema.yml",
       "output": {
         ".html": {
@@ -9024,7 +9598,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.Privacy.KeyService.Storage.PostgresSubjectKeyRegistry",
-      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.Storage.PostgresSubjectKeyRegistry.yml\" sourcestartlinenumber=\"1\">The registry over PostgreSQL: keys are stored wrapped by the configured key-encryption key, one active key\nper subject is enforced by a partial unique index, and destruction removes the wrapped material physically\nwhile the row stays as the audit record.</p>\n"
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.KeyService.Storage.PostgresSubjectKeyRegistry.yml\" sourcestartlinenumber=\"1\">The registry over PostgreSQL: keys are stored wrapped by the configured key-encryption key, one active key\nper subject is enforced by a partial unique index, and destruction clears the wrapped material while the row\nstays as the audit record. Clearing is an <code>UPDATE</code>: the old value survives in dead tuples, the write-ahead\nlog and backups until they expire or the key-encryption key is rotated and the previous one destroyed.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -9416,6 +9990,888 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Devbone.Frameworks.Privacy.Protection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.AggregateReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.AggregateReference.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Application.AggregateReference",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Application.AggregateReference.yml\" sourcestartlinenumber=\"1\">An aggregate, addressed as the event store and the projection address it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.ExportFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.ExportFile.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Application.ExportFile",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Application.ExportFile.yml\" sourcestartlinenumber=\"1\">A file the person uploaded.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.ExportFileContent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.ExportFileContent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Application.ExportFileContent",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Application.ExportFileContent.yml\" sourcestartlinenumber=\"1\">The content of one exported file.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.ExportFiles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.ExportFiles.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Application.ExportFiles",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Application.ExportFiles.yml\" sourcestartlinenumber=\"1\">The files of an export.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.IErasureDomain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.IErasureDomain.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Application.IErasureDomain",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Application.IErasureDomain.yml\" sourcestartlinenumber=\"1\">The domain parts of erasure: the own data in phase 1, the identity link at the end of phase 2.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.IErasurePreconditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.IErasurePreconditions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Application.IErasurePreconditions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Application.IErasurePreconditions.yml\" sourcestartlinenumber=\"1\">What blocks an erasure, and how it is resolved without the person on the deadline. The rules belong to the\napplication and belong in its privacy policy.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.IExportDomain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.IExportDomain.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Application.IExportDomain",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Application.IExportDomain.yml\" sourcestartlinenumber=\"1\">The domain part of the export: a readable view of the person's data, and the files the person uploaded and those\nothers uploaded about them.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.IPrivacySubjectResolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.IPrivacySubjectResolver.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Application.IPrivacySubjectResolver",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Application.IPrivacySubjectResolver.yml\" sourcestartlinenumber=\"1\">Finds the person behind an account. The application implements it over its identity link table\n<code>(issuer, subject) → user</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.OpenPrecondition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.OpenPrecondition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Application.OpenPrecondition",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Application.OpenPrecondition.yml\" sourcestartlinenumber=\"1\">Something that blocks an erasure, in the application's words.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.PrivacyCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.PrivacyCase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Application.PrivacyCase",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Application.PrivacyCase.yml\" sourcestartlinenumber=\"1\">The request an operation belongs to. Its identity is stable across repeats, so everything derived from it is too.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.PrivacyKeySubject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.PrivacyKeySubject.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Application.PrivacyKeySubject",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Application.PrivacyKeySubject.yml\" sourcestartlinenumber=\"1\">One key the platform destroys for a person, with the aggregate the subject owns. The owned aggregate is ended by\nthe application's tombstone, so phase 2 deletes its snapshot but does not refold it; every other aggregate that\ncarried the subject's data is refolded.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.PrivacySubject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.PrivacySubject.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Application.PrivacySubject",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Application.PrivacySubject.yml\" sourcestartlinenumber=\"1\">The person as the application knows them, resolved from the identity link <code>(issuer, subject)</code>, which stays\nuntil the end of erasure phase 2.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.RelatedExportFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.RelatedExportFile.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Application.RelatedExportFile",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Application.RelatedExportFile.yml\" sourcestartlinenumber=\"1\">A file somebody else uploaded about the person.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Application.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Application",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Authorization.PrivacyCallerOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Authorization.PrivacyCallerOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Authorization.PrivacyCallerOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Authorization.PrivacyCallerOptions.yml\" sourcestartlinenumber=\"1\">Who may call the application endpoints: the privacy service's client, with its role. The application validates\nthe token itself (issuer, signature, audience, lifetime); this only decides who the caller is.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Authorization.PrivacyCallerRequirement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Authorization.PrivacyCallerRequirement.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Authorization.PrivacyCallerRequirement",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Authorization.PrivacyCallerRequirement.yml\" sourcestartlinenumber=\"1\">The requirement behind <xref href=\"Devbone.Frameworks.Privacy.Requests.Authorization.PrivacyCallerOptions.POLICY\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Authorization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Authorization.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Authorization",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Client.PrivacyRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Client.PrivacyRequestDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Client.PrivacyRequestDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Client.PrivacyRequestDto.yml\" sourcestartlinenumber=\"1\">A request as the privacy service reports it to the person, from its API under <code>/v1/requests</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Client.PrivacyRequestTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Client.PrivacyRequestTypes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Client.PrivacyRequestTypes",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Client.PrivacyRequestTypes.yml\" sourcestartlinenumber=\"1\">The kinds of request a person files.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Client.PrivacyServiceClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Client.PrivacyServiceClient.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Client.PrivacyServiceClient",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Client.PrivacyServiceClient.yml\" sourcestartlinenumber=\"1\">The application's calls to the privacy service on behalf of the signed-in person. Every call carries that\nperson's access token unchanged; the service checks it and acts only for its subject, so the application cannot\nfile or read a request for anybody else.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Client.PrivacyServiceException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Client.PrivacyServiceException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Client.PrivacyServiceException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Client.PrivacyServiceException.yml\" sourcestartlinenumber=\"1\">A refusal of the privacy service, by HTTP status.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Client.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Client",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Configuration.PrivacyRequestsOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Configuration.PrivacyRequestsOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Configuration.PrivacyRequestsOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Configuration.PrivacyRequestsOptions.yml\" sourcestartlinenumber=\"1\">Options of the engine behind the application endpoints.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Configuration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Configuration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.ExportFileDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.ExportFileDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.ExportFileDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.ExportFileDto.yml\" sourcestartlinenumber=\"1\">A file the person uploaded; the privacy service fetches and embeds it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.ExportResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.ExportResponseDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.ExportResponseDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.ExportResponseDto.yml\" sourcestartlinenumber=\"1\">Answer of the export endpoint: the application part of the person's copy.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.OpenPreconditionDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.OpenPreconditionDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.OpenPreconditionDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.OpenPreconditionDto.yml\" sourcestartlinenumber=\"1\">Something that blocks an erasure.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.OperationAcceptedDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.OperationAcceptedDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.OperationAcceptedDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.OperationAcceptedDto.yml\" sourcestartlinenumber=\"1\">Answer when an operation runs longer than the synchronous budget.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.OperationStatusDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.OperationStatusDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.OperationStatusDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.OperationStatusDto.yml\" sourcestartlinenumber=\"1\">Answer of the status endpoint.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.Phase1ResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.Phase1ResponseDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.Phase1ResponseDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.Phase1ResponseDto.yml\" sourcestartlinenumber=\"1\">Answer of erasure phase 1.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.Phase2ResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.Phase2ResponseDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.Phase2ResponseDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.Phase2ResponseDto.yml\" sourcestartlinenumber=\"1\">Answer of erasure phase 2.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PreconditionsResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PreconditionsResponseDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.PreconditionsResponseDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.PreconditionsResponseDto.yml\" sourcestartlinenumber=\"1\">Answer of the preconditions and resolve endpoints.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyErrorCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyErrorCodes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyErrorCodes",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyErrorCodes.yml\" sourcestartlinenumber=\"1\">Stable error codes of the application endpoints.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyErrorDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyErrorDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyErrorDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyErrorDto.yml\" sourcestartlinenumber=\"1\">An error without personal data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyKeySubjectDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyKeySubjectDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyKeySubjectDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyKeySubjectDto.yml\" sourcestartlinenumber=\"1\">One key the privacy service destroys: the key service's subject triple, and the aggregate the subject owns, which\nits tombstone has already cleared and phase 2 therefore does not refold.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyOperationRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyOperationRequestDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyOperationRequestDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyOperationRequestDto.yml\" sourcestartlinenumber=\"1\">The body of every POST to an application endpoint.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyOperationStates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyOperationStates.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyOperationStates",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyOperationStates.yml\" sourcestartlinenumber=\"1\">The states an operation reports through the status endpoint.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyOperations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyOperations.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyOperations",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyOperations.yml\" sourcestartlinenumber=\"1\">The operations of the application endpoints, as named in operation identities and status answers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyRequestsJson.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyRequestsJson.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyRequestsJson",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyRequestsJson.yml\" sourcestartlinenumber=\"1\">The serializer settings of the application endpoints and the privacy service client.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyRequestsRoutes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyRequestsRoutes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyRequestsRoutes",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacyRequestsRoutes.yml\" sourcestartlinenumber=\"1\">The paths of the application endpoints the privacy service calls. They are part of the wire contract: a change\nraises the package major.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacySubjectReferenceDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacySubjectReferenceDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.PrivacySubjectReferenceDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.PrivacySubjectReferenceDto.yml\" sourcestartlinenumber=\"1\">The account a request is about: the realm's issuer and the account's <code>sub</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.RelatedExportFileDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.RelatedExportFileDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts.RelatedExportFileDto",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Contracts.RelatedExportFileDto.yml\" sourcestartlinenumber=\"1\">A file somebody else uploaded about the person; listed, never embedded.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Contracts.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Contracts",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.DependencyInjection.PrivacyRequestsBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.DependencyInjection.PrivacyRequestsBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.DependencyInjection.PrivacyRequestsBuilder",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.DependencyInjection.PrivacyRequestsBuilder.yml\" sourcestartlinenumber=\"1\">What <xref href=\"Devbone.Frameworks.Privacy.Requests.DependencyInjection.PrivacyRequestsServiceCollectionExtensions.AddDevbonePrivacyRequests(Microsoft.Extensions.DependencyInjection.IServiceCollection%2cSystem.Action%7bDevbone.Frameworks.Privacy.Requests.Configuration.PrivacyRequestsOptions%7d)\" data-throw-if-not-resolved=\"false\"></xref> returns, so the adapters can add their ports.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.DependencyInjection.PrivacyRequestsServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.DependencyInjection.PrivacyRequestsServiceCollectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.DependencyInjection.PrivacyRequestsServiceCollectionExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.DependencyInjection.PrivacyRequestsServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Registration of the application side of data-subject requests.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.DependencyInjection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.DependencyInjection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Endpoints.PrivacyRequestsEndpoints.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Endpoints.PrivacyRequestsEndpoints.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Endpoints.PrivacyRequestsEndpoints",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Endpoints.PrivacyRequestsEndpoints.yml\" sourcestartlinenumber=\"1\">Maps the application endpoints the privacy service calls, below <code>/privacy/v1</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Endpoints.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Endpoints.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Endpoints",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Engine.PrivacyRequestException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Engine.PrivacyRequestException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Engine.PrivacyRequestException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Engine.PrivacyRequestException.yml\" sourcestartlinenumber=\"1\">A refusal or failure the endpoints answer with a stable code. The message never carries personal data or subject\nidentifiers, because it reaches the privacy service and its logs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Engine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Engine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Engine",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.EventProjection.DependencyInjection.PrivacyRequestsEventProjectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.EventProjection.DependencyInjection.PrivacyRequestsEventProjectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.EventProjection.DependencyInjection.PrivacyRequestsEventProjectionExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.EventProjection.DependencyInjection.PrivacyRequestsEventProjectionExtensions.yml\" sourcestartlinenumber=\"1\">Adds the refold step of data-subject erasure to <code>AddDevbonePrivacyRequests</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.EventProjection.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.EventProjection.DependencyInjection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.EventProjection.DependencyInjection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.EventSourcing.Configuration.PrivacyRequestsEventSourcingOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.EventSourcing.Configuration.PrivacyRequestsEventSourcingOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.EventSourcing.Configuration.PrivacyRequestsEventSourcingOptions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.EventSourcing.Configuration.PrivacyRequestsEventSourcingOptions.yml\" sourcestartlinenumber=\"1\">Options of the event-store steps of data-subject requests.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.EventSourcing.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.EventSourcing.Configuration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.EventSourcing.Configuration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.EventSourcing.DependencyInjection.PrivacyRequestsEventSourcingExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.EventSourcing.DependencyInjection.PrivacyRequestsEventSourcingExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.EventSourcing.DependencyInjection.PrivacyRequestsEventSourcingExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.EventSourcing.DependencyInjection.PrivacyRequestsEventSourcingExtensions.yml\" sourcestartlinenumber=\"1\">Adds the event-store steps of data-subject requests to <code>AddDevbonePrivacyRequests</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.EventSourcing.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.EventSourcing.DependencyInjection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.EventSourcing.DependencyInjection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Ports.IRecordExporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Ports.IRecordExporter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Ports.IRecordExporter",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Ports.IRecordExporter.yml\" sourcestartlinenumber=\"1\">Reads the stored records of a person's key subjects, decrypted for that person: protected fields of the key\nsubjects in plaintext, placeholders where their key is destroyed, and protected fields of anybody else withheld.\nImplemented by <code>Devbone.Frameworks.Privacy.Requests.EventSourcing</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Ports.IRefoldRequester.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Ports.IRefoldRequester.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Ports.IRefoldRequester",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Ports.IRefoldRequester.yml\" sourcestartlinenumber=\"1\">Requests and reads refolds of foreign aggregates. Implemented by\n<code>Devbone.Frameworks.Privacy.Requests.EventProjection</code> over the projection's refold service; the refold itself\nruns in the projection worker.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Ports.ISnapshotEraser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Ports.ISnapshotEraser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Ports.ISnapshotEraser",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Ports.ISnapshotEraser.yml\" sourcestartlinenumber=\"1\">Deletes derived snapshot state, so the next load rebuilds the aggregate with placeholders. Implemented by\n<code>Devbone.Frameworks.Privacy.Requests.EventSourcing</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Ports.ISubjectEventLocator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Ports.ISubjectEventLocator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Ports.ISubjectEventLocator",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Ports.ISubjectEventLocator.yml\" sourcestartlinenumber=\"1\">Finds the aggregates that carry a key subject's data. Implemented by\n<code>Devbone.Frameworks.Privacy.Requests.EventSourcing</code> over the event privacy index.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Ports.RefoldState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Ports.RefoldState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Ports.RefoldState",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Ports.RefoldState.yml\" sourcestartlinenumber=\"1\">The state of one refold.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Ports.RefoldStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Ports.RefoldStatus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Ports.RefoldStatus",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Ports.RefoldStatus.yml\" sourcestartlinenumber=\"1\">The progress of one refold, as the engine needs it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Ports.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Ports.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Ports",
       "Summary": null
     },
     {

@@ -116,55 +116,21 @@ Implementations must preserve aggregate stream isolation and return events in as
 
 
 
+  <h2 id="Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Asynchronous with cancellation from Devbone.Frameworks.Ddd 13.0.0: the command executor holds the aggregate
+lock while it reads, so a blocked thread and an unobserved cancellation cost every other command on the
+aggregate.</p>
+</div>
 
 
   <h2 class="section" id="methods">Methods
 </h2>
 
 
-  <a id="Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_GetAggregateIds_" data-uid="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.GetAggregateIds*"></a>
+  <a id="Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_LoadAggregateAsync_" data-uid="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.LoadAggregateAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_GetAggregateIds_Devbone_Frameworks_Ddd_Aggregates_IAggregateName_" data-uid="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.GetAggregateIds(Devbone.Frameworks.Ddd.Aggregates.IAggregateName)">
-  GetAggregateIds(IAggregateName)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets all aggregate ids known for the specified aggregate name.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEnumerable&lt;string&gt; GetAggregateIds(IAggregateName aggregateName)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>aggregateName</code> <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateName.html">IAggregateName</a></dt>
-    <dd><p>Aggregate name.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>Known aggregate id values.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_LoadAggregate_" data-uid="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.LoadAggregate*"></a>
-
-  <h3 id="Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_LoadAggregate_Devbone_Frameworks_Ddd_Core_IIdentity_System_Boolean_" data-uid="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.LoadAggregate(Devbone.Frameworks.Ddd.Core.IIdentity,System.Boolean)">
-  LoadAggregate(IIdentity, bool)
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_LoadAggregateAsync_Devbone_Frameworks_Ddd_Core_IIdentity_System_Boolean_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.LoadAggregateAsync(Devbone.Frameworks.Ddd.Core.IIdentity,System.Boolean,System.Threading.CancellationToken)">
+  LoadAggregateAsync(IIdentity, bool, CancellationToken)
   
   </h3>
 
@@ -173,7 +139,7 @@ Implementations must preserve aggregate stream isolation and return events in as
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;IStoredEvent&gt; LoadAggregate(IIdentity aggregateId, bool skipPublishCheck = false)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyCollection&lt;IStoredEvent&gt;&gt; LoadAggregateAsync(IIdentity aggregateId, bool skipPublishCheck = false, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -184,11 +150,14 @@ Implementations must preserve aggregate stream isolation and return events in as
     <dt><code>skipPublishCheck</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd><p>Indicates whether unpublished-state checks are skipped.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the read.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>&gt;&gt;</dt>
     <dd><p>Stored event sequence ordered by aggregate version.</p>
 </dd>
   </dl>

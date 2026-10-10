@@ -118,6 +118,14 @@ Interfaces
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Resend.IResendRequestCancellation.html">IResendRequestCancellation</a></dt>
+      <dd><p>Withdraws a resend request that is waiting or running. A replay reaches every consumer of the
+affected streams, including foreign applications on a shared broker, so an operator must be able to stop one
+without stopping every executor. A running executor notices at its next progress report - after at most one
+more envelope - because progress and settlement require the request to still be processing under its claim.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Resend.IResendRequestStore.html">IResendRequestStore</a></dt>
       <dd><p>Stores operator-requested outbox replays and hands each one to exactly one executing instance.</p>
 </dd>

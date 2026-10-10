@@ -304,7 +304,7 @@ owns uncommitted events, uniqueness reservations, increments, and manual commit 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IAggregateName AggregateName { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IAggregateName AggregateName { get; }</code></pre>
   </div>
 
 
@@ -537,7 +537,7 @@ Derived aggregate properties and handlers should use this accessor instead of re
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool IsDeleted { get; protected set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsDeleted { get; }</code></pre>
   </div>
 
 
@@ -553,6 +553,10 @@ Derived aggregate properties and handlers should use this accessor instead of re
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_IsDeleted_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Set only by the framework lifecycle: a <code>.deleted</code> event or a deleted snapshot. Neither this nor any
+other invariant-carrying member of the aggregate base can be overridden.</p>
+</div>
 
 
 
@@ -601,7 +605,7 @@ Derived aggregate properties and handlers should use this accessor instead of re
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool IsNew { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsNew { get; }</code></pre>
   </div>
 
 
@@ -701,7 +705,7 @@ Derived aggregate properties and handlers should use this accessor instead of re
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void ApplyEvent(IAggregateEvent&lt;TAggregate, TIdentity&gt; aggregateEvent)</code></pre>
+    <pre><code class="lang-csharp hljs">protected void ApplyEvent(IAggregateEvent&lt;TAggregate, TIdentity&gt; aggregateEvent)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -734,10 +738,10 @@ Derived aggregate properties and handlers should use this accessor instead of re
 
 
 
-  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Commit_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Commit*"></a>
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_CommitAsync_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.CommitAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_Commit_Devbone_Frameworks_Ddd_Core_AggregateConcurrencyToken_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.Commit(Devbone.Frameworks.Ddd.Core.AggregateConcurrencyToken)">
-  Commit(AggregateConcurrencyToken?)
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_CommitAsync_Devbone_Frameworks_Ddd_Core_AggregateConcurrencyToken_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.CommitAsync(Devbone.Frameworks.Ddd.Core.AggregateConcurrencyToken,System.Threading.CancellationToken)">
+  CommitAsync(AggregateConcurrencyToken?, CancellationToken)
   
   </h3>
 
@@ -746,7 +750,7 @@ Derived aggregate properties and handlers should use this accessor instead of re
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IEventStoredResult Commit(AggregateConcurrencyToken? expectedAggregateConcurrencyToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IEventStoredResult&gt; CommitAsync(AggregateConcurrencyToken? expectedAggregateConcurrencyToken = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -754,11 +758,14 @@ Derived aggregate properties and handlers should use this accessor instead of re
     <dt><code>expectedAggregateConcurrencyToken</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.AggregateConcurrencyToken.html">AggregateConcurrencyToken</a></dt>
     <dd><p>Token returned with the state on which the command was based, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when the stream must not exist.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the snapshot decision and the write.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a>&gt;</dt>
     <dd><p>The atomic event-store write result. A successful commit that wrote at least one event carries an
 <a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html#Devbone_Frameworks_Ddd_Results_IEventStoredResult_CommitReceipt">CommitReceipt</a> naming the resulting stream position and token, and
 the aggregate's own <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateRoot.html#Devbone_Frameworks_Ddd_Aggregates_IAggregateRoot_ConcurrencyToken">ConcurrencyToken</a> is advanced to that token.</p>
@@ -787,7 +794,7 @@ the aggregate's own <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAgg
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual IAggregateModificationResult Emit&lt;TEvent&gt;(IRequestId requestId, TEvent aggregateEvent) where TEvent : IAggregateEvent&lt;TAggregate, TIdentity&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">protected IAggregateModificationResult Emit&lt;TEvent&gt;(IRequestId requestId, TEvent aggregateEvent) where TEvent : IAggregateEvent&lt;TAggregate, TIdentity&gt;</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -857,10 +864,10 @@ Expected validation failures represented by a result do not fault the aggregate 
 
 
 
-  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_GetNextIncrement_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.GetNextIncrement*"></a>
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_GetNextIncrementAsync_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.GetNextIncrementAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_GetNextIncrement_System_String_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.GetNextIncrement(System.String)">
-  GetNextIncrement(string)
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_GetNextIncrementAsync_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateRoot`3.GetNextIncrementAsync(System.String,System.Threading.CancellationToken)">
+  GetNextIncrementAsync(string, CancellationToken)
   
   </h3>
 
@@ -869,7 +876,7 @@ Expected validation failures represented by a result do not fault the aggregate 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected long GetNextIncrement(string propertyName)</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;long&gt; GetNextIncrementAsync(string propertyName, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -877,11 +884,14 @@ Expected validation failures represented by a result do not fault the aggregate 
     <dt><code>propertyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Property name that is marked with <code>IncrementGlobalAttribute</code>.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the allocation; pass the handler's token.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
     <dd><p>The next increment value.</p>
 </dd>
   </dl>
@@ -892,6 +902,10 @@ Expected validation failures represented by a result do not fault the aggregate 
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_Ddd_Aggregates_AggregateRoot_3_GetNextIncrementAsync_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Asynchronous from Devbone.Frameworks.Ddd 13.0.0: the allocation is a database or gateway round trip made
+while the aggregate lock is held, so a domain method that draws a number is itself asynchronous.</p>
+</div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
@@ -1003,13 +1017,14 @@ conflict.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Load(AggregateRehydration rehydration)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Load(AggregateRehydration rehydration)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rehydration</code> <a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.AggregateRehydration.html">AggregateRehydration</a></dt>
-    <dd></dd>
+    <dd><p>The snapshot, when one exists, and the events recorded after it.</p>
+</dd>
   </dl>
 
 
@@ -1035,7 +1050,7 @@ conflict.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Load(IReadOnlyCollection&lt;IStoredEvent&gt; storedEvents)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Load(IReadOnlyCollection&lt;IStoredEvent&gt; storedEvents)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>

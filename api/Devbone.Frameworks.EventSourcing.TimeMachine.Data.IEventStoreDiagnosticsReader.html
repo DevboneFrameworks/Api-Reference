@@ -139,19 +139,24 @@ Interface IEventStoreDiagnosticsReader
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>filter</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter.html">AggregateFilter</a></dt>
-    <dd></dd>
+    <dd><p>Tenant, aggregate name and aggregate identity filters to apply.</p>
+</dd>
     <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Opaque cursor returned by a previous call's <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_PageResult_1_NextCursor">NextCursor</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to start from the first page.</p>
+</dd>
     <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Maximum number of summaries to return in this page.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Token that cancels the query.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateSummary.html">AggregateSummary</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>A keyset-paginated page of matching aggregate summaries in stable database order.</p>
+</dd>
   </dl>
 
 
@@ -182,21 +187,27 @@ Interface IEventStoreDiagnosticsReader
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate contract name of the stream to read.</p>
+</dd>
     <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate identity of the stream to read.</p>
+</dd>
     <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Opaque cursor returned by a previous call's <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_PageResult_1_NextCursor">NextCursor</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to start from the first page.</p>
+</dd>
     <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Maximum number of events to return in this page.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Token that cancels the query.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.StoredEventDetails.html">StoredEventDetails</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>A keyset-paginated page of stored events in commit event order.</p>
+</dd>
   </dl>
 
 
@@ -227,21 +238,27 @@ Interface IEventStoreDiagnosticsReader
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Exact aggregate contract name filter, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for all aggregates.</p>
+</dd>
     <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Exact increment key filter, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for all keys.</p>
+</dd>
     <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Opaque cursor returned by a previous call's <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_PageResult_1_NextCursor">NextCursor</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to start from the first page.</p>
+</dd>
     <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Maximum number of increments to return in this page.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Token that cancels the query.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.IncrementDetails.html">IncrementDetails</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>A keyset-paginated page of matching increments in stable database order.</p>
+</dd>
   </dl>
 
 
@@ -272,19 +289,24 @@ Interface IEventStoreDiagnosticsReader
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>filter</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.OutboxFilter.html">OutboxFilter</a></dt>
-    <dd></dd>
+    <dd><p>Tenant, aggregate name, aggregate identity and status filters to apply.</p>
+</dd>
     <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Opaque cursor returned by a previous call's <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_PageResult_1_NextCursor">NextCursor</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to start from the first page.</p>
+</dd>
     <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Maximum number of outbox rows to return in this page.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Token that cancels the query.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.OutboxDetails.html">OutboxDetails</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>A keyset-paginated page of matching outbox rows in stable database order, without exposing envelope bytes.</p>
+</dd>
   </dl>
 
 
@@ -315,21 +337,27 @@ Interface IEventStoreDiagnosticsReader
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Exact aggregate contract name filter, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for all aggregates.</p>
+</dd>
     <dt><code>eventName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Exact event contract name filter, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for all events.</p>
+</dd>
     <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Opaque cursor returned by a previous call's <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_PageResult_1_NextCursor">NextCursor</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to start from the first page.</p>
+</dd>
     <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Maximum number of definitions to return in this page.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Token that cancels the query.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacyDefinitionDetails.html">PrivacyDefinitionDetails</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>A keyset-paginated page of matching privacy definitions in stable database order.</p>
+</dd>
   </dl>
 
 
@@ -360,23 +388,30 @@ Interface IEventStoreDiagnosticsReader
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>tenantId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Exact tenant filter, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for all tenants.</p>
+</dd>
     <dt><code>subjectType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Exact data subject type filter, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for all subject types.</p>
+</dd>
     <dt><code>subjectKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Exact pseudonymized subject key filter, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for all subjects.</p>
+</dd>
     <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Opaque cursor returned by a previous call's <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_PageResult_1_NextCursor">NextCursor</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to start from the first page.</p>
+</dd>
     <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Maximum number of index entries to return in this page.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Token that cancels the query.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PrivacySubjectDetails.html">PrivacySubjectDetails</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>A keyset-paginated page of matching pseudonymized subject index entries in stable database order.</p>
+</dd>
   </dl>
 
 
@@ -407,17 +442,21 @@ Interface IEventStoreDiagnosticsReader
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate contract name to look up.</p>
+</dd>
     <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate identity to look up.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Token that cancels the query.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.SnapshotDetails.html">SnapshotDetails</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>The current snapshot, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when no snapshot has been persisted for this aggregate.</p>
+</dd>
   </dl>
 
 
@@ -448,19 +487,24 @@ Interface IEventStoreDiagnosticsReader
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>filter</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter.html">AggregateFilter</a></dt>
-    <dd></dd>
+    <dd><p>Tenant, aggregate name and aggregate identity filters to apply.</p>
+</dd>
     <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Opaque cursor returned by a previous call's <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_PageResult_1_NextCursor">NextCursor</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to start from the first page.</p>
+</dd>
     <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Maximum number of snapshots to return in this page.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Token that cancels the query.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.SnapshotDetails.html">SnapshotDetails</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>A keyset-paginated page of matching snapshots in stable database order.</p>
+</dd>
   </dl>
 
 
@@ -491,19 +535,24 @@ Interface IEventStoreDiagnosticsReader
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>kind</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.DiagnosticSuggestionKind.html">DiagnosticSuggestionKind</a></dt>
-    <dd></dd>
+    <dd><p>Bounded diagnostic value list to suggest from.</p>
+</dd>
     <dt><code>search</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Case-insensitive substring filter applied to candidate values, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for no filter.</p>
+</dd>
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Maximum number of distinct suggestions to return; defaults to twenty.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Token that cancels the query.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>Up to <code class="paramref">limit</code> distinct matching values.</p>
+</dd>
   </dl>
 
 
@@ -534,21 +583,27 @@ Interface IEventStoreDiagnosticsReader
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>filter</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter.html">AggregateFilter</a></dt>
-    <dd></dd>
+    <dd><p>Tenant, aggregate name and aggregate identity filters to apply.</p>
+</dd>
     <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Exact collection uniqueness key filter, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for all keys.</p>
+</dd>
     <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Opaque cursor returned by a previous call's <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_PageResult_1_NextCursor">NextCursor</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to start from the first page.</p>
+</dd>
     <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Maximum number of reservation groups to return in this page.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Token that cancels the query.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueReservationDetails.html">UniqueReservationDetails</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>A keyset-paginated page of matching collection-uniqueness reservation groups in stable database order.</p>
+</dd>
   </dl>
 
 
@@ -579,21 +634,27 @@ Interface IEventStoreDiagnosticsReader
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>filter</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.AggregateFilter.html">AggregateFilter</a></dt>
-    <dd></dd>
+    <dd><p>Tenant, aggregate name and aggregate identity filters to apply.</p>
+</dd>
     <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Exact scalar uniqueness key filter, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for all keys.</p>
+</dd>
     <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Opaque cursor returned by a previous call's <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_PageResult_1_NextCursor">NextCursor</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to start from the first page.</p>
+</dd>
     <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Maximum number of reservations to return in this page.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Token that cancels the query.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.PageResult-1.html">PageResult</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.UniqueValueDetails.html">UniqueValueDetails</a>&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>A keyset-paginated page of matching scalar unique-value reservations in stable database order.</p>
+</dd>
   </dl>
 
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DatabaseOperationGuard | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Coalesces the initial database probe and suppresses repeated operations until PostgreSQL is explicitly retried.">
+      <meta name="description" content="Coalesces the initial database probe and suppresses repeated operations while PostgreSQL is unreachable, until it is explicitly retried.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,8 @@ Class DatabaseOperationGuard
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventSourcing.TimeMachine.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Coalesces the initial database probe and suppresses repeated operations until PostgreSQL is explicitly retried.</p>
+  <div class="markdown summary"><p>Coalesces the initial database probe and suppresses repeated operations while PostgreSQL is unreachable, until it
+is explicitly retried.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -144,6 +145,12 @@ Class DatabaseOperationGuard
 
 
 
+  <h2 id="Devbone_Frameworks_EventSourcing_TimeMachine_Data_DatabaseOperationGuard_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Only a failure to reach the database opens the circuit. A failed query of a reachable database - a statement
+timeout, a missing permission or table, a read replica refusing a write, a cancellation - fails that operation
+alone: the guard is shared by every operator of the process, so one operator's slow filter must not show
+&quot;database unreachable&quot; to everyone until somebody clicks retry.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -194,7 +201,7 @@ Class DatabaseOperationGuard
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether the most recent database operation established that PostgreSQL is unavailable.</p>
+  <div class="markdown level1 summary"><p>Gets whether the most recent database operation established that PostgreSQL is unreachable.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -230,7 +237,8 @@ Class DatabaseOperationGuard
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Allows the next operation to probe PostgreSQL immediately, for example after an explicit retry action.</p>
+  <div class="markdown level1 summary"><p>Allows the next operation to probe PostgreSQL immediately, for example after an explicit retry action. A probe
+already in flight still settles the state when it completes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -275,7 +283,8 @@ Class DatabaseOperationGuard
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.DatabaseOperationResult-1.html">DatabaseOperationResult</a>&lt;T&gt;&gt;</dt>
-    <dd><p>A successful value, or an unavailable result without repeatedly throwing while the circuit is open.</p>
+    <dd><p>A successful value, or a failed result: with <a class="xref" href="Devbone.Frameworks.EventSourcing.TimeMachine.Data.DatabaseOperationGuard.html#Devbone_Frameworks_EventSourcing_TimeMachine_Data_DatabaseOperationGuard_IsUnavailable">IsUnavailable</a> set when the database could not be
+reached, without it when only this operation failed.</p>
 </dd>
   </dl>
 

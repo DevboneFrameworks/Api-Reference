@@ -142,6 +142,11 @@ Create one immutable instance per request and pass it when constructing the aggr
 
 
 
+  <h2 id="Devbone_Frameworks_Ddd_ChangeTracker_AggregateCommitContext_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Every value here reaches the immutable outbox envelope unprotected, survives the erasure of a data subject and is
+republished verbatim by a resend, so none of them may identify a person. There is deliberately no actor: a person
+who acts belongs in the event payload as a protected field under that person's key.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -191,38 +196,6 @@ Create one immutable instance per request and pass it when constructing the aggr
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string? CausationId { get; init; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_Ddd_ChangeTracker_AggregateCommitContext_PrincipalId_" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.AggregateCommitContext.PrincipalId*"></a>
-
-  <h3 id="Devbone_Frameworks_Ddd_ChangeTracker_AggregateCommitContext_PrincipalId" data-uid="Devbone.Frameworks.Ddd.ChangeTracker.AggregateCommitContext.PrincipalId">
-  PrincipalId
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the optional actor asserted by the producing application.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? PrincipalId { get; init; }</code></pre>
   </div>
 
 

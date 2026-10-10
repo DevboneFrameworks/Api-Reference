@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class EventStore | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Contains asynchronous event store operations that mirror the synchronous API.">
+      <meta name="description" content="Contains the core event store operations of .">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,12 +97,12 @@ Class EventStore
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventSourcing.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Contains asynchronous event store operations that mirror the synchronous API.</p>
+  <div class="markdown summary"><p>Contains the core event store operations of <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.IEventStore.html">IEventStore</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class EventStore : IEventStore, IAsyncEventStore, ITransactionalOutboxEventStore, IEventPrivacyIndex, IAggregateSnapshotStore, IAggregateLockStore, IDisposable, IAsyncDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class EventStore : IEventStore, ITransactionalOutboxEventStore, IEventPrivacyIndex, IAggregateSnapshotStore, IAggregateLockStore, IDisposable, IAsyncDisposable</code></pre>
   </div>
 
 
@@ -120,7 +120,6 @@ Class EventStore
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.IEventStore.html">IEventStore</a></div>
-      <div><a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.IAsyncEventStore.html">IAsyncEventStore</a></div>
       <div><a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.ITransactionalOutboxEventStore.html">ITransactionalOutboxEventStore</a></div>
       <div><a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.IEventPrivacyIndex.html">IEventPrivacyIndex</a></div>
       <div><a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.IAggregateSnapshotStore.html">IAggregateSnapshotStore</a></div>
@@ -239,40 +238,6 @@ Class EventStore
 </h2>
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_DeleteSnapshot_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.DeleteSnapshot*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_DeleteSnapshot_System_String_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.DeleteSnapshot(System.String,System.String)">
-  DeleteSnapshot(string, string)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Deletes the derived snapshot for one aggregate without deleting events.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DeleteSnapshot(string aggregateName, string aggregateId)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
   <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_DeleteSnapshotAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.DeleteSnapshotAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_DeleteSnapshotAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.DeleteSnapshotAsync(System.String,System.String,System.Threading.CancellationToken)">
@@ -291,17 +256,21 @@ Class EventStore
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The aggregate contract name.</p>
+</dd>
     <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The globally unique aggregate identifier.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Cancellation token.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
+    <dd><p>A task that completes when the snapshot is deleted.</p>
+</dd>
   </dl>
 
 
@@ -337,6 +306,11 @@ Class EventStore
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_Dispose_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Prefer <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_DisposeAsync">DisposeAsync()</a>. This member is the one synchronous member the store keeps: the
+store is a singleton of <code>AddDevboneEventStore</code>, and a dependency-injection container disposed
+synchronously throws for a service that implements <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a> only.</p>
+</div>
 
 
 
@@ -361,51 +335,6 @@ Class EventStore
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
     <dd><p>A task that completes after every owned lock session has been closed.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_FindEvents_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.FindEvents*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_FindEvents_System_String_System_String_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.FindEvents(System.String,System.String,System.String)">
-  FindEvents(string, string, string)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Finds events linked to one pseudonymized subject within one tenant.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;DataSubjectEventReference&gt; FindEvents(string tenantId, string subjectType, string subjectKey)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>tenantId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The tenant boundary.</p>
-</dd>
-    <dt><code>subjectType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The application-defined subject kind.</p>
-</dd>
-    <dt><code>subjectKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The opaque subject key.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.DataSubjectEventReference.html">DataSubjectEventReference</a>&gt;</dt>
-    <dd><p>Matched event references ordered by creation time.</p>
 </dd>
   </dl>
 
@@ -454,57 +383,6 @@ Class EventStore
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.DataSubjectEventReference.html">DataSubjectEventReference</a>&gt;&gt;</dt>
     <dd><p>Matched event references ordered by creation time.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_FindEventsPage_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.FindEventsPage*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_FindEventsPage_System_String_System_String_System_String_System_String_System_Int32_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.FindEventsPage(System.String,System.String,System.String,System.String,System.Int32)">
-  FindEventsPage(string, string, string, string?, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Finds one page of events linked to a pseudonymized subject within one tenant.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DataSubjectEventPage FindEventsPage(string tenantId, string subjectType, string subjectKey, string? cursor = null, int pageSize = 100)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>tenantId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The tenant boundary.</p>
-</dd>
-    <dt><code>subjectType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The application-defined subject kind.</p>
-</dd>
-    <dt><code>subjectKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The opaque subject key.</p>
-</dd>
-    <dt><code>cursor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The opaque cursor from the preceding page, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for the first page.</p>
-</dd>
-    <dt><code>pageSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The requested page size from 1 through 1,000.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.DataSubjectEventPage.html">DataSubjectEventPage</a></dt>
-    <dd><p>One ordered page and an optional cursor for the next page.</p>
 </dd>
   </dl>
 
@@ -572,32 +450,36 @@ Class EventStore
 
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetAggregateIds_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetAggregateIds*"></a>
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetAggregateIdentitiesAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetAggregateIdentitiesAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetAggregateIds_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetAggregateIds(System.String)">
-  GetAggregateIds(string)
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetAggregateIdentitiesAsync_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetAggregateIdentitiesAsync(System.String,System.Threading.CancellationToken)">
+  GetAggregateIdentitiesAsync(string, CancellationToken)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets all aggregate identifiers for one aggregate type.</p>
+  <div class="markdown level1 summary"><p>Reads, in one pass, the distinct identities of every stream that stores events under one aggregate
+contract name, including any other identity those streams carry.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; GetAggregateIds(string aggregateName)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;StoredStreamIdentity&gt;&gt; GetAggregateIdentitiesAsync(string aggregateName, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The aggregate type name.</p>
+    <dd><p>The aggregate contract name.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>An enumeration containing unique aggregate identifiers.</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.StoredStreamIdentity.html">StoredStreamIdentity</a>&gt;&gt;</dt>
+    <dd><p>Every distinct identity of every matching stream.</p>
 </dd>
   </dl>
 
@@ -607,6 +489,10 @@ Class EventStore
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetAggregateIdentitiesAsync_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Replaces listing the identifiers and loading each stream to authorize it, which was one full-stream query
+per identifier. The default implementation still does that, so a custom store keeps working.</p>
+</div>
 
 
 
@@ -640,45 +526,6 @@ Class EventStore
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
     <dd><p>An enumeration of distinct aggregate identifiers.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetCurrentIncrements_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetCurrentIncrements*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetCurrentIncrements_Devbone_Frameworks_EventSourcing_Increments_IIncrementGlobal_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetCurrentIncrements(Devbone.Frameworks.EventSourcing.Increments.IIncrementGlobal)">
-  GetCurrentIncrements(IIncrementGlobal)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the current value for one increment key.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long GetCurrentIncrements(IIncrementGlobal incrementGlobal)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>incrementGlobal</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Increments.IIncrementGlobal.html">IIncrementGlobal</a></dt>
-    <dd><p>The increment key.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd><p>The currently stored increment value or zero when no value exists.</p>
 </dd>
   </dl>
 
@@ -734,45 +581,6 @@ Class EventStore
 
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetNextIncrements_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetNextIncrements*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetNextIncrements_Devbone_Frameworks_EventSourcing_Increments_IIncrementGlobal___" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetNextIncrements(Devbone.Frameworks.EventSourcing.Increments.IIncrementGlobal[])">
-  GetNextIncrements(IIncrementGlobal[])
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the next values for the provided increment keys.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IIncrementGlobalValue[] GetNextIncrements(IIncrementGlobal[] incrementGlobals)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>incrementGlobals</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Increments.IIncrementGlobal.html">IIncrementGlobal</a>[]</dt>
-    <dd><p>The increment keys to process.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Increments.IIncrementGlobalValue.html">IIncrementGlobalValue</a>[]</dt>
-    <dd><p>An array containing one result value per requested increment key.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
   <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetNextIncrementsAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetNextIncrementsAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetNextIncrementsAsync_Devbone_Frameworks_EventSourcing_Increments_IIncrementGlobal___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetNextIncrementsAsync(Devbone.Frameworks.EventSourcing.Increments.IIncrementGlobal[],System.Threading.CancellationToken)">
@@ -802,87 +610,6 @@ Class EventStore
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Increments.IIncrementGlobalValue.html">IIncrementGlobalValue</a>[]&gt;</dt>
     <dd><p>An array containing one increment result per requested key.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetOwnedLocks_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetOwnedLocks*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetOwnedLocks_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetOwnedLocks(System.String)">
-  GetOwnedLocks(string)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Returns metadata for leases owned by this store instance and request.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;AggregateLockInfo&gt; GetOwnedLocks(string requestId)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>requestId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Request identifier whose process-local leases should be returned.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Locks.AggregateLockInfo.html">AggregateLockInfo</a>&gt;</dt>
-    <dd><p>A snapshot of matching lock metadata.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetUniqueReservation_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueReservation*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetUniqueReservation_System_String_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueReservation(System.String,System.String)">
-  GetUniqueReservation(string, string)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Reads scalar or collection membership; null means absent, an empty hash list means a retained empty group.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniqueReservationState? GetUniqueReservation(string aggregateId, string key)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Owning aggregate identifier.</p>
-</dd>
-    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Logical key.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.UniqueReservationState.html">UniqueReservationState</a></dt>
-    <dd><p>Stored group and hashes, never the original values.</p>
 </dd>
   </dl>
 
@@ -941,48 +668,6 @@ Class EventStore
 
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetUniqueValue_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueValue*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetUniqueValue_System_String_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueValue(System.String,System.String)">
-  GetUniqueValue(string, string)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Loads one unique value hash for an aggregate and key.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniqueValueHash? GetUniqueValue(string aggregateId, string key)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The aggregate identifier.</p>
-</dd>
-    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The unique key.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHash.html">UniqueValueHash</a></dt>
-    <dd><p>The loaded unique value hash or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when no entry exists.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
   <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetUniqueValueAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueValueAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetUniqueValueAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.GetUniqueValueAsync(System.String,System.String,System.Threading.CancellationToken)">
@@ -1024,47 +709,10 @@ Class EventStore
 
 
 
-
-
-
-
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_HasProcessedRequest_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.HasProcessedRequest*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_HasProcessedRequest_System_String_System_String_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.HasProcessedRequest(System.String,System.String,System.String)">
-  HasProcessedRequest(string, string, string)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Determines whether one request was already committed for an aggregate.</p>
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_GetUniqueValueAsync_System_String_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A failure to read is not &quot;no value&quot; and propagates. Swallowing it let a database outage look like a free
+unique value to a caller deciding whether a value may be taken (EventSourcing 19.0.0).</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HasProcessedRequest(string aggregateName, string aggregateId, string requestId)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>requestId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
 
 
 
@@ -1087,57 +735,23 @@ Class EventStore
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The aggregate contract name.</p>
+</dd>
     <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The globally unique aggregate identifier.</p>
+</dd>
     <dt><code>requestId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The command request identifier to look up.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_IsLocked_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.IsLocked*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_IsLocked_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.IsLocked(System.String)">
-  IsLocked(string)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Checks whether another local or remote session currently owns the aggregate lock.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsLocked(string aggregateId)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Globally unique aggregate identifier to inspect.</p>
+    <dd><p>Cancellation token.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the aggregate is locked; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when a commit for this request has already been persisted.</p>
 </dd>
   </dl>
 
@@ -1193,45 +807,6 @@ Class EventStore
 
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadAggregate_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadAggregate*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadAggregate_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadAggregate(System.String)">
-  LoadAggregate(string)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Loads all events for one aggregate identifier.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;IDatabaseEvent&gt; LoadAggregate(string aggregateId)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The aggregate identifier.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>&gt;</dt>
-    <dd><p>A read-only collection of events ordered by aggregate version and event order.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
   <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadAggregateAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadAggregateAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadAggregateAsync_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadAggregateAsync(System.String,System.Threading.CancellationToken)">
@@ -1261,49 +836,6 @@ Class EventStore
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>&gt;&gt;</dt>
     <dd><p>A read-only collection of aggregate events ordered by aggregate version and event order.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadAggregates_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadAggregates*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadAggregates_System_String_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadAggregates(System.String,System.String)">
-  LoadAggregates(string, string?)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Loads all events for one aggregate type, optionally filtered by event name.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;IDatabaseEvent&gt; LoadAggregates(string aggregateName, string? eventName = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The aggregate type name.</p>
-</dd>
-    <dt><code>eventName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Optional event type filter.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>&gt;</dt>
-    <dd><p>A read-only collection of matching events grouped by aggregate identifier and, within each aggregate,
-in stream order.</p>
 </dd>
   </dl>
 
@@ -1363,52 +895,6 @@ in stream order.</p>
 
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadEvents_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadEvents*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadEvents_System_String_System_Collections_Generic_IReadOnlyCollection_System_String__" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadEvents(System.String,System.Collections.Generic.IReadOnlyCollection{System.String})">
-  LoadEvents(string, IReadOnlyCollection&lt;string&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Loads classified personal-data events by exact identifiers within one tenant.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;PrivacyEventRecord&gt; LoadEvents(string tenantId, IReadOnlyCollection&lt;string&gt; eventIds)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>tenantId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The tenant boundary.</p>
-</dd>
-    <dt><code>eventIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>The event identifiers returned by a prior authorized lookup.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.PrivacyEventRecord.html">PrivacyEventRecord</a>&gt;</dt>
-    <dd><p>Matched personal-data events ordered by creation time.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadEvents_System_String_System_Collections_Generic_IReadOnlyCollection_System_String___remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Missing, non-personal, and cross-tenant events are not returned. Payloads must be
-filtered by the application before disclosure.</p>
-</div>
-
-
-
-
   <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadEventsAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadEventsAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadEventsAsync_System_String_System_Collections_Generic_IReadOnlyCollection_System_String__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadEventsAsync(System.String,System.Collections.Generic.IReadOnlyCollection{System.String},System.Threading.CancellationToken)">
@@ -1458,45 +944,6 @@ filtered by the application before disclosure.</p>
 
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadForRehydration_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadForRehydration*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadForRehydration_System_String_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadForRehydration(System.String,System.String)">
-  LoadForRehydration(string, string)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Loads the newest enabled snapshot and every event after it.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AggregateRehydration LoadForRehydration(string aggregateName, string aggregateId)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.AggregateRehydration.html">AggregateRehydration</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
   <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadForRehydrationAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadForRehydrationAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadForRehydrationAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadForRehydrationAsync(System.String,System.String,System.Threading.CancellationToken)">
@@ -1515,48 +962,20 @@ filtered by the application before disclosure.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The aggregate contract name.</p>
+</dd>
     <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The globally unique aggregate identifier.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Cancellation token.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.AggregateRehydration.html">AggregateRehydration</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_RemoveUniques_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.RemoveUniques*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_RemoveUniques_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.RemoveUniques(System.String)">
-  RemoveUniques(string)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Removes all unique values for one aggregate identifier.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RemoveUniques(string aggregateId)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The aggregate identifier.</p>
+    <dd><p>The rehydration data: the snapshot, if any, and the events after it, continuous through the aggregate head.</p>
 </dd>
   </dl>
 
@@ -1567,6 +986,52 @@ filtered by the application before disclosure.</p>
 
 
 
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadStreamIdentitiesAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadStreamIdentitiesAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadStreamIdentitiesAsync_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadStreamIdentitiesAsync(System.String,System.Threading.CancellationToken)">
+  LoadStreamIdentitiesAsync(string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the distinct identities stored with one aggregate stream, without loading event payloads.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyCollection&lt;StoredStreamIdentity&gt;&gt; LoadStreamIdentitiesAsync(string aggregateId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The aggregate identifier.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.StoredStreamIdentity.html">StoredStreamIdentity</a>&gt;&gt;</dt>
+    <dd><p>Every distinct identity of the stream; empty when the stream does not exist.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadStreamIdentitiesAsync_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Authorizing a caller needs the stream's name and tenant only. Loading the full stream for that read every
+payload on every command and preflight. The default implementation still does, so a custom store
+keeps working; the PostgreSQL store overrides it.</p>
+</div>
 
 
 
@@ -1613,47 +1078,6 @@ filtered by the application before disclosure.</p>
 
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_ShouldCreateSnapshot_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.ShouldCreateSnapshot*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_ShouldCreateSnapshot_System_String_System_String_System_Int64_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.ShouldCreateSnapshot(System.String,System.String,System.Int64)">
-  ShouldCreateSnapshot(string, string, long)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Determines whether the next complete aggregate state should be snapshotted.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ShouldCreateSnapshot(string aggregateName, string aggregateId, long eventSequence)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>eventSequence</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
   <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_ShouldCreateSnapshotAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.ShouldCreateSnapshotAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_ShouldCreateSnapshotAsync_System_String_System_String_System_Int64_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.ShouldCreateSnapshotAsync(System.String,System.String,System.Int64,System.Threading.CancellationToken)">
@@ -1672,89 +1096,25 @@ filtered by the application before disclosure.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The aggregate contract name.</p>
+</dd>
     <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The globally unique aggregate identifier.</p>
+</dd>
     <dt><code>eventSequence</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>The event sequence of the commit that would trigger the snapshot.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Cancellation token.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEvents_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEvents*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEvents_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[])">
-  StoreEvents(IDatabaseEvent[])
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Stores one event batch as one commit.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StoreEvents(IDatabaseEvent[] events)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>[]</dt>
-    <dd><p>The events to store.</p>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when snapshotting is enabled for this aggregate and its interval has elapsed.</p>
 </dd>
   </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEvents_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEvents*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEvents_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEvents(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])">
-  StoreEvents(IDatabaseEvent[], IUniqueReservation[])
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Stores one event batch and optional unique values as one commit.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StoreEvents(IDatabaseEvent[] events, IUniqueReservation[] uniqueValues)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>[]</dt>
-    <dd><p>The events to store.</p>
-</dd>
-    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html">IUniqueReservation</a>[]</dt>
-    <dd><p>Optional unique values to upsert in the same transaction.</p>
-</dd>
-  </dl>
-
 
 
 
@@ -1853,83 +1213,6 @@ filtered by the application before disclosure.</p>
 
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutbox_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutbox*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutbox_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutbox(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])">
-  StoreEventsWithOutbox(IDatabaseEvent[], OutboxMessage[]?, params IUniqueReservation[])
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Stores events, unique values and their exact outbound envelopes atomically.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StoreEventsWithOutbox(IDatabaseEvent[] events, OutboxMessage[]? outboxMessages, params IUniqueReservation[] uniqueValues)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>[]</dt>
-    <dd><p>Events to append as one aggregate commit.</p>
-</dd>
-    <dt><code>outboxMessages</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.html">OutboxMessage</a>[]</dt>
-    <dd><p>One outbound message for every event.</p>
-</dd>
-    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html">IUniqueReservation</a>[]</dt>
-    <dd><p>Optional unique values written in the same transaction.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutboxAndSnapshot_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshot*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutboxAndSnapshot_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])">
-  StoreEventsWithOutboxAndSnapshot(IDatabaseEvent[], OutboxMessage[], AggregateSnapshot?, params IUniqueReservation[])
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Stores one event commit, outbox messages, and an eligible snapshot atomically.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StoreEventsWithOutboxAndSnapshot(IDatabaseEvent[] events, OutboxMessage[] outboxMessages, AggregateSnapshot? snapshot, params IUniqueReservation[] uniqueValues)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>[]</dt>
-    <dd></dd>
-    <dt><code>outboxMessages</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.html">OutboxMessage</a>[]</dt>
-    <dd></dd>
-    <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
-    <dd></dd>
-    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html">IUniqueReservation</a>[]</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
   <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutboxAndSnapshotAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshotAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithOutboxAndSnapshotAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Outbox_OutboxMessage___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithOutboxAndSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)">
@@ -1948,21 +1231,27 @@ filtered by the application before disclosure.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>[]</dt>
-    <dd></dd>
+    <dd><p>The events of the commit, in order.</p>
+</dd>
     <dt><code>outboxMessages</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxMessage.html">OutboxMessage</a>[]</dt>
-    <dd></dd>
+    <dd><p>The outbox envelopes to persist in the same transaction, one per event.</p>
+</dd>
     <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
-    <dd></dd>
+    <dd><p>The candidate snapshot; only stored when the store's policy decides it is due.</p>
+</dd>
     <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html">IUniqueReservation</a>[]</dt>
-    <dd></dd>
+    <dd><p>The final scalar/collection uniqueness declarations for this commit, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for none.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Cancellation token.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
+    <dd><p>A task that completes when the commit is durable.</p>
+</dd>
   </dl>
 
 
@@ -2023,42 +1312,6 @@ filtered by the application before disclosure.</p>
 
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithSnapshot_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshot*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithSnapshot_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshot(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[])">
-  StoreEventsWithSnapshot(IDatabaseEvent[], AggregateSnapshot?, params IUniqueReservation[])
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Stores one event commit and an eligible snapshot atomically.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StoreEventsWithSnapshot(IDatabaseEvent[] events, AggregateSnapshot? snapshot, params IUniqueReservation[] uniqueValues)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>[]</dt>
-    <dd></dd>
-    <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
-    <dd></dd>
-    <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html">IUniqueReservation</a>[]</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
   <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithSnapshotAsync_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshotAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_StoreEventsWithSnapshotAsync_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent___Devbone_Frameworks_EventSourcing_Snapshots_AggregateSnapshot_Devbone_Frameworks_EventSourcing_Uniques_IUniqueReservation___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.StoreEventsWithSnapshotAsync(Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent[],Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot,Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation[],System.Threading.CancellationToken)">
@@ -2077,63 +1330,23 @@ filtered by the application before disclosure.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>[]</dt>
-    <dd></dd>
+    <dd><p>The events of the commit, in order.</p>
+</dd>
     <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
-    <dd></dd>
+    <dd><p>The candidate snapshot; only stored when the store's policy decides it is due.</p>
+</dd>
     <dt><code>uniqueValues</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueReservation.html">IUniqueReservation</a>[]</dt>
-    <dd></dd>
+    <dd><p>The final scalar/collection uniqueness declarations for this commit, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for none.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Cancellation token.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_TryAcquireLock_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.TryAcquireLock*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_TryAcquireLock_System_String_System_String_System_String_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.TryAcquireLock(System.String,System.String,System.String)">
-  TryAcquireLock(string, string, string)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Attempts to acquire exclusive ownership without waiting.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAggregateLockLease? TryAcquireLock(string aggregateName, string aggregateId, string requestId)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Aggregate contract name retained for diagnostics.</p>
-</dd>
-    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Globally unique aggregate identifier used to derive the lock key.</p>
-</dd>
-    <dt><code>requestId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Request identifier that owns a successful lease.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Locks.IAggregateLockLease.html">IAggregateLockLease</a></dt>
-    <dd><p>The owning lease, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when another session owns the aggregate lock.</p>
+    <dd><p>A task that completes when the commit is durable.</p>
 </dd>
   </dl>
 
@@ -2181,52 +1394,7 @@ filtered by the application before disclosure.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Locks.IAggregateLockLease.html">IAggregateLockLease</a>&gt;</dt>
-    <dd><p>The owning lease, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when another session owns the aggregate lock.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_TryGetUniqueValue_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.TryGetUniqueValue*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_EventStore_TryGetUniqueValue_System_String_System_String_Devbone_Frameworks_EventSourcing_Uniques_IUniqueValueHash__" data-uid="Devbone.Frameworks.EventSourcing.Repositories.EventStore.TryGetUniqueValue(System.String,System.String,Devbone.Frameworks.EventSourcing.Uniques.IUniqueValueHash@)">
-  TryGetUniqueValue(string, string, out IUniqueValueHash?)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Tries to load a unique value hash without propagating repository exceptions.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryGetUniqueValue(string aggregateId, string key, out IUniqueValueHash? value)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The aggregate identifier.</p>
-</dd>
-    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The unique key.</p>
-</dd>
-    <dt><code>value</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.IUniqueValueHash.html">IUniqueValueHash</a></dt>
-    <dd><p>The loaded unique value hash when available.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when a value exists; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+    <dd><p>The owning lease, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when the aggregate lock is already owned, by another session or by a still unreleased lease of the same request; a lease belongs to exactly one caller.</p>
 </dd>
   </dl>
 

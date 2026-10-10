@@ -165,31 +165,44 @@ Class PrivacyDefinitionDetails
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>AggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate contract name the definition applies to.</p>
+</dd>
     <dt><code>EventName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Event contract name the definition applies to.</p>
+</dd>
     <dt><code>EventVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Version of the event contract the definition applies to.</p>
+</dd>
     <dt><code>Classification</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Privacy classification declared for the event or field.</p>
+</dd>
     <dt><code>RetentionPolicy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Retention policy declared for the event or field, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when none applies.</p>
+</dd>
     <dt><code>FieldPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Path of the classified field within the event payload, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when the definition applies to the whole event.</p>
+</dd>
     <dt><code>DataCategory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Declared data category of the classified field, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when not categorized.</p>
+</dd>
     <dt><code>SubjectType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Declared data subject type the field references, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when not applicable.</p>
+</dd>
     <dt><code>SubjectRole</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Declared role of the referenced subject, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when not applicable.</p>
+</dd>
     <dt><code>Protection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Declared field protection mode, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when the field is not protected.</p>
+</dd>
     <dt><code>ErasedValuePolicy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Policy describing what replaces the field's value once its subject is erased, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when not applicable.</p>
+</dd>
     <dt><code>ErasedValuePlaceholder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Placeholder value used once the field's subject is erased, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when not applicable.</p>
+</dd>
     <dt><code>IsRequired</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
-    <dd></dd>
+    <dd><p>Whether the field is required to be present and mappable, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when not declared.</p>
+</dd>
   </dl>
 
 
@@ -214,7 +227,8 @@ Class PrivacyDefinitionDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregate contract name the definition applies to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -245,7 +259,8 @@ Class PrivacyDefinitionDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Privacy classification declared for the event or field.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -276,7 +291,8 @@ Class PrivacyDefinitionDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Declared data category of the classified field, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when not categorized.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -307,7 +323,8 @@ Class PrivacyDefinitionDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Placeholder value used once the field's subject is erased, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when not applicable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -338,7 +355,8 @@ Class PrivacyDefinitionDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Policy describing what replaces the field's value once its subject is erased, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when not applicable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -369,7 +387,8 @@ Class PrivacyDefinitionDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Event contract name the definition applies to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -400,7 +419,8 @@ Class PrivacyDefinitionDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Version of the event contract the definition applies to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -431,7 +451,8 @@ Class PrivacyDefinitionDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Path of the classified field within the event payload, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when the definition applies to the whole event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -462,7 +483,8 @@ Class PrivacyDefinitionDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether the field is required to be present and mappable, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when not declared.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -493,7 +515,8 @@ Class PrivacyDefinitionDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Declared field protection mode, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when the field is not protected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -524,7 +547,8 @@ Class PrivacyDefinitionDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Retention policy declared for the event or field, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when none applies.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -555,7 +579,8 @@ Class PrivacyDefinitionDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Declared role of the referenced subject, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when not applicable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -586,7 +611,8 @@ Class PrivacyDefinitionDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Declared data subject type the field references, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when not applicable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">

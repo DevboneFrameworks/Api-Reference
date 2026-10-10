@@ -198,8 +198,8 @@ Class ExponentialBackoffOutboxRetryPolicy
 
   <a id="Devbone_Frameworks_EventBus_Outbox_Dispatching_ExponentialBackoffOutboxRetryPolicy_Evaluate_" data-uid="Devbone.Frameworks.EventBus.Outbox.Dispatching.ExponentialBackoffOutboxRetryPolicy.Evaluate*"></a>
 
-  <h3 id="Devbone_Frameworks_EventBus_Outbox_Dispatching_ExponentialBackoffOutboxRetryPolicy_Evaluate_System_Int32_System_Int32_" data-uid="Devbone.Frameworks.EventBus.Outbox.Dispatching.ExponentialBackoffOutboxRetryPolicy.Evaluate(System.Int32,System.Int32)">
-  Evaluate(int, int)
+  <h3 id="Devbone_Frameworks_EventBus_Outbox_Dispatching_ExponentialBackoffOutboxRetryPolicy_Evaluate_System_Int32_System_Nullable_System_Int32__" data-uid="Devbone.Frameworks.EventBus.Outbox.Dispatching.ExponentialBackoffOutboxRetryPolicy.Evaluate(System.Int32,System.Nullable{System.Int32})">
+  Evaluate(int, int?)
   
   </h3>
 
@@ -208,7 +208,7 @@ Class ExponentialBackoffOutboxRetryPolicy
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OutboxRetryDecision Evaluate(int attemptCount, int maxAttempts)</code></pre>
+    <pre><code class="lang-csharp hljs">public OutboxRetryDecision Evaluate(int attemptCount, int? maxAttempts)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -216,8 +216,8 @@ Class ExponentialBackoffOutboxRetryPolicy
     <dt><code>attemptCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>Current one-based attempt count.</p>
 </dd>
-    <dt><code>maxAttempts</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Configured terminal attempt count.</p>
+    <dt><code>maxAttempts</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>Configured terminal attempt count, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to retry until publication succeeds (the default).</p>
 </dd>
   </dl>
 

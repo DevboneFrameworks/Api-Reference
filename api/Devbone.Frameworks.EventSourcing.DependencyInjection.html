@@ -95,8 +95,20 @@
 Classes
 </h3>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.DependencyInjection.EventStoreHealthCheckBuilderExtensions.html">EventStoreHealthCheckBuilderExtensions</a></dt>
+      <dd><p>Contributes the event store's readiness check: the database can be opened and has the schema version and tables
+this assembly requires.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.DependencyInjection.EventStoreServiceCollectionExtensions.html">EventStoreServiceCollectionExtensions</a></dt>
       <dd><p>Registers the PostgreSQL event store with the lifetimes it requires.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.DependencyInjection.OutboxStateSamplerServiceCollectionExtensions.html">OutboxStateSamplerServiceCollectionExtensions</a></dt>
+      <dd><p>Runs an <a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.html">OutboxStateSampler</a> as a hosted service, so a host that opts in reports the
+<code>devbone.eventsourcing.outbox.*</code> gauges without writing the hosted service itself.</p>
 </dd>
     </dl>
 

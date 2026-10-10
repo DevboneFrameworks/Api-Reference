@@ -189,6 +189,45 @@ Class DatabaseSettings
 </h2>
 
 
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_DatabaseSettings_ConnectionOptions_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.DatabaseSettings.ConnectionOptions*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_DatabaseSettings_ConnectionOptions" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.DatabaseSettings.ConnectionOptions">
+  ConnectionOptions
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets further Npgsql connection settings by keyword, applied to every connection the stores of
+this package open: for example <code>SslMode</code> = <code>VerifyFull</code>, <code>Maximum Pool Size</code>,
+<code>Timeout</code>, <code>Command Timeout</code>, <code>Keepalive</code> or <code>Search Path</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;string, string&gt; ConnectionOptions { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Repositories_Settings_DatabaseSettings_ConnectionOptions_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Npgsql's default <code>SslMode</code> is <code>Prefer</code>, which encrypts when the server offers it but does not
+verify the server certificate; set <code>VerifyFull</code> in production. An unknown keyword fails when a store
+is built, and the five values above cannot be set a second time here.</p>
+</div>
+
+
+
+
   <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_DatabaseSettings_DatabaseName_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.DatabaseSettings.DatabaseName*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_DatabaseSettings_DatabaseName" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.DatabaseSettings.DatabaseName">

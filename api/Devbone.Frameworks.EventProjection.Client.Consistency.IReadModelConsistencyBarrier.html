@@ -127,7 +127,10 @@ One call, one batch. Barriers are grouped by layer and aggregate type into one k
 checking fifty positions does not become fifty round trips.
 </p>
 <p>
-Read-only and safe to call at any frequency. It never claims, mutates or advances anything.
+Read-only: it never claims, mutates or advances anything. It is not free, though: an unreached group costs up
+to four sequential queries per call (progress, registry when its cache expired, dead-letter evidence and the
+stall probe), and concurrent callers are not coalesced. Pace repeated checks by
+<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierResult.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrierResult_RetryAfter">RetryAfter</a>.
 </p>
 </div>
 

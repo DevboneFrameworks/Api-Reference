@@ -222,6 +222,55 @@ would give every request its own.
 
 
 
+  <a id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaiter__ctor_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaiter.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaiter__ctor_Devbone_Frameworks_EventProjection_Client_Persistence_IProjectionWatermarkReader_Microsoft_Extensions_Options_IOptions_Devbone_Frameworks_EventProjection_Client_Configuration_ReadModelWaiterOptions__Microsoft_Extensions_Logging_ILogger_Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaiter__Devbone_Frameworks_EventProjection_Client_Persistence_IProjectionFailureReader_" data-uid="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaiter.#ctor(Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionWatermarkReader,Microsoft.Extensions.Options.IOptions{Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions},Microsoft.Extensions.Logging.ILogger{Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaiter},Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionFailureReader)">
+  ReadModelWaiter(IProjectionWatermarkReader, IOptions&lt;ReadModelWaiterOptions&gt;, ILogger&lt;ReadModelWaiter&gt;, IProjectionFailureReader)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the waiter with durable dead-letter evidence, so a wait whose position was terminally rejected
+ends as <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitOutcome.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitOutcome_Stalled">Stalled</a> instead of spending its budget.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadModelWaiter(IProjectionWatermarkReader reader, IOptions&lt;ReadModelWaiterOptions&gt; options, ILogger&lt;ReadModelWaiter&gt; logger, IProjectionFailureReader failureReader)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reader</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionWatermarkReader.html">IProjectionWatermarkReader</a></dt>
+    <dd><p>Projection progress reader.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1">IOptions</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Configuration.ReadModelWaiterOptions.html">ReadModelWaiterOptions</a>&gt;</dt>
+    <dd><p>Validated waiter configuration.</p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaiter.html">ReadModelWaiter</a>&gt;</dt>
+    <dd><p>Application-provided structured logger.</p>
+</dd>
+    <dt><code>failureReader</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionFailureReader.html">IProjectionFailureReader</a></dt>
+    <dd><p>Durable dead-letter evidence reader.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when an argument is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -233,7 +282,7 @@ would give every request its own.
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Stops the shared poll loop. Waits still in flight end through their own budget.</p>
+  <div class="markdown level1 summary"><p>Stops the shared poll loop and ends every wait in flight as <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitOutcome.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitOutcome_Rejected">Rejected</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -249,6 +298,10 @@ would give every request its own.
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaiter_Dispose_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Waits used to end through their own budget, so a host shutting down held each request for up to the
+maximum timeout and then reported a timeout nobody had measured.</p>
+</div>
 
 
 
@@ -275,7 +328,9 @@ would give every request its own.
 </dd>
     <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</dt>
     <dd><p>Budget for this wait, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> for the configured default. Values above the configured
-maximum are clamped, so one caller cannot occupy a slot indefinitely.</p>
+maximum are clamped, so one caller cannot occupy a slot indefinitely. <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan.zero">Zero</a> reads the
+projection once and answers <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitOutcome.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitOutcome_CaughtUp">CaughtUp</a> or
+<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelWaitOutcome.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelWaitOutcome_Timeout">Timeout</a>.</p>
 </dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd><p>Token that abandons the wait.</p>

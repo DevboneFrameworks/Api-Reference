@@ -149,9 +149,11 @@ per-caller cache.</p>
 
 
   <h2 id="Devbone_Frameworks_Privacy_DependencyInjection_SubjectKeyServiceClientServiceCollectionExtensions_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>The client is a singleton over a named <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> from <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory">IHttpClientFactory</a>, so
-handler rotation stays with the factory. The cache is the registry consumers resolve; the raw client is
-registered as itself for callers that must bypass the cache.</p>
+  <div class="markdown level0 remarks"><p>The client is a singleton over a named <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> from <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory">IHttpClientFactory</a>. It keeps
+one client and therefore one handler for the process lifetime, so the factory never rotates it; the primary
+handler recycles its pooled connections after <span class="xref">Devbone.Frameworks.Privacy.DependencyInjection.SubjectKeyServiceClientServiceCollectionExtensions.POOLED_CONNECTION_LIFETIME</span> instead, which is what
+picks up a DNS change after the key service moves. The cache is the registry consumers resolve; the raw
+client is registered as itself for callers that must bypass the cache.</p>
 </div>
 
 

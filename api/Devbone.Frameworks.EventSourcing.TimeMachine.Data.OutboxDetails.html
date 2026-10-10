@@ -165,51 +165,74 @@ Class OutboxDetails
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>EventId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Identifier of the stored event this outbox row publishes.</p>
+</dd>
     <dt><code>AggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate contract name the outbox event belongs to.</p>
+</dd>
     <dt><code>AggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate identity the outbox event belongs to.</p>
+</dd>
     <dt><code>AggregateRevision</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate revision assigned to the commit that produced this event.</p>
+</dd>
     <dt><code>EventSequence</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>Event sequence of the outbox event within its aggregate stream.</p>
+</dd>
     <dt><code>TenantId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Tenant context recorded with the outbox row, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when tenancy is not in use.</p>
+</dd>
     <dt><code>AggregateRouteId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Logical route resolved and persisted with the outbox row at commit time; pending events are never rerouted using current configuration.</p>
+</dd>
     <dt><code>AggregateRouteVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Version of the resolved route persisted with the outbox row.</p>
+</dd>
     <dt><code>EventBusId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Identifier of the configured bus this outbox row targets.</p>
+</dd>
     <dt><code>Stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Destination stream or topic the envelope will be published to.</p>
+</dd>
     <dt><code>ContentType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Content type recorded for the envelope payload.</p>
+</dd>
     <dt><code>Status</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Current dispatch status of the outbox row (for example pending, claimed, published, or failed).</p>
+</dd>
     <dt><code>AttemptCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Number of publish attempts made so far.</p>
+</dd>
     <dt><code>NextAttemptAtUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
-    <dd></dd>
+    <dd><p>Timestamp of the next eligible publish attempt, in UTC.</p>
+</dd>
     <dt><code>ClaimedBy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Identifier of the dispatcher instance currently holding the row's lease, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when unclaimed.</p>
+</dd>
     <dt><code>LeaseExpiresAtUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
-    <dd></dd>
+    <dd><p>Expiration of the current claim lease, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when unclaimed.</p>
+</dd>
     <dt><code>LastErrorType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Type name of the most recent publish failure, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when none occurred.</p>
+</dd>
     <dt><code>LastErrorMessage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Message of the most recent publish failure, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when none occurred.</p>
+</dd>
     <dt><code>ProviderMessageId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Broker-assigned message identifier once published, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> before publication.</p>
+</dd>
     <dt><code>CreatedAtUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
-    <dd></dd>
+    <dd><p>Timestamp the outbox row was persisted in the same transaction as its event, in UTC.</p>
+</dd>
     <dt><code>PublishedAtUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
-    <dd></dd>
+    <dd><p>Timestamp the row was confirmed published, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when not yet published.</p>
+</dd>
     <dt><code>FailedAtUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
-    <dd></dd>
+    <dd><p>Timestamp the row was last marked failed, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when it has not failed.</p>
+</dd>
     <dt><code>EnvelopeBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>Size of the serialized envelope in bytes, without exposing its content.</p>
+</dd>
   </dl>
 
 
@@ -234,7 +257,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregate identity the outbox event belongs to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -265,7 +289,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregate contract name the outbox event belongs to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -296,7 +321,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregate revision assigned to the commit that produced this event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -327,7 +353,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Logical route resolved and persisted with the outbox row at commit time; pending events are never rerouted using current configuration.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -358,7 +385,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Version of the resolved route persisted with the outbox row.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -389,7 +417,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of publish attempts made so far.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -420,7 +449,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Identifier of the dispatcher instance currently holding the row's lease, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when unclaimed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -451,7 +481,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Content type recorded for the envelope payload.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -482,7 +513,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Timestamp the outbox row was persisted in the same transaction as its event, in UTC.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -513,7 +545,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Size of the serialized envelope in bytes, without exposing its content.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -544,7 +577,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Identifier of the configured bus this outbox row targets.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -575,7 +609,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Identifier of the stored event this outbox row publishes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -606,7 +641,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Event sequence of the outbox event within its aggregate stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -637,7 +673,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Timestamp the row was last marked failed, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when it has not failed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -668,7 +705,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Message of the most recent publish failure, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when none occurred.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -699,7 +737,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Type name of the most recent publish failure, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when none occurred.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -730,7 +769,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Expiration of the current claim lease, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when unclaimed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -761,7 +801,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Timestamp of the next eligible publish attempt, in UTC.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -792,7 +833,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Broker-assigned message identifier once published, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> before publication.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -823,7 +865,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Timestamp the row was confirmed published, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when not yet published.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -854,7 +897,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Current dispatch status of the outbox row (for example pending, claimed, published, or failed).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -885,7 +929,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Destination stream or topic the envelope will be published to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -916,7 +961,8 @@ Class OutboxDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Tenant context recorded with the outbox row, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when tenancy is not in use.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">

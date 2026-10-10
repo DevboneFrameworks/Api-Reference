@@ -586,7 +586,9 @@ afterwards.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the framework-generated request identifier.</p>
+  <div class="markdown level1 summary"><p>Gets the request identifier. The caller of <a class="xref" href="Devbone.Frameworks.EventSourcing.Resend.IResendRequestStore.html#Devbone_Frameworks_EventSourcing_Resend_IResendRequestStore_CreateAsync_Devbone_Frameworks_EventSourcing_Resend_ResendRequest_System_Threading_CancellationToken_">CreateAsync(ResendRequest, CancellationToken)</a> supplies it and makes it
+unique, for example <code>resend-&lt;guid&gt;</code> as the Time Machine does; an identifier already stored is refused by
+the table's primary key. Must not be empty.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

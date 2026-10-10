@@ -147,8 +147,9 @@ service run their events through this class, so the two modes protect identicall
 
 
   <h2 id="Devbone_Frameworks_EventSourcing_Ddd_Privacy_StoredEventFieldProtection_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>The DDD persistence ports are synchronous, so the Direct-mode methods block on the registry the way the
-Gateway client blocks on HTTP today. An unreachable registry surfaces as
+  <div class="markdown level0 remarks"><p>Both directions are asynchronous and carry the caller's cancellation token to the subject key registry; the
+synchronous wrappers that blocked on the registry with no token were removed with the synchronous DDD ports
+(Devbone.Frameworks.EventSourcing.Ddd 7.0.0). An unreachable registry surfaces as
 <a class="xref" href="Devbone.Frameworks.Privacy.Keys.SubjectKeyRegistryUnavailableException.html">SubjectKeyRegistryUnavailableException</a> out of the commit or
 the load, exactly as an unreachable database does.</p>
 </div>
@@ -199,45 +200,6 @@ plaintext, so the limit is checked again after.</p>
 </h2>
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Ddd_Privacy_StoredEventFieldProtection_Protect_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Privacy.StoredEventFieldProtection.Protect*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Ddd_Privacy_StoredEventFieldProtection_Protect_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Privacy.StoredEventFieldProtection.Protect(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[])">
-  Protect(IStoredEvent[])
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Protects the events of one commit, returning copies where a payload changed.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IStoredEvent[] Protect(IStoredEvent[] events)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>[]</dt>
-    <dd><p>The events in commit order.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>[]</dt>
-    <dd><p>The events to persist, in input order.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
   <a id="Devbone_Frameworks_EventSourcing_Ddd_Privacy_StoredEventFieldProtection_ProtectAsync_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Privacy.StoredEventFieldProtection.ProtectAsync*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Ddd_Privacy_StoredEventFieldProtection_ProtectAsync_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Privacy.StoredEventFieldProtection.ProtectAsync(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[],System.Threading.CancellationToken)">
@@ -267,45 +229,6 @@ plaintext, so the limit is checked again after.</p>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/Repositories/IStoredEvent.cs">IStoredEvent</a>[]&gt;</dt>
     <dd><p>The events to persist, in input order.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_EventSourcing_Ddd_Privacy_StoredEventFieldProtection_Unprotect_" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Privacy.StoredEventFieldProtection.Unprotect*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Ddd_Privacy_StoredEventFieldProtection_Unprotect_System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_EventSourcing_Dbs_Events_IDatabaseEvent__" data-uid="Devbone.Frameworks.EventSourcing.Ddd.Privacy.StoredEventFieldProtection.Unprotect(System.Collections.Generic.IReadOnlyCollection{Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent})">
-  Unprotect(IReadOnlyCollection&lt;IDatabaseEvent&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Unprotects stored rows, returning copies where a payload changed.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;IDatabaseEvent&gt; Unprotect(IReadOnlyCollection&lt;IDatabaseEvent&gt; events)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>events</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>&gt;</dt>
-    <dd><p>The stored rows.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Dbs.Events.IDatabaseEvent.html">IDatabaseEvent</a>&gt;</dt>
-    <dd><p>The rows with plaintext or placeholders, in input order.</p>
 </dd>
   </dl>
 
@@ -368,8 +291,8 @@ plaintext, so the limit is checked again after.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Copies a stored event with another payload. Every property travels, including the publication actor
-and cause a request-scoped context stamped on it.</p>
+  <div class="markdown level1 summary"><p>Copies a stored event with another payload. Every property travels, including the publication cause a
+request-scoped context stamped on it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

@@ -149,8 +149,8 @@ Class OutboxStateSnapshot
 
   <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot__ctor_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot__ctor_System_DateTimeOffset_System_Int64_System_Int64_System_Int64_System_Int64_System_Int64_System_Nullable_System_TimeSpan__" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.#ctor(System.DateTimeOffset,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Nullable{System.TimeSpan})">
-  OutboxStateSnapshot(DateTimeOffset, long, long, long, long, long, TimeSpan?)
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot__ctor_System_DateTimeOffset_System_Int64_System_Int64_System_Int64_System_Int64_System_Nullable_System_TimeSpan__" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.#ctor(System.DateTimeOffset,System.Int64,System.Int64,System.Int64,System.Int64,System.Nullable{System.TimeSpan})">
+  OutboxStateSnapshot(DateTimeOffset, long, long, long, long, TimeSpan?)
   
   </h3>
 
@@ -159,7 +159,7 @@ Class OutboxStateSnapshot
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OutboxStateSnapshot(DateTimeOffset SampledAtUtc, long Pending, long Claimed, long RetryWait, long Published, long Failed, TimeSpan? OldestOutstandingAge)</code></pre>
+    <pre><code class="lang-csharp hljs">public OutboxStateSnapshot(DateTimeOffset SampledAtUtc, long Pending, long Claimed, long RetryWait, long Failed, TimeSpan? OldestOutstandingAge)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -175,9 +175,6 @@ Class OutboxStateSnapshot
 </dd>
     <dt><code>RetryWait</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p>Pending rows whose next attempt time is in the future.</p>
-</dd>
-    <dt><code>Published</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd><p>Retained published rows.</p>
 </dd>
     <dt><code>Failed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p>Terminal failed rows, which can block later events.</p>
@@ -330,38 +327,6 @@ Class OutboxStateSnapshot
 
 
 
-  <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Published_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Published*"></a>
-
-  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Published" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Published">
-  Published
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Retained published rows.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long Published { get; init; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_RetryWait_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.RetryWait*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_RetryWait" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.RetryWait">
@@ -432,8 +397,8 @@ Class OutboxStateSnapshot
 
   <a id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Deconstruct_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Deconstruct*"></a>
 
-  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Deconstruct_System_DateTimeOffset__System_Int64__System_Int64__System_Int64__System_Int64__System_Int64__System_Nullable_System_TimeSpan___" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Deconstruct(System.DateTimeOffset@,System.Int64@,System.Int64@,System.Int64@,System.Int64@,System.Int64@,System.Nullable{System.TimeSpan}@)">
-  Deconstruct(out DateTimeOffset, out long, out long, out long, out long, out long, out TimeSpan?)
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_OutboxStateSnapshot_Deconstruct_System_DateTimeOffset__System_Int64__System_Int64__System_Int64__System_Int64__System_Nullable_System_TimeSpan___" data-uid="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.Deconstruct(System.DateTimeOffset@,System.Int64@,System.Int64@,System.Int64@,System.Int64@,System.Nullable{System.TimeSpan}@)">
+  Deconstruct(out DateTimeOffset, out long, out long, out long, out long, out TimeSpan?)
   
   </h3>
 
@@ -441,7 +406,7 @@ Class OutboxStateSnapshot
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Deconstruct(out DateTimeOffset SampledAtUtc, out long Pending, out long Claimed, out long RetryWait, out long Published, out long Failed, out TimeSpan? OldestOutstandingAge)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Deconstruct(out DateTimeOffset SampledAtUtc, out long Pending, out long Claimed, out long RetryWait, out long Failed, out TimeSpan? OldestOutstandingAge)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -453,8 +418,6 @@ Class OutboxStateSnapshot
     <dt><code>Claimed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
     <dt><code>RetryWait</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
-    <dt><code>Published</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
     <dt><code>Failed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>

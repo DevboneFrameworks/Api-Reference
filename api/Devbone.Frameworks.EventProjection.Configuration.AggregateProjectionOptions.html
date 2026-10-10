@@ -212,6 +212,48 @@ Class AggregateProjectionOptions
 
 
 
+  <a id="Devbone_Frameworks_EventProjection_Configuration_AggregateProjectionOptions_OptionalReferencePaths_" data-uid="Devbone.Frameworks.EventProjection.Configuration.AggregateProjectionOptions.OptionalReferencePaths*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Configuration_AggregateProjectionOptions_OptionalReferencePaths" data-uid="Devbone.Frameworks.EventProjection.Configuration.AggregateProjectionOptions.OptionalReferencePaths">
+  OptionalReferencePaths
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the field paths of this aggregate's state whose references are optional: enriched when the referenced
+document is visible in the same tenant, otherwise left as the scalar identity without a missing-reference
+retry, a dead letter or a failure marker. The dependency edge stays, so a same-tenant document arriving
+later still refreshes this aggregate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;string&gt; OptionalReferencePaths { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Configuration_AggregateProjectionOptions_OptionalReferencePaths_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Paths use the syntax of <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.AggregateProjectionOptions.html#Devbone_Frameworks_EventProjection_Configuration_AggregateProjectionOptions_ReferenceMappings">ReferenceMappings</a> keys: an exact path, <code>[]</code> for every element of an
+array of objects, and the containing property for an array of scalar identities. A path only governs waiting,
+not which aggregate is referenced, so it may also carry a mapping. It applies wherever this aggregate's state
+is resolved, including its embedded copy in another aggregate's merged document. Every other reference keeps
+the default: the merged document is written only once the reference resolves.</p>
+</div>
+
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Configuration_AggregateProjectionOptions_ReferenceMappings_" data-uid="Devbone.Frameworks.EventProjection.Configuration.AggregateProjectionOptions.ReferenceMappings*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Configuration_AggregateProjectionOptions_ReferenceMappings" data-uid="Devbone.Frameworks.EventProjection.Configuration.AggregateProjectionOptions.ReferenceMappings">

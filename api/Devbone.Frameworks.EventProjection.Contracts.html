@@ -142,6 +142,14 @@ of subscribing to the domain bus a second time.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.ProjectionMalformedMessageException.html">ProjectionMalformedMessageException</a></dt>
+      <dd><p>Reports a projection message that can never be processed because of its own shape: it is not valid JSON of the
+expected contract, or its key does not name the aggregate it carries. A consumer moves it to the generic
+dead-letter address and settles it instead of retrying it without end; any other failure stays retryable. The
+message never contains payload content.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.RawProjectionNotification.html">RawProjectionNotification</a></dt>
       <dd><p>Identifies one raw-state update that must trigger enrichment.</p>
 </dd>

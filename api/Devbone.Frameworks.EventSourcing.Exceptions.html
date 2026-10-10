@@ -101,8 +101,27 @@ including a change from or to a tenantless stream.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Exceptions.EventStoreConflictException.html">EventStoreConflictException</a></dt>
+      <dd><p>Reports that a commit was refused because one of its events reuses an event identifier or an occupied stream
+position. The commit was rolled back; nothing was written.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Exceptions.EventStoreSchemaMismatchException.html">EventStoreSchemaMismatchException</a></dt>
+      <dd><p>Reports that the database an event store connects to does not have the schema this assembly requires: another
+schema version, or a configured table that does not exist. Raised before the store's first operation, so
+nothing has been written.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Exceptions.OptimisticConcurrencyException.html">OptimisticConcurrencyException</a></dt>
       <dd><p>Represents an optimistic concurrency conflict while writing events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Exceptions.UniqueReservationConflictException.html">UniqueReservationConflictException</a></dt>
+      <dd><p>Reports that a commit was refused because a unique-value reservation is held by another owner, or because
+the same owner and key would occupy a second scope or kind. The commit was rolled back; nothing was written.</p>
 </dd>
     </dl>
 

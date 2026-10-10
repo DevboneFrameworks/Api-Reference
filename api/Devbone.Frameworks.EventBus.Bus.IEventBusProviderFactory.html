@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IEventBusProviderFactory | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Creates one transport-specific event bus from a validated logical target.">
+      <meta name="description" content="Creates one transport-specific event bus from a validated logical target. This is how the separately packaged Kafka and RabbitMQ transports plug into the transport-neutral resolver; it is not an extension point for further transports, because a target carries options for those two only.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,9 @@ Interface IEventBusProviderFactory
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventBus.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Creates one transport-specific event bus from a validated logical target.</p>
+  <div class="markdown summary"><p>Creates one transport-specific event bus from a validated logical target. This is how the separately packaged
+Kafka and RabbitMQ transports plug into the transport-neutral resolver; it is not an extension point for further
+transports, because a target carries options for those two only.</p>
 </div>
   <div class="markdown conceptual"></div>
 

@@ -115,10 +115,7 @@ Interface IAggregateSnapshotCommitWriter
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamWriter.html#Devbone_Frameworks_Ddd_Repositories_IEventStreamWriter_AddEvents_Devbone_Frameworks_Ddd_Repositories_IStoredEvent_">IEventStreamWriter.AddEvents(IStoredEvent)</a>
-    </div>
-    <div>
-      <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamWriter.html#Devbone_Frameworks_Ddd_Repositories_IEventStreamWriter_AddEvents_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___">IEventStreamWriter.AddEvents(IStoredEvent[])</a>
+      <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamWriter.html#Devbone_Frameworks_Ddd_Repositories_IEventStreamWriter_AddEventsAsync_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___System_Threading_CancellationToken_">IEventStreamWriter.AddEventsAsync(IStoredEvent[], CancellationToken)</a>
     </div>
   </dd></dl>
 
@@ -131,10 +128,10 @@ Interface IAggregateSnapshotCommitWriter
 </h2>
 
 
-  <a id="Devbone_Frameworks_Ddd_Snapshots_IAggregateSnapshotCommitWriter_AddEvents_" data-uid="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotCommitWriter.AddEvents*"></a>
+  <a id="Devbone_Frameworks_Ddd_Snapshots_IAggregateSnapshotCommitWriter_AddEventsAsync_" data-uid="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotCommitWriter.AddEventsAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Snapshots_IAggregateSnapshotCommitWriter_AddEvents_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty__Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshot_" data-uid="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotCommitWriter.AddEvents(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[],System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty},Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshot)">
-  AddEvents(IStoredEvent[], IReadOnlySet&lt;UniqueProperty&gt;, AggregateSnapshot)
+  <h3 id="Devbone_Frameworks_Ddd_Snapshots_IAggregateSnapshotCommitWriter_AddEventsAsync_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty__Devbone_Frameworks_Ddd_Snapshots_AggregateSnapshot_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotCommitWriter.AddEventsAsync(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[],System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty},Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshot,System.Threading.CancellationToken)">
+  AddEventsAsync(IStoredEvent[], IReadOnlySet&lt;UniqueProperty&gt;, AggregateSnapshot, CancellationToken)
   
   </h3>
 
@@ -143,23 +140,30 @@ Interface IAggregateSnapshotCommitWriter
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEventStoredResult AddEvents(IStoredEvent[] events, IReadOnlySet&lt;UniqueProperty&gt; uniqueValues, AggregateSnapshot snapshot)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IEventStoredResult&gt; AddEventsAsync(IStoredEvent[] events, IReadOnlySet&lt;UniqueProperty&gt; uniqueValues, AggregateSnapshot snapshot, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>events</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>[]</dt>
-    <dd></dd>
+    <dd><p>Stored event rows to persist.</p>
+</dd>
     <dt><code>uniqueValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html">UniqueProperty</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>Unique value constraints derived from the events.</p>
+</dd>
     <dt><code>snapshot</code> <a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.AggregateSnapshot.html">AggregateSnapshot</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate snapshot to persist alongside the events, replacing any prior snapshot for the aggregate.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the write.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
-    <dd></dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a>&gt;</dt>
+    <dd><p>A successful atomic write result, or a failed result without partial event, unique-index, or snapshot changes.</p>
+</dd>
   </dl>
 
 
@@ -172,10 +176,10 @@ Interface IAggregateSnapshotCommitWriter
 
 
 
-  <a id="Devbone_Frameworks_Ddd_Snapshots_IAggregateSnapshotCommitWriter_ShouldCreateSnapshot_" data-uid="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotCommitWriter.ShouldCreateSnapshot*"></a>
+  <a id="Devbone_Frameworks_Ddd_Snapshots_IAggregateSnapshotCommitWriter_ShouldCreateSnapshotAsync_" data-uid="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotCommitWriter.ShouldCreateSnapshotAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Snapshots_IAggregateSnapshotCommitWriter_ShouldCreateSnapshot_System_String_System_String_System_Int64_" data-uid="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotCommitWriter.ShouldCreateSnapshot(System.String,System.String,System.Int64)">
-  ShouldCreateSnapshot(string, string, long)
+  <h3 id="Devbone_Frameworks_Ddd_Snapshots_IAggregateSnapshotCommitWriter_ShouldCreateSnapshotAsync_System_String_System_String_System_Int64_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotCommitWriter.ShouldCreateSnapshotAsync(System.String,System.String,System.Int64,System.Threading.CancellationToken)">
+  ShouldCreateSnapshotAsync(string, string, long, CancellationToken)
   
   </h3>
 
@@ -184,23 +188,30 @@ Interface IAggregateSnapshotCommitWriter
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool ShouldCreateSnapshot(string aggregateName, string aggregateId, long aggregateVersion)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;bool&gt; ShouldCreateSnapshotAsync(string aggregateName, string aggregateId, long aggregateVersion, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>aggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Stable aggregate contract name.</p>
+</dd>
     <dt><code>aggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Globally unique aggregate identity value.</p>
+</dd>
     <dt><code>aggregateVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
+    <dd><p>Stream position reached after the events being committed are applied.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the read.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when a snapshot should be created at this position; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
   </dl>
 
 

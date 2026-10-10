@@ -148,6 +148,15 @@ Interfaces
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.IOutboxRequeue.html">IOutboxRequeue</a></dt>
+      <dd><p>Returns a terminally failed outbox row to dispatch. A failed row blocks every later event of its
+aggregate, because the claim delivers an aggregate's events in order; once the cause is fixed - a broker that
+was unreachable for longer than a configured attempt limit, a missing topic or exchange - an operator requeues
+it and the aggregate resumes. The stored envelope is published unchanged; a row whose envelope cannot be read
+or does not match its columns fails again on its first attempt.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.html">IOutboxStateReader</a></dt>
       <dd><p>Reads a consistent durable outbox inventory independently of dispatch operations.</p>
 </dd>

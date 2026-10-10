@@ -151,7 +151,9 @@ Class EventPersistenceClientServiceCollectionExtensions
   <div class="markdown level0 remarks"><p>The repository is a singleton over a named <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a> from
 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory">IHttpClientFactory</a>. Registering it as scoped would create one repository per request while the
 underlying handler is pooled anyway — the extra allocation buys nothing and hides the fact that the adapter
-is stateless. Handler rotation stays with the factory, so DNS changes are still picked up.</p>
+is stateless. The singleton keeps one client and therefore one handler for the process lifetime, so the factory
+never rotates it; the primary handler recycles its pooled connections after
+<a class="xref" href="Devbone.Frameworks.EventPersistence.Client.DependencyInjection.EventPersistenceClientServiceCollectionExtensions.html#Devbone_Frameworks_EventPersistence_Client_DependencyInjection_EventPersistenceClientServiceCollectionExtensions_POOLED_CONNECTION_LIFETIME">POOLED_CONNECTION_LIFETIME</a> instead, which is what picks up a DNS change after the gateway moves.</p>
 </div>
 
 
@@ -190,6 +192,37 @@ is stateless. Handler rotation stays with the factory, so DNS changes are still 
 
 
 
+
+  <h3 id="Devbone_Frameworks_EventPersistence_Client_DependencyInjection_EventPersistenceClientServiceCollectionExtensions_POOLED_CONNECTION_LIFETIME" data-uid="Devbone.Frameworks.EventPersistence.Client.DependencyInjection.EventPersistenceClientServiceCollectionExtensions.POOLED_CONNECTION_LIFETIME">
+  POOLED_CONNECTION_LIFETIME
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>How long a pooled gateway connection is reused before it is reopened and its host name resolved again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly TimeSpan POOLED_CONNECTION_LIFETIME</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -201,7 +234,12 @@ is stateless. Handler rotation stays with the factory, so DNS changes are still 
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Registers the gateway persistence adapter from options supplied by the composition root.</p>
+  <div class="markdown level1 summary"><p>Registers the gateway persistence adapter from options supplied by the composition root, as one singleton
+behind every DDD persistence port it implements: <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamReader.html">IEventStreamReader</a>,
+<a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IEventStreamWriter.html">IEventStreamWriter</a>, <a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotEventStreamReader.html">IAggregateSnapshotEventStreamReader</a>,
+<a class="xref" href="Devbone.Frameworks.Ddd.Snapshots.IAggregateSnapshotCommitWriter.html">IAggregateSnapshotCommitWriter</a>, <a class="xref" href="Devbone.Frameworks.Ddd.Projections.IAggregateStateCommitWriter.html">IAggregateStateCommitWriter</a>,
+<a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository.html">IUniqueValueRepository</a>, <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IIncrementValueRepository.html">IIncrementValueRepository</a> and
+<a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IAggregateLockPort.html">IAggregateLockPort</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

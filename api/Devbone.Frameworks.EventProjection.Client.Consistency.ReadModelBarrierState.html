@@ -132,8 +132,10 @@ says why, and the situation needs an operator rather than a longer budget.</p>
 </dd>
     <dt id="Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrierState_Unavailable"><code>Unavailable = 3</code></dt>
   
-  <dd><p>The definition is known, but no live worker currently advertises the exact definition. A later worker
-start may change this state, but spending the current request budget cannot make progress by itself.</p>
+  <dd><p>Progress cannot be established or cannot advance right now. Either the definition is known but no live
+worker advertises it — a later worker start may change that, but spending the current request budget cannot —
+or the progress store could not be read (<a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelFailureCodes.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelFailureCodes_PROGRESS_UNAVAILABLE">PROGRESS_UNAVAILABLE</a>), which
+ends by itself and comes with <a class="xref" href="Devbone.Frameworks.EventProjection.Client.Consistency.ReadModelBarrierResult.html#Devbone_Frameworks_EventProjection_Client_Consistency_ReadModelBarrierResult_RetryAfter">RetryAfter</a>.</p>
 </dd>
   </dl>
 

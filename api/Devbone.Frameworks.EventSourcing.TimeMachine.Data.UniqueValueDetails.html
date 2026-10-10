@@ -165,17 +165,23 @@ Class UniqueValueDetails
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>AggregateName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate contract name that owns the reservation.</p>
+</dd>
     <dt><code>AggregateId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Aggregate identity that owns the reservation.</p>
+</dd>
     <dt><code>Key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Application-defined scope/key the value is reserved under.</p>
+</dd>
     <dt><code>ValueHash</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Hash of the reserved value, evaluated from the last declaration per scope/key in commit event order.</p>
+</dd>
     <dt><code>RequestId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Identifier of the aggregate command request that established this reservation.</p>
+</dd>
     <dt><code>CreationDateUtc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
-    <dd></dd>
+    <dd><p>Timestamp the reservation was written, in UTC.</p>
+</dd>
   </dl>
 
 
@@ -200,7 +206,8 @@ Class UniqueValueDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregate identity that owns the reservation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -231,7 +238,8 @@ Class UniqueValueDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aggregate contract name that owns the reservation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -262,7 +270,8 @@ Class UniqueValueDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Timestamp the reservation was written, in UTC.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -293,7 +302,8 @@ Class UniqueValueDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Application-defined scope/key the value is reserved under.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -324,7 +334,8 @@ Class UniqueValueDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Identifier of the aggregate command request that established this reservation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -355,7 +366,8 @@ Class UniqueValueDetails
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hash of the reserved value, evaluated from the last declaration per scope/key in commit event order.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">

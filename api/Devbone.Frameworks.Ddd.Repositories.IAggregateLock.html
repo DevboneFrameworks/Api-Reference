@@ -102,7 +102,7 @@ Interface IAggregateLock
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IAggregateLock : IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IAggregateLock : IAsyncDisposable</code></pre>
   </div>
 
 
@@ -115,13 +115,17 @@ Interface IAggregateLock
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync">IAsyncDisposable.DisposeAsync()</a>
     </div>
   </dd></dl>
 
 
 
 
+  <h2 id="Devbone_Frameworks_Ddd_Repositories_IAggregateLock_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Released asynchronously from Devbone.Frameworks.Ddd 13.0.0: releasing a PostgreSQL advisory lock is a database
+round trip, and a synchronous release blocked a thread on every command.</p>
+</div>
 
 
   <h2 class="section" id="properties">Properties
@@ -231,7 +235,7 @@ Interface IAggregateLock
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a value indicating whether ownership has already been released.</p>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether ownership has already been released explicitly, by disposing this lock.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -252,6 +256,10 @@ Interface IAggregateLock
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_Ddd_Repositories_IAggregateLock_IsReleased_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>It reports the holder's own release only. A lock whose backing session or stream was lost underneath it
+still reports <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> here; <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IAggregateLock.html#Devbone_Frameworks_Ddd_Repositories_IAggregateLock_IsHeldAsync_System_Threading_CancellationToken_">IsHeldAsync(CancellationToken)</a> is the member that can see that.</p>
+</div>
 
 
 
@@ -285,6 +293,69 @@ Interface IAggregateLock
 
 
 
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_Ddd_Repositories_IAggregateLock_IsHeldAsync_" data-uid="Devbone.Frameworks.Ddd.Repositories.IAggregateLock.IsHeldAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_IAggregateLock_IsHeldAsync_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Repositories.IAggregateLock.IsHeldAsync(System.Threading.CancellationToken)">
+  IsHeldAsync(CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether this lock is still held, including whether whatever holds it remotely is still alive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ValueTask&lt;bool&gt; IsHeldAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the check.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when ownership is still in force; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> after an explicit release
+or when the implementation detected that the lock was lost, for example because the PostgreSQL session
+holding it ended or the Gateway ended the lock's stream.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_Ddd_Repositories_IAggregateLock_IsHeldAsync_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Added in Devbone.Frameworks.Ddd 19.2.0. The default implementation can only see an explicit release
+and returns <code>IsReleased == false</code>; an implementation backed by a session or a stream overrides it to
+probe that session or stream. A result of <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> is final: a lost lock is not regained.
+</p>
+<p>
+The probe detects and reports, it does not protect a write. <code>CommandExecutor</code> calls it once before
+committing and still commits when it returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, because the commit's transaction lock
+and concurrency-token comparison already decide an overlapping write.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.operationcanceledexception">OperationCanceledException</a></dt>
+    <dd><p><code class="paramref">cancellationToken</code> was cancelled.</p>
+</dd>
+  </dl>
 
 
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class AggregateName | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Protects the stable aggregate-stream contract name from accidental null, empty, or whitespace values. The name is used by storage, locking, and event metadata and should survive CLR type renames.">
+      <meta name="description" content="Protects the stable aggregate-stream contract name from accidental null, empty, or whitespace values. The name is used by storage, locking, and event metadata and should survive CLR type renames. It is persisted exactly as declared and equals the identity prefix ignoring case.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -98,7 +98,8 @@ Class AggregateName
   </div>
 
   <div class="markdown summary"><p>Protects the stable aggregate-stream contract name from accidental null, empty, or whitespace values.
-The name is used by storage, locking, and event metadata and should survive CLR type renames.</p>
+The name is used by storage, locking, and event metadata and should survive CLR type renames. It is
+persisted exactly as declared and equals the identity prefix ignoring case.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -222,43 +223,6 @@ The name is used by storage, locking, and event metadata and should survive CLR 
     <dd><p>Thrown when <code class="paramref">value</code> is empty or whitespace.</p>
 </dd>
   </dl>
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateName_GetNameWithoutAggregate_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateName.GetNameWithoutAggregate*"></a>
-
-  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateName_GetNameWithoutAggregate" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateName.GetNameWithoutAggregate">
-  GetNameWithoutAggregate()
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Removes the conventional <code>Aggregate</code> segment used by historical storage keys.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GetNameWithoutAggregate()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The shortened aggregate contract name.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
 
 
 

@@ -152,8 +152,8 @@ Class OutboxDispatcher
 
   <a id="Devbone_Frameworks_EventBus_Outbox_Dispatching_OutboxDispatcher__ctor_" data-uid="Devbone.Frameworks.EventBus.Outbox.Dispatching.OutboxDispatcher.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_EventBus_Outbox_Dispatching_OutboxDispatcher__ctor_Devbone_Frameworks_EventSourcing_Outbox_IOutboxStore_Devbone_Frameworks_EventBus_Bus_IEventBusResolver_Devbone_Frameworks_EventBus_Contracts_Serialization_ISerializedEventSerializer_Devbone_Frameworks_EventBus_Outbox_Dispatching_OutboxDispatcherOptions_Devbone_Frameworks_EventBus_Outbox_Dispatching_IOutboxRetryPolicy_Devbone_Frameworks_EventBus_Outbox_Dispatching_IOutboxClock_Microsoft_Extensions_Logging_ILogger_" data-uid="Devbone.Frameworks.EventBus.Outbox.Dispatching.OutboxDispatcher.#ctor(Devbone.Frameworks.EventSourcing.Outbox.IOutboxStore,Devbone.Frameworks.EventBus.Bus.IEventBusResolver,Devbone.Frameworks.EventBus.Contracts.Serialization.ISerializedEventSerializer,Devbone.Frameworks.EventBus.Outbox.Dispatching.OutboxDispatcherOptions,Devbone.Frameworks.EventBus.Outbox.Dispatching.IOutboxRetryPolicy,Devbone.Frameworks.EventBus.Outbox.Dispatching.IOutboxClock,Microsoft.Extensions.Logging.ILogger)">
-  OutboxDispatcher(IOutboxStore, IEventBusResolver, ISerializedEventSerializer, OutboxDispatcherOptions, IOutboxRetryPolicy?, IOutboxClock?, ILogger?)
+  <h3 id="Devbone_Frameworks_EventBus_Outbox_Dispatching_OutboxDispatcher__ctor_Devbone_Frameworks_EventSourcing_Outbox_IOutboxStore_Devbone_Frameworks_EventBus_Bus_IEventBusResolver_Devbone_Frameworks_EventBus_Contracts_Serialization_ISerializedEventSerializer_Devbone_Frameworks_EventBus_Outbox_Dispatching_OutboxDispatcherOptions_Devbone_Frameworks_EventBus_Outbox_Dispatching_IOutboxRetryPolicy_System_TimeProvider_Microsoft_Extensions_Logging_ILogger_" data-uid="Devbone.Frameworks.EventBus.Outbox.Dispatching.OutboxDispatcher.#ctor(Devbone.Frameworks.EventSourcing.Outbox.IOutboxStore,Devbone.Frameworks.EventBus.Bus.IEventBusResolver,Devbone.Frameworks.EventBus.Contracts.Serialization.ISerializedEventSerializer,Devbone.Frameworks.EventBus.Outbox.Dispatching.OutboxDispatcherOptions,Devbone.Frameworks.EventBus.Outbox.Dispatching.IOutboxRetryPolicy,System.TimeProvider,Microsoft.Extensions.Logging.ILogger)">
+  OutboxDispatcher(IOutboxStore, IEventBusResolver, ISerializedEventSerializer, OutboxDispatcherOptions, IOutboxRetryPolicy?, TimeProvider?, ILogger?)
   
   </h3>
 
@@ -162,7 +162,7 @@ Class OutboxDispatcher
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OutboxDispatcher(IOutboxStore outboxStore, IEventBusResolver eventBusResolver, ISerializedEventSerializer serializer, OutboxDispatcherOptions options, IOutboxRetryPolicy? retryPolicy = null, IOutboxClock? clock = null, ILogger? logger = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public OutboxDispatcher(IOutboxStore outboxStore, IEventBusResolver eventBusResolver, ISerializedEventSerializer serializer, OutboxDispatcherOptions options, IOutboxRetryPolicy? retryPolicy = null, TimeProvider? timeProvider = null, ILogger? logger = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -182,8 +182,8 @@ Class OutboxDispatcher
     <dt><code>retryPolicy</code> <a class="xref" href="Devbone.Frameworks.EventBus.Outbox.Dispatching.IOutboxRetryPolicy.html">IOutboxRetryPolicy</a></dt>
     <dd><p>Optional retry policy.</p>
 </dd>
-    <dt><code>clock</code> <a class="xref" href="Devbone.Frameworks.EventBus.Outbox.Dispatching.IOutboxClock.html">IOutboxClock</a></dt>
-    <dd><p>Optional UTC clock.</p>
+    <dt><code>timeProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a></dt>
+    <dd><p>Clock leases, retry deadlines and publication instants are read from; the system clock when omitted.</p>
 </dd>
     <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
     <dd><p>Optional event-bus logger.</p>

@@ -102,7 +102,7 @@ Class PostgresOutboxStore
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class PostgresOutboxStore : IOutboxStore, IOutboxStateReader</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class PostgresOutboxStore : IOutboxStore, IOutboxStateReader, IOutboxRequeue</code></pre>
   </div>
 
 
@@ -121,6 +121,7 @@ Class PostgresOutboxStore
     <dd>
       <div><a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.IOutboxStore.html">IOutboxStore</a></div>
       <div><a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.html">IOutboxStateReader</a></div>
+      <div><a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.IOutboxRequeue.html">IOutboxRequeue</a></div>
     </dd>
   </dl>
 
@@ -164,7 +165,7 @@ Class PostgresOutboxStore
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.html">PostgresOutboxStore</a> class.</p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.html">PostgresOutboxStore</a> class that does not log.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -176,6 +177,43 @@ Class PostgresOutboxStore
   <dl class="parameters">
     <dt><code>settings</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.html">EventStoreSettings</a></dt>
     <dd><p>Event-store connection and outbox table settings.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_PostgresOutboxStore__ctor_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_PostgresOutboxStore__ctor_Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_Microsoft_Extensions_Logging_ILogger_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.#ctor(Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings,Microsoft.Extensions.Logging.ILogger)">
+  PostgresOutboxStore(EventStoreSettings, ILogger)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.html">PostgresOutboxStore</a> class that records operator requeues
+through <code class="paramref">logger</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PostgresOutboxStore(EventStoreSettings settings, ILogger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settings</code> <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.html">EventStoreSettings</a></dt>
+    <dd><p>Event-store connection and outbox table settings.</p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>The logger.</p>
 </dd>
   </dl>
 
@@ -343,7 +381,8 @@ Class PostgresOutboxStore
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Samples all retained rows using database time and one query snapshot.</p>
+  <div class="markdown level1 summary"><p>Samples the outstanding rows using database time and one query snapshot. Published rows are retained for
+resend and only grow, so they are neither read nor counted.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -362,6 +401,101 @@ Class PostgresOutboxStore
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSnapshot.html">OutboxStateSnapshot</a>&gt;</dt>
     <dd><p>Mutually exclusive status counts and database sample time.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_PostgresOutboxStore_ReleaseClaimAsync_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReleaseClaimAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_PostgresOutboxStore_ReleaseClaimAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReleaseClaimAsync(System.String,System.String,System.Threading.CancellationToken)">
+  ReleaseClaimAsync(string, string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns one leased message that was never handed to a transport, so another worker can claim it at once
+instead of after the lease expires. The dispatcher calls it for the rest of a batch when its lease
+is about to expire or the host stops. The default does nothing, which leaves the row to lease expiry.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task ReleaseClaimAsync(string eventId, string claimToken, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eventId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Event and outbox identifier.</p>
+</dd>
+    <dt><code>claimToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Current fencing token; a row leased under another token is left unchanged.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task completing after the release.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Outbox_PostgresOutboxStore_ReleaseClaimAsync_System_String_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The row returns to <code>Pending</code> with its claim cleared and the attempt the claim counted taken back, since
+nothing was attempted. A row no longer leased under <code class="paramref">claimToken</code> is left unchanged.</p>
+</div>
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Outbox_PostgresOutboxStore_RequeueFailedAsync_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.RequeueFailedAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Outbox_PostgresOutboxStore_RequeueFailedAsync_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.RequeueFailedAsync(System.String,System.Threading.CancellationToken)">
+  RequeueFailedAsync(string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Moves one <code>Failed</code> row back to <code>Pending</code>, due immediately and with its attempt count reset; the
+last error is kept for diagnosis until the next attempt replaces it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; RequeueFailedAsync(string eventId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eventId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The event identifier of the outbox row.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when the row was failed and is pending again; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> when no row with
+that identifier exists or it is not failed, in which case nothing changed.</p>
 </dd>
   </dl>
 

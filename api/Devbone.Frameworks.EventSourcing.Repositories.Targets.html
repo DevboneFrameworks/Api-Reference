@@ -96,7 +96,8 @@ Classes
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Targets.ConfiguredEventStoreResolver.html">ConfiguredEventStoreResolver</a></dt>
-      <dd><p>Lazily creates PostgreSQL event stores from logical target configuration.</p>
+      <dd><p>Lazily creates PostgreSQL event stores from logical target configuration, and owns them: disposing the
+resolver disposes every store it created, which closes the manual lock sessions those stores hold.</p>
 </dd>
     </dl>
     <dl class="jumplist">

@@ -219,7 +219,11 @@ Class KafkaBusOptions
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the instance id used for broadcast-per-instance subscriptions.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the identity of this application instance for broadcast-per-instance subscriptions. Required
+for every <code>BroadcastPerInstance</code> subscription: use a value that is stable for one replica across
+restarts and distinct between replicas and processes, for example a StatefulSet ordinal. There is no
+machine-name fallback, because two processes on one host would share it and each receive only part of the
+broadcast.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -308,6 +312,40 @@ Class KafkaBusOptions
 
 
 
+  <a id="Devbone_Frameworks_EventBus_Bus_KafkaBusOptions_MaxDeserializationAttempts_" data-uid="Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.MaxDeserializationAttempts*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Bus_KafkaBusOptions_MaxDeserializationAttempts" data-uid="Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.MaxDeserializationAttempts">
+  MaxDeserializationAttempts
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets how many times a message that cannot be read is tried before it is moved to
+<a class="xref" href="Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.html#Devbone_Frameworks_EventBus_Bus_KafkaBusOptions_PoisonMessageDeadLetterStream">PoisonMessageDeadLetterStream</a>. Several attempts leave room for a rolling deployment in which
+an older consumer briefly sees a newer format. Defaults to 5; must be positive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxDeserializationAttempts { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventBus_Bus_KafkaBusOptions_MessageSizeLimits_" data-uid="Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.MessageSizeLimits*"></a>
 
   <h3 id="Devbone_Frameworks_EventBus_Bus_KafkaBusOptions_MessageSizeLimits" data-uid="Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.MessageSizeLimits">
@@ -330,6 +368,43 @@ Class KafkaBusOptions
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMessageSizeLimits.html">EventMessageSizeLimits</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventBus_Bus_KafkaBusOptions_PoisonMessageDeadLetterStream_" data-uid="Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.PoisonMessageDeadLetterStream*"></a>
+
+  <h3 id="Devbone_Frameworks_EventBus_Bus_KafkaBusOptions_PoisonMessageDeadLetterStream" data-uid="Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.PoisonMessageDeadLetterStream">
+  PoisonMessageDeadLetterStream
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the stream a message is moved to when this adapter cannot read it - malformed JSON, an unknown
+format version, a payload that does not fit the subscription's type - after <a class="xref" href="Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.html#Devbone_Frameworks_EventBus_Bus_KafkaBusOptions_MaxDeserializationAttempts">MaxDeserializationAttempts</a>
+attempts. The message keeps its original body and headers plus the <a class="xref" href="Devbone.Frameworks.EventBus.Subscribing.DeadLetterHeaderNames.html">DeadLetterHeaderNames</a>.
+Only once the dead-letter stream confirmed it is the original settled; until then it is retried. Without a
+stream (the default) such a message is retried with a pause and blocks its partition until it is removed or
+the consumer can read it, which loses nothing but stops the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? PoisonMessageDeadLetterStream { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 

@@ -187,7 +187,8 @@ Class JsonMergePatchApplier
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Applies a patch recursively. Object members merge, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> removes a member, and arrays or scalar values replace it.</p>
+  <div class="markdown level1 summary"><p>Applies a patch recursively (RFC 7386). Object members merge, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> removes a member at any depth,
+also inside an object the patch creates, and arrays or scalar values replace it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

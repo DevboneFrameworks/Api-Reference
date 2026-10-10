@@ -127,52 +127,10 @@ previous value. Omitted declarations retain ownership, and failed writes retain 
 </h2>
 
 
-  <a id="Devbone_Frameworks_Ddd_Repositories_IUniqueValueRepository_AddEvents_" data-uid="Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository.AddEvents*"></a>
+  <a id="Devbone_Frameworks_Ddd_Repositories_IUniqueValueRepository_AddEventsAsync_" data-uid="Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository.AddEventsAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Repositories_IUniqueValueRepository_AddEvents_Devbone_Frameworks_Ddd_Repositories_IStoredEvent_System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty__" data-uid="Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository.AddEvents(Devbone.Frameworks.Ddd.Repositories.IStoredEvent,System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty})">
-  AddEvents(IStoredEvent, IReadOnlySet&lt;UniqueProperty&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Persists one event row together with unique value constraints.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEventStoredResult AddEvents(IStoredEvent @event, IReadOnlySet&lt;UniqueProperty&gt; uniqueValues)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>event</code> <a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a></dt>
-    <dd><p>Stored event row.</p>
-</dd>
-    <dt><code>uniqueValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html">UniqueProperty</a>&gt;</dt>
-    <dd><p>Unique value constraints derived from the event.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
-    <dd><p>A successful atomic write result, or a failed result without partial event or unique-index changes.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Devbone_Frameworks_Ddd_Repositories_IUniqueValueRepository_AddEvents_" data-uid="Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository.AddEvents*"></a>
-
-  <h3 id="Devbone_Frameworks_Ddd_Repositories_IUniqueValueRepository_AddEvents_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty__" data-uid="Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository.AddEvents(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[],System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty})">
-  AddEvents(IStoredEvent[], IReadOnlySet&lt;UniqueProperty&gt;)
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_IUniqueValueRepository_AddEventsAsync_Devbone_Frameworks_Ddd_Repositories_IStoredEvent___System_Collections_Generic_IReadOnlySet_Devbone_Frameworks_Ddd_UniqueValues_UniqueProperty__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository.AddEventsAsync(Devbone.Frameworks.Ddd.Repositories.IStoredEvent[],System.Collections.Generic.IReadOnlySet{Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty},System.Threading.CancellationToken)">
+  AddEventsAsync(IStoredEvent[], IReadOnlySet&lt;UniqueProperty&gt;, CancellationToken)
   
   </h3>
 
@@ -181,7 +139,7 @@ previous value. Omitted declarations retain ownership, and failed writes retain 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEventStoredResult AddEvents(IStoredEvent[] events, IReadOnlySet&lt;UniqueProperty&gt; uniqueValues)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IEventStoredResult&gt; AddEventsAsync(IStoredEvent[] events, IReadOnlySet&lt;UniqueProperty&gt; uniqueValues, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -192,11 +150,14 @@ previous value. Omitted declarations retain ownership, and failed writes retain 
     <dt><code>uniqueValues</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlyset-1">IReadOnlySet</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.UniqueValues.UniqueProperty.html">UniqueProperty</a>&gt;</dt>
     <dd><p>Unique value constraints derived from events.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the write.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a>&gt;</dt>
     <dd><p>A successful atomic write result, or a failed result without partial event or unique-index changes.</p>
 </dd>
   </dl>
@@ -211,10 +172,10 @@ previous value. Omitted declarations retain ownership, and failed writes retain 
 
 
 
-  <a id="Devbone_Frameworks_Ddd_Repositories_IUniqueValueRepository_RemoveUniques_" data-uid="Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository.RemoveUniques*"></a>
+  <a id="Devbone_Frameworks_Ddd_Repositories_IUniqueValueRepository_RemoveUniquesAsync_" data-uid="Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository.RemoveUniquesAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Repositories_IUniqueValueRepository_RemoveUniques_Devbone_Frameworks_Ddd_Core_IIdentity_" data-uid="Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository.RemoveUniques(Devbone.Frameworks.Ddd.Core.IIdentity)">
-  RemoveUniques(IIdentity)
+  <h3 id="Devbone_Frameworks_Ddd_Repositories_IUniqueValueRepository_RemoveUniquesAsync_Devbone_Frameworks_Ddd_Core_IIdentity_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.Ddd.Repositories.IUniqueValueRepository.RemoveUniquesAsync(Devbone.Frameworks.Ddd.Core.IIdentity,System.Threading.CancellationToken)">
+  RemoveUniquesAsync(IIdentity, CancellationToken)
   
   </h3>
 
@@ -223,7 +184,7 @@ previous value. Omitted declarations retain ownership, and failed writes retain 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEventStoredResult RemoveUniques(IIdentity aggregateId)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IEventStoredResult&gt; RemoveUniquesAsync(IIdentity aggregateId, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -231,11 +192,14 @@ previous value. Omitted declarations retain ownership, and failed writes retain 
     <dt><code>aggregateId</code> <a class="xref" href="Devbone.Frameworks.Ddd.Core.IIdentity.html">IIdentity</a></dt>
     <dd><p>Aggregate identity.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the write.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a>&gt;</dt>
     <dd><p>Write result.</p>
 </dd>
   </dl>

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class MissingReferencesRetryProcessor | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Retries incomplete same-tenant reference enrichment with bounded attempts.">
+      <meta name="description" content="Retries incomplete same-tenant reference enrichment with bounded attempts. Once the references resolve, or the aggregate was deleted meanwhile, it hands the aggregate back to the merged stage through an ordinary raw-applied notification instead of writing merged state itself: the merged stage also creates the durable derived work and refreshes the dependents, which a second write path had skipped.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,10 @@ Class MissingReferencesRetryProcessor
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventProjection.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Retries incomplete same-tenant reference enrichment with bounded attempts.</p>
+  <div class="markdown summary"><p>Retries incomplete same-tenant reference enrichment with bounded attempts. Once the references resolve, or the
+aggregate was deleted meanwhile, it hands the aggregate back to the merged stage through an ordinary raw-applied
+notification instead of writing merged state itself: the merged stage also creates the durable derived work and
+refreshes the dependents, which a second write path had skipped.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -152,26 +155,23 @@ Class MissingReferencesRetryProcessor
 
   <a id="Devbone_Frameworks_EventProjection_Projections_MissingReferencesRetryProcessor__ctor_" data-uid="Devbone.Frameworks.EventProjection.Projections.MissingReferencesRetryProcessor.#ctor*"></a>
 
-  <h3 id="Devbone_Frameworks_EventProjection_Projections_MissingReferencesRetryProcessor__ctor_Devbone_Frameworks_EventProjection_Persistence_IRawProjectionStore_Devbone_Frameworks_EventProjection_Persistence_IMergedProjectionStore_Devbone_Frameworks_EventProjection_Projections_ProjectionEnricher_Devbone_Frameworks_EventProjection_Transport_IProjectionMessagePublisher_Devbone_Frameworks_EventProjection_Configuration_ProjectionAddressNames_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_" data-uid="Devbone.Frameworks.EventProjection.Projections.MissingReferencesRetryProcessor.#ctor(Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStore,Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore,Devbone.Frameworks.EventProjection.Projections.ProjectionEnricher,Devbone.Frameworks.EventProjection.Transport.IProjectionMessagePublisher,Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions)">
-  MissingReferencesRetryProcessor(IRawProjectionStore, IMergedProjectionStore, ProjectionEnricher, IProjectionMessagePublisher, ProjectionAddressNames, ProjectionPipelineOptions)
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_MissingReferencesRetryProcessor__ctor_Devbone_Frameworks_EventProjection_Persistence_IRawProjectionStore_Devbone_Frameworks_EventProjection_Projections_ProjectionEnricher_Devbone_Frameworks_EventProjection_Transport_IProjectionMessagePublisher_Devbone_Frameworks_EventProjection_Configuration_ProjectionAddressNames_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_" data-uid="Devbone.Frameworks.EventProjection.Projections.MissingReferencesRetryProcessor.#ctor(Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStore,Devbone.Frameworks.EventProjection.Projections.ProjectionEnricher,Devbone.Frameworks.EventProjection.Transport.IProjectionMessagePublisher,Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions)">
+  MissingReferencesRetryProcessor(IRawProjectionStore, ProjectionEnricher, IProjectionMessagePublisher, ProjectionAddressNames, ProjectionPipelineOptions)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes reference retry processing.</p>
+  <div class="markdown level1 summary"><p>Initializes reference retry processing without logging.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MissingReferencesRetryProcessor(IRawProjectionStore rawStore, IMergedProjectionStore mergedStore, ProjectionEnricher enricher, IProjectionMessagePublisher publisher, ProjectionAddressNames addresses, ProjectionPipelineOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public MissingReferencesRetryProcessor(IRawProjectionStore rawStore, ProjectionEnricher enricher, IProjectionMessagePublisher publisher, ProjectionAddressNames addresses, ProjectionPipelineOptions options)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rawStore</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStore.html">IRawProjectionStore</a></dt>
     <dd><p>Raw projection store.</p>
-</dd>
-    <dt><code>mergedStore</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IMergedProjectionStore.html">IMergedProjectionStore</a></dt>
-    <dd><p>Merged projection store.</p>
 </dd>
     <dt><code>enricher</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionEnricher.html">ProjectionEnricher</a></dt>
     <dd><p>Reference enricher.</p>
@@ -184,6 +184,105 @@ Class MissingReferencesRetryProcessor
 </dd>
     <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html">ProjectionPipelineOptions</a></dt>
     <dd><p>Projection options.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Projections_MissingReferencesRetryProcessor__ctor_" data-uid="Devbone.Frameworks.EventProjection.Projections.MissingReferencesRetryProcessor.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_MissingReferencesRetryProcessor__ctor_Devbone_Frameworks_EventProjection_Persistence_IRawProjectionStore_Devbone_Frameworks_EventProjection_Projections_ProjectionEnricher_Devbone_Frameworks_EventProjection_Transport_IProjectionMessagePublisher_Devbone_Frameworks_EventProjection_Configuration_ProjectionAddressNames_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_Microsoft_Extensions_Logging_ILogger_Devbone_Frameworks_EventProjection_Projections_MissingReferencesRetryProcessor__" data-uid="Devbone.Frameworks.EventProjection.Projections.MissingReferencesRetryProcessor.#ctor(Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStore,Devbone.Frameworks.EventProjection.Projections.ProjectionEnricher,Devbone.Frameworks.EventProjection.Transport.IProjectionMessagePublisher,Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions,Microsoft.Extensions.Logging.ILogger{Devbone.Frameworks.EventProjection.Projections.MissingReferencesRetryProcessor})">
+  MissingReferencesRetryProcessor(IRawProjectionStore, ProjectionEnricher, IProjectionMessagePublisher, ProjectionAddressNames, ProjectionPipelineOptions, ILogger&lt;MissingReferencesRetryProcessor&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes reference retry processing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MissingReferencesRetryProcessor(IRawProjectionStore rawStore, ProjectionEnricher enricher, IProjectionMessagePublisher publisher, ProjectionAddressNames addresses, ProjectionPipelineOptions options, ILogger&lt;MissingReferencesRetryProcessor&gt; logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rawStore</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStore.html">IRawProjectionStore</a></dt>
+    <dd><p>Raw projection store.</p>
+</dd>
+    <dt><code>enricher</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionEnricher.html">ProjectionEnricher</a></dt>
+    <dd><p>Reference enricher.</p>
+</dd>
+    <dt><code>publisher</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Transport.IProjectionMessagePublisher.html">IProjectionMessagePublisher</a></dt>
+    <dd><p>Internal publisher.</p>
+</dd>
+    <dt><code>addresses</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames.html">ProjectionAddressNames</a></dt>
+    <dd><p>Broker-address resolver.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html">ProjectionPipelineOptions</a></dt>
+    <dd><p>Projection options.</p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Projections.MissingReferencesRetryProcessor.html">MissingReferencesRetryProcessor</a>&gt;</dt>
+    <dd><p>Logger recording the dead letter at the retry limit.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Projections_MissingReferencesRetryProcessor__ctor_" data-uid="Devbone.Frameworks.EventProjection.Projections.MissingReferencesRetryProcessor.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_MissingReferencesRetryProcessor__ctor_Devbone_Frameworks_EventProjection_Persistence_IRawProjectionStore_Devbone_Frameworks_EventProjection_Projections_ProjectionEnricher_Devbone_Frameworks_EventProjection_Transport_IProjectionMessagePublisher_Devbone_Frameworks_EventProjection_Configuration_ProjectionAddressNames_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_Microsoft_Extensions_Logging_ILogger_Devbone_Frameworks_EventProjection_Projections_MissingReferencesRetryProcessor__System_TimeProvider_" data-uid="Devbone.Frameworks.EventProjection.Projections.MissingReferencesRetryProcessor.#ctor(Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStore,Devbone.Frameworks.EventProjection.Projections.ProjectionEnricher,Devbone.Frameworks.EventProjection.Transport.IProjectionMessagePublisher,Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions,Microsoft.Extensions.Logging.ILogger{Devbone.Frameworks.EventProjection.Projections.MissingReferencesRetryProcessor},System.TimeProvider)">
+  MissingReferencesRetryProcessor(IRawProjectionStore, ProjectionEnricher, IProjectionMessagePublisher, ProjectionAddressNames, ProjectionPipelineOptions, ILogger&lt;MissingReferencesRetryProcessor&gt;, TimeProvider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes reference retry processing with the clock retry deadlines are computed from.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MissingReferencesRetryProcessor(IRawProjectionStore rawStore, ProjectionEnricher enricher, IProjectionMessagePublisher publisher, ProjectionAddressNames addresses, ProjectionPipelineOptions options, ILogger&lt;MissingReferencesRetryProcessor&gt; logger, TimeProvider timeProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rawStore</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IRawProjectionStore.html">IRawProjectionStore</a></dt>
+    <dd><p>Raw projection store.</p>
+</dd>
+    <dt><code>enricher</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionEnricher.html">ProjectionEnricher</a></dt>
+    <dd><p>Reference enricher.</p>
+</dd>
+    <dt><code>publisher</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Transport.IProjectionMessagePublisher.html">IProjectionMessagePublisher</a></dt>
+    <dd><p>Internal publisher.</p>
+</dd>
+    <dt><code>addresses</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionAddressNames.html">ProjectionAddressNames</a></dt>
+    <dd><p>Broker-address resolver.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html">ProjectionPipelineOptions</a></dt>
+    <dd><p>Projection options.</p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Projections.MissingReferencesRetryProcessor.html">MissingReferencesRetryProcessor</a>&gt;</dt>
+    <dd><p>Logger recording the dead letter at the retry limit.</p>
+</dd>
+    <dt><code>timeProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a></dt>
+    <dd><p>Clock the deadline of the next retry is computed from.</p>
 </dd>
   </dl>
 
@@ -230,7 +329,7 @@ Class MissingReferencesRetryProcessor
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd><p>A task completing after success, rescheduling, or dead-letter publication.</p>
+    <dd><p>A task completing after the hand-back, the rescheduling or the dead-letter publication.</p>
 </dd>
   </dl>
 

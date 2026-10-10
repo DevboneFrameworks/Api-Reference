@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GatewayOutboxOptions | Devbone Event-Driven Platform </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GatewayOutboxOptions | Devbone Event-Driven Platform ">
+      
+      <meta name="description" content="Configures the embedded outbox dispatcher of every event store target, bound from EventPersistenceGateway:Outbox.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Devbone">
+            Devbone
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions">
+
+
+
+  <h1 id="Devbone_Frameworks_EventPersistence_Gateway_Configuration_GatewayOutboxOptions" data-uid="Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions" class="text-break">
+Class GatewayOutboxOptions  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Devbone.html">Devbone</a>.<a class="xref" href="Devbone.Frameworks.html">Frameworks</a>.<a class="xref" href="Devbone.Frameworks.EventPersistence.html">EventPersistence</a>.<a class="xref" href="Devbone.Frameworks.EventPersistence.Gateway.html">Gateway</a>.<a class="xref" href="Devbone.Frameworks.EventPersistence.Gateway.Configuration.html">Configuration</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventPersistence.Gateway.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Configures the embedded outbox dispatcher of every event store target, bound from
+<code>EventPersistenceGateway:Outbox</code>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class GatewayOutboxOptions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">GatewayOutboxOptions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Devbone_Frameworks_EventPersistence_Gateway_Configuration_GatewayOutboxOptions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>The settings apply to each target's dispatcher alike. The Gateway sets the rest itself: the target's identifier as
+<a class="xref" href="Devbone.Frameworks.EventBus.Outbox.Dispatching.OutboxDispatcherOptions.html#Devbone_Frameworks_EventBus_Outbox_Dispatching_OutboxDispatcherOptions_EventStoreId">EventStoreId</a>, the embedded mode, and a worker identifier per dispatcher.
+Unset values keep the defaults of <a class="xref" href="Devbone.Frameworks.EventBus.Outbox.Dispatching.OutboxDispatcherOptions.html">OutboxDispatcherOptions</a>.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventPersistence_Gateway_Configuration_GatewayOutboxOptions__ctor_" data-uid="Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventPersistence_Gateway_Configuration_GatewayOutboxOptions__ctor" data-uid="Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.#ctor">
+  GatewayOutboxOptions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GatewayOutboxOptions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventPersistence_Gateway_Configuration_GatewayOutboxOptions_BatchSize_" data-uid="Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.BatchSize*"></a>
+
+  <h3 id="Devbone_Frameworks_EventPersistence_Gateway_Configuration_GatewayOutboxOptions_BatchSize" data-uid="Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.BatchSize">
+  BatchSize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the maximum number of messages claimed per database operation. Defaults to 100.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BatchSize { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventPersistence_Gateway_Configuration_GatewayOutboxOptions_LeaseDuration_" data-uid="Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.LeaseDuration*"></a>
+
+  <h3 id="Devbone_Frameworks_EventPersistence_Gateway_Configuration_GatewayOutboxOptions_LeaseDuration" data-uid="Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.LeaseDuration">
+  LeaseDuration
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the duration of one message lease. It must exceed the worst-case publication time of a claimed
+batch; an interrupted publication holds the later events of its aggregate back for this long. Defaults to five
+minutes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan LeaseDuration { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventPersistence_Gateway_Configuration_GatewayOutboxOptions_MaxAttempts_" data-uid="Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.MaxAttempts*"></a>
+
+  <h3 id="Devbone_Frameworks_EventPersistence_Gateway_Configuration_GatewayOutboxOptions_MaxAttempts" data-uid="Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.MaxAttempts">
+  MaxAttempts
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the maximum number of publish attempts before a row fails terminally, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>
+(the default) to retry until publication succeeds. A terminally failed row blocks the later events of its
+aggregate until it is requeued.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MaxAttempts { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventPersistence_Gateway_Configuration_GatewayOutboxOptions_NotificationReconnectDelay_" data-uid="Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.NotificationReconnectDelay*"></a>
+
+  <h3 id="Devbone_Frameworks_EventPersistence_Gateway_Configuration_GatewayOutboxOptions_NotificationReconnectDelay" data-uid="Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.NotificationReconnectDelay">
+  NotificationReconnectDelay
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the delay before reconnecting a failed notification listener. Defaults to five seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan NotificationReconnectDelay { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventPersistence_Gateway_Configuration_GatewayOutboxOptions_RecoveryInterval_" data-uid="Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.RecoveryInterval*"></a>
+
+  <h3 id="Devbone_Frameworks_EventPersistence_Gateway_Configuration_GatewayOutboxOptions_RecoveryInterval" data-uid="Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.RecoveryInterval">
+  RecoveryInterval
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the fallback interval for startup, lost notifications and expired leases. Defaults to one minute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan RecoveryInterval { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Devbone_Frameworks_EventPersistence_Gateway_Configuration_GatewayOutboxOptions_Validate_" data-uid="Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.Validate*"></a>
+
+  <h3 id="Devbone_Frameworks_EventPersistence_Gateway_Configuration_GatewayOutboxOptions_Validate" data-uid="Devbone.Frameworks.EventPersistence.Gateway.Configuration.GatewayOutboxOptions.Validate">
+  Validate()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates the settings with the dispatcher's own rules.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Validate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when a value cannot produce a safe dispatcher loop.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Generated from the XML documentation of the published packages.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

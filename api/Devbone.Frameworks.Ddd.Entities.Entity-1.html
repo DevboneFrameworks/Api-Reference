@@ -255,7 +255,7 @@ Class Entity&lt;TIdentity&gt;
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether domain behavior has marked the entity as deleted.</p>
+  <div class="markdown level1 summary"><p>Gets whether the entity is deleted.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -277,6 +277,11 @@ public bool IsDeleted { get; protected set; }</code></pre>
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_Ddd_Entities_Entity_1_IsDeleted_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>For aggregate state the framework sets this when the aggregate's deleted event is emitted or replayed
+and when a snapshot of a deleted aggregate is restored, so the value is the same on every load path.
+It is not serialized; a snapshot records deletion in its own metadata instead.</p>
+</div>
 
 
 

@@ -159,9 +159,26 @@ Class MongoProjectionStore
 
 
   <h2 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>Refolds share the repair request collection and the node shape, so completion, failure and attempt accounting
-go through the same fenced paths as repair outputs. A refold document is told apart by <code>kind</code>, and it is
-invisible to repair scheduling until its fold phase has completed.</p>
+  <div class="markdown level0 remarks"><p>
+The store is split internally into components that each own one collection or one cohesive state and lifecycle,
+over one <span class="xref">Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStoreContext</span> that carries the database, the writer gate and the options and
+runs the transactions spanning their collections: the raw layer (<code>RawEvents_*</code> and <code>Raw_*</code>), the merged
+layer, checkpoints, the invalidation claim ledger, rebuild scans, the control plane (definitions and capabilities),
+tracked reads, failure evidence, derived attempts, repairs, refolds, the refold request inbox and the retention of
+finished requests. This class keeps the public surface, owns initialization and writer admission, and delegates
+everything else.
+</p>
+<p>
+A transaction spanning components is still one MongoDB transaction: folding raw events stays inside the raw layer,
+and publishing declared reads, joining a repair to the claim ledger, confirming a checkpoint with its repair work
+and terminating a repair claim are run by <span class="xref">Devbone.Frameworks.EventProjection.Persistence.MongoProjectionRepairs</span>, which passes its session to every
+fenced write of the transaction.
+</p>
+<p>
+The BSON field names and status values every component writes are declared here, once:
+<code>ProjectionStorageContractTests</code> compares those shared with <code>Devbone.Frameworks.EventProjection.Client</code>
+against these constants by name.
+</p>
 </div>
 
 
@@ -263,6 +280,123 @@ invisible to repair scheduling until its fold phase has completed.</p>
 </dd>
     <dt><code>unprotector</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Privacy.ProjectionEventUnprotector.html">ProjectionEventUnprotector</a></dt>
     <dd><p>Unprotects tagged payload values at the fold, so raw state and merged hold plaintext while <code>RawEvents_*</code> keeps ciphertext.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore__ctor_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore__ctor_MongoDB_Driver_IMongoClient_MongoDB_Driver_IMongoDatabase_Devbone_Frameworks_EventProjection_Projections_ProjectionStateTransition_Devbone_Frameworks_EventProjection_Projections_ProjectionDependencyExtractor_Devbone_Frameworks_EventProjection_MongoDb_Serialization_ProjectionBsonConverter_Devbone_Frameworks_EventProjection_MongoDb_Validation_ProjectionCompatibilityValidator_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_Devbone_Frameworks_EventProjection_Privacy_ProjectionEventUnprotector_Microsoft_Extensions_Logging_ILogger_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.#ctor(MongoDB.Driver.IMongoClient,MongoDB.Driver.IMongoDatabase,Devbone.Frameworks.EventProjection.Projections.ProjectionStateTransition,Devbone.Frameworks.EventProjection.Projections.ProjectionDependencyExtractor,Devbone.Frameworks.EventProjection.MongoDb.Serialization.ProjectionBsonConverter,Devbone.Frameworks.EventProjection.MongoDb.Validation.ProjectionCompatibilityValidator,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions,Devbone.Frameworks.EventProjection.Privacy.ProjectionEventUnprotector,Microsoft.Extensions.Logging.ILogger)">
+  MongoProjectionStore(IMongoClient, IMongoDatabase, ProjectionStateTransition, ProjectionDependencyExtractor, ProjectionBsonConverter, ProjectionCompatibilityValidator, ProjectionPipelineOptions, ProjectionEventUnprotector, ILogger)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the MongoDB projection store with an unprotector and a logger for raw events the fold rejects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MongoProjectionStore(IMongoClient client, IMongoDatabase database, ProjectionStateTransition transition, ProjectionDependencyExtractor dependencyExtractor, ProjectionBsonConverter bsonConverter, ProjectionCompatibilityValidator compatibilityValidator, ProjectionPipelineOptions options, ProjectionEventUnprotector unprotector, ILogger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>client</code> <span class="xref">IMongoClient</span></dt>
+    <dd><p>MongoDB client used to create transaction sessions.</p>
+</dd>
+    <dt><code>database</code> <span class="xref">IMongoDatabase</span></dt>
+    <dd><p>Projection database.</p>
+</dd>
+    <dt><code>transition</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionStateTransition.html">ProjectionStateTransition</a></dt>
+    <dd><p>Lifecycle-aware state transition.</p>
+</dd>
+    <dt><code>dependencyExtractor</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionDependencyExtractor.html">ProjectionDependencyExtractor</a></dt>
+    <dd><p>Direct dependency extractor.</p>
+</dd>
+    <dt><code>bsonConverter</code> <a class="xref" href="Devbone.Frameworks.EventProjection.MongoDb.Serialization.ProjectionBsonConverter.html">ProjectionBsonConverter</a></dt>
+    <dd><p>Deterministic JSON-BSON converter shared with the write side.</p>
+</dd>
+    <dt><code>compatibilityValidator</code> <a class="xref" href="Devbone.Frameworks.EventProjection.MongoDb.Validation.ProjectionCompatibilityValidator.html">ProjectionCompatibilityValidator</a></dt>
+    <dd><p>Defensive read-side compatibility validator.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html">ProjectionPipelineOptions</a></dt>
+    <dd><p>Configured complete-document size limits.</p>
+</dd>
+    <dt><code>unprotector</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Privacy.ProjectionEventUnprotector.html">ProjectionEventUnprotector</a></dt>
+    <dd><p>Unprotects tagged payload values at the fold, so raw state and merged hold plaintext while <code>RawEvents_*</code> keeps ciphertext.</p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>Receives one error per raw event the fold rejects.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore__ctor_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.#ctor*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore__ctor_MongoDB_Driver_IMongoClient_MongoDB_Driver_IMongoDatabase_Devbone_Frameworks_EventProjection_Projections_ProjectionStateTransition_Devbone_Frameworks_EventProjection_Projections_ProjectionDependencyExtractor_Devbone_Frameworks_EventProjection_MongoDb_Serialization_ProjectionBsonConverter_Devbone_Frameworks_EventProjection_MongoDb_Validation_ProjectionCompatibilityValidator_Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_Devbone_Frameworks_EventProjection_Privacy_ProjectionEventUnprotector_Microsoft_Extensions_Logging_ILogger_System_TimeProvider_" data-uid="Devbone.Frameworks.EventProjection.Persistence.MongoProjectionStore.#ctor(MongoDB.Driver.IMongoClient,MongoDB.Driver.IMongoDatabase,Devbone.Frameworks.EventProjection.Projections.ProjectionStateTransition,Devbone.Frameworks.EventProjection.Projections.ProjectionDependencyExtractor,Devbone.Frameworks.EventProjection.MongoDb.Serialization.ProjectionBsonConverter,Devbone.Frameworks.EventProjection.MongoDb.Validation.ProjectionCompatibilityValidator,Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions,Devbone.Frameworks.EventProjection.Privacy.ProjectionEventUnprotector,Microsoft.Extensions.Logging.ILogger,System.TimeProvider)">
+  MongoProjectionStore(IMongoClient, IMongoDatabase, ProjectionStateTransition, ProjectionDependencyExtractor, ProjectionBsonConverter, ProjectionCompatibilityValidator, ProjectionPipelineOptions, ProjectionEventUnprotector, ILogger, TimeProvider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the MongoDB projection store with an unprotector and a logger for raw events the fold rejects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MongoProjectionStore(IMongoClient client, IMongoDatabase database, ProjectionStateTransition transition, ProjectionDependencyExtractor dependencyExtractor, ProjectionBsonConverter bsonConverter, ProjectionCompatibilityValidator compatibilityValidator, ProjectionPipelineOptions options, ProjectionEventUnprotector unprotector, ILogger logger, TimeProvider timeProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>client</code> <span class="xref">IMongoClient</span></dt>
+    <dd><p>MongoDB client used to create transaction sessions.</p>
+</dd>
+    <dt><code>database</code> <span class="xref">IMongoDatabase</span></dt>
+    <dd><p>Projection database.</p>
+</dd>
+    <dt><code>transition</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionStateTransition.html">ProjectionStateTransition</a></dt>
+    <dd><p>Lifecycle-aware state transition.</p>
+</dd>
+    <dt><code>dependencyExtractor</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.ProjectionDependencyExtractor.html">ProjectionDependencyExtractor</a></dt>
+    <dd><p>Direct dependency extractor.</p>
+</dd>
+    <dt><code>bsonConverter</code> <a class="xref" href="Devbone.Frameworks.EventProjection.MongoDb.Serialization.ProjectionBsonConverter.html">ProjectionBsonConverter</a></dt>
+    <dd><p>Deterministic JSON-BSON converter shared with the write side.</p>
+</dd>
+    <dt><code>compatibilityValidator</code> <a class="xref" href="Devbone.Frameworks.EventProjection.MongoDb.Validation.ProjectionCompatibilityValidator.html">ProjectionCompatibilityValidator</a></dt>
+    <dd><p>Defensive read-side compatibility validator.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html">ProjectionPipelineOptions</a></dt>
+    <dd><p>Configured complete-document size limits.</p>
+</dd>
+    <dt><code>unprotector</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Privacy.ProjectionEventUnprotector.html">ProjectionEventUnprotector</a></dt>
+    <dd><p>Unprotects tagged payload values at the fold, so raw state and merged hold plaintext while <code>RawEvents_*</code> keeps ciphertext.</p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>Receives one error per raw event the fold rejects.</p>
+</dd>
+    <dt><code>timeProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a></dt>
+    <dd><p>Clock the store reads timestamps, leases and expiries from.</p>
 </dd>
   </dl>
 
@@ -383,7 +517,7 @@ conditional update, so only one instance wins it per sweep, and an abandoned cla
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Marks a claimed execution complete and starts its bounded evidence retention.</p>
+  <div class="markdown level1 summary"><p>Marks a claimed execution complete; its bounded evidence retention starts at checkpoint confirmation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -397,7 +531,8 @@ conditional update, so only one instance wins it per sweep, and an abandoned cla
     <dd><p>Fenced claim returned by <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore.html#Devbone_Frameworks_EventProjection_Persistence_IProjectionInvalidationStore_TryClaimAsync_Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidation_System_String_System_TimeSpan_System_Threading_CancellationToken_">TryClaimAsync(ProjectionInvalidation, string, TimeSpan, CancellationToken)</a>.</p>
 </dd>
     <dt><code>retention</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
-    <dd><p>Positive completed-record retention.</p>
+    <dd><p>Positive completed-record retention, counted from <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore.html#Devbone_Frameworks_EventProjection_Persistence_IProjectionInvalidationStore_ConfirmCheckpointAsync_Devbone_Frameworks_EventProjection_Persistence_ProjectionInvalidation_System_Threading_CancellationToken_">ConfirmCheckpointAsync(ProjectionInvalidation, CancellationToken)</a> so a record whose
+checkpoint is never confirmed stays readable by <a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.IProjectionInvalidationStore.html#Devbone_Frameworks_EventProjection_Persistence_IProjectionInvalidationStore_ReadNextCompletedAsync_System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_EventProjection_Persistence_ProjectionRegistration__System_Threading_CancellationToken_">ReadNextCompletedAsync(IReadOnlyCollection&lt;ProjectionRegistration&gt;, CancellationToken)</a>.</p>
 </dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd><p>Cancellation token.</p>
@@ -428,7 +563,8 @@ conditional update, so only one instance wins it per sweep, and an abandoned cla
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Marks checkpoint repair complete for the exact current work generation.</p>
+  <div class="markdown level1 summary"><p>Marks checkpoint repair complete for the exact current work generation and starts the completed record's
+retention.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -546,6 +682,10 @@ conditional update, so only one instance wins it per sweep, and an abandoned cla
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Persistence_MongoProjectionStore_EnsureIndexesAsync_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Besides the indexes, it gives finished repair, refold and inbox requests that an earlier version left without
+an expiry their <code>expiresAtUtc</code>, fenced like every other mutation once the writer lease is admitted.</p>
+</div>
 
 
 
@@ -1457,15 +1597,18 @@ no-op for progress exactly as it is for the query model.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>definitions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Persistence.ProjectionRegistration.html">ProjectionRegistration</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>Definitions whose current merged inputs must be rescanned.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>Cancellation token.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
+    <dd><p>A task completing after every scan is durably scheduled.</p>
+</dd>
   </dl>
 
 

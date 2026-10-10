@@ -153,10 +153,10 @@ Class AggregateIdentityExtensions
 </h2>
 
 
-  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateIdentityExtensions_Exists_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateIdentityExtensions.Exists*"></a>
+  <a id="Devbone_Frameworks_Ddd_Aggregates_AggregateIdentityExtensions_ExistsAsync_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateIdentityExtensions.ExistsAsync*"></a>
 
-  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateIdentityExtensions_Exists__1_Devbone_Frameworks_Ddd_Aggregates_AggregateIdentity___0__Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_Devbone_Frameworks_Ddd_Aggregates_IAggregateRoot___0__" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateIdentityExtensions.Exists``1(Devbone.Frameworks.Ddd.Aggregates.AggregateIdentity{``0},Devbone.Frameworks.Ddd.Repositories.IEventStreamReader,Devbone.Frameworks.Ddd.Aggregates.IAggregateRoot{``0})">
-  Exists&lt;TIdentity&gt;(AggregateIdentity&lt;TIdentity&gt;, IEventStreamReader, IAggregateRoot&lt;TIdentity&gt;)
+  <h3 id="Devbone_Frameworks_Ddd_Aggregates_AggregateIdentityExtensions_ExistsAsync__1_Devbone_Frameworks_Ddd_Aggregates_AggregateIdentity___0__Devbone_Frameworks_Ddd_Repositories_IEventStreamReader_Devbone_Frameworks_Ddd_Aggregates_IAggregateRoot___0__System_Threading_CancellationToken_Microsoft_Extensions_Logging_ILogger_" data-uid="Devbone.Frameworks.Ddd.Aggregates.AggregateIdentityExtensions.ExistsAsync``1(Devbone.Frameworks.Ddd.Aggregates.AggregateIdentity{``0},Devbone.Frameworks.Ddd.Repositories.IEventStreamReader,Devbone.Frameworks.Ddd.Aggregates.IAggregateRoot{``0},System.Threading.CancellationToken,Microsoft.Extensions.Logging.ILogger)">
+  ExistsAsync&lt;TIdentity&gt;(AggregateIdentity&lt;TIdentity&gt;, IEventStreamReader, IAggregateRoot&lt;TIdentity&gt;, CancellationToken, ILogger?)
   
   </h3>
 
@@ -165,7 +165,7 @@ Class AggregateIdentityExtensions
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IResult Exists&lt;TIdentity&gt;(this AggregateIdentity&lt;TIdentity&gt; id, IEventStreamReader eventStreamReader, IAggregateRoot&lt;TIdentity&gt; notLoadedAggregate) where TIdentity : AggregateIdentity&lt;TIdentity&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;IResult&gt; ExistsAsync&lt;TIdentity&gt;(this AggregateIdentity&lt;TIdentity&gt; id, IEventStreamReader eventStreamReader, IAggregateRoot&lt;TIdentity&gt; notLoadedAggregate, CancellationToken cancellationToken = default, ILogger? logger = null) where TIdentity : AggregateIdentity&lt;TIdentity&gt;</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -179,12 +179,20 @@ Class AggregateIdentityExtensions
     <dt><code>notLoadedAggregate</code> <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateRoot-1.html">IAggregateRoot</a>&lt;TIdentity&gt;</dt>
     <dd><p>Fresh aggregate instance used to rehydrate and inspect stream state.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token for the stream read.</p>
+</dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
+    <dd><p>Logger for a stream that cannot be rehydrated; nothing is logged when omitted.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Devbone.Frameworks.Ddd.Results.IResult.html">IResult</a></dt>
-    <dd><p>A successful result when the aggregate exists and is active; otherwise, a structured error.</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IResult.html">IResult</a>&gt;</dt>
+    <dd><p>A successful result when the aggregate exists and is not deleted. Otherwise <code>AGGREGATE_NOT_FOUND</code> for a
+missing or deleted aggregate, the same answer <code>CommandFactory.ValidateIdAsync</code> gives, or
+<code>COMMAND_HANDLING_FAILED</code> when the stream cannot be rehydrated.</p>
 </dd>
   </dl>
 

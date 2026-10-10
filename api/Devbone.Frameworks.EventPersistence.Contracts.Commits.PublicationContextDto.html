@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class PublicationContextDto | Devbone Event-Driven Platform ">
       
-      <meta name="description" content="Supplies correlation and principal metadata that is not part of the domain payload.">
+      <meta name="description" content="Supplies correlation and tracing metadata that is not part of the domain payload.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class PublicationContextDto
   <dl><dt>Assembly</dt><dd>Devbone.Frameworks.EventPersistence.Contracts.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Supplies correlation and principal metadata that is not part of the domain payload.</p>
+  <div class="markdown summary"><p>Supplies correlation and tracing metadata that is not part of the domain payload.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -144,6 +144,11 @@ Class PublicationContextDto
 
 
 
+  <h2 id="Devbone_Frameworks_EventPersistence_Contracts_Commits_PublicationContextDto_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>There is deliberately no actor: a person who acts belongs in the event payload as a protected field under that
+person's key, and the gateway derives the producing <code>SourceId</code> from the authenticated client. A
+request from an older client that still sends <code>principalId</code> is accepted and the value is ignored.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -240,38 +245,10 @@ Class PublicationContextDto
 
 
 
-
-
-
-
-  <a id="Devbone_Frameworks_EventPersistence_Contracts_Commits_PublicationContextDto_PrincipalId_" data-uid="Devbone.Frameworks.EventPersistence.Contracts.Commits.PublicationContextDto.PrincipalId*"></a>
-
-  <h3 id="Devbone_Frameworks_EventPersistence_Contracts_Commits_PublicationContextDto_PrincipalId" data-uid="Devbone.Frameworks.EventPersistence.Contracts.Commits.PublicationContextDto.PrincipalId">
-  PrincipalId
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets or sets the user or system principal identifier.</p>
+  <h4 class="section" id="Devbone_Frameworks_EventPersistence_Contracts_Commits_PublicationContextDto_CorrelationId_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The value is written into every immutable outbox envelope unprotected, survives the erasure of a data subject
+and is republished verbatim by every resend. It must be a technical identifier and never carry personal data.</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? PrincipalId { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
 
 
 

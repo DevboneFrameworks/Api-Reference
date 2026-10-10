@@ -130,7 +130,8 @@ It is diagnostic metadata only: callers must discard the faulted instance and re
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.AggregateName.html">AggregateName</a></dt>
       <dd><p>Protects the stable aggregate-stream contract name from accidental null, empty, or whitespace values.
-The name is used by storage, locking, and event metadata and should survive CLR type renames.</p>
+The name is used by storage, locking, and event metadata and should survive CLR type renames. It is
+persisted exactly as declared and equals the identity prefix ignoring case.</p>
 </dd>
     </dl>
     <dl class="jumplist">

@@ -180,6 +180,41 @@ Class KeyServiceDatabaseOptions
 </h2>
 
 
+  <a id="Devbone_Frameworks_Privacy_KeyService_Configuration_KeyServiceDatabaseOptions_ConnectionOptions_" data-uid="Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceDatabaseOptions.ConnectionOptions*"></a>
+
+  <h3 id="Devbone_Frameworks_Privacy_KeyService_Configuration_KeyServiceDatabaseOptions_ConnectionOptions" data-uid="Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceDatabaseOptions.ConnectionOptions">
+  ConnectionOptions
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets further Npgsql connection settings by keyword, for example <code>SslMode</code> = <code>VerifyFull</code>,
+<code>Maximum Pool Size</code> or <code>Timeout</code>. Npgsql's default <code>SslMode</code> is <code>Prefer</code>, which does not
+verify the server certificate; set <code>VerifyFull</code> in production. An unknown keyword or one of the five
+values above fails <a class="xref" href="Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceDatabaseOptions.html#Devbone_Frameworks_Privacy_KeyService_Configuration_KeyServiceDatabaseOptions_Validate">Validate()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;string, string&gt; ConnectionOptions { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_Privacy_KeyService_Configuration_KeyServiceDatabaseOptions_DatabaseName_" data-uid="Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceDatabaseOptions.DatabaseName*"></a>
 
   <h3 id="Devbone_Frameworks_Privacy_KeyService_Configuration_KeyServiceDatabaseOptions_DatabaseName" data-uid="Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceDatabaseOptions.DatabaseName">
@@ -351,7 +386,7 @@ Class KeyServiceDatabaseOptions
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Builds the connection string.</p>
+  <div class="markdown level1 summary"><p>Builds the connection string from the five core values and <a class="xref" href="Devbone.Frameworks.Privacy.KeyService.Configuration.KeyServiceDatabaseOptions.html#Devbone_Frameworks_Privacy_KeyService_Configuration_KeyServiceDatabaseOptions_ConnectionOptions">ConnectionOptions</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -374,6 +409,12 @@ Class KeyServiceDatabaseOptions
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when an option names an unknown Npgsql keyword or one of the core values.</p>
+</dd>
+  </dl>
 
 
 

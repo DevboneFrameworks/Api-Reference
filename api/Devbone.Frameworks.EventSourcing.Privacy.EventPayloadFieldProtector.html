@@ -196,6 +196,42 @@ placeholder the tag carries.</p>
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Privacy_EventPayloadFieldProtector_WITHHELD_PLACEHOLDER" data-uid="Devbone.Frameworks.EventSourcing.Privacy.EventPayloadFieldProtector.WITHHELD_PLACEHOLDER">
+  WITHHELD_PLACEHOLDER
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The value <a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPayloadFieldProtector.html#Devbone_Frameworks_EventSourcing_Privacy_EventPayloadFieldProtector_UnprotectForSubjectsAsync_System_Collections_Generic_IReadOnlyList_Devbone_Frameworks_EventSourcing_Privacy_PrivacyEventRecord__System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_Privacy_Keys_SubjectKeyReference__System_Threading_CancellationToken_">UnprotectForSubjectsAsync(IReadOnlyList&lt;PrivacyEventRecord&gt;, IReadOnlyCollection&lt;SubjectKeyReference&gt;, CancellationToken)</a> puts in place of a protected field that belongs to a subject
+the record is not disclosed to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string WITHHELD_PLACEHOLDER = &quot;[withheld]&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -344,6 +380,75 @@ or when a protected payload exceeds the size limit.</p>
 </dd>
     <dt><a class="xref" href="Devbone.Frameworks.Privacy.Protection.FieldProtectionException.html">FieldProtectionException</a></dt>
     <dd><p>Thrown when a tagged value does not authenticate or has an unsupported format.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Privacy_EventPayloadFieldProtector_UnprotectForSubjectsAsync_" data-uid="Devbone.Frameworks.EventSourcing.Privacy.EventPayloadFieldProtector.UnprotectForSubjectsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Privacy_EventPayloadFieldProtector_UnprotectForSubjectsAsync_System_Collections_Generic_IReadOnlyList_Devbone_Frameworks_EventSourcing_Privacy_PrivacyEventRecord__System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_Privacy_Keys_SubjectKeyReference__System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Privacy.EventPayloadFieldProtector.UnprotectForSubjectsAsync(System.Collections.Generic.IReadOnlyList{Devbone.Frameworks.EventSourcing.Privacy.PrivacyEventRecord},System.Collections.Generic.IReadOnlyCollection{Devbone.Frameworks.Privacy.Keys.SubjectKeyReference},System.Threading.CancellationToken)">
+  UnprotectForSubjectsAsync(IReadOnlyList&lt;PrivacyEventRecord&gt;, IReadOnlyCollection&lt;SubjectKeyReference&gt;, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unprotects stored personal-data records for disclosure to some subjects, for example a data-subject access
+request: a protected field is decrypted only when the record's definition and descriptor assign it to one of
+<code class="paramref">subjects</code>; every other tagged value is replaced by <a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPayloadFieldProtector.html#Devbone_Frameworks_EventSourcing_Privacy_EventPayloadFieldProtector_WITHHELD_PLACEHOLDER">WITHHELD_PLACEHOLDER</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;string&gt;&gt; UnprotectForSubjectsAsync(IReadOnlyList&lt;PrivacyEventRecord&gt; records, IReadOnlyCollection&lt;SubjectKeyReference&gt; subjects, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>records</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.PrivacyEventRecord.html">PrivacyEventRecord</a>&gt;</dt>
+    <dd><p>The stored records, as the privacy index loaded them.</p>
+</dd>
+    <dt><code>subjects</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Privacy/Keys/SubjectKeyReference.cs">SubjectKeyReference</a>&gt;</dt>
+    <dd><p>The subjects the records are disclosed to.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd><p>One payload per record, in input order.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Privacy_EventPayloadFieldProtector_UnprotectForSubjectsAsync_System_Collections_Generic_IReadOnlyList_Devbone_Frameworks_EventSourcing_Privacy_PrivacyEventRecord__System_Collections_Generic_IReadOnlyCollection_Devbone_Frameworks_Privacy_Keys_SubjectKeyReference__System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+A record found for one subject can carry protected fields of another, such as both parties of a loan.
+<a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPayloadFieldProtector.html#Devbone_Frameworks_EventSourcing_Privacy_EventPayloadFieldProtector_UnprotectAsync_System_Collections_Generic_IReadOnlyList_System_String__System_Threading_CancellationToken_">UnprotectAsync(IReadOnlyList&lt;string&gt;, CancellationToken)</a> decrypts every tag whose key is alive and
+would hand the other party's data to the requester. The assignment follows the rule protection used: field
+path, subject type and role from the definition, the one matching subject from the descriptor, in the
+record's tenant. A tag the definition does not assign to a requested subject, including one under an unknown
+definition, is withheld. A destroyed key of a requested subject yields its tag's placeholder, as anywhere.
+</p>
+<p>
+Fields that were never protected are returned as stored; this method decides only about ciphertext.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.Privacy.Keys.SubjectKeyRegistryUnavailableException.html">SubjectKeyRegistryUnavailableException</a></dt>
+    <dd><p>Thrown when the registry cannot be reached.</p>
+</dd>
+    <dt><a class="xref" href="Devbone.Frameworks.Privacy.Protection.FieldProtectionException.html">FieldProtectionException</a></dt>
+    <dd><p>Thrown when a requested subject's tagged value does not authenticate.</p>
 </dd>
   </dl>
 

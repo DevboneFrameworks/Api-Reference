@@ -112,7 +112,7 @@ up — that is the narrative guide, which lives with the source.</p>
 </tr>
 <tr>
 <td><code>Devbone.Frameworks.EventBus</code></td>
-<td>Transport-neutral publish/subscribe, Kafka, RabbitMQ, manual settlement.</td>
+<td>Transport-neutral publish/subscribe and manual settlement; carries no broker client.</td>
 </tr>
 <tr>
 <td><code>Devbone.Frameworks.EventBus.Kafka</code></td>
@@ -121,10 +121,6 @@ up — that is the narrative guide, which lives with the source.</p>
 <tr>
 <td><code>Devbone.Frameworks.EventBus.RabbitMq</code></td>
 <td>RabbitMQ transport for the event bus.</td>
-</tr>
-<tr>
-<td><code>Devbone.Frameworks.EventBus.Ddd</code></td>
-<td>Publication adapter turning stored events into canonical envelopes.</td>
 </tr>
 <tr>
 <td><code>Devbone.Frameworks.EventBus.Outbox</code></td>
@@ -137,6 +133,10 @@ up — that is the narrative guide, which lives with the source.</p>
 <tr>
 <td><code>Devbone.Frameworks.EventPersistence.Client</code></td>
 <td>Optional persistence-port adapter over HTTPS.</td>
+</tr>
+<tr>
+<td><code>Devbone.Frameworks.EventPersistence.Gateway</code></td>
+<td>The Event Persistence Gateway as a library: authentication, routing, persistence, locks and the embedded outbox dispatchers.</td>
 </tr>
 <tr>
 <td><code>Devbone.Frameworks.EventProjection</code></td>
@@ -158,10 +158,34 @@ up — that is the narrative guide, which lives with the source.</p>
 <td><code>Devbone.Frameworks.EventProjection.Client</code></td>
 <td>Bounded, opt-in read-your-writes waiting for API hosts.</td>
 </tr>
+<tr>
+<td><code>Devbone.Frameworks.Privacy</code></td>
+<td>Per-subject data keys and field protection: registry, protector, tagged value format, key service client.</td>
+</tr>
+<tr>
+<td><code>Devbone.Frameworks.Privacy.KeyService</code></td>
+<td>The key service as a library: endpoints, authentication, and the PostgreSQL registry of wrapped keys.</td>
+</tr>
+<tr>
+<td><code>Devbone.Frameworks.Privacy.Requests</code></td>
+<td>The application side of data-subject requests: the endpoints a platform privacy service calls, the caller policy, two-phase erasure and export.</td>
+</tr>
+<tr>
+<td><code>Devbone.Frameworks.Privacy.Requests.EventProjection</code></td>
+<td>The refold step of data-subject erasure: places refold requests for the projection worker through EventProjection.Client, so the API host never becomes a projection writer.</td>
+</tr>
+<tr>
+<td><code>Devbone.Frameworks.Privacy.Requests.EventSourcing</code></td>
+<td>The event-store steps of data-subject requests: finds the aggregates of a subject through the privacy index, deletes their snapshots under the aggregate lock, and exports the records decrypted for the person with the protected fields of other people withheld.</td>
+</tr>
+<tr>
+<td><code>Devbone.Frameworks.Hosting</code></td>
+<td>Optional hosting conventions: OpenTelemetry export over OTLP for the <code>Devbone.Frameworks.*</code> instrumentation, and anonymous liveness and readiness probes.</td>
+</tr>
 </tbody>
 </table>
-<p>The deployable hosts — the projection worker, the persistence gateway and the standalone Time Machine host —
-are services rather than libraries and are deliberately absent.</p>
+<p>The deployable hosts — the projection worker, the persistence gateway, the standalone Time Machine host and the
+key service host — are services rather than libraries and are deliberately absent.</p>
 <h2 id="versions">Versions</h2>
 <p>See <a href="versions.html">versions</a> for the exact package versions this reference was generated from.</p>
 

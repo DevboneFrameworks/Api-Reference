@@ -212,6 +212,43 @@ Class KafkaProjectionOptions
 
 
 
+  <a id="Devbone_Frameworks_EventProjection_Configuration_KafkaProjectionOptions_ClientConfig_" data-uid="Devbone.Frameworks.EventProjection.Configuration.KafkaProjectionOptions.ClientConfig*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Configuration_KafkaProjectionOptions_ClientConfig" data-uid="Devbone.Frameworks.EventProjection.Configuration.KafkaProjectionOptions.ClientConfig">
+  ClientConfig
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets additional librdkafka client settings applied to the consumer, the producer and the admin client, such
+as <code>security.protocol</code>, <code>sasl.mechanism</code>, <code>sasl.username</code>, <code>sasl.password</code> and
+<code>ssl.ca.location</code>. Keys the pipeline owns because correctness depends on them — bootstrap servers, the
+consumer group, offset commit and storage, offset reset, acknowledgement and idempotence, including their
+librdkafka aliases — are refused by validation. Bound from configuration with the dotted key as the last
+segment, for example the environment variable <code>EventProjection__Kafka__ClientConfig__sasl.password</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;string, string&gt; ClientConfig { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Configuration_KafkaProjectionOptions_ConsumerGroupPrefix_" data-uid="Devbone.Frameworks.EventProjection.Configuration.KafkaProjectionOptions.ConsumerGroupPrefix*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Configuration_KafkaProjectionOptions_ConsumerGroupPrefix" data-uid="Devbone.Frameworks.EventProjection.Configuration.KafkaProjectionOptions.ConsumerGroupPrefix">

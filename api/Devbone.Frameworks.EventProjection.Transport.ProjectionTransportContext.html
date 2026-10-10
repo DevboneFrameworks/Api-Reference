@@ -273,6 +273,74 @@ Class ProjectionTransportContext
 
 
 
+  <a id="Devbone_Frameworks_EventProjection_Transport_ProjectionTransportContext_TraceParent_" data-uid="Devbone.Frameworks.EventProjection.Transport.ProjectionTransportContext.TraceParent*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Transport_ProjectionTransportContext_TraceParent" data-uid="Devbone.Frameworks.EventProjection.Transport.ProjectionTransportContext.TraceParent">
+  TraceParent
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the W3C <code>traceparent</code> header the message arrived with, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when it carried none.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? TraceParent { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Transport_ProjectionTransportContext_TraceParent_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Diagnostic only: a stage continues this trace, and nothing about processing, keys, ordering, deduplication or
+settlement depends on it.</p>
+</div>
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Transport_ProjectionTransportContext_TraceState_" data-uid="Devbone.Frameworks.EventProjection.Transport.ProjectionTransportContext.TraceState*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Transport_ProjectionTransportContext_TraceState" data-uid="Devbone.Frameworks.EventProjection.Transport.ProjectionTransportContext.TraceState">
+  TraceState
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the W3C <code>tracestate</code> header belonging to <a class="xref" href="Devbone.Frameworks.EventProjection.Transport.ProjectionTransportContext.html#Devbone_Frameworks_EventProjection_Transport_ProjectionTransportContext_TraceParent">TraceParent</a>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? TraceState { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Transport_ProjectionTransportContext_TransportName_" data-uid="Devbone.Frameworks.EventProjection.Transport.ProjectionTransportContext.TransportName*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Transport_ProjectionTransportContext_TransportName" data-uid="Devbone.Frameworks.EventProjection.Transport.ProjectionTransportContext.TransportName">

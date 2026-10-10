@@ -100,6 +100,24 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventBus.Subscribing.DeadLetterHeaderNames.html">DeadLetterHeaderNames</a></dt>
+      <dd><p>Header names a transport adapter adds when it moves a message it cannot read to the configured poison-message
+dead-letter stream. The message keeps its original body and headers; these describe why and from where.
+The original may hold personal data: keep dead-letter streams under explicit retention and access control, and
+never copy their content into logs or telemetry.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventBus.Subscribing.EventBusNames.html">EventBusNames</a></dt>
+      <dd><p>The one transport-neutral naming rule for what a subscription and its queue are built from. Both brokers
+read some characters as more than a name: a Kafka topic starting with <code>^</code> is a regular-expression subscription,
+<code>*</code> and <code>#</code> are wildcards in a RabbitMQ binding key, and a RabbitMQ queue is named
+<code>{consumer}.{stream}</code> or <code>{consumer}.{instance}.{stream}</code>, which is ambiguous as soon as a consumer name or
+an instance identity holds a dot. Each of those silently delivers another stream's messages; the rule refuses them,
+RabbitMQ's reserved <code>amq.</code> prefix, and names that would exceed the 255-byte queue-name limit.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventBus.Subscribing.SubscriptionDefinition.html">SubscriptionDefinition</a></dt>
       <dd><p>Defines one subscription to a stream.</p>
 </dd>

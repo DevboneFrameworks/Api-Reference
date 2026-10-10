@@ -129,7 +129,9 @@ Interfaces
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventBus.Bus.IEventBusProviderFactory.html">IEventBusProviderFactory</a></dt>
-      <dd><p>Creates one transport-specific event bus from a validated logical target.</p>
+      <dd><p>Creates one transport-specific event bus from a validated logical target. This is how the separately packaged
+Kafka and RabbitMQ transports plug into the transport-neutral resolver; it is not an extension point for further
+transports, because a target carries options for those two only.</p>
 </dd>
     </dl>
     <dl class="jumplist">

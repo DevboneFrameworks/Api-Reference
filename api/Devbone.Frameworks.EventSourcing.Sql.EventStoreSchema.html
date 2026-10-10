@@ -201,7 +201,7 @@ database processes that never execute .NET code. Both copies are the same file.<
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int SCHEMA_VERSION = 4</code></pre>
+    <pre><code class="lang-csharp hljs">public const int SCHEMA_VERSION = 8</code></pre>
   </div>
 
 
@@ -267,6 +267,136 @@ is packed as <code>sql/postgres/migrate-3-to-4.sql</code>.</p>
 
 
 
+  <a id="Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_GetPostgresMigration4To5Script_" data-uid="Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.GetPostgresMigration4To5Script*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_GetPostgresMigration4To5Script" data-uid="Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.GetPostgresMigration4To5Script">
+  GetPostgresMigration4To5Script()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the PostgreSQL script that upgrades a schema version 4 database to version 5, which makes the
+database enforce that the first aggregate revision starts at event sequence 1 and only it does.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetPostgresMigration4To5Script()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The upgrade script. Run it exactly once against a database that reports version 4; writers may keep
+running. It verifies the version, refuses streams that already violate the rule, naming them, and changes
+no row. The same file is packed as <code>sql/postgres/migrate-4-to-5.sql</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when the assembly was built without the embedded resource.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_GetPostgresMigration5To6Script_" data-uid="Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.GetPostgresMigration5To6Script*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_GetPostgresMigration5To6Script" data-uid="Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.GetPostgresMigration5To6Script">
+  GetPostgresMigration5To6Script()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the PostgreSQL script that upgrades a schema version 5 database to version 6, which adds the index
+that lets a stream be loaded by its aggregate identity alone without scanning the events table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetPostgresMigration5To6Script()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The upgrade script. Run it exactly once against a database that reports version 5. It verifies the
+version, builds the index inside its transaction - blocking writes to the events table meanwhile - and
+changes no row. For a large table, create the index first with <code>CREATE INDEX CONCURRENTLY IF NOT
+EXISTS</code> as the script header shows; the script then only moves the version. The same file is packed
+as <code>sql/postgres/migrate-5-to-6.sql</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when the assembly was built without the embedded resource.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_GetPostgresMigration7To8Script_" data-uid="Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.GetPostgresMigration7To8Script*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_GetPostgresMigration7To8Script" data-uid="Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.GetPostgresMigration7To8Script">
+  GetPostgresMigration7To8Script()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the PostgreSQL script that upgrades a schema version 7 database to version 8, which indexes the outbox
+for the claim, the replay read and the inventory, so none of them reads the whole, ever-growing table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetPostgresMigration7To8Script()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The upgrade script. Run it exactly once against a database that reports version 7. It verifies the
+version, builds the indexes inside its transaction - blocking writes to the outbox, and with them every
+commit, meanwhile - replaces <code>IX_event_outbox_dispatch</code> and changes no row. For a large table, create
+the indexes first with <code>CREATE INDEX CONCURRENTLY IF NOT EXISTS</code> as the script header shows. The same
+file is packed as <code>sql/postgres/migrate-7-to-8.sql</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when the assembly was built without the embedded resource.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_GetPostgresScript_" data-uid="Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.GetPostgresScript*"></a>
 
   <h3 id="Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_GetPostgresScript" data-uid="Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.GetPostgresScript">
@@ -303,6 +433,71 @@ event-store tables.</p>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
     <dd><p>Thrown when the assembly was built without the embedded schema resource.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_MigrateUniqueValueHashes6To7Async_" data-uid="Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.MigrateUniqueValueHashes6To7Async*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_MigrateUniqueValueHashes6To7Async_Npgsql_NpgsqlConnection_System_String_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.MigrateUniqueValueHashes6To7Async(Npgsql.NpgsqlConnection,System.String,System.Threading.CancellationToken)">
+  MigrateUniqueValueHashes6To7Async(NpgsqlConnection, string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Upgrades a schema version 6 database to version 7 by keying every stored unique-value hash. Unlike the
+earlier upgrades this one cannot be a SQL script: it needs the key, which is held outside the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;int&gt; MigrateUniqueValueHashes6To7Async(NpgsqlConnection connection, string uniqueValueHashKey, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>connection</code> <span class="xref">NpgsqlConnection</span></dt>
+    <dd><p>An open connection to the event-store database, using the default table names.</p>
+</dd>
+    <dt><code>uniqueValueHashKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The <code>UniqueValueHashKey</code> every writer of this event store is configured with.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>The number of rewritten hashes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_MigrateUniqueValueHashes6To7Async_Npgsql_NpgsqlConnection_System_String_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Run it exactly once, with every writer stopped, against a database that reports version 6. In one transaction
+it rewrites each unkeyed SHA-512 digest to <code>h1:</code> plus <code>HMAC-SHA512(key, digest)</code>, adds
+<code>CK_uniques_value_hash_keyed</code> so no writer can store an unkeyed hash afterwards, and moves the version
+to 7; no other row changes. The digest is not kept, so the key cannot be rotated later without the plaintext
+values. <code>sql/postgres/migrate-6-to-7.sql</code> documents the same steps for review.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown when <code class="paramref">connection</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when the key is missing, not base64, or shorter than 32 bytes.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when the database does not report schema version 6.</p>
 </dd>
   </dl>
 
