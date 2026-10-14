@@ -408,6 +408,43 @@ is used; production deployments should normally supply an image or commit digest
 
 
 
+  <a id="Devbone_Frameworks_EventProjection_Configuration_ProjectionControlPlaneOptions_WithdrawalTimeout_" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.WithdrawalTimeout*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Configuration_ProjectionControlPlaneOptions_WithdrawalTimeout" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.WithdrawalTimeout">
+  WithdrawalTimeout
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the budget for withdrawing this instance's capability advertisement and writer lease when the host stops.
+Both withdrawals are best effort: a lease that is not withdrawn expires by server time after
+<a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.html#Devbone_Frameworks_EventProjection_Configuration_ProjectionControlPlaneOptions_LeaseDuration">LeaseDuration</a> plus <a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.html#Devbone_Frameworks_EventProjection_Configuration_ProjectionControlPlaneOptions_LeaseGracePeriod">LeaseGracePeriod</a>, so giving up is safe, whereas a withdrawal
+that keeps retrying a transient MongoDB error spends the host's whole shutdown timeout and leaves the lease
+behind anyway. The budget is independent of the host's shutdown token, so a stop whose timeout has already
+fired still withdraws. Defaults to five seconds; must be positive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan WithdrawalTimeout { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
 
 </article>
 

@@ -10690,6 +10690,18 @@ references:
   commentId: Overload:Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.MessageSizeLimits
   fullName: Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.MessageSizeLimits
   nameWithType: KafkaBusOptions.MessageSizeLimits
+- uid: Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.MissingTopicErrorAfter
+  name: MissingTopicErrorAfter
+  href: api/Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.html#Devbone_Frameworks_EventBus_Bus_KafkaBusOptions_MissingTopicErrorAfter
+  commentId: P:Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.MissingTopicErrorAfter
+  fullName: Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.MissingTopicErrorAfter
+  nameWithType: KafkaBusOptions.MissingTopicErrorAfter
+- uid: Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.MissingTopicErrorAfter*
+  name: MissingTopicErrorAfter
+  href: api/Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.html#Devbone_Frameworks_EventBus_Bus_KafkaBusOptions_MissingTopicErrorAfter_
+  commentId: Overload:Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.MissingTopicErrorAfter
+  fullName: Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.MissingTopicErrorAfter
+  nameWithType: KafkaBusOptions.MissingTopicErrorAfter
 - uid: Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.PoisonMessageDeadLetterStream
   name: PoisonMessageDeadLetterStream
   href: api/Devbone.Frameworks.EventBus.Bus.KafkaBusOptions.html#Devbone_Frameworks_EventBus_Bus_KafkaBusOptions_PoisonMessageDeadLetterStream
@@ -21247,6 +21259,18 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.Revision
   fullName: Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.Revision
   nameWithType: ProjectionControlPlaneOptions.Revision
+- uid: Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.WithdrawalTimeout
+  name: WithdrawalTimeout
+  href: api/Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.html#Devbone_Frameworks_EventProjection_Configuration_ProjectionControlPlaneOptions_WithdrawalTimeout
+  commentId: P:Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.WithdrawalTimeout
+  fullName: Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.WithdrawalTimeout
+  nameWithType: ProjectionControlPlaneOptions.WithdrawalTimeout
+- uid: Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.WithdrawalTimeout*
+  name: WithdrawalTimeout
+  href: api/Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.html#Devbone_Frameworks_EventProjection_Configuration_ProjectionControlPlaneOptions_WithdrawalTimeout_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.WithdrawalTimeout
+  fullName: Devbone.Frameworks.EventProjection.Configuration.ProjectionControlPlaneOptions.WithdrawalTimeout
+  nameWithType: ProjectionControlPlaneOptions.WithdrawalTimeout
 - uid: Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions
   name: ProjectionPipelineOptions
   href: api/Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html
@@ -29605,6 +29629,18 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.Describe
   fullName: Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.Describe
   nameWithType: DerivedProjectionRegistry.Describe
+- uid: Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.HandlerTypes
+  name: HandlerTypes()
+  href: api/Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.html#Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_HandlerTypes
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.HandlerTypes
+  fullName: Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.HandlerTypes()
+  nameWithType: DerivedProjectionRegistry.HandlerTypes()
+- uid: Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.HandlerTypes*
+  name: HandlerTypes
+  href: api/Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.html#Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_HandlerTypes_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.HandlerTypes
+  fullName: Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.HandlerTypes
+  nameWithType: DerivedProjectionRegistry.HandlerTypes
 - uid: Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.IsEnabled
   name: IsEnabled
   href: api/Devbone.Frameworks.EventProjection.Projections.DerivedProjectionRegistry.html#Devbone_Frameworks_EventProjection_Projections_DerivedProjectionRegistry_IsEnabled
