@@ -211,6 +211,13 @@ lifetime of the host. Two kinds are scoped: handlers, which each invocation reso
 authorization policies, which an application resolves in the scope of the request it serves.
 </p>
 <p>
+The pipeline writes through its own MongoDB client and database, created from
+<a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html#Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_Mongo">Mongo</a>, whatever else the container holds: an <span class="xref">MongoDB.Driver.IMongoClient</span>
+the application registers, before or after this call, serves the application alone. The unkeyed
+<span class="xref">MongoDB.Driver.IMongoClient</span> and <span class="xref">MongoDB.Driver.IMongoDatabase</span> registered here resolve to the pipeline's client and
+projection database unless the application registers its own after this call.
+</p>
+<p>
 This is the only supported way to compose the processors; replace a store by registering your own
 implementation of its port after this call, because the last registration of a service wins.
 </p>

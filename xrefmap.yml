@@ -18688,6 +18688,33 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionFailureReader.ReadFailuresAsync
   fullName: Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionFailureReader.ReadFailuresAsync
   nameWithType: IProjectionFailureReader.ReadFailuresAsync
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader
+  name: IProjectionReceivedEventReader
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader.html
+  commentId: T:Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader
+  nameWithType: IProjectionReceivedEventReader
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader.MAXIMUM_PAGE_SIZE
+  name: MAXIMUM_PAGE_SIZE
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader.html#Devbone_Frameworks_EventProjection_Client_Persistence_IProjectionReceivedEventReader_MAXIMUM_PAGE_SIZE
+  commentId: F:Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader.MAXIMUM_PAGE_SIZE
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader.MAXIMUM_PAGE_SIZE
+  nameWithType: IProjectionReceivedEventReader.MAXIMUM_PAGE_SIZE
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader.ReadReceivedEventsAsync(System.String,System.String,System.String,System.Int64,System.Int32,System.Threading.CancellationToken)
+  name: ReadReceivedEventsAsync(string, string, string?, long, int, CancellationToken)
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader.html#Devbone_Frameworks_EventProjection_Client_Persistence_IProjectionReceivedEventReader_ReadReceivedEventsAsync_System_String_System_String_System_String_System_Int64_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader.ReadReceivedEventsAsync(System.String,System.String,System.String,System.Int64,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadReceivedEventsAsync(String, String, String, Long, Integer, CancellationToken)
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader.ReadReceivedEventsAsync(string, string, string?, long, int, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader.ReadReceivedEventsAsync(String, String, String, Long, Integer, System.Threading.CancellationToken)
+  nameWithType: IProjectionReceivedEventReader.ReadReceivedEventsAsync(string, string, string?, long, int, CancellationToken)
+  nameWithType.vb: IProjectionReceivedEventReader.ReadReceivedEventsAsync(String, String, String, Long, Integer, CancellationToken)
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader.ReadReceivedEventsAsync*
+  name: ReadReceivedEventsAsync
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader.html#Devbone_Frameworks_EventProjection_Client_Persistence_IProjectionReceivedEventReader_ReadReceivedEventsAsync_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader.ReadReceivedEventsAsync
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader.ReadReceivedEventsAsync
+  nameWithType: IProjectionReceivedEventReader.ReadReceivedEventsAsync
 - uid: Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionWatermarkReader
   name: IProjectionWatermarkReader
   href: api/Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionWatermarkReader.html
@@ -19378,6 +19405,162 @@ references:
   commentId: F:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.UPDATED_AT_UTC
   fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionFields.UPDATED_AT_UTC
   nameWithType: ProjectionFields.UPDATED_AT_UTC
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent
+  name: ProjectionReceivedEvent
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html
+  commentId: T:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent
+  nameWithType: ProjectionReceivedEvent
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.#ctor(System.String,System.Int64,System.Boolean)
+  name: ProjectionReceivedEvent(string, long, bool)
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent__ctor_System_String_System_Int64_System_Boolean_
+  commentId: M:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.#ctor(System.String,System.Int64,System.Boolean)
+  name.vb: New(String, Long, Boolean)
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.ProjectionReceivedEvent(string, long, bool)
+  fullName.vb: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.New(String, Long, Boolean)
+  nameWithType: ProjectionReceivedEvent.ProjectionReceivedEvent(string, long, bool)
+  nameWithType.vb: ProjectionReceivedEvent.New(String, Long, Boolean)
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.#ctor*
+  name: ProjectionReceivedEvent
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent__ctor_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.ProjectionReceivedEvent
+  fullName.vb: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.New
+  nameWithType: ProjectionReceivedEvent.ProjectionReceivedEvent
+  nameWithType.vb: ProjectionReceivedEvent.New
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Deconstruct(System.String@,System.Int64@,System.Boolean@)
+  name: Deconstruct(out string, out long, out bool)
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_Deconstruct_System_String__System_Int64__System_Boolean__
+  commentId: M:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Deconstruct(System.String@,System.Int64@,System.Boolean@)
+  name.vb: Deconstruct(String, Long, Boolean)
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Deconstruct(out string, out long, out bool)
+  fullName.vb: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Deconstruct(String, Long, Boolean)
+  nameWithType: ProjectionReceivedEvent.Deconstruct(out string, out long, out bool)
+  nameWithType.vb: ProjectionReceivedEvent.Deconstruct(String, Long, Boolean)
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Deconstruct*
+  name: Deconstruct
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_Deconstruct_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Deconstruct
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Deconstruct
+  nameWithType: ProjectionReceivedEvent.Deconstruct
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Equals(Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent)
+  name: Equals(ProjectionReceivedEvent)
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_Equals_Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_
+  commentId: M:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Equals(Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent)
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Equals(Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent)
+  nameWithType: ProjectionReceivedEvent.Equals(ProjectionReceivedEvent)
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Equals(System.Object)
+  name: Equals(object)
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_Equals_System_Object_
+  commentId: M:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Equals(object)
+  fullName.vb: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Equals(Object)
+  nameWithType: ProjectionReceivedEvent.Equals(object)
+  nameWithType.vb: ProjectionReceivedEvent.Equals(Object)
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Equals*
+  name: Equals
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_Equals_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Equals
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.Equals
+  nameWithType: ProjectionReceivedEvent.Equals
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.EventId
+  name: EventId
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_EventId
+  commentId: P:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.EventId
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.EventId
+  nameWithType: ProjectionReceivedEvent.EventId
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.EventId*
+  name: EventId
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_EventId_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.EventId
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.EventId
+  nameWithType: ProjectionReceivedEvent.EventId
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.EventSequence
+  name: EventSequence
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_EventSequence
+  commentId: P:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.EventSequence
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.EventSequence
+  nameWithType: ProjectionReceivedEvent.EventSequence
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.EventSequence*
+  name: EventSequence
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_EventSequence_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.EventSequence
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.EventSequence
+  nameWithType: ProjectionReceivedEvent.EventSequence
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.GetHashCode
+  name: GetHashCode()
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_GetHashCode
+  commentId: M:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.GetHashCode
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.GetHashCode()
+  nameWithType: ProjectionReceivedEvent.GetHashCode()
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.GetHashCode*
+  name: GetHashCode
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_GetHashCode_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.GetHashCode
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.GetHashCode
+  nameWithType: ProjectionReceivedEvent.GetHashCode
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.IsApplied
+  name: IsApplied
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_IsApplied
+  commentId: P:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.IsApplied
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.IsApplied
+  nameWithType: ProjectionReceivedEvent.IsApplied
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.IsApplied*
+  name: IsApplied
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_IsApplied_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.IsApplied
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.IsApplied
+  nameWithType: ProjectionReceivedEvent.IsApplied
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.ToString
+  name: ToString()
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_ToString
+  commentId: M:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.ToString
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.ToString()
+  nameWithType: ProjectionReceivedEvent.ToString()
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.ToString*
+  name: ToString
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_ToString_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.ToString
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.ToString
+  nameWithType: ProjectionReceivedEvent.ToString
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.op_Equality(Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent,Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent)
+  name: operator ==(ProjectionReceivedEvent, ProjectionReceivedEvent)
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_op_Equality_Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_
+  commentId: M:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.op_Equality(Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent,Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent)
+  name.vb: =(ProjectionReceivedEvent, ProjectionReceivedEvent)
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.operator ==(Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent, Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent)
+  fullName.vb: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.=(Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent, Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent)
+  nameWithType: ProjectionReceivedEvent.operator ==(ProjectionReceivedEvent, ProjectionReceivedEvent)
+  nameWithType.vb: ProjectionReceivedEvent.=(ProjectionReceivedEvent, ProjectionReceivedEvent)
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.op_Equality*
+  name: operator ==
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_op_Equality_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.op_Equality
+  name.vb: =
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.operator ==
+  fullName.vb: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.=
+  nameWithType: ProjectionReceivedEvent.operator ==
+  nameWithType.vb: ProjectionReceivedEvent.=
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.op_Inequality(Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent,Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent)
+  name: operator !=(ProjectionReceivedEvent, ProjectionReceivedEvent)
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_op_Inequality_Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_
+  commentId: M:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.op_Inequality(Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent,Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent)
+  name.vb: <>(ProjectionReceivedEvent, ProjectionReceivedEvent)
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.operator !=(Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent, Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent)
+  fullName.vb: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.<>(Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent, Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent)
+  nameWithType: ProjectionReceivedEvent.operator !=(ProjectionReceivedEvent, ProjectionReceivedEvent)
+  nameWithType.vb: ProjectionReceivedEvent.<>(ProjectionReceivedEvent, ProjectionReceivedEvent)
+- uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.op_Inequality*
+  name: operator !=
+  href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html#Devbone_Frameworks_EventProjection_Client_Persistence_ProjectionReceivedEvent_op_Inequality_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.op_Inequality
+  name.vb: <>
+  fullName: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.operator !=
+  fullName.vb: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.<>
+  nameWithType: ProjectionReceivedEvent.operator !=
+  nameWithType.vb: ProjectionReceivedEvent.<>
 - uid: Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionWatermark
   name: ProjectionWatermark
   href: api/Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionWatermark.html
@@ -22105,6 +22288,12 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.InvocationReasons
   fullName: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.InvocationReasons
   nameWithType: MergedProjectionContext.InvocationReasons
+- uid: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.MAXIMUM_RAW_EVENT_PAGE_SIZE
+  name: MAXIMUM_RAW_EVENT_PAGE_SIZE
+  href: api/Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_MAXIMUM_RAW_EVENT_PAGE_SIZE
+  commentId: F:Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.MAXIMUM_RAW_EVENT_PAGE_SIZE
+  fullName: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.MAXIMUM_RAW_EVENT_PAGE_SIZE
+  nameWithType: MergedProjectionContext.MAXIMUM_RAW_EVENT_PAGE_SIZE
 - uid: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.Merged
   name: Merged
   href: api/Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_Merged
@@ -47822,6 +48011,18 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsKeyRejected
   fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsKeyRejected
   nameWithType: UniqueValueHashKeyVerificationResult.IsKeyRejected
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsPartialMatch
+  name: IsPartialMatch
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_IsPartialMatch
+  commentId: P:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsPartialMatch
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsPartialMatch
+  nameWithType: UniqueValueHashKeyVerificationResult.IsPartialMatch
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsPartialMatch*
+  name: IsPartialMatch
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_IsPartialMatch_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsPartialMatch
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsPartialMatch
+  nameWithType: UniqueValueHashKeyVerificationResult.IsPartialMatch
 - uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.MatchingCount
   name: MatchingCount
   href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_MatchingCount

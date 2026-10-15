@@ -128,6 +128,11 @@ Structs
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionReceivedEvent.html">ProjectionReceivedEvent</a></dt>
+      <dd><p>One event the projection pipeline received for a stream, without its payload or metadata.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Client.Persistence.ProjectionWatermark.html">ProjectionWatermark</a></dt>
       <dd><p>Reports how far one projection document has been carried, without reading the document itself.</p>
 </dd>
@@ -138,6 +143,12 @@ Interfaces
     <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionFailureReader.html">IProjectionFailureReader</a></dt>
       <dd><p>Reads durable terminal projection failures in batches.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Client.Persistence.IProjectionReceivedEventReader.html">IProjectionReceivedEventReader</a></dt>
+      <dd><p>Reads which events of one aggregate stream the projection pipeline has received, and whether each was applied,
+from outside a projection handler.</p>
 </dd>
     </dl>
     <dl class="jumplist">

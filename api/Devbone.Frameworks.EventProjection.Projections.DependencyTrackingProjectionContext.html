@@ -432,7 +432,8 @@ absent dependency; a same-tenant terminal deletion tombstone publishes no perman
     <dd><p>Exclusive lower bound: <code>0</code> for the first page, then the last returned sequence.</p>
 </dd>
     <dt><code>maximumCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Maximum number of events in the page, between 1 and 100.</p>
+    <dd><p>Maximum number of events in the page, between 1 and <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_MAXIMUM_RAW_EVENT_PAGE_SIZE">MAXIMUM_RAW_EVENT_PAGE_SIZE</a>
+(100).</p>
 </dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd><p>Cancellation token.</p>

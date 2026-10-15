@@ -212,6 +212,41 @@ aggregate's stored events through <a class="xref" href="Devbone.Frameworks.Event
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_MAXIMUM_RAW_EVENT_PAGE_SIZE" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.MAXIMUM_RAW_EVENT_PAGE_SIZE">
+  MAXIMUM_RAW_EVENT_PAGE_SIZE
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Largest page <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_ReadRawEventsAsync_System_Int64_System_Int32_System_Threading_CancellationToken_">ReadRawEventsAsync(long, int, CancellationToken)</a> accepts: the upper bound of its <code>maximumCount</code> argument.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MAXIMUM_RAW_EVENT_PAGE_SIZE = 100</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -481,7 +516,7 @@ this handler sees.</p>
 the last returned <code>Metadata.EventSequence</code> for the next one.</p>
 </dd>
     <dt><code>maximumCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Maximum number of events in the page, between 1 and 100.</p>
+    <dd><p>Maximum number of events in the page, between 1 and <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_MAXIMUM_RAW_EVENT_PAGE_SIZE">MAXIMUM_RAW_EVENT_PAGE_SIZE</a> (100).</p>
 </dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd><p>Cancellation token.</p>
@@ -522,7 +557,8 @@ The storage layout of the events stays private to the pipeline; this method is t
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown when <code class="paramref">afterSequence</code> is negative or <code class="paramref">maximumCount</code> is outside 1 to 100.</p>
+    <dd><p>Thrown when <code class="paramref">afterSequence</code> is negative or <code class="paramref">maximumCount</code> is outside 1 to
+<a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_MAXIMUM_RAW_EVENT_PAGE_SIZE">MAXIMUM_RAW_EVENT_PAGE_SIZE</a>.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
     <dd><p>Thrown when the context was constructed directly rather than by the pipeline or <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_WithRawEventsForTesting_System_Collections_Generic_IEnumerable_Devbone_Frameworks_EventProjection_Contracts_ProjectionEvent__">WithRawEventsForTesting(IEnumerable&lt;ProjectionEvent&gt;)</a>,

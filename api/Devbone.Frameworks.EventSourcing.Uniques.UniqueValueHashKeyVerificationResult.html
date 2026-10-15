@@ -156,9 +156,12 @@ row alone, without the value being stored anywhere.
 The result is one of three states. <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_IsKeyConfirmed">IsKeyConfirmed</a>: at least one sampled reservation matched, so the
 key is one the database's writers used. <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_IsKeyRejected">IsKeyRejected</a>: reservations were sampled and none matched, so
 the key is not the one the stored reservations were written with. Neither: the store holds no such reservation yet,
-and there is nothing to compare against. A partial match - some rows match, others do not - confirms the key; rows
-that do not match were written with another key or are reservations under the key name <code>AggregateId</code> whose value
-is not the owner's identity.
+and there is nothing to compare against. A partial match - some rows match, others do not, reported by
+<a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_IsPartialMatch">IsPartialMatch</a> - confirms the key, but means two different keys have written to the same database,
+and reservations made under one do not conflict with those made under the other; rows that do not match may also be
+reservations under the key name <code>AggregateId</code> whose value is not the owner's identity. A full check passes a
+sample size of at least the number of reservations and requires <a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_MatchingCount">MatchingCount</a> to equal
+<a class="xref" href="Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_CheckedCount">CheckedCount</a>.
 </p>
 </div>
 
@@ -292,6 +295,39 @@ written with. An empty store is never rejected.</p>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsKeyRejected { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_IsPartialMatch_" data-uid="Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsPartialMatch*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_IsPartialMatch" data-uid="Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsPartialMatch">
+  IsPartialMatch
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether some sampled reservations matched and others did not, so the key is confirmed but the stored
+reservations were not all written with it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPartialMatch { get; }</code></pre>
   </div>
 
 
