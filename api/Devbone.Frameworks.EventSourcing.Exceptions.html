@@ -124,6 +124,13 @@ nothing has been written.</p>
 the same owner and key would occupy a second scope or kind. The commit was rolled back; nothing was written.</p>
 </dd>
     </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.html">UniqueValueHashKeyMismatchException</a></dt>
+      <dd><p>Reports that the store's configured <code>UniqueValueHashKey</code> reproduced none of the sampled <code>AggregateId</code>
+reservations in the database, so it is not the key the stored reservations were written with. Raised before the
+store's first write, so nothing has been written.</p>
+</dd>
+    </dl>
 
 
 </article>

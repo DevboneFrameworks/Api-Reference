@@ -336,7 +336,7 @@ against these constants by name.
     <dd><p>Unprotects tagged payload values at the fold, so raw state and merged hold plaintext while <code>RawEvents_*</code> keeps ciphertext.</p>
 </dd>
     <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
-    <dd><p>Receives one error per raw event the fold rejects.</p>
+    <dd><p>Receives one error per raw event the fold rejects, and a warning per startup attempt while MongoDB is unreachable.</p>
 </dd>
   </dl>
 
@@ -393,7 +393,7 @@ against these constants by name.
     <dd><p>Unprotects tagged payload values at the fold, so raw state and merged hold plaintext while <code>RawEvents_*</code> keeps ciphertext.</p>
 </dd>
     <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></dt>
-    <dd><p>Receives one error per raw event the fold rejects.</p>
+    <dd><p>Receives one error per raw event the fold rejects, and a warning per startup attempt while MongoDB is unreachable.</p>
 </dd>
     <dt><code>timeProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timeprovider">TimeProvider</a></dt>
     <dd><p>Clock the store reads timestamps, leases and expiries from.</p>

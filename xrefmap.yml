@@ -21697,6 +21697,18 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.Transport
   fullName: Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.Transport
   nameWithType: ProjectionPipelineOptions.Transport
+- uid: Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.UnreachableDependencyErrorAfter
+  name: UnreachableDependencyErrorAfter
+  href: api/Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html#Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_UnreachableDependencyErrorAfter
+  commentId: P:Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.UnreachableDependencyErrorAfter
+  fullName: Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.UnreachableDependencyErrorAfter
+  nameWithType: ProjectionPipelineOptions.UnreachableDependencyErrorAfter
+- uid: Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.UnreachableDependencyErrorAfter*
+  name: UnreachableDependencyErrorAfter
+  href: api/Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html#Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_UnreachableDependencyErrorAfter_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.UnreachableDependencyErrorAfter
+  fullName: Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.UnreachableDependencyErrorAfter
+  nameWithType: ProjectionPipelineOptions.UnreachableDependencyErrorAfter
 - uid: Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptionsValidator
   name: ProjectionPipelineOptionsValidator
   href: api/Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptionsValidator.html
@@ -22117,6 +22129,21 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.Notification
   fullName: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.Notification
   nameWithType: MergedProjectionContext.Notification
+- uid: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.ReadRawEventsAsync(System.Int64,System.Int32,System.Threading.CancellationToken)
+  name: ReadRawEventsAsync(long, int, CancellationToken)
+  href: api/Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_ReadRawEventsAsync_System_Int64_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.ReadRawEventsAsync(System.Int64,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadRawEventsAsync(Long, Integer, CancellationToken)
+  fullName: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.ReadRawEventsAsync(long, int, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.ReadRawEventsAsync(Long, Integer, System.Threading.CancellationToken)
+  nameWithType: MergedProjectionContext.ReadRawEventsAsync(long, int, CancellationToken)
+  nameWithType.vb: MergedProjectionContext.ReadRawEventsAsync(Long, Integer, CancellationToken)
+- uid: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.ReadRawEventsAsync*
+  name: ReadRawEventsAsync
+  href: api/Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_ReadRawEventsAsync_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.ReadRawEventsAsync
+  fullName: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.ReadRawEventsAsync
+  nameWithType: MergedProjectionContext.ReadRawEventsAsync
 - uid: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.ToString
   name: ToString()
   href: api/Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_ToString
@@ -22129,6 +22156,21 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.ToString
   fullName: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.ToString
   nameWithType: MergedProjectionContext.ToString
+- uid: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.WithRawEventsForTesting(System.Collections.Generic.IEnumerable{Devbone.Frameworks.EventProjection.Contracts.ProjectionEvent})
+  name: WithRawEventsForTesting(IEnumerable<ProjectionEvent>)
+  href: api/Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_WithRawEventsForTesting_System_Collections_Generic_IEnumerable_Devbone_Frameworks_EventProjection_Contracts_ProjectionEvent__
+  commentId: M:Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.WithRawEventsForTesting(System.Collections.Generic.IEnumerable{Devbone.Frameworks.EventProjection.Contracts.ProjectionEvent})
+  name.vb: WithRawEventsForTesting(IEnumerable(Of ProjectionEvent))
+  fullName: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.WithRawEventsForTesting(System.Collections.Generic.IEnumerable<Devbone.Frameworks.EventProjection.Contracts.ProjectionEvent>)
+  fullName.vb: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.WithRawEventsForTesting(System.Collections.Generic.IEnumerable(Of Devbone.Frameworks.EventProjection.Contracts.ProjectionEvent))
+  nameWithType: MergedProjectionContext.WithRawEventsForTesting(IEnumerable<ProjectionEvent>)
+  nameWithType.vb: MergedProjectionContext.WithRawEventsForTesting(IEnumerable(Of ProjectionEvent))
+- uid: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.WithRawEventsForTesting*
+  name: WithRawEventsForTesting
+  href: api/Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_WithRawEventsForTesting_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.WithRawEventsForTesting
+  fullName: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.WithRawEventsForTesting
+  nameWithType: MergedProjectionContext.WithRawEventsForTesting
 - uid: Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.op_Equality(Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext,Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext)
   name: operator ==(MergedProjectionContext?, MergedProjectionContext?)
   href: api/Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_op_Equality_Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_
@@ -29509,6 +29551,21 @@ references:
   commentId: T:Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext
   fullName: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext
   nameWithType: DependencyTrackingProjectionContext
+- uid: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.CreateForTesting(Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext,System.String,System.Func{System.String,System.String,Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument})
+  name: CreateForTesting(MergedProjectionContext, string?, Func<string, string, MergedProjectionDocument?>)
+  href: api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_CreateForTesting_Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_System_String_System_Func_System_String_System_String_Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument__
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.CreateForTesting(Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext,System.String,System.Func{System.String,System.String,Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument})
+  name.vb: CreateForTesting(MergedProjectionContext, String, Func(Of String, String, MergedProjectionDocument))
+  fullName: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.CreateForTesting(Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext, string?, System.Func<string, string, Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument?>)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.CreateForTesting(Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext, String, System.Func(Of String, String, Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument))
+  nameWithType: DependencyTrackingProjectionContext.CreateForTesting(MergedProjectionContext, string?, Func<string, string, MergedProjectionDocument?>)
+  nameWithType.vb: DependencyTrackingProjectionContext.CreateForTesting(MergedProjectionContext, String, Func(Of String, String, MergedProjectionDocument))
+- uid: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.CreateForTesting*
+  name: CreateForTesting
+  href: api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_CreateForTesting_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.CreateForTesting
+  fullName: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.CreateForTesting
+  nameWithType: DependencyTrackingProjectionContext.CreateForTesting
 - uid: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.Current
   name: Current
   href: api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_Current
@@ -29575,6 +29632,63 @@ references:
   commentId: Overload:Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.ReadMergedAsync
   fullName: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.ReadMergedAsync
   nameWithType: DependencyTrackingProjectionContext.ReadMergedAsync
+- uid: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.ReadRawEventsAsync(System.Int64,System.Int32,System.Threading.CancellationToken)
+  name: ReadRawEventsAsync(long, int, CancellationToken)
+  href: api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_ReadRawEventsAsync_System_Int64_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.ReadRawEventsAsync(System.Int64,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadRawEventsAsync(Long, Integer, CancellationToken)
+  fullName: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.ReadRawEventsAsync(long, int, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.ReadRawEventsAsync(Long, Integer, System.Threading.CancellationToken)
+  nameWithType: DependencyTrackingProjectionContext.ReadRawEventsAsync(long, int, CancellationToken)
+  nameWithType.vb: DependencyTrackingProjectionContext.ReadRawEventsAsync(Long, Integer, CancellationToken)
+- uid: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.ReadRawEventsAsync*
+  name: ReadRawEventsAsync
+  href: api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_ReadRawEventsAsync_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.ReadRawEventsAsync
+  fullName: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.ReadRawEventsAsync
+  nameWithType: DependencyTrackingProjectionContext.ReadRawEventsAsync
+- uid: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun
+  name: DependencyTrackingProjectionTestRun
+  href: api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.html
+  commentId: T:Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun
+  fullName: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun
+  nameWithType: DependencyTrackingProjectionTestRun
+- uid: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.Context
+  name: Context
+  href: api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionTestRun_Context
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.Context
+  fullName: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.Context
+  nameWithType: DependencyTrackingProjectionTestRun.Context
+- uid: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.Context*
+  name: Context
+  href: api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionTestRun_Context_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.Context
+  fullName: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.Context
+  nameWithType: DependencyTrackingProjectionTestRun.Context
+- uid: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.DeclaredDerivedDependencies
+  name: DeclaredDerivedDependencies
+  href: api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionTestRun_DeclaredDerivedDependencies
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.DeclaredDerivedDependencies
+  fullName: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.DeclaredDerivedDependencies
+  nameWithType: DependencyTrackingProjectionTestRun.DeclaredDerivedDependencies
+- uid: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.DeclaredDerivedDependencies*
+  name: DeclaredDerivedDependencies
+  href: api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionTestRun_DeclaredDerivedDependencies_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.DeclaredDerivedDependencies
+  fullName: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.DeclaredDerivedDependencies
+  nameWithType: DependencyTrackingProjectionTestRun.DeclaredDerivedDependencies
+- uid: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.ObservedSources
+  name: ObservedSources
+  href: api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionTestRun_ObservedSources
+  commentId: P:Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.ObservedSources
+  fullName: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.ObservedSources
+  nameWithType: DependencyTrackingProjectionTestRun.ObservedSources
+- uid: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.ObservedSources*
+  name: ObservedSources
+  href: api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionTestRun_ObservedSources_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.ObservedSources
+  fullName: Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.ObservedSources
+  nameWithType: DependencyTrackingProjectionTestRun.ObservedSources
 - uid: Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor
   name: DerivedProjectionProcessor
   href: api/Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.html
@@ -32734,6 +32848,42 @@ references:
   fullName.vb: Devbone.Frameworks.EventProjection.Transport.ProjectionConsumedMessage.<>
   nameWithType: ProjectionConsumedMessage.operator !=
   nameWithType.vb: ProjectionConsumedMessage.<>
+- uid: Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException
+  name: ProjectionDependencyUnreachableException
+  href: api/Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.html
+  commentId: T:Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException
+  fullName: Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException
+  nameWithType: ProjectionDependencyUnreachableException
+- uid: Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.#ctor(System.String,System.String,System.Exception)
+  name: ProjectionDependencyUnreachableException(string, string, Exception?)
+  href: api/Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.html#Devbone_Frameworks_EventProjection_Transport_ProjectionDependencyUnreachableException__ctor_System_String_System_String_System_Exception_
+  commentId: M:Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.#ctor(System.String,System.String,System.Exception)
+  name.vb: New(String, String, Exception)
+  fullName: Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.ProjectionDependencyUnreachableException(string, string, System.Exception?)
+  fullName.vb: Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.New(String, String, System.Exception)
+  nameWithType: ProjectionDependencyUnreachableException.ProjectionDependencyUnreachableException(string, string, Exception?)
+  nameWithType.vb: ProjectionDependencyUnreachableException.New(String, String, Exception)
+- uid: Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.#ctor*
+  name: ProjectionDependencyUnreachableException
+  href: api/Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.html#Devbone_Frameworks_EventProjection_Transport_ProjectionDependencyUnreachableException__ctor_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.ProjectionDependencyUnreachableException
+  fullName.vb: Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.New
+  nameWithType: ProjectionDependencyUnreachableException.ProjectionDependencyUnreachableException
+  nameWithType.vb: ProjectionDependencyUnreachableException.New
+- uid: Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.Reason
+  name: Reason
+  href: api/Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.html#Devbone_Frameworks_EventProjection_Transport_ProjectionDependencyUnreachableException_Reason
+  commentId: P:Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.Reason
+  fullName: Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.Reason
+  nameWithType: ProjectionDependencyUnreachableException.Reason
+- uid: Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.Reason*
+  name: Reason
+  href: api/Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.html#Devbone_Frameworks_EventProjection_Transport_ProjectionDependencyUnreachableException_Reason_
+  commentId: Overload:Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.Reason
+  fullName: Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.Reason
+  nameWithType: ProjectionDependencyUnreachableException.Reason
 - uid: Devbone.Frameworks.EventProjection.Transport.ProjectionSource
   name: ProjectionSource
   href: api/Devbone.Frameworks.EventProjection.Transport.ProjectionSource.html
@@ -33985,6 +34135,27 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.EventSourcingDddServiceCollectionExtensions.AddDevboneEventSourcing
   fullName: Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.EventSourcingDddServiceCollectionExtensions.AddDevboneEventSourcing
   nameWithType: EventSourcingDddServiceCollectionExtensions.AddDevboneEventSourcing
+- uid: Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions
+  name: OutboxStreamDriftCheckServiceCollectionExtensions
+  href: api/Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions.html
+  commentId: T:Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions
+  fullName: Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions
+  nameWithType: OutboxStreamDriftCheckServiceCollectionExtensions
+- uid: Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions.AddDevboneOutboxStreamDriftCheck(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Devbone.Frameworks.EventSourcing.Ddd.Routing.AggregateRoutingOptions,System.Func{System.IServiceProvider,Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader})
+  name: AddDevboneOutboxStreamDriftCheck(IServiceCollection, string, AggregateRoutingOptions, Func<IServiceProvider, IOutboxRouteInventoryReader>)
+  href: api/Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions.html#Devbone_Frameworks_EventSourcing_Ddd_DependencyInjection_OutboxStreamDriftCheckServiceCollectionExtensions_AddDevboneOutboxStreamDriftCheck_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_Devbone_Frameworks_EventSourcing_Ddd_Routing_AggregateRoutingOptions_System_Func_System_IServiceProvider_Devbone_Frameworks_EventSourcing_Outbox_IOutboxRouteInventoryReader__
+  commentId: M:Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions.AddDevboneOutboxStreamDriftCheck(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Devbone.Frameworks.EventSourcing.Ddd.Routing.AggregateRoutingOptions,System.Func{System.IServiceProvider,Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader})
+  name.vb: AddDevboneOutboxStreamDriftCheck(IServiceCollection, String, AggregateRoutingOptions, Func(Of IServiceProvider, IOutboxRouteInventoryReader))
+  fullName: Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions.AddDevboneOutboxStreamDriftCheck(Microsoft.Extensions.DependencyInjection.IServiceCollection, string, Devbone.Frameworks.EventSourcing.Ddd.Routing.AggregateRoutingOptions, System.Func<System.IServiceProvider, Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader>)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions.AddDevboneOutboxStreamDriftCheck(Microsoft.Extensions.DependencyInjection.IServiceCollection, String, Devbone.Frameworks.EventSourcing.Ddd.Routing.AggregateRoutingOptions, System.Func(Of System.IServiceProvider, Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader))
+  nameWithType: OutboxStreamDriftCheckServiceCollectionExtensions.AddDevboneOutboxStreamDriftCheck(IServiceCollection, string, AggregateRoutingOptions, Func<IServiceProvider, IOutboxRouteInventoryReader>)
+  nameWithType.vb: OutboxStreamDriftCheckServiceCollectionExtensions.AddDevboneOutboxStreamDriftCheck(IServiceCollection, String, AggregateRoutingOptions, Func(Of IServiceProvider, IOutboxRouteInventoryReader))
+- uid: Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions.AddDevboneOutboxStreamDriftCheck*
+  name: AddDevboneOutboxStreamDriftCheck
+  href: api/Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions.html#Devbone_Frameworks_EventSourcing_Ddd_DependencyInjection_OutboxStreamDriftCheckServiceCollectionExtensions_AddDevboneOutboxStreamDriftCheck_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions.AddDevboneOutboxStreamDriftCheck
+  fullName: Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions.AddDevboneOutboxStreamDriftCheck
+  nameWithType: OutboxStreamDriftCheckServiceCollectionExtensions.AddDevboneOutboxStreamDriftCheck
 - uid: Devbone.Frameworks.EventSourcing.Ddd.Mapping
   name: Devbone.Frameworks.EventSourcing.Ddd.Mapping
   href: api/Devbone.Frameworks.EventSourcing.Ddd.Mapping.html
@@ -35812,6 +35983,42 @@ references:
   commentId: F:Devbone.Frameworks.EventSourcing.Exceptions.UniqueReservationConflictException.DEFAULT_MESSAGE
   fullName: Devbone.Frameworks.EventSourcing.Exceptions.UniqueReservationConflictException.DEFAULT_MESSAGE
   nameWithType: UniqueReservationConflictException.DEFAULT_MESSAGE
+- uid: Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException
+  name: UniqueValueHashKeyMismatchException
+  href: api/Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.html
+  commentId: T:Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException
+  fullName: Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException
+  nameWithType: UniqueValueHashKeyMismatchException
+- uid: Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.#ctor(System.String,System.Int32)
+  name: UniqueValueHashKeyMismatchException(string, int)
+  href: api/Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.html#Devbone_Frameworks_EventSourcing_Exceptions_UniqueValueHashKeyMismatchException__ctor_System_String_System_Int32_
+  commentId: M:Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.#ctor(System.String,System.Int32)
+  name.vb: New(String, Integer)
+  fullName: Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.UniqueValueHashKeyMismatchException(string, int)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.New(String, Integer)
+  nameWithType: UniqueValueHashKeyMismatchException.UniqueValueHashKeyMismatchException(string, int)
+  nameWithType.vb: UniqueValueHashKeyMismatchException.New(String, Integer)
+- uid: Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.#ctor*
+  name: UniqueValueHashKeyMismatchException
+  href: api/Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.html#Devbone_Frameworks_EventSourcing_Exceptions_UniqueValueHashKeyMismatchException__ctor_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.UniqueValueHashKeyMismatchException
+  fullName.vb: Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.New
+  nameWithType: UniqueValueHashKeyMismatchException.UniqueValueHashKeyMismatchException
+  nameWithType.vb: UniqueValueHashKeyMismatchException.New
+- uid: Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.CheckedCount
+  name: CheckedCount
+  href: api/Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.html#Devbone_Frameworks_EventSourcing_Exceptions_UniqueValueHashKeyMismatchException_CheckedCount
+  commentId: P:Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.CheckedCount
+  fullName: Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.CheckedCount
+  nameWithType: UniqueValueHashKeyMismatchException.CheckedCount
+- uid: Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.CheckedCount*
+  name: CheckedCount
+  href: api/Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.html#Devbone_Frameworks_EventSourcing_Exceptions_UniqueValueHashKeyMismatchException_CheckedCount_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.CheckedCount
+  fullName: Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.CheckedCount
+  nameWithType: UniqueValueHashKeyMismatchException.CheckedCount
 - uid: Devbone.Frameworks.EventSourcing.Increments
   name: Devbone.Frameworks.EventSourcing.Increments
   href: api/Devbone.Frameworks.EventSourcing.Increments.html
@@ -36283,6 +36490,27 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.IOutboxRequeue.RequeueFailedAsync
   fullName: Devbone.Frameworks.EventSourcing.Outbox.IOutboxRequeue.RequeueFailedAsync
   nameWithType: IOutboxRequeue.RequeueFailedAsync
+- uid: Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader
+  name: IOutboxRouteInventoryReader
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader.html
+  commentId: T:Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader
+  nameWithType: IOutboxRouteInventoryReader
+- uid: Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader.ReadUnpublishedRoutesAsync(System.Int32,System.Threading.CancellationToken)
+  name: ReadUnpublishedRoutesAsync(int, CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader.html#Devbone_Frameworks_EventSourcing_Outbox_IOutboxRouteInventoryReader_ReadUnpublishedRoutesAsync_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader.ReadUnpublishedRoutesAsync(System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadUnpublishedRoutesAsync(Integer, CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader.ReadUnpublishedRoutesAsync(int, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader.ReadUnpublishedRoutesAsync(Integer, System.Threading.CancellationToken)
+  nameWithType: IOutboxRouteInventoryReader.ReadUnpublishedRoutesAsync(int, CancellationToken)
+  nameWithType.vb: IOutboxRouteInventoryReader.ReadUnpublishedRoutesAsync(Integer, CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader.ReadUnpublishedRoutesAsync*
+  name: ReadUnpublishedRoutesAsync
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader.html#Devbone_Frameworks_EventSourcing_Outbox_IOutboxRouteInventoryReader_ReadUnpublishedRoutesAsync_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader.ReadUnpublishedRoutesAsync
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader.ReadUnpublishedRoutesAsync
+  nameWithType: IOutboxRouteInventoryReader.ReadUnpublishedRoutesAsync
 - uid: Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader
   name: IOutboxStateReader
   href: api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.html
@@ -36844,6 +37072,177 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxRetry.NextAttemptAtUtc
   fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRetry.NextAttemptAtUtc
   nameWithType: OutboxRetry.NextAttemptAtUtc
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry
+  name: OutboxRouteInventoryEntry
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html
+  commentId: T:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry
+  nameWithType: OutboxRouteInventoryEntry
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.#ctor(System.String,System.Int32,System.String,System.Int64)
+  name: OutboxRouteInventoryEntry(string, int, string, long)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry__ctor_System_String_System_Int32_System_String_System_Int64_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.#ctor(System.String,System.Int32,System.String,System.Int64)
+  name.vb: New(String, Integer, String, Long)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.OutboxRouteInventoryEntry(string, int, string, long)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.New(String, Integer, String, Long)
+  nameWithType: OutboxRouteInventoryEntry.OutboxRouteInventoryEntry(string, int, string, long)
+  nameWithType.vb: OutboxRouteInventoryEntry.New(String, Integer, String, Long)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.#ctor*
+  name: OutboxRouteInventoryEntry
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry__ctor_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.OutboxRouteInventoryEntry
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.New
+  nameWithType: OutboxRouteInventoryEntry.OutboxRouteInventoryEntry
+  nameWithType.vb: OutboxRouteInventoryEntry.New
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.AggregateRouteId
+  name: AggregateRouteId
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_AggregateRouteId
+  commentId: P:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.AggregateRouteId
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.AggregateRouteId
+  nameWithType: OutboxRouteInventoryEntry.AggregateRouteId
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.AggregateRouteId*
+  name: AggregateRouteId
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_AggregateRouteId_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.AggregateRouteId
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.AggregateRouteId
+  nameWithType: OutboxRouteInventoryEntry.AggregateRouteId
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.AggregateRouteVersion
+  name: AggregateRouteVersion
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_AggregateRouteVersion
+  commentId: P:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.AggregateRouteVersion
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.AggregateRouteVersion
+  nameWithType: OutboxRouteInventoryEntry.AggregateRouteVersion
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.AggregateRouteVersion*
+  name: AggregateRouteVersion
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_AggregateRouteVersion_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.AggregateRouteVersion
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.AggregateRouteVersion
+  nameWithType: OutboxRouteInventoryEntry.AggregateRouteVersion
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Deconstruct(System.String@,System.Int32@,System.String@,System.Int64@)
+  name: Deconstruct(out string, out int, out string, out long)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_Deconstruct_System_String__System_Int32__System_String__System_Int64__
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Deconstruct(System.String@,System.Int32@,System.String@,System.Int64@)
+  name.vb: Deconstruct(String, Integer, String, Long)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Deconstruct(out string, out int, out string, out long)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Deconstruct(String, Integer, String, Long)
+  nameWithType: OutboxRouteInventoryEntry.Deconstruct(out string, out int, out string, out long)
+  nameWithType.vb: OutboxRouteInventoryEntry.Deconstruct(String, Integer, String, Long)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Deconstruct*
+  name: Deconstruct
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_Deconstruct_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Deconstruct
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Deconstruct
+  nameWithType: OutboxRouteInventoryEntry.Deconstruct
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Equals(Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry)
+  name: Equals(OutboxRouteInventoryEntry?)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_Equals_Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Equals(Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry)
+  name.vb: Equals(OutboxRouteInventoryEntry)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Equals(Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Equals(Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry)
+  nameWithType: OutboxRouteInventoryEntry.Equals(OutboxRouteInventoryEntry?)
+  nameWithType.vb: OutboxRouteInventoryEntry.Equals(OutboxRouteInventoryEntry)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Equals(System.Object)
+  name: Equals(object?)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_Equals_System_Object_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Equals(object?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Equals(Object)
+  nameWithType: OutboxRouteInventoryEntry.Equals(object?)
+  nameWithType.vb: OutboxRouteInventoryEntry.Equals(Object)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Equals*
+  name: Equals
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_Equals_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Equals
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Equals
+  nameWithType: OutboxRouteInventoryEntry.Equals
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.GetHashCode
+  name: GetHashCode()
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_GetHashCode
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.GetHashCode
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.GetHashCode()
+  nameWithType: OutboxRouteInventoryEntry.GetHashCode()
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.GetHashCode*
+  name: GetHashCode
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_GetHashCode_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.GetHashCode
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.GetHashCode
+  nameWithType: OutboxRouteInventoryEntry.GetHashCode
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.RowCount
+  name: RowCount
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_RowCount
+  commentId: P:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.RowCount
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.RowCount
+  nameWithType: OutboxRouteInventoryEntry.RowCount
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.RowCount*
+  name: RowCount
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_RowCount_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.RowCount
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.RowCount
+  nameWithType: OutboxRouteInventoryEntry.RowCount
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Stream
+  name: Stream
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_Stream
+  commentId: P:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Stream
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Stream
+  nameWithType: OutboxRouteInventoryEntry.Stream
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Stream*
+  name: Stream
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_Stream_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Stream
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.Stream
+  nameWithType: OutboxRouteInventoryEntry.Stream
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.ToString
+  name: ToString()
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_ToString
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.ToString
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.ToString()
+  nameWithType: OutboxRouteInventoryEntry.ToString()
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.ToString*
+  name: ToString
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_ToString_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.ToString
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.ToString
+  nameWithType: OutboxRouteInventoryEntry.ToString
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.op_Equality(Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry,Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry)
+  name: operator ==(OutboxRouteInventoryEntry?, OutboxRouteInventoryEntry?)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_op_Equality_Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.op_Equality(Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry,Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry)
+  name.vb: =(OutboxRouteInventoryEntry, OutboxRouteInventoryEntry)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.operator ==(Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry?, Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.=(Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry, Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry)
+  nameWithType: OutboxRouteInventoryEntry.operator ==(OutboxRouteInventoryEntry?, OutboxRouteInventoryEntry?)
+  nameWithType.vb: OutboxRouteInventoryEntry.=(OutboxRouteInventoryEntry, OutboxRouteInventoryEntry)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.op_Equality*
+  name: operator ==
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_op_Equality_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.op_Equality
+  name.vb: =
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.operator ==
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.=
+  nameWithType: OutboxRouteInventoryEntry.operator ==
+  nameWithType.vb: OutboxRouteInventoryEntry.=
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.op_Inequality(Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry,Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry)
+  name: operator !=(OutboxRouteInventoryEntry?, OutboxRouteInventoryEntry?)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_op_Inequality_Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.op_Inequality(Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry,Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry)
+  name.vb: <>(OutboxRouteInventoryEntry, OutboxRouteInventoryEntry)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.operator !=(Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry?, Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry?)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.<>(Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry, Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry)
+  nameWithType: OutboxRouteInventoryEntry.operator !=(OutboxRouteInventoryEntry?, OutboxRouteInventoryEntry?)
+  nameWithType.vb: OutboxRouteInventoryEntry.<>(OutboxRouteInventoryEntry, OutboxRouteInventoryEntry)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.op_Inequality*
+  name: operator !=
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html#Devbone_Frameworks_EventSourcing_Outbox_OutboxRouteInventoryEntry_op_Inequality_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.op_Inequality
+  name.vb: <>
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.operator !=
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.<>
+  nameWithType: OutboxRouteInventoryEntry.operator !=
+  nameWithType.vb: OutboxRouteInventoryEntry.<>
 - uid: Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler
   name: OutboxStateSampler
   href: api/Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.html
@@ -37246,6 +37645,21 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReadStateAsync
   fullName: Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReadStateAsync
   nameWithType: PostgresOutboxStore.ReadStateAsync
+- uid: Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReadUnpublishedRoutesAsync(System.Int32,System.Threading.CancellationToken)
+  name: ReadUnpublishedRoutesAsync(int, CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.html#Devbone_Frameworks_EventSourcing_Outbox_PostgresOutboxStore_ReadUnpublishedRoutesAsync_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReadUnpublishedRoutesAsync(System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadUnpublishedRoutesAsync(Integer, CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReadUnpublishedRoutesAsync(int, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReadUnpublishedRoutesAsync(Integer, System.Threading.CancellationToken)
+  nameWithType: PostgresOutboxStore.ReadUnpublishedRoutesAsync(int, CancellationToken)
+  nameWithType.vb: PostgresOutboxStore.ReadUnpublishedRoutesAsync(Integer, CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReadUnpublishedRoutesAsync*
+  name: ReadUnpublishedRoutesAsync
+  href: api/Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.html#Devbone_Frameworks_EventSourcing_Outbox_PostgresOutboxStore_ReadUnpublishedRoutesAsync_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReadUnpublishedRoutesAsync
+  fullName: Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReadUnpublishedRoutesAsync
+  nameWithType: PostgresOutboxStore.ReadUnpublishedRoutesAsync
 - uid: Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.ReleaseClaimAsync(System.String,System.String,System.Threading.CancellationToken)
   name: ReleaseClaimAsync(string, string, CancellationToken)
   href: api/Devbone.Frameworks.EventSourcing.Outbox.PostgresOutboxStore.html#Devbone_Frameworks_EventSourcing_Outbox_PostgresOutboxStore_ReleaseClaimAsync_System_String_System_String_System_Threading_CancellationToken_
@@ -40030,6 +40444,18 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.UniqueValueHashKey
   fullName: Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.UniqueValueHashKey
   nameWithType: EventStoreSettings.UniqueValueHashKey
+- uid: Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.VerifyUniqueValueHashKey
+  name: VerifyUniqueValueHashKey
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.html#Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_VerifyUniqueValueHashKey
+  commentId: P:Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.VerifyUniqueValueHashKey
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.VerifyUniqueValueHashKey
+  nameWithType: EventStoreSettings.VerifyUniqueValueHashKey
+- uid: Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.VerifyUniqueValueHashKey*
+  name: VerifyUniqueValueHashKey
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.html#Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_VerifyUniqueValueHashKey_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.VerifyUniqueValueHashKey
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.VerifyUniqueValueHashKey
+  nameWithType: EventStoreSettings.VerifyUniqueValueHashKey
 - uid: Devbone.Frameworks.EventSourcing.Repositories.StoredStreamIdentity
   name: StoredStreamIdentity
   href: api/Devbone.Frameworks.EventSourcing.Repositories.StoredStreamIdentity.html
@@ -41815,6 +42241,12 @@ references:
   commentId: F:Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.DEFAULT_SCHEMA_TABLE_NAME
   fullName: Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.DEFAULT_SCHEMA_TABLE_NAME
   nameWithType: EventStoreSchema.DEFAULT_SCHEMA_TABLE_NAME
+- uid: Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.DEFAULT_UNIQUE_VALUE_HASH_KEY_SAMPLE_SIZE
+  name: DEFAULT_UNIQUE_VALUE_HASH_KEY_SAMPLE_SIZE
+  href: api/Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.html#Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_DEFAULT_UNIQUE_VALUE_HASH_KEY_SAMPLE_SIZE
+  commentId: F:Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.DEFAULT_UNIQUE_VALUE_HASH_KEY_SAMPLE_SIZE
+  fullName: Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.DEFAULT_UNIQUE_VALUE_HASH_KEY_SAMPLE_SIZE
+  nameWithType: EventStoreSchema.DEFAULT_UNIQUE_VALUE_HASH_KEY_SAMPLE_SIZE
 - uid: Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.GetPostgresMigration3To4Script
   name: GetPostgresMigration3To4Script()
   href: api/Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.html#Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_GetPostgresMigration3To4Script
@@ -41911,6 +42343,21 @@ references:
   commentId: F:Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.SCHEMA_VERSION
   fullName: Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.SCHEMA_VERSION
   nameWithType: EventStoreSchema.SCHEMA_VERSION
+- uid: Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.VerifyUniqueValueHashKeyAsync(Npgsql.NpgsqlConnection,System.String,System.Int32,System.String,System.Threading.CancellationToken)
+  name: VerifyUniqueValueHashKeyAsync(NpgsqlConnection, string, int, string, CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.html#Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_VerifyUniqueValueHashKeyAsync_Npgsql_NpgsqlConnection_System_String_System_Int32_System_String_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.VerifyUniqueValueHashKeyAsync(Npgsql.NpgsqlConnection,System.String,System.Int32,System.String,System.Threading.CancellationToken)
+  name.vb: VerifyUniqueValueHashKeyAsync(NpgsqlConnection, String, Integer, String, CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.VerifyUniqueValueHashKeyAsync(Npgsql.NpgsqlConnection, string, int, string, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.VerifyUniqueValueHashKeyAsync(Npgsql.NpgsqlConnection, String, Integer, String, System.Threading.CancellationToken)
+  nameWithType: EventStoreSchema.VerifyUniqueValueHashKeyAsync(NpgsqlConnection, string, int, string, CancellationToken)
+  nameWithType.vb: EventStoreSchema.VerifyUniqueValueHashKeyAsync(NpgsqlConnection, String, Integer, String, CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.VerifyUniqueValueHashKeyAsync*
+  name: VerifyUniqueValueHashKeyAsync
+  href: api/Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.html#Devbone_Frameworks_EventSourcing_Sql_EventStoreSchema_VerifyUniqueValueHashKeyAsync_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.VerifyUniqueValueHashKeyAsync
+  fullName: Devbone.Frameworks.EventSourcing.Sql.EventStoreSchema.VerifyUniqueValueHashKeyAsync
+  nameWithType: EventStoreSchema.VerifyUniqueValueHashKeyAsync
 - uid: Devbone.Frameworks.EventSourcing.TimeMachine.Data
   name: Devbone.Frameworks.EventSourcing.TimeMachine.Data
   href: api/Devbone.Frameworks.EventSourcing.TimeMachine.Data.html
@@ -47315,6 +47762,78 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHash.ValueHash
   fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHash.ValueHash
   nameWithType: UniqueValueHash.ValueHash
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult
+  name: UniqueValueHashKeyVerificationResult
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html
+  commentId: T:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult
+  nameWithType: UniqueValueHashKeyVerificationResult
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.#ctor(System.Int32,System.Int32)
+  name: UniqueValueHashKeyVerificationResult(int, int)
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult__ctor_System_Int32_System_Int32_
+  commentId: M:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.#ctor(System.Int32,System.Int32)
+  name.vb: New(Integer, Integer)
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.UniqueValueHashKeyVerificationResult(int, int)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.New(Integer, Integer)
+  nameWithType: UniqueValueHashKeyVerificationResult.UniqueValueHashKeyVerificationResult(int, int)
+  nameWithType.vb: UniqueValueHashKeyVerificationResult.New(Integer, Integer)
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.#ctor*
+  name: UniqueValueHashKeyVerificationResult
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult__ctor_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.#ctor
+  name.vb: New
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.UniqueValueHashKeyVerificationResult
+  fullName.vb: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.New
+  nameWithType: UniqueValueHashKeyVerificationResult.UniqueValueHashKeyVerificationResult
+  nameWithType.vb: UniqueValueHashKeyVerificationResult.New
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.CheckedCount
+  name: CheckedCount
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_CheckedCount
+  commentId: P:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.CheckedCount
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.CheckedCount
+  nameWithType: UniqueValueHashKeyVerificationResult.CheckedCount
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.CheckedCount*
+  name: CheckedCount
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_CheckedCount_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.CheckedCount
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.CheckedCount
+  nameWithType: UniqueValueHashKeyVerificationResult.CheckedCount
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsKeyConfirmed
+  name: IsKeyConfirmed
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_IsKeyConfirmed
+  commentId: P:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsKeyConfirmed
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsKeyConfirmed
+  nameWithType: UniqueValueHashKeyVerificationResult.IsKeyConfirmed
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsKeyConfirmed*
+  name: IsKeyConfirmed
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_IsKeyConfirmed_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsKeyConfirmed
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsKeyConfirmed
+  nameWithType: UniqueValueHashKeyVerificationResult.IsKeyConfirmed
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsKeyRejected
+  name: IsKeyRejected
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_IsKeyRejected
+  commentId: P:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsKeyRejected
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsKeyRejected
+  nameWithType: UniqueValueHashKeyVerificationResult.IsKeyRejected
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsKeyRejected*
+  name: IsKeyRejected
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_IsKeyRejected_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsKeyRejected
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.IsKeyRejected
+  nameWithType: UniqueValueHashKeyVerificationResult.IsKeyRejected
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.MatchingCount
+  name: MatchingCount
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_MatchingCount
+  commentId: P:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.MatchingCount
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.MatchingCount
+  nameWithType: UniqueValueHashKeyVerificationResult.MatchingCount
+- uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.MatchingCount*
+  name: MatchingCount
+  href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html#Devbone_Frameworks_EventSourcing_Uniques_UniqueValueHashKeyVerificationResult_MatchingCount_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.MatchingCount
+  fullName: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.MatchingCount
+  nameWithType: UniqueValueHashKeyVerificationResult.MatchingCount
 - uid: Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet
   name: UniqueValueSet
   href: api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueSet.html

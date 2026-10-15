@@ -162,7 +162,8 @@ Class EventPersistenceGatewayServiceCollectionExtensions
 
   <div class="markdown level1 summary"><p>Binds and validates the Gateway's configuration and registers its services: routing, the event store per
 target, the bus resolver, the stored-event mappers, field protection when a target enables it, the lock-stream
-bound, the embedded outbox dispatchers and one outbox inventory sampler per target.</p>
+bound, the embedded outbox dispatchers, one outbox inventory sampler per target, and one comparison per target of
+the unpublished outbox rows with the routing.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -200,6 +201,12 @@ The configuration is read from the sections <code>EventPersistenceGateway</code>
 <code>EventMessageSizeLimits</code> (optional), and <code>KeyService</code> (required only when a target enables field
 protection). Pass a section of the host's configuration to nest them below a prefix of the host's choosing.
 Everything is validated here, so a misconfigured host fails while it is built rather than on its first request.
+</p>
+<p>
+Once after the host has started, in the background, each target's unpublished outbox rows are compared with the
+routing configuration, and a warning names the target whose rows carry a stream the configuration no longer gives
+their route version, or a route version it no longer contains. A failing read is logged; neither delays nor
+prevents the start.
 </p>
 <p>
 No broker transport is registered: the host registers the transport of every bus target it configures, for

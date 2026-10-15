@@ -150,6 +150,12 @@ Class ProjectionTransportInitializer
 
 
 
+  <h2 id="Devbone_Frameworks_EventProjection_Transport_ProjectionTransportInitializer_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Composed by <code>AddDevboneEventProjection</code>, it retries the initializer while it throws
+<a class="xref" href="Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.html">ProjectionDependencyUnreachableException</a>, until
+<a class="xref" href="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.html#Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_UnreachableDependencyErrorAfter">UnreachableDependencyErrorAfter</a> has passed; every other
+failure ends startup at once.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -163,7 +169,8 @@ Class ProjectionTransportInitializer
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes the hosted topology initializer.</p>
+  <div class="markdown level1 summary"><p>Initializes the hosted topology initializer without waiting: an unreachable broker fails startup at the first
+attempt.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

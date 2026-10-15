@@ -120,6 +120,11 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html">OutboxRouteInventoryEntry</a></dt>
+      <dd><p>The number of unpublished outbox rows committed with one route version and one stream.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.OutboxStateSampler.html">OutboxStateSampler</a></dt>
       <dd><p>Periodically caches durable outbox state for nonblocking observable metrics.</p>
 </dd>
@@ -154,6 +159,12 @@ aggregate, because the claim delivers an aggregate's events in order; once the c
 was unreachable for longer than a configured attempt limit, a missing topic or exchange - an operator requeues
 it and the aggregate resumes. The stored envelope is published unchanged; a row whose envelope cannot be read
 or does not match its columns fails again on its first attempt.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader.html">IOutboxRouteInventoryReader</a></dt>
+      <dd><p>Reads which route versions and streams the unpublished outbox rows were committed with, so a host can compare them
+with its current routing configuration.</p>
 </dd>
     </dl>
     <dl class="jumplist">

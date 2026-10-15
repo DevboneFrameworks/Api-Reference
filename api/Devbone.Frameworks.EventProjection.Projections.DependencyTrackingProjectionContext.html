@@ -250,6 +250,75 @@ Class DependencyTrackingProjectionContext
 </h2>
 
 
+  <a id="Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_CreateForTesting_" data-uid="Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.CreateForTesting*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_CreateForTesting_Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_System_String_System_Func_System_String_System_String_Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument__" data-uid="Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.CreateForTesting(Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext,System.String,System.Func{System.String,System.String,Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument})">
+  CreateForTesting(MergedProjectionContext, string?, Func&lt;string, string, MergedProjectionDocument?&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a tracked context for a unit test of an <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.IDependencyTrackingProjectionHandler.html">IDependencyTrackingProjectionHandler</a>, answering
+<a class="xref" href="Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_ReadMergedAsync_System_String_System_String_System_Threading_CancellationToken_">ReadMergedAsync(string, string, CancellationToken)</a> from <code class="paramref">mergedDocuments</code> instead of a projection store.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DependencyTrackingProjectionTestRun CreateForTesting(MergedProjectionContext current, string? tenantId, Func&lt;string, string, MergedProjectionDocument?&gt; mergedDocuments)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>current</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html">MergedProjectionContext</a></dt>
+    <dd><p>The triggering merged update the handler is invoked with. To let the handler read the triggering aggregate's
+events, pass a context returned by <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_WithRawEventsForTesting_System_Collections_Generic_IEnumerable_Devbone_Frameworks_EventProjection_Contracts_ProjectionEvent__">WithRawEventsForTesting(IEnumerable&lt;ProjectionEvent&gt;)</a>.</p>
+</dd>
+    <dt><code>tenantId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Tenant boundary of the output, as the pipeline inherits it from the work item; must equal
+<code>current.Notification.TenantId</code>, because the pipeline never invokes a handler with an input of another tenant.</p>
+</dd>
+    <dt><code>mergedDocuments</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionDocument.html">MergedProjectionDocument</a>&gt;</dt>
+    <dd><p>Answers a read by aggregate name and identifier with the stored merged document, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when
+none is stored. Return documents of other tenants too: the read treats them as the pipeline does.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.html">DependencyTrackingProjectionTestRun</a></dt>
+    <dd><p>The test run: pass <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionTestRun_Context">Context</a> to the handler, then assert on its
+observed sources and declared derived dependencies.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_CreateForTesting_Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_System_String_System_Func_System_String_System_String_Devbone_Frameworks_EventProjection_Contracts_MergedProjectionDocument___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+A read follows the pipeline's tenant rules: a document whose <code>Metadata.TenantId</code> differs from
+<code class="paramref">tenantId</code> is indistinguishable from absence. It returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> and is observed
+as an absent source, exactly like a document that does not exist; a visible document is observed with its
+<code>EventSequence</code>.
+</p>
+<p>
+The lookup cannot express a terminally deleted source. The pipeline records no edge for a same-tenant
+deletion tombstone; here such a source is simply missing and is observed as absent.
+</p>
+<p>Intended for tests only; the pipeline creates the context of every real invocation itself.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when <code class="paramref">tenantId</code> differs from the notification's tenant.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_DeclareDerivedDependency_" data-uid="Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.DeclareDerivedDependency*"></a>
 
   <h3 id="Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_DeclareDerivedDependency_System_String_System_String_System_String_" data-uid="Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.DeclareDerivedDependency(System.String,System.String,System.String)">
@@ -337,6 +406,56 @@ absent dependency; a same-tenant terminal deletion tombstone publishes no perman
 
 
 
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_ReadRawEventsAsync_" data-uid="Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.ReadRawEventsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_ReadRawEventsAsync_System_Int64_System_Int32_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.ReadRawEventsAsync(System.Int64,System.Int32,System.Threading.CancellationToken)">
+  ReadRawEventsAsync(long, int, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads one page of the triggering aggregate's events up to the merged position; the same read as
+<a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_ReadRawEventsAsync_System_Int64_System_Int32_System_Threading_CancellationToken_">ReadRawEventsAsync(long, int, CancellationToken)</a> on <a class="xref" href="Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionContext.html#Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_Current">Current</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;ProjectionEvent&gt;&gt; ReadRawEventsAsync(long afterSequence, int maximumCount, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>afterSequence</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Exclusive lower bound: <code>0</code> for the first page, then the last returned sequence.</p>
+</dd>
+    <dt><code>maximumCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Maximum number of events in the page, between 1 and 100.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.ProjectionEvent.html">ProjectionEvent</a>&gt;&gt;</dt>
+    <dd><p>The events in ascending sequence order, never beyond the merged position this handler sees.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Projections_DependencyTrackingProjectionContext_ReadRawEventsAsync_System_Int64_System_Int32_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The triggering aggregate's own events are not a dependency: every one of them invokes the handler anyway, so
+this read records nothing.</p>
+</div>
 
 
 

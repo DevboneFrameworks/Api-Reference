@@ -275,6 +275,12 @@ protected field; <a href="https://learn.microsoft.com/dotnet/csharp/language-ref
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_ErasedValue_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A placeholder replaces each erased value in place, also inside an array or map. A removal deletes a
+property, deletes a map entry together with its key, and turns an array element into <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>,
+because an array cannot lose a position without shifting the ones behind it; removing elements therefore
+requires an array whose element type is nullable.</p>
+</div>
 
 
 
@@ -308,13 +314,25 @@ protected field; <a href="https://learn.microsoft.com/dotnet/csharp/language-ref
 
 
   <h4 class="section" id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_FieldPath_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>A segment may end with the element wildcard <code>[]</code> to address the same property of every object
-element of an array: <code>Loans[].BorrowerName</code> protects <code>BorrowerName</code> in each loan. Every element
-is protected under the one subject the field names; a wildcard does not bind elements to different
-subjects. Numeric indexes and a trailing wildcard (scalar array elements) are not supported. For a
-protected or required field, a path that lands on an array or a scalar where an object is expected is
-refused at commit rather than treated as a missing field; an optional unprotected field is never
-resolved by the store and its path is metadata only.</p>
+  <div class="markdown level1 remarks"><p>
+A segment may end with a wildcard. The element wildcard <code>[]</code> addresses every element of an array and
+the value wildcard <code>{}</code> every value of a map, a JSON object with arbitrary keys such as a serialized
+dictionary. Followed by a further segment, the elements or values are objects and the segment names their
+property: <code>Loans[].BorrowerName</code> protects <code>BorrowerName</code> in each loan, <code>Nodes{}.Name</code> the
+<code>Name</code> of each node. As the last segment the wildcard addresses the elements or values themselves:
+<code>AcceptedAnswers[]</code> protects every string of the array, <code>Tags{}</code> every string value of the map.
+Wildcards nest (<code>ClozeBlanks[].AcceptedAnswers[]</code>); a segment carries at most one.
+</p>
+<p>
+Every element or value is protected under the one subject the field names; a wildcard does not bind
+members to different subjects. Map keys are never protected: they stay plaintext wherever the map goes,
+so a key must not carry personal data. Numeric indexes and individual map keys cannot be addressed.
+</p>
+<p>
+For a protected or required field, a path that lands on an array or map without the matching wildcard,
+or on a scalar where an object is expected, is refused at commit rather than treated as a missing field;
+an optional unprotected field is never resolved by the store and its path is metadata only.
+</p>
 </div>
 
 
@@ -348,6 +366,13 @@ resolved by the store and its path is metadata only.</p>
 
 
 
+  <h4 class="section" id="Devbone_Frameworks_EventSourcing_Privacy_EventPrivacyFieldDefinition_IsRequired_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A required path is satisfied when every object on the way and the addressed property are present; a
+JSON <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> in the addressed property counts as present. At a wildcard segment the array or
+map must be present and not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, and an empty one satisfies the path; below the
+wildcard every element or value that is not <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> must carry the rest of the path. Under a trailing wildcard a
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> element or value counts as present.</p>
+</div>
 
 
 

@@ -1303,6 +1303,53 @@ transport providers. See <a class="xref" href="Devbone.Frameworks.EventProjectio
 
 
 
+  <a id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_UnreachableDependencyErrorAfter_" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.UnreachableDependencyErrorAfter*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_UnreachableDependencyErrorAfter" data-uid="Devbone.Frameworks.EventProjection.Configuration.ProjectionPipelineOptions.UnreachableDependencyErrorAfter">
+  UnreachableDependencyErrorAfter
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets how long host startup waits for an unreachable broker or MongoDB before it fails. Defaults to two minutes;
+zero does not wait; must not be negative.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan UnreachableDependencyErrorAfter { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Configuration_ProjectionPipelineOptions_UnreachableDependencyErrorAfter_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Unreachable means that no broker answered the topic validation or the topology connection (a connection,
+name-resolution or all-brokers-down failure, or a timeout) or that no MongoDB server could be selected or
+connected to. Such a failure is retried with backoff and logged as a warning per attempt; once the window has
+passed, startup fails with the same exception it fails with when it does not wait. A dependency that answers
+but is wrong — absent topics, a standalone MongoDB server, refused authentication or authorization, a missing
+RabbitMQ virtual host, invalid configuration — fails startup at once, because waiting cannot correct it.
+</p>
+<p>
+The wait runs inside the start of the hosted services, before a web host serves its probes, so an
+orchestrator's startup probe must allow this window.
+</p>
+</div>
+
+
+
+
 
 </article>
 

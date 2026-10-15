@@ -5906,6 +5906,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Projections.DependencyTrackingProjectionTestRun.yml\" sourcestartlinenumber=\"1\">One unit-test invocation of a dependency-tracking handler: the context to pass to the handler, and afterwards what\nthe pipeline would record for it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Projections.DerivedProjectionProcessor.yml",
       "output": {
         ".html": {
@@ -6578,6 +6592,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventProjection.Transport.ProjectionDependencyUnreachableException.yml\" sourcestartlinenumber=\"1\">Reports that a transport initializer could not reach its broker at all, as opposed to reaching it and finding the\ntopology wrong.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventProjection.Transport.ProjectionSource.yml",
       "output": {
         ".html": {
@@ -6869,6 +6897,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.EventSourcingDddServiceCollectionExtensions",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.EventSourcingDddServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Registers Direct mode end to end: the PostgreSQL event store, aggregate routing, and every DDD persistence\nport implemented over them.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Registers the startup comparison of the unpublished rows of one outbox with a routing configuration, for a host\nthat writes through that routing — <code>AddDevboneEventSourcing</code> registers it for its one store, and a host writing\nto several stores registers it once per store.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7320,6 +7362,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Exceptions.UniqueValueHashKeyMismatchException.yml\" sourcestartlinenumber=\"1\">Reports that the store's configured <code>UniqueValueHashKey</code> reproduced none of the sampled <code>AggregateId</code>\nreservations in the database, so it is not the key the stored reservations were written with. Raised before the\nstore's first write, so nothing has been written.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Exceptions.yml",
       "output": {
         ".html": {
@@ -7530,6 +7586,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxRouteInventoryReader.yml\" sourcestartlinenumber=\"1\">Reads which route versions and streams the unpublished outbox rows were committed with, so a host can compare them\nwith its current routing configuration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Outbox.IOutboxStateReader.yml",
       "output": {
         ".html": {
@@ -7625,6 +7695,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.Outbox.OutboxRetry",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRetry.yml\" sourcestartlinenumber=\"1\">Describes a retry scheduled after an outbox publication failure.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Outbox.OutboxRouteInventoryEntry.yml\" sourcestartlinenumber=\"1\">The number of unpublished outbox rows committed with one route version and one stream.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -8913,6 +8997,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHash",
       "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHash.yml\" sourcestartlinenumber=\"1\">Represents a unique value projection containing only hashed value information.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Uniques.UniqueValueHashKeyVerificationResult.yml\" sourcestartlinenumber=\"1\">Reports how many sampled <code>AggregateId</code> reservations were recomputed under a unique-value hash key and how many\nof them matched the stored hash.</p>\n"
     },
     {
       "type": "ManagedReference",

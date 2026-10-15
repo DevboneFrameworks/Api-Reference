@@ -1226,6 +1226,43 @@ the plaintext values. Losing it means no reservation can be matched again.</p>
 
 
 
+  <a id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_VerifyUniqueValueHashKey_" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.VerifyUniqueValueHashKey*"></a>
+
+  <h3 id="Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_VerifyUniqueValueHashKey" data-uid="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.VerifyUniqueValueHashKey">
+  VerifyUniqueValueHashKey
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the store verifies <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositories.Settings.EventStoreSettings.html#Devbone_Frameworks_EventSourcing_Repositories_Settings_EventStoreSettings_UniqueValueHashKey">UniqueValueHashKey</a> against the database once per instance, before
+its first write: it recomputes up to <code>EventStoreSchema.DEFAULT_UNIQUE_VALUE_HASH_KEY_SAMPLE_SIZE</code> stored
+<code>AggregateId</code> reservations and refuses every commit with <code>UniqueValueHashKeyMismatchException</code> when
+reservations exist and none of them matches. An empty store and a partial match pass. Defaults to
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>; set it to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> only for a store whose <code>AggregateId</code> reservations
+are not written by the DDD layer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool VerifyUniqueValueHashKey { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
 
 </article>
 

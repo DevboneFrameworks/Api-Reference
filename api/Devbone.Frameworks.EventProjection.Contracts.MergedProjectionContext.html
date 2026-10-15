@@ -151,7 +151,8 @@ current state, never as the state immediately after one specific event, and keep
 <p>
 <code>Merged.Metadata</code> identifies the last applied event, including its contract name and event id. This
 layer intentionally does not carry event payloads: replicating them onto the internal address would double
-broker volume for data the raw event collection already stores.
+broker volume for data the raw event collection already stores. A handler that needs them reads the triggering
+aggregate's stored events through <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_ReadRawEventsAsync_System_Int64_System_Int32_System_Threading_CancellationToken_">ReadRawEventsAsync(long, int, CancellationToken)</a>.
 </p>
 </div>
 
@@ -203,7 +204,8 @@ current state, never as the state immediately after one specific event, and keep
 <p>
 <code>Merged.Metadata</code> identifies the last applied event, including its contract name and event id. This
 layer intentionally does not carry event payloads: replicating them onto the internal address would double
-broker volume for data the raw event collection already stores.
+broker volume for data the raw event collection already stores. A handler that needs them reads the triggering
+aggregate's stored events through <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_ReadRawEventsAsync_System_Int64_System_Int32_System_Threading_CancellationToken_">ReadRawEventsAsync(long, int, CancellationToken)</a>.
 </p>
 </div>
 
@@ -355,7 +357,8 @@ removed.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Compares the notification, the merged document and the invocation reasons; the bound reader is not data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -365,13 +368,15 @@ removed.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>other</code> <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html">MergedProjectionContext</a></dt>
-    <dd></dd>
+    <dd><p>Context to compare with.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> when both contexts carry equal values.</p>
+</dd>
   </dl>
 
 
@@ -427,7 +432,8 @@ removed.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Computes a hash code over the values <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_Equals_Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_">Equals(MergedProjectionContext?)</a> compares.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -438,7 +444,8 @@ removed.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>The hash code.</p>
+</dd>
   </dl>
 
 
@@ -448,6 +455,84 @@ removed.</p>
 
 
 
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_ReadRawEventsAsync_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.ReadRawEventsAsync*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_ReadRawEventsAsync_System_Int64_System_Int32_System_Threading_CancellationToken_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.ReadRawEventsAsync(System.Int64,System.Int32,System.Threading.CancellationToken)">
+  ReadRawEventsAsync(long, int, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads one page of the triggering aggregate's events in ascending sequence order, up to the merged position
+this handler sees.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;ProjectionEvent&gt;&gt; ReadRawEventsAsync(long afterSequence, int maximumCount, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>afterSequence</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Exclusive lower bound: the page starts with the event after this sequence. Pass <code>0</code> for the first page and
+the last returned <code>Metadata.EventSequence</code> for the next one.</p>
+</dd>
+    <dt><code>maximumCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Maximum number of events in the page, between 1 and 100.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>Cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.ProjectionEvent.html">ProjectionEvent</a>&gt;&gt;</dt>
+    <dd><p>At most <code class="paramref">maximumCount</code> events with a sequence greater than <code class="paramref">afterSequence</code> and
+at most <code>Merged.EventSequence</code> — or <code>Notification.EventSequence</code> when <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_Merged">Merged</a> is
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> after a deletion, which includes the deletion event. Never an event beyond that bound,
+although later events may already be stored, so the events always agree with the state the handler reads.
+The page is empty once <code class="paramref">afterSequence</code> reaches the bound.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_ReadRawEventsAsync_System_Int64_System_Int32_System_Threading_CancellationToken__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Only events of <code>Notification.AggregateName</code> and <code>Notification.AggregateId</code> in the notification's
+tenant are returned. Each event carries its <a class="xref" href="Devbone.Frameworks.EventBus.Contracts.Messaging.EventMetadata.html">EventMetadata</a> — at least <code>EventName</code>,
+<code>EventVersion</code>, <code>TimestampUtc</code>, <code>EventSequence</code> and <code>EventId</code> — and its payload as the
+fold sees it: a protected field is plaintext, or the tag's placeholder (or removed, as the tag's policy says)
+once the subject's key was destroyed. The payload is a copy the handler may modify. Numbers follow the
+conversion described for the merged document.
+</p>
+<p>
+The storage layout of the events stays private to the pipeline; this method is the supported way to read them.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown when <code class="paramref">afterSequence</code> is negative or <code class="paramref">maximumCount</code> is outside 1 to 100.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when the context was constructed directly rather than by the pipeline or <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_WithRawEventsForTesting_System_Collections_Generic_IEnumerable_Devbone_Frameworks_EventProjection_Contracts_ProjectionEvent__">WithRawEventsForTesting(IEnumerable&lt;ProjectionEvent&gt;)</a>,
+or when the pipeline's raw store is a replacement that offers no event reads.</p>
+</dd>
+    <dt><a class="xref" href="Devbone.Frameworks.Privacy.Keys.SubjectKeyRegistryUnavailableException.html">SubjectKeyRegistryUnavailableException</a></dt>
+    <dd><p>Thrown when the key service cannot be reached. Let it propagate: the pipeline then leaves the work unsettled and
+retries it without counting a handler attempt.</p>
+</dd>
+  </dl>
 
 
 
@@ -478,6 +563,51 @@ removed.</p>
 
 
 
+
+
+
+
+  <a id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_WithRawEventsForTesting_" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.WithRawEventsForTesting*"></a>
+
+  <h3 id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_WithRawEventsForTesting_System_Collections_Generic_IEnumerable_Devbone_Frameworks_EventProjection_Contracts_ProjectionEvent__" data-uid="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.WithRawEventsForTesting(System.Collections.Generic.IEnumerable{Devbone.Frameworks.EventProjection.Contracts.ProjectionEvent})">
+  WithRawEventsForTesting(IEnumerable&lt;ProjectionEvent&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a copy of this context whose <a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html#Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_ReadRawEventsAsync_System_Int64_System_Int32_System_Threading_CancellationToken_">ReadRawEventsAsync(long, int, CancellationToken)</a> serves the given events, for unit tests of
+a handler without a projection store.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MergedProjectionContext WithRawEventsForTesting(IEnumerable&lt;ProjectionEvent&gt; rawEvents)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rawEvents</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.ProjectionEvent.html">ProjectionEvent</a>&gt;</dt>
+    <dd><p>The stored events the handler may read, with payloads as the handler is meant to see them (plaintext or
+placeholder). Events of another aggregate or tenant, and events beyond the merged position, may be included:
+they are filtered exactly as the pipeline filters stored events, so a test can prove its handler never sees them.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Devbone.Frameworks.EventProjection.Contracts.MergedProjectionContext.html">MergedProjectionContext</a></dt>
+    <dd><p>A copy of this context with the same notification, merged document and invocation reasons.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Devbone_Frameworks_EventProjection_Contracts_MergedProjectionContext_WithRawEventsForTesting_System_Collections_Generic_IEnumerable_Devbone_Frameworks_EventProjection_Contracts_ProjectionEvent___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Intended for tests only; the pipeline binds its own reader to every context it creates.</p>
+</div>
 
 
 

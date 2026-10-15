@@ -208,6 +208,13 @@ It registers an <a class="xref" href="Devbone.Frameworks.EventSourcing.Repositor
 registered beside it must name the same store.
 </p>
 <p>
+It registers, through <a class="xref" href="Devbone.Frameworks.EventSourcing.Ddd.DependencyInjection.OutboxStreamDriftCheckServiceCollectionExtensions.html#Devbone_Frameworks_EventSourcing_Ddd_DependencyInjection_OutboxStreamDriftCheckServiceCollectionExtensions_AddDevboneOutboxStreamDriftCheck_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_Devbone_Frameworks_EventSourcing_Ddd_Routing_AggregateRoutingOptions_System_Func_System_IServiceProvider_Devbone_Frameworks_EventSourcing_Outbox_IOutboxRouteInventoryReader__">AddDevboneOutboxStreamDriftCheck(IServiceCollection, string, AggregateRoutingOptions, Func&lt;IServiceProvider, IOutboxRouteInventoryReader&gt;)</a>,
+a hosted service that compares the unpublished outbox rows with this routing once when the host starts and logs a
+warning per route version whose rows carry a stream the configuration no longer gives it, or whose route version
+the configuration no longer contains. The warnings name the <code>EventStoreId</code> the routes name. The comparison
+runs in the background, and a failing read is logged; neither delays nor prevents the start.
+</p>
+<p>
 This does not register a bus or an outbox dispatcher. Persistence and publication are separate
 concerns: a commit is durable once the event and its outbox row are written, and delivery is a later,
 independently retried step.
