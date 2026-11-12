@@ -176,14 +176,14 @@ an application keeps this as a build-time test beside its definitions.</p>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>definitions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyDefinition.html">EventPrivacyDefinition</a>&gt;</dt>
+    <dt><code>definitions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.EventSourcing/Privacy/EventPrivacyDefinition.cs">EventPrivacyDefinition</a>&gt;</dt>
     <dd><p>The registered definitions. A definition with classification <code>None</code> declares its whole contract non-personal.</p>
 </dd>
     <dt><code>nonPersonalFields</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd><p>Fields the application has assessed as non-personal, as <code>&lt;contract&gt;:&lt;path&gt;</code>, for example
 <code>order.created:total</code>; a path covers everything below it.</p>
 </dd>
-    <dt><code>catalogue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.html">EventContractDescriptor</a>&gt;</dt>
+    <dt><code>catalogue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/Catalog/EventContractDescriptor.cs">EventContractDescriptor</a>&gt;</dt>
     <dd><p>The catalogue; defaults to the generated one.</p>
 </dd>
   </dl>
@@ -230,10 +230,10 @@ collections and objects beyond the catalogue's nesting depth count as one field.
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>definitions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.EventSourcing.Privacy.EventPrivacyDefinition.html">EventPrivacyDefinition</a>&gt;</dt>
+    <dt><code>definitions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.EventSourcing/Privacy/EventPrivacyDefinition.cs">EventPrivacyDefinition</a>&gt;</dt>
     <dd><p>The registered definitions.</p>
 </dd>
-    <dt><code>catalogue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Catalog.EventContractDescriptor.html">EventContractDescriptor</a>&gt;</dt>
+    <dt><code>catalogue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/Catalog/EventContractDescriptor.cs">EventContractDescriptor</a>&gt;</dt>
     <dd><p>The catalogue; defaults to the generated one.</p>
 </dd>
   </dl>

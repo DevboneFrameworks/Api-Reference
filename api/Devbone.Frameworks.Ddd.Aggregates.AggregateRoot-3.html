@@ -765,7 +765,7 @@ other invariant-carrying member of the aggregate base can be overridden.</p>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html">IEventStoredResult</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/Results/IEventStoredResult.cs">IEventStoredResult</a>&gt;</dt>
     <dd><p>The atomic event-store write result. A successful commit that wrote at least one event carries an
 <a class="xref" href="Devbone.Frameworks.Ddd.Results.IEventStoredResult.html#Devbone_Frameworks_Ddd_Results_IEventStoredResult_CommitReceipt">CommitReceipt</a> naming the resulting stream position and token, and
 the aggregate's own <a class="xref" href="Devbone.Frameworks.Ddd.Aggregates.IAggregateRoot.html#Devbone_Frameworks_Ddd_Aggregates_IAggregateRoot_ConcurrencyToken">ConcurrencyToken</a> is advanced to that token.</p>
@@ -1055,7 +1055,7 @@ conflict.</p>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>storedEvents</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Devbone.Frameworks.Ddd.Repositories.IStoredEvent.html">IStoredEvent</a>&gt;</dt>
+    <dt><code>storedEvents</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://github.com/DevboneFrameworks/Devbone-EventDrivenPlatform/blob/main/src/Devbone.Frameworks.Ddd/Repositories/IStoredEvent.cs">IStoredEvent</a>&gt;</dt>
     <dd><p>Continuous event rows ordered by aggregate version.</p>
 </dd>
   </dl>
