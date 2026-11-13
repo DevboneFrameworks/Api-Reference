@@ -8020,6 +8020,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader.yml\" sourcestartlinenumber=\"1\">Reads the lifecycle state of an aggregate stream without loading its events.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Devbone.Frameworks.EventSourcing.Repositories.IEventStore.yml",
       "output": {
         ".html": {
@@ -10901,6 +10915,20 @@
       "IsMRef": true,
       "Title": "Devbone.Frameworks.Privacy.Requests.EventSourcing.DependencyInjection",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader",
+      "Summary": "<p sourcefile=\"api/Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader.yml\" sourcestartlinenumber=\"1\">Tells whether an aggregate's stream ended with its terminal event. Optional: without it, erasure phase 2 refolds\nevery aggregate the request's subjects do not own. Implemented by\n<code>Devbone.Frameworks.Privacy.Requests.EventSourcing</code> over the event store.</p>\n"
     },
     {
       "type": "ManagedReference",

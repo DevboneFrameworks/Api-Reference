@@ -103,6 +103,13 @@ Classes
 Interfaces
 </h3>
     <dl class="jumplist">
+      <dt><a class="xref" href="Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader.html">IAggregateTerminationReader</a></dt>
+      <dd><p>Tells whether an aggregate's stream ended with its terminal event. Optional: without it, erasure phase 2 refolds
+every aggregate the request's subjects do not own. Implemented by
+<code>Devbone.Frameworks.Privacy.Requests.EventSourcing</code> over the event store.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Devbone.Frameworks.Privacy.Requests.Ports.IRecordExporter.html">IRecordExporter</a></dt>
       <dd><p>Reads the stored records of a person's key subjects, decrypted for that person: protected fields of the key
 subjects in plaintext, placeholders where their key is destroyed, and protected fields of anybody else withheld.

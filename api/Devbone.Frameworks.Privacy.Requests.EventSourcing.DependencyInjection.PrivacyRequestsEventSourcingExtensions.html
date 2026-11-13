@@ -160,9 +160,11 @@ Class PrivacyRequestsEventSourcingExtensions
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Registers <a class="xref" href="Devbone.Frameworks.Privacy.Requests.Ports.ISubjectEventLocator.html">ISubjectEventLocator</a>, <a class="xref" href="Devbone.Frameworks.Privacy.Requests.Ports.ISnapshotEraser.html">ISnapshotEraser</a> and <a class="xref" href="Devbone.Frameworks.Privacy.Requests.Ports.IRecordExporter.html">IRecordExporter</a> over
-the PostgreSQL event store that <code>AddDevboneEventStore</code> registers: the privacy index, the snapshot store, the
-aggregate locks and the store's settings.</p>
+  <div class="markdown level1 summary"><p>Registers <a class="xref" href="Devbone.Frameworks.Privacy.Requests.Ports.ISubjectEventLocator.html">ISubjectEventLocator</a>, <a class="xref" href="Devbone.Frameworks.Privacy.Requests.Ports.ISnapshotEraser.html">ISnapshotEraser</a>, <a class="xref" href="Devbone.Frameworks.Privacy.Requests.Ports.IRecordExporter.html">IRecordExporter</a> and
+<a class="xref" href="Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader.html">IAggregateTerminationReader</a> over the PostgreSQL event store that <code>AddDevboneEventStore</code>
+registers: the privacy index, the snapshot store, the aggregate locks, the stream state reader and the store's
+settings. Without a registered stream state reader the termination reader uses the privacy index when that is the
+event store, and otherwise reports no aggregate as terminated, so phase 2 refolds every foreign aggregate.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

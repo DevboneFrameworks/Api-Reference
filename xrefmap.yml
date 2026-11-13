@@ -39778,6 +39778,21 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.EventStore.IsLockedAsync
   fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.IsLockedAsync
   nameWithType: EventStore.IsLockedAsync
+- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.IsTerminatedAsync(System.String,System.String,System.Threading.CancellationToken)
+  name: IsTerminatedAsync(string, string, CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_IsTerminatedAsync_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.EventStore.IsTerminatedAsync(System.String,System.String,System.Threading.CancellationToken)
+  name.vb: IsTerminatedAsync(String, String, CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.IsTerminatedAsync(string, string, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.EventStore.IsTerminatedAsync(String, String, System.Threading.CancellationToken)
+  nameWithType: EventStore.IsTerminatedAsync(string, string, CancellationToken)
+  nameWithType.vb: EventStore.IsTerminatedAsync(String, String, CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.IsTerminatedAsync*
+  name: IsTerminatedAsync
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_IsTerminatedAsync_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.EventStore.IsTerminatedAsync
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.IsTerminatedAsync
+  nameWithType: EventStore.IsTerminatedAsync
 - uid: Devbone.Frameworks.EventSourcing.Repositories.EventStore.LoadAggregateAsync(System.String,System.Threading.CancellationToken)
   name: LoadAggregateAsync(string, CancellationToken)
   href: api/Devbone.Frameworks.EventSourcing.Repositories.EventStore.html#Devbone_Frameworks_EventSourcing_Repositories_EventStore_LoadAggregateAsync_System_String_System_Threading_CancellationToken_
@@ -39967,6 +39982,27 @@ references:
   commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.EventStore.TryAcquireLockAsync
   fullName: Devbone.Frameworks.EventSourcing.Repositories.EventStore.TryAcquireLockAsync
   nameWithType: EventStore.TryAcquireLockAsync
+- uid: Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader
+  name: IAggregateStreamStateReader
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader.html
+  commentId: T:Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader
+  nameWithType: IAggregateStreamStateReader
+- uid: Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader.IsTerminatedAsync(System.String,System.String,System.Threading.CancellationToken)
+  name: IsTerminatedAsync(string, string, CancellationToken)
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader.html#Devbone_Frameworks_EventSourcing_Repositories_IAggregateStreamStateReader_IsTerminatedAsync_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader.IsTerminatedAsync(System.String,System.String,System.Threading.CancellationToken)
+  name.vb: IsTerminatedAsync(String, String, CancellationToken)
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader.IsTerminatedAsync(string, string, System.Threading.CancellationToken)
+  fullName.vb: Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader.IsTerminatedAsync(String, String, System.Threading.CancellationToken)
+  nameWithType: IAggregateStreamStateReader.IsTerminatedAsync(string, string, CancellationToken)
+  nameWithType.vb: IAggregateStreamStateReader.IsTerminatedAsync(String, String, CancellationToken)
+- uid: Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader.IsTerminatedAsync*
+  name: IsTerminatedAsync
+  href: api/Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader.html#Devbone_Frameworks_EventSourcing_Repositories_IAggregateStreamStateReader_IsTerminatedAsync_
+  commentId: Overload:Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader.IsTerminatedAsync
+  fullName: Devbone.Frameworks.EventSourcing.Repositories.IAggregateStreamStateReader.IsTerminatedAsync
+  nameWithType: IAggregateStreamStateReader.IsTerminatedAsync
 - uid: Devbone.Frameworks.EventSourcing.Repositories.IEventStore
   name: IEventStore
   href: api/Devbone.Frameworks.EventSourcing.Repositories.IEventStore.html
@@ -56003,6 +56039,24 @@ references:
   commentId: N:Devbone.Frameworks.Privacy.Requests.Ports
   fullName: Devbone.Frameworks.Privacy.Requests.Ports
   nameWithType: Devbone.Frameworks.Privacy.Requests.Ports
+- uid: Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader
+  name: IAggregateTerminationReader
+  href: api/Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader.html
+  commentId: T:Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader
+  fullName: Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader
+  nameWithType: IAggregateTerminationReader
+- uid: Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader.IsTerminatedAsync(Devbone.Frameworks.Privacy.Requests.Application.AggregateReference,System.Threading.CancellationToken)
+  name: IsTerminatedAsync(AggregateReference, CancellationToken)
+  href: api/Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader.html#Devbone_Frameworks_Privacy_Requests_Ports_IAggregateTerminationReader_IsTerminatedAsync_Devbone_Frameworks_Privacy_Requests_Application_AggregateReference_System_Threading_CancellationToken_
+  commentId: M:Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader.IsTerminatedAsync(Devbone.Frameworks.Privacy.Requests.Application.AggregateReference,System.Threading.CancellationToken)
+  fullName: Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader.IsTerminatedAsync(Devbone.Frameworks.Privacy.Requests.Application.AggregateReference, System.Threading.CancellationToken)
+  nameWithType: IAggregateTerminationReader.IsTerminatedAsync(AggregateReference, CancellationToken)
+- uid: Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader.IsTerminatedAsync*
+  name: IsTerminatedAsync
+  href: api/Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader.html#Devbone_Frameworks_Privacy_Requests_Ports_IAggregateTerminationReader_IsTerminatedAsync_
+  commentId: Overload:Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader.IsTerminatedAsync
+  fullName: Devbone.Frameworks.Privacy.Requests.Ports.IAggregateTerminationReader.IsTerminatedAsync
+  nameWithType: IAggregateTerminationReader.IsTerminatedAsync
 - uid: Devbone.Frameworks.Privacy.Requests.Ports.IRecordExporter
   name: IRecordExporter
   href: api/Devbone.Frameworks.Privacy.Requests.Ports.IRecordExporter.html
